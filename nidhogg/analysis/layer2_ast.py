@@ -13,14 +13,14 @@ from nidhogg.core.models import AnalysisLayer, UrlFinding, UrlTag
 if TYPE_CHECKING:
     from pathlib import Path
 
-_URL_RE = re.compile(r"(?:https?|ftp|wss?)://\S+")
+_URL_RE = re.compile(r"(?:https?|ftp|wss?)://(?:(?!(?:https?|ftp|wss?)://)\S)+")
 
 # name → (resolved_value, assignment_lineno)
 type _Scope = dict[str, tuple[str, int]]
 
 
 def _clean(url: str) -> str:
-    return url.rstrip(".,;:'\"`!?)>]")
+    return url.rstrip(".,;:'\"`!?()>]")
 
 
 def _urls_in(s: str) -> list[str]:

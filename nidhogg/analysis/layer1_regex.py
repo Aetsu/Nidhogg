@@ -15,15 +15,18 @@ if TYPE_CHECKING:
 # ---------------------------------------------------------------------------
 
 # Matches http, https, ftp, ws, wss followed by anything that isn't
-# whitespace.  Trailing punctuation that is almost never part of a URL
-# (quotes, brackets, commas, dots at the very end) is stripped afterwards.
-_URL_RE = re.compile(r"(?:https?|ftp|wss?)://\S+")
-_TRAILING_JUNK = str.maketrans("", "", ".,;:'\"`!?)>]")
+# whitespace, stopping right before another scheme starts so two URLs
+# glued together without a separator (e.g. markdown badge links like
+# `...svg)](https://...`) are captured as distinct matches instead of
+# one merged string.  Trailing punctuation that is almost never part of
+# a URL (quotes, brackets, commas, dots, and markdown's leftover `(`) is
+# stripped afterwards.
+_URL_RE = re.compile(r"(?:https?|ftp|wss?)://(?:(?!(?:https?|ftp|wss?)://)\S)+")
 
 
 def _clean_url(raw: str) -> str:
     """Strip trailing punctuation that parsers routinely leave attached."""
-    return raw.rstrip(".,;:'\"`!?)>]")
+    return raw.rstrip(".,;:'\"`!?()>]")
 
 
 # ---------------------------------------------------------------------------
