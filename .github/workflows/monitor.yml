@@ -1,0 +1,59 @@
+name: Monitor PyPI
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"  # every 2h; GitHub does not guarantee exact timing
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # commit state + history + site data
+  pages: write      # publish to Pages
+  id-token: write   # required by actions/deploy-pages
+
+concurrency:
+  group: "monitor-pypi"
+  cancel-in-progress: false   # never overlap two runs writing the same state
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.14"
+
+      - run: uv sync --frozen
+
+      - name: Run monitor (single iteration)
+        run: |
+          uv run nidhogg.py monitor --once \
+            --history-dir history \
+            --index-file .cache/nidhogg/monitor_state.json \
+            --check-ssl --check-http
+
+      - name: Rebuild per-day site data
+        run: uv run python scripts/build_site_data.py history site/data
+
+      - name: Commit state + history + site data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .cache/nidhogg/monitor_state.json history/ site/data/
+          git diff --staged --quiet || git commit -m "chore: monitor run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: monitor
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

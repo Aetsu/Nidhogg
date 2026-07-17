@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nidhogg — PyPI watch</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead__wrap">
+      <nav class="masthead__nav" aria-label="Site info">
+        <button type="button" class="nav-link" id="glossaryOpen">Glossary</button>
+        <button type="button" class="nav-link" id="aboutOpen">About</button>
+      </nav>
+      <h1 class="wordmark">NIDHOGG</h1>
+      <p class="lede" id="statsLine">Loading monitor state…</p>
+    </div>
+  </header>
+
+  <dialog class="modal" id="glossaryDialog" aria-labelledby="glossaryTitle">
+    <div class="modal__wrap">
+      <div class="modal__head">
+        <h2 id="glossaryTitle">Glossary</h2>
+        <button type="button" class="modal__close" id="glossaryClose" aria-label="Close">×</button>
+      </div>
+      <div class="modal__body">
+        <section class="modal__section">
+          <h3>Layers</h3>
+          <p>Every text file is scanned by two independent extraction layers, run in parallel:</p>
+          <dl class="glossary-list">
+            <dt>Layer 1 — Regex</dt>
+            <dd>Fast plain-text scan: URLs with a scheme (<code>http</code>, <code>https</code>, <code>ftp</code>, <code>ws</code>, <code>wss</code>), IPv4 addresses appearing in networking calls (<code>connect</code>, <code>urlopen</code>, <code>requests</code>…), and full/compressed IPv6. Private and loopback IPs are filtered out automatically.</dd>
+            <dt>Layer 2 — AST</dt>
+            <dd>Static resolution of obfuscated URLs by walking the Python syntax tree: constant folding of string literals, binary-operator concatenation (<code>"http://" + "evil.com"</code>), <code>base64.b64decode(...)</code> calls, f-strings with resolvable parts, and scope tracking of variables assigned earlier in the same function.</dd>
+          </dl>
+        </section>
+        <section class="modal__section">
+          <h3>Results</h3>
+          <p>What each column and badge in the table means:</p>
+          <dl class="glossary-list">
+            <dt>Layer</dt>
+            <dd>Which layer produced the finding — <code>regex</code> or <code>ast</code>.</dd>
+            <dt>Method</dt>
+            <dd>How the URL was written in source: <code>via_base64</code>, <code>via_concat</code>, <code>via_fstring</code>, <code>via_scope</code>, <code>raw_ip</code>, or blank for a plain literal string.</dd>
+            <dt>Verdict badge</dt>
+            <dd>A package is flagged <span class="badge badge--malicious">suspicious</span> once any finding's Threat column is set (shortener, tunneling, exfiltration, ip_recon, malware_hosting, or suspicious_tld); otherwise it's <span class="badge badge--clean">clean</span>. A bare IP address alone (<code>raw_ip</code>, shown under Method) doesn't count toward this verdict.</dd>
+            <dt>HTTP status badge</dt>
+            <dd>From <code>--check-http</code>: the final status code after following redirects — green for 2xx, amber for 3xx, red for 4xx/5xx.</dd>
+            <dt>Page title</dt>
+            <dd>The page's <code>&lt;title&gt;</code>, shown in italics, captured by <code>--check-http</code> when the request got a response.</dd>
+            <dt>Certificate badge</dt>
+            <dd>From <code>--check-ssl</code>: <code>LE</code> flags a Let's Encrypt-issued certificate (free, instant issuance makes it a common choice for throwaway malicious infrastructure); any other issuer is shown as plain text.</dd>
+          </dl>
+        </section>
+        <section class="modal__section">
+          <h3>Threats</h3>
+          <p>Domain categories evaluated, in order, once a URL survives deduplication. <code>raw_ip</code> is shown under the Method column on this site rather than Threat, and doesn't count toward the suspicious verdict above — the rest do:</p>
+          <table class="glossary-table">
+            <thead>
+              <tr><th>Category</th><th>Meaning</th><th>Examples</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>raw_ip</code></td><td>Direct public IP address instead of a domain name</td><td>185.220.101.x</td></tr>
+              <tr><td><code>shortener</code></td><td>URL shortener that hides the real destination</td><td>bit.ly, tinyurl.com, t.co</td></tr>
+              <tr><td><code>tunneling</code></td><td>Tunnel/exposure service for a local server</td><td>ngrok.io, workers.dev, serveo.net</td></tr>
+              <tr><td><code>exfiltration</code></td><td>Known data-exfiltration destination</td><td>discord.com, t.me, pastebin.com, webhook.site</td></tr>
+              <tr><td><code>ip_recon</code></td><td>Public-IP lookup service (network reconnaissance)</td><td>ipinfo.io, ifconfig.me, api.ipify.org</td></tr>
+              <tr><td><code>malware_hosting</code></td><td>Anonymous file-hosting service</td><td>files.catbox.moe, gofile.io</td></tr>
+              <tr><td><code>suspicious_tld</code></td><td>High-risk top-level domain</td><td>.tk, .ml, .zip, .xyz, .pw</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="aboutDialog" aria-labelledby="aboutTitle">
+    <div class="modal__wrap">
+      <div class="modal__head">
+        <h2 id="aboutTitle">About</h2>
+        <button type="button" class="modal__close" id="aboutClose" aria-label="Close">×</button>
+      </div>
+      <div class="modal__body">
+        <p>Nidhogg is a static analyzer that extracts candidate malicious URLs from Python packages published on PyPI.</p>
+        <p>
+          Created by
+          <a href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">Aetsu</a>
+          — <a href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          · <a href="https://x.com/aetsu" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+        </p>
+      </div>
+    </div>
+  </dialog>
+
+  <section class="spine-section" aria-label="Analysis timeline">
+    <div class="spine" id="spine" role="img" aria-label="Each mark is an analyzed package; tall marks are suspicious verdicts"></div>
+    <div class="spine__dates">
+      <span id="spineDateStart">—</span>
+      <span id="spineDateEnd">—</span>
+    </div>
+  </section>
+
+  <main class="content">
+    <div class="controls">
+      <select id="daySelect" class="day-select" aria-label="Day"></select>
+      <input
+        type="search"
+        id="search"
+        class="search"
+        placeholder="Search package…"
+        aria-label="Search package"
+      />
+      <label class="toggle">
+        <input type="checkbox" id="urlOnlyToggle" checked />
+        Only with URL
+      </label>
+
+      <details class="filter" id="statusFilter">
+        <summary>HTTP status<span class="filter__count" id="statusFilterCount"></span></summary>
+        <div class="filter__menu" id="statusFilterMenu"></div>
+      </details>
+
+      <details class="filter" id="certFilter">
+        <summary>Certificate<span class="filter__count" id="certFilterCount"></span></summary>
+        <div class="filter__menu" id="certFilterMenu"></div>
+      </details>
+
+      <details class="filter" id="layerFilter">
+        <summary>Layer<span class="filter__count" id="layerFilterCount"></span></summary>
+        <div class="filter__menu" id="layerFilterMenu"></div>
+      </details>
+
+      <details class="filter" id="threatFilter">
+        <summary>Threat<span class="filter__count" id="threatFilterCount"></span></summary>
+        <div class="filter__menu" id="threatFilterMenu"></div>
+      </details>
+    </div>
+
+    <div class="table-scroll">
+      <table class="results">
+        <thead>
+          <tr>
+            <th scope="col">Package</th>
+            <th scope="col">Analyzed</th>
+            <th scope="col">File:line</th>
+            <th scope="col" class="col-url">URL</th>
+            <th scope="col">Layer</th>
+            <th scope="col">Method</th>
+            <th scope="col">Threat</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </div>
+
+    <p class="empty-state" id="emptyState" hidden>
+      No packages match the current filter.
+    </p>
+  </main>
+
+  <footer class="foot">
+    <p id="generatedAt"></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
