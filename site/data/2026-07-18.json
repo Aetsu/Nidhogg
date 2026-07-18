@@ -1,11 +1,2443 @@
 {
-  "generated_at": "2026-07-18T06:53:59.348691+00:00",
+  "generated_at": "2026-07-18T08:38:02.756978+00:00",
   "stats": {
-    "total_packages": 166,
-    "malicious": 4,
-    "clean": 162
+    "total_packages": 212,
+    "malicious": 7,
+    "clean": 205
   },
   "packages": [
+    {
+      "name": "iso20022-readiness-suite-mcp",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/0d/4b/c0ba10a9bc42781b537db0b39a523e97c6d0fec06ac8f0b4cd4707f3a0a4/iso20022_readiness_suite_mcp-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:02.633561+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "pluginfer",
+      "version": "1.6.1",
+      "download_url": "https://files.pythonhosted.org/packages/9b/df/8862d666a34b7700b1e85261397a66cf7480496d774a7ee44908f90cd8fe/pluginfer-1.6.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:02.507991+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "srtspeak",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4f/cc/dc98e8d654089fcea5ad5f7a5de205bda449f1a5d6af392bc375108cffe8/srtspeak-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:01.947174+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "srtspeak-0.1.0/tests/test_tts_xai.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1/tts",
+          "file": "srtspeak-0.1.0/tests/test_tts_xai.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "srtspeak-0.1.0/src/srtspeak/core/tts_xai.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1/tts",
+          "file": "srtspeak-0.1.0/src/srtspeak/core/tts_xai.py",
+          "line": 16,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1/tts/voices",
+          "file": "srtspeak-0.1.0/src/srtspeak/core/tts_xai.py",
+          "line": 17,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "blazechunk",
+      "version": "0.10.2",
+      "download_url": "https://files.pythonhosted.org/packages/01/7e/ac26a2111828718c58bf016a45c56f045e6b9d160bb421c41619dc8b7b3c/blazechunk-0.10.2.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:01.691052+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "monitor-bt",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/62/b6/991be2c6d0752cb6c56bd97aeef8b18f4934744d0348506ba18c688727ed/monitor_bt-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:01.611274+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "image-framework",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/98/4b/7f342610ad7c1c23752fb21fd2d995a121b8094e7b309be6d9a49c76dfd0/image_framework-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:01.530397+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://studio.ross-developers.com",
+          "file": "image_framework-1.0.0/pyproject.toml",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Create Next App",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://studio.ross-developers.com/v1/docs",
+          "file": "image_framework-1.0.0/pyproject.toml",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ross Image Studio API \u2014 Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://studio.ross-developers.com/v1",
+          "file": "image_framework-1.0.0/image_framework/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://studio.ross-developers.com/v1",
+          "file": "image_framework-1.0.0/image_framework/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://studio.ross-developers.com/v1",
+          "file": "image_framework-1.0.0/tests/test_client.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://studio.ross-developers.com/v1",
+          "file": "image_framework-1.0.0/image_framework/client/_client.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "vide-python",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ad/8f/d5fb35e0f012c297e0fc313781024151601855f94f5bd17373a6bf726089/vide_python-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:38:00.010303+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.scenedetect.com",
+          "file": "vide_python-0.1.0/docs/commands/split-scenes.rst",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - PySceneDetect",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "my-crew",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/87/e1/c643ab480b6ecbbf17f7fda1ee887bff74b506ffa0313356222ef1265b8f/my_crew-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:59.798830+00:00",
+      "total_findings": 19,
+      "findings": [
+        {
+          "url": "https://keepachangelog.com/en/1.1.0",
+          "file": "my_crew-0.1.0/CHANGELOG.md",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Keep a Changelog",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openalex.org/W2741809807",
+          "file": "my_crew-0.1.0/tests/test_openalex_tool.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.1706.03762",
+          "file": "my_crew-0.1.0/tests/test_openalex_tool.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1706.03762] Attention Is All You Need",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "my_crew-0.1.0/docs/deployment-guide.vi.md",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "my_crew-0.1.0/docs/deployment-guide.md",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "my_crew-0.1.0/docs/code-standards.md",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "my_crew-0.1.0/docs/huong-dan-su-dung.md",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.firecrawl.dev",
+          "file": "my_crew-0.1.0/docs/research/firecrawl-local-integration-guide.md",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/docs",
+          "file": "my_crew-0.1.0/docs/archive/v1/codebase-summary.md",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter Quickstart Guide",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://slack.dev/python-slack-sdk",
+          "file": "my_crew-0.1.0/docs/archive/v1/codebase-summary.md",
+          "line": 147,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python Slack SDK | Slack Developer Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.smith.langchain.com",
+          "file": "my_crew-0.1.0/docs/archive/v1/codebase-summary.md",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LangSmith Observability - Docs by LangChain",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://langfuse.com/docs",
+          "file": "my_crew-0.1.0/docs/archive/v1/codebase-summary.md",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - Langfuse",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "my_crew-0.1.0/docs/archive/v1/project-overview-pdr.md",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "my_crew-0.1.0/docs/archive/v2/getting-started.md",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "my_crew-0.1.0/my_crew/actions/telegram_write.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "my_crew-0.1.0/my_crew/tools/openalex_tool.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.tavily.com/search",
+          "file": "my_crew-0.1.0/my_crew/tools/web_search_tool.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "my_crew-0.1.0/my_crew/tools/web_search_tool.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "my_crew-0.1.0/my_crew/config/settings.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tensor-md",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/82/28/d2db7e60bb5a61571c5d8d6debc8c1a34ffd384abd6d546a26c0c7496a4c/tensor_md-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:56.678693+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "llama-dyno",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/ff/66/80fa426e7a82f232a277acc0fda73e36ed0c4341fcdfcf6f50da0b62ec8d/llama_dyno-1.0.2.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:56.527236+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "seshport",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/23/b5/eb9bcfee37f7e1b32c7946266f5dbc6a13b75b329eff13c09b8ba1587286/seshport-0.3.0-py3-none-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl",
+      "analyzed_at": "2026-07-18T08:37:56.428325+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "google-search-playwright",
+      "version": "4.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/9d/26/5f8013371317df6864c0755b8b7d949a06c89a5b52676b8973e974a77a7f/google_search_playwright-4.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:56.357391+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "fastplateocr-py",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c0/72/e64c3d820a325f50e0ee03f02aa58522a9afa98fcf91508657fb21e6fe4e/fastplateocr_py-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:56.147338+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/1805.09501",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1805.09501] AutoAugment: Learning Augmentation Policies from Data",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1906.11172",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1906.11172] Learning Data Augmentation Strategies for Object Detection",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1909.13719",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1909.13719] RandAugment: Practical automated data augmentation with a reduced search space",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1912.02781",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1912.02781] AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/2204.07118",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2204.07118] DeiT III: Revenge of the ViT",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1805.09501",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1805.09501] AutoAugment: Learning Augmentation Policies from Data",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1906.11172",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1906.11172] Learning Data Augmentation Strategies for Object Detection",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1909.13719",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1909.13719] RandAugment: Practical automated data augmentation with a reduced search space",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1912.02781",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1912.02781] AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/2204.07118",
+          "file": "fastplateocr_py-0.1.0/fastplateocr/rec/preprocess/auto_augment.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2204.07118] DeiT III: Revenge of the ViT",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "tidal-dl-max",
+      "version": "2026.7.18.2",
+      "download_url": "https://files.pythonhosted.org/packages/42/2b/47fe51c689a901775ee707e9246f74a1c566d43a67577d9b4dab1328b7b1/tidal_dl_max-2026.7.18.2.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:55.641775+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://api.tidalhifi.com/v1",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://auth.tidal.com/v1/oauth2",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://login.tidal.com/authorize",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.tidal.com/v1/sessions",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.tidal.com/v1/sessions",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://listen.tidal.com/v1",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 333,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://resources.tidal.com/images",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/tidal.py",
+          "line": 483,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tidal.com/browse/track/70973230",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/__init__.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Perfect by Ed Sheeran on TIDAL",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tidal.com/browse/track/55130637",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/__init__.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Here Comes The Sun (Remastered 2009) by The Beatles on TIDAL",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tidal.com/browse/track/199683732",
+          "file": "tidal_dl_max-2026.7.18.2/tidal_dl/__init__.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Black Out by Max B & French Montana on TIDAL",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "capigen",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/48/fa/1abd2b431e0209c9ff98ec7ad5c25921158430ca4baaa7f01e0147074929/capigen-0.4.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:54.622048+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "skillplus",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/0c/cee3c539d4c89de111d51dbbab6737051d92c10036404bfd9dbec8e24f05/skillplus-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:54.498373+00:00",
+      "total_findings": 22,
+      "findings": [
+        {
+          "url": "https://skillplus.xyz",
+          "file": "skillplus-0.1.0/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "SkillPlus \u2014 Scan AI Skills Before You Install",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.skillplus.xyz",
+          "file": "skillplus-0.1.0/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "GitBook",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/query",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/query",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_v3_features.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123/badge.svg",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skills.sh/owner/repo/example",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "example \u2014 owner/repo",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/query",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/query",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/scan",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 150,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123/badge.svg",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/report/scan_123/badge.svg",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz/api/sdk/query",
+          "file": "skillplus-0.1.0/tests/test_client.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://skillplus.xyz",
+          "file": "skillplus-0.1.0/src/skillplus/client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "SkillPlus \u2014 Scan AI Skills Before You Install",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "taraz",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ee/67/c913c242b449c3c86cb09d009f6095454fb62b45446fb3df9233a1931426/taraz-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:52.466216+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "acikpoz",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/50/e2/2e7cba05b0f83332edf9f54b598dc7626c4377d15b52daa69a3432232806/acikpoz-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:52.387327+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "omnibio",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/38/9e/63bbafb9b66824b59d36fd449e36d112c723adab3c40345748d540076d3f/omnibio-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:52.311729+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "konect4ai",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/b3/05/ea5adb2dc3cd98d27554b1e4462f18f00ef5ec6eb3473bc51ec24c91e3a3/konect4ai-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:52.264753+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://konect4ai.com",
+          "file": "konect4ai-0.0.1/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Konect4ai\uff5c\u4efb\u4f55\u7db2\u7ad9\uff0c\u4e00\u9375\u6210\u70ba AI \u5de5\u5177",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://konect4ai.com/setup",
+          "file": "konect4ai-0.0.1/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://konect4ai.com/zh-TW/contact-us",
+          "file": "konect4ai-0.0.1/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Konect4ai\uff5c\u4efb\u4f55\u7db2\u7ad9\uff0c\u4e00\u9375\u6210\u70ba AI \u5de5\u5177",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://konect4ai.com",
+          "file": "konect4ai-0.0.1/src/konect4ai/__init__.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Konect4ai\uff5c\u4efb\u4f55\u7db2\u7ad9\uff0c\u4e00\u9375\u6210\u70ba AI \u5de5\u5177",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://konect4ai.com",
+          "file": "konect4ai-0.0.1/src/konect4ai/__init__.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Konect4ai\uff5c\u4efb\u4f55\u7db2\u7ad9\uff0c\u4e00\u9375\u6210\u70ba AI \u5de5\u5177",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://konect4ai.com",
+          "file": "konect4ai-0.0.1/src/konect4ai/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Konect4ai\uff5c\u4efb\u4f55\u7db2\u7ad9\uff0c\u4e00\u9375\u6210\u70ba AI \u5de5\u5177",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "oks-connector",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/9a/15/59140258aad7839b02c1b731803fca8f5462b5b60bae4b54c2a685130b44/oks_connector-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:50.478308+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "open-knowledge-studio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/89/d4/b279b10f4b2bd2083630c15e112035a1873376ad26e93c9199d2dd4a9327/open_knowledge_studio-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:50.354768+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "cornerstone-cli",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/92/bc/e5fc74e259f131a9d68eb328dcd4137d60a26b9c1a456d6f3ed9478bd924/cornerstone_cli-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:50.261000+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "paca-acp-bridge",
+      "version": "0.10.0",
+      "download_url": "https://files.pythonhosted.org/packages/34/c3/e31ac760fc27acc63fdefc898d99555063489c24274087fa62f964d8e411/paca_acp_bridge-0.10.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:50.118298+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "pamica",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/62/79/e4ae8b1751bbda145287fe3a641c745331d6d52013b471c1152cc27c0f7e/pamica-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:49.972315+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "brave-trace",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/41/c7bbf8cbcb41348e00a10c1c5f5a834383c8cded319f06eef21c657b183e/brave_trace-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:49.794239+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://ip-api.com/json",
+          "file": "brave_trace-0.1.0/brave_trace/lookups/geo_lookup.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "pcst-fast2",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0f/e8/e57ff02e3d6833b4564374d511a93f9ee9e23bbd25ce48ef44da09726389/pcst_fast2-1.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:49.695709+00:00",
+      "total_findings": 75,
+      "findings": [
+        {
+          "url": "http://rgl.epfl.ch/people/wjakob",
+          "file": "pcst_fast2-1.1.0/external/pybind11/CONTRIBUTING.md",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Wenzel Jakob | RGL",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://semver.org",
+          "file": "pcst_fast2-1.1.0/external/pybind11/docs/changelog.rst",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.boost.org/doc/libs/release/libs/python/doc/index.html",
+          "file": "pcst_fast2-1.1.0/external/pybind11/docs/intro.rst",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Boost.Python",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://clang.llvm.org/docs/ThinLTO.html",
+          "file": "pcst_fast2-1.1.0/external/pybind11/docs/compiling.rst",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThinLTO \u2014 Clang 24.0.0git documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://en.cppreference.com/w/cpp/memory/enable_shared_from_this",
+          "file": "pcst_fast2-1.1.0/external/pybind11/docs/advanced/smart_ptrs.rst",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://eigen.tuxfamily.org",
+          "file": "pcst_fast2-1.1.0/external/pybind11/docs/advanced/cast/eigen.rst",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: A C++ template library for linear algebra",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://googletest.googlecode.com/svn/trunk/test",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/scripts/common.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://wiki.wxwidgets.org/Cross-Compiling_Under_Linux",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/FAQ.md",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cross-Compiling Under Linux - WxWiki",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://jamesshore.com/Blog/Dependency-Injection-Demystified.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/FAQ.md",
+          "line": 984,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "James Shore: Dependency Injection Demystified",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/AdvancedGuide.md",
+          "line": 309,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Comparing Floating Point Numbers",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/AdvancedGuide.md",
+          "line": 634,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Regular Expressions",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_XcodeGuide.md",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_XcodeGuide.md",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/tags/release-1.0.1",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_XcodeGuide.md",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_AdvancedGuide.md",
+          "line": 307,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Comparing Floating Point Numbers",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_AdvancedGuide.md",
+          "line": 632,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Regular Expressions",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://jenkins-ci.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_AdvancedGuide.md",
+          "line": 1972,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Jenkins",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://wiki.wxwidgets.org/Cross-Compiling_Under_Linux",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_FAQ.md",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cross-Compiling Under Linux - WxWiki",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hassanjamilahmad.blogspot.com/2009/07/gtest-starters-help.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_FAQ.md",
+          "line": 959,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://jamesshore.com/Blog/Dependency-Injection-Demystified.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_FAQ.md",
+          "line": 979,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "James Shore: Dependency Injection Demystified",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/XcodeGuide.md",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/XcodeGuide.md",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/tags/release-1.0.1",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/XcodeGuide.md",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_AdvancedGuide.md",
+          "line": 307,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Comparing Floating Point Numbers",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_AdvancedGuide.md",
+          "line": 559,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Regular Expressions",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://wiki.wxwidgets.org/Cross-Compiling_Under_Linux",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_FAQ.md",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cross-Compiling Under Linux - WxWiki",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hassanjamilahmad.blogspot.com/2009/07/gtest-starters-help.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_FAQ.md",
+          "line": 959,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://jamesshore.com/Blog/Dependency-Injection-Demystified.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_FAQ.md",
+          "line": 979,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "James Shore: Dependency Injection Demystified",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://wiki.wxwidgets.org/Cross-Compiling_Under_Linux",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_FAQ.md",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cross-Compiling Under Linux - WxWiki",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hassanjamilahmad.blogspot.com/2009/07/gtest-starters-help.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_FAQ.md",
+          "line": 861,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_XcodeGuide.md",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_XcodeGuide.md",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/tags/release-1.0.1",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_7_XcodeGuide.md",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_XcodeGuide.md",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_XcodeGuide.md",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/tags/release-1.0.1",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_XcodeGuide.md",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletest.googlecode.com/svn/trunk",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_5_XcodeGuide.md",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_AdvancedGuide.md",
+          "line": 307,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Comparing Floating Point Numbers",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/V1_6_AdvancedGuide.md",
+          "line": 632,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Regular Expressions",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml",
+          "file": "pcst_fast2-1.1.0/external/googletest/googletest/docs/DevGuide.md",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletesting.blogspot.com/2008/06/defeat-static-cling.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/FrequentlyAskedQuestions.md",
+          "line": 531,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Testing Blog: TotT: Defeat \"Static Cling\"",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/CookBook.md",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://sourceforge.net/projects/cppunit",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/ForDummies.md",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletesting.blogspot.com/2008/06/defeat-static-cling.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/FrequentlyAskedQuestions.md",
+          "line": 531,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Testing Blog: TotT: Defeat \"Static Cling\"",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/CookBook.md",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://apps.sourceforge.net/mediawiki/cppunit/index.php?title=Main_Page",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_7/ForDummies.md",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletesting.blogspot.com/2008/06/defeat-static-cling.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/FrequentlyAskedQuestions.md",
+          "line": 531,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Testing Blog: TotT: Defeat \"Static Cling\"",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/CookBook.md",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://apps.sourceforge.net/mediawiki/cppunit/index.php?title=Main_Page",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_6/ForDummies.md",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://googletesting.blogspot.com/2008/06/defeat-static-cling.html",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/FrequentlyAskedQuestions.md",
+          "line": 527,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Testing Blog: TotT: Defeat \"Static Cling\"",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/CookBook.md",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/ForDummies.md",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.jmock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "jMock - An Expressive Mock Object Library for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.easymock.org",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/ForDummies.md",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EasyMock",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://apps.sourceforge.net/mediawiki/cppunit/index.php?title=Main_Page",
+          "file": "pcst_fast2-1.1.0/external/googletest/googlemock/docs/v1_5/ForDummies.md",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "gguf-editor",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/5d/6e/20850e965504fda392fb764a69b81addb2dda41d64156ceaf8756e7994c9/gguf_editor-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:40.050609+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "itasc-cellpose",
+      "version": "0.2.0.dev0",
+      "download_url": "https://files.pythonhosted.org/packages/13/fb/5364ff03876484b0dfc66bc291553dbd69a7d519be53af3d6ecfdf2953df/itasc_cellpose-0.2.0.dev0-py3-none-any.whl",
+      "analyzed_at": "2026-07-18T08:37:40.004330+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "bypassapi-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/16/47/14030619533b07eeccaa60d08e7ff19a7bccc6e35eecf64c05bfc9e2c30d/bypassapi_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:39.786324+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com/docs",
+          "file": "bypassapi_mcp-0.1.0/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Documentation - BypassAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com/buy",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bypassapi.com",
+          "file": "bypassapi_mcp-0.1.0/src/bypassapi_mcp/server.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BypassAPI - AI web scraper with Cloudflare bypass",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "expertsnbit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8b/22/41cb2bc08826c129ef1a2182240a6944fe94f2bce0c2066d5bafb3cbbeb1/expertsnbit-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:39.014275+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cerinamroth.com/ml",
+          "file": "expertsnbit-0.1.0/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ML systems \u2014 Cerin Amroth",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nf4gemm",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b9/57/559e2920a97855bbe879b9f11148211e0dc06b08554e638f13e09eb38df7/nf4gemm-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:38.122734+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cerinamroth.com/ml",
+          "file": "nf4gemm-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ML systems \u2014 Cerin Amroth",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "gnf4",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/29/69/01ded58e4fe8ac818576248637979beef43ca26584c10ea5c3767b8b94cf/gnf4-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:37.280512+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cerinamroth.com/ml",
+          "file": "gnf4-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ML systems \u2014 Cerin Amroth",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "grouped-nf4-gemm",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/13/98/7a764a79889186cab3c38d35d564e8bf5238a870f06e9fa7e8e097001112/grouped_nf4_gemm-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:36.478449+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cerinamroth.com/ml/grouped-nf4-gemm",
+          "file": "grouped_nf4_gemm-0.1.1/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Receipts-Driven Engineering \u2014 Cerin Amroth",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "local-leads-mcp",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/cc/a6/b81dba0329fbf5624df7ab7a65acf3c205487c60c438eadb4b23337396b7/local_leads_mcp-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:35.470316+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "local_leads_mcp-0.1.1/local_leads_mcp/search/client.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://dns.google/resolve",
+          "file": "local_leads_mcp-0.1.1/local_leads_mcp/verify/client.py",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nominatim.openstreetmap.org/search",
+          "file": "local_leads_mcp-0.1.1/local_leads_mcp/osm/client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nominatim Demo",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "file": "local_leads_mcp-0.1.1/local_leads_mcp/osm/client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "file": "local_leads_mcp-0.1.1/local_leads_mcp/osm/client.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pygeomatic",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0a/aa/8569e5e12b35aa568fd27fe112a768233324740c321d79e30265f6357a70/pygeomatic-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.601356+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "manolii-routing-lint",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/63/07/9384523e3a0b1c3763cbe28e922e9023d1fa0d4582e2a57df7918df01206/manolii_routing_lint-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.427829+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "pypiggyback",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f4/de/e2e4f869a1dfbf4e935a9c9a7b99ac681b4766e93ec5ce021ed7034645c7/pypiggyback-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.346016+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "qcoherence",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/9a/0c/31951e366e10d595c6da7de5a48e146c3677b44a672e8f47773223070706/qcoherence-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.241960+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "crossagent",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/0d/8c/eebbd1f7179240593a18f89c62732b3c1c9195f27adda8a983e8e7815f36/crossagent-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.179193+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "tnte",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a9/e8/9230fec1c7b3b15b344ae0752ed4ab61815ff78ad43d3c847c58c6848513/tnte-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:28.018904+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://keepachangelog.com/en/1.1.0",
+          "file": "tnte-1.0.0/CHANGELOG.md",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Keep a Changelog",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "tnte-1.0.0/CHANGELOG.md",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/pyproject.toml",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.hackertarget.com",
+          "file": "tnte-1.0.0/tnte/cli.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ipwho.is",
+          "file": "tnte-1.0.0/tnte/cli.py",
+          "line": 243,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dns.google/resolve",
+          "file": "tnte-1.0.0/tnte/cli.py",
+          "line": 244,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://threatnovasecurity.com",
+          "file": "tnte-1.0.0/tnte/__init__.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ThreatNova Security | Secure the Now. Shape the Future.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "voxa-dub",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a7/23/8b75a7f4aa475a88eb2e52cbfe5116ffd4fa7ec24588f17d597077f2595a/voxa_dub-1.0.1.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:26.244136+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "seiza",
+      "version": "0.7.0",
+      "download_url": "https://files.pythonhosted.org/packages/2b/40/ef48f43c966684a4f9ca63b0ba3564bd19a80dd379af73eb835c26c634a5/seiza-0.7.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:26.077156+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://seiza.fyi",
+          "file": "seiza-0.7.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seiza \u00b7 Astronomical plate solving",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "lucit-licensing-python",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/38/5b/de71a47fd26bad3ddfe298b643dcd01ffab43ae0f7c6e30d802bd62f1c48/lucit_licensing_python-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-07-18T08:37:25.449706+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "plumefile",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c8/34/efe87f2469355c981d0df9ad85af722159a63e0d5158f7cb1b4a72c3622a/plumefile-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:25.406435+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "boilerplot",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/d7/72/6c2c367af8e11db8a06a5938763caced4e1b7ce11d8e68c37838f3c07f00/boilerplot-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-18T08:37:25.239483+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
     {
       "name": "ooklept",
       "version": "1.0",
