@@ -40,12 +40,10 @@
           <h3>Results</h3>
           <p>What each column and badge in the table means:</p>
           <dl class="glossary-list">
-            <dt>Layer</dt>
-            <dd>Which layer produced the finding — <code>regex</code> or <code>ast</code>.</dd>
-            <dt>Method</dt>
-            <dd>How the URL was written in source: <code>via_base64</code>, <code>via_concat</code>, <code>via_fstring</code>, <code>via_scope</code>, <code>raw_ip</code>, or blank for a plain literal string.</dd>
+            <dt>Tags column</dt>
+            <dd>Three stacked values per finding — <strong>layer</strong> (<code>regex</code> or <code>ast</code>, which layer produced it), <strong>method</strong> (how the URL was written in source: <code>via_base64</code>, <code>via_concat</code>, <code>via_fstring</code>, <code>via_scope</code>, <code>raw_ip</code>, or blank for a plain literal string), and <strong>threat</strong> (highlighted in red when set — see Threats below).</dd>
             <dt>Verdict badge</dt>
-            <dd>A package is flagged <span class="badge badge--malicious">suspicious</span> once any finding's Threat column is set (shortener, tunneling, exfiltration, ip_recon, malware_hosting, suspicious_tld, or punycode); otherwise it's <span class="badge badge--clean">clean</span>. A bare IP address alone (<code>raw_ip</code>, shown under Method) doesn't count toward this verdict.</dd>
+            <dd>A package is flagged <span class="badge badge--malicious">suspicious</span> once any finding's threat value is set (shortener, tunneling, exfiltration, ip_recon, malware_hosting, suspicious_tld, or punycode); otherwise it's <span class="badge badge--clean">clean</span>. A bare IP address alone (<code>raw_ip</code>, shown as method) doesn't count toward this verdict.</dd>
             <dt>HTTP status badge</dt>
             <dd>From <code>--check-http</code>: the final status code after following redirects — green for 2xx, amber for 3xx, red for 4xx/5xx.</dd>
             <dt>Page title</dt>
@@ -56,7 +54,7 @@
         </section>
         <section class="modal__section">
           <h3>Threats</h3>
-          <p>Domain categories evaluated, in order, once a URL survives deduplication. <code>raw_ip</code> is shown under the Method column on this site rather than Threat, and doesn't count toward the suspicious verdict above — the rest do:</p>
+          <p>Domain categories evaluated, in order, once a URL survives deduplication. <code>raw_ip</code> is shown as the method value in the Tags column rather than as a threat, and doesn't count toward the suspicious verdict above — the rest do:</p>
           <div class="table-wrap">
             <table class="glossary-table">
               <thead>
@@ -154,9 +152,7 @@
             <th scope="col">Analyzed</th>
             <th scope="col">File:line</th>
             <th scope="col" class="col-url">URL</th>
-            <th scope="col">Layer</th>
-            <th scope="col">Method</th>
-            <th scope="col">Threat</th>
+            <th scope="col">Tags</th>
           </tr>
         </thead>
         <tbody id="resultsBody"></tbody>

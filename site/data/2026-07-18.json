@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-07-18T05:54:44.680321+00:00",
+  "stats": {
+    "total_packages": 5,
+    "malicious": 1,
+    "clean": 4
+  },
+  "packages": [
+    {
+      "name": "pkg_malicioso",
+      "version": null,
+      "download_url": null,
+      "analyzed_at": "2026-07-18T05:38:43.385409+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://pastebin.com",
+          "file": "config.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pastebin.com/raw/abc123",
+          "file": "config.py",
+          "line": 4,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pastebin.com/raw/drop456",
+          "file": "config.py",
+          "line": 5,
+          "layer": "ast",
+          "method": "via_concat",
+          "domain_threat": "exfiltration",
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pastebin.com/raw/beacon789",
+          "file": "exfil.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pastebin.com/raw/beacon789",
+          "file": "exfil.py",
+          "line": 6,
+          "layer": "ast",
+          "method": "via_base64",
+          "domain_threat": "exfiltration",
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "newpkg",
+      "version": "1.0",
+      "download_url": "https://example.com/pkg-1.0.tar.gz",
+      "analyzed_at": "2026-07-18T05:38:43.357252+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "somepkg",
+      "version": "1.0",
+      "download_url": "https://example.com/pkg-1.0.tar.gz",
+      "analyzed_at": "2026-07-18T05:38:43.355570+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "somepkg",
+      "version": "1.0",
+      "download_url": "https://example.com/pkg-1.0.tar.gz",
+      "analyzed_at": "2026-07-18T05:38:43.354319+00:00",
+      "total_findings": 0,
+      "findings": []
+    },
+    {
+      "name": "pkg",
+      "version": null,
+      "download_url": null,
+      "analyzed_at": "2026-07-18T05:38:43.352892+00:00",
+      "total_findings": 0,
+      "findings": []
+    }
+  ]
+}

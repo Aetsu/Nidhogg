@@ -178,7 +178,7 @@ function nameCell(pkg) {
 function findingCells(finding, pkg) {
   const fileText = `${finding.file}:${finding.line}`;
   const distUrl = inspectorDistributionUrl(pkg);
-  const file = el("td", "cell-mono");
+  const file = el("td", "cell-mono cell-file");
   if (distUrl) {
     file.appendChild(
       inlineLink(`${distUrl}${encodeFilePath(finding.file)}`, fileText, "file-link"),
@@ -187,18 +187,26 @@ function findingCells(finding, pkg) {
     file.appendChild(document.createTextNode(fileText));
   }
   const url = urlCell(finding);
-  const layer = el("td", "cell-mono", finding.layer);
-  const method = el("td", "cell-mono", finding.method);
-  const threat = el("td", "cell-mono", finding.domain_threat ?? "—");
-  return [file, url, layer, method, threat];
+  const tags = tagsCell(finding);
+  return [file, url, tags];
+}
+
+function tagsCell(finding) {
+  const cell = el("td", "cell-tags");
+  cell.appendChild(el("span", "tag-badge tag-badge--layer", finding.layer));
+  if (finding.method) {
+    cell.appendChild(el("span", "tag-badge tag-badge--method", finding.method));
+  }
+  if (finding.domain_threat) {
+    cell.appendChild(el("span", "tag-badge tag-badge--threat", finding.domain_threat));
+  }
+  return cell;
 }
 
 function emptyFindingCells() {
   return [
-    el("td", "cell-mono cell-muted", "—"),
+    el("td", "cell-mono cell-file cell-muted", "—"),
     el("td", "cell-url cell-muted", "—"),
-    el("td", "cell-mono cell-muted", "—"),
-    el("td", "cell-mono cell-muted", "—"),
     el("td", "cell-mono cell-muted", "—"),
   ];
 }

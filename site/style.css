@@ -538,6 +538,40 @@ code {
   white-space: nowrap;
 }
 
+.cell-file {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 10rem;
+  max-width: 18rem;
+}
+
+.cell-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.tag-badge--layer,
+.tag-badge--method {
+  color: var(--text-muted);
+}
+
+.tag-badge--threat {
+  color: var(--accent-malicious);
+  font-weight: 600;
+}
+
 .cell-num {
   text-align: right;
 }
