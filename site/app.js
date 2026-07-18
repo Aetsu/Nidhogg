@@ -1,5 +1,6 @@
 "use strict";
 
+const PAGE_SIZE = 25;
 const INDEX_URL = "data/index.json";
 const dayUrl = (date) => `data/${date}.json`;
 
@@ -38,7 +39,7 @@ function isMalicious(pkg) {
   return pkg.findings.some((f) => f.domain_threat);
 }
 
-function renderSpine(packages) {
+function renderSpine(packages, onSelect) {
   const spine = document.getElementById("spine");
   const startLabel = document.getElementById("spineDateStart");
   const endLabel = document.getElementById("spineDateEnd");
@@ -66,10 +67,7 @@ function renderSpine(packages) {
     mark.style.left = `${leftPct}%`;
     mark.style.animationDelay = `${Math.min(index * 12, 600)}ms`;
     mark.title = pkg.name;
-    mark.addEventListener("click", () => {
-      const target = document.querySelector(`tr[data-pkg="${cssEscape(pkg.name)}"]`);
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
+    mark.addEventListener("click", () => onSelect(pkg.name));
     spine.appendChild(mark);
   });
 }
@@ -337,6 +335,29 @@ function applyFilters(packages, query, urlOnly, facets) {
     });
 }
 
+function paginate(packages, page) {
+  const totalPages = Math.max(Math.ceil(packages.length / PAGE_SIZE), 1);
+  const clampedPage = Math.min(Math.max(page, 1), totalPages);
+  const start = (clampedPage - 1) * PAGE_SIZE;
+  return {
+    page: clampedPage,
+    totalPages,
+    slice: packages.slice(start, start + PAGE_SIZE),
+  };
+}
+
+function renderPagination(page, totalPages, totalCount) {
+  const pagination = document.getElementById("pagination");
+  const status = document.getElementById("pageStatus");
+  const prevBtn = document.getElementById("pagePrev");
+  const nextBtn = document.getElementById("pageNext");
+
+  pagination.hidden = totalCount === 0 || totalPages <= 1;
+  status.textContent = `Page ${page} of ${totalPages} · ${totalCount.toLocaleString("en-US")} packages`;
+  prevBtn.disabled = page <= 1;
+  nextBtn.disabled = page >= totalPages;
+}
+
 function showError(message) {
   const table = document.querySelector(".table-scroll");
   const error = el("p", "error-state", message);
@@ -407,18 +428,27 @@ async function main() {
   const emptyState = document.getElementById("emptyState");
 
   const facets = Object.fromEntries(FACET_DEFS.map((def) => [def.id, new Set()]));
+  const pagePrevBtn = document.getElementById("pagePrev");
+  const pageNextBtn = document.getElementById("pageNext");
 
   let currentDay = null;
+  let currentPage = 1;
 
-  function refresh() {
+  function refresh({ resetPage = false } = {}) {
     if (!currentDay) return;
+    if (resetPage) currentPage = 1;
+
     const filtered = applyFilters(
       currentDay.packages,
       searchInput.value,
       urlOnlyToggle.checked,
       facets,
     );
-    renderResultsTable(filtered);
+    const { page, totalPages, slice } = paginate(filtered, currentPage);
+    currentPage = page;
+
+    renderResultsTable(slice);
+    renderPagination(page, totalPages, filtered.length);
     emptyState.hidden = filtered.length !== 0;
     FACET_DEFS.forEach((def) => {
       const countEl = document.getElementById(`${def.id}FilterCount`);
@@ -426,10 +456,25 @@ async function main() {
     });
   }
 
+  function jumpToPackage(name) {
+    const filtered = applyFilters(
+      currentDay.packages,
+      searchInput.value,
+      urlOnlyToggle.checked,
+      facets,
+    );
+    const index = filtered.findIndex((pkg) => pkg.name === name);
+    if (index === -1) return;
+    currentPage = Math.floor(index / PAGE_SIZE) + 1;
+    refresh();
+    const target = document.querySelector(`tr[data-pkg="${cssEscape(name)}"]`);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
   function renderFacetMenus() {
     const options = collectFacetOptions(currentDay.packages);
     FACET_DEFS.forEach((def) => {
-      renderFacetMenu(def, options[def.id], facets[def.id], refresh);
+      renderFacetMenu(def, options[def.id], facets[def.id], () => refresh({ resetPage: true }));
     });
   }
 
@@ -443,14 +488,22 @@ async function main() {
     }
     FACET_DEFS.forEach((def) => facets[def.id].clear());
     renderStatsLine(currentDay);
-    renderSpine(currentDay.packages);
+    renderSpine(currentDay.packages, jumpToPackage);
     renderFacetMenus();
-    refresh();
+    refresh({ resetPage: true });
   }
 
   daySelect.addEventListener("change", loadSelectedDay);
-  searchInput.addEventListener("input", refresh);
-  urlOnlyToggle.addEventListener("change", refresh);
+  searchInput.addEventListener("input", () => refresh({ resetPage: true }));
+  urlOnlyToggle.addEventListener("change", () => refresh({ resetPage: true }));
+  pagePrevBtn.addEventListener("click", () => {
+    currentPage -= 1;
+    refresh();
+  });
+  pageNextBtn.addEventListener("click", () => {
+    currentPage += 1;
+    refresh();
+  });
 
   const filterDetails = FACET_DEFS.map((def) => document.getElementById(`${def.id}Filter`));
   document.addEventListener("click", (event) => {
