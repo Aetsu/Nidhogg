@@ -117,6 +117,23 @@ def test_trailing_punctuation_stripped(raw: str, expected: str, tmp_path: Path):
     assert _urls(raw, tmp_path) == [expected]
 
 
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        # JSON-style wrapping: `}` blocked the trailing quote from stripping.
+        ('{"url": "https://evil.com/path"}', "https://evil.com/path"),
+        # f-string placeholder glued right after the URL.
+        ("https://api.telegram.org/bot{token}", "https://api.telegram.org/bot"),
+        # raw HTML glued with no whitespace: `<a href="URL"><img ...>`.
+        ('https://youtu.be/Kwgaz00gUXw"><img', "https://youtu.be/Kwgaz00gUXw"),
+        # Python code snippet glued after the URL: `parse('URL').entries[:5]`.
+        ("https://hnrss.org/frontpage').entries[:5]", "https://hnrss.org/frontpage"),
+    ],
+)
+def test_weird_characters_truncate_url(raw: str, expected: str, tmp_path: Path):
+    assert _urls(raw, tmp_path) == [expected]
+
+
 def test_url_with_query_string_preserved(tmp_path: Path):
     url = "https://evil.com/path?foo=bar&baz=1"
     assert _urls(f"u = '{url}'", tmp_path) == [url]

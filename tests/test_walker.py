@@ -153,7 +153,6 @@ def test_analyze_package_no_analysable_files_returns_empty(tmp_path: Path):
 
 def test_analyze_package_includes_whitelisted_text_files(tmp_path: Path):
     (tmp_path / "code.py").write_text("")
-    (tmp_path / "README.md").write_text("")
     (tmp_path / "notes.rst").write_text("")
     (tmp_path / "notes.txt").write_text("")
     (tmp_path / "setup.cfg").write_text("")
@@ -169,7 +168,6 @@ def test_analyze_package_includes_whitelisted_text_files(tmp_path: Path):
     analysed_names = {fa.filepath.name for fa in result.files}
     assert analysed_names == {
         "code.py",
-        "README.md",
         "notes.rst",
         "notes.txt",
         "setup.cfg",
@@ -181,7 +179,7 @@ def test_analyze_package_includes_whitelisted_text_files(tmp_path: Path):
 
 def test_analyze_package_runs_ast_only_on_py_files(tmp_path: Path):
     (tmp_path / "code.py").write_text("")
-    (tmp_path / "README.md").write_text("")
+    (tmp_path / "notes.txt").write_text("")
 
     with (
         patch(PATCH_L1, return_value=[]),
@@ -190,6 +188,24 @@ def test_analyze_package_runs_ast_only_on_py_files(tmp_path: Path):
         analyze_package(tmp_path)
 
     assert mock_l2.call_count == 1
+
+
+@pytest.mark.parametrize(
+    "readme_name",
+    ["README.md", "README.rst", "README.txt", "README", "readme.md"],
+)
+def test_analyze_package_excludes_readme_files(tmp_path: Path, readme_name: str):
+    (tmp_path / "code.py").write_text("")
+    (tmp_path / readme_name).write_text("See https://readme-example.test/docs")
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path)
+
+    analysed_names = {fa.filepath.name for fa in result.files}
+    assert readme_name not in analysed_names
 
 
 # ---------------------------------------------------------------------------
@@ -223,14 +239,10 @@ def test_analyze_package_collects_findings_from_both_layers(tmp_path: Path):
 # ---------------------------------------------------------------------------
 
 
-def test_walker_collects_readme_urls_with_file_tag() -> None:
+def test_walker_excludes_readme_from_fixture_package() -> None:
     root = Path(__file__).parent / "fixtures" / "pkg_basic"
     analysis = analyze_package(root)
-    readme = next(
-        fa for fa in analysis.files if fa.filepath.name.lower() == "readme.md"
-    )
-    assert FileTag.README in readme.tags
-    assert any("readme-example.test" in f.value for f in readme.findings)
+    assert all(fa.filepath.name.lower() != "readme.md" for fa in analysis.files)
 
 
 def test_walker_flags_dynamic_exec_file(tmp_path: Path) -> None:

@@ -249,6 +249,7 @@ const FACET_DEFS = [
   { id: "status", field: "http_status", key: (v) => (v === null || v === undefined ? NONE_KEY : String(v)), noneLabel: "No status" },
   { id: "cert", field: "cert_issuer", key: (v) => (v ? v : NONE_KEY), noneLabel: "No cert" },
   { id: "layer", field: "layer", key: (v) => (v === null || v === undefined ? NONE_KEY : String(v)), noneLabel: "Unknown" },
+  { id: "method", field: "method", key: (v) => (v ? v : NONE_KEY), noneLabel: "Plain literal" },
   { id: "threat", field: "domain_threat", key: (v) => (v ? v : NONE_KEY), noneLabel: "No threat" },
 ];
 

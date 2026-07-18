@@ -45,7 +45,7 @@
             <dt>Method</dt>
             <dd>How the URL was written in source: <code>via_base64</code>, <code>via_concat</code>, <code>via_fstring</code>, <code>via_scope</code>, <code>raw_ip</code>, or blank for a plain literal string.</dd>
             <dt>Verdict badge</dt>
-            <dd>A package is flagged <span class="badge badge--malicious">suspicious</span> once any finding's Threat column is set (shortener, tunneling, exfiltration, ip_recon, malware_hosting, or suspicious_tld); otherwise it's <span class="badge badge--clean">clean</span>. A bare IP address alone (<code>raw_ip</code>, shown under Method) doesn't count toward this verdict.</dd>
+            <dd>A package is flagged <span class="badge badge--malicious">suspicious</span> once any finding's Threat column is set (shortener, tunneling, exfiltration, ip_recon, malware_hosting, suspicious_tld, or punycode); otherwise it's <span class="badge badge--clean">clean</span>. A bare IP address alone (<code>raw_ip</code>, shown under Method) doesn't count toward this verdict.</dd>
             <dt>HTTP status badge</dt>
             <dd>From <code>--check-http</code>: the final status code after following redirects — green for 2xx, amber for 3xx, red for 4xx/5xx.</dd>
             <dt>Page title</dt>
@@ -57,20 +57,23 @@
         <section class="modal__section">
           <h3>Threats</h3>
           <p>Domain categories evaluated, in order, once a URL survives deduplication. <code>raw_ip</code> is shown under the Method column on this site rather than Threat, and doesn't count toward the suspicious verdict above — the rest do:</p>
-          <table class="glossary-table">
-            <thead>
-              <tr><th>Category</th><th>Meaning</th><th>Examples</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><code>raw_ip</code></td><td>Direct public IP address instead of a domain name</td><td>185.220.101.x</td></tr>
-              <tr><td><code>shortener</code></td><td>URL shortener that hides the real destination</td><td>bit.ly, tinyurl.com, t.co</td></tr>
-              <tr><td><code>tunneling</code></td><td>Tunnel/exposure service for a local server</td><td>ngrok.io, workers.dev, serveo.net</td></tr>
-              <tr><td><code>exfiltration</code></td><td>Known data-exfiltration destination</td><td>discord.com, t.me, pastebin.com, webhook.site</td></tr>
-              <tr><td><code>ip_recon</code></td><td>Public-IP lookup service (network reconnaissance)</td><td>ipinfo.io, ifconfig.me, api.ipify.org</td></tr>
-              <tr><td><code>malware_hosting</code></td><td>Anonymous file-hosting service</td><td>files.catbox.moe, gofile.io</td></tr>
-              <tr><td><code>suspicious_tld</code></td><td>High-risk top-level domain</td><td>.tk, .ml, .zip, .xyz, .pw</td></tr>
-            </tbody>
-          </table>
+          <div class="table-wrap">
+            <table class="glossary-table">
+              <thead>
+                <tr><th>Category</th><th>Meaning</th><th>Examples</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>raw_ip</code></td><td>Direct public IP address instead of a domain name</td><td>185.220.101.x</td></tr>
+                <tr><td><code>shortener</code></td><td>URL shortener that hides the real destination</td><td>bit.ly, tinyurl.com, t.co</td></tr>
+                <tr><td><code>tunneling</code></td><td>Tunnel/exposure service for a local server</td><td>ngrok.io, workers.dev, serveo.net</td></tr>
+                <tr><td><code>exfiltration</code></td><td>Known data-exfiltration destination</td><td>discord.com, t.me, pastebin.com, webhook.site</td></tr>
+                <tr><td><code>ip_recon</code></td><td>Public-IP lookup service (network reconnaissance)</td><td>ipinfo.io, ifconfig.me, api.ipify.org</td></tr>
+                <tr><td><code>malware_hosting</code></td><td>Anonymous file-hosting service</td><td>files.catbox.moe, gofile.io</td></tr>
+                <tr><td><code>suspicious_tld</code></td><td>High-risk top-level domain</td><td>.tk, .ml, .zip, .xyz, .pw</td></tr>
+                <tr><td><code>punycode</code></td><td>IDN label encoding a lookalike/homograph of a trusted brand</td><td>xn--pypl-4ve.com</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
     </div>
@@ -130,6 +133,11 @@
       <details class="filter" id="layerFilter">
         <summary>Layer<span class="filter__count" id="layerFilterCount"></span></summary>
         <div class="filter__menu" id="layerFilterMenu"></div>
+      </details>
+
+      <details class="filter" id="methodFilter">
+        <summary>Method<span class="filter__count" id="methodFilterCount"></span></summary>
+        <div class="filter__menu" id="methodFilterMenu"></div>
       </details>
 
       <details class="filter" id="threatFilter">

@@ -103,11 +103,27 @@ def test_render_file_block_omits_le_tag_for_other_issuer(tmp_path: Path):
     assert "[LE]" not in text
 
 
-def test_render_file_block_shows_url_tag_uppercase(tmp_path: Path):
+def test_render_file_block_shows_threat_tag_in_own_column(tmp_path: Path):
     f = _finding(tmp_path, tags={UrlTag.SHORTENER})
     fa = FileAnalysis(tmp_path / "module.py", findings=[f])
     text = _capture(render_file_block(fa, tmp_path))
-    assert "[SHORTENER]" in text
+    assert "shortener" in text
+    assert "[SHORTENER]" not in text
+
+
+def test_render_file_block_shows_method_tag_in_own_column(tmp_path: Path):
+    f = _finding(tmp_path, tags={UrlTag.VIA_BASE64})
+    fa = FileAnalysis(tmp_path / "module.py", findings=[f])
+    text = _capture(render_file_block(fa, tmp_path))
+    assert "via_base64" in text
+
+
+def test_render_file_block_shows_method_and_threat_together(tmp_path: Path):
+    f = _finding(tmp_path, tags={UrlTag.VIA_CONCAT, UrlTag.PUNYCODE})
+    fa = FileAnalysis(tmp_path / "module.py", findings=[f])
+    text = _capture(render_file_block(fa, tmp_path))
+    assert "via_concat" in text
+    assert "punycode" in text
 
 
 def test_render_file_block_omits_bracket_tags_when_none(tmp_path: Path):

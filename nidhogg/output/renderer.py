@@ -23,11 +23,51 @@ from rich.progress import (
 from rich.table import Table
 from rich.text import Text
 
+from nidhogg.core.models import UrlTag
+
 if TYPE_CHECKING:
     from collections.abc import Iterator
     from pathlib import Path
 
     from nidhogg.core.models import FileAnalysis, PackageAnalysis
+
+# Tags shown in the "Method" column — how the URL was extracted from source.
+_METHOD_TAGS = frozenset(
+    {
+        UrlTag.VIA_BASE64,
+        UrlTag.VIA_CONCAT,
+        UrlTag.VIA_FSTRING,
+        UrlTag.VIA_SCOPE,
+        UrlTag.RAW_IP,
+    }
+)
+
+# Tags shown in the "Threat" column — the classified risk of the URL's host.
+_THREAT_TAGS = frozenset(
+    {
+        UrlTag.SHORTENER,
+        UrlTag.TUNNELING,
+        UrlTag.EXFILTRATION,
+        UrlTag.IP_RECON,
+        UrlTag.MALWARE_HOSTING,
+        UrlTag.SUSPICIOUS_TLD,
+        UrlTag.PUNYCODE,
+    }
+)
+
+
+def _pick_tag(tags: set[UrlTag], candidates: frozenset[UrlTag]) -> UrlTag | None:
+    """Return the first tag in *tags* found in *candidates*, or ``None``.
+
+    Args:
+        tags: A finding's tag set (extraction-method and/or threat tags).
+        candidates: The subset of tags to look for.
+
+    Returns:
+        The first matching tag, or ``None`` if none of *tags* is in
+        *candidates*.
+    """
+    return next((t for t in tags if t in candidates), None)
 
 
 def make_console(stream: TextIO | None = None) -> Console:
@@ -112,10 +152,16 @@ def render_file_block(file_analysis: FileAnalysis, pkg_path: Path) -> Group:
     table = Table(box=None, show_header=False, pad_edge=False, expand=False)
     table.add_column("LOC", no_wrap=True)
     table.add_column("Layer", no_wrap=True)
+    table.add_column("Method", no_wrap=True)
+    table.add_column("Threat", no_wrap=True)
     table.add_column("URL")
     for f in sorted(file_analysis.findings, key=lambda x: (x.layer.value, x.value)):
         loc = Text(str(f.lineno))
         layer = Text(f.layer.value, style="dim")
+        method_tag = _pick_tag(f.tags, _METHOD_TAGS)
+        threat_tag = _pick_tag(f.tags, _THREAT_TAGS)
+        method = Text(method_tag.value if method_tag else "", style="dim")
+        threat = Text(threat_tag.value if threat_tag else "", style="bold red")
         url = Text(f.value)
         if f.cert_issuer is not None and "Let's Encrypt" in f.cert_issuer:
             url.append(" [LE]", style="yellow")
@@ -123,9 +169,7 @@ def render_file_block(file_analysis: FileAnalysis, pkg_path: Path) -> Group:
             url.append(f" [{f.http_status}]", style=_http_status_style(f.http_status))
         if f.http_title is not None:
             url.append(f" {f.http_title}", style="dim")
-        for tag in sorted(t.value for t in f.tags):
-            url.append(f" [{tag.upper()}]", style="bold red")
-        table.add_row(loc, layer, url)
+        table.add_row(loc, layer, method, threat, url)
 
     return Group(header, table)
 

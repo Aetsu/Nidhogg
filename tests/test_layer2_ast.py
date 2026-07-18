@@ -63,6 +63,18 @@ def test_fixture_constant_url(tmp_path: Path):
     assert "https://c2.evil.example.com/beacon" in urls
 
 
+def test_constant_url_truncated_at_glued_brace(tmp_path: Path):
+    source = 'url = "https://api.telegram.org/bot{token}"'
+    urls = _findings(source, tmp_path)
+    assert urls == ["https://api.telegram.org/bot"]
+
+
+def test_constant_url_truncated_at_glued_quote(tmp_path: Path):
+    source = "msg = 'call feedparser.parse(\\'https://hnrss.org/frontpage\\').entries'"
+    urls = _findings(source, tmp_path)
+    assert urls == ["https://hnrss.org/frontpage"]
+
+
 # ---------------------------------------------------------------------------
 # ast.BinOp — constant folding of Constant + Constant
 # ---------------------------------------------------------------------------

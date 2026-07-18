@@ -146,5 +146,27 @@ def test_public_ip_returns_raw_ip_tag() -> None:
     assert UrlTag.RAW_IP in classify_domain("http://8.8.8.8/x")
 
 
+# ---------------------------------------------------------------------------
+# Punycode / IDN homograph
+# ---------------------------------------------------------------------------
+
+
+def test_classify_punycode_domain():
+    assert UrlTag.PUNYCODE in classify_domain("https://xn--pypl-4ve.com/login")
+
+
+def test_classify_punycode_subdomain_label():
+    assert UrlTag.PUNYCODE in classify_domain("https://xn--80ak6aa92e.com/")
+
+
+def test_classify_ascii_domain_is_not_punycode():
+    assert classify_domain("https://paypal.com/login") == set()
+
+
+def test_classify_domain_with_xn_in_middle_of_label_is_not_punycode():
+    # "xn--" must start a label, not just appear anywhere in the hostname.
+    assert classify_domain("https://axn--not-punycode.com/") == set()
+
+
 def test_unknown_domain_returns_empty_set() -> None:
     assert classify_domain("http://example.test/x") == set()

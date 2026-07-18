@@ -83,6 +83,24 @@ def _is_public_ip(hostname: str) -> bool:
     )
 
 
+def _is_punycode(hostname: str) -> bool:
+    """Return ``True`` if any label of *hostname* is punycode-encoded (IDN).
+
+    ``xn--`` labels decode to non-ASCII characters, which is how
+    internationalised domains are transported in ASCII-only DNS. Attackers
+    abuse this to register homograph lookalikes of trusted brands (e.g. a
+    Cyrillic lookalike letter standing in for a Latin one), so any punycode
+    label is treated as suspicious regardless of the decoded content.
+
+    Args:
+        hostname: Bare hostname, already lowercased.
+
+    Returns:
+        ``True`` when any dot-separated label starts with ``xn--``.
+    """
+    return any(label.startswith("xn--") for label in hostname.split("."))
+
+
 def _match_section(
     hostname: str,
     path: str,
@@ -113,8 +131,9 @@ def _match_suspicious_tld(hostname: str, tld_data: dict[str, object]) -> UrlTag 
 def classify_domain(url: str) -> set[UrlTag]:
     """Classify a URL by the threat tag(s) of its host.
 
-    Evaluation order: public raw IP → named category match (with the Discord
-    ``/invite/`` and ``/oauth2/`` exception) → suspicious TLD suffix.
+    Evaluation order: public raw IP → punycode/IDN label → named category
+    match (with the Discord ``/invite/`` and ``/oauth2/`` exception) →
+    suspicious TLD suffix.
 
     Args:
         url: The URL to classify.
@@ -126,6 +145,9 @@ def classify_domain(url: str) -> set[UrlTag]:
 
     if _is_public_ip(hostname):
         return {UrlTag.RAW_IP}
+
+    if _is_punycode(hostname):
+        return {UrlTag.PUNYCODE}
 
     data = _load_data()
     try:

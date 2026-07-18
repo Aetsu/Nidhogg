@@ -45,6 +45,7 @@ class UrlTag(enum.Enum):
     IP_RECON = "ip_recon"
     MALWARE_HOSTING = "malware_hosting"
     SUSPICIOUS_TLD = "suspicious_tld"
+    PUNYCODE = "punycode"
 
 
 @dataclass

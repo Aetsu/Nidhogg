@@ -27,6 +27,7 @@ _THREAT_TAGS = {
     "ip_recon",
     "malware_hosting",
     "suspicious_tld",
+    "punycode",
 }
 
 
@@ -119,7 +120,11 @@ def build_day_document(jsonl_path: Path) -> dict[str, Any]:
         same shape the site's ``app.js`` already consumes, scoped to this
         one day.
     """
-    packages = [_to_site_package(doc) for doc in _read_jsonl(jsonl_path)]
+    packages = sorted(
+        (_to_site_package(doc) for doc in _read_jsonl(jsonl_path)),
+        key=lambda pkg: pkg["analyzed_at"],
+        reverse=True,
+    )
     malicious = sum(
         1 for pkg in packages if any(f["domain_threat"] for f in pkg["findings"])
     )

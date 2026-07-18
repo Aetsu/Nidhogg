@@ -120,6 +120,17 @@ def test_build_day_document_clean_package_has_no_domain_threat(tmp_path: Path):
     assert document["packages"][0]["findings"][0]["domain_threat"] is None
 
 
+def test_build_day_document_orders_packages_most_recent_first(tmp_path: Path):
+    jsonl_path = tmp_path / "2026-07-17.jsonl"
+    older = {**_document("pkg-a", []), "analyzed_at": "2026-07-17T09:00:00+00:00"}
+    newer = {**_document("pkg-b", []), "analyzed_at": "2026-07-17T11:00:00+00:00"}
+    _write_jsonl(jsonl_path, [older, newer])
+
+    document = build_day_document(jsonl_path)
+
+    assert [pkg["name"] for pkg in document["packages"]] == ["pkg-b", "pkg-a"]
+
+
 def test_build_site_data_writes_one_file_per_day_and_an_index(tmp_path: Path):
     history_dir = tmp_path / "history"
     history_dir.mkdir()

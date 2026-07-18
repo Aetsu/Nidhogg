@@ -652,3 +652,76 @@ code {
   font-size: 0.75rem;
 }
 
+.table-wrap {
+  overflow-x: auto;
+}
+
+@media (max-width: 56rem) {
+  .content {
+    padding: 1rem;
+  }
+
+  .results th,
+  .results td {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .results th.col-url,
+  .cell-url {
+    min-width: 16rem;
+  }
+
+  .cell-name {
+    min-width: 10rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .masthead {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+
+  .masthead__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .masthead__nav {
+    position: static;
+    order: -1;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+  }
+
+  .spine-section {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .search,
+  .day-select,
+  .filter,
+  .filter summary,
+  .toggle {
+    width: 100%;
+  }
+
+  .filter__menu {
+    left: 0;
+    right: 0;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .results th,
+  .results td {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.5rem;
+  }
+}
+
