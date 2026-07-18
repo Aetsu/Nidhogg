@@ -350,7 +350,7 @@ const CORS_HINT =
   "`python3 -m http.server` inside site/.";
 
 async function fetchJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response.json();
 }
