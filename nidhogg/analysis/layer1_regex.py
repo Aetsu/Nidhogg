@@ -18,15 +18,27 @@ if TYPE_CHECKING:
 # whitespace, stopping right before another scheme starts so two URLs
 # glued together without a separator (e.g. markdown badge links like
 # `...svg)](https://...`) are captured as distinct matches instead of
-# one merged string.  Trailing punctuation that is almost never part of
-# a URL (quotes, brackets, commas, dots, and markdown's leftover `(`) is
-# stripped afterwards.
+# one merged string.  Weird characters (quotes, braces, HTML glued
+# right after the URL) are stripped afterwards.
 _URL_RE = re.compile(r"(?:https?|ftp|wss?)://(?:(?!(?:https?|ftp|wss?)://)\S)+")
+
+# Characters that are never valid unencoded inside a URL. When one of these
+# shows up anywhere in a regex match, everything from that point on is
+# leftover prose/markup glued to the URL (e.g. `'...').entries[:5`,
+# `"><img`, an f-string's `{token}`) rather than part of it, so the match
+# is truncated there instead of merely stripped from the very end.
+_WEIRD_CHARS_RE = re.compile(r"""['"`<>{}|\\^]""")
+
+# Trailing punctuation that prose routinely leaves attached to a URL
+# (sentence-ending dots, commas, a closing markdown paren/bracket, ...).
+_TRAILING_PUNCT = ".,;:!?()]"
 
 
 def _clean_url(raw: str) -> str:
-    """Strip trailing punctuation that parsers routinely leave attached."""
-    return raw.rstrip(".,;:'\"`!?()>]")
+    """Strip weird characters and trailing punctuation left over from parsing."""
+    match = _WEIRD_CHARS_RE.search(raw)
+    truncated = raw[: match.start()] if match else raw
+    return truncated.rstrip(_TRAILING_PUNCT)
 
 
 # ---------------------------------------------------------------------------

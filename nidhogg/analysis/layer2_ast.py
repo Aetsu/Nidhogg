@@ -15,12 +15,20 @@ if TYPE_CHECKING:
 
 _URL_RE = re.compile(r"(?:https?|ftp|wss?)://(?:(?!(?:https?|ftp|wss?)://)\S)+")
 
+# See layer1_regex.py's identical constants for the rationale: characters
+# that are never valid unencoded inside a URL truncate the match at their
+# first occurrence; everything else is just trailing prose punctuation.
+_WEIRD_CHARS_RE = re.compile(r"""['"`<>{}|\\^]""")
+_TRAILING_PUNCT = ".,;:!?()]"
+
 # name → (resolved_value, assignment_lineno)
 type _Scope = dict[str, tuple[str, int]]
 
 
 def _clean(url: str) -> str:
-    return url.rstrip(".,;:'\"`!?()>]")
+    match = _WEIRD_CHARS_RE.search(url)
+    truncated = url[: match.start()] if match else url
+    return truncated.rstrip(_TRAILING_PUNCT)
 
 
 def _urls_in(s: str) -> list[str]:

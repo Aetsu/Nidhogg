@@ -20,10 +20,15 @@ _TEXT_SUFFIXES = frozenset({".py", ".md", ".rst", ".txt", ".cfg", ".toml"})
 
 
 def _is_whitelisted(path: Path) -> bool:
-    """Return ``True`` if *path* is a file type we analyse for URLs."""
-    if path.suffix.lower() in _TEXT_SUFFIXES:
-        return True
-    return path.name.lower().startswith("readme")
+    """Return ``True`` if *path* is a file type we analyse for URLs.
+
+    README files are excluded regardless of extension: they are prose
+    aimed at humans, not package code, and consistently drown findings
+    in noise (badges, screenshots, unrelated doc links).
+    """
+    if path.name.lower().startswith("readme"):
+        return False
+    return path.suffix.lower() in _TEXT_SUFFIXES
 
 
 def _collect_files(root: Path) -> list[Path]:
