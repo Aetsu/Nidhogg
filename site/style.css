@@ -9,6 +9,13 @@
   --accent-malicious-dim: #6e3120;
   --accent-clean: #6e8f6b;
   --accent-focus: #d9a441;
+  --series-1: #3987e5;
+  --series-2: #008300;
+  --series-3: #d55181;
+  --series-4: #c98500;
+  --series-5: #199e70;
+  --series-6: #d95926;
+  --series-7: #9085e9;
   --radius: 3px;
   --font-display: ui-serif, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -27,6 +34,13 @@
     --accent-malicious-dim: #dcb9a7;
     --accent-clean: #4c6b49;
     --accent-focus: #8a5a16;
+    --series-1: #2a78d6;
+    --series-2: #008300;
+    --series-3: #e87ba4;
+    --series-4: #eda100;
+    --series-5: #1baf7a;
+    --series-6: #eb6834;
+    --series-7: #4a3aa7;
   }
 }
 
@@ -527,6 +541,45 @@ code {
   text-decoration-color: currentColor;
 }
 
+.cell-hash {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.hash-value {
+  font-family: var(--font-mono);
+}
+
+.copy-btn,
+.vt-link {
+  display: inline-block;
+  color: var(--accent-focus);
+  border: 1px solid var(--accent-focus);
+  border-radius: var(--radius);
+  padding: 0.1rem 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.copy-btn:hover,
+.vt-link:hover {
+  background: var(--accent-focus);
+  color: var(--bg);
+}
+
+.copy-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
 .result-row.pkg-malicious .cell-name {
   border-left-color: var(--accent-malicious);
   color: var(--accent-malicious);
@@ -670,6 +723,35 @@ code {
   border: 1px solid var(--accent-clean);
 }
 
+.badge--unknown {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+}
+
+.view-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.view-tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+.view-tab[aria-selected="true"] {
+  color: var(--text);
+  border-color: var(--accent-focus);
+}
+
 .empty-state,
 .error-state {
   color: var(--text-muted);
@@ -793,5 +875,41 @@ code {
     font-size: 0.8rem;
     padding: 0.45rem 0.5rem;
   }
+}
+
+.chart-panel {
+  margin-bottom: 2rem;
+}
+
+.chart-panel h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.chart-panel-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.chart-panel-row .chart-panel {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.chart-mount {
+  width: 100%;
+}
+
+.chart-mount svg {
+  display: block;
+  width: 100%;
+}
+
+.chart-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  fill: var(--text);
 }
 

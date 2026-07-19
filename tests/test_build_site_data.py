@@ -159,3 +159,109 @@ def test_build_site_data_empty_history_writes_empty_index(tmp_path: Path):
     assert dates == []
     index = json.loads((site_data_dir / "index.json").read_text(encoding="utf-8"))
     assert index == {"generated_at": index["generated_at"], "latest": None, "dates": []}
+
+
+def _binary_document(package: str, binaries: list[dict]) -> dict:
+    return {
+        "analyzed_at": "2026-07-19T10:00:00+00:00",
+        "package": {
+            "name": package,
+            "path": "/tmp/pkg",  # noqa: S108
+            "version": None,
+            "download_url": None,
+        },
+        "summary": {
+            "total_binaries": len(binaries),
+            "signed": sum(1 for b in binaries if b["signed"]),
+        },
+        "binaries": binaries,
+    }
+
+
+def test_build_day_document_includes_binaries_when_present(tmp_path: Path):
+    jsonl_path = tmp_path / "2026-07-19.jsonl"
+    _write_jsonl(jsonl_path, [_document("cleanpkg", [])])
+    binaries_jsonl_path = tmp_path / "binaries-2026-07-19.jsonl"
+    _write_jsonl(
+        binaries_jsonl_path,
+        [
+            _binary_document(
+                "evilpkg",
+                [
+                    {
+                        "name": "helper.dll",
+                        "file": "native/helper.dll",
+                        "sha256": "a" * 64,
+                        "format": "pe",
+                        "signed": True,
+                        "signer": "CN=Example Corp",
+                    }
+                ],
+            )
+        ],
+    )
+
+    document = build_day_document(jsonl_path, binaries_jsonl_path)
+
+    assert len(document["binaries"]) == 1
+    group = document["binaries"][0]
+    assert group["package"] == "evilpkg"
+    assert group["binaries"][0]["name"] == "helper.dll"
+
+
+def test_build_day_document_binaries_empty_when_not_provided(tmp_path: Path):
+    jsonl_path = tmp_path / "2026-07-19.jsonl"
+    _write_jsonl(jsonl_path, [_document("cleanpkg", [])])
+
+    document = build_day_document(jsonl_path)
+
+    assert document["binaries"] == []
+
+
+def test_build_site_data_reads_binaries_subdir(tmp_path: Path):
+    history_dir = tmp_path / "history"
+    history_dir.mkdir()
+    _write_jsonl(history_dir / "2026-07-19.jsonl", [_document("pkg-a", [])])
+    binaries_dir = history_dir / "binaries"
+    binaries_dir.mkdir()
+    _write_jsonl(
+        binaries_dir / "2026-07-19.jsonl",
+        [
+            _binary_document(
+                "pkg-a",
+                [
+                    {
+                        "name": "x.so",
+                        "file": "x.so",
+                        "sha256": "b" * 64,
+                        "format": "elf",
+                        "signed": False,
+                        "signer": None,
+                    }
+                ],
+            )
+        ],
+    )
+
+    site_data_dir = tmp_path / "site-data"
+    build_site_data(history_dir, site_data_dir)
+
+    day_doc = json.loads(
+        (site_data_dir / "2026-07-19.json").read_text(encoding="utf-8")
+    )
+    assert len(day_doc["binaries"]) == 1
+    assert day_doc["binaries"][0]["binaries"][0]["name"] == "x.so"
+
+
+def test_build_site_data_no_binaries_subdir_is_empty(tmp_path: Path):
+    history_dir = tmp_path / "history"
+    history_dir.mkdir()
+    _write_jsonl(history_dir / "2026-07-19.jsonl", [_document("pkg-a", [])])
+
+    site_data_dir = tmp_path / "site-data"
+    build_site_data(history_dir, site_data_dir)
+
+    day_doc = json.loads(
+        (site_data_dir / "2026-07-19.json").read_text(encoding="utf-8")
+    )
+    assert day_doc["binaries"] == []

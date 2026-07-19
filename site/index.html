@@ -73,6 +73,22 @@
             </table>
           </div>
         </section>
+        <section class="modal__section">
+          <h3>Binaries</h3>
+          <p>From <code>--check-binaries</code>: every package is scanned for native executables/libraries (<code>.exe</code>, <code>.dll</code>, <code>.pyd</code>, <code>.so</code>, <code>.dylib</code>, <code>.a</code>, <code>.o</code>), each hashed and format-identified with LIEF. This is a separate table from the URL findings above, shown under the <strong>Binaries</strong> tab.</p>
+          <dl class="glossary-list">
+            <dt>Format column</dt>
+            <dd><code>PE</code> (Windows), <code>Mach-O</code> (macOS) or <code>ELF</code> (Linux), detected from the file's own header — not from its extension. Files LIEF can't parse are <code>unknown</code>.</dd>
+            <dt>SHA256 column</dt>
+            <dd>Hash of the file's raw contents, truncated for display. The <strong>copy</strong> button copies the full hash; the <strong>VT</strong> link opens the hash's VirusTotal report.</dd>
+            <dt>Signed badge</dt>
+            <dd><span class="badge badge--clean">signed</span> or <span class="badge badge--malicious">unsigned</span> when determined; <span class="badge badge--unknown">unknown</span> when the format has no signature to check (always the case for ELF, which has no code-signing mechanism) or the file couldn't be parsed.</dd>
+            <dt>Signer column</dt>
+            <dd>The certificate subject for a genuinely signed PE (Authenticode) or Mach-O (CMS) binary. Mach-O binaries signed without a real certificate — common for locally compiled code — show as <code>ad-hoc</code>, distinct from a real signer and from unsigned.</dd>
+            <dt>Only with binaries toggle</dt>
+            <dd>Checked by default; hides packages that carry no native binaries at all, since most packages don't.</dd>
+          </dl>
+        </section>
       </div>
     </div>
   </dialog>
@@ -84,7 +100,7 @@
         <button type="button" class="modal__close" id="aboutClose" aria-label="Close">×</button>
       </div>
       <div class="modal__body">
-        <p>Nidhogg is a static analyzer that extracts candidate malicious URLs from Python packages published on PyPI.</p>
+        <p>Nidhogg is a static analyzer that extracts candidate malicious URLs from Python packages published on PyPI, and — optionally — inspects any native binaries they bundle for format, signature, and known-hash lookups.</p>
         <p>
           Created by
           <a href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">Aetsu</a>
@@ -104,6 +120,12 @@
   </section>
 
   <main class="content">
+    <div class="view-tabs" role="tablist">
+      <button type="button" class="view-tab" id="tabResults" role="tab" aria-selected="true">Urls</button>
+      <button type="button" class="view-tab" id="tabBinaries" role="tab" aria-selected="false">Binaries</button>
+      <button type="button" class="view-tab" id="tabCharts" role="tab" aria-selected="false">Charts</button>
+    </div>
+
     <div class="controls">
       <select id="daySelect" class="day-select" aria-label="Day"></select>
       <input
@@ -113,6 +135,10 @@
         placeholder="Search package…"
         aria-label="Search package"
       />
+    </div>
+
+    <div id="resultsView">
+    <div class="controls">
       <label class="toggle">
         <input type="checkbox" id="urlOnlyToggle" checked />
         Only with URL
@@ -167,6 +193,80 @@
       <button type="button" class="page-btn" id="pagePrev" aria-label="Previous page">‹ Prev</button>
       <span class="page-status" id="pageStatus"></span>
       <button type="button" class="page-btn" id="pageNext" aria-label="Next page">Next ›</button>
+    </div>
+    </div>
+
+    <div id="binariesView" hidden>
+      <div class="controls">
+        <label class="toggle">
+          <input type="checkbox" id="binariesOnlyToggle" checked />
+          Only with binaries
+        </label>
+
+        <details class="filter" id="signedFilter">
+          <summary>Signed<span class="filter__count" id="signedFilterCount"></span></summary>
+          <div class="filter__menu" id="signedFilterMenu"></div>
+        </details>
+        <details class="filter" id="formatFilter">
+          <summary>Format<span class="filter__count" id="formatFilterCount"></span></summary>
+          <div class="filter__menu" id="formatFilterMenu"></div>
+        </details>
+      </div>
+
+      <div class="table-scroll">
+        <table class="results">
+          <thead>
+            <tr>
+              <th scope="col">Package</th>
+              <th scope="col">Analyzed</th>
+              <th scope="col">Binary</th>
+              <th scope="col">Format</th>
+              <th scope="col">SHA256</th>
+              <th scope="col">Signed</th>
+              <th scope="col">Signer</th>
+            </tr>
+          </thead>
+          <tbody id="binariesBody"></tbody>
+        </table>
+      </div>
+
+      <p class="empty-state" id="binariesEmptyState" hidden>
+        No binaries found for this day.
+      </p>
+
+      <div class="pagination" id="binariesPagination" hidden>
+        <button type="button" class="page-btn" id="binariesPagePrev" aria-label="Previous page">‹ Prev</button>
+        <span class="page-status" id="binariesPageStatus"></span>
+        <button type="button" class="page-btn" id="binariesPageNext" aria-label="Next page">Next ›</button>
+      </div>
+    </div>
+
+    <div id="chartsView" hidden>
+      <section class="chart-panel-row">
+        <section class="chart-panel" aria-labelledby="threatChartTitle">
+          <h2 id="threatChartTitle">Threat breakdown</h2>
+          <div class="chart-mount" id="threatChart"></div>
+          <p class="empty-state" id="threatChartEmpty" hidden>No threats found for this day.</p>
+        </section>
+        <section class="chart-panel" aria-labelledby="verdictChartTitle">
+          <h2 id="verdictChartTitle">Suspicious vs clean</h2>
+          <div class="chart-mount" id="verdictChart"></div>
+          <p class="empty-state" id="verdictChartEmpty" hidden>No packages found for this day.</p>
+        </section>
+      </section>
+
+      <section class="chart-panel-row">
+        <section class="chart-panel" aria-labelledby="formatChartTitle">
+          <h2 id="formatChartTitle">Binary format</h2>
+          <div class="chart-mount" id="formatChart"></div>
+          <p class="empty-state" id="formatChartEmpty" hidden>No binaries found for this day.</p>
+        </section>
+        <section class="chart-panel" aria-labelledby="signedChartTitle">
+          <h2 id="signedChartTitle">Binary signature</h2>
+          <div class="chart-mount" id="signedChart"></div>
+          <p class="empty-state" id="signedChartEmpty" hidden>No binaries found for this day.</p>
+        </section>
+      </section>
     </div>
   </main>
 

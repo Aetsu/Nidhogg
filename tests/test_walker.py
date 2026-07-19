@@ -291,3 +291,47 @@ def test_analyze_package_raises_on_file_not_dir(tmp_path: Path):
 
     with pytest.raises(PackageReadError, match="not a directory"):
         analyze_package(f)
+
+
+# ---------------------------------------------------------------------------
+# Binary scanning
+# ---------------------------------------------------------------------------
+
+
+def test_analyze_package_scans_binaries_when_check_binaries_true(
+    tmp_path: Path,
+) -> None:
+    (tmp_path / "helper.dll").write_bytes(b"not a real pe")
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path, check_binaries=True)
+
+    assert len(result.binaries) == 1
+    assert result.binaries[0].name == "helper.dll"
+
+
+def test_analyze_package_skips_binaries_by_default(tmp_path: Path) -> None:
+    (tmp_path / "helper.dll").write_bytes(b"not a real pe")
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path)
+
+    assert result.binaries == []
+
+
+def test_analyze_package_no_binaries_is_empty_list(tmp_path: Path) -> None:
+    (tmp_path / "a.py").write_text("x = 1")
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path, check_binaries=True)
+
+    assert result.binaries == []

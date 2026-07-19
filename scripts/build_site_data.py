@@ -100,6 +100,40 @@ def _to_site_package(document: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _to_site_binary_group(document: dict[str, Any]) -> dict[str, Any]:
+    """Convert one binaries-history document into the site's per-package entry.
+
+    Args:
+        document: One parsed line from a ``history/binaries/*.jsonl`` file,
+            stamped with ``analyzed_at`` by ``append_binary_finding``.
+
+    Returns:
+        A dict with the package name, analysis timestamp, and its list of
+        binary entries (already in the site's schema — see
+        ``build_binaries_document`` in ``nidhogg/output/writer.py``).
+    """
+    return {
+        "package": document["package"]["name"],
+        "analyzed_at": document["analyzed_at"],
+        "binaries": document["binaries"],
+    }
+
+
+def build_day_binaries(jsonl_path: Path) -> list[dict[str, Any]]:
+    """Build the site's per-day binaries list from one history JSONL file.
+
+    Args:
+        jsonl_path: Path to a single day's ``binaries/*.jsonl`` file.
+
+    Returns:
+        One entry per analysed package that had binaries that day, in file
+        order. Empty list if *jsonl_path* does not exist.
+    """
+    if not jsonl_path.exists():
+        return []
+    return [_to_site_binary_group(doc) for doc in _read_jsonl(jsonl_path)]
+
+
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
     """Parse each non-blank line of *path* as a JSON document."""
     return [
@@ -109,16 +143,22 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
     ]
 
 
-def build_day_document(jsonl_path: Path) -> dict[str, Any]:
+def build_day_document(
+    jsonl_path: Path, binaries_jsonl_path: Path | None = None
+) -> dict[str, Any]:
     """Build the site's per-day document from one ``history/*.jsonl`` file.
 
     Args:
-        jsonl_path: Path to a single day's history file.
+        jsonl_path: Path to a single day's URL-findings history file.
+        binaries_jsonl_path: Path to the matching day's binaries history
+            file (``history/binaries/YYYY-MM-DD.jsonl``), or ``None`` if it
+            doesn't exist — the resulting ``"binaries"`` key is an empty
+            list in that case.
 
     Returns:
-        A dict with ``generated_at``, ``stats``, and ``packages`` — the
-        same shape the site's ``app.js`` already consumes, scoped to this
-        one day.
+        A dict with ``generated_at``, ``stats``, ``packages``, and
+        ``binaries`` — the same shape the site's ``app.js`` already
+        consumes, scoped to this one day.
     """
     packages = sorted(
         (_to_site_package(doc) for doc in _read_jsonl(jsonl_path)),
@@ -128,6 +168,7 @@ def build_day_document(jsonl_path: Path) -> dict[str, Any]:
     malicious = sum(
         1 for pkg in packages if any(f["domain_threat"] for f in pkg["findings"])
     )
+    binaries = build_day_binaries(binaries_jsonl_path) if binaries_jsonl_path else []
     return {
         "generated_at": _now_iso(),
         "stats": {
@@ -136,6 +177,7 @@ def build_day_document(jsonl_path: Path) -> dict[str, Any]:
             "clean": len(packages) - malicious,
         },
         "packages": packages,
+        "binaries": binaries,
     }
 
 
@@ -158,7 +200,8 @@ def build_site_data(history_dir: Path, site_data_dir: Path) -> list[str]:
     dates: list[str] = []
     for jsonl_path in sorted(history_dir.glob("*.jsonl")):
         date = jsonl_path.stem
-        document = build_day_document(jsonl_path)
+        binaries_jsonl_path = history_dir / "binaries" / f"{date}.jsonl"
+        document = build_day_document(jsonl_path, binaries_jsonl_path)
         (site_data_dir / f"{date}.json").write_text(
             json.dumps(document, indent=2), encoding="utf-8"
         )

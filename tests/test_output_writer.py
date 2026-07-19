@@ -7,13 +7,21 @@ from pathlib import Path
 
 from nidhogg.core.models import (
     AnalysisLayer,
+    BinaryFinding,
+    BinaryFormat,
     FileAnalysis,
     FileTag,
     PackageAnalysis,
     UrlFinding,
     UrlTag,
 )
-from nidhogg.output.writer import _serialise_finding, build_document, write_results
+from nidhogg.output.writer import (
+    _serialise_finding,
+    build_binaries_document,
+    build_document,
+    write_binary_results,
+    write_results,
+)
 
 
 def _pkg(
@@ -275,3 +283,70 @@ def test_serialise_finding_includes_http_fields() -> None:
     doc = _serialise_finding(finding)
     assert doc["http_status"] == 200
     assert doc["http_title"] == "Home"
+
+
+# ---------------------------------------------------------------------------
+# Binaries document tests
+# ---------------------------------------------------------------------------
+
+
+def _binary(
+    tmp_path: Path,
+    name: str = "helper.dll",
+    sha256: str = "a" * 64,
+    fmt: BinaryFormat = BinaryFormat.PE,
+    signed: bool | None = True,
+    signer: str | None = "CN=Example Corp",
+) -> BinaryFinding:
+    return BinaryFinding(
+        name=name,
+        filepath=tmp_path / "native" / name,
+        sha256=sha256,
+        format=fmt,
+        signed=signed,
+        signer=signer,
+    )
+
+
+def test_build_binaries_document_summary_counts(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(
+        name="testpkg",
+        path=tmp_path,
+        binaries=[
+            _binary(tmp_path, signed=True),
+            _binary(tmp_path, name="unsigned.so", signed=False, signer=None),
+        ],
+    )
+    doc = build_binaries_document(pkg)
+    assert doc["summary"] == {"total_binaries": 2, "signed": 1}
+
+
+def test_build_binaries_document_entry_fields(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(name="testpkg", path=tmp_path, binaries=[_binary(tmp_path)])
+    doc = build_binaries_document(pkg)
+    entry = doc["binaries"][0]
+    assert entry["name"] == "helper.dll"
+    assert entry["file"] == "native/helper.dll"
+    assert entry["sha256"] == "a" * 64
+    assert entry["format"] == "pe"
+    assert entry["signed"] is True
+    assert entry["signer"] == "CN=Example Corp"
+
+
+def test_build_binaries_document_empty_when_no_binaries(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(name="testpkg", path=tmp_path)
+    doc = build_binaries_document(pkg)
+    assert doc["summary"] == {"total_binaries": 0, "signed": 0}
+    assert doc["binaries"] == []
+
+
+def test_write_binary_results_creates_sibling_file(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(name="testpkg", path=tmp_path, binaries=[_binary(tmp_path)])
+    out = tmp_path / "results.json"
+
+    write_binary_results(pkg, out)
+
+    sibling = tmp_path / "results.binaries.json"
+    assert sibling.exists()
+    data = json.loads(sibling.read_text())
+    assert data["binaries"][0]["name"] == "helper.dll"

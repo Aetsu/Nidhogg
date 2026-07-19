@@ -48,6 +48,15 @@ class UrlTag(enum.Enum):
     PUNYCODE = "punycode"
 
 
+class BinaryFormat(enum.Enum):
+    """Executable/library format detected in a binary finding."""
+
+    PE = "pe"
+    MACHO = "macho"
+    ELF = "elf"
+    UNKNOWN = "unknown"
+
+
 @dataclass
 class UrlFinding:
     """A single URL candidate found during package analysis.
@@ -76,6 +85,31 @@ class UrlFinding:
     cert_issuer: str | None = None
     http_status: int | None = None
     http_title: str | None = None
+
+
+@dataclass
+class BinaryFinding:
+    """A native binary (executable/library) found inside a package.
+
+    Attributes:
+        name: File basename (e.g. ``helper.dll``).
+        filepath: Path to the binary within the analysed package.
+        sha256: Hex-encoded SHA-256 digest of the file contents.
+        format: Detected executable format, or ``UNKNOWN`` if the file could
+            not be parsed.
+        signed: ``True``/``False`` when determined, ``None`` when the file
+            could not be parsed (never conflated with ``False``).
+        signer: Certificate subject (PE Authenticode, Mach-O CMS), the
+            literal string ``"ad-hoc"`` for Mach-O ad-hoc signing, or
+            ``None`` when unsigned or not determinable.
+    """
+
+    name: str
+    filepath: Path
+    sha256: str
+    format: BinaryFormat
+    signed: bool | None
+    signer: str | None
 
 
 @dataclass
@@ -108,6 +142,7 @@ class PackageAnalysis:
             known (PyPI fetch/monitor flows). Used to link to the exact
             distribution on inspector.pypi.io. ``None`` for the batch
             ``analyze`` flow.
+        binaries: Native binaries found within the package.
     """
 
     name: str
@@ -115,6 +150,7 @@ class PackageAnalysis:
     files: list[FileAnalysis] = field(default_factory=list)
     version: str | None = None
     download_url: str | None = None
+    binaries: list[BinaryFinding] = field(default_factory=list)
 
     @property
     def findings(self) -> list[UrlFinding]:

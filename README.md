@@ -29,6 +29,9 @@ uv run nidhogg.py analyze <package_path> --benign-domains my_domains.txt
 # TLS enrichment (requires network access)
 uv run nidhogg.py analyze <package_path> --check-ssl
 
+# Scan bundled native binaries (hash, format, signature)
+uv run nidhogg.py analyze <package_path> --check-binaries
+
 # Batch analysis
 uv run nidhogg.py analyze <packages_directory> --batch --output results.json
 
@@ -66,6 +69,7 @@ uv run nidhogg.py --clean --history-dir ./history
 | `--benign-domains PATH` | Custom benign-domains list |
 | `--check-ssl` | Verify TLS certificates (requires network access) |
 | `--check-http` | Probe every http/https URL and record its status and page title (requires network access) |
+| `--check-binaries` | Scan bundled native binaries (`.exe`, `.dll`, `.pyd`, `.so`, `.dylib`, `.a`, `.o`): hash, format (PE/Mach-O/ELF), and signature |
 | `--verbose` | Enable debug logging |
 | `--batch` | Treat the input as a directory of packages |
 | `--history-dir PATH` | Append each result as JSONL to `<PATH>/YYYY-MM-DD.jsonl` (defaults to `.cache/nidhogg/history` under the project directory) |
@@ -82,7 +86,7 @@ downloader.
 | `name` | PyPI package name (positional) |
 | `--version VERSION` | Specific version; defaults to the latest release |
 | `--keep-download [DIR]` | Keep the download/extraction instead of deleting it |
-| `--check-ssl`, `--check-http` | Opt-in network enrichment (same as `analyze`) |
+| `--check-ssl`, `--check-http`, `--check-binaries` | Opt-in enrichment (same as `analyze`) |
 | `--json`, `--output PATH`, `--history-dir PATH`, `--verbose` | Same as `analyze` |
 
 ### `monitor` — watching for new PyPI releases
@@ -102,7 +106,7 @@ last 40 newly published packages instead of starting from "now".
 | `--keep-download DIR` | Keep every download/extraction under DIR |
 | `--last N` | Process the last N newly published packages and exit (no loop) |
 | `--once` | Single iteration from the persisted state, then exit (no loop, no `time.sleep`) — meant for scheduled jobs (GitHub Actions cron) |
-| `--check-ssl`, `--check-http` | Opt-in network enrichment (same as `analyze`) |
+| `--check-ssl`, `--check-http`, `--check-binaries` | Opt-in enrichment (same as `analyze`) |
 | `--json`, `--history-dir PATH`, `--verbose` | Same as `analyze` |
 
 ### Exit codes
@@ -218,6 +222,19 @@ Threat categories evaluated in order:
 
 **HTTP (`--check-http`):** Performs a size-limited GET on every http/https URL found, following redirects, and records the final status and the page title. Findings that get no response at all are dropped from the results.
 
+### Binary scanning (`--check-binaries`)
+
+Independent of the URL pipeline. Walks the package for native
+executables/libraries (`.exe`, `.dll`, `.pyd`, `.so`, `.dylib`, `.a`, `.o`),
+hashes each with SHA-256, and uses [LIEF](https://lief.re/) to detect its
+real format (PE/Mach-O/ELF, from the file's own header, not its extension)
+and whether it carries an embedded signature — Authenticode for PE, code
+signing for Mach-O (ad-hoc signing reported distinctly from unsigned and
+from a real signer); ELF has no standard signing mechanism, so it's always
+reported unsigned. A binary LIEF can't parse is still recorded (hash +
+`unknown` format), never dropped. Results go to a separate
+`<PATH>/binaries/YYYY-MM-DD.jsonl` history stream, not the URL-findings one.
+
 ### History
 
 Each result is appended in JSONL format to `<PATH>/YYYY-MM-DD.jsonl` (`nidhogg/output/history.py`) — `<PATH>` defaults to `.cache/nidhogg/history` under the project directory; `--history-dir` overrides it. Append-only writes; disk/permission failures are logged as a warning and never interrupt the analysis.
@@ -274,7 +291,8 @@ nidhogg/
 │   ├── layer1_regex.py         # Layer 1: regex extraction over plain text
 │   ├── layer2_ast.py           # Layer 2: constant folding, base64, f-strings, scope tracking
 │   ├── aggregator.py           # Deduplication, normalization, and domain classification
-│   └── domain_classifier.py    # Threat categorization by domain/IP
+│   ├── domain_classifier.py    # Threat categorization by domain/IP
+│   └── binary_scanner.py       # Native-binary detection, hashing, and signature check
 ├── enrichment/
 │   ├── ssl_cert.py             # TLS certificate verification
 │   └── http_probe.py           # HTTP probing: response status and page title

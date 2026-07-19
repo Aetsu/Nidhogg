@@ -34,6 +34,39 @@ def append_finding(history_dir: Path, document: dict[str, object]) -> Path | Non
     return file_path
 
 
+def append_binary_finding(
+    history_dir: Path, document: dict[str, object]
+) -> Path | None:
+    """Append *document* to today's binaries JSONL file under *history_dir*.
+
+    Writes to ``<history_dir>/binaries/YYYY-MM-DD.jsonl`` — a subdirectory
+    separate from the URL-findings history written by :func:`append_finding`,
+    so the two never share or collide over the same file.
+
+    Args:
+        history_dir: Same directory passed to :func:`append_finding` for this
+            run. The ``binaries`` subdirectory is created if missing.
+        document: The binaries result document to append (e.g. from
+            ``build_binaries_document``).
+
+    Returns:
+        The path written to, or ``None`` if the write failed — logged as a
+        warning, never raised.
+    """
+    now = datetime.now(UTC)
+    binaries_dir = history_dir / "binaries"
+    file_path = binaries_dir / f"{now.date().isoformat()}.jsonl"
+    stamped = {"analyzed_at": now.isoformat(), **document}
+    try:
+        binaries_dir.mkdir(parents=True, exist_ok=True)
+        with file_path.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(stamped, default=str) + "\n")
+    except OSError as exc:
+        logger.warning("Could not write binaries history file {}: {}", file_path, exc)
+        return None
+    return file_path
+
+
 def default_history_dir() -> Path:
     """Return the default directory for history JSONL files.
 

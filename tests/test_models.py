@@ -6,6 +6,8 @@ from pathlib import Path
 
 from nidhogg.core.models import (
     AnalysisLayer,
+    BinaryFinding,
+    BinaryFormat,
     FileAnalysis,
     FileTag,
     PackageAnalysis,
@@ -61,3 +63,30 @@ def test_urltag_and_filetag_values_are_stable() -> None:
     assert UrlTag.RAW_IP.value == "raw_ip"
     assert FileTag.README.value == "readme"
     assert FileTag.DYNAMIC_EXEC.value == "dynamic_exec"
+
+
+def test_binaryfinding_holds_all_fields() -> None:
+    finding = BinaryFinding(
+        name="helper.dll",
+        filepath=Path("pkg/native/helper.dll"),
+        sha256="a" * 64,
+        format=BinaryFormat.PE,
+        signed=True,
+        signer="CN=Example Corp",
+    )
+    assert finding.name == "helper.dll"
+    assert finding.format is BinaryFormat.PE
+    assert finding.signed is True
+    assert finding.signer == "CN=Example Corp"
+
+
+def test_binaryformat_values_are_stable() -> None:
+    assert BinaryFormat.PE.value == "pe"
+    assert BinaryFormat.MACHO.value == "macho"
+    assert BinaryFormat.ELF.value == "elf"
+    assert BinaryFormat.UNKNOWN.value == "unknown"
+
+
+def test_packageanalysis_binaries_defaults_empty_list() -> None:
+    pkg = PackageAnalysis(name="p", path=Path("/p"))
+    assert pkg.binaries == []

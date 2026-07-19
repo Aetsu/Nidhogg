@@ -282,6 +282,170 @@ function collectFacetOptions(packages) {
   return options;
 }
 
+const BINARY_FACET_DEFS = [
+  { id: "signed", field: "signed", key: (v) => (v === null ? NONE_KEY : String(v)), noneLabel: "Unknown" },
+  { id: "format", field: "format", key: (v) => (v ? v : NONE_KEY), noneLabel: "Unknown" },
+];
+
+function flattenBinaryRows(binaryGroups) {
+  return (binaryGroups ?? []).flatMap((group) =>
+    group.binaries.map((bin) => ({
+      package: group.package,
+      analyzed_at: group.analyzed_at,
+      ...bin,
+    })),
+  );
+}
+
+function signedBadgeClass(signed) {
+  if (signed === true) return "badge--clean";
+  if (signed === false) return "badge--malicious";
+  return "badge--unknown";
+}
+
+function signedBadgeText(signed) {
+  if (signed === true) return "signed";
+  if (signed === false) return "unsigned";
+  return "unknown";
+}
+
+function sha256Cell(bin) {
+  const cell = el("td", "cell-mono cell-hash");
+  const hashSpan = el("span", "hash-value", `${bin.sha256.slice(0, 12)}…`);
+  hashSpan.title = bin.sha256;
+  cell.appendChild(hashSpan);
+
+  const copyBtn = el("button", "copy-btn", "copy");
+  copyBtn.type = "button";
+  copyBtn.setAttribute("aria-label", "Copy SHA-256 hash");
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(bin.sha256).then(() => {
+      const original = copyBtn.textContent;
+      copyBtn.textContent = "copied";
+      copyBtn.disabled = true;
+      setTimeout(() => {
+        copyBtn.textContent = original;
+        copyBtn.disabled = false;
+      }, 1200);
+    });
+  });
+  cell.appendChild(copyBtn);
+
+  cell.appendChild(
+    inlineLink(
+      `https://www.virustotal.com/gui/file/${bin.sha256}`,
+      "VT",
+      "vt-link",
+    ),
+  );
+
+  return cell;
+}
+
+function binaryCells(bin) {
+  return [
+    el("td", "cell-mono", bin.name),
+    el("td", "cell-mono", bin.format),
+    sha256Cell(bin),
+    (() => {
+      const cell = el("td");
+      cell.appendChild(
+        el("span", `badge ${signedBadgeClass(bin.signed)}`, signedBadgeText(bin.signed)),
+      );
+      return cell;
+    })(),
+    el("td", "cell-mono", bin.signer ?? "—"),
+  ];
+}
+
+function emptyBinaryCells() {
+  return [
+    el("td", "cell-mono cell-muted", "—"),
+    el("td", "cell-mono cell-muted", "—"),
+    el("td", "cell-mono cell-muted", "—"),
+    el("td", "cell-muted", "—"),
+    el("td", "cell-mono cell-muted", "—"),
+  ];
+}
+
+function renderBinariesTable(groups) {
+  const tbody = document.getElementById("binariesBody");
+  tbody.replaceChildren();
+
+  groups.forEach((group, groupIndex) => {
+    const rowCount = Math.max(group.binaries.length, 1);
+    const groupClass = groupIndex % 2 === 0 ? "group-a" : "group-b";
+
+    for (let i = 0; i < rowCount; i += 1) {
+      const row = el("tr", `result-row ${groupClass}`);
+
+      if (i === 0) {
+        const pkgNameCell = el("td", "cell-name", group.package);
+        const dateCell = el(
+          "td",
+          "cell-mono cell-date",
+          dateTimeFmt.format(new Date(group.analyzed_at)),
+        );
+        if (rowCount > 1) {
+          [pkgNameCell, dateCell].forEach((cell) => {
+            cell.rowSpan = rowCount;
+          });
+        }
+        row.append(pkgNameCell, dateCell);
+      }
+
+      const cells =
+        group.binaries.length > 0 ? binaryCells(group.binaries[i]) : emptyBinaryCells();
+      row.append(...cells);
+      tbody.appendChild(row);
+    }
+  });
+}
+
+function collectBinaryFacetOptions(rows) {
+  const options = {};
+  BINARY_FACET_DEFS.forEach((def) => {
+    const counts = new Map();
+    rows.forEach((row) => {
+      const raw = row[def.field];
+      const key = def.key(raw);
+      const label = key === NONE_KEY ? def.noneLabel : String(raw);
+      const entry = counts.get(key) ?? { key, label, count: 0 };
+      entry.count += 1;
+      counts.set(key, entry);
+    });
+    options[def.id] = [...counts.values()].sort((a, b) => a.label.localeCompare(b.label));
+  });
+  return options;
+}
+
+function binaryMatchesFacets(bin, facets) {
+  return BINARY_FACET_DEFS.every((def) => {
+    const selected = facets[def.id];
+    if (selected.size === 0) return true;
+    return selected.has(def.key(bin[def.field]));
+  });
+}
+
+function applyBinaryFilters(binaryGroups, query, onlyWithBinaries, facets) {
+  const needle = query.trim().toLowerCase();
+  const facetsActive = BINARY_FACET_DEFS.some((def) => facets[def.id].size > 0);
+
+  return (binaryGroups ?? [])
+    .map((group) => {
+      if (!facetsActive) return group;
+      return {
+        ...group,
+        binaries: group.binaries.filter((b) => binaryMatchesFacets(b, facets)),
+      };
+    })
+    .filter((group) => {
+      if (needle && !group.package.toLowerCase().includes(needle)) return false;
+      if ((onlyWithBinaries || facetsActive) && group.binaries.length === 0) return false;
+      return true;
+    });
+}
+
 function renderFacetMenu(def, options, selected, onChange) {
   const menu = document.getElementById(`${def.id}FilterMenu`);
   const count = document.getElementById(`${def.id}FilterCount`);
@@ -346,6 +510,126 @@ function paginate(packages, page) {
   };
 }
 
+const THREAT_ORDER = [
+  "shortener",
+  "tunneling",
+  "exfiltration",
+  "ip_recon",
+  "malware_hosting",
+  "suspicious_tld",
+  "punycode",
+];
+
+function computeThreatCounts(packages) {
+  const counts = new Map();
+  packages
+    .flatMap((pkg) => pkg.findings)
+    .forEach((finding) => {
+      if (!finding.domain_threat) return;
+      counts.set(finding.domain_threat, (counts.get(finding.domain_threat) ?? 0) + 1);
+    });
+  return THREAT_ORDER.filter((key) => counts.has(key))
+    .map((key) => ({
+      label: key,
+      count: counts.get(key),
+      color: `var(--series-${THREAT_ORDER.indexOf(key) + 1})`,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+function computeVerdictCounts(stats) {
+  return [
+    { label: "clean", count: stats.clean, color: "var(--accent-clean)" },
+    { label: "suspicious", count: stats.malicious, color: "var(--accent-malicious)" },
+  ].filter((entry) => entry.count > 0);
+}
+
+function renderBarChart(mountEl, entries) {
+  mountEl.replaceChildren();
+  if (entries.length === 0) return;
+
+  const rowHeight = 28;
+  const barMaxWidth = 420;
+  const labelGap = 8;
+  const viewWidth = barMaxWidth + 220;
+  const height = entries.length * rowHeight;
+  const maxCount = Math.max(...entries.map((entry) => entry.count));
+  const svgNs = "http://www.w3.org/2000/svg";
+
+  const svg = document.createElementNS(svgNs, "svg");
+  svg.setAttribute("viewBox", `0 0 ${viewWidth} ${height}`);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", String(height));
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Bar chart");
+
+  entries.forEach((entry, index) => {
+    const barWidth = Math.max((entry.count / maxCount) * barMaxWidth, 2);
+    const y = index * rowHeight;
+
+    const rect = document.createElementNS(svgNs, "rect");
+    rect.setAttribute("x", "0");
+    rect.setAttribute("y", String(y + 4));
+    rect.setAttribute("width", String(barWidth));
+    rect.setAttribute("height", String(rowHeight - 10));
+    rect.setAttribute("rx", "2");
+    rect.setAttribute("fill", entry.color);
+
+    const title = document.createElementNS(svgNs, "title");
+    title.textContent = `${entry.label}: ${entry.count}`;
+    rect.appendChild(title);
+
+    const text = document.createElementNS(svgNs, "text");
+    text.setAttribute("x", String(barWidth + labelGap));
+    text.setAttribute("y", String(y + rowHeight / 2 + 4));
+    text.setAttribute("class", "chart-label");
+    text.textContent = `${entry.label} — ${entry.count}`;
+
+    svg.appendChild(rect);
+    svg.appendChild(text);
+  });
+
+  mountEl.appendChild(svg);
+}
+
+const FORMAT_ORDER = ["pe", "macho", "elf"];
+const FORMAT_LABELS = { pe: "PE", macho: "Mach-O", elf: "ELF", unknown: "unknown" };
+
+function computeFormatCounts(rows) {
+  const counts = new Map();
+  rows.forEach((row) => {
+    const key = FORMAT_ORDER.includes(row.format) ? row.format : "unknown";
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  });
+  return [...FORMAT_ORDER, "unknown"]
+    .filter((key) => counts.has(key))
+    .map((key) => ({
+      label: FORMAT_LABELS[key],
+      count: counts.get(key),
+      color: key === "unknown" ? "var(--text-muted)" : `var(--series-${FORMAT_ORDER.indexOf(key) + 1})`,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+const SIGNED_LABELS = { signed: "signed", unsigned: "unsigned", unknown: "unknown" };
+const SIGNED_COLORS = {
+  signed: "var(--accent-clean)",
+  unsigned: "var(--accent-malicious)",
+  unknown: "var(--text-muted)",
+};
+
+function computeSignedCounts(rows) {
+  const counts = new Map();
+  rows.forEach((row) => {
+    const key = row.signed === true ? "signed" : row.signed === false ? "unsigned" : "unknown";
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  });
+  return ["signed", "unsigned", "unknown"]
+    .filter((key) => counts.has(key))
+    .map((key) => ({ label: SIGNED_LABELS[key], count: counts.get(key), color: SIGNED_COLORS[key] }))
+    .sort((a, b) => b.count - a.count);
+}
+
 function renderPagination(page, totalPages, totalCount) {
   const pagination = document.getElementById("pagination");
   const status = document.getElementById("pageStatus");
@@ -359,7 +643,9 @@ function renderPagination(page, totalPages, totalCount) {
 }
 
 function showError(message) {
-  const table = document.querySelector(".table-scroll");
+  const table = document.querySelector(
+    "#resultsView:not([hidden]) .table-scroll, #binariesView:not([hidden]) .table-scroll",
+  );
   const error = el("p", "error-state", message);
   table.replaceWith(error);
   document.getElementById("statsLine").textContent = "Could not load results.";
@@ -431,8 +717,16 @@ async function main() {
   const pagePrevBtn = document.getElementById("pagePrev");
   const pageNextBtn = document.getElementById("pageNext");
 
+  const binaryFacets = Object.fromEntries(BINARY_FACET_DEFS.map((def) => [def.id, new Set()]));
+  const binariesPagePrevBtn = document.getElementById("binariesPagePrev");
+  const binariesPageNextBtn = document.getElementById("binariesPageNext");
+  const binariesEmptyState = document.getElementById("binariesEmptyState");
+  const binariesOnlyToggle = document.getElementById("binariesOnlyToggle");
+
   let currentDay = null;
   let currentPage = 1;
+  let currentBinariesPage = 1;
+  let activeView = "results";
 
   function refresh({ resetPage = false } = {}) {
     if (!currentDay) return;
@@ -456,6 +750,75 @@ async function main() {
     });
   }
 
+  function refreshBinaries({ resetPage = false } = {}) {
+    if (!currentDay) return;
+    if (resetPage) currentBinariesPage = 1;
+
+    const filtered = applyBinaryFilters(
+      currentDay.binaries,
+      searchInput.value,
+      binariesOnlyToggle.checked,
+      binaryFacets,
+    );
+    const { page, totalPages, slice } = paginate(filtered, currentBinariesPage);
+    currentBinariesPage = page;
+
+    renderBinariesTable(slice);
+    binariesEmptyState.hidden = filtered.length !== 0;
+
+    const pagination = document.getElementById("binariesPagination");
+    const status = document.getElementById("binariesPageStatus");
+    pagination.hidden = filtered.length === 0 || totalPages <= 1;
+    status.textContent = `Page ${page} of ${totalPages} · ${filtered.length.toLocaleString("en-US")} packages`;
+    binariesPagePrevBtn.disabled = page <= 1;
+    binariesPageNextBtn.disabled = page >= totalPages;
+  }
+
+  function renderThreatChart() {
+    if (!currentDay) return;
+    const entries = computeThreatCounts(currentDay.packages);
+    renderBarChart(document.getElementById("threatChart"), entries);
+    document.getElementById("threatChartEmpty").hidden = entries.length !== 0;
+  }
+
+  function renderVerdictChart() {
+    if (!currentDay) return;
+    const entries = computeVerdictCounts(currentDay.stats);
+    renderBarChart(document.getElementById("verdictChart"), entries);
+    document.getElementById("verdictChartEmpty").hidden = entries.length !== 0;
+  }
+
+  function renderBinaryCharts() {
+    if (!currentDay) return;
+    const rows = flattenBinaryRows(currentDay.binaries);
+
+    const formatEntries = computeFormatCounts(rows);
+    renderBarChart(document.getElementById("formatChart"), formatEntries);
+    document.getElementById("formatChartEmpty").hidden = formatEntries.length !== 0;
+
+    const signedEntries = computeSignedCounts(rows);
+    renderBarChart(document.getElementById("signedChart"), signedEntries);
+    document.getElementById("signedChartEmpty").hidden = signedEntries.length !== 0;
+  }
+
+  function switchView(view) {
+    activeView = view;
+    document.getElementById("resultsView").hidden = view !== "results";
+    document.getElementById("binariesView").hidden = view !== "binaries";
+    document.getElementById("chartsView").hidden = view !== "charts";
+    document.getElementById("tabResults").setAttribute("aria-selected", String(view === "results"));
+    document.getElementById("tabBinaries").setAttribute("aria-selected", String(view === "binaries"));
+    document.getElementById("tabCharts").setAttribute("aria-selected", String(view === "charts"));
+    searchInput.hidden = view === "charts";
+    if (view === "results") refresh();
+    else if (view === "binaries") refreshBinaries();
+    else if (view === "charts") {
+      renderThreatChart();
+      renderVerdictChart();
+      renderBinaryCharts();
+    }
+  }
+
   function jumpToPackage(name) {
     const filtered = applyFilters(
       currentDay.packages,
@@ -476,6 +839,10 @@ async function main() {
     FACET_DEFS.forEach((def) => {
       renderFacetMenu(def, options[def.id], facets[def.id], () => refresh({ resetPage: true }));
     });
+    const binaryOptions = collectBinaryFacetOptions(flattenBinaryRows(currentDay.binaries));
+    BINARY_FACET_DEFS.forEach((def) => {
+      renderFacetMenu(def, binaryOptions[def.id], binaryFacets[def.id], () => refreshBinaries({ resetPage: true }));
+    });
   }
 
   async function loadSelectedDay() {
@@ -487,15 +854,26 @@ async function main() {
       return;
     }
     FACET_DEFS.forEach((def) => facets[def.id].clear());
+    BINARY_FACET_DEFS.forEach((def) => binaryFacets[def.id].clear());
     renderStatsLine(currentDay);
     renderSpine(currentDay.packages, jumpToPackage);
     renderFacetMenus();
     refresh({ resetPage: true });
+    refreshBinaries({ resetPage: true });
+    if (activeView === "charts") {
+      renderThreatChart();
+      renderVerdictChart();
+      renderBinaryCharts();
+    }
   }
 
   daySelect.addEventListener("change", loadSelectedDay);
-  searchInput.addEventListener("input", () => refresh({ resetPage: true }));
+  searchInput.addEventListener("input", () => {
+    if (activeView === "results") refresh({ resetPage: true });
+    else refreshBinaries({ resetPage: true });
+  });
   urlOnlyToggle.addEventListener("change", () => refresh({ resetPage: true }));
+  binariesOnlyToggle.addEventListener("change", () => refreshBinaries({ resetPage: true }));
   pagePrevBtn.addEventListener("click", () => {
     currentPage -= 1;
     refresh();
@@ -504,8 +882,21 @@ async function main() {
     currentPage += 1;
     refresh();
   });
+  binariesPagePrevBtn.addEventListener("click", () => {
+    currentBinariesPage -= 1;
+    refreshBinaries();
+  });
+  binariesPageNextBtn.addEventListener("click", () => {
+    currentBinariesPage += 1;
+    refreshBinaries();
+  });
+  document.getElementById("tabResults").addEventListener("click", () => switchView("results"));
+  document.getElementById("tabBinaries").addEventListener("click", () => switchView("binaries"));
+  document.getElementById("tabCharts").addEventListener("click", () => switchView("charts"));
 
-  const filterDetails = FACET_DEFS.map((def) => document.getElementById(`${def.id}Filter`));
+  const filterDetails = [...FACET_DEFS, ...BINARY_FACET_DEFS].map((def) =>
+    document.getElementById(`${def.id}Filter`),
+  );
   document.addEventListener("click", (event) => {
     filterDetails.forEach((details) => {
       if (details.open && !details.contains(event.target)) details.open = false;

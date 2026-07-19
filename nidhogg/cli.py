@@ -23,7 +23,9 @@ from nidhogg.output.renderer import (
     render_status,
 )
 from nidhogg.output.writer import (
+    build_binaries_document,
     build_document,
+    write_binary_results,
     write_results,
 )
 
@@ -96,6 +98,15 @@ def _build_parser() -> argparse.ArgumentParser:
         help=(
             "Request each http/https URL and record its response status code "
             "and page title (requires network access)."
+        ),
+    )
+    analyze.add_argument(
+        "--check-binaries",
+        action="store_true",
+        dest="check_binaries",
+        help=(
+            "Scan the package for native binaries (PE/Mach-O/ELF), hash them, "
+            "and check for embedded signatures."
         ),
     )
     analyze.add_argument(
@@ -191,6 +202,15 @@ def _build_parser() -> argparse.ArgumentParser:
             "and page title (requires network access)."
         ),
     )
+    fetch.add_argument(
+        "--check-binaries",
+        action="store_true",
+        dest="check_binaries",
+        help=(
+            "Scan the package for native binaries (PE/Mach-O/ELF), hash them, "
+            "and check for embedded signatures."
+        ),
+    )
 
     monitor = subparsers.add_parser(
         "monitor", help="Watch PyPI for newly published packages and analyse each."
@@ -284,6 +304,15 @@ def _build_parser() -> argparse.ArgumentParser:
             "and page title (requires network access)."
         ),
     )
+    monitor.add_argument(
+        "--check-binaries",
+        action="store_true",
+        dest="check_binaries",
+        help=(
+            "Scan the package for native binaries (PE/Mach-O/ELF), hash them, "
+            "and check for embedded signatures."
+        ),
+    )
 
     return parser
 
@@ -297,6 +326,7 @@ def _analyse_one(  # noqa: PLR0913
     benign_domains_path: Path | None = None,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> PackageAnalysis | None:
     """Run the URL-analysis pipeline for a single package directory.
 
@@ -315,6 +345,8 @@ def _analyse_one(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -325,6 +357,7 @@ def _analyse_one(  # noqa: PLR0913
             name=package_name,
             version=package_version,
             download_url=package_download_url,
+            check_binaries=check_binaries,
         )
     except PackageReadError as exc:
         print(f"Error: {exc}", file=sys.stderr)  # noqa: T201
@@ -364,6 +397,7 @@ def _run_analyze(  # noqa: PLR0913
     benign_domains_path: Path | None = None,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
     history_dir: Path | None = None,
 ) -> int:
     """Run the full analysis pipeline for a single package and return an exit code.
@@ -379,6 +413,8 @@ def _run_analyze(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
         history_dir: When provided, append the result document as JSONL under
             this directory.
 
@@ -393,6 +429,7 @@ def _run_analyze(  # noqa: PLR0913
         benign_domains_path=benign_domains_path,
         check_ssl=check_ssl,
         check_http=check_http,
+        check_binaries=check_binaries,
     )
     if result is None:
         return _EXIT_ERROR
@@ -400,12 +437,17 @@ def _run_analyze(  # noqa: PLR0913
     analysis = result
 
     if history_dir is not None:
-        from nidhogg.output.history import append_finding  # noqa: PLC0415
+        from nidhogg.output.history import (  # noqa: PLC0415
+            append_binary_finding,
+            append_finding,
+        )
 
         append_finding(history_dir, build_document(analysis))
+        append_binary_finding(history_dir, build_binaries_document(analysis))
 
     if output is not None:
         write_results(analysis, output)
+        write_binary_results(analysis, output)
     elif as_json:
         print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
     else:
@@ -424,6 +466,7 @@ def _run_batch(  # noqa: PLR0913
     benign_domains_path: Path | None = None,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
     history_dir: Path | None = None,
 ) -> int:
     """Run the analysis pipeline over every subdirectory of *packages_dir*.
@@ -439,6 +482,8 @@ def _run_batch(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
         history_dir: When provided, append each package's result document as
             JSONL under this directory.
 
@@ -464,6 +509,7 @@ def _run_batch(  # noqa: PLR0913
             benign_domains_path=benign_domains_path,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
         if result is None:
             exit_code = _EXIT_ERROR
@@ -472,9 +518,13 @@ def _run_batch(  # noqa: PLR0913
         analysis = result
 
         if history_dir is not None:
-            from nidhogg.output.history import append_finding  # noqa: PLC0415
+            from nidhogg.output.history import (  # noqa: PLC0415
+                append_binary_finding,
+                append_finding,
+            )
 
             append_finding(history_dir, build_document(analysis))
+            append_binary_finding(history_dir, build_binaries_document(analysis))
 
         if output is not None or as_json:
             documents.append(build_document(analysis))
@@ -503,6 +553,7 @@ def _run_fetch(  # noqa: PLR0913
     history_dir: Path | None,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Download *name* from PyPI, analyse it, and return an exit code.
 
@@ -522,6 +573,8 @@ def _run_fetch(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         ``0`` on success, ``2`` on error.
@@ -547,6 +600,7 @@ def _run_fetch(  # noqa: PLR0913
                 package_download_url=download_url,
                 check_ssl=check_ssl,
                 check_http=check_http,
+                check_binaries=check_binaries,
             )
     except PackageReadError as exc:
         print(f"Error: {exc}", file=sys.stderr)  # noqa: T201
@@ -558,12 +612,17 @@ def _run_fetch(  # noqa: PLR0913
     analysis = result
 
     if history_dir is not None:
-        from nidhogg.output.history import append_finding  # noqa: PLC0415
+        from nidhogg.output.history import (  # noqa: PLC0415
+            append_binary_finding,
+            append_finding,
+        )
 
         append_finding(history_dir, build_document(analysis))
+        append_binary_finding(history_dir, build_binaries_document(analysis))
 
     if output is not None:
         write_results(analysis, output)
+        write_binary_results(analysis, output)
     elif as_json:
         print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
     else:
@@ -579,6 +638,7 @@ def _analyse_new_package(
     keep_download: Path | None,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> PackageAnalysis | None:
     """Download, analyse, and clean up a single monitor-discovered package.
 
@@ -591,6 +651,8 @@ def _analyse_new_package(
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -611,6 +673,7 @@ def _analyse_new_package(
             package_download_url=download_url,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
 
@@ -623,6 +686,7 @@ def _process_entries_plain(  # noqa: PLR0913
     as_json: bool,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> None:
     """Analyse *entries* concurrently and print each result as it completes.
 
@@ -640,6 +704,8 @@ def _process_entries_plain(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: PLC0415
 
@@ -653,6 +719,7 @@ def _process_entries_plain(  # noqa: PLR0913
                 keep_download=keep_download,
                 check_ssl=check_ssl,
                 check_http=check_http,
+                check_binaries=check_binaries,
             ): entry
             for entry in entries
         }
@@ -667,9 +734,13 @@ def _process_entries_plain(  # noqa: PLR0913
                 continue
             analysis = result
             if history_dir is not None:
-                from nidhogg.output.history import append_finding  # noqa: PLC0415
+                from nidhogg.output.history import (  # noqa: PLC0415
+                    append_binary_finding,
+                    append_finding,
+                )
 
                 append_finding(history_dir, build_document(analysis))
+                append_binary_finding(history_dir, build_binaries_document(analysis))
             if as_json:
                 print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
             else:
@@ -689,6 +760,7 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
     as_json: bool,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Poll the changelog once and analyse any new packages, plainly.
 
@@ -704,6 +776,8 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         The changelog serial observed at the start of this call — the new
@@ -722,17 +796,19 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
     return current_serial
 
 
-def _analyse_with_progress(
+def _analyse_with_progress(  # noqa: PLR0913
     entry: ChangelogEntry,
     progress: Progress,
     keep_download: Path | None,
     check_ssl: bool = False,  # noqa: FBT001, FBT002
     check_http: bool = False,  # noqa: FBT001, FBT002
+    check_binaries: bool = False,  # noqa: FBT001, FBT002
 ) -> PackageAnalysis | None:
     """Analyse *entry*, showing a spinner row only while this call is active.
 
@@ -750,6 +826,8 @@ def _analyse_with_progress(
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -761,6 +839,7 @@ def _analyse_with_progress(
             keep_download=keep_download,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
     finally:
         progress.remove_task(task_id)
@@ -776,6 +855,7 @@ def _process_entries_rich(  # noqa: PLR0913
     console: Console,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> None:
     """Analyse *entries* concurrently with a live rich progress display.
 
@@ -795,6 +875,8 @@ def _process_entries_rich(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: PLC0415
 
@@ -810,6 +892,7 @@ def _process_entries_rich(  # noqa: PLR0913
                     keep_download,
                     check_ssl,
                     check_http,
+                    check_binaries,
                 ): entry
                 for entry in entries
             }
@@ -826,9 +909,15 @@ def _process_entries_rich(  # noqa: PLR0913
                     continue
                 analysis = result
                 if history_dir is not None:
-                    from nidhogg.output.history import append_finding  # noqa: PLC0415
+                    from nidhogg.output.history import (  # noqa: PLC0415
+                        append_binary_finding,
+                        append_finding,
+                    )
 
                     append_finding(history_dir, build_document(analysis))
+                    append_binary_finding(
+                        history_dir, build_binaries_document(analysis)
+                    )
                 if as_json:
                     progress.console.print(
                         json.dumps(build_document(analysis), indent=2),
@@ -858,6 +947,7 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
     as_json: bool,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Poll the changelog once and analyse any new packages, with rich output.
 
@@ -874,6 +964,8 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         The changelog serial observed at the start of this call — the new
@@ -894,6 +986,7 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
             console=console,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
     return current_serial
@@ -924,6 +1017,7 @@ def _run_monitor_once(  # noqa: PLR0913
     as_json: bool,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Run a single monitor poll from *last_serial*, persist state, and exit.
 
@@ -940,6 +1034,8 @@ def _run_monitor_once(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         ``0`` once the single poll completes and state is persisted.
@@ -958,6 +1054,7 @@ def _run_monitor_once(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
     else:
         new_serial = _run_monitor_iteration_plain(
@@ -969,6 +1066,7 @@ def _run_monitor_once(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
     save_state(resolved_index_file, MonitorState(last_serial=new_serial))
     return 0
@@ -1033,6 +1131,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
     as_json: bool,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Process the last *last_n* newly published packages and exit.
 
@@ -1053,6 +1152,8 @@ def _run_monitor_last_n(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         ``0`` once processing completes (even if no packages were found).
@@ -1079,6 +1180,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
             console=console,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
     else:
         _process_entries_plain(
@@ -1089,6 +1191,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
     save_state(
@@ -1111,6 +1214,7 @@ def _run_monitor(  # noqa: PLR0913
     once: bool = False,
     check_ssl: bool = False,
     check_http: bool = False,
+    check_binaries: bool = False,
 ) -> int:
     """Poll the PyPI changelog for new packages and analyse each one.
 
@@ -1149,6 +1253,8 @@ def _run_monitor(  # noqa: PLR0913
         check_http: When ``True``, request each http/https URL, populate
             http_status/http_title, and drop http/https findings that got
             no response.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF), hash them, and check for embedded signatures.
 
     Returns:
         ``0`` when the monitor completes (``--once``/``--last``) or is
@@ -1181,6 +1287,7 @@ def _run_monitor(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
     state = load_state(resolved_index_file)
@@ -1199,6 +1306,7 @@ def _run_monitor(  # noqa: PLR0913
             as_json=as_json,
             check_ssl=check_ssl,
             check_http=check_http,
+            check_binaries=check_binaries,
         )
 
     use_rich = sys.stdout.isatty()
@@ -1217,6 +1325,7 @@ def _run_monitor(  # noqa: PLR0913
                     as_json=as_json,
                     check_ssl=check_ssl,
                     check_http=check_http,
+                    check_binaries=check_binaries,
                 )
                 save_state(resolved_index_file, MonitorState(last_serial=last_serial))
                 _wait_before_next_poll_rich(interval, console)
@@ -1231,6 +1340,7 @@ def _run_monitor(  # noqa: PLR0913
                     as_json=as_json,
                     check_ssl=check_ssl,
                     check_http=check_http,
+                    check_binaries=check_binaries,
                 )
                 save_state(resolved_index_file, MonitorState(last_serial=last_serial))
                 time.sleep(interval)
@@ -1299,6 +1409,7 @@ def main() -> None:
                     benign_domains_path=args.benign_domains,
                     check_ssl=args.check_ssl,
                     check_http=args.check_http,
+                    check_binaries=args.check_binaries,
                     history_dir=resolved_history_dir,
                 )
             )
@@ -1312,6 +1423,7 @@ def main() -> None:
                     benign_domains_path=args.benign_domains,
                     check_ssl=args.check_ssl,
                     check_http=args.check_http,
+                    check_binaries=args.check_binaries,
                     history_dir=resolved_history_dir,
                 )
             )
@@ -1327,6 +1439,7 @@ def main() -> None:
                 history_dir=resolved_history_dir,
                 check_ssl=args.check_ssl,
                 check_http=args.check_http,
+                check_binaries=args.check_binaries,
             )
         )
     else:
@@ -1343,6 +1456,7 @@ def main() -> None:
                 once=args.once,
                 check_ssl=args.check_ssl,
                 check_http=args.check_http,
+                check_binaries=args.check_binaries,
             )
         )
 

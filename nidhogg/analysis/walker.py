@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING
 
 from loguru import logger
 
+from nidhogg.analysis.binary_scanner import scan_binaries
 from nidhogg.analysis.file_classifier import classify_file
 from nidhogg.analysis.layer1_regex import extract_urls_regex
 from nidhogg.analysis.layer2_ast import extract_urls_ast
@@ -84,6 +85,7 @@ def analyze_package(
     name: str | None = None,
     version: str | None = None,
     download_url: str | None = None,
+    check_binaries: bool = False,
 ) -> PackageAnalysis:
     """Analyse every whitelisted source file inside a package directory.
 
@@ -99,6 +101,10 @@ def analyze_package(
             caller has no version concept (e.g. the ``analyze`` CLI flow).
         download_url: Direct PyPI download URL of the analysed archive, when
             known (fetch/monitor flows). ``None`` otherwise.
+        check_binaries: When ``True``, scan the package for native binaries
+            (PE/Mach-O/ELF) and populate ``PackageAnalysis.binaries``.
+            ``False`` leaves it an empty list — opt-in, like ``check_ssl``/
+            ``check_http``, since it adds noticeable I/O for large packages.
 
     Returns:
         A :class:`PackageAnalysis` with one :class:`FileAnalysis` per
@@ -120,10 +126,16 @@ def analyze_package(
     with ThreadPoolExecutor() as executor:
         analyses = list(executor.map(lambda f: _analyze_file(f, path), files))
 
+    binaries = []
+    if check_binaries:
+        binaries = scan_binaries(path)
+        logger.info("Found {} binary file(s) in {}", len(binaries), path)
+
     return PackageAnalysis(
         name=name if name is not None else path.name,
         path=path,
         files=analyses,
         version=version,
         download_url=download_url,
+        binaries=binaries,
     )

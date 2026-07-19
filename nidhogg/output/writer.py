@@ -8,7 +8,12 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from pathlib import Path
 
-    from nidhogg.core.models import FileAnalysis, PackageAnalysis, UrlFinding
+    from nidhogg.core.models import (
+        BinaryFinding,
+        FileAnalysis,
+        PackageAnalysis,
+        UrlFinding,
+    )
 
 
 def _serialise_finding(finding: UrlFinding) -> dict[str, object]:
@@ -56,6 +61,55 @@ def _serialise_file(
     }
 
 
+def _serialise_binary(binary: BinaryFinding, package_path: Path) -> dict[str, object]:
+    """Convert a single :class:`BinaryFinding` to a JSON-serialisable dict.
+
+    Args:
+        binary: The binary finding to serialise.
+        package_path: Root of the analysed package (used to relativise paths).
+
+    Returns:
+        A plain dict suitable for ``json.dumps``.
+    """
+    try:
+        rel = binary.filepath.relative_to(package_path)
+    except ValueError:
+        rel = binary.filepath
+    return {
+        "name": binary.name,
+        "file": str(rel),
+        "sha256": binary.sha256,
+        "format": binary.format.value,
+        "signed": binary.signed,
+        "signer": binary.signer,
+    }
+
+
+def build_binaries_document(analysis: PackageAnalysis) -> dict[str, object]:
+    """Build the JSON-serialisable binaries document for *analysis*.
+
+    Args:
+        analysis: Completed package analysis.
+
+    Returns:
+        A dict with ``package``, ``summary``, and ``binaries`` sections —
+        the binaries counterpart of :func:`build_document`.
+    """
+    return {
+        "package": {
+            "name": analysis.name,
+            "path": str(analysis.path),
+            "version": analysis.version,
+            "download_url": analysis.download_url,
+        },
+        "summary": {
+            "total_binaries": len(analysis.binaries),
+            "signed": sum(1 for b in analysis.binaries if b.signed),
+        },
+        "binaries": [_serialise_binary(b, analysis.path) for b in analysis.binaries],
+    }
+
+
 def build_document(analysis: PackageAnalysis) -> dict[str, object]:
     """Build the JSON-serialisable result document for *analysis*.
 
@@ -98,4 +152,22 @@ def write_results(analysis: PackageAnalysis, destination: Path) -> None:
     """
     destination.write_text(
         json.dumps(build_document(analysis), indent=2), encoding="utf-8"
+    )
+
+
+def write_binary_results(analysis: PackageAnalysis, destination: Path) -> None:
+    """Write the binaries document to a sibling file next to *destination*.
+
+    Given ``destination`` of ``foo.json``, writes ``foo.binaries.json`` —
+    a separate file from the URL-findings result, always written (even with
+    an empty ``binaries`` list) so downstream tooling can rely on its
+    presence whenever ``--output`` is used.
+
+    Args:
+        analysis: Completed package analysis.
+        destination: The same path passed to :func:`write_results` for this
+            package; the binaries file is derived from it.
+    """
+    destination.with_suffix(".binaries.json").write_text(
+        json.dumps(build_binaries_document(analysis), indent=2), encoding="utf-8"
     )

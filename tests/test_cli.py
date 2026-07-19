@@ -45,6 +45,30 @@ def test_build_parser_history_dir_accepts_path():
     assert str(args.history_dir) == "/tmp/hist"  # noqa: S108
 
 
+def test_build_parser_check_binaries_defaults_false():
+    parser = _build_parser()
+    args = parser.parse_args(["analyze", "some/path"])
+    assert args.check_binaries is False
+
+
+def test_build_parser_check_binaries_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["analyze", "some/path", "--check-binaries"])
+    assert args.check_binaries is True
+
+
+def test_build_parser_fetch_check_binaries_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["fetch", "somepkg", "--check-binaries"])
+    assert args.check_binaries is True
+
+
+def test_build_parser_monitor_check_binaries_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["monitor", "--check-binaries"])
+    assert args.check_binaries is True
+
+
 def test_build_parser_once_defaults_false():
     parser = _build_parser()
     args = parser.parse_args(["monitor"])
@@ -652,3 +676,91 @@ def test_monitor_last_check_http_invokes_probe(tmp_path, monkeypatch) -> None:
             cli.main()
     assert exc.value.code == 0
     mock_check.assert_called_once()
+
+
+def test_run_analyze_appends_binaries_to_history(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "helper.dll").write_bytes(b"garbage")
+    history_dir = tmp_path / "history"
+
+    exit_code = _run_analyze(
+        pkg_dir,
+        None,
+        as_json=False,
+        verbose=False,
+        history_dir=history_dir,
+        check_binaries=True,
+    )
+
+    assert exit_code == 0
+    binaries_files = list((history_dir / "binaries").glob("*.jsonl"))
+    assert len(binaries_files) == 1
+    document = json.loads(binaries_files[0].read_text().splitlines()[0])
+    assert document["binaries"][0]["name"] == "helper.dll"
+
+
+def test_run_analyze_skips_binaries_by_default(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "helper.dll").write_bytes(b"garbage")
+    history_dir = tmp_path / "history"
+
+    exit_code = _run_analyze(
+        pkg_dir, None, as_json=False, verbose=False, history_dir=history_dir
+    )
+
+    assert exit_code == 0
+    binaries_files = list((history_dir / "binaries").glob("*.jsonl"))
+    document = json.loads(binaries_files[0].read_text().splitlines()[0])
+    assert document["binaries"] == []
+
+
+def test_run_analyze_writes_binaries_sibling_file(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "helper.dll").write_bytes(b"garbage")
+    output = tmp_path / "out.json"
+
+    exit_code = _run_analyze(
+        pkg_dir, output, as_json=False, verbose=False, check_binaries=True
+    )
+
+    assert exit_code == 0
+    binaries_doc = json.loads((tmp_path / "out.binaries.json").read_text())
+    assert binaries_doc["binaries"][0]["name"] == "helper.dll"
+
+
+def test_run_fetch_appends_binaries_to_history(tmp_path: Path):
+    extracted = tmp_path / "extracted"
+    (extracted / "pkg").mkdir(parents=True)
+    (extracted / "pkg" / "helper.dll").write_bytes(b"garbage")
+    history_dir = tmp_path / "history"
+
+    @contextmanager
+    def _fake_fetched_package(
+        name,  # noqa: ARG001
+        version=None,  # noqa: ARG001
+        *,
+        keep=False,  # noqa: ARG001
+        keep_dir=None,  # noqa: ARG001
+    ):
+        yield extracted, "1.0", "https://example.com/pkg-1.0.tar.gz"
+
+    with patch("nidhogg.fetching.pypi_fetch.fetched_package", _fake_fetched_package):
+        exit_code = _run_fetch(
+            "somepkg",
+            None,
+            None,
+            as_json=False,
+            verbose=False,
+            keep_download=None,
+            history_dir=history_dir,
+            check_binaries=True,
+        )
+
+    assert exit_code == 0
+    binaries_files = list((history_dir / "binaries").glob("*.jsonl"))
+    assert len(binaries_files) == 1
+    document = json.loads(binaries_files[0].read_text().splitlines()[0])
+    assert document["binaries"][0]["name"] == "helper.dll"
