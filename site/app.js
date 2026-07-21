@@ -436,22 +436,13 @@ function binaryCells(bin) {
   ];
 }
 
-function emptyBinaryCells() {
-  return [
-    el("td", "cell-mono cell-muted", "—"),
-    el("td", "cell-mono cell-muted", "—"),
-    el("td", "cell-mono cell-muted", "—"),
-    el("td", "cell-muted", "—"),
-    el("td", "cell-mono cell-muted", "—"),
-  ];
-}
-
 function renderBinariesTable(groups) {
   const tbody = document.getElementById("binariesBody");
   tbody.replaceChildren();
 
   groups.forEach((group, groupIndex) => {
-    const rowCount = Math.max(group.binaries.length, 1);
+    if (group.binaries.length === 0) return;
+    const rowCount = group.binaries.length;
     const groupClass = groupIndex % 2 === 0 ? "group-a" : "group-b";
 
     for (let i = 0; i < rowCount; i += 1) {
@@ -485,9 +476,7 @@ function renderBinariesTable(groups) {
         row.append(pkgNameCell, dateCell);
       }
 
-      const cells =
-        group.binaries.length > 0 ? binaryCells(group.binaries[i]) : emptyBinaryCells();
-      row.append(...cells);
+      row.append(...binaryCells(group.binaries[i]));
       tbody.appendChild(row);
     }
   });
