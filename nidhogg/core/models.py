@@ -38,6 +38,7 @@ class UrlTag(enum.Enum):
     VIA_CONCAT = "via_concat"
     VIA_FSTRING = "via_fstring"
     VIA_SCOPE = "via_scope"
+    VIA_DECODED = "via_decoded"
     RAW_IP = "raw_ip"
     SHORTENER = "shortener"
     TUNNELING = "tunneling"
@@ -112,6 +113,39 @@ class BinaryFinding:
     signer: str | None
 
 
+class InstallHookSource(enum.Enum):
+    """Where an install-hook finding was detected."""
+
+    SETUP_PY = "setup_py"
+    PACKAGE_INIT = "package_init"
+
+
+@dataclass
+class InstallHookFinding:
+    """A process-execution or network call found in setup.py or __init__.py.
+
+    Attributes:
+        filepath: Path to the file the call was found in.
+        lineno: Line number of the call (1-indexed).
+        call: Qualified name of the called function, e.g. ``subprocess.Popen``.
+        command: Full call expression as written in source, arguments
+            included, e.g. ``subprocess.Popen(['curl', url], shell=True)``.
+            Reconstructed via ``ast.unparse`` on the flagged ``Call`` node —
+            obfuscated arguments are shown as-is, not decoded.
+        context: Dotted enclosing scope — ``"module"`` at top level, or
+            ``"MyInstall.run"`` inside a nested class/function.
+        source: Whether this was found in ``setup.py`` or a package
+            ``__init__.py``.
+    """
+
+    filepath: Path
+    lineno: int
+    call: str
+    command: str
+    context: str
+    source: InstallHookSource
+
+
 @dataclass
 class FileAnalysis:
     """Analysis of a single source file: its context tags and URL findings.
@@ -143,6 +177,8 @@ class PackageAnalysis:
             distribution on inspector.pypi.io. ``None`` for the batch
             ``analyze`` flow.
         binaries: Native binaries found within the package.
+        install_hooks: Process-execution or network calls found in setup.py or
+            __init__.py.
     """
 
     name: str
@@ -151,6 +187,7 @@ class PackageAnalysis:
     version: str | None = None
     download_url: str | None = None
     binaries: list[BinaryFinding] = field(default_factory=list)
+    install_hooks: list[InstallHookFinding] = field(default_factory=list)
 
     @property
     def findings(self) -> list[UrlFinding]:

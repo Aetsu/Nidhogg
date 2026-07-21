@@ -25,7 +25,9 @@ from nidhogg.output.renderer import (
 from nidhogg.output.writer import (
     build_binaries_document,
     build_document,
+    build_install_hooks_document,
     write_binary_results,
+    write_install_hook_results,
     write_results,
 )
 
@@ -37,6 +39,31 @@ if TYPE_CHECKING:
     from nidhogg.fetching.changelog import ChangelogClient, ChangelogEntry
 
 _EXIT_ERROR = 2
+
+
+def _append_history(history_dir: Path, analysis: PackageAnalysis) -> None:
+    """Append *analysis* to history, skipping documents with nothing to report.
+
+    Keeps the URL-findings and binaries history files free of empty entries
+    (packages with no findings and/or no binaries), which would otherwise
+    bloat the per-day site JSON for no benefit.
+
+    Args:
+        history_dir: Directory to append the JSONL history under.
+        analysis: Completed package analysis.
+    """
+    from nidhogg.output.history import (  # noqa: PLC0415
+        append_binary_finding,
+        append_finding,
+        append_install_hook_finding,
+    )
+
+    if analysis.findings:
+        append_finding(history_dir, build_document(analysis))
+    if analysis.binaries:
+        append_binary_finding(history_dir, build_binaries_document(analysis))
+    if analysis.install_hooks:
+        append_install_hook_finding(history_dir, build_install_hooks_document(analysis))
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -107,6 +134,17 @@ def _build_parser() -> argparse.ArgumentParser:
         help=(
             "Scan the package for native binaries (PE/Mach-O/ELF), hash them, "
             "and check for embedded signatures."
+        ),
+    )
+    analyze.add_argument(
+        "--check-install-hooks",
+        action="store_true",
+        dest="check_install_hooks",
+        help=(
+            "Scan setup.py, custom cmdclass overrides, and every "
+            "__init__.py for process-execution and network calls "
+            "(subprocess, os.exec*, socket, urllib, requests) that would "
+            "run on install/import."
         ),
     )
     analyze.add_argument(
@@ -211,6 +249,17 @@ def _build_parser() -> argparse.ArgumentParser:
             "and check for embedded signatures."
         ),
     )
+    fetch.add_argument(
+        "--check-install-hooks",
+        action="store_true",
+        dest="check_install_hooks",
+        help=(
+            "Scan setup.py, custom cmdclass overrides, and every "
+            "__init__.py for process-execution and network calls "
+            "(subprocess, os.exec*, socket, urllib, requests) that would "
+            "run on install/import."
+        ),
+    )
 
     monitor = subparsers.add_parser(
         "monitor", help="Watch PyPI for newly published packages and analyse each."
@@ -313,6 +362,17 @@ def _build_parser() -> argparse.ArgumentParser:
             "and check for embedded signatures."
         ),
     )
+    monitor.add_argument(
+        "--check-install-hooks",
+        action="store_true",
+        dest="check_install_hooks",
+        help=(
+            "Scan setup.py, custom cmdclass overrides, and every "
+            "__init__.py for process-execution and network calls "
+            "(subprocess, os.exec*, socket, urllib, requests) that would "
+            "run on install/import."
+        ),
+    )
 
     return parser
 
@@ -327,6 +387,7 @@ def _analyse_one(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> PackageAnalysis | None:
     """Run the URL-analysis pipeline for a single package directory.
 
@@ -347,6 +408,9 @@ def _analyse_one(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -358,6 +422,7 @@ def _analyse_one(  # noqa: PLR0913
             version=package_version,
             download_url=package_download_url,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
     except PackageReadError as exc:
         print(f"Error: {exc}", file=sys.stderr)  # noqa: T201
@@ -398,6 +463,7 @@ def _run_analyze(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
     history_dir: Path | None = None,
 ) -> int:
     """Run the full analysis pipeline for a single package and return an exit code.
@@ -415,6 +481,9 @@ def _run_analyze(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
         history_dir: When provided, append the result document as JSONL under
             this directory.
 
@@ -430,6 +499,7 @@ def _run_analyze(  # noqa: PLR0913
         check_ssl=check_ssl,
         check_http=check_http,
         check_binaries=check_binaries,
+        check_install_hooks=check_install_hooks,
     )
     if result is None:
         return _EXIT_ERROR
@@ -437,17 +507,12 @@ def _run_analyze(  # noqa: PLR0913
     analysis = result
 
     if history_dir is not None:
-        from nidhogg.output.history import (  # noqa: PLC0415
-            append_binary_finding,
-            append_finding,
-        )
-
-        append_finding(history_dir, build_document(analysis))
-        append_binary_finding(history_dir, build_binaries_document(analysis))
+        _append_history(history_dir, analysis)
 
     if output is not None:
         write_results(analysis, output)
         write_binary_results(analysis, output)
+        write_install_hook_results(analysis, output)
     elif as_json:
         print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
     else:
@@ -467,6 +532,7 @@ def _run_batch(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
     history_dir: Path | None = None,
 ) -> int:
     """Run the analysis pipeline over every subdirectory of *packages_dir*.
@@ -484,6 +550,9 @@ def _run_batch(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
         history_dir: When provided, append each package's result document as
             JSONL under this directory.
 
@@ -510,6 +579,7 @@ def _run_batch(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
         if result is None:
             exit_code = _EXIT_ERROR
@@ -518,15 +588,9 @@ def _run_batch(  # noqa: PLR0913
         analysis = result
 
         if history_dir is not None:
-            from nidhogg.output.history import (  # noqa: PLC0415
-                append_binary_finding,
-                append_finding,
-            )
+            _append_history(history_dir, analysis)
 
-            append_finding(history_dir, build_document(analysis))
-            append_binary_finding(history_dir, build_binaries_document(analysis))
-
-        if output is not None or as_json:
+        if (output is not None or as_json) and analysis.findings:
             documents.append(build_document(analysis))
         else:
             if analysis.findings:
@@ -554,6 +618,7 @@ def _run_fetch(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Download *name* from PyPI, analyse it, and return an exit code.
 
@@ -575,6 +640,9 @@ def _run_fetch(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         ``0`` on success, ``2`` on error.
@@ -601,6 +669,7 @@ def _run_fetch(  # noqa: PLR0913
                 check_ssl=check_ssl,
                 check_http=check_http,
                 check_binaries=check_binaries,
+                check_install_hooks=check_install_hooks,
             )
     except PackageReadError as exc:
         print(f"Error: {exc}", file=sys.stderr)  # noqa: T201
@@ -612,17 +681,12 @@ def _run_fetch(  # noqa: PLR0913
     analysis = result
 
     if history_dir is not None:
-        from nidhogg.output.history import (  # noqa: PLC0415
-            append_binary_finding,
-            append_finding,
-        )
-
-        append_finding(history_dir, build_document(analysis))
-        append_binary_finding(history_dir, build_binaries_document(analysis))
+        _append_history(history_dir, analysis)
 
     if output is not None:
         write_results(analysis, output)
         write_binary_results(analysis, output)
+        write_install_hook_results(analysis, output)
     elif as_json:
         print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
     else:
@@ -632,13 +696,14 @@ def _run_fetch(  # noqa: PLR0913
     return 0
 
 
-def _analyse_new_package(
+def _analyse_new_package(  # noqa: PLR0913
     name: str,
     *,
     keep_download: Path | None,
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> PackageAnalysis | None:
     """Download, analyse, and clean up a single monitor-discovered package.
 
@@ -653,6 +718,9 @@ def _analyse_new_package(
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -674,6 +742,7 @@ def _analyse_new_package(
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
 
@@ -687,6 +756,7 @@ def _process_entries_plain(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> None:
     """Analyse *entries* concurrently and print each result as it completes.
 
@@ -706,6 +776,9 @@ def _process_entries_plain(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: PLC0415
 
@@ -720,6 +793,7 @@ def _process_entries_plain(  # noqa: PLR0913
                 check_ssl=check_ssl,
                 check_http=check_http,
                 check_binaries=check_binaries,
+                check_install_hooks=check_install_hooks,
             ): entry
             for entry in entries
         }
@@ -734,13 +808,7 @@ def _process_entries_plain(  # noqa: PLR0913
                 continue
             analysis = result
             if history_dir is not None:
-                from nidhogg.output.history import (  # noqa: PLC0415
-                    append_binary_finding,
-                    append_finding,
-                )
-
-                append_finding(history_dir, build_document(analysis))
-                append_binary_finding(history_dir, build_binaries_document(analysis))
+                _append_history(history_dir, analysis)
             if as_json:
                 print(json.dumps(build_document(analysis), indent=2))  # noqa: T201
             else:
@@ -761,6 +829,7 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Poll the changelog once and analyse any new packages, plainly.
 
@@ -778,6 +847,9 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         The changelog serial observed at the start of this call — the new
@@ -797,6 +869,7 @@ def _run_monitor_iteration_plain(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
     return current_serial
@@ -809,6 +882,7 @@ def _analyse_with_progress(  # noqa: PLR0913
     check_ssl: bool = False,  # noqa: FBT001, FBT002
     check_http: bool = False,  # noqa: FBT001, FBT002
     check_binaries: bool = False,  # noqa: FBT001, FBT002
+    check_install_hooks: bool = False,  # noqa: FBT001, FBT002
 ) -> PackageAnalysis | None:
     """Analyse *entry*, showing a spinner row only while this call is active.
 
@@ -828,6 +902,9 @@ def _analyse_with_progress(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         A ``PackageAnalysis``, or ``None`` on read error.
@@ -840,6 +917,7 @@ def _analyse_with_progress(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
     finally:
         progress.remove_task(task_id)
@@ -856,6 +934,7 @@ def _process_entries_rich(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> None:
     """Analyse *entries* concurrently with a live rich progress display.
 
@@ -877,6 +956,9 @@ def _process_entries_rich(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed  # noqa: PLC0415
 
@@ -893,6 +975,7 @@ def _process_entries_rich(  # noqa: PLR0913
                     check_ssl,
                     check_http,
                     check_binaries,
+                    check_install_hooks,
                 ): entry
                 for entry in entries
             }
@@ -909,15 +992,7 @@ def _process_entries_rich(  # noqa: PLR0913
                     continue
                 analysis = result
                 if history_dir is not None:
-                    from nidhogg.output.history import (  # noqa: PLC0415
-                        append_binary_finding,
-                        append_finding,
-                    )
-
-                    append_finding(history_dir, build_document(analysis))
-                    append_binary_finding(
-                        history_dir, build_binaries_document(analysis)
-                    )
+                    _append_history(history_dir, analysis)
                 if as_json:
                     progress.console.print(
                         json.dumps(build_document(analysis), indent=2),
@@ -948,6 +1023,7 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Poll the changelog once and analyse any new packages, with rich output.
 
@@ -966,6 +1042,9 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         The changelog serial observed at the start of this call — the new
@@ -987,6 +1066,7 @@ def _run_monitor_iteration_rich(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
     return current_serial
@@ -1018,6 +1098,7 @@ def _run_monitor_once(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Run a single monitor poll from *last_serial*, persist state, and exit.
 
@@ -1036,6 +1117,9 @@ def _run_monitor_once(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         ``0`` once the single poll completes and state is persisted.
@@ -1055,6 +1139,7 @@ def _run_monitor_once(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
     else:
         new_serial = _run_monitor_iteration_plain(
@@ -1067,6 +1152,7 @@ def _run_monitor_once(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
     save_state(resolved_index_file, MonitorState(last_serial=new_serial))
     return 0
@@ -1132,6 +1218,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Process the last *last_n* newly published packages and exit.
 
@@ -1154,6 +1241,9 @@ def _run_monitor_last_n(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         ``0`` once processing completes (even if no packages were found).
@@ -1181,6 +1271,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
     else:
         _process_entries_plain(
@@ -1192,6 +1283,7 @@ def _run_monitor_last_n(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
     save_state(
@@ -1215,6 +1307,7 @@ def _run_monitor(  # noqa: PLR0913
     check_ssl: bool = False,
     check_http: bool = False,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> int:
     """Poll the PyPI changelog for new packages and analyse each one.
 
@@ -1255,6 +1348,9 @@ def _run_monitor(  # noqa: PLR0913
             no response.
         check_binaries: When ``True``, scan the package for native binaries
             (PE/Mach-O/ELF), hash them, and check for embedded signatures.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls that would run on install/import.
 
     Returns:
         ``0`` when the monitor completes (``--once``/``--last``) or is
@@ -1288,6 +1384,7 @@ def _run_monitor(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
     state = load_state(resolved_index_file)
@@ -1307,6 +1404,7 @@ def _run_monitor(  # noqa: PLR0913
             check_ssl=check_ssl,
             check_http=check_http,
             check_binaries=check_binaries,
+            check_install_hooks=check_install_hooks,
         )
 
     use_rich = sys.stdout.isatty()
@@ -1326,6 +1424,7 @@ def _run_monitor(  # noqa: PLR0913
                     check_ssl=check_ssl,
                     check_http=check_http,
                     check_binaries=check_binaries,
+                    check_install_hooks=check_install_hooks,
                 )
                 save_state(resolved_index_file, MonitorState(last_serial=last_serial))
                 _wait_before_next_poll_rich(interval, console)
@@ -1341,6 +1440,7 @@ def _run_monitor(  # noqa: PLR0913
                     check_ssl=check_ssl,
                     check_http=check_http,
                     check_binaries=check_binaries,
+                    check_install_hooks=check_install_hooks,
                 )
                 save_state(resolved_index_file, MonitorState(last_serial=last_serial))
                 time.sleep(interval)
@@ -1410,6 +1510,7 @@ def main() -> None:
                     check_ssl=args.check_ssl,
                     check_http=args.check_http,
                     check_binaries=args.check_binaries,
+                    check_install_hooks=args.check_install_hooks,
                     history_dir=resolved_history_dir,
                 )
             )
@@ -1424,6 +1525,7 @@ def main() -> None:
                     check_ssl=args.check_ssl,
                     check_http=args.check_http,
                     check_binaries=args.check_binaries,
+                    check_install_hooks=args.check_install_hooks,
                     history_dir=resolved_history_dir,
                 )
             )
@@ -1440,6 +1542,7 @@ def main() -> None:
                 check_ssl=args.check_ssl,
                 check_http=args.check_http,
                 check_binaries=args.check_binaries,
+                check_install_hooks=args.check_install_hooks,
             )
         )
     else:
@@ -1457,6 +1560,7 @@ def main() -> None:
                 check_ssl=args.check_ssl,
                 check_http=args.check_http,
                 check_binaries=args.check_binaries,
+                check_install_hooks=args.check_install_hooks,
             )
         )
 

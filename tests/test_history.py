@@ -9,6 +9,7 @@ from typing import TYPE_CHECKING
 from nidhogg.output.history import (
     append_binary_finding,
     append_finding,
+    append_install_hook_finding,
     default_history_dir,
 )
 
@@ -133,4 +134,46 @@ def test_append_binary_finding_returns_none_on_write_failure(
 
     monkeypatch.setattr(Path, "open", _boom)
     result = append_binary_finding(tmp_path, {"package": {"name": "pkg"}})
+    assert result is None
+
+
+def test_append_install_hook_finding_creates_dated_file_under_subdir(
+    tmp_path: Path,
+):
+    result = append_install_hook_finding(tmp_path, {"package": {"name": "pkg"}})
+    assert result is not None
+    assert result.parent == tmp_path / "install_hooks"
+    assert result.suffix == ".jsonl"
+
+
+def test_append_install_hook_finding_does_not_touch_other_history_files(
+    tmp_path: Path,
+):
+    append_install_hook_finding(tmp_path, {"package": {"name": "pkg"}})
+    assert list(tmp_path.glob("*.jsonl")) == []
+
+
+def test_append_install_hook_finding_accumulates_across_calls(tmp_path: Path):
+    append_install_hook_finding(tmp_path, {"package": {"name": "a"}})
+    result = append_install_hook_finding(tmp_path, {"package": {"name": "b"}})
+    assert result is not None
+    lines = result.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 2
+
+
+def test_append_install_hook_finding_stamps_analyzed_at(tmp_path: Path):
+    result = append_install_hook_finding(tmp_path, {"package": {"name": "pkg"}})
+    assert result is not None
+    line = json.loads(result.read_text(encoding="utf-8").splitlines()[0])
+    assert "analyzed_at" in line
+
+
+def test_append_install_hook_finding_returns_none_on_write_failure(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+):
+    def _boom(*_args: object, **_kwargs: object) -> None:
+        raise OSError("disk full")
+
+    monkeypatch.setattr(Path, "open", _boom)
+    result = append_install_hook_finding(tmp_path, {"package": {"name": "pkg"}})
     assert result is None

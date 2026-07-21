@@ -174,6 +174,40 @@ def render_file_block(file_analysis: FileAnalysis, pkg_path: Path) -> Group:
     return Group(header, table)
 
 
+def render_binaries_table(analysis: PackageAnalysis) -> Table:
+    """Render a borderless table listing the binaries found in a package.
+
+    Args:
+        analysis: Completed package analysis.
+
+    Returns:
+        A ``rich.table.Table`` with one row per binary.
+    """
+    table = Table(box=None, show_header=False, pad_edge=False, expand=False)
+    table.add_column("Path")
+    table.add_column("Format", no_wrap=True)
+    table.add_column("Signed", no_wrap=True)
+    table.add_column("Signer")
+    table.add_column("SHA256", no_wrap=True)
+    for b in sorted(analysis.binaries, key=lambda x: str(x.filepath)):
+        try:
+            rel = str(b.filepath.relative_to(analysis.path))
+        except ValueError:
+            rel = str(b.filepath)
+        path = Text(rel)
+        fmt = Text(b.format.value, style="dim")
+        if b.signed is True:
+            signed = Text("yes", style="green")
+        elif b.signed is False:
+            signed = Text("no", style="bold red")
+        else:
+            signed = Text("?", style="dim")
+        signer = Text(b.signer or "")
+        sha = Text(b.sha256[:12], style="dim")
+        table.add_row(path, fmt, signed, signer, sha)
+    return table
+
+
 def render_package_header(name: str) -> Text:
     """Render the per-package header used in batch and monitor output.
 
@@ -195,9 +229,11 @@ def render_package_result(
 ) -> Group | Text:
     """Render the full human-readable block for one package.
 
-    When there are no findings, delegates to :func:`render_empty`. Otherwise
-    returns a ``Group`` of a package summary and one block per file that has
-    findings.
+    When there are no URL findings and no binaries, delegates to
+    :func:`render_empty`. Otherwise returns a ``Group`` of a package summary,
+    one block per file that has URL findings, and a binaries table when the
+    package contains native binaries — the two are independent (a package
+    can have binaries with no URL findings, or vice versa).
 
     Args:
         analysis: Completed package analysis.
@@ -206,7 +242,7 @@ def render_package_result(
     Returns:
         A ``Group`` of renderables, or a ``Text`` for the empty case.
     """
-    if not analysis.findings:
+    if not analysis.findings and not analysis.binaries:
         return render_empty(analysis, display_name=display_name)
 
     name = display_name or analysis.name
@@ -214,13 +250,25 @@ def render_package_result(
         Text("package  ").append(name, style="bold"),
         Text("path     ").append(str(analysis.path), style="dim"),
         Text(""),
-        Text(f"findings {len(analysis.findings)}"),
-        Text(""),
     ]
-    for fa in analysis.files:
-        if fa.findings:
-            blocks.append(render_file_block(fa, analysis.path))
-            blocks.append(Text(""))
+
+    if analysis.findings:
+        blocks.append(Text(f"findings {len(analysis.findings)}"))
+        blocks.append(Text(""))
+        for fa in analysis.files:
+            if fa.findings:
+                blocks.append(render_file_block(fa, analysis.path))
+                blocks.append(Text(""))
+    else:
+        blocks.append(Text("no URLs found", style="green"))
+        blocks.append(Text(""))
+
+    if analysis.binaries:
+        blocks.append(Text(f"binaries {len(analysis.binaries)}"))
+        blocks.append(Text(""))
+        blocks.append(render_binaries_table(analysis))
+        blocks.append(Text(""))
+
     return Group(*blocks)
 
 

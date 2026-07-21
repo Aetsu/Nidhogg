@@ -11,6 +11,7 @@ if TYPE_CHECKING:
     from nidhogg.core.models import (
         BinaryFinding,
         FileAnalysis,
+        InstallHookFinding,
         PackageAnalysis,
         UrlFinding,
     )
@@ -110,6 +111,58 @@ def build_binaries_document(analysis: PackageAnalysis) -> dict[str, object]:
     }
 
 
+def _serialise_install_hook(
+    finding: InstallHookFinding, package_path: Path
+) -> dict[str, object]:
+    """Convert a single :class:`InstallHookFinding` to a JSON-serialisable dict.
+
+    Args:
+        finding: The install-hook finding to serialise.
+        package_path: Root of the analysed package (used to relativise paths).
+
+    Returns:
+        A plain dict suitable for ``json.dumps``.
+    """
+    try:
+        rel = finding.filepath.relative_to(package_path)
+    except ValueError:
+        rel = finding.filepath
+    return {
+        "file": str(rel),
+        "line": finding.lineno,
+        "call": finding.call,
+        "command": finding.command,
+        "context": finding.context,
+        "source": finding.source.value,
+    }
+
+
+def build_install_hooks_document(analysis: PackageAnalysis) -> dict[str, object]:
+    """Build the JSON-serialisable install-hooks document for *analysis*.
+
+    Args:
+        analysis: Completed package analysis.
+
+    Returns:
+        A dict with ``package``, ``summary``, and ``install_hooks`` sections
+        — the install-hooks counterpart of :func:`build_document`.
+    """
+    return {
+        "package": {
+            "name": analysis.name,
+            "path": str(analysis.path),
+            "version": analysis.version,
+            "download_url": analysis.download_url,
+        },
+        "summary": {
+            "total_findings": len(analysis.install_hooks),
+        },
+        "install_hooks": [
+            _serialise_install_hook(f, analysis.path) for f in analysis.install_hooks
+        ],
+    }
+
+
 def build_document(analysis: PackageAnalysis) -> dict[str, object]:
     """Build the JSON-serialisable result document for *analysis*.
 
@@ -170,4 +223,22 @@ def write_binary_results(analysis: PackageAnalysis, destination: Path) -> None:
     """
     destination.with_suffix(".binaries.json").write_text(
         json.dumps(build_binaries_document(analysis), indent=2), encoding="utf-8"
+    )
+
+
+def write_install_hook_results(analysis: PackageAnalysis, destination: Path) -> None:
+    """Write the install-hooks document to a sibling file next to *destination*.
+
+    Given ``destination`` of ``foo.json``, writes ``foo.install_hooks.json`` —
+    a separate file from the URL-findings/binaries results, always written
+    (even with an empty ``install_hooks`` list) so downstream tooling can
+    rely on its presence whenever ``--output`` is used.
+
+    Args:
+        analysis: Completed package analysis.
+        destination: The same path passed to :func:`write_results` for this
+            package; the install-hooks file is derived from it.
+    """
+    destination.with_suffix(".install_hooks.json").write_text(
+        json.dumps(build_install_hooks_document(analysis), indent=2), encoding="utf-8"
     )

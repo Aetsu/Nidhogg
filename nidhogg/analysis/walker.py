@@ -9,6 +9,7 @@ from loguru import logger
 
 from nidhogg.analysis.binary_scanner import scan_binaries
 from nidhogg.analysis.file_classifier import classify_file
+from nidhogg.analysis.install_hook_scanner import scan_install_hooks
 from nidhogg.analysis.layer1_regex import extract_urls_regex
 from nidhogg.analysis.layer2_ast import extract_urls_ast
 from nidhogg.core.exceptions import PackageReadError
@@ -17,17 +18,18 @@ from nidhogg.core.models import FileAnalysis, FileTag, PackageAnalysis
 if TYPE_CHECKING:
     from pathlib import Path
 
-_TEXT_SUFFIXES = frozenset({".py", ".md", ".rst", ".txt", ".cfg", ".toml"})
+_TEXT_SUFFIXES = frozenset({".py", ".rst", ".txt", ".cfg", ".toml"})
 
 
 def _is_whitelisted(path: Path) -> bool:
     """Return ``True`` if *path* is a file type we analyse for URLs.
 
-    README files are excluded regardless of extension: they are prose
-    aimed at humans, not package code, and consistently drown findings
-    in noise (badges, screenshots, unrelated doc links).
+    Markdown (``.md``) is excluded entirely, and README files are excluded
+    regardless of extension: both are prose aimed at humans, not package
+    code, and consistently drown findings in noise (badges, screenshots,
+    unrelated doc links).
     """
-    if path.name.lower().startswith("readme"):
+    if path.suffix.lower() == ".md" or path.name.lower().startswith("readme"):
         return False
     return path.suffix.lower() in _TEXT_SUFFIXES
 
@@ -79,13 +81,14 @@ def _analyze_file(filepath: Path, root: Path) -> FileAnalysis:
     return FileAnalysis(filepath=filepath, tags=tags, findings=findings)
 
 
-def analyze_package(
+def analyze_package(  # noqa: PLR0913
     path: Path,
     *,
     name: str | None = None,
     version: str | None = None,
     download_url: str | None = None,
     check_binaries: bool = False,
+    check_install_hooks: bool = False,
 ) -> PackageAnalysis:
     """Analyse every whitelisted source file inside a package directory.
 
@@ -105,6 +108,10 @@ def analyze_package(
             (PE/Mach-O/ELF) and populate ``PackageAnalysis.binaries``.
             ``False`` leaves it an empty list — opt-in, like ``check_ssl``/
             ``check_http``, since it adds noticeable I/O for large packages.
+        check_install_hooks: When ``True``, scan setup.py, custom cmdclass
+            overrides, and every __init__.py for process-execution and
+            network calls (subprocess, os.exec*, socket, urllib, requests)
+            that would run on install/import.
 
     Returns:
         A :class:`PackageAnalysis` with one :class:`FileAnalysis` per
@@ -131,6 +138,11 @@ def analyze_package(
         binaries = scan_binaries(path)
         logger.info("Found {} binary file(s) in {}", len(binaries), path)
 
+    install_hooks = []
+    if check_install_hooks:
+        install_hooks = scan_install_hooks(path)
+        logger.info("Found {} install-hook finding(s) in {}", len(install_hooks), path)
+
     return PackageAnalysis(
         name=name if name is not None else path.name,
         path=path,
@@ -138,4 +150,5 @@ def analyze_package(
         version=version,
         download_url=download_url,
         binaries=binaries,
+        install_hooks=install_hooks,
     )

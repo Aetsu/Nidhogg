@@ -11,10 +11,20 @@
   <header class="masthead">
     <div class="masthead__wrap">
       <nav class="masthead__nav" aria-label="Site info">
-        <button type="button" class="nav-link" id="glossaryOpen">Glossary</button>
-        <button type="button" class="nav-link" id="aboutOpen">About</button>
+        <button type="button" class="nav-link nav-link--icon" id="glossaryOpen">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 2.5h4a2 2 0 0 1 2 2v9a1.5 1.5 0 0 0-1.5-1.5H2Z"/><path d="M14 2.5h-4a2 2 0 0 0-2 2v9a1.5 1.5 0 0 1 1.5-1.5H14Z"/></svg>
+          <span>Glossary</span>
+        </button>
+        <button type="button" class="nav-link nav-link--icon" id="aboutOpen">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 7.25v4.25" stroke-linecap="round"/><circle cx="8" cy="4.75" r="0.9" fill="currentColor" stroke="none"/></svg>
+          <span>About</span>
+        </button>
+        <a class="nav-link nav-link--icon" href="https://github.com/Aetsu/Nidhogg" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          <span>GitHub</span>
+        </a>
       </nav>
-      <h1 class="wordmark">NIDHOGG</h1>
+      <h1 class="wordmark"><a href=".">NIDHOGG</a></h1>
       <p class="lede" id="statsLine">Loading monitor state…</p>
     </div>
   </header>
@@ -85,8 +95,20 @@
             <dd><span class="badge badge--clean">signed</span> or <span class="badge badge--malicious">unsigned</span> when determined; <span class="badge badge--unknown">unknown</span> when the format has no signature to check (always the case for ELF, which has no code-signing mechanism) or the file couldn't be parsed.</dd>
             <dt>Signer column</dt>
             <dd>The certificate subject for a genuinely signed PE (Authenticode) or Mach-O (CMS) binary. Mach-O binaries signed without a real certificate — common for locally compiled code — show as <code>ad-hoc</code>, distinct from a real signer and from unsigned.</dd>
-            <dt>Only with binaries toggle</dt>
-            <dd>Checked by default; hides packages that carry no native binaries at all, since most packages don't.</dd>
+          </dl>
+        </section>
+        <section class="modal__section">
+          <h3>Install Hooks</h3>
+          <p>From <code>--check-install-hooks</code>: every <code>setup.py</code> (at any depth) and every <code>__init__.py</code> in the package is scanned for calls into process-execution or network functions — code that runs at <code>pip install</code> time (including custom <code>cmdclass</code> overrides) or on first import. This is a separate table from the URL findings above, shown under the <strong>Install Hooks</strong> tab.</p>
+          <dl class="glossary-list">
+            <dt>Call column</dt>
+            <dd>Qualified name of the flagged function, e.g. <code>subprocess.Popen</code> — one of <code>subprocess.*</code>, <code>os.system</code>/<code>popen</code>/<code>exec*</code>/<code>spawn*</code>, <code>socket.*</code>, <code>urllib.request.*</code>, <code>http.client.*</code>, <code>requests.*</code>.</dd>
+            <dt>Command column</dt>
+            <dd>The full call expression as written in source, arguments included — e.g. <code>subprocess.Popen(['curl', url], shell=True)</code>. Shown as-is; obfuscated arguments (base64, etc.) are not decoded here.</dd>
+            <dt>Context column</dt>
+            <dd>Dotted enclosing scope — <code>module</code> at top level, or a class/method path such as <code>PostInstall.run</code> when the call sits inside a custom <code>cmdclass</code>.</dd>
+            <dt>Source column</dt>
+            <dd><code>setup.py</code> or <code>__init__.py</code> — which file the call was found in.</dd>
           </dl>
         </section>
       </div>
@@ -100,12 +122,20 @@
         <button type="button" class="modal__close" id="aboutClose" aria-label="Close">×</button>
       </div>
       <div class="modal__body">
-        <p>Nidhogg is a static analyzer that extracts candidate malicious URLs from Python packages published on PyPI, and — optionally — inspects any native binaries they bundle for format, signature, and known-hash lookups.</p>
-        <p>
+        <p>Nidhogg is a static analyzer that extracts candidate malicious URLs from Python packages published on PyPI, inspects any native binaries they bundle for format, signature, and known-hash lookups, and scans setup.py/__init__.py for process-execution or network calls that would run on install or import.</p>
+        <p class="about-links">
           Created by
           <a href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">Aetsu</a>
-          — <a href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">GitHub</a>
-          · <a href="https://x.com/aetsu" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+          ·
+          <a class="nav-link--icon" href="https://github.com/aetsu" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            <span>GitHub</span>
+          </a>
+          ·
+          <a class="nav-link--icon" href="https://x.com/aetsu" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M9.53 6.78 15.17 0h-1.34L8.94 5.88 4.98 0H0l5.92 8.6L0 16h1.34l5.19-6.22L10.68 16H16L9.53 6.78Zm-1.84 2.2-.6-.86L1.83 1.04h2.06L8.1 7.02l.6.86 4.94 7.06H11.6L7.69 8.98Z"/></svg>
+            <span>Twitter/X</span>
+          </a>
         </p>
       </div>
     </div>
@@ -121,9 +151,26 @@
 
   <main class="content">
     <div class="view-tabs" role="tablist">
-      <button type="button" class="view-tab" id="tabResults" role="tab" aria-selected="true">Urls</button>
-      <button type="button" class="view-tab" id="tabBinaries" role="tab" aria-selected="false">Binaries</button>
-      <button type="button" class="view-tab" id="tabCharts" role="tab" aria-selected="false">Charts</button>
+      <button type="button" class="view-tab" id="tabResults" role="tab" aria-selected="true">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6.5 9.5a2.5 2.5 0 0 0 3.54 0l2-2a2.5 2.5 0 0 0-3.54-3.54l-1.15 1.14"/><path d="M9.5 6.5a2.5 2.5 0 0 0-3.54 0l-2 2a2.5 2.5 0 0 0 3.54 3.54l1.15-1.14"/></svg>
+        <span>Urls</span>
+      </button>
+      <button type="button" class="view-tab" id="tabBinaries" role="tab" aria-selected="false">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4.5" y="4.5" width="7" height="7" rx="1"/><path d="M6.5 1.5v3M9.5 1.5v3M6.5 11.5v3M9.5 11.5v3M1.5 6.5h3M1.5 9.5h3M11.5 6.5h3M11.5 9.5h3"/></svg>
+        <span>Binaries</span>
+      </button>
+      <button type="button" class="view-tab" id="tabInstallHooks" role="tab" aria-selected="false">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 1.5v3M8 11.5v3M1.5 8h3M11.5 8h3"/><circle cx="8" cy="8" r="3"/></svg>
+        <span>Install Hooks</span>
+      </button>
+      <button type="button" class="view-tab" id="tabCharts" role="tab" aria-selected="false">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 13.5h12"/><rect x="3.5" y="8" width="2.4" height="5.5"/><rect x="7" y="5" width="2.4" height="8.5"/><rect x="10.5" y="2.5" width="2.4" height="11"/></svg>
+        <span>Charts</span>
+      </button>
+      <button type="button" class="view-tab" id="tabTrends" role="tab" aria-selected="false">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1.5 12.5 6 7l3 2.5 5.5-6.5"/><path d="M10.5 3h4v4"/></svg>
+        <span>Trends</span>
+      </button>
     </div>
 
     <div class="controls">
@@ -139,11 +186,6 @@
 
     <div id="resultsView">
     <div class="controls">
-      <label class="toggle">
-        <input type="checkbox" id="urlOnlyToggle" checked />
-        Only with URL
-      </label>
-
       <details class="filter" id="statusFilter">
         <summary>HTTP status<span class="filter__count" id="statusFilterCount"></span></summary>
         <div class="filter__menu" id="statusFilterMenu"></div>
@@ -198,11 +240,6 @@
 
     <div id="binariesView" hidden>
       <div class="controls">
-        <label class="toggle">
-          <input type="checkbox" id="binariesOnlyToggle" checked />
-          Only with binaries
-        </label>
-
         <details class="filter" id="signedFilter">
           <summary>Signed<span class="filter__count" id="signedFilterCount"></span></summary>
           <div class="filter__menu" id="signedFilterMenu"></div>
@@ -241,6 +278,46 @@
       </div>
     </div>
 
+    <div id="installHooksView" hidden>
+      <div class="controls">
+        <details class="filter" id="sourceFilter">
+          <summary>Source<span class="filter__count" id="sourceFilterCount"></span></summary>
+          <div class="filter__menu" id="sourceFilterMenu"></div>
+        </details>
+        <details class="filter" id="callFilter">
+          <summary>Call<span class="filter__count" id="callFilterCount"></span></summary>
+          <div class="filter__menu" id="callFilterMenu"></div>
+        </details>
+      </div>
+
+      <div class="table-scroll">
+        <table class="results">
+          <thead>
+            <tr>
+              <th scope="col">Package</th>
+              <th scope="col">Analyzed</th>
+              <th scope="col">File:Line</th>
+              <th scope="col">Call</th>
+              <th scope="col">Command</th>
+              <th scope="col">Context</th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody id="installHooksBody"></tbody>
+        </table>
+      </div>
+
+      <p class="empty-state" id="installHooksEmptyState" hidden>
+        No install-hook findings for this day.
+      </p>
+
+      <div class="pagination" id="installHooksPagination" hidden>
+        <button type="button" class="page-btn" id="installHooksPagePrev" aria-label="Previous page">‹ Prev</button>
+        <span class="page-status" id="installHooksPageStatus"></span>
+        <button type="button" class="page-btn" id="installHooksPageNext" aria-label="Next page">Next ›</button>
+      </div>
+    </div>
+
     <div id="chartsView" hidden>
       <section class="chart-panel-row">
         <section class="chart-panel" aria-labelledby="threatChartTitle">
@@ -266,6 +343,59 @@
           <div class="chart-mount" id="signedChart"></div>
           <p class="empty-state" id="signedChartEmpty" hidden>No binaries found for this day.</p>
         </section>
+      </section>
+
+      <section class="chart-panel-row">
+        <section class="chart-panel" aria-labelledby="installHookSourceChartTitle">
+          <h2 id="installHookSourceChartTitle">Install-hook source</h2>
+          <div class="chart-mount" id="installHookSourceChart"></div>
+          <p class="empty-state" id="installHookSourceChartEmpty" hidden>No install-hook findings for this day.</p>
+        </section>
+        <section class="chart-panel" aria-labelledby="installHookCallChartTitle">
+          <h2 id="installHookCallChartTitle">Install-hook call breakdown</h2>
+          <div class="chart-mount" id="installHookCallChart"></div>
+          <p class="empty-state" id="installHookCallChartEmpty" hidden>No install-hook findings for this day.</p>
+        </section>
+      </section>
+    </div>
+
+    <div id="trendsView" hidden>
+      <section class="chart-panel-row">
+        <section class="chart-panel" aria-labelledby="findingsTrendTitle">
+          <h2 id="findingsTrendTitle">Total findings over time</h2>
+          <div class="chart-mount" id="findingsTrendChart"></div>
+          <p class="empty-state" id="findingsTrendEmpty" hidden>No history yet.</p>
+        </section>
+        <section class="chart-panel" aria-labelledby="maliciousTrendTitle">
+          <h2 id="maliciousTrendTitle">Malicious packages over time</h2>
+          <div class="chart-mount" id="maliciousTrendChart"></div>
+          <p class="empty-state" id="maliciousTrendEmpty" hidden>No history yet.</p>
+        </section>
+      </section>
+
+      <section class="chart-panel" aria-labelledby="topDomainsTitle">
+        <h2 id="topDomainsTitle">Top offending domains</h2>
+        <div class="chart-mount" id="topDomainsChart"></div>
+        <p class="empty-state" id="topDomainsEmpty" hidden>No threat-tagged domains yet.</p>
+      </section>
+
+      <section class="chart-panel" aria-labelledby="repeatOffendersTitle">
+        <h2 id="repeatOffendersTitle">Repeat offender packages</h2>
+        <div class="table-scroll">
+          <table class="results" id="repeatOffendersTable">
+            <thead>
+              <tr>
+                <th scope="col">Package</th>
+                <th scope="col">Days seen</th>
+                <th scope="col">Findings</th>
+                <th scope="col">First seen</th>
+                <th scope="col">Last seen</th>
+              </tr>
+            </thead>
+            <tbody id="repeatOffendersBody"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="repeatOffendersEmpty" hidden>No repeat offenders yet.</p>
       </section>
     </div>
   </main>

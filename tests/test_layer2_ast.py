@@ -306,3 +306,70 @@ def test_compile_sets_dynamic_exec_flag() -> None:
 def test_no_dynamic_exec_flag_when_absent() -> None:
     _, dyn = extract_urls_ast('u = "http://x.test"\n', Path("a.py"))
     assert dyn is False
+
+
+# ---------------------------------------------------------------------------
+# Extended deobfuscation (layer-2 integration) — Phase #4
+# ---------------------------------------------------------------------------
+
+
+def test_hex_decoded_url_tagged_via_decoded(tmp_path: Path):
+    payload = b"https://evil.example.com/x".hex()
+    source = f'import binascii\nu = bytes.fromhex("{payload}")'
+    findings, _ = extract_urls_ast(source, tmp_path / "f.py")
+    hits = [f for f in findings if UrlTag.VIA_DECODED in f.tags]
+    assert any(f.value == "https://evil.example.com/x" for f in hits)
+
+
+def test_rot13_decoded_url_via_decoded(tmp_path: Path):
+    import codecs
+
+    enc = codecs.encode("https://evil.example.com/x", "rot_13")
+    source = f'import codecs\nu = codecs.decode("{enc}", "rot_13")'
+    findings, _ = extract_urls_ast(source, tmp_path / "f.py")
+    assert any(
+        f.value == "https://evil.example.com/x" and UrlTag.VIA_DECODED in f.tags
+        for f in findings
+    )
+
+
+def test_str_join_decoded_url_via_decoded(tmp_path: Path):
+    source = 'u = "".join(["https://", "evil.example.com", "/x"])'
+    findings, _ = extract_urls_ast(source, tmp_path / "f.py")
+    assert any(
+        f.value == "https://evil.example.com/x" and UrlTag.VIA_DECODED in f.tags
+        for f in findings
+    )
+
+
+def test_nested_chain_carries_both_tags(tmp_path: Path):
+    import base64
+
+    payload = base64.b64encode(b"https://evil.example.com/x").decode()
+    source = f'import base64\nu = base64.b64decode("{payload}").decode()'
+    findings, _ = extract_urls_ast(source, tmp_path / "f.py")
+    match = next(f for f in findings if f.value == "https://evil.example.com/x")
+    assert UrlTag.VIA_BASE64 in match.tags
+    assert UrlTag.VIA_DECODED in match.tags
+
+
+def test_marshal_loads_sets_dynamic_exec_flag() -> None:
+    _, dyn = extract_urls_ast('import marshal\nmarshal.loads(b"x")\n', Path("a.py"))
+    assert dyn is True
+
+
+def test_pickle_loads_sets_dynamic_exec_flag() -> None:
+    _, dyn = extract_urls_ast('import pickle\npickle.loads(b"x")\n', Path("a.py"))
+    assert dyn is True
+
+
+def test_fixture_dropper_resolves_stacked_decoders(tmp_path: Path):
+    source = (
+        Path(__file__).parent / "fixtures" / "pkg_dropper" / "loader.py"
+    ).read_text()
+    findings, _ = extract_urls_ast(source, tmp_path / "loader.py")
+    c2 = [f for f in findings if f.value == "https://c2.dropper-test.net/payload"]
+    # hex, base64+rot13, and join all resolve to the same C2 URL.
+    assert len(c2) == 3
+    assert all(UrlTag.VIA_DECODED in f.tags for f in c2)
+    assert any(UrlTag.VIA_BASE64 in f.tags for f in c2)

@@ -1,13 +1,13 @@
-"""Layer 2: URL extraction via AST analysis with constant folding."""
+"""Layer 2: URL extraction via AST analysis with recursive deobfuscation."""
 
 from __future__ import annotations
 
 import ast
-import base64
 import re
 import warnings
 from typing import TYPE_CHECKING
 
+from nidhogg.analysis.deobfuscate import Scope, qualified_name, resolve_value
 from nidhogg.core.models import AnalysisLayer, UrlFinding, UrlTag
 
 if TYPE_CHECKING:
@@ -21,9 +21,6 @@ _URL_RE = re.compile(r"(?:https?|ftp|wss?)://(?:(?!(?:https?|ftp|wss?)://)\S)+")
 _WEIRD_CHARS_RE = re.compile(r"""['"`<>{}|\\^]""")
 _TRAILING_PUNCT = ".,;:!?()]"
 
-# name → (resolved_value, assignment_lineno)
-type _Scope = dict[str, tuple[str, int]]
-
 
 def _clean(url: str) -> str:
     match = _WEIRD_CHARS_RE.search(url)
@@ -35,93 +32,19 @@ def _urls_in(s: str) -> list[str]:
     return [_clean(m.group()) for m in _URL_RE.finditer(s) if _clean(m.group())]
 
 
-def _fold_binop(node: ast.BinOp) -> str | None:
-    """Concatenate two string Constants joined by ``+``, or return None."""
-    if not isinstance(node.op, ast.Add):
-        return None
-    left = node.left
-    right = node.right
-    if (
-        isinstance(left, ast.Constant)
-        and isinstance(right, ast.Constant)
-        and isinstance(left.value, str)
-        and isinstance(right.value, str)
-    ):
-        return left.value + right.value
-    return None
+def _as_text(value: str | bytes) -> str:
+    """Return *value* as text, decoding bytes leniently for URL scanning."""
+    return value if isinstance(value, str) else value.decode("utf-8", errors="replace")
 
 
-def _try_b64decode(value: str | bytes) -> str | None:
-    """Decode a base64 string/bytes constant, returning the UTF-8 text or None."""
-    try:
-        raw = value if isinstance(value, bytes) else value.encode("ascii")
-        # Tolerate missing padding.
-        pad = len(raw) % 4
-        if pad:
-            raw += b"=" * (4 - pad)
-        return base64.b64decode(raw).decode("utf-8", errors="replace")
-    except Exception:  # noqa: BLE001
-        return None
-
-
-def _resolve_fstring(node: ast.JoinedStr) -> str | None:
-    """Reconstruct an f-string whose every interpolated part is a string Constant.
-
-    Returns the resolved string, or ``None`` if any part is not statically
-    resolvable without scope tracking.
-    """
-    parts: list[str] = []
-    for part in node.values:
-        if isinstance(part, ast.Constant) and isinstance(part.value, str):
-            parts.append(part.value)
-        elif (
-            isinstance(part, ast.FormattedValue)
-            and isinstance(part.value, ast.Constant)
-            and isinstance(part.value.value, str)
-        ):
-            parts.append(part.value.value)
-        else:
-            return None
-    return "".join(parts)
-
-
-def _resolve_to_str(node: ast.expr, scope: _Scope, at_lineno: int) -> str | None:
-    """Resolve *node* to a string value, consulting *scope* for Name lookups.
-
-    Only uses scope entries assigned strictly before *at_lineno*, so that
-    variables used before their assignment are not resolved.  Handles
-    ``Constant``, ``Name``, and ``BinOp(Add)`` nodes recursively.
-
-    Args:
-        node: The AST expression to resolve.
-        scope: Mapping from variable name to ``(value, assignment_lineno)``.
-        at_lineno: Line number of the expression being resolved.
-
-    Returns:
-        The resolved string, or ``None`` if resolution is not possible.
-    """
-    if isinstance(node, ast.Constant) and isinstance(node.value, str):
-        return node.value
-    if isinstance(node, ast.Name):
-        entry = scope.get(node.id)
-        if entry is not None:
-            value, assign_lineno = entry
-            if assign_lineno < at_lineno:
-                return value
-    if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Add):
-        left = _resolve_to_str(node.left, scope, at_lineno)
-        right = _resolve_to_str(node.right, scope, at_lineno)
-        if left is not None and right is not None:
-            return left + right
-    return None
-
-
-def _collect_scope(tree: ast.AST) -> _Scope:
+def _collect_scope(tree: ast.AST) -> Scope:
     """Pre-pass: collect string-valued simple assignments, resolving chains.
 
     Processes ``ast.Assign`` nodes with a single ``Name`` target in line order
-    so that later assignments can reference earlier ones
-    (e.g. ``a = "x"; b = a + "y"``).
+    so that later assignments can reference earlier ones (e.g.
+    ``a = "x"; b = a + "y"``). Each right-hand side is resolved with the full
+    deobfuscation machinery; only results that reduce to ``str`` are stored,
+    since scope lookups feed back into string resolution.
 
     Args:
         tree: The parsed AST of the source file.
@@ -141,48 +64,23 @@ def _collect_scope(tree: ast.AST) -> _Scope:
         ),
         key=lambda t: t[0],
     )
-    scope: _Scope = {}
+    scope: Scope = {}
     for lineno, name, value_node in assigns:
-        resolved = _resolve_to_str(value_node, scope, lineno)
-        if resolved is not None:
-            scope[name] = (resolved, lineno)
+        resolved = resolve_value(value_node, scope, lineno)
+        if resolved is not None and isinstance(resolved[0], str):
+            scope[name] = (resolved[0], lineno)
     return scope
-
-
-def _resolve_fstring_scope(node: ast.JoinedStr, scope: _Scope) -> str | None:
-    """Like ``_resolve_fstring`` but also resolves Name references from *scope*.
-
-    Called only when ``_resolve_fstring`` has already returned ``None``,
-    i.e. when there are variable interpolations that need scope tracking.
-
-    Args:
-        node: The f-string node to resolve.
-        scope: Scope collected by ``_collect_scope``.
-
-    Returns:
-        The resolved string, or ``None`` if any part cannot be resolved.
-    """
-    parts: list[str] = []
-    for part in node.values:
-        if isinstance(part, ast.Constant) and isinstance(part.value, str):
-            parts.append(part.value)
-        elif isinstance(part, ast.FormattedValue):
-            resolved = _resolve_to_str(part.value, scope, node.lineno)
-            if resolved is not None:
-                parts.append(resolved)
-            else:
-                return None
-        else:
-            return None
-    return "".join(parts)
 
 
 class _UrlVisitor(ast.NodeVisitor):
     """AST visitor that collects URL findings and dynamic-exec usage."""
 
     _DYNAMIC_EXEC_NAMES = frozenset({"eval", "exec", "compile"})
+    _DESERIALIZE_NAMES = frozenset(
+        {"marshal.loads", "pickle.loads", "cPickle.loads", "_pickle.loads"}
+    )
 
-    def __init__(self, filepath: Path, scope: _Scope) -> None:
+    def __init__(self, filepath: Path, scope: Scope) -> None:
         self._filepath = filepath
         self._scope = scope
         self.findings: list[UrlFinding] = []
@@ -199,6 +97,21 @@ class _UrlVisitor(ast.NodeVisitor):
             )
         )
 
+    def _try_resolve(self, node: ast.expr) -> bool:
+        """Resolve *node* and emit any URLs it yields; report whether it resolved.
+
+        Returns ``True`` when the node reduced to a concrete value (so the
+        caller skips its children to avoid double-counting), ``False`` when the
+        node is opaque and the caller should descend into it.
+        """
+        resolved = resolve_value(node, self._scope, node.lineno)
+        if resolved is None:
+            return False
+        value, tags = resolved
+        for url in _urls_in(_as_text(value)):
+            self._emit(url, node.lineno, set(tags))
+        return True
+
     def visit_Constant(self, node: ast.Constant) -> None:
         """Detect string constants that contain a URL."""
         if isinstance(node.value, str):
@@ -207,80 +120,55 @@ class _UrlVisitor(ast.NodeVisitor):
         self.generic_visit(node)
 
     def visit_BinOp(self, node: ast.BinOp) -> None:
-        """Fold string operands into a single value and check for URLs.
+        """Fold concatenations / percent-formats; else descend into children."""
+        if not self._try_resolve(node):
+            self.generic_visit(node)
 
-        Priority: pure Constant folding (VIA_CONCAT) → scope-assisted
-        resolution (VIA_SCOPE) → descend into children.
+    def visit_JoinedStr(self, node: ast.JoinedStr) -> None:
+        """Resolve f-strings (literal or scope-assisted); else descend."""
+        if not self._try_resolve(node):
+            self.generic_visit(node)
+
+    def _flag_dynamic(self, node: ast.Call) -> None:
+        """Raise ``uses_dynamic_exec`` for eval/exec/compile and deserializers.
+
+        ``marshal.loads``/``pickle.loads`` are never executed — their mere
+        presence is treated as a dynamic-execution signal (see
+        ``deobfuscate`` security notes).
         """
-        folded = _fold_binop(node)
-        if folded is not None:
-            for url in _urls_in(folded):
-                self._emit(url, node.lineno, {UrlTag.VIA_CONCAT})
-            # Children already consumed — no need to descend.
-            return
-        resolved = _resolve_to_str(node, self._scope, node.lineno)
-        if resolved is not None:
-            for url in _urls_in(resolved):
-                self._emit(url, node.lineno, {UrlTag.VIA_SCOPE})
-            return
-        self.generic_visit(node)
-
-    def visit_Call(self, node: ast.Call) -> None:
-        """Detect base64.b64decode() with a Constant arg and eval/exec/compile."""
         func = node.func
         if isinstance(func, ast.Name) and func.id in self._DYNAMIC_EXEC_NAMES:
             self.uses_dynamic_exec = True
+        if qualified_name(func) in self._DESERIALIZE_NAMES:
+            self.uses_dynamic_exec = True
 
-        is_b64 = (isinstance(func, ast.Name) and func.id == "b64decode") or (
-            isinstance(func, ast.Attribute) and func.attr == "b64decode"
-        )
-        if is_b64 and node.args:
-            arg = node.args[0]
-            if isinstance(arg, ast.Constant) and isinstance(arg.value, str | bytes):
-                decoded = _try_b64decode(arg.value)
-                if decoded:
-                    for url in _urls_in(decoded):
-                        self._emit(url, node.lineno, {UrlTag.VIA_BASE64})
-
-        self.generic_visit(node)
-
-    def visit_JoinedStr(self, node: ast.JoinedStr) -> None:
-        """Resolve f-strings, falling back to scope tracking for Name interpolations."""
-        resolved = _resolve_fstring(node)
-        if resolved is not None:
-            for url in _urls_in(resolved):
-                self._emit(url, node.lineno, {UrlTag.VIA_FSTRING})
-            # Parts already consumed — skip children to avoid duplicates.
-            return
-        resolved_scope = _resolve_fstring_scope(node, self._scope)
-        if resolved_scope is not None:
-            for url in _urls_in(resolved_scope):
-                self._emit(url, node.lineno, {UrlTag.VIA_SCOPE})
-            return
-        self.generic_visit(node)
+    def visit_Call(self, node: ast.Call) -> None:
+        """Flag dynamic execution, then resolve decoder/composition calls."""
+        self._flag_dynamic(node)
+        if not self._try_resolve(node):
+            self.generic_visit(node)
 
 
 def extract_urls_ast(source: str, filepath: Path) -> tuple[list[UrlFinding], bool]:
     """Extract URL candidates from *source* by walking its AST.
 
-    Resolves the following patterns (in order of complexity):
+    Resolves, recursively and in any nesting, the deobfuscation techniques
+    attackers stack: string constants and concatenation, f-strings, scope
+    tracking of module-level assignments, base64/hex/rot13/codecs decoding,
+    zlib/gzip decompression, and string composition (``join``, ``format``,
+    ``%``, ``replace``, reverse slice, ``chr``). See
+    :mod:`nidhogg.analysis.deobfuscate` for the resolver and its security
+    limits.
 
-    * ``ast.Constant`` nodes whose string value contains a URL.
-    * ``ast.BinOp`` concatenations between two ``Constant`` nodes.
-    * ``base64.b64decode()`` / ``b64decode()`` calls with a ``Constant``
-      argument — the decoded bytes are inspected for URLs.
-    * ``ast.JoinedStr`` (f-strings) whose every interpolated part is a
-      string ``Constant`` or a variable resolvable via scope tracking.
-    * ``ast.Assign`` with a single ``Name`` target — collected in a pre-pass
-      to enable scope tracking across the file.
+    ``marshal``/``pickle`` deserialisers are never executed; their presence,
+    like ``eval``/``exec``/``compile``, sets the dynamic-execution flag.
 
     Args:
         source: Raw text content of a Python source file.
         filepath: Path to the file being analysed (stored in findings).
 
     Returns:
-        A tuple ``(findings, uses_dynamic_exec)`` where ``uses_dynamic_exec``
-        is ``True`` when the module calls ``eval``, ``exec``, or ``compile``.
+        A tuple ``(findings, uses_dynamic_exec)``.
     """
     try:
         with warnings.catch_warnings():

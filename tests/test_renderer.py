@@ -10,6 +10,8 @@ from unittest.mock import patch
 
 from nidhogg.core.models import (
     AnalysisLayer,
+    BinaryFinding,
+    BinaryFormat,
     FileAnalysis,
     FileTag,
     PackageAnalysis,
@@ -18,6 +20,7 @@ from nidhogg.core.models import (
 )
 from nidhogg.output.renderer import (
     make_console,
+    render_binaries_table,
     render_countdown,
     render_empty,
     render_file_block,
@@ -32,8 +35,29 @@ def _pkg(
     tmp_path: Path,
     name: str = "testpkg",
     files: list[FileAnalysis] | None = None,
+    binaries: list[BinaryFinding] | None = None,
 ) -> PackageAnalysis:
-    return PackageAnalysis(name=name, path=tmp_path, files=files or [])
+    return PackageAnalysis(
+        name=name, path=tmp_path, files=files or [], binaries=binaries or []
+    )
+
+
+def _binary(
+    tmp_path: Path,
+    name: str = "helper.dll",
+    *,
+    fmt: BinaryFormat = BinaryFormat.PE,
+    signed: bool | None = None,
+    signer: str | None = None,
+) -> BinaryFinding:
+    return BinaryFinding(
+        name=name,
+        filepath=tmp_path / name,
+        sha256="a" * 64,
+        format=fmt,
+        signed=signed,
+        signer=signer,
+    )
 
 
 def _capture(*renderables: object) -> str:
@@ -207,6 +231,48 @@ def test_render_package_result_empty_when_no_findings() -> None:
     with console.capture() as cap:
         console.print(render_package_result(analysis))
     assert "no URLs found" in cap.get()
+
+
+def test_render_binaries_table_shows_signed_and_unsigned(tmp_path: Path):
+    signed = _binary(tmp_path, "good.dll", signed=True, signer="ACME Corp")
+    unsigned = _binary(tmp_path, "bad.dll", signed=False)
+    unknown = _binary(tmp_path, "weird.dll", signed=None)
+    analysis = _pkg(tmp_path, binaries=[signed, unsigned, unknown])
+    text = _capture(render_binaries_table(analysis))
+    assert "good.dll" in text
+    assert "ACME Corp" in text
+    assert "yes" in text
+    assert "bad.dll" in text
+    assert "no" in text
+    assert "weird.dll" in text
+    assert "pe" in text
+    assert "a" * 12 in text
+
+
+def test_package_result_shows_binaries_with_no_url_findings(tmp_path: Path):
+    b = _binary(tmp_path)
+    analysis = _pkg(tmp_path, binaries=[b])
+    text = _capture(render_package_result(analysis))
+    assert "no URLs found" in text
+    assert "binaries 1" in text
+    assert "helper.dll" in text
+
+
+def test_package_result_shows_binaries_alongside_findings(tmp_path: Path):
+    f = _finding(tmp_path)
+    fa = FileAnalysis(tmp_path / "module.py", findings=[f])
+    b = _binary(tmp_path)
+    analysis = _pkg(tmp_path, files=[fa], binaries=[b])
+    text = _capture(render_package_result(analysis))
+    assert "findings 1" in text
+    assert "binaries 1" in text
+    assert "helper.dll" in text
+
+
+def test_package_result_empty_when_no_findings_and_no_binaries(tmp_path: Path):
+    text = _capture(render_package_result(_pkg(tmp_path)))
+    assert "●" in text
+    assert "no URLs found" in text
 
 
 def test_render_progress_returns_progress_with_console():

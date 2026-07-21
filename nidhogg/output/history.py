@@ -67,6 +67,41 @@ def append_binary_finding(
     return file_path
 
 
+def append_install_hook_finding(
+    history_dir: Path, document: dict[str, object]
+) -> Path | None:
+    """Append *document* to today's install-hooks JSONL file under *history_dir*.
+
+    Writes to ``<history_dir>/install_hooks/YYYY-MM-DD.jsonl`` — a subdirectory
+    separate from the URL-findings and binaries history, so none of the three
+    ever share or collide over the same file.
+
+    Args:
+        history_dir: Same directory passed to :func:`append_finding` for this
+            run. The ``install_hooks`` subdirectory is created if missing.
+        document: The install-hooks result document to append (e.g. from
+            ``build_install_hooks_document``).
+
+    Returns:
+        The path written to, or ``None`` if the write failed — logged as a
+        warning, never raised.
+    """
+    now = datetime.now(UTC)
+    install_hooks_dir = history_dir / "install_hooks"
+    file_path = install_hooks_dir / f"{now.date().isoformat()}.jsonl"
+    stamped = {"analyzed_at": now.isoformat(), **document}
+    try:
+        install_hooks_dir.mkdir(parents=True, exist_ok=True)
+        with file_path.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(stamped, default=str) + "\n")
+    except OSError as exc:
+        logger.warning(
+            "Could not write install-hooks history file {}: {}", file_path, exc
+        )
+        return None
+    return file_path
+
+
 def default_history_dir() -> Path:
     """Return the default directory for history JSONL files.
 

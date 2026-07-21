@@ -492,6 +492,33 @@ def test_is_benign_subdomain_wildcard(url: str):
 
 
 # ---------------------------------------------------------------------------
+# Curated docs / standards / OSS project domains (#6)
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://specifications.freedesktop.org/secret-service/latest",
+        "https://systemd.io/CREDENTIALS",
+        "https://everything.curl.dev/usingcurl/netrc.html",
+        "https://curl.se/docs/manpage.html",
+        "https://www.kernel.org/doc/html/latest/",
+        "https://man7.org/linux/man-pages/man2/open.2.html",
+        "https://doc.rust-lang.org/std/",
+        "https://llvm.org/docs/LangRef.html",
+        "https://cmake.org/cmake/help/latest/",
+        "https://www.sqlite.org/lang.html",
+        "https://www.openssl.org/docs/",
+        "https://www.postgresql.org/docs/current/",
+        "https://nginx.org/en/docs/",
+    ],
+)
+def test_is_benign_curated_docs_domains(url: str):
+    assert _is_benign(url, _BENIGN_DOMAINS) is True
+
+
+# ---------------------------------------------------------------------------
 # load_benign_domains — public loader for custom files
 # ---------------------------------------------------------------------------
 

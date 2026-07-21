@@ -104,6 +104,13 @@ a {
   border-color: var(--accent-focus);
 }
 
+.nav-link--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+}
+
 .modal {
   max-width: 42rem;
   width: calc(100% - 2rem);
@@ -226,6 +233,15 @@ code {
   letter-spacing: -0.02em;
 }
 
+.wordmark a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wordmark a:hover {
+  color: var(--accent-focus);
+}
+
 .lede {
   margin: 0;
   color: var(--text-muted);
@@ -334,15 +350,6 @@ code {
   padding: 0.55rem 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-}
-
-.toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  white-space: nowrap;
 }
 
 .filter {
@@ -498,6 +505,13 @@ code {
   display: block;
 }
 
+.pkg-version {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
 .cell-name .badge {
   margin-top: 0.35rem;
 }
@@ -598,6 +612,38 @@ code {
   max-width: 18rem;
 }
 
+.cell-command {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 12rem;
+  max-width: 32rem;
+}
+
+.tok-str {
+  color: var(--accent-clean);
+}
+
+.tok-num {
+  color: var(--series-4);
+}
+
+.tok-kw {
+  color: var(--accent-focus);
+}
+
+.tok-risky {
+  color: var(--accent-malicious);
+  font-weight: 600;
+}
+
+.tok-name {
+  color: var(--text);
+}
+
+.tok-punct {
+  color: var(--text-muted);
+}
+
 .cell-tags {
   display: flex;
   flex-wrap: wrap;
@@ -645,8 +691,33 @@ code {
   color: var(--text-muted);
 }
 
+.url-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .url-value {
   display: block;
+  overflow-wrap: anywhere;
+}
+
+.url-open-btn {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--accent-focus);
+  border: 1px solid var(--accent-focus);
+  border-radius: var(--radius);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.url-open-btn:hover {
+  background: var(--accent-focus);
+  color: var(--bg);
 }
 
 .url-enrich {
@@ -737,6 +808,9 @@ code {
 }
 
 .view-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background: transparent;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -745,6 +819,10 @@ code {
   font-size: 0.85rem;
   padding: 0.4rem 0.9rem;
   cursor: pointer;
+}
+
+.view-tab svg {
+  flex: none;
 }
 
 .view-tab[aria-selected="true"] {
@@ -858,8 +936,7 @@ code {
   .search,
   .day-select,
   .filter,
-  .filter summary,
-  .toggle {
+  .filter summary {
     width: 100%;
   }
 
