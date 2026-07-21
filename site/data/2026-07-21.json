@@ -1,11 +1,834 @@
 {
-  "generated_at": "2026-07-21T17:11:17.982409+00:00",
+  "generated_at": "2026-07-21T17:56:51.601063+00:00",
   "stats": {
-    "total_packages": 561,
+    "total_packages": 573,
     "malicious": 11,
-    "clean": 550
+    "clean": 562
   },
   "packages": [
+    {
+      "name": "fhir-code-lint",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c9/09/3092ce62c9938b4ad93d31f918558de27007cc9532f031932c5737bc0169/fhir_code_lint-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:51.134824+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "file": "fhir_code_lint-0.1.0/tests/test_live.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RxNorm",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "file": "fhir_code_lint-0.1.0/tests/test_core.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RxNorm",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "fhir_code_lint-0.1.0/tests/test_core.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://rxnav.nlm.nih.gov/REST/rxcui",
+          "file": "fhir_code_lint-0.1.0/src/fhir_code_lint/core.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://connect.medlineplus.gov/service",
+          "file": "fhir_code_lint-0.1.0/src/fhir_code_lint/core.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MedlinePlus Connect",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "drskill-core",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/2a/6a/1a0a659c0e2edf6b16caca848c11a2e39601ad2cb73dc56fafa86919e96e/drskill_core-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:45.421707+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://news.ycombinator.com/rss",
+          "file": "drskill_core-0.3.0/tests/test_checks_injection.py",
+          "line": 327,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://news.ycombinator.com/rss",
+          "file": "drskill_core-0.3.0/tests/test_checks_injection.py",
+          "line": 326,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com/settings/keys",
+          "file": "drskill_core-0.3.0/src/drskill/deep_llm.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Keys | Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "edikit",
+      "version": "0.2.5",
+      "download_url": "https://files.pythonhosted.org/packages/d8/fc/d06fb9b934d3fdee3036b02714abf7b589a5f210cf813b9059dba627e756/edikit-0.2.5.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:44.646160+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5281/zenodo.21419195",
+          "file": "edikit-0.2.5/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tekmeris: reproducible construction and auditing of social accounting matrices (edikit) | Zenodo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data",
+          "file": "edikit-0.2.5/src/edikit/pipeline/eurostat_sam.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "lilac-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/42/225c82cd23e1f0584adfb98beca5b84315d1430cebb53894880748aadf81/lilac_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:41.760707+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://trylilac.ai",
+          "file": "lilac_sdk-0.1.0/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lilac \u2014 Outcome Verification for AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trylilac.ai/docs",
+          "file": "lilac_sdk-0.1.0/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lilac \u2014 Outcome Verification for AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trylilac.ai/docs",
+          "file": "lilac_sdk-0.1.0/src/lilac/__init__.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lilac \u2014 Outcome Verification for AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trylilac.ai/docs",
+          "file": "lilac_sdk-0.1.0/src/lilac/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lilac \u2014 Outcome Verification for AI Agents",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "project-mri",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/43/08/bfefbd0ed172503f844e4fa0433255ae9881b3bbddef9e86d8213c19ac17/project_mri-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:41.396418+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://mri.shypot.com",
+          "file": "project_mri-0.3.0/pyproject.toml",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MRI \u2014 Explainable Risk & AI Provenance for Your Codebase",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "ftp://host/repo",
+          "file": "project_mri-0.3.0/tests/test_clone_ssrf.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "project_mri-0.3.0/src/mri/api/routes/scans.py",
+          "line": 895,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "cybergraph",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/8b/8d17614017f6743b66cc82dd545d86c17990bee0de186b5851a11ea851af/cybergraph-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:40.287717+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "cybergraph-0.1.0/tests/test_llm_client.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "cybergraph-0.1.0/src/cybergraph/sarif.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "cybergraph-0.1.0/src/cybergraph/llm/client.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "cybergraph-0.1.0/src/cybergraph/llm/client.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "qai-web",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/e4/ea/7a20304fc292d88556f38049e1211f44e525e3ce662aa74f0cf9618a0ef8/qai_web-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:38.077883+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://evil.com/a",
+          "file": "qai_web-0.2.1/tests/test_state.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://unrelated.com/x",
+          "file": "qai_web-0.2.1/tests/test_state.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.google-analytics.com/g/collect?v=2",
+          "file": "qai_web-0.2.1/tests/test_analyzer.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 204,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "payafrica-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/f3/c50a5c55efc2870f9e4946e988a9253a2befabe3abeebdc44e3dcedb8c88/payafrica_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:36.891251+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.wave.com/v1",
+          "file": "payafrica_sdk-0.1.0/payafrica/providers/wave.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.sandbox.orange-sonatel.com",
+          "file": "payafrica_sdk-0.1.0/payafrica/providers/orange_money.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.orange-sonatel.com",
+          "file": "payafrica_sdk-0.1.0/payafrica/providers/orange_money.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://sandbox.momodeveloper.mtn.com",
+          "file": "payafrica_sdk-0.1.0/payafrica/providers/mtn_momo.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://proxy.momoapi.mtn.com",
+          "file": "payafrica_sdk-0.1.0/payafrica/providers/mtn_momo.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "moonshiner",
+      "version": "0.4.49",
+      "download_url": "https://files.pythonhosted.org/packages/f2/ec/a42e26043ea4dd46d12f9609c92657a1cdfdb9654d06b13f8e6bb8be7112/moonshiner-0.4.49.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:34.471456+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "moonshiner-0.4.49/moonshiner.py",
+          "line": 292,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "moonshiner-0.4.49/moonshiner.py",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://n7.meraki.com/o/%s",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meraki.com/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.meraki.ca/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.meraki.cn/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "IdenTrust"
+        },
+        {
+          "url": "https://api.meraki.in/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.gov-meraki.com/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meraki.com/api/v1",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-meraki-device-status/files/test_meraki_inventory.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://news.ycombinator.com",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-bookmark-vault/files/test_bookmarks.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://news.ycombinator.com",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-bookmark-vault/files/test_bookmarks.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://news.ycombinator.com",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-bookmark-vault/files/test_bookmarks.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://news.ycombinator.com",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-bookmark-vault/files/test_bookmarks.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/manual.pdf",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-htmlclean/files/test_htmlclean.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/m.pdf",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-htmlclean/files/test_htmlclean.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://a/b",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-htmlclean/files/test_htmlclean.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/manual",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-htmlclean/files/test_htmlclean.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/manual",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-htmlclean/files/test_htmlclean.py",
+          "line": 181,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/x",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-ctxescape/files/test_ctxtmpl.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://files.example/x",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-ctxescape/files/test_ctxtmpl.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://jakarta.ee/xml/ns/jakartaee",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Jakarta EE XML Schemas | Jakarta EE | The Eclipse Foundation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jakarta.ee/xml/ns/validation/configuration",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 182,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jakarta.ee/xml/ns/persistence",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Jakarta Persistence XML Schemas | Jakarta EE | The Eclipse Foundation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jakarta.ee/xml/ns/persistence/orm",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jakarta.ee/xml/ns",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 259,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ns | Jakarta EE | The Eclipse Foundation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://xmlns.jcp.org/xml/ns",
+          "file": "moonshiner-0.4.49/tasks/seeds/java-jakarta-namespace/files/tests/test_jakarta_migration.py",
+          "line": 260,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XML Schemas for Java",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://docs.snowflake.com",
+          "file": "moonshiner-0.4.49/tasks/seeds/py-snowflake-sql-async/files/test_sfsql.py",
+          "line": 268,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Snowflake Documentation",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "guard-ai-cli",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/88/bd/77dce58c234353e9a39d995c156c01c17a61d7ab6f76c3c6c1d79bf17a27/guard_ai_cli-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:26.070235+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "guard_ai_cli-0.1.1/src/guard_ai/scanner.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "dietly-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/67/2d/d74f4c1d8ccbd75229e46e3c6a95fa1dc5e61767d77c4f7933165fb2ada9/dietly_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:25.875132+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://www.getdietly.com/api",
+          "file": "dietly_mcp-0.1.0/pyproject.toml",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Food & Nutrition API \u2014 calories, macros & barcode lookup | DietlyAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.getdietly.com/api-guide",
+          "file": "dietly_mcp-0.1.0/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DietlyAPI integration guide",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.getdietly.com",
+          "file": "dietly_mcp-0.1.0/dietly_mcp/server.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Food & Nutrition API \u2014 calories, macros & barcode lookup | DietlyAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.getdietly.com",
+          "file": "dietly_mcp-0.1.0/dietly_mcp/server.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dietly \u00b7 Nutrition Facts, Calories & Macros for 850,000+ Foods",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "deploycraft",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/af/49/0e0b50435716834f9401d09de89073b92248f5afc11583cdde01fe5386fe/deploycraft-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-21T17:56:24.591856+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://deb.nodesource.com/setup_lts.x",
+          "file": "deploycraft-0.1.0/deploycraft/services/node.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rpm.nodesource.com/setup_lts.x",
+          "file": "deploycraft-0.1.0/deploycraft/services/node.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://deb.nodesource.com/setup_lts.x",
+          "file": "deploycraft-0.1.0/deploycraft/services/node.py",
+          "line": 51,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rpm.nodesource.com/setup_lts.x",
+          "file": "deploycraft-0.1.0/deploycraft/services/node.py",
+          "line": 82,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "agentkit-runtime",
       "version": "0.1.0",
