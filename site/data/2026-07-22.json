@@ -1,11 +1,3544 @@
 {
-  "generated_at": "2026-07-22T03:09:15.925549+00:00",
+  "generated_at": "2026-07-22T05:07:55.781001+00:00",
   "stats": {
-    "total_packages": 60,
+    "total_packages": 81,
     "malicious": 3,
-    "clean": 57
+    "clean": 78
   },
   "packages": [
+    {
+      "name": "quantnodes-strategy-research",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/7a/4c/f0a80768148904d124af722e9d3a933a08f6831268ce90251befd87206d2/quantnodes_strategy_research-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:55.357689+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "quantnodes_strategy_research-0.2.0/tests/test_llm_client.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1/chat/completions",
+          "file": "quantnodes_strategy_research-0.2.0/tests/test_llm_client.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "quantnodes_strategy_research-0.2.0/tests/test_llm_config.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "quantnodes_strategy_research-0.2.0/tests/test_llm_config.py",
+          "line": 53,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/llm/config.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.cn/v1",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/llm/config.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/llm/config.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/eastmoney_loader.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://quote.eastmoney.com",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/eastmoney_loader.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e1c\u65b9\u8d22\u5bcc(300059)_\u6700\u65b0\u4ef7\u683c_\u884c\u60c5_\u8d70\u52bf\u56fe\u2014\u4e1c\u65b9\u8d22\u5bcc\u7f51",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-stock-mcp",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/ifind_loader.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-edb-mcp",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/ifind_loader.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-global-stock-mcp",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/ifind_loader.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/tencent_loader.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/tencent_loader.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/tencent_loader.py",
+          "line": 64,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api.stlouisfed.org/fred/series/observations",
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/data_source/fred_loader.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "PersonalClaw",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/94/04/d912a5ec76856d67cf3e8cfb2bd24ee0b840d363a3e1e5f632d279ad512f/personalclaw-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:50.425211+00:00",
+      "total_findings": 51,
+      "findings": [
+        {
+          "url": "https://personalclaw.dev",
+          "file": "personalclaw-0.1.0/pyproject.toml",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PersonalClaw \u00b7 Your personal agentic OS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_cron_channel_delivery.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://public.com/start",
+          "file": "personalclaw-0.1.0/tests/test_net_client.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign-up on Public - Invest in stocks, treasuries, crypto, and more.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://public.com/start",
+          "file": "personalclaw-0.1.0/tests/test_net_client.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign-up on Public - Invest in stocks, treasuries, crypto, and more.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://big.com/file",
+          "file": "personalclaw-0.1.0/tests/test_net_client.py",
+          "line": 150,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evil.com/steal?key=AKIAIOSFODNN7EXAMPLE",
+          "file": "personalclaw-0.1.0/tests/test_subagent.py",
+          "line": 331,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_trust_reads.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://evil.com/x",
+          "file": "personalclaw-0.1.0/tests/test_config_patch.py",
+          "line": 269,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://evil.com/steal?data=",
+          "file": "personalclaw-0.1.0/tests/test_security.py",
+          "line": 389,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/steal?data=",
+          "file": "personalclaw-0.1.0/tests/test_security.py",
+          "line": 565,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/script.sh",
+          "file": "personalclaw-0.1.0/tests/test_security.py",
+          "line": 706,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "file": "personalclaw-0.1.0/tests/test_remote_audio_providers.py",
+          "line": 302,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "file": "personalclaw-0.1.0/tests/test_remote_audio_providers.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://evil.com/secret",
+          "file": "personalclaw-0.1.0/tests/test_web_fetch.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "ftp://host",
+          "file": "personalclaw-0.1.0/tests/test_dashboard_origin.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://evil.com/steal?d=",
+          "file": "personalclaw-0.1.0/tests/test_send_message_targeted.py",
+          "line": 455,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://shop.com/widget",
+          "file": "personalclaw-0.1.0/tests/test_web_extract_tool.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://x.io/y",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://x.io/y",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://x.io/a",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://x.io/b",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://x.io",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://x.io/a",
+          "file": "personalclaw-0.1.0/tests/test_nav_resolve_links.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Roddenberry Archive",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://evil.com/exfil?data=",
+          "file": "personalclaw-0.1.0/tests/test_streaming_meta_redaction.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "personalclaw-0.1.0/tests/test_shepherd_fixes.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://x.sh",
+          "file": "personalclaw-0.1.0/tests/test_denied_commands.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Official Domains | S.EE Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "file": "personalclaw-0.1.0/tests/test_image_gen.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "file": "personalclaw-0.1.0/tests/test_image_gen.py",
+          "line": 424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://dashscope-intl.aliyuncs.com/v1",
+          "file": "personalclaw-0.1.0/tests/test_image_gen.py",
+          "line": 437,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 257,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 270,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 545,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 569,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 1027,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 1046,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 1065,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.deepwiki.com/mcp",
+          "file": "personalclaw-0.1.0/tests/test_mcp_discovery.py",
+          "line": 1077,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agentskills.io",
+          "file": "personalclaw-0.1.0/src/personalclaw/skills/marketplace.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agent Skills Overview - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io",
+          "file": "personalclaw-0.1.0/src/personalclaw/skills/marketplace.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agent Skills Overview - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "personalclaw-0.1.0/src/personalclaw/config/schema.py",
+          "line": 234,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "personalclaw-0.1.0/src/personalclaw/dashboard/server.py",
+          "line": 1215,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "personalclaw-0.1.0/src/personalclaw/dashboard/server.py",
+          "line": 1216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "personalclaw-0.1.0/src/personalclaw/dashboard/server.py",
+          "line": 1208,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://code.am",
+          "file": "personalclaw-0.1.0/src/personalclaw/dashboard/handlers/loop_routes.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "code.am | fruits",
+          "cert_issuer": "ZeroSSL GmbH"
+        }
+      ]
+    },
+    {
+      "name": "PersonalClaw-Client",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6a/2f/8944ce42ff51f34c7ca74211afa6d10f30f7c331f1828a4fc2c9e185328b/personalclaw_client-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:40.118650+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://personalclaw.dev",
+          "file": "personalclaw_client-0.1.0/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PersonalClaw \u00b7 Your personal agentic OS",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "url-manager-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/52/33/07f30f34c8d919491a501f1e031d36705f5d1ebf13df75769f973a629425/url_manager_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:38.769635+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://ai.ocean94.com",
+          "file": "url_manager_mcp-1.0.0/server.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8db3\u8ff9AI",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "unpackio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/de/ef2c9b96691c4f2a9cb7ea555371a93843562b55e17c8ecdefe387664626/unpackio-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:36.406522+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.rs/unpackio",
+          "file": "unpackio-0.1.0/Cargo.toml",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "tuya-telemetry-archive",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/56/d8/5157485f9a20d2e1fdd73a7cab1b0eea9d01edadbcddb482654f04a2906e/tuya_telemetry_archive-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:35.817431+00:00",
+      "total_findings": 59,
+      "findings": [
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_setup.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_tuya_client.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_tuya_client.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_tuya_client.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_tuya_client.py",
+          "line": 518,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_export_cli.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_export_cli.py",
+          "line": 143,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_export_cli.py",
+          "line": 23,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_export_cli.py",
+          "line": 140,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_schedule_cli.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_schedule_cli.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_status_cli.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_status_cli.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_status_cli.py",
+          "line": 21,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_status_cli.py",
+          "line": 91,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_collect_cli.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_collect_cli.py",
+          "line": 69,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyacn.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyain.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaeu.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-weaz.tuyaeu.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-ueaz.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-sg.iotbing.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 155,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 11,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 24,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 38,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 52,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 131,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_config.py",
+          "line": 168,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 325,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 351,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 70,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 128,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 157,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 294,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 322,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/tests/test_cli.py",
+          "line": 348,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyacn.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyain.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaeu.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-weaz.tuyaeu.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-ueaz.tuyaus.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://openapi-sg.iotbing.com",
+          "file": "tuya_telemetry_archive-0.1.0/src/tuya_telemetry_archive/config.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "bunnyscholar",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ad/08/efce1812dea2f08bda9927f1cbd49f95fa796295885ff9af1cabcb624dc3/bunnyscholar-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:32.757192+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://bunnyscholar.cn",
+          "file": "bunnyscholar-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BunnyScholar - \u8bba\u6587\u964d\u91cd\u3001\u964dAI\u7387\u3001\u79fb\u9664AI\u75d5\u8ff9\u3001\u6587\u732e\u7efc\u8ff0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn/developer/docs",
+          "file": "bunnyscholar-0.1.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u63a5\u53e3\u6587\u6863 \u00b7 \u5f00\u653e\u5e73\u53f0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn/developer/docs",
+          "file": "bunnyscholar-0.1.0/bunnyscholar/client.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u63a5\u53e3\u6587\u6863 \u00b7 \u5f00\u653e\u5e73\u53f0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn",
+          "file": "bunnyscholar-0.1.0/bunnyscholar/client.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BunnyScholar - \u8bba\u6587\u964d\u91cd\u3001\u964dAI\u7387\u3001\u79fb\u9664AI\u75d5\u8ff9\u3001\u6587\u732e\u7efc\u8ff0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn/developer/docs",
+          "file": "bunnyscholar-0.1.0/bunnyscholar/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u63a5\u53e3\u6587\u6863 \u00b7 \u5f00\u653e\u5e73\u53f0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn",
+          "file": "bunnyscholar-0.1.0/bunnyscholar/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BunnyScholar - \u8bba\u6587\u964d\u91cd\u3001\u964dAI\u7387\u3001\u79fb\u9664AI\u75d5\u8ff9\u3001\u6587\u732e\u7efc\u8ff0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bunnyscholar.cn",
+          "file": "bunnyscholar-0.1.0/bunnyscholar/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BunnyScholar - \u8bba\u6587\u964d\u91cd\u3001\u964dAI\u7387\u3001\u79fb\u9664AI\u75d5\u8ff9\u3001\u6587\u732e\u7efc\u8ff0",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "geojax",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/1b/b5/9e634a3c82d1cafd6cc4e550e3cdb2020b8ec720e4e5976afbcb5528be95/geojax-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:29.964440+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://scripts.sil.org/OFL",
+          "file": "geojax-0.1.0/docs/_static/fonts/sora-OFL.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SIL Open Font License",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mcp-sinim",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/39/d2/2a83170a88ddedbbfeee191fd704666d7a2e679cc221ea3d170d5d702a63/mcp_sinim-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:28.046621+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://datos.sinim.gov.cl/datos_municipales",
+          "file": "mcp_sinim-0.1.0/mcp_sinim/_http.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://datos.sinim.gov.cl/datos_municipales.php",
+          "file": "mcp_sinim-0.1.0/mcp_sinim/_http.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sistema Nacional de Informaci\u00f3n Municipal",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "brink-python",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/79/00/ca86b0510be4175fdf17fcf3621b91a6cf230e66e3c5eae893456b507ad5/brink_python-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:25.058093+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://getbrink.io",
+          "file": "brink_python-0.0.1/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u30fb Cloudflare Access",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.getbrink.dev",
+          "file": "brink_python-0.0.1/pyproject.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "seam-studio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/06/a4/e59d8f4614db83a07e7a26898c14bb8d861b85307782c1d79bca1ac7b957/seam_studio-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:24.404829+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "file": "seam_studio-0.1.0/seam_studio/services/osm_import.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qwen3-tts-mnn",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/47/d2/5cc9cc9e503ba8b442029127245fbc147ca9d24d6e476a3435b5e131fbc5/qwen3_tts_mnn-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:21.074715+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://modelscope.cn/models/Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+          "file": "qwen3_tts_mnn-0.2.0/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qwen3-TTS-12Hz-0.6B-Base",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "pillar-server-sdk-core",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/2e/6f/4229db54b9174affd141619855d8ba9378f8f4811a8fc5fa278be5a4c9f1/pillar_server_sdk_core-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:18.289475+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pillarapi.com",
+          "file": "pillar_server_sdk_core-0.0.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pillar",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pillar-server-sdk",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/32/1b/e6e4ee1737ed0cbd602515ddae50ace0384282ac1dac734c637fe8e8d3b0/pillar_server_sdk-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:18.089065+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pillarapi.com",
+          "file": "pillar_server_sdk-0.0.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pillar",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pillar-sdk-core",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/d7/25/88a18d6aea218f0c4a8ec01212d8fb8cf4fee6e3bb3cbc9790432f3800f3/pillar_sdk_core-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:17.923728+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pillarapi.com",
+          "file": "pillar_sdk_core-0.0.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pillar",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pillarapi",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/41/cc/56dd94b778fd6c3bbacd934c40effa60f9115ee9814bc375eb67f13c0706/pillarapi-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:17.704655+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pillarapi.com",
+          "file": "pillarapi-0.0.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pillar",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "django-bayarcash",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/02/a0/50f893d260042bb107fd53419be9d96d5136774da8663010c09892592776/django_bayarcash-1.0.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:16.950986+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://bayarcash.com",
+          "file": "django_bayarcash-1.0.1/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bayarcash \u2013 1st Realtime Settlement Payment Gateway in Malaysia",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.webimpian.support/bayarcash",
+          "file": "django_bayarcash-1.0.1/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome | Bayarcash",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "doculink-studio",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/fa/0e/7b4bf29bbc5400b425666764d2bb72cac3a722e766f6e78a9a31a17c6390/doculink_studio-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:14.253920+00:00",
+      "total_findings": 84,
+      "findings": [
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/example.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/doculink_studio/client.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-ws.doculink.studio",
+          "file": "doculink_studio-0.2.0/doculink_studio/client.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message/stream",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 9,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 33,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/refresh/token",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 69,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/refresh/token",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 100,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 106,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_stream_auth.py",
+          "line": 142,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_errors.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_errors.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t/upload",
+          "file": "doculink_studio-0.2.0/tests/test_errors.py",
+          "line": 40,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_sse.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message/stream",
+          "file": "doculink_studio-0.2.0/tests/test_sse.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_upload.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/task-1/upload",
+          "file": "doculink_studio-0.2.0/tests/test_upload.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/task-2/upload",
+          "file": "doculink_studio-0.2.0/tests/test_upload.py",
+          "line": 72,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 21,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 22,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 26,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 27,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 35,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 52,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 71,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/guides",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 90,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 103,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 120,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/refresh/token",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 143,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 159,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 165,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_client_internals.py",
+          "line": 174,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_endpoints.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_endpoints.py",
+          "line": 132,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 50,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 64,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 79,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 92,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 105,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 123,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 137,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/message/sync",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 168,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/sessions",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 200,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/sessions",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 225,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 261,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/messages",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 280,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1/messages",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 303,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/session/sess-1",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 331,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/models",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 344,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/models",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 364,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/guides",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 377,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/chat/guides",
+          "file": "doculink_studio-0.2.0/tests/test_chat.py",
+          "line": 390,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas/md-1/data",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 32,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas/md-2/data",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 60,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas/md-3/data",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 82,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas/md-4/data",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 103,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas/md-5/data",
+          "file": "doculink_studio-0.2.0/tests/test_masterdata.py",
+          "line": 120,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scan/d-1/output",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 66,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scans",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 80,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scans",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 110,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scan/d-1",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 123,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scan/d-1",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 149,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/task/t-1/scan/d-1",
+          "file": "doculink_studio-0.2.0/tests/test_documents.py",
+          "line": 162,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_auth.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_auth.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_auth.py",
+          "line": 24,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_auth.py",
+          "line": 68,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/refresh/token",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 22,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 29,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 57,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/refresh/token",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 64,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/auth",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 71,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/usage",
+          "file": "doculink_studio-0.2.0/tests/test_refresh.py",
+          "line": 78,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1",
+          "file": "doculink_studio-0.2.0/tests/test_get_decode.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/company/tax/0105500000/branch/00000",
+          "file": "doculink_studio-0.2.0/tests/test_get_decode.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/companies/client/tax/0123456789012/branch/00000",
+          "file": "doculink_studio-0.2.0/tests/test_get_decode.py",
+          "line": 60,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://test-api-provider.doculink.studio/api/v1/masterdatas",
+          "file": "doculink_studio-0.2.0/tests/test_get_decode.py",
+          "line": 97,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "opengeolab-geocopilot",
+      "version": "0.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/73/12/df72f95faa460be1a222e5dbb9abec696aa5ce8d18e4611eed76ef7fd26f/opengeolab_geocopilot-0.2.2.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:07.067475+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://aihubmix.com/v1",
+          "file": "opengeolab_geocopilot-0.2.2/jupyterlab_ai_agent/handlers.py",
+          "line": 745,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.aihubmix.com/v1",
+          "file": "opengeolab_geocopilot-0.2.2/jupyterlab_ai_agent/handlers.py",
+          "line": 746,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pymeshv2",
+      "version": "0.3.2",
+      "download_url": "https://files.pythonhosted.org/packages/14/66/2742a29885a9194c25c50fcbb7709d53cbdfda4671778efc4a5ca02179c9/pymeshv2-0.3.2-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "analyzed_at": "2026-07-22T05:07:06.258116+00:00",
+      "total_findings": 65,
+      "findings": [
+        {
+          "url": "http://wias-berlin.de/software/tetgen",
+          "file": "pymesh/tetgen.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TetGen: A Quality Tetrahedral Mesh Generator",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://kinovis.inrialpes.fr/static/QuickCSG",
+          "file": "pymesh/boolean_unsupported.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kinovis \u2013 4D Modeling Platform",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://kinovis.inrialpes.fr/static/QuickCSG",
+          "file": "pymesh/boolean_unsupported.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kinovis \u2013 4D Modeling Platform",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://doc.cgal.org/latest/Nef_3/index.html",
+          "file": "pymesh/boolean.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Boolean Operations on Nef Polyhedra: User Manual",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.angusj.com/delphi/clipper.php",
+          "file": "pymesh/boolean.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://doc.cgal.org/latest/Nef_3/index.html",
+          "file": "pymesh/boolean.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Boolean Operations on Nef Polyhedra: User Manual",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.angusj.com/delphi/clipper.php",
+          "file": "pymesh/boolean.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.dgp.toronto.edu/projects/fast-winding-numbers",
+          "file": "pymesh/winding_number.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fast Winding Numbers for Soups and Clouds",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.dgp.toronto.edu/projects/fast-winding-numbers",
+          "file": "pymesh/winding_number.py",
+          "line": 4,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fast Winding Numbers for Soups and Clouds",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/group__TopicSparseSystems.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Solving Sparse Linear Systems",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SimplicialLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SimplicialLLT< MatrixType_, UpLo_, Ordering_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SimplicialLDLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SimplicialLDLT< MatrixType_, UpLo_, Ordering_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SparseLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SparseLU< MatrixType_, OrderingType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SparseQR.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SparseQR< MatrixType_, OrderingType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1UmfPackLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::UmfPackLU< MatrixType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1CholmodSupernodalLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::CholmodSupernodalLLT< MatrixType_, UpLo_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLLT< MatrixType, UpLo_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLDLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLDLT< MatrixType, Options > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLU< MatrixType > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1ConjugateGradient.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::ConjugateGradient< MatrixType_, UpLo_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1LeastSquaresConjugateGradient.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::LeastSquaresConjugateGradient< MatrixType_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1BiCGSTAB.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::BiCGSTAB< MatrixType_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://faculty.cse.tamu.edu/davis/suitesparse.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "suitesparse : a suite of sparse matrix software",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://software.intel.com/en-us/mkl",
+          "file": "pymesh/SparseSolver.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/group__TopicSparseSystems.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Solving Sparse Linear Systems",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SimplicialLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SimplicialLLT< MatrixType_, UpLo_, Ordering_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SimplicialLDLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SimplicialLDLT< MatrixType_, UpLo_, Ordering_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SparseLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SparseLU< MatrixType_, OrderingType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1SparseQR.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::SparseQR< MatrixType_, OrderingType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1UmfPackLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::UmfPackLU< MatrixType_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1CholmodSupernodalLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::CholmodSupernodalLLT< MatrixType_, UpLo_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLLT< MatrixType, UpLo_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLDLT.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLDLT< MatrixType, Options > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1PardisoLU.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::PardisoLU< MatrixType > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1ConjugateGradient.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::ConjugateGradient< MatrixType_, UpLo_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1LeastSquaresConjugateGradient.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::LeastSquaresConjugateGradient< MatrixType_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eigen.tuxfamily.org/dox/classEigen_1_1BiCGSTAB.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: Eigen::BiCGSTAB< MatrixType_, Preconditioner_ > Class Template Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://faculty.cse.tamu.edu/davis/suitesparse.html",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "suitesparse : a suite of sparse matrix software",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://software.intel.com/en-us/mkl",
+          "file": "pymesh/SparseSolver.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.cs.cmu.edu/~quake/triangle.html",
+          "file": "pymesh/triangle.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triangle: A Two-Dimensional Quality Mesh Generator and Delaunay Triangulator",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://www.cs.cmu.edu/~quake/triangle.html",
+          "file": "pymesh/triangle.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triangle: A Two-Dimensional Quality Mesh Generator and Delaunay Triangulator",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Mesh_3/index.html",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Mesh Generation: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://wias-berlin.de/software/tetgen",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TetGen: A Quality Tetrahedral Mesh Generator",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://web.cse.ohio-state.edu/~dey.8/delpsc.html",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Directory | Computer Science and Engineering",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Mesh_3/index.html",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 22,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Mesh Generation: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://wias-berlin.de/software/tetgen",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 22,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TetGen: A Quality Tetrahedral Mesh Generator",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://web.cse.ohio-state.edu/~dey.8/delpsc.html",
+          "file": "pymesh/tetrahedralize.py",
+          "line": 22,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Directory | Computer Science and Engineering",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.qhull.org",
+          "file": "pymesh/convex_hull.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qhull code for Convex Hull, Delaunay Triangulation, Voronoi Diagram, and Halfspace Intersection about a Point",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Convex_hull_2/index.html",
+          "file": "pymesh/convex_hull.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 2D Convex Hulls and Extreme Points: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Convex_hull_3/index.html",
+          "file": "pymesh/convex_hull.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Convex Hulls: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.qhull.org",
+          "file": "pymesh/convex_hull.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qhull code for Convex Hull, Delaunay Triangulation, Voronoi Diagram, and Halfspace Intersection about a Point",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Convex_hull_2/index.html",
+          "file": "pymesh/convex_hull.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 2D Convex Hulls and Extreme Points: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doc.cgal.org/latest/Convex_hull_3/index.html",
+          "file": "pymesh/convex_hull.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CGAL 6.2 - 3D Convex Hulls: User Manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.cs.cmu.edu/~kmcrane/Projects/GeodesicsInHeat",
+          "file": "pymeshv2-0.3.2.data/scripts/geodesic.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /~kmcrane/Projects/GeodesicsInHeat",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cs.cmu.edu/~kmcrane/Projects/GeodesicsInHeat",
+          "file": "pymeshv2-0.3.2.data/scripts/geodesic.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /~kmcrane/Projects/GeodesicsInHeat",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cs.jhu.edu/~misha/Code/PoissonRecon/Version6.13",
+          "file": "pymeshv2-0.3.2.data/scripts/point_cloud.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Screened Poisson Surface Reconstruction (V6.13)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cs.jhu.edu/~misha/Code/PoissonRecon/Version6.13",
+          "file": "pymeshv2-0.3.2.data/scripts/point_cloud.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Screened Poisson Surface Reconstruction (V6.13)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Icosahedron.html",
+          "file": "pymesh/meshutils/generate_icosphere.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Icosahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Icosahedron.html",
+          "file": "pymesh/meshutils/generate_icosphere.py",
+          "line": 10,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Icosahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Tetrahedron.html",
+          "file": "pymesh/meshutils/generate_regular_tetrahedron.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tetrahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Tetrahedron.html",
+          "file": "pymesh/meshutils/generate_regular_tetrahedron.py",
+          "line": 6,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tetrahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Dodecahedron.html",
+          "file": "pymesh/meshutils/generate_dodecahedron.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dodecahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/Dodecahedron.html",
+          "file": "pymesh/meshutils/generate_dodecahedron.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dodecahedron -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/ConicalFrustum.html",
+          "file": "pymesh/meshutils/generate_cylinder.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Conical Frustum -- from Wolfram MathWorld",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://mathworld.wolfram.com/ConicalFrustum.html",
+          "file": "pymesh/meshutils/generate_cylinder.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Conical Frustum -- from Wolfram MathWorld",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "httpie-rich-terminal",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/4e/c1/c2f74c477faf1f64b8178bc27a0dbb1dcc64eced7e31a7009f93e6e84c5a/httpie_rich_terminal-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:06:53.331214+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://sw.kovidgoyal.net/kitty/graphics-protocol",
+          "file": "httpie_rich_terminal-0.2.0/httpie_rich_terminal/protocols/kitty.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting...",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sw.kovidgoyal.net/kitty/graphics-protocol",
+          "file": "httpie_rich_terminal-0.2.0/httpie_rich_terminal/protocols/kitty.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting...",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://iterm2.com/documentation-images.html",
+          "file": "httpie_rich_terminal-0.2.0/httpie_rich_terminal/protocols/iterm2.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Images - Documentation - iTerm2 - macOS Terminal Replacement",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://iterm2.com/documentation-images.html",
+          "file": "httpie_rich_terminal-0.2.0/httpie_rich_terminal/protocols/iterm2.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Images - Documentation - iTerm2 - macOS Terminal Replacement",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "provision-stack-composio",
       "version": "0.1.0",
@@ -29413,6 +32946,569 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "pymeshv2",
+      "version": "0.3.2",
+      "analyzed_at": "2026-07-22T05:07:06.259433+00:00",
+      "binaries": [
+        {
+          "name": "libPyMesh-Mesh-aba76d84.so",
+          "file": "pymeshv2.libs/libPyMesh-Mesh-aba76d84.so",
+          "sha256": "b0f6715e5aebbb6d3fd910fbe8d546b4a971de1eeb45f4e1938188951fee7eab",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Assembler-8fd82424.so",
+          "file": "pymeshv2.libs/libPyMesh-Assembler-8fd82424.so",
+          "sha256": "1e345650f1e8104fe0561f780dffd70b1f8c814bedc47c4efb478e03c95a7850",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Boolean-f9fcfaa4.so",
+          "file": "pymeshv2.libs/libPyMesh-Boolean-f9fcfaa4.so",
+          "sha256": "0ec17c62b3774b85c635dfc5c9d9e80c4e22b01d37310e4a2b15b00313f739cc",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-BVH-6e9d0efa.so",
+          "file": "pymeshv2.libs/libPyMesh-BVH-6e9d0efa.so",
+          "sha256": "10bc3344c12184bc79513ff67786b7527105191f97d7fd0a22f03da1a85ae7da",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-OuterHull-d3da5a8c.so",
+          "file": "pymeshv2.libs/libPyMesh-OuterHull-d3da5a8c.so",
+          "sha256": "4805239aa89c076ac5dcdddb31b18f022695e484994e49347ce526ae0525ad14",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-TetGen-97f41469.so",
+          "file": "pymeshv2.libs/libPyMesh-TetGen-97f41469.so",
+          "sha256": "640ba544c3a789351691383d4a48ae195e36f76e756fdd6ff9d698fdbd02f808",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Compression-716fc9dc.so",
+          "file": "pymeshv2.libs/libPyMesh-Compression-716fc9dc.so",
+          "sha256": "f55e6f863357336f279220e0b3b1b3925c7492ea06a494c7afdb6138c7aa94a8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Wires-c77dc7e4.so",
+          "file": "pymeshv2.libs/libPyMesh-Wires-c77dc7e4.so",
+          "sha256": "aa3446739bc9f46a087530ae2e982dd995418c81cdd4f9bbf96568d7197a8581",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-CGAL-e821ab31.so",
+          "file": "pymeshv2.libs/libPyMesh-CGAL-e821ab31.so",
+          "sha256": "5e102bb9b7890749f68da507369360e9531c0b5d1834872ab6345ac474a188b3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libtbb-d20ac1c6.so",
+          "file": "pymeshv2.libs/libtbb-d20ac1c6.so",
+          "sha256": "e62d1c9783b56e4e2c95fe0b23fa33f298cecfcb85a0f55bd72528dce25ca319",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Triangle-fae7c34b.so",
+          "file": "pymeshv2.libs/libPyMesh-Triangle-fae7c34b.so",
+          "sha256": "30c17b743bb89342918ea92ffce6cafed77677037844b12e16d11241b01a984f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Triangulation-60f3012e.so",
+          "file": "pymeshv2.libs/libPyMesh-Triangulation-60f3012e.so",
+          "sha256": "e6167d14edd4da2c76ece7e163a096ea26a7137b1d76fee8817ddc6830832926",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-WindingNumber-9fdf8caf.so",
+          "file": "pymeshv2.libs/libPyMesh-WindingNumber-9fdf8caf.so",
+          "sha256": "bf00966e2a892894e4724cea7f273f6635847452d5bf74e8afc510bf6820f354",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-MeshUtils-c5e54067.so",
+          "file": "pymeshv2.libs/libPyMesh-MeshUtils-c5e54067.so",
+          "sha256": "d46ca95defaf3851e6fa4ef0016e786ed9e59dacb5988013fa5cce4f9d80e33a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-SelfIntersection-9e0a7ce9.so",
+          "file": "pymeshv2.libs/libPyMesh-SelfIntersection-9e0a7ce9.so",
+          "sha256": "2028c26f05373c738985d2806be5733cab79f0a8e8e1d6b219fa37d608b56f38",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libtbbmalloc-e4d3e380.so",
+          "file": "pymeshv2.libs/libtbbmalloc-e4d3e380.so",
+          "sha256": "85bee37eee4f174ce82f855bd72f1f59aff201aa9237d65bb287dc0a128f7cd7",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-ConvexHull-38bbd063.so",
+          "file": "pymeshv2.libs/libPyMesh-ConvexHull-38bbd063.so",
+          "sha256": "af3ef94a8174b77d894ed06c2747cce634c7e01f0d14ef8f2289df0987075ea8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-IGL-44e23986.so",
+          "file": "pymeshv2.libs/libPyMesh-IGL-44e23986.so",
+          "sha256": "62314853d6109c54ad8e998ab56b4223b4736270eacf44d40f97692d9f7de96d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-SparseSolver-d0e72c0d.so",
+          "file": "pymeshv2.libs/libPyMesh-SparseSolver-d0e72c0d.so",
+          "sha256": "debbcdc678052e0b3c0cfac72cddeaf5f7d08d30daf975f0ae1d811d1455ec4f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Tetrahedronization-6c3148f8.so",
+          "file": "pymeshv2.libs/libPyMesh-Tetrahedronization-6c3148f8.so",
+          "sha256": "f288b6fc02c2ed30c507be9a81216b2f229d0d5cff8b282b62263c769086e4e9",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Triangulation.so",
+          "file": "pymesh/lib/libPyMesh-Triangulation.so",
+          "sha256": "ea087f74ec69d97a13879d21218039734b977e93e450016ed1e07c4ec604ca09",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Predicates.a",
+          "file": "pymesh/lib/libPyMesh-Predicates.a",
+          "sha256": "d22575d0ede3633eb0bfe7d47e3564703eafb0d78904e54cfe5aec0309326003",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Tetrahedronization.so",
+          "file": "pymesh/lib/libPyMesh-Tetrahedronization.so",
+          "sha256": "68471b4b47517d291b9780ee6aa98042097c21efceb50317368b62676fbf2ce3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-MeshUtils.so",
+          "file": "pymesh/lib/libPyMesh-MeshUtils.so",
+          "sha256": "62e6f3ad86bdcd2013741e053ee214c0e38f41afd1857be1f2d3396d9a026393",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-SelfIntersection.so",
+          "file": "pymesh/lib/libPyMesh-SelfIntersection.so",
+          "sha256": "5638534ee2870b4421b211161ffa62cc40bc6e203f2710a638e59299262356ed",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Triangle.so",
+          "file": "pymesh/lib/libPyMesh-Triangle.so",
+          "sha256": "ba9ec17b4feaeed16a5424b9403618b7682bb92832547ca4192497c14b89a7db",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Mesh.so",
+          "file": "pymesh/lib/libPyMesh-Mesh.so",
+          "sha256": "4f6c379a9a85905ca0b03dd6bd74b5acff09d0cc728e9debfad4e90b7d8ecb83",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-SparseSolver.so",
+          "file": "pymesh/lib/libPyMesh-SparseSolver.so",
+          "sha256": "e092182d89d92e2ea11e58e9de7c81048f0ed3dc60d296cd3f6197c7c95230d1",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-ConvexHull.so",
+          "file": "pymesh/lib/libPyMesh-ConvexHull.so",
+          "sha256": "66fc7b913f44d2f17f695d3a41345ddcf3499c051ad2f955be811e89b01e8930",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Compression.so",
+          "file": "pymesh/lib/libPyMesh-Compression.so",
+          "sha256": "1d0d2af49c9b885b21de00e58bdcbbe1aa77be3fec5cc2f58147cc9ed1bbed66",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-CGAL.so",
+          "file": "pymesh/lib/libPyMesh-CGAL.so",
+          "sha256": "6595563d2671c18dd77c206c85fa1dbb0adedd397730f361ac95c83b0e789348",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-OuterHull.so",
+          "file": "pymesh/lib/libPyMesh-OuterHull.so",
+          "sha256": "bfbe913ff01117bbc7e71b6253bed8cdcc23596ff63c39ac417e5596ef29d00f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-TetGen.so",
+          "file": "pymesh/lib/libPyMesh-TetGen.so",
+          "sha256": "bb2bead514dda0cc2d0ea2fe868a9348f2c3f86632ddb06ab370f28323c93fb1",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Boolean.so",
+          "file": "pymesh/lib/libPyMesh-Boolean.so",
+          "sha256": "1d749d34b009ee53e33139a26857621a98ba6931c4ff7c02e490ca1094bf5ecd",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-BVH.so",
+          "file": "pymesh/lib/libPyMesh-BVH.so",
+          "sha256": "678f50c9c1a0f9556992867ea8f4f0faaffcd75666ae013852f0ebb195fba2e3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-IGL.so",
+          "file": "pymesh/lib/libPyMesh-IGL.so",
+          "sha256": "1b017c9a0a70834f92df605bba7a17a2c2992321526afb2a06c742ee1caa21bc",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Wires.so",
+          "file": "pymesh/lib/libPyMesh-Wires.so",
+          "sha256": "4a7f4d8cab01fe239d5168bb4e19d6fe63e98f6a0a1669c290fb27c29e9fc09a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-WindingNumber.so",
+          "file": "pymesh/lib/libPyMesh-WindingNumber.so",
+          "sha256": "9e8a46727374d65860f0fd61f14086862711314ab850dca7daeba072cfa4db2b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "PyMesh.cpython-310-x86_64-linux-gnu.so",
+          "file": "pymesh/lib/PyMesh.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "bf62213183ba5bb59e848d41a6b8bcccf4e9e687b0ced0bdbfece78ce81f2bad",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libPyMesh-Assembler.so",
+          "file": "pymesh/lib/libPyMesh-Assembler.so",
+          "sha256": "c333fb054ac9fa5b3989e97c0efa5266241da229ea9938b87267ba4d7f280994",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libmmgs.a",
+          "file": "pymesh/third_party/lib64/libmmgs.a",
+          "sha256": "d6449aacf4ed03d40f8184b329d80a9f27a7deec7b374e96bde88e4f0066ae15",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libmmg2d.a",
+          "file": "pymesh/third_party/lib64/libmmg2d.a",
+          "sha256": "27fa8363908413810d93cb42db331f5af2c14a8152bb4b6823ece2d4e8ef50ae",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libmmg.a",
+          "file": "pymesh/third_party/lib64/libmmg.a",
+          "sha256": "0c6762062d1bef25fd674c570384db41ef979656a14f8c605d827a620744f4d4",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libmmg3d.a",
+          "file": "pymesh/third_party/lib64/libmmg3d.a",
+          "sha256": "8dd07dd38e8155983b9153d54c23ba0d06192ea80b7472e378eda185d5756d4d",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libtetgen.a",
+          "file": "pymesh/third_party/lib/libtetgen.a",
+          "sha256": "49fb6c0272f747090ba0b42a4f19ed8c013f41b77d9b1aa676d80bcd1fef155c",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libtbbmalloc.so",
+          "file": "pymesh/third_party/lib/libtbbmalloc.so",
+          "sha256": "e4d3e3807e556284f4fd9839c698312dc3317633b6bb025ec41d282fad26353d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libqhull_p.so",
+          "file": "pymesh/third_party/lib/libqhull_p.so",
+          "sha256": "c08d9909441af581c58d19a526b009bf6ce9b2f3ddb004ccf605517603260e45",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libqhullcpp.a",
+          "file": "pymesh/third_party/lib/libqhullcpp.a",
+          "sha256": "ea80aee0024e174301118f14fcaad215476a75a4ba1fe64d605179d162356143",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libqhull_r.so",
+          "file": "pymesh/third_party/lib/libqhull_r.so",
+          "sha256": "38d8de7ae55269fc9da43c514587b4f73eed2235f26a00091bcc73438b593d31",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libpolyclipping.a",
+          "file": "pymesh/third_party/lib/libpolyclipping.a",
+          "sha256": "6f3c0ca636186748309760b964ab39101313d63ed6b52c3d527a16e8a28346a7",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libdracodec.a",
+          "file": "pymesh/third_party/lib/libdracodec.a",
+          "sha256": "6be2323bf47eb93b72d079bcf14245f81b779e870346fa0c1462b5ed9bbd085f",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libdraco.a",
+          "file": "pymesh/third_party/lib/libdraco.a",
+          "sha256": "675be6e97422567220a0ac02f05c9078aa6e954ee220ba8c40b7e8de125ff75c",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libqhullstatic_r.a",
+          "file": "pymesh/third_party/lib/libqhullstatic_r.a",
+          "sha256": "5ed1597a79ed814df43d5d62676cb36362c0fb7967de58d56cbd7bb9e2ecef89",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libtbb.so",
+          "file": "pymesh/third_party/lib/libtbb.so",
+          "sha256": "d20ac1c6cc53c14d43b0aab74a581ebf5c3267994ab1f18c2d04560e89a42da1",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libtbbmalloc_proxy.so",
+          "file": "pymesh/third_party/lib/libtbbmalloc_proxy.so",
+          "sha256": "a1ae3f726f954d6ba2a80c35fe619bd6dc7616535248546e5ef85a77e623a02b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libqhullstatic.a",
+          "file": "pymesh/third_party/lib/libqhullstatic.a",
+          "sha256": "57e2f6eace5de11bcb913b0565fc3d5c85ea71a32c7b0159d8a4dd10f1680d97",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libtriangle.a",
+          "file": "pymesh/third_party/lib/libtriangle.a",
+          "sha256": "d164d025ff1d4605eef8eaac17fd191f7c16d738a5a31ea9399045dd7ed4dc44",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libdracoenc.a",
+          "file": "pymesh/third_party/lib/libdracoenc.a",
+          "sha256": "60d9e4689f4196b057b3d91312f59af1de3d18ce073732947e4364cf422e299b",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libcork.a",
+          "file": "pymesh/third_party/lib/libcork.a",
+          "sha256": "f3d8c66e64969f0f23cb3d0a0ac0a2697c2e8eb1d9447643020bc1aaf08ecf3a",
+          "format": "unknown",
+          "signed": null,
+          "signer": null
+        },
+        {
+          "name": "libqhull.so",
+          "file": "pymesh/third_party/lib/libqhull.so",
+          "sha256": "7f913c2b32aef6629678f51ea08b768a58d3b047a2a79b12d180d650337fca59",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "uiautomation-new",
+      "version": "0.0.1",
+      "analyzed_at": "2026-07-22T05:07:18.655424+00:00",
+      "binaries": [
+        {
+          "name": "UIAutomationClient_VC140_X86.dll",
+          "file": "uiautomation_new-0.0.1/uiautomation/bin/UIAutomationClient_VC140_X86.dll",
+          "sha256": "a07d5e2bce0da2847b254a1a258ce39fa6fb401baa7a8979757bc2897c7b30fe",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "UIAutomationClient_VC140_X64.dll",
+          "file": "uiautomation_new-0.0.1/uiautomation/bin/UIAutomationClient_VC140_X64.dll",
+          "sha256": "e07344791d60d96e164fc003008c1102275face5d203cea40178ad51cbb3d4db",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "qwen3-tts-mnn",
+      "version": "0.2.0",
+      "analyzed_at": "2026-07-22T05:07:21.074907+00:00",
+      "binaries": [
+        {
+          "name": "mnn_tts_native.so",
+          "file": "qwen3_tts_mnn-0.2.0/src/qwen3_tts_mnn/mnn_tts_native.so",
+          "sha256": "5c6f157598c5a19f2b91a404c3b09cfd90a6257753e8ed018c3580a9ca54ea61",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "paimon-ftindex",
+      "version": "0.1.0",
+      "analyzed_at": "2026-07-22T05:07:21.752751+00:00",
+      "binaries": [
+        {
+          "name": "libpaimon_ftindex_ffi.dylib",
+          "file": "paimon_ftindex/libpaimon_ftindex_ffi.dylib",
+          "sha256": "fb7a1c1b8f6e26a5ee912792fa4ea0f9774da86769c2e2e272569475a3c4493b",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "pixlib",
+      "version": "1.0.1",
+      "analyzed_at": "2026-07-22T05:07:28.647744+00:00",
+      "binaries": [
+        {
+          "name": "image.cpython-310-x86_64-linux-gnu.so",
+          "file": "pixlib/image.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "e33e3a51601607e93c9810a834363906620288ade0a7f8c648ab3e71ab843dc8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "utils.cpython-310-x86_64-linux-gnu.so",
+          "file": "pixlib/utils.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "985ab63176a83c5f07197c219ab42cb03b317f51f438811a15f57cf4f60e5795",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -29660,6 +33756,78 @@
           "call": "subprocess.Popen",
           "command": "subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=str(self.workdir))",
           "context": "VerdaccioSession.start",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "mangopi-web",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/8b/ea/9160604db8f3714b8a1d266351f9412629a4520cc6da4bad52d0985cc5f3/mangopi_web-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:07.247844+00:00",
+      "install_hooks": [
+        {
+          "file": "mangopi_web-0.1.1/mangopi_web/__init__.py",
+          "line": 260,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=0, text=True)",
+          "context": "spawn_cli",
+          "source": "package_init"
+        },
+        {
+          "file": "mangopi_web-0.1.1/mangopi_web/__init__.py",
+          "line": 735,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'branch', '--show-current'], capture_output=True, text=True, cwd=cwd, timeout=5)",
+          "context": "module",
+          "source": "package_init"
+        },
+        {
+          "file": "mangopi_web-0.1.1/mangopi_web/__init__.py",
+          "line": 768,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'log', '-n', '10', '--format=%H|%s|%ar'], capture_output=True, text=True, cwd=cwd, timeout=10)",
+          "context": "module",
+          "source": "package_init"
+        },
+        {
+          "file": "mangopi_web-0.1.1/mangopi_web/__init__.py",
+          "line": 784,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'show', '--numstat', '--format=', hsh], capture_output=True, text=True, cwd=cwd, timeout=5)",
+          "context": "module",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "khmer-telegram",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/2f/da/868076589cfb4740b2f80473aa21b53bf1ed1ae2d16e63d452e9d32932c2/khmer_telegram-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:30.067977+00:00",
+      "install_hooks": [
+        {
+          "file": "khmer_telegram-1.0.0/fix_khmer_telegram/__init__.py",
+          "line": 45,
+          "call": "subprocess.run",
+          "command": "subprocess.run(cmd, shell=True, check=True)",
+          "context": "run",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "quantnodes-strategy-research",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/7a/4c/f0a80768148904d124af722e9d3a933a08f6831268ce90251befd87206d2/quantnodes_strategy_research-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-22T05:07:55.358258+00:00",
+      "install_hooks": [
+        {
+          "file": "quantnodes_strategy_research-0.2.0/src/strategy_research/core/agent/builtin_tools/__init__.py",
+          "line": 418,
+          "call": "subprocess.run",
+          "command": "subprocess.run(cmd, cwd=str(workspace), capture_output=True, text=True, timeout=30, check=False)",
+          "context": "GitDiffTool.execute",
           "source": "package_init"
         }
       ]
