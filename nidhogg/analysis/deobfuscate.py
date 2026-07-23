@@ -28,7 +28,7 @@ from nidhogg.core.models import UrlTag
 if TYPE_CHECKING:
     from collections.abc import Callable
 
-type Scope = dict[str, tuple[str, int]]
+type Scope = dict[str, tuple[str | bytes, int]]
 type Resolved = tuple[str | bytes, frozenset[UrlTag]]
 
 _MAX_DEPTH = 8
@@ -53,7 +53,7 @@ def _b64decode(value: str | bytes) -> bytes | None:
         if pad:
             raw += b"=" * (4 - pad)
         return base64.b64decode(raw)
-    except binascii.Error, ValueError, UnicodeEncodeError:
+    except (binascii.Error, ValueError, UnicodeEncodeError):  # fmt: skip
         return None
 
 
@@ -62,7 +62,7 @@ def _from_hex(value: str | bytes) -> bytes | None:
     try:
         text = value.decode("ascii") if isinstance(value, bytes) else value
         return bytes.fromhex(text)
-    except ValueError, UnicodeDecodeError:
+    except (ValueError, UnicodeDecodeError):  # fmt: skip
         return None
 
 
@@ -168,7 +168,7 @@ def _resolve_percent_format(node: ast.BinOp, ctx: _Ctx, depth: int) -> Resolved 
     tags = template[1].union(*(r[1] for r in resolved if r is not None))
     try:
         return template[0] % args, tags | {UrlTag.VIA_DECODED}
-    except TypeError, ValueError:
+    except (TypeError, ValueError):  # fmt: skip
         return None
 
 
@@ -203,7 +203,7 @@ def _method_recode(
         return None
     try:
         return value.decode() if attr == "decode" else value.encode()  # type: ignore[union-attr]
-    except UnicodeDecodeError, UnicodeEncodeError, AttributeError:
+    except (UnicodeDecodeError, UnicodeEncodeError, AttributeError):  # fmt: skip
         return None
 
 
@@ -241,7 +241,7 @@ def _method_replace_format(
             return value.replace(argv[0], argv[1])  # type: ignore[arg-type]
         if attr == "format":
             return value.format(*argv)
-    except TypeError, ValueError, IndexError, KeyError:
+    except (TypeError, ValueError, IndexError, KeyError):  # fmt: skip
         return None
     return None
 
@@ -275,7 +275,7 @@ def _resolve_codecs_decode(node: ast.Call, ctx: _Ctx, depth: int) -> Resolved | 
     value, tags = inner
     try:
         decoded = codecs.decode(value, encoding.value)  # type: ignore[arg-type]
-    except ValueError, LookupError, TypeError, binascii.Error:
+    except (ValueError, LookupError, TypeError, binascii.Error):  # fmt: skip
         return None
     if not isinstance(decoded, str | bytes):
         return None
@@ -293,7 +293,7 @@ def _call_chr(node: ast.Call, _ctx: _Ctx, _depth: int) -> Resolved | None:
         return None
     try:
         return chr(codepoint), frozenset({UrlTag.VIA_DECODED})
-    except ValueError, OverflowError:
+    except (ValueError, OverflowError):  # fmt: skip
         return None
 
 
@@ -408,3 +408,57 @@ def resolve_value(
         resolved statically.
     """
     return _dispatch(node, _Ctx(scope, at_lineno), depth)
+
+
+def _is_module_level_assign(
+    node: ast.AST,
+) -> tuple[int, str, ast.expr] | None:
+    """Return an assignment tuple when *node* is a module-level simple assign."""
+    if not isinstance(node, ast.Assign):
+        return None
+    if len(node.targets) != 1 or not isinstance(node.targets[0], ast.Name):
+        return None
+    return node.lineno, node.targets[0].id, node.value
+
+
+def _collect_node(node: ast.AST, assigns: list[tuple[int, str, ast.expr]]) -> None:
+    """Recurse through *node* collecting module-level assignments.
+
+    Skips the bodies of ``FunctionDef``, ``AsyncFunctionDef``, ``ClassDef``
+    and ``Lambda`` so only top-level (and module-level compound-statement)
+    assignments are recorded.
+    """
+    assignment = _is_module_level_assign(node)
+    if assignment is not None:
+        assigns.append(assignment)
+    if isinstance(
+        node, ast.FunctionDef | ast.AsyncFunctionDef | ast.ClassDef | ast.Lambda
+    ):
+        return
+    for child in ast.iter_child_nodes(node):
+        _collect_node(child, assigns)
+
+
+def collect_module_scope(tree: ast.AST) -> Scope:
+    """Collect module-level string/bytes assignments in line order.
+
+    Processes ``ast.Assign`` nodes with a single ``Name`` target, resolving
+    each right-hand side with :func:`resolve_value`. Only assignments that
+    reduce to ``str`` or ``bytes`` are stored, because the scope is consumed
+    by string/bytes resolution.
+
+    Args:
+        tree: The parsed AST of the source file.
+
+    Returns:
+        Mapping ``name -> (resolved_value, assignment_lineno)``.
+    """
+    assigns: list[tuple[int, str, ast.expr]] = []
+    _collect_node(tree, assigns)
+    assigns.sort(key=lambda t: t[0])
+    scope: Scope = {}
+    for lineno, name, value_node in assigns:
+        resolved = resolve_value(value_node, scope, lineno)
+        if resolved is not None and isinstance(resolved[0], str | bytes):
+            scope[name] = (resolved[0], lineno)
+    return scope

@@ -132,6 +132,7 @@ def _serialise_install_hook(
         "line": finding.lineno,
         "call": finding.call,
         "command": finding.command,
+        "resolved": finding.resolved,
         "context": finding.context,
         "source": finding.source.value,
     }

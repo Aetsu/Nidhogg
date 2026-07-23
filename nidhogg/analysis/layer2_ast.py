@@ -7,7 +7,12 @@ import re
 import warnings
 from typing import TYPE_CHECKING
 
-from nidhogg.analysis.deobfuscate import Scope, qualified_name, resolve_value
+from nidhogg.analysis.deobfuscate import (
+    Scope,
+    collect_module_scope,
+    qualified_name,
+    resolve_value,
+)
 from nidhogg.core.models import AnalysisLayer, UrlFinding, UrlTag
 
 if TYPE_CHECKING:
@@ -35,41 +40,6 @@ def _urls_in(s: str) -> list[str]:
 def _as_text(value: str | bytes) -> str:
     """Return *value* as text, decoding bytes leniently for URL scanning."""
     return value if isinstance(value, str) else value.decode("utf-8", errors="replace")
-
-
-def _collect_scope(tree: ast.AST) -> Scope:
-    """Pre-pass: collect string-valued simple assignments, resolving chains.
-
-    Processes ``ast.Assign`` nodes with a single ``Name`` target in line order
-    so that later assignments can reference earlier ones (e.g.
-    ``a = "x"; b = a + "y"``). Each right-hand side is resolved with the full
-    deobfuscation machinery; only results that reduce to ``str`` are stored,
-    since scope lookups feed back into string resolution.
-
-    Args:
-        tree: The parsed AST of the source file.
-
-    Returns:
-        Mapping from variable name to ``(resolved_value, assignment_lineno)``.
-    """
-    assigns: list[tuple[int, str, ast.expr]] = sorted(
-        (
-            (node.lineno, node.targets[0].id, node.value)
-            for node in ast.walk(tree)
-            if (
-                isinstance(node, ast.Assign)
-                and len(node.targets) == 1
-                and isinstance(node.targets[0], ast.Name)
-            )
-        ),
-        key=lambda t: t[0],
-    )
-    scope: Scope = {}
-    for lineno, name, value_node in assigns:
-        resolved = resolve_value(value_node, scope, lineno)
-        if resolved is not None and isinstance(resolved[0], str):
-            scope[name] = (resolved[0], lineno)
-    return scope
 
 
 class _UrlVisitor(ast.NodeVisitor):
@@ -177,7 +147,7 @@ def extract_urls_ast(source: str, filepath: Path) -> tuple[list[UrlFinding], boo
     except SyntaxError:
         return [], False
 
-    scope = _collect_scope(tree)
+    scope = collect_module_scope(tree)
     visitor = _UrlVisitor(filepath, scope)
     visitor.visit(tree)
     return visitor.findings, visitor.uses_dynamic_exec

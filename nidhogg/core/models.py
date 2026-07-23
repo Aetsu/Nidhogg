@@ -128,14 +128,15 @@ class InstallHookFinding:
         filepath: Path to the file the call was found in.
         lineno: Line number of the call (1-indexed).
         call: Qualified name of the called function, e.g. ``subprocess.Popen``.
-        command: Full call expression as written in source, arguments
-            included, e.g. ``subprocess.Popen(['curl', url], shell=True)``.
-            Reconstructed via ``ast.unparse`` on the flagged ``Call`` node —
-            obfuscated arguments are shown as-is, not decoded.
+        command: Full call expression. When ``resolved`` is ``True`` this
+            contains the call with all positional arguments deobfuscated;
+            otherwise it is the original source text from ``ast.unparse``.
         context: Dotted enclosing scope — ``"module"`` at top level, or
             ``"MyInstall.run"`` inside a nested class/function.
         source: Whether this was found in ``setup.py`` or a package
             ``__init__.py``.
+        resolved: ``True`` when all positional arguments were statically
+            resolved and ``command`` reflects the resolved values.
     """
 
     filepath: Path
@@ -144,6 +145,7 @@ class InstallHookFinding:
     command: str
     context: str
     source: InstallHookSource
+    resolved: bool = False
 
 
 @dataclass

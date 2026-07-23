@@ -16,7 +16,12 @@ import ast
 import warnings
 from typing import TYPE_CHECKING
 
-from nidhogg.analysis.deobfuscate import qualified_name
+from nidhogg.analysis.deobfuscate import (
+    Scope,
+    collect_module_scope,
+    qualified_name,
+    resolve_value,
+)
 from nidhogg.core.models import InstallHookFinding, InstallHookSource
 
 if TYPE_CHECKING:
@@ -40,12 +45,61 @@ def _is_dangerous(name: str | None) -> bool:
     return name is not None and name.startswith(_DANGEROUS_PREFIXES)
 
 
+def _resolve_arg(node: ast.expr, scope: Scope, lineno: int) -> ast.expr | None:
+    """Resolve an argument node to a literal AST node, or ``None``.
+
+    Supports ``str``/``bytes`` via :func:`resolve_value`, ``list``/``tuple``
+    whose elements all resolve, and primitive literals returned unchanged.
+    """
+    if isinstance(node, ast.List | ast.Tuple):
+        resolved_elts: list[ast.expr] = []
+        for elt in node.elts:
+            resolved_elt = _resolve_arg(elt, scope, lineno)
+            if resolved_elt is None:
+                return None
+            resolved_elts.append(resolved_elt)
+        return type(node)(elts=resolved_elts, ctx=ast.Load())
+
+    if isinstance(node, ast.Constant) and isinstance(
+        node.value, str | bytes | int | float | type(None)
+    ):
+        return node
+
+    resolved = resolve_value(node, scope, lineno)
+    if resolved is None:
+        return None
+    value, _tags = resolved
+    if not isinstance(value, str | bytes):
+        return None
+    return ast.Constant(value=value)
+
+
+def _resolve_command(node: ast.Call, scope: Scope) -> str | None:
+    """Return a resolved command string if all positional args resolve."""
+    resolved_args: list[ast.expr] = []
+    for arg in node.args:
+        resolved = _resolve_arg(arg, scope, node.lineno)
+        if resolved is None:
+            return None
+        resolved_args.append(resolved)
+
+    resolved_node = ast.Call(
+        func=node.func,
+        args=resolved_args,
+        keywords=node.keywords,
+    )
+    ast.copy_location(resolved_node, node)
+    ast.fix_missing_locations(resolved_node)
+    return ast.unparse(resolved_node)
+
+
 class _InstallHookVisitor(ast.NodeVisitor):
     """AST visitor that flags process/network calls, tracking enclosing scope."""
 
-    def __init__(self, filepath: Path, source: InstallHookSource) -> None:
+    def __init__(self, filepath: Path, source: InstallHookSource, scope: Scope) -> None:
         self._filepath = filepath
         self._source = source
+        self._scope = scope
         self._scope_stack: list[str] = []
         self.findings: list[InstallHookFinding] = []
 
@@ -69,12 +123,19 @@ class _InstallHookVisitor(ast.NodeVisitor):
         name = qualified_name(node.func)
         if _is_dangerous(name):
             assert name is not None  # noqa: S101  # _is_dangerous guarantees this
+            command = ast.unparse(node)
+            resolved = False
+            resolved_command = _resolve_command(node, self._scope)
+            if resolved_command is not None:
+                command = resolved_command
+                resolved = True
             self.findings.append(
                 InstallHookFinding(
                     filepath=self._filepath,
                     lineno=node.lineno,
                     call=name,
-                    command=ast.unparse(node),
+                    command=command,
+                    resolved=resolved,
                     context=self._context(),
                     source=self._source,
                 )
@@ -102,7 +163,7 @@ def _read_text(filepath: Path) -> str | None:
     """Read *filepath* as UTF-8, returning ``None`` if it cannot be read."""
     try:
         return filepath.read_text(encoding="utf-8")
-    except UnicodeDecodeError, OSError:
+    except (UnicodeDecodeError, OSError):  # fmt: skip
         return None
 
 
@@ -117,7 +178,8 @@ def _scan_one(filepath: Path, source: InstallHookSource) -> list[InstallHookFind
             tree = ast.parse(text)
     except SyntaxError:
         return []
-    visitor = _InstallHookVisitor(filepath, source)
+    scope = collect_module_scope(tree)
+    visitor = _InstallHookVisitor(filepath, source, scope)
     visitor.visit(tree)
     return visitor.findings
 
