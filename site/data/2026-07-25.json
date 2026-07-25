@@ -1,11 +1,3663 @@
 {
-  "generated_at": "2026-07-25T16:59:15.978311+00:00",
+  "generated_at": "2026-07-25T19:08:59.733261+00:00",
   "stats": {
-    "total_packages": 168,
-    "malicious": 10,
-    "clean": 158
+    "total_packages": 190,
+    "malicious": 11,
+    "clean": 179
   },
   "packages": [
+    {
+      "name": "omega-review",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/16/cf/1bfc6fb57d6eb3a3a9013f4000a8ba3e1d408a7a0152156fb64397e4f7e8/omega_review-0.2.0-py3-none-any.whl",
+      "analyzed_at": "2026-07-25T19:08:59.091982+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.cerebras.ai/v1/chat/completions",
+          "file": "omega/providers/cerebras.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "omega/providers/groq.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/chat/completions",
+          "file": "omega/providers/nvidia_nim.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/chat/completions",
+          "file": "omega/providers/mistral.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "omega/reporting/sarif.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "hermes-tinyfish-web-search",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/60/cb/3efc804a3cecfc63042ff2a55a2e0a57a750701fa965890d2b64c9b065b2/hermes_tinyfish_web_search-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:57.591044+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "wss://example.tinyfish.io/cdp",
+          "file": "hermes_tinyfish_web_search-1.0.0/tests/test_tinyfish_tools.py",
+          "line": 194,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://example.tinyfish.io/cdp",
+          "file": "hermes_tinyfish_web_search-1.0.0/tests/test_tinyfish_tools.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://example.tinyfish.io/cdp",
+          "file": "hermes_tinyfish_web_search-1.0.0/tests/test_tinyfish_tools.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.search.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.fetch.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.browser.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TinyFish - Enterprise Infrastructure for AI Web Agents",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai/api-keys",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai/api-keys",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 483,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai/api-keys",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 62,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.search.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 177,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.fetch.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 222,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.browser.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 248,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.browser.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 267,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai/v1/automation/run",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 304,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agent.tinyfish.ai",
+          "file": "hermes_tinyfish_web_search-1.0.0/hermes_tinyfish_web_search/provider.py",
+          "line": 311,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TinyFish - Enterprise Infrastructure for AI Web Agents",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "mcp-sentinel-proxy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8a/7e/f8f591c2941e065c62b6f1e9934e599c1245f3e5986abe9c3df8c478f3e9/mcp_sentinel_proxy-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:55.730567+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://docs.claude.com/en/docs/claude-code/mcp",
+          "file": "mcp_sentinel_proxy-0.1.0/sentinel/clients.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Connect Claude Code to tools via MCP - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.windsurf.com/windsurf/mcp",
+          "file": "mcp_sentinel_proxy-0.1.0/sentinel/clients.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://modelcontextprotocol.io/quickstart/user",
+          "file": "mcp_sentinel_proxy-0.1.0/sentinel/clients.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Connect to local MCP servers - Model Context Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://antigravity.google/docs/mcp",
+          "file": "mcp_sentinel_proxy-0.1.0/sentinel/clients.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/docs/mcp-servers",
+          "file": "mcp_sentinel_proxy-0.1.0/sentinel/clients.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MCP servers | OpenCode",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "callsend",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/28/ad/df1efcd2ac5ab992cafcf45419cfdd5a133df62355be94645dd44dad2390/callsend-0.3.1.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:54.573429+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://callsend.dev",
+          "file": "callsend-0.3.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "callsend \u00b7 one voice, N agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://callsend.dev/docs",
+          "file": "callsend-0.3.1/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Docs \u00b7 callsend",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://callsend.dev/docs",
+          "file": "callsend-0.3.1/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Docs \u00b7 callsend",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.callsend.dev",
+          "file": "callsend-0.3.1/voicepipe/connector/cli.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "callsend \u00b7 one voice, N agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.callsend.dev",
+          "file": "callsend-0.3.1/voicepipe/connector/mcp_server.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "callsend \u00b7 one voice, N agents",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "keverd",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ea/cf/4b326cce13d29f780f43d8120c27fb2106747e38297f5cf39be9ff81fecf/keverd-2.0.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:53.131433+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://keverd.com",
+          "file": "keverd-2.0.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "KEVERD | Trust Infrastructure for African Finance",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.keverd.com",
+          "file": "keverd-2.0.0/src/keverd/client.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "runspec-fs",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3f/18/b5ca32082fe8d19532a4b49a592ea8ed41d0fe56abae1d6fb8815b8b16d4/runspec_fs-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:51.642995+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://runspec.app/runspec.schema.json",
+          "file": "runspec_fs-0.1.0/runspec_fs/runspec.toml",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "rheplicant",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/d7/91/3dd990d0d21c41a125b653937d97329a7c08160709e594619e1253d40690/rheplicant-0.1.2.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:51.232380+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://docs.jax.dev/en/latest",
+          "file": "rheplicant-0.1.2/docs/conf.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JAX: High performance array computing \u2014 JAX documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://num.pyro.ai/en/stable",
+          "file": "rheplicant-0.1.2/docs/conf.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NumPyro documentation \u2014 NumPyro documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "package-upgrade-mcp",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/1b/0b/02a6069c10cf5fcfecfd5444e222730b718288bd485c15f80f0dbebda02f/package_upgrade_mcp-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:50.405059+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pub.dev/api/packages",
+          "file": "package_upgrade_mcp-0.1.1/src/package_upgrade_mcp/registries/pub_registry.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "package_upgrade_mcp-0.1.1/src/package_upgrade_mcp/registries/npm_registry.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vercor",
+      "version": "0.4.3",
+      "download_url": "https://files.pythonhosted.org/packages/0d/81/1e0aa70a72583e75041e4abb6a55ccecaea66d14595691ff28ec3be587ae/vercor-0.4.3.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:49.473766+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://sid.erda.dk/share_redirect/bC5N6nQcbY",
+          "file": "vercor-0.4.3/vercor/assets.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qekit",
+      "version": "0.5.2",
+      "download_url": "https://files.pythonhosted.org/packages/fe/b3/800e28b5e47898e729c420cddacd4375f587cb0d5229b28b9e7d50cbf7e0/qekit-0.5.2.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:42.384162+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://pseudopotentials.quantum-espresso.org/legacy_tables/ps-library",
+          "file": "qekit-0.5.2/qekit/modules/build_pseudo_lib.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PSlibrary - QUANTUMESPRESSO",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pseudopotentials.quantum-espresso.org/legacy_tables/fhi-pp-from-abinit-web-site",
+          "file": "qekit-0.5.2/qekit/modules/build_pseudo_lib.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FHI PP from Abinit web site - QUANTUMESPRESSO",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pseudopotentials.quantum-espresso.org",
+          "file": "qekit-0.5.2/qekit/modules/build_pseudo_lib.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pseudopotentials - QUANTUMESPRESSO",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "inat-taxonomy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/73/ebd71f0a2132a7a340c5b6ccf8d87f5877a49389d6a04231cd2fb92e23df/inat_taxonomy-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:40.765016+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip",
+          "file": "inat_taxonomy-0.1.0/inat_taxonomy/taxonomy.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "guimitestai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/bc/d6/5e46c9c42801c1ac568c7331ec2dd4597e2ffeb57310c173666ef0121164/guimitestai-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:39.890423+00:00",
+      "total_findings": 37,
+      "findings": [
+        {
+          "url": "https://guimitestai.com",
+          "file": "guimitestai-0.1.0/pyproject.toml",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "guimitestai-0.1.0/smoke_test.py",
+          "line": 350,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://guimitestai.com/privacy",
+          "file": "guimitestai-0.1.0/guimitestai/telemetry.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/privacy",
+          "file": "guimitestai-0.1.0/guimitestai/__init__.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com",
+          "file": "guimitestai-0.1.0/guimitestai/__init__.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/privacy",
+          "file": "guimitestai-0.1.0/guimitestai/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 196,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 276,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 319,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 527,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/privacy[/dim",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 635,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 97,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 194,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 317,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 525,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/privacy[/dim",
+          "file": "guimitestai-0.1.0/guimitestai/cli/main.py",
+          "line": 622,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/github",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/gitlab",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/azure",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/jenkins",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 342,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/aws",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 460,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/github",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 10,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/gitlab",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/azure",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 219,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/jenkins",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 340,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/docs/ci-cd/aws",
+          "file": "guimitestai-0.1.0/guimitestai/cli/templates.py",
+          "line": 458,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/core/premium.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/core/premium.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/core/premium.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "guimitestai-0.1.0/guimitestai/core/config.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/core/client.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://guimitestai.com/upgrade",
+          "file": "guimitestai-0.1.0/guimitestai/core/client.py",
+          "line": 92,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Test Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.smith.langchain.com",
+          "file": "guimitestai-0.1.0/guimitestai/integrations/langsmith.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "guimitestai-0.1.0/guimitestai/integrations/langfuse.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://docs.garak.ai",
+          "file": "guimitestai-0.1.0/guimitestai/integrations/garak.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to garak! | garak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.garak.ai",
+          "file": "guimitestai-0.1.0/guimitestai/integrations/garak.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to garak! | garak",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyronites",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/79/b7/be26875007d80837ca6c72ad320bc1244f3d0903cd180ee3734d152a4e87/pyronites-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:38.039008+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pyrocore-backend.onrender.com",
+          "file": "pyronites-0.1.0/examples/basic_usage.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pyrocore-backend.onrender.com",
+          "file": "pyronites-0.1.0/examples/basic_usage.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "par-cli-stt",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/41/2b/9039a456e6d91c95b76ecc3935546fa1075be032d0a89536c37e1f7c00a4/par_cli_stt-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:37.681177+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "wss://api.deepgram.com/v1/listen",
+          "file": "par_cli_stt-0.1.0/par_stt/providers/deepgram.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://api.deepgram.com/v1/listen",
+          "file": "par_cli_stt-0.1.0/par_stt/providers/deepgram.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://api.deepgram.com/v1/listen",
+          "file": "par_cli_stt-0.1.0/par_stt/providers/deepgram.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "cloneloop",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/f5/f2/1b0e09dfd07963d8e8bf45319335076dfc5b6c0e8aa4b784d83f1f75029a/cloneloop-0.1.2-py3-none-any.whl",
+      "analyzed_at": "2026-07-25T19:08:37.557222+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://marked.js.org",
+          "file": "mcp_ai_supervisor/__main__.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Marked Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://marked.js.org",
+          "file": "mcp_ai_supervisor/__main__.py",
+          "line": 283,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Marked Documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "alokate",
+      "version": "1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2f/a9/0472958ce726209d8d6acbade8d18c8114db938d44af3cd4f8d18662dc16/alokate-1.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:36.199631+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://ddg-api.herokuapp.com/search?q=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 731,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://html.duckduckgo.com/html?q=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 745,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo HTML: Private Search Without JavaScript",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.flickr.com/services/feeds/photos_public.gne?tags=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 804,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Uploads from everyone",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://picsum.photos/seed",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 831,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://picsum.photos/seed",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 832,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://image.pollinations.ai/prompt",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 875,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.imgflip.com/get_memes",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 886,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://loremflickr.com/800/600",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 909,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://loremflickr.com/200/150",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 910,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://text.pollinations.ai",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 934,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pollinations/APIDOCS.md at master \u00b7 pollinations/pollinations \u00b7 GitHub",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://image.pollinations.ai/prompt",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 969,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ddg-api.herokuapp.com/youtube?q=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 986,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.youtube.com/results?search_query=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1001,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1030,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1047,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1057,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1301,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1355,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1406,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1451,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.youtube.com/embed",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1480,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1492,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tumblr.com/v2/blog",
+          "file": "alokate-1.0/src/alokate/scripts/scmpy.py",
+          "line": 1504,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.deepseek.com/v1/chat/completions",
+          "file": "alokate-1.0/src/alokate/scripts/deepseek_ai.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.duckduckgo.com",
+          "file": "alokate-1.0/src/alokate/scripts/deepseek_ai.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://duckduckgo.com/ac",
+          "file": "alokate-1.0/src/alokate/scripts/deepseek_ai.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "neuralrnn",
+      "version": "0.3.5",
+      "download_url": "https://files.pythonhosted.org/packages/a1/18/2b9fcb9f64d83edd95f9be5531d0dca21a4af9109653c8cd75f50e4eb05f/neuralrnn-0.3.5.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:33.207540+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://dataverse.harvard.edu/api/access/datafile/6963161",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/registry.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/api/datasets",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 263,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 309,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 318,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 328,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 350,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 101,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 308,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 317,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 327,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.mendeley.com/datasets/p7ft2bvphx",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/data/bartolo_monkey_dataset.py",
+          "line": 349,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spike count data for studying dimensionality, information and learning in prefrontal cortex - Mendeley Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://doi.org/10.1038/s41586-025-09142-4",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/models/tiny_rnn/modeling_tiny_rnn.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Discovering cognitive strategies with tiny recurrent neural networks | Nature",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1038/s41586-025-09142-4",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/models/tiny_rnn/modeling_tiny_rnn.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Discovering cognitive strategies with tiny recurrent neural networks | Nature",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1038/s41586-025-09142-4",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/models/tiny_rnn/configuration_tiny_rnn.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Discovering cognitive strategies with tiny recurrent neural networks | Nature",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1038/s41586-025-09142-4",
+          "file": "neuralrnn-0.3.5/src/neuralrnn/models/tiny_rnn/configuration_tiny_rnn.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Discovering cognitive strategies with tiny recurrent neural networks | Nature",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "engram-mcp-server",
+      "version": "0.6.0",
+      "download_url": "https://files.pythonhosted.org/packages/b6/0e/0315ac970b49ebf502cf34db2911c3075ad06c1c3951b3d60aa8c1feaa98/engram_mcp_server-0.6.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:31.076498+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com",
+          "file": "engram_mcp_server-0.6.0/src/engram/llm/providers.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "engram_mcp_server-0.6.0/src/engram/llm/providers.py",
+          "line": 441,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "engram_mcp_server-0.6.0/tests/llm/test_resolver.py",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "engram_mcp_server-0.6.0/tests/llm/test_providers_mocked.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pw-nexus-core",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/5a/3a/7c74fc1dd2e2405e19d3f45126bc02bab6ef080945edcdd09f7343ab7f6a/pw_nexus_core-1.0.2.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:30.198871+00:00",
+      "total_findings": 166,
+      "findings": [
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/pyproject.toml",
+          "line": 157,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://patentcenter.uspto.gov/applications/64034229",
+          "file": "pw_nexus_core-1.0.2/pyproject.toml",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Patent Center",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "ftp://nope",
+          "file": "pw_nexus_core-1.0.2/tests/test_mcp_oauth.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://claude.ai/cb",
+          "file": "pw_nexus_core-1.0.2/tests/test_mcp_oauth.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://claude.ai/cb",
+          "file": "pw_nexus_core-1.0.2/tests/test_mcp_oauth.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://claude.ai/cb",
+          "file": "pw_nexus_core-1.0.2/tests/test_mcp_oauth.py",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://claude.ai/cb",
+          "file": "pw_nexus_core-1.0.2/tests/test_mcp_oauth.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/security.txt",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/mcp/server-card.json",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/health",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/sitemap.xml",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/tests/test_well_known.py",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://aave.com",
+          "file": "pw_nexus_core-1.0.2/tests/test_defillama_client.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Aave",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/tests/test_disclosure.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/tests/test_disclosure.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.morpho.org/vault?id=abc",
+          "file": "pw_nexus_core-1.0.2/tests/test_vaultsfyi_client.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Morpho",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.morpho.org/vault?id=abc",
+          "file": "pw_nexus_core-1.0.2/tests/test_vaultsfyi_client.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Morpho",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://protocolwealthllc.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/main.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Integrated Wealth Management for Modern Financial Lives | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/main.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/main.py",
+          "line": 96,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Integrated Wealth Management for Modern Financial Lives | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/mcp_guide.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://modelcontextprotocol.io",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/mcp_guide.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/mcp_guide.py",
+          "line": 252,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://modelcontextprotocol.io",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/mcp_guide.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/mcp_guide.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/disclosure.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/disclosure.py",
+          "line": 79,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/disclosure.py",
+          "line": 107,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/__init__.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/__init__.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/security_headers.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FastAPI - FastAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp-guide",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 MCP server setup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/docs",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core - Swagger UI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/accounting/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/security.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/ai-disclosure.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp-guide",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 MCP server setup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/docs",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core - Swagger UI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/accounting/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/security.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/ai-disclosure.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/llms_txt.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/health",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/regime",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools/glide_path",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Integrated Wealth Management for Modern Financial Lives | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp-guide",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 MCP server setup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/mcp/server-card.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/docs",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core - Swagger UI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 205,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/llms.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/health",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/regime",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/api/planning/tools/glide_path",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Integrated Wealth Management for Modern Financial Lives | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/mcp/server-card.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/docs",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 196,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core - Swagger UI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 196,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/llms.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/landing.py",
+          "line": 196,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/security.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/well_known.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/well_known.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Integrated Wealth Management for Modern Financial Lives | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/disclosures",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Disclosures | Protocol Wealth LLC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 193,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://nexusmcp.site/mcp",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 127,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp-guide",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 129,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 MCP server setup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 140,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/openapi.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 142,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/.well-known/mcp/server-card.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 144,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/mcp-guide",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 MCP server setup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/llms.txt",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 151,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/health",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 154,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/sitemap.xml",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 184,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/app/agent_discovery.py",
+          "line": 192,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://protocolwealthllc.com/framework",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/regime/thresholds.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Framework | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/framework",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/regime/thresholds.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Framework | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/roth-conversion-analysis-1.2.0.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/education-funding-result-0.1.0.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 283,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/education-vehicle-rules-result-0.1.1.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 284,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 459,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/income-layering-result-0.1.3.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 460,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 551,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/historical-blend-result-0.1.0.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 552,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 650,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/risk-profile-result-0.1.0.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 651,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 825,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/performance-analysis-result-0.1.0.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 826,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 985,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site/schemas/inherited-ira-analysis-result-0.1.1.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/planning/result_schema.py",
+          "line": 986,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/investing",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/scoring/emf/layers.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Investing | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/investing",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/scoring/emf/layers.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Investing | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/framework",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/scoring/emf/__init__.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Framework | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protocolwealthllc.com/framework",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/engine/scoring/emf/__init__.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Framework | Protocol Wealth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/edgar/fundamentals.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/edgar/fundamentals.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/edgar/fundamentals.py",
+          "line": 507,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.llama.fi",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/defillama.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.llama.fi",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/defillama.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.llama.fi",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/defillama.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lite-api.jup.ag/price/v3?ids=",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/jupiter.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://lite-api.jup.ag/price/v3",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/jupiter.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/jupiter.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lite-api.jup.ag/price/v3?ids=",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/jupiter.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://gateway.thegraph.com/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/thegraph.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gateway.thegraph.com/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/thegraph.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/thegraph.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gateway.thegraph.com/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/thegraph.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pro-openapi.debank.com/v1",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/debank.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://coins.llama.fi",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/defillama_prices.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.merkl.xyz/v4",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/merkl.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexusmcp.site",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/merkl.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nexus Core \u2014 open regime-adaptive financial analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.merkl.xyz/v4/opportunities",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/merkl.py",
+          "line": 82,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.vaults.fyi",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/vaultsfyi.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vaults.fyi API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.vaults.fyi/v2/detailed-vaults",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/onchain/vaultsfyi.py",
+          "line": 147,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 402,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/treasury.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/treasury.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/treasury.py",
+          "line": 36,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "https://api.stlouisfed.org/fred/series/observations",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/fred.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.eia.gov/v2",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/eia.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apps.bea.gov/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/bea.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting...",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://apps.bea.gov/API/signup",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/bea.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BEA Data Application Programming Interface (API)",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://apps.bea.gov/api/data",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/bea.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://apps.bea.gov/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/bea.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting...",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://apps.bea.gov/API/signup",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/macro/bea.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BEA Data Application Programming Interface (API)",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.deribit.com/api/v2",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/deribit.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.deribit.com/api/v2",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/deribit.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.deribit.com/api/v2",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/deribit.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com/v3/markets/options?ticker=X",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/mboum_options.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/mboum_options.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com/v3/markets/options?ticker=X",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/mboum_options.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com/v3/markets/options",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/derivatives/mboum_options.py",
+          "line": 262,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.coingecko.com/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/coingecko_provider.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Crypto Data API: Most Comprehensive & Reliable Crypto Price & Market Data | CoinGecko API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/coingecko_provider.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.coingecko.com/api",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/coingecko_provider.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Crypto Data API: Most Comprehensive & Reliable Crypto Price & Market Data | CoinGecko API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3/simple/price",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/coingecko_provider.py",
+          "line": 68,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.mboum.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/mboum_provider.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mboum - Comprehensive API Documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/mboum_provider.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.mboum.com",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/mboum_provider.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mboum - Comprehensive API Documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com/v1/markets/stock/quotes",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/mboum_provider.py",
+          "line": 70,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mboum.com/v2/markets/stock/history",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/mboum_provider.py",
+          "line": 111,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.apilayer.com/marketstack",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/marketstack_provider.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.marketstack.com/v2",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/marketstack_provider.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.apilayer.com/marketstack",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/marketstack_provider.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.marketstack.com/v2/eod/latest",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/marketstack_provider.py",
+          "line": 64,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.marketstack.com/v2/eod",
+          "file": "pw_nexus_core-1.0.2/src/nexus_core/data/market/marketstack_provider.py",
+          "line": 96,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hebrah",
+      "version": "0.8.1",
+      "download_url": "https://files.pythonhosted.org/packages/ac/f5/ad268421a5f745036a40f786daa11af20bdfed261eda18852071528c3a99/hebrah-0.8.1.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:20.062610+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://hebrah.com",
+          "file": "hebrah-0.8.1/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Healthcare integration for agents \u00b7 Hebrah",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vnbrokers",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/8d/f0/195a9e97dee181568edd0f4c8208f8efbcf277aa8a60ea0b8ec9cd5fe469/vnbrokers-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:19.670011+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "wss://ws-openapi.dnse.com.vn/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/src/vnbrokers/brokers/dnse/config.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://ws-openapi.dnse.com.vn/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/src/vnbrokers/brokers/dnse/realtime.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_market_data_realtime_runtime.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_market_data_realtime_runtime.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?foo=bar&encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_market_data_realtime_runtime.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?foo=bar&encoding=msgpack",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_market_data_realtime_runtime.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_trading_realtime_runtime.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_trading_realtime_runtime.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=json",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_trading_realtime_runtime.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.dnse.example/v1/stream?encoding=msgpack",
+          "file": "vnbrokers-0.1.1/tests/unit/dnse/test_trading_realtime_runtime.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "pycobranca",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/62/3f/f6e229c1b7ff4363d7e7ba98fb400dc8fadcdc58b325ea76c1f2c24c8b2c/pycobranca-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-25T19:08:11.096001+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://msbrasil.inf.br",
+          "file": "pycobranca-1.0.0/pyproject.toml",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "M&S DO BRASIL \u2013 My WordPress Blog",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "distrib.sh",
       "version": "0.0.0",
@@ -33282,6 +36934,108 @@
           "name": "libcoakka_runtime_v2.dylib",
           "file": "coakka_v2_connector/native/macos-aarch64/libcoakka_runtime_v2.dylib",
           "sha256": "c9e92bf522ec6d80dea98c3ccf6cccc3af5cd9d31d65fd11142b6e5bb98ec870",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "cloneloop",
+      "version": "0.1.2",
+      "analyzed_at": "2026-07-25T19:08:37.557508+00:00",
+      "binaries": [
+        {
+          "name": "mcp-ai-supervisor-desktop.exe",
+          "file": "mcp_ai_supervisor/desktop_release/mcp-ai-supervisor-desktop.exe",
+          "sha256": "266969ab6fedd793c1eb1d1dd3f351e6e7f30b66d6898cc629fe84903835df2a",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "coakka-logger",
+      "version": "1.2.2",
+      "analyzed_at": "2026-07-25T19:08:37.816304+00:00",
+      "binaries": [
+        {
+          "name": "libcoakka_logger_core-1.2.1+f50756ebff0d.dll",
+          "file": "coakka_logger/native/windows-aarch64/libcoakka_logger_core-1.2.1+f50756ebff0d.dll",
+          "sha256": "82d99fe661aa6c6eebc563786a501f07f9f52d8a3742882baf42c8eae31b4f48",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core.dll",
+          "file": "coakka_logger/native/windows-aarch64/libcoakka_logger_core.dll",
+          "sha256": "82d99fe661aa6c6eebc563786a501f07f9f52d8a3742882baf42c8eae31b4f48",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core.so",
+          "file": "coakka_logger/native/linux-aarch64/libcoakka_logger_core.so",
+          "sha256": "39b782d51a835411c8a8e557cd3f39c792b9ccc1b7ae6e43cee1856e7aa55299",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core-1.2.1+f50756ebff0d.so",
+          "file": "coakka_logger/native/linux-aarch64/libcoakka_logger_core-1.2.1+f50756ebff0d.so",
+          "sha256": "39b782d51a835411c8a8e557cd3f39c792b9ccc1b7ae6e43cee1856e7aa55299",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core-1.2.1+f50756ebff0d.dll",
+          "file": "coakka_logger/native/windows-x86_64/libcoakka_logger_core-1.2.1+f50756ebff0d.dll",
+          "sha256": "31625f1fba001bbfa28d0d72d33e709b903a534de122a7c2f1efe60b956cfc62",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core.dll",
+          "file": "coakka_logger/native/windows-x86_64/libcoakka_logger_core.dll",
+          "sha256": "31625f1fba001bbfa28d0d72d33e709b903a534de122a7c2f1efe60b956cfc62",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core.so",
+          "file": "coakka_logger/native/linux-x86_64/libcoakka_logger_core.so",
+          "sha256": "46496565384866b9e80a483516c6c9c49863e6fe89d40867db8f0feb652d1d8c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core-1.2.1+f50756ebff0d.so",
+          "file": "coakka_logger/native/linux-x86_64/libcoakka_logger_core-1.2.1+f50756ebff0d.so",
+          "sha256": "46496565384866b9e80a483516c6c9c49863e6fe89d40867db8f0feb652d1d8c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcoakka_logger_core-1.2.1+f50756ebff0d.dylib",
+          "file": "coakka_logger/native/macos-aarch64/libcoakka_logger_core-1.2.1+f50756ebff0d.dylib",
+          "sha256": "e5643bbf1604cc5833b43d79d7fcdc0fbc0184407e1641a21935fc25b627f787",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libcoakka_logger_core.dylib",
+          "file": "coakka_logger/native/macos-aarch64/libcoakka_logger_core.dylib",
+          "sha256": "e5643bbf1604cc5833b43d79d7fcdc0fbc0184407e1641a21935fc25b627f787",
           "format": "macho",
           "signed": true,
           "signer": "ad-hoc"
