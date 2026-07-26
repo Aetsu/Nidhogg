@@ -1,11 +1,1693 @@
 {
-  "generated_at": "2026-07-26T13:25:04.129809+00:00",
+  "generated_at": "2026-07-26T15:06:36.752856+00:00",
   "stats": {
-    "total_packages": 125,
-    "malicious": 10,
-    "clean": 115
+    "total_packages": 142,
+    "malicious": 12,
+    "clean": 130
   },
   "packages": [
+    {
+      "name": "hytribe",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/22/5b/6372a3de0d2cf7f7c2baa96f9ee70ebcb7d014406bb6c754ebc6182c2cbd/hytribe-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:35.635072+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://sales.hytribe.xyz/developers",
+          "file": "hytribe-0.0.1/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Developer Docs \u00b7 Hytribe API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sales.hytribe.xyz/developers",
+          "file": "hytribe-0.0.1/src/hytribe/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Developer Docs \u00b7 Hytribe API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.hytribe.xyz",
+          "file": "hytribe-0.0.1/src/hytribe/__init__.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sales.hytribe.xyz/developers",
+          "file": "hytribe-0.0.1/src/hytribe/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Developer Docs \u00b7 Hytribe API",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "bibb",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3e/f0/33223d5da04787cc4960115d8e61dd007d0ee70384e96e21ffc5d84ce840/bibb-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:19.179424+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://gery.casiez.net",
+          "file": "bibb-0.1.0/bibb/bibb.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "G\u00e9ry Casiez",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dl.acm.org/action/exportCiteProcCitation?dois=",
+          "file": "bibb-0.1.0/bibb/bibb.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.crossref.org/works?query.title=",
+          "file": "bibb-0.1.0/bibb/bibb.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "orita-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a5/e4/90dd25920c2af8af1b5302ee870683ef27ebfc859021b218efd137bd73a1/orita_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:18.603991+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://orita.online/developers",
+          "file": "orita_sdk-0.1.0/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Developers \u2014 Orita API | Orita",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://orita.online/developers",
+          "file": "orita_sdk-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Developers \u2014 Orita API | Orita",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://orita.online/api/v1",
+          "file": "orita_sdk-0.1.0/orita/client.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "scry-client",
+      "version": "0.6.0",
+      "download_url": "https://files.pythonhosted.org/packages/20/8a/3ce747992d8302d940f1c44930cf409532ec2ff34384d21dde977c4e9bc7/scry_client-0.6.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:18.298155+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://scry.moreright.xyz",
+          "file": "scry_client-0.6.0/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "scry: an agency of bound minds",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://scry.moreright.xyz/api",
+          "file": "scry_client-0.6.0/scry_client/client.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rpc.mainnet.chain.robinhood.com",
+          "file": "scry_client-0.6.0/scry_client/client.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "SSL Corporation"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "scry_client-0.6.0/scry_client/client.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://scry.moreright.xyz/api",
+          "file": "scry_client-0.6.0/scry_client/play.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "nulltap",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/12/2a/741aa7db49c27738703519549104334809369145b65c393c8d51ce41781a/nulltap-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:17.916872+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://nulltap.sh",
+          "file": "nulltap-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nulltap | Someone tapped /dev/null",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p/cloud-token",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/api/articles/cloud-token.json",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p/ai-gateway",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/api/articles/ai-gateway.json",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p/ai-gateway",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p/cloud-token",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/p/unsafe",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 224,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/feed.json",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 245,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/feed.json",
+          "file": "nulltap-0.1.0/tests/test_cli.py",
+          "line": 247,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh/feed.json",
+          "file": "nulltap-0.1.0/src/nulltap/cli.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nulltap.sh",
+          "file": "nulltap-0.1.0/src/nulltap/cli.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nulltap | Someone tapped /dev/null",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "capo-s3",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e0/13/1d6f043efdd42b725c0280320d0645cc9f73a4cd45bc2d3867310dffb25a/capo_s3-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:17.422505+00:00",
+      "total_findings": 52,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/get_object_request.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc6266",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/put_object_request.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 6266: Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/put_object_request.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/put_object_request.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/put_object_request.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7234",
+          "file": "capo_s3-0.1.0/src/capo_s3/types/put_object_request.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repost.aws/knowledge-center/s3-resolve-200-internalerror",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 839,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Resolve the Error 200 response when copying objects to Amazon S3 | AWS re:Post",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 3627,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc6266",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6979,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 6266: Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6980,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6982,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6984,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7234",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6996,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 3618,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc6266",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6972,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 6266: Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6972,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7234",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/s3.py",
+          "line": 6972,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repost.aws/knowledge-center/s3-resolve-200-internalerror",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 842,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Resolve the Error 200 response when copying objects to Amazon S3 | AWS re:Post",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 3684,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc6266",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7091,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 6266: Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7092,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7094,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7096,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7234",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 3675,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc6266",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7084,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 6266: Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7084,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9110: HTTP Semantics",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7234",
+          "file": "capo_s3-0.1.0/src/capo_s3/_services/async_s3.py",
+          "line": 7084,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_s3-0.1.0/src/capo_s3/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "mandri",
+      "version": "0.1.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/1b/38/3d85c335921a7f3775b2276b3eefea36c7c061e7043c97ae340e1fd3138c/mandri-0.1.0a1.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:15.264866+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "mandri-0.1.0a1/mandri/adapters/llm/openrouter.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/zen/v1",
+          "file": "mandri-0.1.0a1/mandri/adapters/llm/opencode.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/zen/go/v1",
+          "file": "mandri-0.1.0a1/mandri/adapters/llm/opencode.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "fleetproof",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/72/a9/8586b0eb86f9a4cf66e8dd863bcdf30c4e07f10e76857f869fd10b7afb73/fleetproof-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:13.591235+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://code.claude.com/docs/en/hooks",
+          "file": "fleetproof-0.1.0/src/fleetproof/hookgate.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hooks reference - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/hooks",
+          "file": "fleetproof-0.1.0/src/fleetproof/hookgate.py",
+          "line": 47,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hooks reference - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "bisibility",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/c3/c1/ddb76194de9c290ad089ed5c6d2e34568aafde9d3821b53f96df6f64ed5f/bisibility-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:13.406672+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://bisibility.com",
+          "file": "bisibility-0.2.1/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-source keyword rank tracking for developers | Bisibility",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bisibility.com/docs/api",
+          "file": "bisibility-0.2.1/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API overview - bisibility",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dataforseo.com/pricing",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 494,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DataForSEO API v3 Pricing \u2013 Transparent Pay-As-You-Go Pricing Model",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://serpapi.com/pricing",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 514,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SerpApi: Plans and Pricing",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dataforseo.com/pricing",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 531,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DataForSEO API v3 Pricing \u2013 Transparent Pay-As-You-Go Pricing Model",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://serpapi.com/pricing",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 677,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SerpApi: Plans and Pricing",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bisibility.com/api/v1/projects",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 987,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bisibility.com/docs/api/errors",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 2720,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API errors - bisibility",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bisibility.com/docs/api/errors",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 2764,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API errors - bisibility",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bisibility.com/docs/api/errors",
+          "file": "bisibility-0.2.1/tests/test_client.py",
+          "line": 2934,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API errors - bisibility",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bisibility.com/api/v1",
+          "file": "bisibility-0.2.1/src/bisibility/client.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "postpeer",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/00/a1/ba6fd9607a5f7f7d076480d6d133291fdeab8fe1c11f4558ec87a735e931/postpeer-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:12.207703+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://postpeer.dev",
+          "file": "postpeer-0.1.0/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PostPeer - Unified Social Media Posting API - Add social media posting, scheduling, and automation to your product in minutes.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.postpeer.dev/v1/health",
+          "file": "postpeer-0.1.0/tests/test_client.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.postpeer.dev",
+          "file": "postpeer-0.1.0/src/postpeer/client.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bsky.app/settings/app-passwords",
+          "file": "postpeer-0.1.0/src/postpeer/_generated/pydantic_gen.py",
+          "line": 529,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bluesky",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "flowjet-agent",
+      "version": "1.0.19",
+      "download_url": "https://files.pythonhosted.org/packages/b3/83/c6d687a0f8c58ea1757fbd932b18fd69d290f340e318bbca73127bae8df6/flowjet_agent-1.0.19.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:11.721802+00:00",
+      "total_findings": 21,
+      "findings": [
+        {
+          "url": "https://www.anthropic.com/legal/consumer-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/pptx/LICENSE.txt",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Consumer Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/commercial-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/pptx/LICENSE.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Commercial Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/consumer-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/xlsx/LICENSE.txt",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Consumer Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/commercial-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/xlsx/LICENSE.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Commercial Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/consumer-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/docx/LICENSE.txt",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Consumer Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/commercial-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/docx/LICENSE.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Commercial Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/consumer-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/pdf/LICENSE.txt",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Consumer Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/legal/commercial-terms",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/pdf/LICENSE.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Commercial Terms of Service \\ Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://simpleicons.org",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/aiicons.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Icons",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.simpleicons.org",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/aiicons.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - LitoMore/simple-icons-cdn: \ud83c\udfa8 Colorable and resizable CDN for Simple Icons \u00b7 GitHub",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.simpleicons.org",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/aiicons.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - LitoMore/simple-icons-cdn: \ud83c\udfa8 Colorable and resizable CDN for Simple Icons \u00b7 GitHub",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://viewer.diagrams.net/...",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.diagrams.net/...",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://viewer.diagrams.net?tags=%7B%7D&lightbox=1&edit=_blank",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flowchart Maker & Online Diagram Software",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.diagrams.net?grid=0&pv=0&border=10&edit=_blank",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flowchart Maker & Online Diagram Software",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://viewer.diagrams.net/...",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.diagrams.net/...",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/drawio-skill/scripts/encode_drawio_url.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://openoffice.org/2000/script",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/docx/scripts/accept_changes.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2000/script",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/docx/scripts/accept_changes.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2000/script",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/xlsx/scripts/recalc.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2000/script",
+          "file": "flowjet_agent-1.0.19/src/fj_ai/builtin_skills/xlsx/scripts/recalc.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "talocode-calclane",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/ed/c6/4039d1e58b6766a6e0bc8fc42911f7cbe9b5471024f91aeafc514f318738/talocode_calclane-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:10.150144+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.talocode.site",
+          "file": "talocode_calclane-0.3.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "aiomonzo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b6/46/f4dbb2ffecba7a10b4a896323b987d5e44151fb871832a6408d9042b8027/aiomonzo-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:05.019117+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://auth.monzo.com",
+          "file": "aiomonzo-0.1.0/src/aiomonzo/auth.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Monzo | Securely log in",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.monzo.com",
+          "file": "aiomonzo-0.1.0/src/aiomonzo/client.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "flightdeck-connect",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/e1/d9/e946d5a8c998afc9993d75fe9c79cd28164300d837dc82baad1241ea62ce/flightdeck_connect-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:04.316471+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://ai-flightdeck.com",
+          "file": "flightdeck_connect-0.1.1/pyproject.toml",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FlightDeck \u2014 The control plane for AI engineering",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://airecai.com",
+          "file": "flightdeck_connect-0.1.1/pyproject.toml",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Governance Platform with Verifiable Proof | AIREC",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://airec-api-dxol6hwotq-uk.a.run.app",
+          "file": "flightdeck_connect-0.1.1/src/conductor/cli.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "dash-datagrid",
+      "version": "4.23.24",
+      "download_url": "https://files.pythonhosted.org/packages/81/f8/21501446a232a293b77c557038c127dceb304c75e3d3a37f4813ae6d749d/dash_datagrid-4.23.24.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:03.170091+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://rv-grid.com/guide/dash",
+          "file": "dash_datagrid-4.23.24/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dash Data Grid | RevoGrid",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rv-grid.com/guide/dash",
+          "file": "dash_datagrid-4.23.24/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dash Data Grid | RevoGrid",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "goldilocks-curls",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/23/1c/b07e8a3780547304c07b6ccd0ebf05b979b0dc86250340cfc5785c0821de/goldilocks_curls-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:02.544351+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://goldilocks-cli.org",
+          "file": "goldilocks_curls-1.0.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "goldilocks | goldilocks",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export/rbo-dev/DIESE",
+          "file": "goldilocks_curls-1.0.0/tests/test_pipeline_fetcher.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export/rbo-dev/DIESE/DIESE-Business%20Continuity",
+          "file": "goldilocks_curls-1.0.0/tests/test_pipeline_fetcher.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export/rbo-dev/DIESE/DIESE-Business%20Continuity",
+          "file": "goldilocks_curls-1.0.0/tests/test_pipeline_fetcher.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export/rbo-dev/DIESE/DIESE-Business%20Continuity",
+          "file": "goldilocks_curls-1.0.0/tests/test_pipeline_fetcher.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://elastic.snaplogic.com/demo",
+          "file": "goldilocks_curls-1.0.0/tests/test_fetch_next_steps.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://elastic.snaplogic.com/export",
+          "file": "goldilocks_curls-1.0.0/tests/test_fetch_next_steps.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export",
+          "file": "goldilocks_curls-1.0.0/goldilocks_cli/core/pipeline_fetcher.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://emea.snaplogic.com/api/1/rest/public/project/export",
+          "file": "goldilocks_curls-1.0.0/goldilocks_cli/core/snaplogic_url.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "eeg-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/51/08/4525b29da26729d8f4f542966afb9304ab3e84618b9d4e1ce68e4cc350e9/eeg_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T15:06:01.335029+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://mne.tools/stable/reading_raw_data.html",
+          "file": "eeg_mcp-0.1.0/testing/gen_hardware_docs.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Page Redirection",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "swaplm",
       "version": "0.1.0",
