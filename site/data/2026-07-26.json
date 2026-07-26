@@ -1,11 +1,5024 @@
 {
-  "generated_at": "2026-07-26T06:38:23.128306+00:00",
+  "generated_at": "2026-07-26T10:03:19.884012+00:00",
   "stats": {
-    "total_packages": 68,
-    "malicious": 7,
-    "clean": 61
+    "total_packages": 97,
+    "malicious": 8,
+    "clean": 89
   },
   "packages": [
+    {
+      "name": "mcgram",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/71/b3/6d3f73bbd50a343322bc24e157d0ca88e718a5ecaf2e6b507a0e223fe5a5/mcgram-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:19.125176+00:00",
+      "total_findings": 58,
+      "findings": [
+        {
+          "url": "https://api.telegram.org/botT/getMe",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/sendDocument",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/getUpdates",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/answerCallbackQuery",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/editMessageText",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/editMessageReplyMarkup",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/getMe",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botT/getMe",
+          "file": "mcgram-0.2.0/tests/test_tg_client.py",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_send_message.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_send_message.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_send_message.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_send_message.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake:abcd1234/getMe",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake:abcd1234/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botbad/getMe",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_tools_ntfy.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendDocument",
+          "file": "mcgram-0.2.0/tests/test_tools_ntfy.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh/mcgram-testxyz",
+          "file": "mcgram-0.2.0/tests/test_tools_ntfy.py",
+          "line": 20,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendDocument",
+          "file": "mcgram-0.2.0/tests/test_tools_send_file.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendDocument",
+          "file": "mcgram-0.2.0/tests/test_tools_send_file.py",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendDocument",
+          "file": "mcgram-0.2.0/tests/test_tools_send_file.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_cli_init_ntfy.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor_ntfy.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh/v1/health",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor_ntfy.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/botfake:tok/getMe",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor_ntfy.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake:tok/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor_ntfy.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh/mcgram-doctortopic",
+          "file": "mcgram-0.2.0/tests/test_cli_doctor_ntfy.py",
+          "line": 12,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_ask.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/editMessageText",
+          "file": "mcgram-0.2.0/tests/test_tools_ask.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendMessage",
+          "file": "mcgram-0.2.0/tests/test_tools_ask.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/answerCallbackQuery",
+          "file": "mcgram-0.2.0/tests/test_tools_ask.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/editMessageReplyMarkup",
+          "file": "mcgram-0.2.0/tests/test_tools_ask.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_ntfy_client.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh/v1/health",
+          "file": "mcgram-0.2.0/tests/test_ntfy_client.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh/mcgram-testtopic1234",
+          "file": "mcgram-0.2.0/tests/test_ntfy_client.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_server_main.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_server_main.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_config_ntfy.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_config_ntfy.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_config_ntfy.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/tests/test_config_ntfy.py",
+          "line": 121,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/botfake-token/sendVideo",
+          "file": "mcgram-0.2.0/tests/test_tools_send_video.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "mcgram-0.2.0/tests/conftest.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "mcgram-0.2.0/tests/conftest.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/ntfy_client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/cli_channel.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/config.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "mcgram-0.2.0/src/mcgram/config.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 211,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "mcgram-0.2.0/src/mcgram/cli_init.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "mcgram-0.2.0/src/mcgram/tg_client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "promptguard-proxy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6f/b0/e98df08fda6d1e1e234c3334a02d465491a9e82e7ea00cc82d38febee316/promptguard_proxy-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:16.680657+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptguard_proxy-0.1.0/promptguard_proxy/adapters/anthropic/adapter.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "promptguard_proxy-0.1.0/promptguard_proxy/adapters/openrouter/adapter.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "promptguard_proxy-0.1.0/promptguard_proxy/adapters/groq/adapter.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "expense-csv-importer-local",
+      "version": "0.0.1b1",
+      "download_url": "https://files.pythonhosted.org/packages/58/59/98cc150afb5782cff1db59375c4b7dce70c52984c00e901811249e70b092/expense_csv_importer_local-0.0.1b1.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:16.109725+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://python-poetry.org/docs/pyproject",
+          "file": "expense_csv_importer_local-0.0.1b1/pyproject.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The pyproject.toml file | Documentation | Poetry - Python dependency management and packaging made easy",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "remote-mcp-server-tester",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/47/c94fbfbe6f6d23a4864c9e259b0d117b7790fbc60da14316a47b28aed15c/remote_mcp_server_tester-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:15.668229+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages/count_tokens",
+          "file": "remote_mcp_server_tester-0.1.0/main.py",
+          "line": 995,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages/count_tokens",
+          "file": "remote_mcp_server_tester-0.1.0/main.py",
+          "line": 1002,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "remote_mcp_server_tester-0.1.0/main.py",
+          "line": 1189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "odslint",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/24/1f/eb9821aaddabc5647a3accf1c3700354a6771515db29dec175c64a00e203/odslint-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:15.556674+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "odslint-0.1.0/src/odslint/loader.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2009/office",
+          "file": "odslint-0.1.0/src/odslint/vendor/flat_odf_cleanup.py",
+          "line": 567,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2009/office",
+          "file": "odslint-0.1.0/src/odslint/vendor/flat_odf_cleanup.py",
+          "line": 569,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2009/office",
+          "file": "odslint-0.1.0/src/odslint/vendor/flat_odf_cleanup.py",
+          "line": 570,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://openoffice.org/2009/office",
+          "file": "odslint-0.1.0/src/odslint/vendor/flat_odf_cleanup.py",
+          "line": 572,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "odslint-0.1.0/src/odslint/vendor/flat_odf_cleanup.py",
+          "line": 606,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "docculus",
+      "version": "0.0.1a0",
+      "download_url": "https://files.pythonhosted.org/packages/a3/8e/2b446582284dc65bb04f04e66e9890b38cdf55ed21921cba244a55295ea9/docculus-0.0.1a0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:10.320667+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.astral.sh/ruff/rules",
+          "file": "docculus-0.0.1a0/pyproject.toml",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules | Ruff",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vive",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/11/9e/73e5c6210bcf4d0153b652cb7a196472ec17edc6e977e703839f1f4d05f2/vive-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:09.911220+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://app.getvive.ai",
+          "file": "vive-1.0.0/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vive \u2014 WhatsApp Business Messaging Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.getvive.ai",
+          "file": "vive-1.0.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vive API documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.getvive.ai",
+          "file": "vive-1.0.0/vive/__init__.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vive \u2014 WhatsApp Business Messaging Platform",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "filesystem-local",
+      "version": "0.0.1b2",
+      "download_url": "https://files.pythonhosted.org/packages/a6/6d/3bbc9125622fc29ded98814b5abe5737385ab986d5fb39b52239d61e48a4/filesystem_local-0.0.1b2.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:09.423314+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://python-poetry.org/docs/pyproject",
+          "file": "filesystem_local-0.0.1b2/pyproject.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The pyproject.toml file | Documentation | Poetry - Python dependency management and packaging made easy",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "google-drive-local",
+      "version": "0.0.1b1",
+      "download_url": "https://files.pythonhosted.org/packages/92/fb/d91f3c4acdd6b89a41298a1973ebb58018b50450b628ae12e578227abba3/google_drive_local-0.0.1b1.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:09.132042+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://python-poetry.org/docs/pyproject",
+          "file": "google_drive_local-0.0.1b1/pyproject.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The pyproject.toml file | Documentation | Poetry - Python dependency management and packaging made easy",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "seryvon",
+      "version": "0.1.0.dev0",
+      "download_url": "https://files.pythonhosted.org/packages/aa/24/b565a12a230aedda46e81bf4926bccb98b91a237be46098a47b9bef7b779/seryvon-0.1.0.dev0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:08.710060+00:00",
+      "total_findings": 235,
+      "findings": [
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/header-notice.txt",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/pyproject.toml",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/docs",
+          "file": "seryvon-0.1.0.dev0/pyproject.toml",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/alembic/env.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/conftest.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "seryvon-0.1.0.dev0/tests/conftest.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "seryvon-0.1.0.dev0/tests/conftest.py",
+          "line": 37,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/__init__.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/signals.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/criterion.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/llm.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/artifact.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/prompts.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/models/enums.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/i18n/catalog.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/i18n/__init__.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/issues.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/engine.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/comparison.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/readiness.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/aggregate.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/perplexity.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.perplexity.ai/chat/completions",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/perplexity.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/tracking.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/cost.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/connector.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/__init__.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/engines.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/engines.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/citation/promptset.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/cli/main.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/keys.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/__init__.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/factory.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/s3.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/memory.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/storage/base.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/ai_discovery.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/gsc.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/wikidata.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/wikidata.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/serp.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://serpapi.com/search.json",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/serp.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://serpapi.com/search.json",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/serp.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/serp.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://serpapi.com/search.json",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/serp.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/pagespeed.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/openpagerank.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openpagerank.com/api/v1.0/getPageRank",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/openpagerank.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/dataforseo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.dataforseo.com/v3/domain_analytics/technologies/domain_technologies/live",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/dataforseo.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoGetSSL"
+        },
+        {
+          "url": "https://api.dataforseo.com/v3/dataforseo_labs/google/domain_rank_overview/live",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/connectors/dataforseo.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoGetSSL"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/tasks/app.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/tasks/audit.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/tasks/citation.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/crawl.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/playwright_render.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/discovery.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/safety.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/fetch.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/crawler/extract.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/reporting/pdf_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/reporting/markdown_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/reporting/json_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/reporting/html_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.dataforseo.com/v3/appendix/user_data",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 474,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoGetSSL"
+        },
+        {
+          "url": "https://openpagerank.com/api/v1.0/getPageRank",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 519,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 552,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.perplexity.ai/models",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 584,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://serpapi.com/account.json",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/api/main.py",
+          "line": 600,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/audit.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/audit_cost.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/settings_resolver.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/crypto.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/config.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/config.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/core/config.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/db/repository.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/db/models.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/db/base.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/geo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/authority.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/aeo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/aso.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/__init__.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/gso.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/seo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/src/seryvon/scoring/rules/perf.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_audit_flow.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_api.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_cli.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://competitor.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_cli.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Articles - Competitor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://competitor.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_cli.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Articles - Competitor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://competitor.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_cli.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Articles - Competitor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/integration/test_repository.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_markdown_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_crypto.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_discovery.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_discovery.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_discovery.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_perf.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_issues.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_issues.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_issues.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_authority.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_serp_connector.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.iana.org/domains/example",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_serp_connector.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Example Domains",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://another.org/page",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_serp_connector.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 530,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_scoring_engine.py",
+          "line": 249,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_gso.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_gso.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_geo.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a-propos",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/rich",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/thin",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/x",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/en/models/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 150,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/en/models/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/en/glossary/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 152,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/en/glossary/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/c",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aeo.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_engines.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_promptset.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_readiness.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_readiness.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_tasks_helpers.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_openpagerank.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_perplexity.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_perplexity.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_perplexity.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_perplexity.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_perplexity.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_dataforseo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pdf_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/page",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/page",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_pagespeed.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aso.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_aso.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_gsc.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/page",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 234,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 234,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 235,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 236,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 239,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 252,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 253,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 275,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 287,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 296,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 306,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/c",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 307,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/a",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 322,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "http://ex.com/b",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_rules_seo.py",
+          "line": 322,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_storage_factory.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_html_report.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_playwright_render.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_wikidata.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://schema.org",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_ai_discovery.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_comparison.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_citation_aggregate.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_tracking.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_extract.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_extract.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/xyz",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_extract.py",
+          "line": 311,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_extract.py",
+          "line": 229,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/xyz",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_extract.py",
+          "line": 299,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ex.com/final",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/final",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/missing",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/missing",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/sitemap.xml.gz",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/sitemap.xml.gz",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/robots.txt",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/robots.txt",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/robots.txt",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ex.com/robots.txt",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_fetch.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_safety.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_crawl.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com/bot",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_crawl.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_cost.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_storage_s3.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_settings_resolver.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_audit_cost.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_storage.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://seryvon.com",
+          "file": "seryvon-0.1.0.dev0/tests/unit/test_config.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Seryvon | Visibility audit for the agent era",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "csv-local",
+      "version": "0.0.1b3",
+      "download_url": "https://files.pythonhosted.org/packages/3d/95/38a14b58b0d160a1213684f8508361c4b4fc777605cf8747ac2a304d547b/csv_local-0.0.1b3.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:02.475873+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://python-poetry.org/docs/pyproject",
+          "file": "csv_local-0.0.1b3/pyproject.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The pyproject.toml file | Documentation | Poetry - Python dependency management and packaging made easy",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nudge-agent",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/59/81/fdf2bc5fa37106c6136f011a9fd7efaba0a6ef7680e5e9ebb06b5a20b1bf/nudge_agent-0.1.4.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:02.229344+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://console.groq.com/keys",
+          "file": "nudge_agent-0.1.4/followup_agent.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Keys - GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "nudge_agent-0.1.4/followup_agent.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "haru-cli",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/f3/0d/b89e2663a5a9cbd4a68ee7fb1592d603aa07c66fd7b875e0c08d88608e53/haru_cli-0.1.4.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:01.825215+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_agent_factory.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_sessions.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_session.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_sso.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_sso.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_sso.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 104,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 228,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 252,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 315,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 326,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 337,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 364,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_loader.py",
+          "line": 376,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_command.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_config_command.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_bedrock.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_identity.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cli.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cli.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cli.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cli.py",
+          "line": 47,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cli.py",
+          "line": 209,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_cache.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://example.awsapps.com/start",
+          "file": "haru_cli-0.1.4/tests/unit/test_orchestration.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS access portal",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "markpost",
+      "version": "0.2.0rc2",
+      "download_url": "https://files.pythonhosted.org/packages/2e/04/de45983ff4978e646afe4c88c3c1b9ec20158611fb13c698a5588f9876e2/markpost-0.2.0rc2.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:01.054988+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/_sync.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/_sync.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/_sync.py",
+          "line": 76,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/__init__.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/__init__.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/_async.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markpost.cc",
+          "file": "markpost-0.2.0rc2/markpost/_async.py",
+          "line": 77,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Markpost - Simple Markdown Publishing",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "forgepilot-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ee/70/bef8e30f4aebde9947d97a2c4557a5df4a289f0936fc66e9fe41cf27247e/forgepilot_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:59.857142+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://forgepilot.dev",
+          "file": "forgepilot_cli-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ForgePilot: AI for Mechanical Engineering Analysis",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://forgepilot.dev/docs/api",
+          "file": "forgepilot_cli-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ForgePilot API & CLI \u2014 Script FMEA, Drawing Review, Tolerance Stack-Up",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://forgepilot.dev/settings/api-keys",
+          "file": "forgepilot_cli-0.1.0/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ForgePilot: AI for Mechanical Engineering Analysis",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://forgepilot.dev/settings/api-keys",
+          "file": "forgepilot_cli-0.1.0/src/forgepilot_cli/cli.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ForgePilot: AI for Mechanical Engineering Analysis",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://forgepilot.dev/settings/api-keys",
+          "file": "forgepilot_cli-0.1.0/src/forgepilot_cli/cli.py",
+          "line": 58,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ForgePilot: AI for Mechanical Engineering Analysis",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "jacobian",
+      "version": "0.2.0a0",
+      "download_url": "https://files.pythonhosted.org/packages/a9/fc/d718c57b628be5ac5d5a89bde9cb54102afda1a9060f69cd78f0d01329c3/jacobian-0.2.0a0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:58.883272+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "jacobian-0.2.0a0/src/jacobian/references.py",
+          "line": 571,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "jacobian-0.2.0a0/src/jacobian/references.py",
+          "line": 892,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "jacobian-0.2.0a0/src/jacobian/references.py",
+          "line": 940,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "infragen",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a4/52/f12ffcd4e6eecfc81123473661697ef88171e09af466d6948644898ad5f2/infragen-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:57.847969+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://console.groq.com/keys[/cyan",
+          "file": "infragen-0.1.0/infragen/main.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com/keys[/cyan",
+          "file": "infragen-0.1.0/infragen/main.py",
+          "line": 47,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "infragen-0.1.0/infragen/config.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com/keys",
+          "file": "infragen-0.1.0/infragen/config.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Keys - GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com/keys",
+          "file": "infragen-0.1.0/infragen/tools/doctor.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Keys - GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "sellor-plugin-sdk",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/96/8d/56bdd2f0cda601d27f9dfbc0ce5282baf752eeaf4abcf66d3c98dc9bfdb8/sellor_plugin_sdk-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:57.341091+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://sellor.net/developers",
+          "file": "sellor_plugin_sdk-1.0.0/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u0430\u043c | Sellor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sellor.net/developers/docs",
+          "file": "sellor_plugin_sdk-1.0.0/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u044f SDK | Sellor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sellor.net",
+          "file": "sellor_plugin_sdk-1.0.0/sellor_sdk/runtime.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sellor \u2014 \u0432\u0441\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0432 \u043e\u0434\u043d\u043e\u043c \u0440\u0430\u0431\u043e\u0447\u0435\u043c \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0435",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sellor.net",
+          "file": "sellor_plugin_sdk-1.0.0/sellor_sdk/cli.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sellor \u2014 \u0432\u0441\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0432 \u043e\u0434\u043d\u043e\u043c \u0440\u0430\u0431\u043e\u0447\u0435\u043c \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0435",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sellor.net",
+          "file": "sellor_plugin_sdk-1.0.0/sellor_sdk/broker.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sellor \u2014 \u0432\u0441\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0432 \u043e\u0434\u043d\u043e\u043c \u0440\u0430\u0431\u043e\u0447\u0435\u043c \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0435",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "promcsv",
+      "version": "1.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/2c/e9/1892e9ebe7db2d171668c6a76939965a4ae735f64150f2622972772b3caa/promcsv-1.4.1.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:54.329633+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "ftp://x/m",
+          "file": "promcsv-1.4.1/tests/test_config.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "odoo-dependency-graph-plantuml",
+      "version": "1.2026.2",
+      "download_url": "https://files.pythonhosted.org/packages/29/1a/0099a52699ffc7d69ef283a4f363fc9d7747b9bdd43a192e2bae1ceb123c/odoo_dependency_graph_plantuml-1.2026.2.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:53.860582+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://plantuml.com",
+          "file": "odoo_dependency_graph_plantuml-1.2026.2/PLANTUML_LICENSE.txt",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-source tool that uses simple textual descriptions to draw beautiful UML diagrams.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "smartlyq",
+      "version": "0.1.5",
+      "download_url": "https://files.pythonhosted.org/packages/fa/39/b3e00245fb21f2f9a34b299748d5e26d1e01d4b168793fca4723e0205fdb/smartlyq-0.1.5.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:53.267282+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://docs.smartlyq.com",
+          "file": "smartlyq-0.1.5/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction - SmartlyQ",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.smartlyq.com/v1",
+          "file": "smartlyq-0.1.5/smartlyq/__init__.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.smartlyq.com/v1",
+          "file": "smartlyq-0.1.5/smartlyq/_core.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mint-lang",
+      "version": "0.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/df/1e/6c145cda186f4dab761d4ed688819d7c5bc90578dc348c80745d58cdb692/mint_lang-0.2.2.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:51.709335+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://jrsoftware.org/isdl.php",
+          "file": "mint_lang-0.2.2/mintlang/autobuild.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inno Setup Downloads",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nepali-rag",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/57/cfb101229dcfe1f03684695040a775f8ce7367c0acb54d998dd490065943/nepali_rag-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:50.955143+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "nepali_rag-0.1.0/nepali_rag/llm/openai_provider.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "nepali_rag-0.1.0/nepali_rag/llm/openai_provider.py",
+          "line": 13,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "nepali_rag-0.1.0/nepali_rag/evals/eval_model.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "nepali_rag-0.1.0/nepali_rag/evals/eval_model.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "optioncontext-mcp",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/50/24/a14bf4f93da6c4ed200714ac08ba98cd23416c2278a0c8fef32266ef23cb/optioncontext_mcp-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:50.315602+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://optioncontext.com",
+          "file": "optioncontext_mcp-0.1.1/src/optioncontext_mcp/client.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OptionContext \u2014 Live Indian Stock Market MCP Server & API",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "flighthub2-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5c/75/03d3152ad32cf84556cfecb588195dc54706dd75a3ff91f7b65aa9f85f48/flighthub2_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:48.751167+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://es-flight-api-eu.djigate.com",
+          "file": "flighthub2_cli-0.1.0/tests/conftest.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://es-flight-api-eu.djigate.com",
+          "file": "flighthub2_cli-0.1.0/src/flighthub2/config.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://es-flight-api-us.djigate.com",
+          "file": "flighthub2_cli-0.1.0/src/flighthub2/config.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "deped-enrichments",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/d9/15/755e0c50865827ec3facc81232ce6499ddf8efed8447fb02069379418d98/deped_enrichments-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:47.991287+00:00",
+      "total_findings": 28,
+      "findings": [
+        {
+          "url": "https://mv3.dev/deped-enrichments",
+          "file": "deped_enrichments-0.2.1/zensical.toml",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mv",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openstat.psa.gov.ph:443/PXWeb/api/v1/en/DB",
+          "file": "deped_enrichments-0.2.1/sources/openstat-area-context.toml",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/annual/global/tifs",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /products/CHIRPS/v3.0/annual/global/tifs/",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.chc.ucsb.edu/data/chirps3",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CHIRPS: Rainfall Estimates from Rain Gauge and Satellite Observations | Climate Hazards Center - UC Santa Barbara",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copernicus DEM - Global and European Digital Elevation Model | Copernicus Data Space Ecosystem",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copernicus DEM - Global and European Digital Elevation Model | Copernicus Data Space Ecosystem",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://eogdata.mines.edu/products/vnl",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "VIIRS Nighttime Light",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://eogdata.mines.edu/products/vnl",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "VIIRS Nighttime Light",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://esa-worldcover.org/en/data-access",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DATA | WORLDCOVER",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://esa-worldcover.org",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WorldCover | WORLDCOVER",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/Besttracks/bst_all.zip",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 248,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/trackarchives.html",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 249,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Japan Meteorological Agency | RSMC Tokyo - Typhoon Center | Best Track Data",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.WP.list.v04r01.csv",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 257,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ncei.noaa.gov/products/international-best-track-archive",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 258,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "International Best Track Archive for Climate Stewardship (IBTrACS) | National Centers for Environmental Information (NCEI)",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/ActiveFault/MapServer/0",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 269,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Layer: Active Fault (Fault System Information) (ID: 0)",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 270,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Folder: PHIVOLCSPublic",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 284,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://psa.gov.ph/statistics/income-expenditure/fies",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 299,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://psa.gov.ph/statistics/income-expenditure/fies",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 300,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openstat.psa.gov.ph/API-Documentation",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 312,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openstat.psa.gov.ph",
+          "file": "deped_enrichments-0.2.1/sources/enrichments.toml",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "deped_enrichments-0.2.1/src/deped_enrichments/coordinates/osm.py",
+          "line": 535,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openstat.psa.gov.ph:443/PXWeb/api/v1/en/DB",
+          "file": "deped_enrichments-0.2.1/src/deped_enrichments/staging/openstat.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://earthquake.usgs.gov/example",
+          "file": "deped_enrichments-0.2.1/tests/support/insights.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "deped_enrichments-0.2.1/tests/support/access.py",
+          "line": 411,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://earthquake.usgs.gov/example",
+          "file": "deped_enrichments-0.2.1/tests/enrichment/workbench/test_hazard_event_maps.py",
+          "line": 306,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://earthquake.usgs.gov/example",
+          "file": "deped_enrichments-0.2.1/tests/enrichment/workbench/test_hazard_event_maps.py",
+          "line": 386,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://wikiba.se/ontology",
+          "file": "deped_enrichments-0.2.1/tests/enrichment/sources/test_wikimedia.py",
+          "line": 328,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "data-openstreetmap-ph",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/81/41/786d715e349c20f6facdaafd6b506ba159466147694f23f54b6e86de3811/data_openstreetmap_ph-0.5.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:38.133789+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/tests/test_product.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/tests/test_product.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/tests/test_product.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/boundaries.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines.html",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/boundaries.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download OpenStreetMap for Philippines | Geofabrik Download Server",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/transport.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/transport.py",
+          "line": 164,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/fetch.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines.html",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/fetch.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download OpenStreetMap for Philippines | Geofabrik Download Server",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/fetch.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://osmdata.openstreetmap.de/data/land-polygons.html",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/fetch.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Land polygons",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/school_places.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/school_places.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/places_services.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/places_services.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://proj.org/schemas/v0.7/projjson.schema.json",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/school_campuses.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines-latest.osm.pbf",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/school_campuses.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://download.geofabrik.de/asia/philippines.html",
+          "file": "data_openstreetmap_ph-0.5.0/src/data_openstreetmap_ph/school_campuses.py",
+          "line": 219,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download OpenStreetMap for Philippines | Geofabrik Download Server",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ocr-extraction-understanding-eval",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/26/94/949645d501ee5e7e126bd41ba796f1d689cf9d55a570015c03924a562123/ocr_extraction_understanding_eval-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:36.372476+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "ocr_extraction_understanding_eval-0.1.0/src/visual_evals/judge.py",
+          "line": 476,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "betamatter",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8e/b6/e039bf853fa93232c2c136c6de358d9409bb2128274b02bcbd459ada9597/betamatter-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:36.206959+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://keepachangelog.com/en/1.1.0",
+          "file": "betamatter-0.1.0/pyproject.toml",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Keep a Changelog",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "betamatter-0.1.0/pyproject.toml",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "overshare",
       "version": "0.1.0",
@@ -6685,6 +11698,44 @@
           "signer": "ad-hoc"
         }
       ]
+    },
+    {
+      "package": "uds-pypkg",
+      "version": "1.0.1",
+      "analyzed_at": "2026-07-26T10:02:53.898922+00:00",
+      "binaries": [
+        {
+          "name": "uds.cp310-win_amd64.pyd",
+          "file": "uds.cp310-win_amd64.pyd",
+          "sha256": "2577aeab44abd4c72ac470d6bf5ebac0e2e38c6b408718f96e00f2e8e511d917",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "uds.cp310-win_amd64.pyd",
+          "file": "uds_pypkg/uds.cp310-win_amd64.pyd",
+          "sha256": "d6932b56bf71b094e00dbc7436317f893b722ababfbc3a8f9a0eacd8225acf52",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "ormx-py",
+      "version": "4.4.3",
+      "analyzed_at": "2026-07-26T10:03:17.570388+00:00",
+      "binaries": [
+        {
+          "name": "ormx_core.abi3.so",
+          "file": "ormx_core/ormx_core.abi3.so",
+          "sha256": "20c05531870fec3a7481f3dc6ead6e5a8ec4536db61e3678d0d6d94df92f4a93",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -6815,6 +11866,49 @@
           "command": "requests.post(self.oauth2_url, data=post, headers=headers, auth=(self.client_id, self.secret))",
           "resolved": false,
           "context": "PaypalProvider.get_access_token",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "libtab",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/17/f1/3b055d01030dcced7fb3a003383f53ac9246304462fb907628843994a0a9/libtab-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:02:54.871517+00:00",
+      "install_hooks": [
+        {
+          "file": "libtab-0.1.0/setup.py",
+          "line": 33,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['bash', build_sh], check=True, cwd=HERE)",
+          "resolved": false,
+          "context": "BuildLibtabSo.run",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "vive",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/11/9e/73e5c6210bcf4d0153b652cb7a196472ec17edc6e977e703839f1f4d05f2/vive-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T10:03:09.911434+00:00",
+      "install_hooks": [
+        {
+          "file": "vive-1.0.0/vive/__init__.py",
+          "line": 274,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(self.base_url + path, data=payload, headers=headers, method='POST')",
+          "resolved": false,
+          "context": "Vive._post",
+          "source": "package_init"
+        },
+        {
+          "file": "vive-1.0.0/vive/__init__.py",
+          "line": 278,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req, timeout=self.timeout)",
+          "resolved": false,
+          "context": "Vive._post",
           "source": "package_init"
         }
       ]
