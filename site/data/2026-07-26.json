@@ -1,11 +1,2017 @@
 {
-  "generated_at": "2026-07-26T20:59:42.017077+00:00",
+  "generated_at": "2026-07-26T22:59:52.860326+00:00",
   "stats": {
-    "total_packages": 224,
-    "malicious": 16,
-    "clean": 208
+    "total_packages": 244,
+    "malicious": 18,
+    "clean": 226
   },
   "packages": [
+    {
+      "name": "straylight-agent",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ae/c0/bf2fb137ab59f9d5c4247ee6b0f5365a52d043bbba8852841a085a1451c4/straylight_agent-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:52.029709+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://serpapi.com/search.json",
+          "file": "straylight_agent-0.1.0/src/straylight/tools.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "darwin-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/01/0c/702eac22e89b6d86aa92655ad95ddada8a3f057b3579ae429eaf124e71a1/darwin_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:51.676801+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://docs.darwin.so/sdks/python",
+          "file": "darwin_sdk-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python SDK - Darwin",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.darwin.so/api/v1",
+          "file": "darwin_sdk-0.1.0/src/darwin_sdk/environment.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+          "file": "darwin_sdk-0.1.0/src/darwin_sdk/core/http_sse/_decoders.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HTML Standard",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nested-memvid-agent",
+      "version": "0.4.11",
+      "download_url": "https://files.pythonhosted.org/packages/dd/f6/d330d02cfe2c0e097545d4e20883a1c05dfc997147e4924c2e22c2d65b74/nested_memvid_agent-0.4.11.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:50.722390+00:00",
+      "total_findings": 23,
+      "findings": [
+        {
+          "url": "https://sindresorhus.com",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/web_dist/THIRD_PARTY_NOTICES.txt",
+          "line": 610,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sindre Sorhus",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sindresorhus.com",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/web_dist/THIRD_PARTY_NOTICES.txt",
+          "line": 891,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sindre Sorhus",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/model_catalog.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/model_catalog.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/model_catalog.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/model_catalog.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/model_catalog.py",
+          "line": 256,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/factory.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/factory.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/factory.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/llm/factory.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 208,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 245,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/channels/adapters.py",
+          "line": 252,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://duckduckgo.com/html",
+          "file": "nested_memvid_agent-0.4.11/src/nested_memvid_agent/tools/web_tools.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo HTML: Private Search Without JavaScript",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://sindresorhus.com",
+          "file": "nested_memvid_agent-0.4.11/web/public/THIRD_PARTY_NOTICES.txt",
+          "line": 610,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sindre Sorhus",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sindresorhus.com",
+          "file": "nested_memvid_agent-0.4.11/web/public/THIRD_PARTY_NOTICES.txt",
+          "line": 891,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sindre Sorhus",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "picokit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/57/e8/9dacec66a8c7441c0ddd6e4009b3c2cd7daf9eff932f89d6a0a935ae27b2/picokit-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:47.667066+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi.tar.xz",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-aarch64-arm-none-eabi.tar.xz",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-darwin-x86_64-arm-none-eabi.tar.xz",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-darwin-arm64-arm-none-eabi.tar.xz",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-mingw-w64-i686-arm-none-eabi.zip",
+          "file": "picokit-0.1.0/picokit/toolchain.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "sondar",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/27/78/f64becc871f74b52c50f90b75f611cec3797b5ddcad4169e1a52343867fd/sondar-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:46.451167+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://sondar.dev",
+          "file": "sondar-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "sondar.dev",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://sondar.dev/sandbox",
+          "file": "sondar-0.1.0/src/sondar/__main__.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://sondar.dev/pricing",
+          "file": "sondar-0.1.0/src/sondar/__main__.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "darwin-rag",
+      "version": "0.2.3",
+      "download_url": "https://files.pythonhosted.org/packages/7b/2d/3ec6c63348cc638ad2943fc6c150915a2fe80edf8ffcb3d25e22186bba52/darwin_rag-0.2.3.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:46.029877+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc2616.pdf",
+          "file": "darwin_rag-0.2.3/tests/test_parsing.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "darwin_rag-0.2.3/src/core/Models/Lib/ModelSpec.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pipecat-speko",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d1/25/328a1a6a34499ce6c3bdd072fa775d33f3f77c41eeda22a7dcf926501ee3/pipecat_speko-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:44.794414+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://speko.dev/docs/pipecat",
+          "file": "pipecat_speko-0.1.0/pyproject.toml",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pipecat - Speko docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://speko.dev",
+          "file": "pipecat_speko-0.1.0/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "speko.dev - the router for voice models",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.speko.dev",
+          "file": "pipecat_speko-0.1.0/src/pipecat_speko/common.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mailstein",
+      "version": "0.2.10",
+      "download_url": "https://files.pythonhosted.org/packages/9e/b7/db18ab142ca0d348c0470586d3143cd528e31141fb5943afd698c6055300/mailstein-0.2.10.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:44.325441+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://app.mailstein.com",
+          "file": "mailstein-0.2.10/mailstein/mailstein.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mailstein",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "navige-sdk",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/2e/a0/0df9e1f7b6a98e9ff2ea5b8be1487415d53c585aa8a42af887eb202782ef/navige_sdk-2.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:43.209488+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://navige.ai",
+          "file": "navige_sdk-2.0.0/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Navige \u2014 Navigate every AI action.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://navige.ai/technical.html",
+          "file": "navige_sdk-2.0.0/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Navige \u2014 Technical Reference",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.resend.com/emails",
+          "file": "navige_sdk-2.0.0/navige/client.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "checkleaked-spotify-api",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/8f/90/1e3eca2b72fc131bdbb11eef845b4b7a1c698040b30cba603707e29142ae/checkleaked_spotify_api-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:42.203894+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://spotify-proxy.checkleaked.cc",
+          "file": "checkleaked_spotify_api-1.0.0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spotify-proxy.checkleaked.cc/docs",
+          "file": "checkleaked_spotify_api-1.0.0/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spotify Data API \u2014 Reference",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spotify-proxy.checkleaked.cc/openapi.json",
+          "file": "checkleaked_spotify_api-1.0.0/pyproject.toml",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open.spotify.com/intl-es/artist/4tZwfgrHOc3mvqYlEYSvVi",
+          "file": "checkleaked_spotify_api-1.0.0/tests/test_resources.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spotify \u2013 Web Player",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://spotify-proxy.checkleaked.cc/spotify-data/markets",
+          "file": "checkleaked_spotify_api-1.0.0/tests/test_transport.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open.spotify.com/intl-es/artist/artist123?si=x",
+          "file": "checkleaked_spotify_api-1.0.0/tests/test_ids_pagination.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spotify",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://open.spotify.com/track/b",
+          "file": "checkleaked_spotify_api-1.0.0/tests/test_ids_pagination.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spotify \u2013 Web Player",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://spotify81.p.rapidapi.com",
+          "file": "checkleaked_spotify_api-1.0.0/src/spotify_api_sdk/config.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://spotify-proxy.checkleaked.cc/spotify-data",
+          "file": "checkleaked_spotify_api-1.0.0/src/spotify_api_sdk/config.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "matelab-python-sdk",
+      "version": "0.1.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/1b/f4/5466f1715f8ab09ad3f71045041a4b1ad3104cc0a50db5b807a0b5216572/matelab_python_sdk-0.1.0a1.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:41.821176+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://repo.huaweicloud.com/repository/pypi/simple",
+          "file": "matelab_python_sdk-0.1.0a1/pyproject.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://matelab.iphy.ac.cn/api",
+          "file": "matelab_python_sdk-0.1.0a1/tests/test_client.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://matelab.iphy.ac.cn/api",
+          "file": "matelab_python_sdk-0.1.0a1/src/matelab/client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        }
+      ]
+    },
+    {
+      "name": "nexustrade",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/15/45/ba966c597dc406affb07b13d05f301b409d67e0fc3e9af89607b6fcb58be/nexustrade-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:35.692703+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://nexustrade.io",
+          "file": "nexustrade-0.1.0/pyproject.toml",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NexusTrade | Find & Build AI Trading Bots",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexustrade.io/developers",
+          "file": "nexustrade-0.1.0/nexustrade/client.py",
+          "line": 424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NexusTrade MCP & Trading API | Give Any AI Agent a Real Trading Stack",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexustrade.io/api/v1",
+          "file": "nexustrade-0.1.0/nexustrade/client.py",
+          "line": 427,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NexusTrade | Find & Build AI Trading Bots",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexustrade.io/developers",
+          "file": "nexustrade-0.1.0/nexustrade/client.py",
+          "line": 423,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NexusTrade MCP & Trading API | Give Any AI Agent a Real Trading Stack",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nexustrade.io/api/v1",
+          "file": "nexustrade-0.1.0/nexustrade/client.py",
+          "line": 423,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NexusTrade | Find & Build AI Trading Bots",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vidushi-oa",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/e4/c9/972c2f654cdedf0496960bc2f921a4b8cea5cf155f3df24e642b0064960a/vidushi_oa-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:34.473755+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.fastmail.com/jmap/session",
+          "file": "vidushi_oa-1.0.0/tests/test_cr_oa_020_jmap.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fastmail.com/jmap/api",
+          "file": "vidushi_oa-1.0.0/tests/test_cr_oa_020_jmap.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zoomcorp.com/h1/manual",
+          "file": "vidushi_oa-1.0.0/tests/test_cr_oa_010_row_ergonomics.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zoomcorp.com/h1/spec",
+          "file": "vidushi_oa-1.0.0/tests/test_cr_oa_010_row_ergonomics.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fastmail.com/jmap/session",
+          "file": "vidushi_oa-1.0.0/vidushi_oa/mail/jmap.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "runcloud-sdk",
+      "version": "0.7.0",
+      "download_url": "https://files.pythonhosted.org/packages/c0/32/7b7c3cc92366c7c99163ff3d413823cc70872db8df74f781deb8084d0c53/runcloud_sdk-0.7.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:31.886395+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://run.cloud",
+          "file": "runcloud_sdk-0.7.0/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Run Cloud \u2014 Simplest, Finest, and Cheapest Sandboxes + Simulators",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.run.cloud",
+          "file": "runcloud_sdk-0.7.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - run.cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.run.cloud",
+          "file": "runcloud_sdk-0.7.0/runcloud/client.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "captcha-solver-sdk",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/6a/6f9dcf5876b81a8f29a1406676d883872411a298db870f57c6c08daa8592/captcha_solver_sdk-1.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:31.134982+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://accounts.hcaptcha.com/demo",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 258,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hCAPTCHA Demo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gt4.geetest.com",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 287,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://nowsecure.nl",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 451,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nowsecure.nl",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nowsecure.nl",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 457,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nowsecure.nl",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://accounts.hcaptcha.com/demo",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 254,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hCAPTCHA Demo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gt4.geetest.com",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 280,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://nowsecure.nl",
+          "file": "captcha_solver_sdk-1.1.0/captcha_solver_sdk/client.py",
+          "line": 437,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nowsecure.nl",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "sui-scallop-sdk",
+      "version": "0.3.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/0a/98/8e74b5521b4fa363a179d3887f1f53cf6433c9f48de8a82ca9524e6ab7c2/sui_scallop_sdk-0.3.0a1.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:29.151008+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://sui.apis.scallop.io/addresses",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/addresses.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://fullnode.mainnet.sui.io:443",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/addresses.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fullnode.testnet.sui.io:443",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/addresses.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fullnode.devnet.sui.io:443",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/addresses.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sui.apis.scallop.io/addresses/67c44a103fe1b8c454eb9699",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/oracle.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://sui.apis.scallop.io/addresses/67c44a103fe1b8c454eb9699",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/oracle.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hermes.pyth.network",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/oracle.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sui.apis.scallop.io/addresses/67c44a103fe1b8c454eb9699",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/constants.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://sui.apis.scallop.io/addresses/67c44a103fe1b8c454eb9699",
+          "file": "sui_scallop_sdk-0.3.0a1/src/sui_scallop_sdk/constants.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "fraud-detection-xy",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/e5/25/fdf28b49f3df370811e830fae4601319b6caff3ef41265e601e3dd09bc74/fraud_detection_xy-1.0.2.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:28.056227+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://zenodo.org/records/7395559/files/creditcard.csv?download=1",
+          "file": "fraud_detection_xy-1.0.2/src/fraud_detection/data/loading.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "jittest",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/0e/d8/b2bd515c9737f20c65aad5fe4d3a5b7dde1ec88a09fedf8ff5aea751326e/jittest-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:26.121826+00:00",
+      "total_findings": 15,
+      "findings": [
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 319,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 323,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/chat/completions",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 330,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 336,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 348,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 361,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 375,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 388,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 407,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "jittest-0.2.1/tests/test_units.py",
+          "line": 414,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "jittest-0.2.1/src/jittest/llm.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "jittest-0.2.1/src/jittest/llm.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "jittest-0.2.1/src/jittest/llm.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "jittest-0.2.1/src/jittest/llm.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "jittest-0.2.1/src/jittest/llm.py",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "miadi-webweave",
+      "version": "0.7.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/6e/0b84b66b0b160c5559f3a9c0dac664b09bcf65cb3da5298c5f311d97aca5/miadi_webweave-0.7.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:24.978926+00:00",
+      "total_findings": 55,
+      "findings": [
+        {
+          "url": "http://simp.ly/p/yJ5sNZ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "---",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://app.simplenote.com/p/yJ5sNZ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "---",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://simp.ly/p/yJ5sNZ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "---",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://app.simplenote.com/p",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 180,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 659,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 665,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 705,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 711,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 755,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 761,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 810,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 816,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 857,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 863,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 935,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_sharing.py",
+          "line": 941,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/cli.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/n",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/cli.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 332,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 339,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 624,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 630,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 864,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/session_manager.py",
+          "line": 870,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 157,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 443,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 450,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 471,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 476,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 48,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 437,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 437,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 465,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/playwright_writer.py",
+          "line": 465,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/browser.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/config.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/n/76502186-4d7d-48d6-a961-80a48573b2c7",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/note/76502186-4d7d-48d6-a961-80a48573b2c7",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 335,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 382,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com?search=",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 854,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 27,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 27,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com/p/0ZqWsQ",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/io.py",
+          "line": 323,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "18 - 241121_gm",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 219,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 360,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 366,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 421,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.simplenote.com",
+          "file": "miadi_webweave-0.7.0/miadi_webweave/commands/sessions.py",
+          "line": 427,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Simplenote",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pytakumi",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f6/f8/d3766bf3e6291d755c1d054bd09066b4ededf00b5931b4d454ef1e967fdb/pytakumi-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:24.031845+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://takumi.kane.tw",
+          "file": "pytakumi-0.1.0/pyproject.toml",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Takumi: Render JSX to images. Skip the browser.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://takumi.kane.tw/docs",
+          "file": "pytakumi-0.1.0/pyproject.toml",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sh.rustup.rs",
+          "file": "pytakumi-0.1.0/pyproject.toml",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://takumi.kane.tw",
+          "file": "pytakumi-0.1.0/vendor/takumi/takumi/Cargo.toml",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Takumi: Render JSX to images. Skip the browser.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.sil.org",
+          "file": "pytakumi-0.1.0/vendor/takumi/assets/fonts/OFL.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SIL Global \u2013 Life in Every Language",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openfontlicense.org",
+          "file": "pytakumi-0.1.0/vendor/takumi/assets/fonts/OFL.txt",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SIL Open Font License",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openfontlicense.org",
+          "file": "pytakumi-0.1.0/vendor/takumi/assets/fonts/cjk-locl-test/OFL.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SIL Open Font License",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://takumi.kane.tw",
+          "file": "pytakumi-0.1.0/vendor/takumi/docs/public/robots.txt",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Takumi: Render JSX to images. Skip the browser.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://takumi.kane.tw/sitemap.xml",
+          "file": "pytakumi-0.1.0/vendor/takumi/docs/public/robots.txt",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "querysaas",
       "version": "0.1.0",
@@ -35807,6 +37813,84 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "telekinesis-isaacsim-client",
+      "version": "0.1.1",
+      "analyzed_at": "2026-07-26T22:59:26.905483+00:00",
+      "binaries": [
+        {
+          "name": "msvcp140-8f141b4454fa78db34bc1f28c571b4da.dll",
+          "file": "telekinesis_isaacsim_client.libs/msvcp140-8f141b4454fa78db34bc1f28c571b4da.dll",
+          "sha256": "8f141b4454fa78db34bc1f28c571b4da0e00cd2c43f7ad0e282f313036826aae",
+          "format": "pe",
+          "signed": true,
+          "signer": "C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Windows Software Compatibility Publisher"
+        },
+        {
+          "name": "libcurl-46fcb28ed2cec3a7265cb68afe5d9bf9.dll",
+          "file": "telekinesis_isaacsim_client.libs/libcurl-46fcb28ed2cec3a7265cb68afe5d9bf9.dll",
+          "sha256": "70de86125453ba34b1f7ad220e0f233d5b035bdf4e5d5b4e95844b5bb33643d9",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "z-fe83c45663b1f9e6baa66fd68683b8f6.dll",
+          "file": "telekinesis_isaacsim_client.libs/z-fe83c45663b1f9e6baa66fd68683b8f6.dll",
+          "sha256": "fe83c45663b1f9e6baa66fd68683b8f655547b2463e786b20b53c14ae09778e4",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "python312.dll",
+          "file": "telekinesis/isaacsim_client/python312.dll",
+          "sha256": "8105fb3ae0440bf94d94aa46946852e40feb267d671b86ec875b33a8d1bc2653",
+          "format": "pe",
+          "signed": true,
+          "signer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root G4"
+        },
+        {
+          "name": "libcurl.dll",
+          "file": "telekinesis/isaacsim_client/libcurl.dll",
+          "sha256": "d7e8666f13a9e28d3266d03ecca8d0824ca8262ac223c8d2c6daaf5822ee8e37",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_isaacsim_client.cp312-win_amd64.pyd",
+          "file": "telekinesis/isaacsim_client/_isaacsim_client.cp312-win_amd64.pyd",
+          "sha256": "b40a87fe936adbc4a54d09a0ec7034f76e1c4282b7a7922f16b53214dabf63bf",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "z.dll",
+          "file": "telekinesis/isaacsim_client/z.dll",
+          "sha256": "fe83c45663b1f9e6baa66fd68683b8f655547b2463e786b20b53c14ae09778e4",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "fxl",
+      "version": "0.1.0",
+      "analyzed_at": "2026-07-26T22:59:29.312585+00:00",
+      "binaries": [
+        {
+          "name": "_core.cp312-win_amd64.pyd",
+          "file": "fxl/_core.cp312-win_amd64.pyd",
+          "sha256": "1c942bd93a74cf251fc56828971b9c8e8c93fed42f7eb2394969f5e1c6b23981",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -36102,6 +38186,23 @@
           "command": "subprocess.run(f'{terma}', shell=True)",
           "resolved": false,
           "context": "modeL",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "vllm-cleaner",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e0/87/6f629bcd555c77bba5c90244fa429ce9d8d7fc929b7cb301d5d679a7d347/vllm_cleaner-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-26T22:59:26.612810+00:00",
+      "install_hooks": [
+        {
+          "file": "vllm_cleaner-0.1.0/vllm_cleaner/__init__.py",
+          "line": 14,
+          "call": "subprocess.run",
+          "command": "subprocess.run(cmd, shell=True, capture_output=True, text=True)",
+          "resolved": false,
+          "context": "VLLMCleaner.get_pid_by_port",
           "source": "package_init"
         }
       ]
