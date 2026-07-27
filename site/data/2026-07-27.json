@@ -1,11 +1,1695 @@
 {
-  "generated_at": "2026-07-27T17:45:06.871805+00:00",
+  "generated_at": "2026-07-27T19:29:00.694345+00:00",
   "stats": {
-    "total_packages": 212,
-    "malicious": 13,
-    "clean": 199
+    "total_packages": 239,
+    "malicious": 15,
+    "clean": 224
   },
   "packages": [
+    {
+      "name": "labwire-conformance",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/f3/96/16028c0940dbce6fe4972ace6cccce5c6eb897d27241ae89c1a8b1ed0a6d/labwire_conformance-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:59.835989+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "ws://x",
+          "file": "labwire_conformance-0.3.0/tests/test_synth_and_report.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://x",
+          "file": "labwire_conformance-0.3.0/tests/test_synth_and_report.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://h",
+          "file": "labwire_conformance-0.3.0/src/labwire/conformance/_report.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://h",
+          "file": "labwire_conformance-0.3.0/src/labwire/conformance/_report.py",
+          "line": 38,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "reporeaver",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/6e/90/83f46665946b412117bfb15ae4e97d8a065e3472d6e8395c30a7d4183593/reporeaver-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:58.697973+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_deobfuscation.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_deobfuscation.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://evil.com",
+          "file": "reporeaver-0.2.0/tests/test_new_analyzers.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_new_analyzers.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://evil.com",
+          "file": "reporeaver-0.2.0/tests/test_new_analyzers.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://evil.com/payload.tar.gz",
+          "file": "reporeaver-0.2.0/tests/test_new_analyzers.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 280,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/payload",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 332,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/collect",
+          "file": "reporeaver-0.2.0/tests/test_analyzers.py",
+          "line": 344,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.osv.dev/v1/query",
+          "file": "reporeaver-0.2.0/reporeaver/feeds.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mb-api.abuse.ch/api/v1",
+          "file": "reporeaver-0.2.0/reporeaver/feeds.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "scaffold-xblock",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/47/95/761499fba34be012f2b93886021860d596104fc0cb9a3599a7fa97518f66/scaffold_xblock-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:55.404009+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://scaffold.ac",
+          "file": "scaffold_xblock-0.1.1/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "scaffold \u00b7 author the way learners experience it",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ghostrun",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3d/f1/05882c8294a04c4df3d0474f821bbd733253eb22129273a0c438bc621a87/ghostrun-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:54.523946+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "ghostrun-0.1.0/tests/test_config_and_record.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "transformerlab-internal",
+      "version": "0.1.47",
+      "download_url": "https://files.pythonhosted.org/packages/61/1f/906426630afefe011f67dcff8f4defc20a786e4fe266a6eb6563d3bf6a6a/transformerlab_internal-0.1.47.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:53.756344+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://wandb.ai/test/run-123",
+          "file": "transformerlab_internal-0.1.47/tests/test_lab_facade.py",
+          "line": 858,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Weights & Biases",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vs_align",
+      "version": "3.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/bf/fd/865e7eff89c389de8f6617cf758af7b7bc1c2448b145863ca5da0668fe9a/vs_align-3.3.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:52.517456+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://www.verlab.dcc.ufmg.br/descriptors/xfeat_cvpr24",
+          "file": "vs_align-3.3.0/vs_align/spatial_alignment.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XFeat: Accelerated Features for Lightweight Image Matching | VeRLab",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.verlab.dcc.ufmg.br/descriptors/xfeat_cvpr24",
+          "file": "vs_align-3.3.0/vs_align/xfeat/xfeat_align.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XFeat: Accelerated Features for Lightweight Image Matching | VeRLab",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.verlab.dcc.ufmg.br/descriptors/xfeat_cvpr24",
+          "file": "vs_align-3.3.0/vs_align/xfeat/xfeat_arch.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XFeat: Accelerated Features for Lightweight Image Matching | VeRLab",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.verlab.dcc.ufmg.br/descriptors/xfeat_cvpr24",
+          "file": "vs_align-3.3.0/vs_align/xfeat/xfeat_arch.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XFeat: Accelerated Features for Lightweight Image Matching | VeRLab",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://arxiv.org/abs/2308.03060",
+          "file": "vs_align-3.3.0/vs_align/topiq/topiq_arch.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2308.03060] TOPIQ: A Top-down Approach from Semantics to Distortions for Image Quality Assessment",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "karavox",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f9/29/d14ab5be53a1b271f9989dd002f97afaf29d58583ed3bf981b185812e838/karavox-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:44.148973+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://karavox.org",
+          "file": "karavox-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "karavox \u2014 the open karaoke format",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-channel-twilio",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/7f/3a/8dbaf41e2bc3bf18703d7c275a807fa00ac62e9f56bf0926792fc216213a/tai42_channel_twilio-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:42.991400+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_channel_twilio-0.1.1/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-channel-telegram",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/a7/d4/da5582db5180d2785b24292dd93aba94bbc243cfdf1ed93d4d8e9f237e31/tai42_channel_telegram-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:41.776184+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_channel_telegram-0.1.1/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_channel.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_channel.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot123456:test-token/sendMessage",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_channel.py",
+          "line": 42,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot123456:test-token/sendMessage",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_channel.py",
+          "line": 220,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_settings.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_register.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot123456:test-token/setWebhook",
+          "file": "tai42_channel_telegram-0.1.1/tests/test_register.py",
+          "line": 74,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "tai42_channel_telegram-0.1.1/src/tai42_channel_telegram/settings.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "tai42-channel-slack",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/69/62/c1ea9dc0325dcb36273e2547667ac7fff446f402509f4a74f53bab7865bc/tai42_channel_slack-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:40.015124+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_channel_slack-0.1.1/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-connector-google",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/e7/43/f50ee30082efcc0f9040c1e5286db6edf22acdc206b5845a167b5657a604/tai42_connector_google-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:38.951673+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_connector_google-0.1.1/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "certbot-dns-lws",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/2a/6d/5b6a2ba4f7f0705dadcbf3eff0d5be764c1df50b1b546d038507a7fd375d/certbot_dns_lws-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:37.690867+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.lws.net/v1",
+          "file": "certbot_dns_lws-1.0.0/src/certbot_dns_lws/client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "originblame",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/b6/d1/14ea30109f92775503b535b23e433f9ba0dcda9751843809ce863fc079db/originblame-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:35.972734+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "http://www.beijing.gov.cn",
+          "file": "originblame-0.2.0/python/packages/ob-util/tests/test_mediawiki.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5317\u4eac\u5e02\u4eba\u6c11\u653f\u5e9c\u95e8\u6237\u7f51\u7ad9",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.mediawiki.org/xml/export-0.11",
+          "file": "originblame-0.2.0/python/packages/ob-util/tests/test_mediawiki.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.beijing.gov.cn",
+          "file": "originblame-0.2.0/python/packages/ob-util/tests/test_mediawiki.py",
+          "line": 112,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5317\u4eac\u5e02\u4eba\u6c11\u653f\u5e9c\u95e8\u6237\u7f51\u7ad9",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.mediawiki.org/xml/export-0.11",
+          "file": "originblame-0.2.0/python/packages/ob-util/tests/test_mediawiki.py",
+          "line": 200,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "exozippy",
+      "version": "0.1.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/65/ba/9f94a985e1a842d149cc6e367c4675d574ff91f9e2c0f0ee77ffe1dcdbf5/exozippy-0.1.0rc1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:32.860341+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://ui.adsabs.harvard.edu/abs/2021ApJ...917...78K/abstract",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/galacticmodel/galacticmodel.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://ui.adsabs.harvard.edu/abs/2021ApJ...917...78K/abstract",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/galacticmodel/galacticmodel.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://zenodo.org/records/20547997/files/NextGen.spectra.csv?download=1",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/sed/make_bc.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://zenodo.org/records/20547997/files/NextGen.wavelength.csv?download=1",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/sed/make_bc.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://svo2.cab.inta-csic.es/theory/fps",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/sed/filters/filter.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SVO Filter Profile Service",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://svo2.cab.inta-csic.es/theory/fps/index.php?mode=browse",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/sed/filters/filter.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SVO Filter Profile Service",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://svo2.cab.inta-csic.es/theory/fps/index.php?mode=browse",
+          "file": "exozippy-0.1.0rc1/src/exozippy/components/sed/filters/filter.py",
+          "line": 100,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SVO Filter Profile Service",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        }
+      ]
+    },
+    {
+      "name": "mship",
+      "version": "0.7.4",
+      "download_url": "https://files.pythonhosted.org/packages/9e/80/d31b461e2a500d403708c41f475dba3a5c8ebb0a06caba674c9db852e758/mship-0.7.4.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:29.229889+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://docs.model-ship.ai",
+          "file": "mship-0.7.4/pyproject.toml",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Modelship",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://wheels.vllm.ai/0.24.0/cpu",
+          "file": "mship-0.7.4/pyproject.toml",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "memorant",
+      "version": "1.0.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/4c/be/ea0d948bc98bafeac27dec92e66a7e9c92b80ffd74bfbaf557a577bf32b7/memorant-1.0.0rc1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:26.433350+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://opencode.ai/zen/go/v1/chat/completions",
+          "file": "memorant-1.0.0rc1/references/_glm_runner.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "agentswing",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/68/cb/c35edceb7fa860bf2c4c33c68622698e50e6c161c6d764a501d79909856e/agentswing-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:25.540203+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://general-runtime.voiceflow.com/state/user/x/interact",
+          "file": "agentswing-0.1.0/tests/test_real_agent_shapes.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "agentswing-0.1.0/agentswing/llm/client.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "agentswing-0.1.0/agentswing/llm/client.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "agentswing-0.1.0/agentswing/llm/client.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "cloudshellgpt",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/72/06/7f72f4f07cb368d83d35a1931d38db4bc59949dc9b051d834a0228036f98/cloudshellgpt-1.0.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:24.500132+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://evil.com/payload",
+          "file": "cloudshellgpt-1.0.1/tests/unit/test_executor.py",
+          "line": 820,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "oayssys-ai-citation-board",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/55/88/05467eebe4cebb145a320692b8385249171736665280be4b43adcd9cd8b8/oayssys_ai_citation_board-1.0.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:23.781491+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://oaysys.com",
+          "file": "oayssys_ai_citation_board-1.0.1/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Oaysys - Digital Marketing Agency",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "swarm-seek",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/6d/f2/380b7105554d58ea524a9191d303165ee3372d35796827f0666ccb588584/swarm_seek-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:23.036312+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1016/j.amc.2009.03.090",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/benchmarks/functions.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.amc.2009.03.090",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/benchmarks/functions.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.asoc.2014.06.035",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/qabc.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.asoc.2014.06.035",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/qabc.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.ins.2010.07.015",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/mabc.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.ins.2010.07.015",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/mabc.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1007/s10898-007-9149-x",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/original.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "A powerful and efficient algorithm for numerical function optimization: artificial bee colony (ABC) algorithm | Journal of Global Optimization | Springer Nature Link",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1007/s10898-007-9149-x",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/original.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "A powerful and efficient algorithm for numerical function optimization: artificial bee colony (ABC) algorithm | Journal of Global Optimization | Springer Nature Link",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.amc.2010.08.049",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/gabc.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.amc.2010.08.049",
+          "file": "swarm_seek-0.1.1/src/swarm_seek/variants/gabc.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "claudefleet-agent",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/dd/e4/4b5cbcefa866c2ecbdb7844d916dc421b9e18e449cbe7037b4045d6ab504/claudefleet_agent-0.1.2.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:20.706176+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "wss://example/ws",
+          "file": "claudefleet_agent-0.1.2/tests/test_config.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://example/ws",
+          "file": "claudefleet_agent-0.1.2/tests/test_config.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "quant-videogen",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/74/50/ab8cdea9dc0602fbc88daf9cc99d9885d35ad3c885f68602a90d6be03e2b/quant_videogen-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:20.532982+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2602.02958",
+          "file": "quant_videogen-0.1.0/pyproject.toml",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2602.02958] Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "thereed",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/65/cd/d391f2a96517a9abb9a975e06d32425873a5a7e6bc1ea766ad799c2b8973/thereed-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:19.886341+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://thereed.dev",
+          "file": "thereed-0.0.1/pyproject.toml",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "thereed.dev",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://thereed.dev",
+          "file": "thereed-0.0.1/pyproject.toml",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "thereed.dev",
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "runinfra-cli",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ae/ff/daf38dbb3c8cfc90f0453e157a87cad87a84262def2ded55c8e08be19bea/runinfra_cli-0.2.0-py3-none-macosx_10_12_x86_64.whl",
+      "analyzed_at": "2026-07-27T19:28:18.944087+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://runinfra.ai/contact",
+          "file": "runinfra_cli/__init__.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Contact | RunInfra",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runinfra.ai/contact",
+          "file": "runinfra_cli/__init__.py",
+          "line": 167,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Contact | RunInfra",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runinfra.ai/contact",
+          "file": "runinfra_cli/__init__.py",
+          "line": 183,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Contact | RunInfra",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runinfra.ai/contact",
+          "file": "runinfra_cli/__init__.py",
+          "line": 197,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Contact | RunInfra",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "weight-custody-manifest",
+      "version": "0.19.0",
+      "download_url": "https://files.pythonhosted.org/packages/6d/0b/25dac7ae1eb88cb5dc307510c5413db8a8452800ce937b5bce36d610d866/weight_custody_manifest-0.19.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:17.729427+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162",
+          "file": "weight_custody_manifest-0.19.0/src/wcm/_merkle.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9162: Certificate Transparency Version 2.0 | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162",
+          "file": "weight_custody_manifest-0.19.0/src/wcm/_merkle.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9162: Certificate Transparency Version 2.0 | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc8785",
+          "file": "weight_custody_manifest-0.19.0/src/wcm/_canonicalize.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 8785: JSON Canonicalization Scheme (JCS) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc8785",
+          "file": "weight_custody_manifest-0.19.0/src/wcm/_canonicalize.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 8785: JSON Canonicalization Scheme (JCS) | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "triagetalon",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/89/12/84c899faf2b47156791411aa5dba497ce7ce5ca7f91afde047ef38c499a5/triagetalon-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:16.357471+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://ultimate-attack-surface-recon-api.p.rapidapi.com/scan",
+          "file": "triagetalon-1.0.0/recon.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://rapidapi.com/BMNTR/api/ultimate-attack-surface-recon-api",
+          "file": "triagetalon-1.0.0/recon.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rapidapi.com/BMNTR/api/ultimate-attack-surface-recon-api",
+          "file": "triagetalon-1.0.0/recon.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rapidapi.com/BMNTR/api/ultimate-attack-surface-recon-api",
+          "file": "triagetalon-1.0.0/recon.py",
+          "line": 161,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ember-dl",
+      "version": "0.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/90/c6/e53b36c1de359c497b00a8d884e2e946bf7e2b3978794c30867d59fee438/ember_dl-0.9.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:15.573556+00:00",
+      "total_findings": 44,
+      "findings": [
+        {
+          "url": "https://vimeo.com/76979871",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The New Vimeo Player (You Know, For Videos)",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rutube.ru/video/aabbccddeeff00112233445566778899",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vk.com/video-1_2",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=x",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/76979871",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The New Vimeo Player (You Know, For Videos)",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://soundcloud.com/u/track",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SoundCloud - Hear the world\u2019s sounds",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://soundcloud.com/u/sets/name",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SoundCloud - Hear the world\u2019s sounds",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ok.ru/video/123",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://vkvideo.ru/video1_2",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://bsky.app/profile/a.b/post/xyz",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bluesky",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://soundcloud.com/u/sets/name",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SoundCloud - Hear the world\u2019s sounds",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://vimeo.com/76979871",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The New Vimeo Player (You Know, For Videos)",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://soundcloud.com/someartist",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Stream bonkwasbonking music | Listen to songs, albums, playlists for free on SoundCloud",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.tumblr.com/someblog",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "@someblog on Tumblr",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vimeo.com/someuser",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rutube.ru/channel/123",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vimeo.com/76979871",
+          "file": "ember_dl-0.9.0/tests/test_routing.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The New Vimeo Player (You Know, For Videos)",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread",
+          "file": "ember_dl-0.9.0/ember/services/bluesky.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.newgrounds.com/portal/video",
+          "file": "ember_dl-0.9.0/ember/services/newgrounds.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.newgrounds.com/audio/listen",
+          "file": "ember_dl-0.9.0/ember/services/newgrounds.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://soundcloud.com",
+          "file": "ember_dl-0.9.0/ember/services/soundcloud.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Stream and listen to music online for free with SoundCloud",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api-v2.soundcloud.com/resolve",
+          "file": "ember_dl-0.9.0/ember/services/soundcloud.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api-v2.soundcloud.com/resolve",
+          "file": "ember_dl-0.9.0/ember/services/soundcloud.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api-v2.soundcloud.com/tracks",
+          "file": "ember_dl-0.9.0/ember/services/soundcloud.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api-v2.soundcloud.com/users",
+          "file": "ember_dl-0.9.0/ember/services/soundcloud.py",
+          "line": 155,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://rutube.ru/api/play/options",
+          "file": "ember_dl-0.9.0/ember/services/rutube.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rutube.ru/api/video/person",
+          "file": "ember_dl-0.9.0/ember/services/rutube.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rutube.ru/video",
+          "file": "ember_dl-0.9.0/ember/services/rutube.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vimeo.com",
+          "file": "ember_dl-0.9.0/ember/services/vimeo.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vimeo - All-in-One Video Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://player.vimeo.com/video",
+          "file": "ember_dl-0.9.0/ember/services/vimeo.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com",
+          "file": "ember_dl-0.9.0/ember/services/vimeo.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vimeo - All-in-One Video Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/api/v2",
+          "file": "ember_dl-0.9.0/ember/services/vimeo.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com",
+          "file": "ember_dl-0.9.0/ember/services/vimeo.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vimeo - All-in-One Video Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api-http2.tumblr.com/v2/blog",
+          "file": "ember_dl-0.9.0/ember/services/tumblr.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api-http2.tumblr.com/v2/blog",
+          "file": "ember_dl-0.9.0/ember/services/tumblr.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ok.ru/video",
+          "file": "ember_dl-0.9.0/ember/services/ok.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0435\u0442\u044c \u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438. \u041e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0432 \u041e\u041a. \u0412\u0430\u0448\u0435 \u043c\u0435\u0441\u0442\u043e \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u043e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0430\u043c\u0438",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://api.vk.ru/method/auth.getAnonymToken",
+          "file": "ember_dl-0.9.0/ember/services/vk.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.vkvideo.ru/method",
+          "file": "ember_dl-0.9.0/ember/services/vk.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://vk.com/video",
+          "file": "ember_dl-0.9.0/ember/services/vk.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vkvideo.ru/al_video.php",
+          "file": "ember_dl-0.9.0/ember/services/vk.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://vkvideo.ru",
+          "file": "ember_dl-0.9.0/ember/services/vk.py",
+          "line": 150,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result",
+          "file": "ember_dl-0.9.0/ember/services/twitter.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.redgifs.com/v2",
+          "file": "ember_dl-0.9.0/ember/services/redgifs.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.redgifs.com/v2/auth/temporary",
+          "file": "ember_dl-0.9.0/ember/services/redgifs.py",
+          "line": 34,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "clawcreek",
       "version": "0.2.0",
@@ -43743,6 +45427,36 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "eye3",
+      "version": "1.0.3",
+      "analyzed_at": "2026-07-27T19:28:16.740368+00:00",
+      "binaries": [
+        {
+          "name": "thirdeye.dll",
+          "file": "eye3/thirdeye.dll",
+          "sha256": "cb7627fabbccdbfec5a7fb4418fa5c89060ae16464f94b1bce05f95a6e57dd3d",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "lingua-slim-en-es-fr-de-it-pt",
+      "version": "2.2.0",
+      "analyzed_at": "2026-07-27T19:28:27.384210+00:00",
+      "binaries": [
+        {
+          "name": "lingua.cpython-312-darwin.so",
+          "file": "lingua/lingua.cpython-312-darwin.so",
+          "sha256": "7e8dec921d6d920f91491e667bbbc3163496b32ef396678e1ad37863bdbd8eaf",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -44153,6 +45867,75 @@
           "resolved": false,
           "context": "_CallContext.update",
           "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "runinfra-cli",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ae/ff/daf38dbb3c8cfc90f0453e157a87cad87a84262def2ded55c8e08be19bea/runinfra_cli-0.2.0-py3-none-macosx_10_12_x86_64.whl",
+      "analyzed_at": "2026-07-27T19:28:18.944339+00:00",
+      "install_hooks": [
+        {
+          "file": "runinfra_cli/__init__.py",
+          "line": 98,
+          "call": "os.execv",
+          "command": "os.execv(str(program), argv)",
+          "resolved": false,
+          "context": "_exec_on_posix",
+          "source": "package_init"
+        },
+        {
+          "file": "runinfra_cli/__init__.py",
+          "line": 134,
+          "call": "subprocess.run",
+          "command": "subprocess.run(argv)",
+          "resolved": false,
+          "context": "_run_on_windows",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "mship",
+      "version": "0.7.4",
+      "download_url": "https://files.pythonhosted.org/packages/9e/80/d31b461e2a500d403708c41f475dba3a5c8ebb0a06caba674c9db852e758/mship-0.7.4.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:29.230223+00:00",
+      "install_hooks": [
+        {
+          "file": "mship-0.7.4/modelship/utils/__init__.py",
+          "line": 67,
+          "call": "requests.get",
+          "command": "requests.get(url, stream=True)",
+          "resolved": false,
+          "context": "download",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "ghee-render",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/d7/25/3d74a9c7ba8cd3a2cc783ee76d2deeadf7194c051f2db978300320685a6a/ghee_render-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-27T19:28:54.003788+00:00",
+      "install_hooks": [
+        {
+          "file": "ghee_render-0.2.0/setup.py",
+          "line": 70,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call(['cmake', ext.sourcedir, '-DCMAKE_BUILD_TYPE=Release', f'-DCMAKE_INSTALL_PREFIX={PKG}'], cwd=build_tmp)",
+          "resolved": false,
+          "context": "CMakeBuild._build",
+          "source": "setup_py"
+        },
+        {
+          "file": "ghee_render-0.2.0/setup.py",
+          "line": 82,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call(['cmake', '--build', '.', '--', '-j', str(jobs), 'install'], cwd=build_tmp)",
+          "resolved": false,
+          "context": "CMakeBuild._build",
+          "source": "setup_py"
         }
       ]
     }
