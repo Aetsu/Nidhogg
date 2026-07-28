@@ -1,11 +1,3022 @@
 {
-  "generated_at": "2026-07-28T21:09:14.647008+00:00",
+  "generated_at": "2026-07-28T23:00:38.359230+00:00",
   "stats": {
-    "total_packages": 263,
-    "malicious": 14,
-    "clean": 249
+    "total_packages": 292,
+    "malicious": 15,
+    "clean": 277
   },
   "packages": [
+    {
+      "name": "public-source-extractor",
+      "version": "0.1.0a2",
+      "download_url": "https://files.pythonhosted.org/packages/52/10/1584cf0d69bbf9f19d7b9bb24027c5e474e9d21620e74f2d33eb573224c0/public_source_extractor-0.1.0a2.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:37.171217+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://ishikawa.co",
+          "file": "public_source_extractor-0.1.0a2/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u30a4\u30b7\u30ab\u30ef\u30d2\u30c7\u30ab\u30ba\u516c\u5f0f\u30b5\u30a4\u30c8\uff5c\u30e1\u30c7\u30a3\u30a2\u30fbAI\u30fb\u958b\u767a\u306e\u6d3b\u52d5\u4e16\u754c",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://8.8.8.8",
+          "file": "public_source_extractor-0.1.0a2/tests/test_url_policy.py",
+          "line": 19,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Public DNS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://%65xample.com",
+          "file": "public_source_extractor-0.1.0a2/tests/test_url_policy.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Example Domain",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.firecrawl.dev/v2/scrape",
+          "file": "public_source_extractor-0.1.0a2/tests/test_provider.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.firecrawl.dev/v2/scrape",
+          "file": "public_source_extractor-0.1.0a2/src/public_source_extractor/provider.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "0din-litellm-shield",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/9b/55/c0fd9869ad20c6c93e9d0226d5191efafe2d4fdc00e01bc85ba98c8412de/0din_litellm_shield-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:35.070232+00:00",
+      "total_findings": 20,
+      "findings": [
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/tests/test_backend_selection.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/tests/test_backend_selection.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 69,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/susfactor_guardrail/guardrail.py",
+          "line": 69,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Say yes to AI faster, with evidence. By Mozilla | 0din.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://defense.0din.ai",
+          "file": "0din_litellm_shield-0.2.0/scripts/smoke_test_hosted.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "featuresmith-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e8/aa/8adf251ef44c7e08bb2a0c2a1f7af0521d3735d0b5b5351392215c511147/featuresmith_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:33.899167+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://featuresmith.adityagangwani.me",
+          "file": "featuresmith_cli-0.1.0/pyproject.toml",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Featuresmith \u2014 Data Profiling & Validation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "featuresmith-core",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b7/6e/65e82305c537de0e29b585adb06fa8ef14c4529504c390cbf7e0d1bba7e1/featuresmith_core-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:33.415853+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://featuresmith.adityagangwani.me",
+          "file": "featuresmith_core-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Featuresmith \u2014 Data Profiling & Validation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "oopsie-data-tools",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/45/2c/712c3fcec24bd57024822b2b9c8ef791fb54ae9e42b86bed44f2b3a16205/oopsie_data_tools-0.2.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:32.248129+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://forms.gle/9arwZHAvRjvbozoT7",
+          "file": "oopsie_data_tools-0.2.0/oopsie_data_tools/init_wizard.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OopsieData - Lab Registration",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://forms.gle/9arwZHAvRjvbozoT7",
+          "file": "oopsie_data_tools-0.2.0/oopsie_data_tools/utils/contributor_config.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OopsieData - Lab Registration",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "motorsport-calendar",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/21/6a/85be4c15fb56f67b991484d1dc879380bc4fde591d599c43b92dd79b3919/motorsport_calendar-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:31.310630+00:00",
+      "total_findings": 56,
+      "findings": [
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_datasource.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1",
+          "file": "motorsport_calendar-0.3.0/tests/test_datasource.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_datasource.py",
+          "line": 198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/sessions",
+          "file": "motorsport_calendar-0.3.0/tests/test_datasource.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://api.jolpi.ca/ergast/f1",
+          "file": "motorsport_calendar-0.3.0/tests/test_jolpica_source.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.fiawec.com",
+          "file": "motorsport_calendar-0.3.0/tests/test_wec_provider.py",
+          "line": 247,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FIA WEC - Official website of the World Endurance Championship",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.fiawec.com/en/race/6-hours-of-imola-2026",
+          "file": "motorsport_calendar-0.3.0/tests/test_wec_provider.py",
+          "line": 346,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "6 Hours of Imola 2026",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.fiawec.com/en/race/6-hours-of-imola-2027",
+          "file": "motorsport_calendar-0.3.0/tests/test_wec_provider.py",
+          "line": 351,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "6 Hours of Imola 2027",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate.py",
+          "line": 364,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate.py",
+          "line": 402,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate.py",
+          "line": 439,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate.py",
+          "line": 452,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate.py",
+          "line": 463,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1",
+          "file": "motorsport_calendar-0.3.0/tests/test_openf1_source.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate_f1.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate_f1.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate_f1.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openf1.org/v1/meetings",
+          "file": "motorsport_calendar-0.3.0/tests/test_cli_generate_f1.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.gt-world-challenge-europe.com",
+          "file": "motorsport_calendar-0.3.0/tests/test_sro_timetable_base.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Europe Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-america.com",
+          "file": "motorsport_calendar-0.3.0/tests/test_sro_timetable_base.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge America Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-asia.com",
+          "file": "motorsport_calendar-0.3.0/tests/test_sro_timetable_base.py",
+          "line": 174,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Asia Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.intercontinentalgtchallenge.com",
+          "file": "motorsport_calendar-0.3.0/tests/test_sro_timetable_base.py",
+          "line": 187,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental GT Challenge",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/motogp_series/pulselive_base.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/motogp_series/pulselive_base.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/motogp_series/pulselive_base.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.europeanlemansseries.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/aco_series/sports_event_base.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ELMS - Official website of the European Le Mans Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.gt-world-challenge-europe.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/sro_series/timetable_base.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Europe Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/moto2/sources/pulselive.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/moto2/sources/pulselive.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.europeanlemansseries.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/elms/sources/aco_scraper.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ELMS - Official website of the European Le Mans Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.europeanlemansseries.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/elms/sources/aco_scraper.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ELMS - Official website of the European Le Mans Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.europeanlemansseries.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/elms/sources/aco_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ELMS - Official website of the European Le Mans Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.gt-world-challenge-europe.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_europe/sources/sro_scraper.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Europe Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-europe.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_europe/sources/sro_scraper.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Europe Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-europe.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_europe/sources/sro_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Europe Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-asia.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_asia/sources/sro_scraper.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Asia Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-asia.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_asia/sources/sro_scraper.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Asia Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-asia.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_asia/sources/sro_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge Asia Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "http://api.jolpi.ca/ergast/f1",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/formula1/sources/jolpica.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://api.jolpi.ca/ergast/f1",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/formula1/sources/jolpica.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://api.jolpi.ca/ergast/f1",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/formula1/sources/jolpica.py",
+          "line": 88,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.openf1.org/v1",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/formula1/sources/openf1.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/moto3/sources/pulselive.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/moto3/sources/pulselive.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.lemanscup.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/mlmc/sources/aco_scraper.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MLMC - Official website of the Michelin Le Mans Cup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.lemanscup.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/mlmc/sources/aco_scraper.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MLMC - Official website of the Michelin Le Mans Cup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.lemanscup.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/mlmc/sources/aco_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MLMC - Official website of the Michelin Le Mans Cup",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.intercontinentalgtchallenge.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/igtc/sources/sro_scraper.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental GT Challenge",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.intercontinentalgtchallenge.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/igtc/sources/sro_scraper.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental GT Challenge",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.intercontinentalgtchallenge.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/igtc/sources/sro_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental GT Challenge",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/motogp/sources/pulselive.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.pulselive.motogp.com/motogp/v1/events?seasonYear=",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/motogp/sources/pulselive.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.gt-world-challenge-america.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_america/sources/sro_scraper.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge America Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-america.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_america/sources/sro_scraper.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge America Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gt-world-challenge-america.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/gtwc_america/sources/sro_scraper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GT World Challenge America Powered by AWS",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.fiawec.com",
+          "file": "motorsport_calendar-0.3.0/motorsport_calendar/providers/wec/sources/official.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FIA WEC - Official website of the World Endurance Championship",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gctrl",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/1b/ea/018e0a3a30aa0d3bc24ff8444ff9542eea01028e45d67ef5ecec0b22b190/gctrl-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:26.206988+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://gctrl.tech",
+          "file": "gctrl-0.1.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GCTRL - The Enterprise Memory Layer for AI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gctrl.tech/docs",
+          "file": "gctrl-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction - GCTRL Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gctrl.tech/docs",
+          "file": "gctrl-0.1.0/src/gctrl/cli.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction - GCTRL Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gctrl.tech/install",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.gctrl.tech",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gctrl.tech/compose.yml",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.gctrl.tech",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 268,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gctrl.tech/install",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.gctrl.tech/v1/public-key",
+          "file": "gctrl-0.1.0/src/gctrl/installer.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "my-oura-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a2/50/ca33a933a8b19dfc094098677194dfd5d1d1f5e523048d1a9d32e08ebcb2/my_oura_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:24.119972+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://api.ouraring.com/v2/sandbox/usercollection",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ouraring.com/v2/usercollection",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://cloud.ouraring.com/oauth/authorize",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ouraring.com/oauth/token",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developer.ouraring.com/applications",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Oura Developer Portal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developer.ouraring.com/applications",
+          "file": "my_oura_mcp-0.1.0/src/my_oura_mcp/config.py",
+          "line": 52,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Oura Developer Portal",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "vercre-sdk",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/e3/71/6f57a586f4ce70db3ecfb5921483ee63979f39e89f0ea906a409a6bb36a4/vercre_sdk-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:22.692706+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://vercre.vectorguardlabs.com",
+          "file": "vercre_sdk-1.0.0/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vercre.vectorguardlabs.com/docs/sdk",
+          "file": "vercre_sdk-1.0.0/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "espn-scores",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/cc/4f/774b382aa92036ea3964203ae4885290b15b6e6c7821c0f7a93eb52ad34c/espn_scores-1.0.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:21.465874+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://espn.com/story/1",
+          "file": "espn_scores-1.0.0/tests/test_parsers.py",
+          "line": 183,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://espn.com/img/1.png",
+          "file": "espn_scores-1.0.0/tests/test_parsers.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://espn.com/story/1",
+          "file": "espn_scores-1.0.0/tests/test_parsers.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://espn.com/img/1.png",
+          "file": "espn_scores-1.0.0/tests/test_parsers.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://site.api.espn.com/apis/site/v2/sports",
+          "file": "espn_scores-1.0.0/tests/test_core.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://site.api.espn.com/apis/site/v2/sports",
+          "file": "espn_scores-1.0.0/espn_scores/core/client.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://site.api.espn.com/apis/v2/sports",
+          "file": "espn_scores-1.0.0/espn_scores/core/client.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://site.web.api.espn.com/apis/common/v3/sports",
+          "file": "espn_scores-1.0.0/espn_scores/core/client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "golden-step",
+      "version": "2026.7.28",
+      "download_url": "https://files.pythonhosted.org/packages/90/5b/29fd422b62d942153b04701cd1cf3be59f7fb6de47ae58bd56d202774450/golden_step-2026.7.28.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:20.685359+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://molssi.org",
+          "file": "golden_step-2026.7.28/docs/conf.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MolSSI \u2013 The Molecular Sciences Software Institute",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://docs.python-guide.org/en/latest/starting/installation",
+          "file": "golden_step-2026.7.28/docs/developer_guide/installation.rst",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Properly Installing Python \u2014 The Hitchhiker's Guide to Python",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "epics-mcp",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/ee/8e/89a3b6be6a621fd9c8ce2ab6baf9aef73a01338fe1c5ee230a4c078e5633/epics_mcp-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:12.281027+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "ftp://x/y",
+          "file": "epics_mcp-0.3.0/tests/test_http.py",
+          "line": 600,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://web.mit.edu/paper",
+          "file": "epics_mcp-0.3.0/tests/test_language_guard.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "vnx",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/ee/99/930e49318bc1d00743903bf5fcfbd5c9876929a9d3d5592ab5d0752b1906/vnx-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:10.672585+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://vnx.run",
+          "file": "vnx-0.0.1/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "VNX.run \u00b7 AI Skill Scanner",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tokenshunt",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/da/ed/3ebaf8395f9060e054c8667921f173ce9a8ec89870c04e4648add19a7f00/tokenshunt-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:10.352719+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://laconiq.ai",
+          "file": "tokenshunt-0.0.1/pyproject.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Enterprise AI, enforced. | LaconIQ",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "makima-cli",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/19/d5/460d5c40ddaf2127bb3b6cc7f9a681acbe05865742ec3044f7e4b216c881/makima_cli-0.1.2.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:09.593862+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://console.groq.com",
+          "file": "makima_cli-0.1.2/makima/config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "toknshuntz",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/f0/f8/832bcc20a6b2ec56431cdcfae386eeb7df58b3f9b4f5621c8c46e06925a9/toknshuntz-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:08.809108+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://laconiq.ai",
+          "file": "toknshuntz-0.0.1/pyproject.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Enterprise AI, enforced. | LaconIQ",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tokenshuntz",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a7/57/cd78d149646a810c86c16a3c920b729331f796e8017c8d2e71f6b0b73a94/tokenshuntz-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:07.880134+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://laconiq.ai",
+          "file": "tokenshuntz-0.0.1/pyproject.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Enterprise AI, enforced. | LaconIQ",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fd-open-data-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e8/c9/75018c7459c8274cafbad6ab5f1287b878edbbc9b2c5644baf96bfb710de/fd_open_data_mcp-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-07-28T23:00:06.860806+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://akshare.akfamily.xyz",
+          "file": "fd_open_data_mcp/catalog/providers.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "\u6b22\u8fce\u8bbf\u95ee AKShare \u5728\u7ebf\u6587\u6863\uff01 \u2014 AKShare 1.18.80 \u6587\u6863",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://data.worldbank.org",
+          "file": "fd_open_data_mcp/catalog/providers.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Bank Open Data | Data",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sec.gov/edgar",
+          "file": "fd_open_data_mcp/catalog/providers.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.worldbank.org",
+          "file": "fd_open_data_mcp/catalog/providers.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Bank Open Data | Data",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://data.worldbank.org",
+          "file": "fd_open_data_mcp/catalog/seeds/wbgapi.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Bank Open Data | Data",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sec.gov/edgar",
+          "file": "fd_open_data_mcp/catalog/seeds/edgar.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "spotiseek",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/c2/a7042afa047ca011fafbd055b8fb5c140cfa78c65d6769a60409e10a9657/spotiseek-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:05.947475+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://developer.spotify.com/dashboard",
+          "file": "spotiseek-0.1.0/spotiseek/auth.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "spotify-for-developers",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "mcp-assure",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/5f/a5/c14f5310425cc00b65007710ca5c40fe1c5eceb54669bb934bf77cf5fad7/mcp_assure-0.3.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:05.590591+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://xclusivexo.com/mcp-assurance",
+          "file": "mcp_assure-0.3.0/POST_DRAFT_X.txt",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MCP Authorization Assurance \u00b7 XclusiveXO",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "graphw00f",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/0f/fc/2d5bfb372a763e70766aaf2677bc5a8a776562a49a216d1abaa2c3e4d673/graphw00f-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:04.763389+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://metano.ai",
+          "file": "graphw00f-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metano | Agentic AI Security Platform & Control Plane",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "graphw00f-0.0.1/src/graphw00f/_notice.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "graphw00f-0.0.1/src/graphw00f/_notice.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://metano.ai",
+          "file": "graphw00f-0.0.1/src/graphw00f/_notice.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metano | Agentic AI Security Platform & Control Plane",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "graphw00f-0.0.1/src/graphw00f/_notice.py",
+          "line": 6,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://metano.ai",
+          "file": "graphw00f-0.0.1/src/graphw00f/_notice.py",
+          "line": 6,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metano | Agentic AI Security Platform & Control Plane",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gqlmap",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/e8/4c/f44fd36b43675bc6d0d399d0fb78126be2c75dd418b3388d361ba383e441/gqlmap-0.0.1.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:03.890638+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://metano.ai",
+          "file": "gqlmap-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metano | Agentic AI Security Platform & Control Plane",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "gqlmap-0.0.1/src/gqlmap/_notice.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "gqlmap-0.0.1/src/gqlmap/_notice.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://skillsmp.com/creators/shuvonsec/claude-bug-bounty/skills-graphql-audit",
+          "file": "gqlmap-0.0.1/src/gqlmap/_notice.py",
+          "line": 6,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "graphql-audit | Agent Skill | SkillsMP",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "aiconfigurator-core",
+      "version": "0.11.0.dev20260728",
+      "download_url": "https://files.pythonhosted.org/packages/53/20/82c610fa95d41ab6a6b50bf89428736c18926c0c7f8806d9f1701435849a/aiconfigurator_core-0.11.0.dev20260728.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:03.263825+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pypi.nvidia.com",
+          "file": "aiconfigurator_core-0.11.0.dev20260728/pyproject.toml",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Package Index",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "agentguard-evals",
+      "version": "0.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/4c/29/24bd7614b5b61253f683f90a23aed54145bcccfab3bf16a77b1360513c42/agentguard_evals-0.2.2.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:02.409163+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "agentguard_evals-0.2.2/agentguard/reports/exports.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "1322-python",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/da/27e6c5f3796518fb8388034c1f57e62435e3224cf7e3a03ca0297b1ab53c/1322_python-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T23:00:00.311815+00:00",
+      "total_findings": 96,
+      "findings": [
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/binance_example.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/binance_example.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/news_example.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/examples/news_example.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/news_example.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/x_example.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/x_example.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/instagram_example.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/examples/instagram_example.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://ws.ultimate.1322.io/ws/ultimate",
+          "file": "1322_python-0.1.0/tests/test_client_stream.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.1322.io/v1/tracked",
+          "file": "1322_python-0.1.0/tests/test_client_stream.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_x.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_x.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_truth.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://truthsocial.com/@x/posts/3",
+          "file": "1322_python-0.1.0/tests/test_parse_truth.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://truthsocial.com/@y/posts/4",
+          "file": "1322_python-0.1.0/tests/test_parse_truth.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_truth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_instagram.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_instagram.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.bbc.com/news/videos/cg43xevpvw5o",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Watch: Jamaica assess damage as Hurricane Melissa leaves trail of destruction",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.bbc.com/news/videos/cg43xevpvw5o",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Watch: Jamaica assess damage as Hurricane Melissa leaves trail of destruction",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ichef.bbci.co.uk/news/1024",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.bbc.com/news/videos/cg43xevpvw5o",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Watch: Jamaica assess damage as Hurricane Melissa leaves trail of destruction",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_news.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/@example",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=vid123",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vid123/seed.jpg",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/shorts/s1",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://i.ytimg.com/vi/vid123/hq.jpg",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=vid123",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/@example",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_youtube.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_binance.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/tests/test_parse_binance.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/__init__.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/_backoff.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/_backoff.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/_merge.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/_merge.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/_base.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/llms.txt",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/youtube.py",
+          "line": 128,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://truth.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://truth.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://truth.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://truth.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://truth.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/truth.py",
+          "line": 136,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://1322.io/IG?key=",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://1322.io/IG?key=",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1322: Real-Time Multi-Platform Monitoring API & Alerts",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://1322.io/IG?key=",
+          "file": "1322_python-0.1.0/src/client1322/platforms/instagram.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://newsfeed.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://newsfeed.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://newsfeed.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://newsfeed.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://newsfeed.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/news.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://ws.normal.1322.io/ws/normal",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://ws.ultimate.1322.io/ws/ultimate",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://ws.normal.1322.io/ws/normal",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://ws.ultimate.1322.io/ws/ultimate",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 431,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://ws.normal.1322.io/ws/normal",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://ws.ultimate.1322.io/ws/ultimate",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/x.py",
+          "line": 428,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://binance.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Binance Monitor API Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://binance.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://binance.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Binance Monitor API Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://1322.io/docs",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation, WebSocket & REST Reference \u00b7 1322",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://binance.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Binance Monitor API Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://binance.1322.io",
+          "file": "1322_python-0.1.0/src/client1322/platforms/binance.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "backdraft",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/c8/43/28feaad3a69d83091234e287c8d523e42ed38331f0a459d4e95388f8de0f/backdraft-0.2.1.tar.gz",
+      "analyzed_at": "2026-07-28T22:59:59.264103+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "backdraft-0.2.1/src/backdraft/extract/vlm_settings.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gamecraft-alt-controller-jam-board",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/32/c5/c626c958cd5e8ee1d2868f6a6ba6965c721be55e46d76009665d0927388a/gamecraft_alt_controller_jam_board-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-28T22:59:58.181487+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://www.gamecraft.it/events/altctrljam-2023",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ALT.CTRL.GameCraft",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/usb_hid_ps3.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/usb_hid_ps3.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/hid_simple_gamepad.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/circuitpython-essentials/circuitpython-hid-keyboard-and-mouse",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/hid_keyboard.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CircuitPython HID Keyboard and Mouse | CircuitPython Essentials | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/usb_hid_gamepad.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "gamecraft_alt_controller_jam_board-0.1.1/src/gamecraft_alt_controller_jam_board/experiments/usb_hid_gamepad.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "alt-controller-jam",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f6/6d/30f9927731019096ace0fb4090956e518e286e480af140b19cb5abc8d2d2/alt_controller_jam-0.1.0.tar.gz",
+      "analyzed_at": "2026-07-28T22:59:57.437147+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/usb_hid_ps3.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/usb_hid_ps3.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/hid_simple_gamepad.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/circuitpython-essentials/circuitpython-hid-keyboard-and-mouse",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/hid_keyboard.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CircuitPython HID Keyboard and Mouse | CircuitPython Essentials | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/usb_hid_gamepad.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://learn.adafruit.com/customizing-usb-devices-in-circuitpython/hid-devices",
+          "file": "alt_controller_jam-0.1.0/src/alt_controller_jam/experiments/usb_hid_gamepad.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HID Devices | Customizing USB Devices in CircuitPython | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "paytime-agent",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/75/85/4af0ee5b103da63c8c0e03de164d6b0da861cac85f35ac638e08ab839c2f/paytime_agent-0.1.1.tar.gz",
+      "analyzed_at": "2026-07-28T22:59:56.356910+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://agents.paytimehub.com.br",
+          "file": "paytime_agent-0.1.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agentes Hub",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "oysterAV",
       "version": "0.2.2",
