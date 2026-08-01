@@ -1,11 +1,887 @@
 {
-  "generated_at": "2026-08-01T10:01:11.115305+00:00",
+  "generated_at": "2026-08-01T11:25:32.205750+00:00",
   "stats": {
-    "total_packages": 94,
-    "malicious": 9,
-    "clean": 85
+    "total_packages": 107,
+    "malicious": 10,
+    "clean": 97
   },
   "packages": [
+    {
+      "name": "journeyman-cli",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f9/37/7ad411dd10e50e9d3b8a7e7d9f3cda1e89d0d9e4efaca4548d412abb5206/journeyman_cli-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:31.036675+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1/chat/completions",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 502,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 615,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_sb_worker.py",
+          "line": 772,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/tests/test_detect_worker.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lmstudio.ai",
+          "file": "journeyman_cli-1.1.0/src/journeyman/setup.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LM Studio Bionic - Agent for Work and Code",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lmstudio.ai",
+          "file": "journeyman_cli-1.1.0/src/journeyman/setup.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LM Studio Bionic - Agent for Work and Code",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "journeyman_cli-1.1.0/src/journeyman/constants.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "journeyman_cli-1.1.0/src/journeyman/constants.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gosce-llm-orchestration-agent-d2feb0",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b4/39/32dc6b27375016d3f84be164983faa800e991251f8188d5cb7f50c0c1d35/gosce_llm_orchestration_agent_d2feb0-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:30.126701+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai",
+          "file": "gosce_llm_orchestration_agent_d2feb0-0.1.0/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://agents.getvda.ai/agents",
+          "file": "gosce_llm_orchestration_agent_d2feb0-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GOSCE Agent Portfolio \u2014 9 live A2A + MCP agents | getvda.ai",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/mcp",
+          "file": "gosce_llm_orchestration_agent_d2feb0-0.1.0/gosce_llm_orchestration_agent_d2feb0/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai/a2a",
+          "file": "gosce_llm_orchestration_agent_d2feb0-0.1.0/gosce_llm_orchestration_agent_d2feb0/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://langchain-core-langchain-openai-l-d2feb0.getvda.ai",
+          "file": "gosce_llm_orchestration_agent_d2feb0-0.1.0/gosce_llm_orchestration_agent_d2feb0/__init__.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "flatrun",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/04/ab/1ff95cab371e4ade75926faadb6f2b43d5f08c26e6eef664f083f7b9b0e0/flatrun-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:29.582014+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://flatseek.io",
+          "file": "flatrun-0.1.0/pyproject.toml",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flatseek \u2014 A disk-first search engine. No JVM. No cluster.",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://flatseek.io/docs",
+          "file": "flatrun-0.1.0/pyproject.toml",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Documentation \u2014 Flatseek",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "telemetry-dev-openai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/05/c9/ebf7447632b4deb822322370c61d05b62ddcd30cd2364a8b7d7e251eee0b/telemetry_dev_openai-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:29.188086+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://telemetry.dev",
+          "file": "telemetry_dev_openai-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Telemetry \u2014 Observability for AI and LLM apps",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "telemetry-dev-litellm",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8b/4e/a73f52d26edc0416088a2e91656cbce718bb4fb3b90577e9d022f20b6356/telemetry_dev_litellm-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:29.033722+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://telemetry.dev",
+          "file": "telemetry_dev_litellm-0.1.0/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Telemetry \u2014 Observability for AI and LLM apps",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "gosce-dynamic-health-monitor",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/0f/ee467499e620fa4426be007576b84fbcf213181d50abb075585858470c5f/gosce_dynamic_health_monitor-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:28.732879+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://health.getvda.ai",
+          "file": "gosce_dynamic_health_monitor-0.1.0/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://agents.getvda.ai/agents",
+          "file": "gosce_dynamic_health_monitor-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GOSCE Agent Portfolio \u2014 9 live A2A + MCP agents | getvda.ai",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://health.getvda.ai/mcp",
+          "file": "gosce_dynamic_health_monitor-0.1.0/gosce_dynamic_health_monitor/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://health.getvda.ai/a2a",
+          "file": "gosce_dynamic_health_monitor-0.1.0/gosce_dynamic_health_monitor/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://health.getvda.ai",
+          "file": "gosce_dynamic_health_monitor-0.1.0/gosce_dynamic_health_monitor/__init__.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "wenqu-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/24/f4/99f667f5fd14acbf067ae5e8b774cbe209f621d507f2b5f0564a94198b0b/wenqu_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:28.444271+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://mp.weixin.qq.com/s?id=1",
+          "file": "wenqu_cli-0.1.0/tests/test_crawler.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?id=1",
+          "file": "wenqu_cli-0.1.0/tests/test_crawler.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://mp.weixin.qq.com/s?id=1",
+          "file": "wenqu_cli-0.1.0/tests/test_crawler.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "wenqu_cli-0.1.0/tests/test_image.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.baidu.com/link?url=wrapped",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.baidu.com/baidu.php?url=wrapped",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767e\u5ea6\u4e00\u4e0b\uff0c\u4f60\u5c31\u77e5\u9053",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.baidu.com/baidu.php?url=wrapped",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767e\u5ea6\u4e00\u4e0b\uff0c\u4f60\u5c31\u77e5\u9053",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://duckduckgo.com/l?uddg=https%3A%2F%2Fexample.com%2Farticle",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "l at DuckDuckGo",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://juejin.cn/post/123",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://linux.do/t/99",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://linux.do/t/42",
+          "file": "wenqu_cli-0.1.0/tests/test_search.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.juejin.cn/search_api/v1/search",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 147,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.exa.ai/search",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.baidu.com/s",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 224,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767e\u5ea6\u5b89\u5168\u9a8c\u8bc1",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.bing.com/search",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Search - Microsoft Bing",
+          "cert_issuer": "Microsoft Corporation"
+        },
+        {
+          "url": "https://html.duckduckgo.com/html",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 226,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo HTML: Private Search Without JavaScript",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://search.brave.com/search",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.sogou.com/web",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 228,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u641c\u72d7\u641c\u7d22\u5f15\u64ce - \u4e0a\u7f51\u4ece\u641c\u72d7\u5f00\u59cb",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://juejin.cn/post",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 341,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://linux.do/t",
+          "file": "wenqu_cli-0.1.0/src/wenqu/search.py",
+          "line": 357,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://weixin.sogou.com",
+          "file": "wenqu_cli-0.1.0/src/wenqu/crawler.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u641c\u72d7\u5fae\u4fe1\u641c\u7d22_\u8ba2\u9605\u53f7\u53ca\u6587\u7ae0\u5185\u5bb9\u72ec\u5bb6\u6536\u5f55\uff0c\u4e00\u641c\u5373\u8fbe",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "wenqu_cli-0.1.0/src/wenqu/image.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dashscope.aliyuncs.com",
+          "file": "wenqu_cli-0.1.0/src/wenqu/image.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ark.cn-beijing.volces.com/api/v3",
+          "file": "wenqu_cli-0.1.0/src/wenqu/image.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "a2at-engine",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/b5/d8/cff5d784e0f93567dc60e3a0bea79070d1087099a9da26aa489b6a6f2f1b/a2at_engine-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:16.636076+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://projects.tmforum.org/a2aproject/telecommunication/extensions/Task-T/v1",
+          "file": "a2at_engine-0.0.1/a2at_engine/client/extensions.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://projects.tmforum.org/a2aproject/telecommunication/extensions/NEGOTIATION-T",
+          "file": "a2at_engine-0.0.1/a2at_engine/client/extensions.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://projects.tmforum.org/a2aproject/telecommunication/extensions/Authorization-T/v1",
+          "file": "a2at_engine-0.0.1/a2at_engine/client/extensions.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://projects.tmforum.org/a2aproject/telecommunication/extensions/Notification-T/v1",
+          "file": "a2at_engine-0.0.1/a2at_engine/client/extensions.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "forjio-locavello",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/eb/ba/6fd5190e0b84ac932e1de2be10ff6774a1812b5f79ef07a0901152118e94/forjio_locavello-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:16.321687+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://locavello.forjio.com/docs/sdk/python",
+          "file": "forjio_locavello-0.1.0/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://locavello.forjio.com",
+          "file": "forjio_locavello-0.1.0/forjio_locavello/client.py",
+          "line": 631,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Locavello",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "etch-record",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/86/a3/b769ca4c45ac10e9c2d0ebf722436b6cfb4893ca2c7604b76c9b68afc494/etch_record-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:14.498562+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://etch.systems",
+          "file": "etch_record-0.2.1/tests/test_cli.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Etch : Trace, Replay, and Verify Every AI Agent Decision",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://etch.systems",
+          "file": "etch_record-0.2.1/src/etch_record/config.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Etch : Trace, Replay, and Verify Every AI Agent Decision",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cyka-agent",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/54/0b/7a5a23b78f73c02f793c07c4d75898bfcf56eef797f693d0decf88b1bc4c/cyka_agent-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:11.366608+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://cykani.com",
+          "file": "cyka_agent-0.1.0/pyproject.toml",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cykani \u2014 Stealth Browser Automation Platform \u2014 Cykani",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.cykani.com",
+          "file": "cyka_agent-0.1.0/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction \u2014 Cykani",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "saltext.uci-ubus",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/82/1d/5c3a6ddb63672571b1c55a95dfc0dd8e2bb8719e027e4d94807bb8444043/saltext_uci_ubus-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:09.977645+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.saltproject.io/en/latest",
+          "file": "saltext_uci_ubus-0.1.0/docs/conf.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pinterest-url-normalizer",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8f/e2/354069a55b034760ab74de2104e2fece1421e98c009d64eb4ec3e2bdc4fb/pinterest_url_normalizer-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:09.626866+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://savepinner.com/pinterest-downloader",
+          "file": "pinterest_url_normalizer-0.1.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pinterest Downloader \u2014 Images, Videos, GIFs & Stories",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jsr.io/@savepinner/pinterest-url-normalizer",
+          "file": "pinterest_url_normalizer-0.1.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "@savepinner/pinterest-url-normalizer - JSR",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pin.it/AbC123?source=share",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_core.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pinterest",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pin.it/AbC123",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_core.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pinterest",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pinterest.co.uk/pin/123?foo=bar",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_core.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pinterest.co.uk/pin/123?utm_source=test",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_cli.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pin.it/AbC123",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_cli.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pinterest",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pin.it/AbC123",
+          "file": "pinterest_url_normalizer-0.1.0/tests/test_cli.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pinterest",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
     {
       "name": "gosce-elasticsearch-redis-stack-generator-elasticsearch-elasticsearch",
       "version": "0.1.0",
@@ -107503,6 +108379,23 @@
           "command": "urllib.request.urlopen(req, timeout=_TIMEOUT)",
           "resolved": false,
           "context": "InvoiceShelfClient._request",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "kirox",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/9e/d2/91240a99bb04b8827041457b79799d7880bb7f2a5197e260d1959531927e/kirox-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-01T11:25:08.775503+00:00",
+      "install_hooks": [
+        {
+          "file": "kirox-1.1.0/src/kirox/cli/__init__.py",
+          "line": 71,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', 'kirox'], check=True)",
+          "resolved": false,
+          "context": "_do_update",
           "source": "package_init"
         }
       ]
