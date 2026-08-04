@@ -1,11 +1,2662 @@
 {
-  "generated_at": "2026-08-04T21:14:09.760153+00:00",
+  "generated_at": "2026-08-04T23:05:19.229694+00:00",
   "stats": {
-    "total_packages": 262,
+    "total_packages": 284,
     "malicious": 14,
-    "clean": 248
+    "clean": 270
   },
   "packages": [
+    {
+      "name": "llm-cost-governor",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/63/a3c0cb9aa12794a62e673dfb077056b93ba3d711ca5c57e4ccc948063e9d/llm_cost_governor-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:17.697889+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://www.anthropic.com/pricing",
+          "file": "llm_cost_governor-0.3.0/src/llm_cost_governor/pricing.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Plans & Pricing | Claude by Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.voyageai.com/docs/pricing",
+          "file": "llm_cost_governor-0.3.0/src/llm_cost_governor/pricing.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.anthropic.com/pricing",
+          "file": "llm_cost_governor-0.3.0/src/llm_cost_governor/pricing.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Plans & Pricing | Claude by Anthropic",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.voyageai.com/docs/pricing",
+          "file": "llm_cost_governor-0.3.0/src/llm_cost_governor/pricing.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "bizzabo-zpl",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/92/a3/c4f06e02ae0e5d970e4f3108aa6d92002ba5d01562ab18dd2349ff23c3e9/bizzabo_zpl-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:16.878358+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.labelary.com/v1/printers",
+          "file": "bizzabo_zpl-1.0.0/bizzabo_zpl/render.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "selfbench",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/6e/14/c8f525fdb6f2d75743e13861b3964c3f8c6f0fcff36ee28e62c46e944074/selfbench-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:16.243325+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 368,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bun.sh/install",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 370,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://go.dev/dl/go",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 372,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nodejs.org/dist/v",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 379,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 360,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bun.sh/install",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 360,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://go.dev/dl/go1.25.0.linux-$",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 360,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-$",
+          "file": "selfbench-0.2.0/src/selfbench/harbor.py",
+          "line": 360,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "zerum",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/60/ae/534738cb0970204c0a5cc1d63c04d5f77d93792520f37989d35a4f8c1deb/zerum-0.4.1.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:15.583931+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.rs/zerum",
+          "file": "zerum-0.4.1/Cargo.toml",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "zerum - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "fragcha",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/28/99/46ca990ab1081c6973a145ce9b238e6d834448750137681690bfa4e81b13/fragcha-0.1.4.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:14.173617+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://gitea.holm.dev/kjh/fragcha",
+          "file": "fragcha-0.1.4/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "kjh/fragcha - Gitea: Git with a cup of tea",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hypabolic-trajectory",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/3f/11/510f6f1fec2e12dce353a1c5a3e7772bbdd4ccc04df911db9efdac9420e9/hypabolic_trajectory-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:11.682791+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://opentelemetry.io/schemas/gen-ai/1.42.0",
+          "file": "hypabolic_trajectory-0.1.1/src/hypabolic_trajectory/project/otel_genai.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hack4u-vesper",
+      "version": "67.67",
+      "download_url": "https://files.pythonhosted.org/packages/f5/df/350f4edf9f232c23f7182794b4c2bc09cd16b536251a7adc4bc47bdb33e4/hack4u_vesper-67.67.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:10.535636+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://hack4u.io/curso/introduccion-a-linux",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introducci\u00f3n a Linux - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hack4u.io/curso/personalizacion-de-entorno-en-linux",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Personalizaci\u00f3n de Linux - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hack4u.io/curso/arch-linux-desde-cero",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Arch Linux desde Cero - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hack4u.io/curso/introduccion-al-hacking",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introducci\u00f3n al Hacking - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hack4u.io/curso/python-ofensivo",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python Ofensivo - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hack4u.io/curso/hacking-web",
+          "file": "hack4u_vesper-67.67/hack4u/courses.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacking Web - Hack4u",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "scholar-sidekick",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/31/89/9cd28ad25556c75715a84fdbf0666b928ed449fa1a0e6783b3a056380613/scholar_sidekick-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:09.405304+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://scholar-sidekick.com",
+          "file": "scholar_sidekick-0.1.0/pyproject.toml",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scholar Sidekick - Free DOI & PMID Citation Formatter",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scholar-sidekick.com/docs",
+          "file": "scholar_sidekick-0.1.0/pyproject.toml",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scholar Sidekick API Docs - Free Citation API for DOIs, PMIDs & ISBNs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scholar-sidekick.com/.well-known/openapi.json",
+          "file": "scholar_sidekick-0.1.0/tests/test_endpoint_contract.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scholar-sidekick.com/account",
+          "file": "scholar_sidekick-0.1.0/src/scholar_sidekick/audit.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Account - Scholar Sidekick",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scholar-sidekick.com/account",
+          "file": "scholar_sidekick-0.1.0/src/scholar_sidekick/audit.py",
+          "line": 98,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Account - Scholar Sidekick",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scholar-sidekick.com",
+          "file": "scholar_sidekick-0.1.0/src/scholar_sidekick/config.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scholar Sidekick - Free DOI & PMID Citation Formatter",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cilada",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5e/f5/eaacf95c81f98d1fc787080c147e8d37eaf91ac05bf805f37062c18b5a9c/cilada-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:07.628130+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://patient.stage.b2b.google.kompa.com.br/static/swagger.json",
+          "file": "cilada-1.0.0/.cilada.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "lexiqr",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/78/80/954e766b05f61e4bcdfd2092fa76b0d7dff6ddad3e81afb3997d2bdd350f/lexiqr-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:04.239601+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "lexiqr-1.0.0/scripts/release_consistency.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "lexiqr-1.0.0/scripts/release_consistency.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ok-script-kes",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/7c/8a/3ff753f1bd0e7480c44631b6cc2b183db658aa2cf8468d3bad084008902d/ok_script_kes-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-04T23:05:02.828232+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "http://msdn.com/ms649016",
+          "file": "ok_script_kes-1.0.1/ok/third_party/paperclip.py",
+          "line": 419,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Using the Clipboard - Win32 apps | Microsoft Learn",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://msdn.com/ms649048",
+          "file": "ok_script_kes-1.0.1/ok/third_party/paperclip.py",
+          "line": 424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenClipboard function (winuser.h) - Win32 apps | Microsoft Learn",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://msdn.com/ms649051",
+          "file": "ok_script_kes-1.0.1/ok/third_party/paperclip.py",
+          "line": 433,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SetClipboardData function (winuser.h) - Win32 apps | Microsoft Learn",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://mumu.163.com/help/20230802/35047_1102450.html",
+          "file": "ok_script_kes-1.0.1/ok/capture/adb/nemu_ipc.py",
+          "line": 513,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MuMu\u6a21\u62df\u5668\u5e94\u7528\u540e\u53f0\u8fd0\u884c\u6559\u7a0b_MuMu\u6a21\u62df\u5668_\u5b89\u5353\u6a21\u62df\u5668",
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "mainegeo",
+      "version": "0.0.6",
+      "download_url": "https://files.pythonhosted.org/packages/b5/4b/c14085706c7db55aa8c6bbf68482207ac3dd324d106805ed199b681f7da6/mainegeo-0.0.6.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:55.463990+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://www.census.gov/library/reference/code-lists/ansi.html",
+          "file": "mainegeo-0.0.6/src/mainegeo/entities.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "American National Standards Institute (ANSI), Federal Information Processing Series (FIPS), and Other Standardized Geographic Codes",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.census.gov/library/reference/code-lists/class-codes.html",
+          "file": "mainegeo-0.0.6/src/mainegeo/entities.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Class Codes and Definitions",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.census.gov/library/reference/code-lists/ansi.html",
+          "file": "mainegeo-0.0.6/src/mainegeo/entities.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "American National Standards Institute (ANSI), Federal Information Processing Series (FIPS), and Other Standardized Geographic Codes",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.census.gov/library/reference/code-lists/class-codes.html",
+          "file": "mainegeo-0.0.6/src/mainegeo/entities.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Class Codes and Definitions",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "auradefi",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/bf/bb/9c379c13696e84b7ac19cc838002414454551bc93682840b2b430d5134ac/auradefi-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:54.284770+00:00",
+      "total_findings": 26,
+      "findings": [
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://coins.llama.fi/prices/current",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api?chainid=999",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api?chainid=1&module=account&action=balance&address=0x1111111111111111111111111111111111111111&tag=latest",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 87,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api?chainid=1&module=account&action=tokentx&address=0x1111111111111111111111111111111111111111&startblock=0&endblock=99999999&page=1&offset=1000&sort=asc",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 96,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api?chainid=1&module=account&action=tokenbalance&contractaddress=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&address=0x1111111111111111111111111111111111111111&tag=latest",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 109,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://coins.llama.fi/prices/current/coingecko:ethereum,ethereum:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "file": "auradefi-0.1.0/docs/examples/quickstart.py",
+          "line": 118,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://blockstream.info/api",
+          "file": "auradefi-0.1.0/src/auradefi/sources/bitcoin/esplora.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/src/auradefi/sources/evm/etherscan.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/src/auradefi/sources/evm/txfetch.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/src/auradefi/sources/evm/txfetch.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/src/auradefi/sources/evm/txfetch.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "file": "auradefi-0.1.0/src/auradefi/sources/solana/rpc.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triton One RPC",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://coins.llama.fi",
+          "file": "auradefi-0.1.0/src/auradefi/prices/oracles/defillama.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://blockstream.info/api/address",
+          "file": "auradefi-0.1.0/tests/golden/test_phase6_xpub.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "ftp://hooks.example.test/a",
+          "file": "auradefi-0.1.0/tests/webhooks/test_deliver.py",
+          "line": 263,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://hooks.example.test/a",
+          "file": "auradefi-0.1.0/tests/webhooks/test_urls.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/tests/contract/test_embedding.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://blockstream.info/api",
+          "file": "auradefi-0.1.0/tests/sources/bitcoin/test_esplora.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/tests/sources/evm/test_txfetch.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.etherscan.io/v2/api",
+          "file": "auradefi-0.1.0/tests/sources/evm/test_etherscan.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "file": "auradefi-0.1.0/tests/sources/solana/test_rpc.py",
+          "line": 200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triton One RPC",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "ftp://x",
+          "file": "auradefi-0.1.0/tests/api/routes/test_admin.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://coins.llama.fi/prices/current/coingecko:ethereum",
+          "file": "auradefi-0.1.0/tests/prices/oracles/test_defillama.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://coins.llama.fi/prices/current",
+          "file": "auradefi-0.1.0/tests/prices/oracles/test_defillama.py",
+          "line": 224,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://coins.llama.fi",
+          "file": "auradefi-0.1.0/tests/prices/oracles/test_defillama.py",
+          "line": 288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyfhircheck",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ec/e9/c94bf93a29646d69b686e9d5b19d6f54ff2bbca8210ed2f50b7944357bcc/pyfhircheck-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:51.309893+00:00",
+      "total_findings": 52,
+      "findings": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Dosage",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://unitsofmeasure.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 340,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UCUM",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://unitsofmeasure.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 357,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UCUM",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://unitsofmeasure.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 360,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UCUM",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 368,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 402,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.String",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodytemp",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 426,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://snomed.info/sct",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 470,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 482,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 500,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "pyfhircheck-0.2.0/tests/test_native_semantics.py",
+          "line": 519,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/ValueSet/administrative-gender",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 535,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 583,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 814,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/Patient",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 835,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 1501,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "de.basisprofil.r4 | IdentifierTypeDeBasis - SIMPLIFIER.NET",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 1517,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "de.basisprofil.r4 | IdentifierTypeDeBasis - SIMPLIFIER.NET",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fhir.de/sid/gkv/kvid-10",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 1518,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "de.basisprofil.r4 | NamingSystemKVID - SIMPLIFIER.NET",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/contact-point-system",
+          "file": "pyfhircheck-0.2.0/tests/test_validator.py",
+          "line": 1587,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://snomed.info/sct",
+          "file": "pyfhircheck-0.2.0/tests/test_conformance.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKPatient",
+          "file": "pyfhircheck-0.2.0/tests/test_conformance.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ISiK - Basis (Stufe 3) | ISiKPatient - SIMPLIFIER.NET",
+          "cert_issuer": "D-Trust GmbH"
+        },
+        {
+          "url": "https://packages.fhir.org",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/config.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://packages.fhir.org",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/config.py",
+          "line": 205,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.String",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 356,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.Boolean",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 357,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.Integer",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 358,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.Decimal",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 359,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.DateTime",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 360,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.Date",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 361,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhirpath/System.Time",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/profiles/specification.py",
+          "line": 362,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/terminology/resolver.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 601,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 914,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/test",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 914,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1665,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodytemp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1666,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodyheight",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1667,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodyweight",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1668,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/heartrate",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1669,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/resprate",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1670,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/oxygensat",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1671,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/oxygensat",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1672,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bmi",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1673,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1674,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1675,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1676,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://snomed.info/sct",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1683,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/bodytemp",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1684,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://loinc.org",
+          "file": "pyfhircheck-0.2.0/src/pyfhircheck/core/engine.py",
+          "line": 1707,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LOINC - LOINC is the international standard for identifying health observations, measurements, and documents.",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "booktrans",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/34/c5/98f1def80676975800b54a602e6fbb65dc62f11aa5c5c8fdc9642210f7f8/booktrans-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:44.462088+00:00",
+      "total_findings": 46,
+      "findings": [
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 103,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 125,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "booktrans-1.1.0/tests/make_epub3.py",
+          "line": 125,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 130,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 170,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 172,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 202,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 207,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 209,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 224,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/tests/build_corpus.py",
+          "line": 229,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 237,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 239,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 203,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 236,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "booktrans-1.1.0/src/booktrans/output.py",
+          "line": 236,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/ops",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 85,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 230,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 231,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 272,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 280,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 284,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.idpf.org/2007/opf",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 285,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 461,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 463,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 466,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 470,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 475,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/extract.py",
+          "line": 552,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://brew.sh",
+          "file": "booktrans-1.1.0/src/booktrans/doctor.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Homebrew: The Package Manager for Everywhere",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scoop.sh",
+          "file": "booktrans-1.1.0/src/booktrans/doctor.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.gribuser.ru/xml/fictionbook/2.0",
+          "file": "booktrans-1.1.0/src/booktrans/build.py",
+          "line": 283,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - gribuser/fb2: FictionBook 2 \u00b7 GitHub",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "streetinsider-visibility-engine",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/0b/1fb964baf076cafa576a2c2368dba2e55e61579dcbb42bca246fb06d3525/streetinsider_visibility_engine-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:40.374059+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://getonstreetinsider.com",
+          "file": "streetinsider_visibility_engine-1.0.0/visibility_engine.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - get on StreetInsider",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://getonstreetinsider.com",
+          "file": "streetinsider_visibility_engine-1.0.0/visibility_engine.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - get on StreetInsider",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://getonstreetinsider.com",
+          "file": "streetinsider_visibility_engine-1.0.0/setup.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - get on StreetInsider",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://getonstreetinsider.com",
+          "file": "streetinsider_visibility_engine-1.0.0/setup.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - get on StreetInsider",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://getonstreetinsider.com",
+          "file": "streetinsider_visibility_engine-1.0.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - get on StreetInsider",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "Generalized-ADCS",
+      "version": "0.1.5",
+      "download_url": "https://files.pythonhosted.org/packages/53/e5/7328ac07d1d9f2b9c357db689160a6db20bfe4b5318d8a8af4d6fcc8d4fb/generalized_adcs-0.1.5.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:38.645235+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://rhodesmill.org/skyfield",
+          "file": "generalized_adcs-0.1.5/ADCS/orbits/ephemeris.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Skyfield \u2014 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rhodesmill.org/skyfield",
+          "file": "generalized_adcs-0.1.5/ADCS/orbits/ephemeris.py",
+          "line": 8,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Skyfield \u2014 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://satsearch.co/products/isis-isis-magnetorquer-board-i-mtq",
+          "file": "generalized_adcs-0.1.5/ADCS/satellite_factory/sensors/create_cubesat_MTM.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ISIS Magnetorquer Board (iMTQ) | satsearch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.pumpkinspace.com/store/p58/GNSS_Receiver_Module_%28GPSRM_1%29_Kit.html",
+          "file": "generalized_adcs-0.1.5/ADCS/satellite_factory/sensors/create_cubesat_GPS.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GNSS Receiver Module (GPSRM 1) Kit",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://satsearch.co/products/isis-isis-magnetorquer-board-i-mtq",
+          "file": "generalized_adcs-0.1.5/ADCS/satellite_factory/actuators/create_cubesat_MTQ.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ISIS Magnetorquer Board (iMTQ) | satsearch",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "oak-domain-faculty-chemistry",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/bd/ea/17d47b09f0e81dd0f743d63d5a7ec66951e3fc04bb2f5ab58772aaef2e2d/oak_domain_faculty_chemistry-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:34.167723+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov",
+          "file": "oak_domain_faculty_chemistry-0.3.0/oak_domain_faculty_chemistry/datasets/pubmed.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PubMed",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+          "file": "oak_domain_faculty_chemistry-0.3.0/oak_domain_faculty_chemistry/datasets/pubmed.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "navia-sdk",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/80/8d/ad5f8f8e3fec7f7dba8ce54c91d3872c593607ef9069f8e3b7caa3d2817d/navia_sdk-2.0.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:32.777945+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://moxoff.com",
+          "file": "navia_sdk-2.0.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Homepage - Moxoff",
+          "cert_issuer": "Actalis S.p.A."
+        }
+      ]
+    },
+    {
+      "name": "gtm-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5d/6b/c1a0b30aa422ae88939c9d8e8704d9d0d7a24ad323b52f5d25c520c53b8e/gtm_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:25.811896+00:00",
+      "total_findings": 43,
+      "findings": [
+        {
+          "url": "https://in-otel.hyperdx.io/v1/traces",
+          "file": "gtm_sdk-0.1.0/tests/test_smoke_telemetry.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io",
+          "file": "gtm_sdk-0.1.0/tests/test_smoke_telemetry.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io/v1/traces",
+          "file": "gtm_sdk-0.1.0/tests/test_smoke_telemetry.py",
+          "line": 285,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io/v1/traces",
+          "file": "gtm_sdk-0.1.0/tests/test_smoke_telemetry.py",
+          "line": 316,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io/v1/traces",
+          "file": "gtm_sdk-0.1.0/libs/telemetry.py",
+          "line": 404,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io/v1/traces",
+          "file": "gtm_sdk-0.1.0/libs/telemetry.py",
+          "line": 533,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io/v1/logs",
+          "file": "gtm_sdk-0.1.0/libs/telemetry.py",
+          "line": 540,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://entire.io/install.sh",
+          "file": "gtm_sdk-0.1.0/scripts/entire-hooks-setup.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://entire.io/install.sh",
+          "file": "gtm_sdk-0.1.0/scripts/entire-hooks-setup.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://entire.io/install.sh",
+          "file": "gtm_sdk-0.1.0/scripts/entire-hooks-setup.py",
+          "line": 6,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://entire.io/install.sh",
+          "file": "gtm_sdk-0.1.0/scripts/entire-hooks-setup.py",
+          "line": 95,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.attio.com",
+          "file": "gtm_sdk-0.1.0/scripts/attio-workspace_url-emit.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.attio.com",
+          "file": "gtm_sdk-0.1.0/scripts/attio-workspace_url-emit.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.attio.com",
+          "file": "gtm_sdk-0.1.0/scripts/attio-workspace_url-emit.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.attio.com",
+          "file": "gtm_sdk-0.1.0/scripts/attio-workspace_url-emit.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.attio.com",
+          "file": "gtm_sdk-0.1.0/scripts/attio-workspace_url-emit.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://releases.bazel.build",
+          "file": "gtm_sdk-0.1.0/scripts/bazel-dagger-toolchain.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://releases.bazel.build/9.2.0/release/bazel-9.2.0-linux-arm64",
+          "file": "gtm_sdk-0.1.0/scripts/bazel-dagger-toolchain.py",
+          "line": 27,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://modal.com/apps/devx/main/deployed/otel-collector",
+          "file": "gtm_sdk-0.1.0/scripts/collector-deployment-verify.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in | Modal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ingress.us-west-2.aws.dash0.com",
+          "file": "gtm_sdk-0.1.0/scripts/collector-deployment-verify.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io",
+          "file": "gtm_sdk-0.1.0/scripts/collector-deployment-verify.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://get.trunk.io",
+          "file": "gtm_sdk-0.1.0/scripts/ci-suite-validate.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "gtm_sdk-0.1.0/scripts/ci-suite-validate.py",
+          "line": 261,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://otlp-gateway-prod-us-east-3.grafana.net/otlp",
+          "file": "gtm_sdk-0.1.0/src/otel_collector.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://otlp-gateway-prod-eu-west-2.grafana.net",
+          "file": "gtm_sdk-0.1.0/src/otel_collector.py",
+          "line": 180,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://in-otel.hyperdx.io",
+          "file": "gtm_sdk-0.1.0/src/otel_collector.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://logfire-us.pydantic.dev",
+          "file": "gtm_sdk-0.1.0/src/otel_collector.py",
+          "line": 241,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pydantic Logfire",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://otlp-gateway-prod-eu-west-2.grafana.net",
+          "file": "gtm_sdk-0.1.0/src/otel_collector.py",
+          "line": 174,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://app.attio.com/dlthub/meetings/record",
+          "file": "gtm_sdk-0.1.0/src/attio/orphan_meetings.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dlthub.com/blog",
+          "file": "gtm_sdk-0.1.0/src/sanity/blog_download.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Blog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fathom.video",
+          "file": "gtm_sdk-0.1.0/src/fathom/utils.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fathom AI Notetaker - Never Take Notes Again",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fathom.video",
+          "file": "gtm_sdk-0.1.0/src/fathom/utils.py",
+          "line": 82,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fathom AI Notetaker - Never Take Notes Again",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.cal.com",
+          "file": "gtm_sdk-0.1.0/src/caldotcom/webhook/slack_export.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login | Cal.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com",
+          "file": "gtm_sdk-0.1.0/libs/caldotcom/client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.granola.ai/v1",
+          "file": "gtm_sdk-0.1.0/libs/granola/api_client.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.harvest-api.com",
+          "file": "gtm_sdk-0.1.0/libs/harvest/client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.harvest-api.com/linkedin/profile",
+          "file": "gtm_sdk-0.1.0/libs/harvest/client.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.octolens.com",
+          "file": "gtm_sdk-0.1.0/libs/octolens/client.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Octolens | AI Social Listening",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.infisical.com",
+          "file": "gtm_sdk-0.1.0/libs/infisical/client.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Infisical",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://app.infisical.com",
+          "file": "gtm_sdk-0.1.0/libs/infisical/client.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Infisical",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://app.infisical.com",
+          "file": "gtm_sdk-0.1.0/libs/infisical/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Infisical",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://support.rb2b.com/en/articles/8976614-setup-guide-webhook",
+          "file": "gtm_sdk-0.1.0/libs/rb2b/models.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Setup Guide: Webhook | RB2B Knowledge Base and Help Center",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://support.rb2b.com/en/articles/8976614-setup-guide-webhook",
+          "file": "gtm_sdk-0.1.0/libs/rb2b/models.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Setup Guide: Webhook | RB2B Knowledge Base and Help Center",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "gtm-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c9/a6/94af9923f0b302f50e53b2d318c922b4c7b778f6eff06b05be5baa645318/gtm_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:23.139860+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.hookdeck.com/2024-09-01",
+          "file": "gtm_cli-0.1.0/webhook/_hookdeck.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gh-search-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/9f/2f/9a5dd4157b41b4b318b332abd6f74be98a7732f3901ff30feef342fcc0ed/gh_search_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-04T23:04:22.852937+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://releases.bazel.build",
+          "file": "gh_search_cli-0.1.0/scripts/bazel-dagger-toolchain.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://releases.bazel.build/9.2.0/release/bazel-9.2.0-linux-arm64",
+          "file": "gh_search_cli-0.1.0/scripts/bazel-dagger-toolchain.py",
+          "line": 27,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://releases.bazel.build/9.2.0/release/bazel-9.2.0-linux-arm64",
+          "file": "gh_search_cli-0.1.0/scripts/bazel-dagger-toolchain.py",
+          "line": 68,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "ChatLinux",
       "version": "0.0.1",
@@ -58678,6 +61329,36 @@
           "file": "tribecore-1.0.0/src/tribecore/_libs/libgraphcore.so",
           "sha256": "b9c9952cd2f161890593761b44a524c8008a6a3c74e8ed8c56edc80358acd278",
           "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "breakform-cli",
+      "version": "1.0.6",
+      "analyzed_at": "2026-08-04T23:05:05.286624+00:00",
+      "binaries": [
+        {
+          "name": "exl.abi3.so",
+          "file": "exl/exl.abi3.so",
+          "sha256": "d321d132c350612823e5de5b666ff2b09bb4004eba9520e5a044cc3c30e0498f",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "zeroset-anydoc",
+      "version": "0.2.1",
+      "analyzed_at": "2026-08-04T23:05:14.422679+00:00",
+      "binaries": [
+        {
+          "name": "_anydoc.abi3.so",
+          "file": "anydoc/_anydoc.abi3.so",
+          "sha256": "469d770af7ca5ccbe5eec53f0d23f96d1a95435a51cae15545c1fefe9530c141",
+          "format": "macho",
           "signed": false,
           "signer": null
         }
