@@ -1,11 +1,3959 @@
 {
-  "generated_at": "2026-08-05T14:11:51.840649+00:00",
+  "generated_at": "2026-08-05T17:40:38.444123+00:00",
   "stats": {
-    "total_packages": 194,
-    "malicious": 10,
-    "clean": 184
+    "total_packages": 244,
+    "malicious": 15,
+    "clean": 229
   },
   "packages": [
+    {
+      "name": "solana-sniper-bot",
+      "version": "1.4.2",
+      "download_url": "https://files.pythonhosted.org/packages/3f/47/3d6412be46e288b8f59f00424cb722b095431f06252eab2ed22eb5ef1c70/solana_sniper_bot-1.4.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:36.238258+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com",
+          "file": "solana_sniper_bot-1.4.2/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "solana_sniper_bot-1.4.2/setup.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com/collect",
+          "file": "solana_sniper_bot-1.4.2/setup.py",
+          "line": 144,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "eth-account-wallet",
+      "version": "0.11.2",
+      "download_url": "https://files.pythonhosted.org/packages/0c/11/1c79af58cdc78f6bd229ab93455ef167da323be2b080064812db2634f6c3/eth_account_wallet-0.11.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:35.304444+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com",
+          "file": "eth_account_wallet-0.11.2/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "eth_account_wallet-0.11.2/setup.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com/collect",
+          "file": "eth_account_wallet-0.11.2/setup.py",
+          "line": 144,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "infinity-context",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/cd/18f471a7f8a56fdb594b8b27dffea647cd9ac9e5853386bb71d2de8980a4/infinity_context-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:34.444524+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://mcpservers.org/servers/agentic-mcp-tools/memora",
+          "file": "infinity_context-0.1.0/packages/infinity_context_server/infinity_context_server/memora_comparison.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Memora MCP Server | Awesome MCP Servers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://protodex.io/servers/agentic-box-memora.html",
+          "file": "infinity_context-0.1.0/packages/infinity_context_server/infinity_context_server/memora_comparison.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "memora \u2014 AI/LLM MCP Server | Protodex",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.mem0.ai/core-concepts/memory-evaluation",
+          "file": "infinity_context-0.1.0/packages/infinity_context_server/infinity_context_server/memory_comparison_token_budget_contract.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Memory Evaluation - Mem0",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mem0.ai",
+          "file": "infinity_context-0.1.0/packages/infinity_context_server/infinity_context_server/memory_comparison_mem0_platform_contract.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "defi-sdk-py",
+      "version": "2.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/da/82/bf35ceedbff2a430d66fdd63fae6e1be8735f685907e874a608bd6bcff64/defi_sdk_py-2.5.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:29.180466+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com",
+          "file": "defi_sdk_py-2.5.1/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "defi_sdk_py-2.5.1/setup.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com/collect",
+          "file": "defi_sdk_py-2.5.1/setup.py",
+          "line": 144,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ppcloud",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2e/cc/85df10b17d3f3c3b052a750241fcafc72e0fc91506323f2a58ccea4091bb/ppcloud-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:28.225790+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://prosperpower.cloud",
+          "file": "ppcloud-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ProsperPower Cloud \u2014 AI \u65f6\u4ee3\u7684 GPU \u7b97\u529b\u5e02\u573a",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://prosperpower.cloud/developers",
+          "file": "ppcloud-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5f00\u53d1\u8005 \u00b7 \u5feb\u901f\u5f00\u59cb \u00b7 ProsperPower Cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://prosperpower.cloud/api/v1",
+          "file": "ppcloud-0.1.0/ppcloud/client.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "mnemonic-py",
+      "version": "0.21",
+      "download_url": "https://files.pythonhosted.org/packages/29/e0/94b569861c11686900325fe879d709dd64d179393e62cf161230c6037e07/mnemonic_py-0.21.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:27.514363+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com",
+          "file": "mnemonic_py-0.21/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "mnemonic_py-0.21/setup.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://40f955f39128bd79-178-249-214-24.serveousercontent.com/collect",
+          "file": "mnemonic_py-0.21/setup.py",
+          "line": 144,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "legal-citation-check",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/be/bb/a2ded170d1d93692021d57d717bbf9ccb4f82647660d69ea84aef1891104/legal_citation_check-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:26.462445+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.courtlistener.com/api/rest/v4/citation-lookup",
+          "file": "legal_citation_check-0.1.0/src/legal_citation_check/verify/existence.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "cogitan-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/96/b1/038d6514f9f6bdd5e7d9483371359044aa78d43125304b1fcf7b73dc96e4/cogitan_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:25.844404+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://www.cogitan.ai",
+          "file": "cogitan_mcp-0.1.0/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cogitan \u2014 AI Surrogates for the Superconducting Quantum Stack",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.cogitan.ai/docs",
+          "file": "cogitan_mcp-0.1.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Access | Cogitan",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cogitan.ai",
+          "file": "cogitan_mcp-0.1.0/cogitan_mcp/server.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.cogitan.ai/dashboard/exclusive",
+          "file": "cogitan_mcp-0.1.0/cogitan_mcp/server.py",
+          "line": 264,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cogitan \u2014 AI Surrogates for the Superconducting Quantum Stack",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.cogitan.ai/dashboard/exclusive",
+          "file": "cogitan_mcp-0.1.0/cogitan_mcp/server.py",
+          "line": 262,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cogitan \u2014 AI Surrogates for the Superconducting Quantum Stack",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "polyswitch",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/fc/e3/526c7a3373b4a936035925a3f4fd9904fedbf32ddaa7ca34dedf4fb46e07/polyswitch-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:21.799235+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://polyswitch.io",
+          "file": "polyswitch-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Polyswitch - AI Gateway & Cost Optimizer | Polyswitch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://polyswitch.io/docs",
+          "file": "polyswitch-0.1.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tiktok-studio-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4f/37/9f244413203c709e14ad6ed626d4e1a6fb4cbea0bd63b3500e7479cf3405/tiktok_studio_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:19.650079+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://open.tiktokapis.com/v2/oauth/token",
+          "file": "tiktok_studio_mcp-0.1.0/src/tiktok_mcp/auth.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://open.tiktokapis.com",
+          "file": "tiktok_studio_mcp-0.1.0/src/tiktok_mcp/client.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://open.tiktokapis.com/v2/oauth/token",
+          "file": "tiktok_studio_mcp-0.1.0/src/tiktok_mcp/client.py",
+          "line": 24,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "erga",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0f/64/a15d07ea91526dd22c80f84e96e8cf061220fb5bd00f45391ae40cfba5c3/erga-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:18.935542+00:00",
+      "total_findings": 51,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5555/lost",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-1825-0097",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://doi.org/10.5555/XYZ123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/xyz123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/XYZ123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/xyz123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/XYZ123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 103,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/XYZ123",
+          "file": "erga-0.1.0/tests/test_curation.py",
+          "line": 215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/ABC",
+          "file": "erga-0.1.0/tests/test_model.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://dx.doi.org/10.5555/xyz",
+          "file": "erga-0.1.0/tests/test_model.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doi.org/10.5555/abc",
+          "file": "erga-0.1.0/tests/test_model.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/ABC",
+          "file": "erga-0.1.0/tests/test_model.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/abc",
+          "file": "erga-0.1.0/tests/test_model.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W123",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W1",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W2",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W2",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W3",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W1",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W2",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W3",
+          "file": "erga-0.1.0/tests/test_openalex.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "erga-0.1.0/tests/test_http.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "erga-0.1.0/tests/test_http.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "erga-0.1.0/tests/test_http.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/W1001",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/xyz123",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org/A5000000001",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-1825-0097",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://openalex.org/A5999999999",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/xyz123",
+          "file": "erga-0.1.0/tests/test_normalize.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/ABC",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/abc",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/abc",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/ABC",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/vor",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.48550/arXiv.2401.00001",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2401.00001] Sector Rotation by Factor Model and Fundamental Analysis",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/other",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/a",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/b",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.bdr.2025.100575",
+          "file": "erga-0.1.0/tests/test_dedup.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org",
+          "file": "erga-0.1.0/tests/test_verify.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-1825-0097",
+          "file": "erga-0.1.0/tests/test_config.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-1825-009x",
+          "file": "erga-0.1.0/tests/test_config.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-1825-0097",
+          "file": "erga-0.1.0/tests/test_config.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.openalex.org",
+          "file": "erga-0.1.0/src/erga/openalex.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openalex.org",
+          "file": "erga-0.1.0/src/erga/openalex.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "erga-0.1.0/src/erga/crossref.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "erga-0.1.0/src/erga/model.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "erga-0.1.0/src/erga/model.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://orcid.org",
+          "file": "erga-0.1.0/src/erga/curation.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "mcprack",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/71/01/5a43e2f0627fdf1efdc43e03a7defeb80396285380cf11342955cf019813/mcprack-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:09.420673+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://jenkins.proxy.spojenet.cz/mcp-server/mcp",
+          "file": "mcprack-1.1.0/tests/test_config_formats.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jenkins.proxy.spojenet.cz/mcp-server/mcp",
+          "file": "mcprack-1.1.0/tests/test_config_formats.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://jenkins.proxy.spojenet.cz/mcp-server/mcp",
+          "file": "mcprack-1.1.0/tests/test_config_formats.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fosstodon.org",
+          "file": "mcprack-1.1.0/tests/test_admin_servers_list.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fosstodon",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fosstodon.org",
+          "file": "mcprack-1.1.0/tests/test_admin_servers_list.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fosstodon",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vaultwarden-dev.proxy.spojenet.cz",
+          "file": "mcprack-1.1.0/mcprack/vaultwarden.py",
+          "line": 349,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vaultwarden Web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vaultwarden-dev.proxy.spojenet.cz",
+          "file": "mcprack-1.1.0/mcprack/vaultwarden.py",
+          "line": 348,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vaultwarden Web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fosstodon.org",
+          "file": "mcprack-1.1.0/mcprack/models.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fosstodon",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://alembic.zzzcomputing.com/en/latest/cookbook.html",
+          "file": "mcprack-1.1.0/mcprack/migrations/env.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cookbook \u2014 Alembic 1.19.0 documentation",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "nonengine",
+      "version": "1.11.0",
+      "download_url": "https://files.pythonhosted.org/packages/39/81/76ffd4014b4708dc6cdad950c2df6a3a59b5d91dfe50f157328dc0c3713f/nonengine-1.11.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "analyzed_at": "2026-08-05T17:40:00.513380+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://archive.panda3d.org/thirdparty",
+          "file": "direct/dist/commands.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://archive.panda3d.org/simple/opt",
+          "file": "direct/dist/commands.py",
+          "line": 449,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "selmakit",
+      "version": "0.1.24",
+      "download_url": "https://files.pythonhosted.org/packages/07/f9/5f122a1b4255eaaf26f44242dc465277d038394cf753e8e79118b189a263/selmakit-0.1.24.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:56.123437+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://geocoding-api.open-meteo.com/v1/search",
+          "file": "selmakit-0.1.24/examples/weather_mcp.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.open-meteo.com/v1/forecast",
+          "file": "selmakit-0.1.24/examples/weather_mcp.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anam.ai/v1/auth/session-token",
+          "file": "selmakit-0.1.24/selmakit/channels/webchat.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ai-code-guardrails",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f7/12/fee921146ee0d611b3dabe99bbd4c178af15fa3578e62d0e72af63c0872e/ai_code_guardrails-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:53.710677+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "ai_code_guardrails-0.1.0/src/ai_code_guardrails/guards/deps.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pub.dev/api/packages",
+          "file": "ai_code_guardrails-0.1.0/src/ai_code_guardrails/guards/deps.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "issuudownloader",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/6f/33a19e6a2f7edf0d668408e0e98bf8988d11bc824393f912ae2039888705/issuudownloader-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:53.146353+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://backend.img2pdf.net/download-pdf",
+          "file": "issuudownloader-0.1.0/issuudownloader/downloader.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://backend.img2pdf.net/job",
+          "file": "issuudownloader-0.1.0/issuudownloader/downloader.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://issuu.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/fetcher.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu | Create Interactive Flipbooks on our Digital Publishing Platform",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://issuu.com/oembed?url=",
+          "file": "issuudownloader-0.1.0/issuudownloader/fetcher.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://image.isu.pub",
+          "file": "issuudownloader-0.1.0/issuudownloader/fetcher.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.issuu.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/validation.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu | Create Interactive Flipbooks on our Digital Publishing Platform",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://issuu.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/validation.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu | Create Interactive Flipbooks on our Digital Publishing Platform",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.issuu.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/validation.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu | Create Interactive Flipbooks on our Digital Publishing Platform",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://issuu.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/validation.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu | Create Interactive Flipbooks on our Digital Publishing Platform",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://issuudownload.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/utils.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu To PDF Download Tool",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://issuudownload.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/utils.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu To PDF Download Tool",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://issuudownload.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/utils.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu To PDF Download Tool",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://issuudownload.com",
+          "file": "issuudownloader-0.1.0/issuudownloader/utils.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Issuu To PDF Download Tool",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyclues",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/d8/1d/919d87cad53548c3fec3a346c05a5352cbda213d4850639802c905d78b9c/pyclues-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:51.276722+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://yourcompany.com",
+          "file": "pyclues-0.0.1/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "yourcompany.com - This website is for sale! - yourcompany Resources and Information.",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "otpa",
+      "version": "0.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/39/c5/0a2e0d55648ecf972016af1f0fb77f4225395796c9023e5dfecec76b7260/otpa-0.0.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:48.887866+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://protobuf.dev/programming-guides/encoding",
+          "file": "otpa-0.0.0/otpa/proto.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Encoding | Protocol Buffers Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://protobuf.dev/programming-guides/encoding",
+          "file": "otpa-0.0.0/otpa/proto.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Encoding | Protocol Buffers Documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qvalid",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/da/91/7c4dca808f8abf1e5ee8df4cc3f924d2fdae6dfe2335dbfcb4f1ab131a49/qvalid-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:47.996601+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.stlouisfed.org/fred/series/observations",
+          "file": "qvalid-1.1.0/src/qvalid/adapters/market.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "querysmith",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/65/05/e471b51186ae3e94b14f2c167cb68e4ff0b2bae03512ed0d10091142e3e1/querysmith-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:41.757293+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.avalai.ir/v1",
+          "file": "querysmith-0.1.0/tests/test_llm.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.avalai.ir/v1",
+          "file": "querysmith-0.1.0/src/querysmith/llm.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hardmatch",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/32/cfac4f190ab5e1d430f0a65bc4b24024fb4b2c42e8910b16473d88e649b2/hardmatch-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:40.228834+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2604.04931",
+          "file": "hardmatch-1.0.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2604.04931] LoMa: Local Feature Matching Revisited",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "seestar-photometry",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/b9/52/7bab6a6298e1b820176c74f7d8935aa0e2f0a991a95f146260f3775c612f/seestar_photometry-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:38.928457+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.astropy.org/en/stable",
+          "file": "seestar_photometry-0.2.0/docs/conf.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "astropy: A Community Python Library for Astronomy \u2014 Astropy v8.0.1",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "furatena",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/dc/58/f046cf1cd42cbd2898e1f2abf0da766533e213f98324c603dd43f96f2ae2/furatena-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:38.205667+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://slsa.dev/provenance/v1",
+          "file": "furatena-0.1.1/tests/test_remote_shards.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SLSA \u2022 Provenance",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentdocsspec.com/spec/v0.5.0",
+          "file": "furatena-0.1.1/tests/test_afdocs_score_lane.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentdocsspec.com/spec",
+          "file": "furatena-0.1.1/tests/test_afdocs_score_lane.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agent-Friendly Documentation Spec \u00b7 Agent-Friendly Documentation Spec",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://slsa.dev/provenance/v1",
+          "file": "furatena-0.1.1/tests/test_federation_publish.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SLSA \u2022 Provenance",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "furatena-0.1.1/tests/test_static_artifact_audit.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "furatena-0.1.1/tests/test_static_artifact_audit.py",
+          "line": 40,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://railway.com/project",
+          "file": "furatena-0.1.1/src/furatena/catalog/railway_preview_controller.py",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Railway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "furatena-0.1.1/src/furatena/catalog/sitemap.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "furatena-0.1.1/src/furatena/catalog/shard_discovery.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://schema.org",
+          "file": "furatena-0.1.1/src/furatena/catalog/seo.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vip-tool",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/21/80/bc34de2618453f5929d6c3d2108ab41f0481f5395570b5541a9ceb1aafa0/vip_tool-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:33.540770+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://vianova.io",
+          "file": "vip_tool-0.0.1/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI-Driven Spatial Intelligence for Smarter Cities | Vianova",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "brokk-anvil",
+      "version": "0.24.4",
+      "download_url": "https://files.pythonhosted.org/packages/4f/04/8472b36204223444e83113ee26ad1338a4b2f8967cfaf4c15ed9ab2aa85c/brokk_anvil-0.24.4.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:32.748426+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://anvil.brokk.ai",
+          "file": "brokk_anvil-0.24.4/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anvil | Anvil",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anvil.brokk.ai/install",
+          "file": "brokk_anvil-0.24.4/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install Anvil | Anvil",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "http-bench-service",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/c1/d6/d27b97f71d232bf59b947808ba52bbf0cb2b2f7c34307ed96595f3fbe7af/http_bench_service-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:31.550364+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://ya.ru",
+          "file": "http_bench_service-0.1.2/src/cli.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u042f\u043d\u0434\u0435\u043a\u0441 \u2014 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u043f\u043e\u0438\u0441\u043a \u0432 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0435",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ya.ru",
+          "file": "http_bench_service-0.1.2/src/cli.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u042f\u043d\u0434\u0435\u043a\u0441 \u2014 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u043f\u043e\u0438\u0441\u043a \u0432 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0435",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "simple_module_pagebuilder",
+      "version": "0.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/5a/39/7c6db624c250092ff89d76a07e4d063f045bd4e04b0309f6b4c8b886be0f/simple_module_pagebuilder-0.0.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:28.131692+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://schema.org",
+          "file": "simple_module_pagebuilder-0.0.2/tests/test_seo_meta.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "simple_module_pagebuilder-0.0.2/pagebuilder/endpoints/seo.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "simple_module_pagebuilder-0.0.2/pagebuilder/endpoints/seo.py",
+          "line": 61,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "lcs_parcels",
+      "version": "2026.8.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/4f/5d/02e343bfb9272d28f22a4cbf38149841e79700b711792a7f253a50c4a69a/lcs_parcels-2026.8.5.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:27.199820+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://scientific-python.org/specs/spec-0000",
+          "file": "lcs_parcels-2026.8.5.1/pyproject.toml",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scientific Python - SPEC 0 \u2014 Minimum Supported Dependencies",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/examples/cabo_verde_lcs.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/examples/cabo_verde_lcs.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://help.marine.copernicus.eu/en/collections/4060068-copernicus-marine-toolbox",
+          "file": "lcs_parcels-2026.8.5.1/examples/get_data.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copernicus Marine Toolbox | Copernicus Marine Help Center",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.48670/moi-00016",
+          "file": "lcs_parcels-2026.8.5.1/examples/get_data.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Global Ocean Physics Analysis and Forecast | Copernicus Marine Service",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/examples/cabo_verde_lcs_evolution.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/examples/cabo_verde_lcs_evolution.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.xarray.dev/en/stable",
+          "file": "lcs_parcels-2026.8.5.1/docs/conf.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xarray documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/grids.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/grids.py",
+          "line": 709,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/grids.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/grids.py",
+          "line": 700,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/__init__.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/tensorlines.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/tensorlines.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1146/annurev-fluid-010313-141322",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/tensorlines.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1063/1.3579597",
+          "file": "lcs_parcels-2026.8.5.1/src/lcs_parcels/tensorlines.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "aimarket-atlas",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5f/a7/eb34b40b83a26235b237206e78f20c91f2342a5f1b513e8fd138597b49f3/aimarket_atlas-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:24.173952+00:00",
+      "total_findings": 23,
+      "findings": [
+        {
+          "url": "https://atlas.modelmarket.dev",
+          "file": "aimarket_atlas-0.1.0/pyproject.toml",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ATLAS \u2014 Physical sensor map",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://open-meteo.com",
+          "file": "aimarket_atlas-0.1.0/tests/test_formatters.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ud83c\udf24\ufe0f Free Open-Source Weather API | Open-Meteo.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open-meteo.com",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ud83c\udf24\ufe0f Free Open-Source Weather API | Open-Meteo.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open-meteo.com",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ud83c\udf24\ufe0f Free Open-Source Weather API | Open-Meteo.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.weather.gov",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "api.weather.gov",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.tidesandcurrents.noaa.gov",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.carbonintensity.org.uk",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Carbon Intensity API",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://earthquake.usgs.gov",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "USGS Earthquake Hazards Program",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.opensensemap.org",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://open-meteo.com",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ud83c\udf24\ufe0f Free Open-Source Weather API | Open-Meteo.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open-meteo.com",
+          "file": "aimarket_atlas-0.1.0/tests/conftest.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ud83c\udf24\ufe0f Free Open-Source Weather API | Open-Meteo.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "aimarket_atlas-0.1.0/tests/test_ai_assistant.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "aimarket_atlas-0.1.0/tests/test_ai_assistant.py",
+          "line": 230,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://magic-ai-factory.com",
+          "file": "aimarket_atlas-0.1.0/atlas/main.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI-Factory \u2014 Generate landings from one phrase",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://atlas.modelmarket.dev",
+          "file": "aimarket_atlas-0.1.0/atlas/fleet.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ATLAS \u2014 Physical sensor map",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://atlas.modelmarket.dev",
+          "file": "aimarket_atlas-0.1.0/atlas/fleet.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ATLAS \u2014 Physical sensor map",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://atlas.modelmarket.dev",
+          "file": "aimarket_atlas-0.1.0/atlas/config.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ATLAS \u2014 Physical sensor map",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://iot.modelmarket.dev",
+          "file": "aimarket_atlas-0.1.0/atlas/config.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GAIA \u2014 physical-world oracle gateway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "aimarket_atlas-0.1.0/atlas/llm_providers.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "aimarket_atlas-0.1.0/atlas/llm_providers.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "aimarket_atlas-0.1.0/atlas/llm_providers.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "aimarket_atlas-0.1.0/atlas/llm_providers.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "aimarket_atlas-0.1.0/atlas/llm_providers.py",
+          "line": 413,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "flask-session.manager.sk",
+      "version": "1.0.4",
+      "download_url": "https://files.pythonhosted.org/packages/67/ef/82bf55e6221a59ebd483eee2a738bf67667a4b20262cba926024db6ff64c/flask_session_manager_sk-1.0.4.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:17.529818+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://attacker.com",
+          "file": "flask_session_manager_sk-1.0.4/tests/test_cookies.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://attacker.com",
+          "file": "flask_session_manager_sk-1.0.4/tests/test_cookies.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://attacker.com",
+          "file": "flask_session_manager_sk-1.0.4/tests/test_cookies.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "sekai-deck-recommend-cpp-resona",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/6d/076bb5a41d5e97763e1b8e1aaebcc1919432e90fe9068245959911081ea7/sekai_deck_recommend_cpp_resona-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:16.696531+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://gitter.im/pybind/Lobby",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/setup.cfg",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2447",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_call_policies.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2444",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_buffers.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2742",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_class.py",
+          "line": 434,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2742",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_class.py",
+          "line": 445,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://en.cppreference.com/w/cpp/language/eval_order",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_class_sh_disowning.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2447",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_methods_and_attributes.py",
+          "line": 306,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/2447",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_methods_and_attributes.py",
+          "line": 350,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://foss.heptapod.net/pypy/pypy/-/issues/3583",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/tests/test_exceptions.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://learn.scientific-python.org/development/guides/packaging-compiled",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/compiling.rst",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Compiled packaging - Scientific Python Development Guide",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mesonbuild.com",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/compiling.rst",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Meson Build system",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ccache.dev",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/compiling.rst",
+          "line": 240,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ccache \u2014 Compiler cache",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pypi.io/project/check-manifest",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/compiling.rst",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Client Challenge",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://pypi.io/project/check-sdist",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/compiling.rst",
+          "line": 267,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Client Challenge",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "http://semver.org",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/changelog.rst",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pre-commit.com",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/changelog.rst",
+          "line": 2012,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pre-commit",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://en.cppreference.com/w/cpp/types/underlying_type",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/classes.rst",
+          "line": 614,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://repology.org/project/python:pybind11/versions",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/installing.rst",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "python:pybind11 package versions - Repology",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://en.cppreference.com/w/cpp/memory/enable_shared_from_this",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/smart_ptrs.rst",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://eigen.tuxfamily.org",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/cast/eigen.rst",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Eigen: A C++ template library for linear algebra",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://en.cppreference.com/w/cpp/language/definition",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/cast/custom.rst",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://utf8everywhere.org",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/cast/strings.rst",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UTF-8 Everywhere",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://unicode.org/reports/tr29",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/cast/strings.rst",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UAX #29: Unicode Text Segmentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses",
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/docs/advanced/cast/strings.rst",
+          "line": 295,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!) \u2013 Joel on Software",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pixelactions",
+      "version": "0.9.7",
+      "download_url": "https://files.pythonhosted.org/packages/01/45/96f0af42bac96021f336f9eee883a16d8ddf552012e926d42b4724f36e17/pixelactions-0.9.7.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:11.916705+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pixelactions.dev",
+          "file": "pixelactions-0.9.7/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pixelactions \u2014 Execute desktop flows from reviewable files: find, act, assert",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "langchain-carlyemail",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/d3/df/c8b715f24a348fefa97bc45bd7988cbf09c128bd4596675023e556457f1e/langchain_carlyemail-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:11.251549+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://carlyemail.com",
+          "file": "langchain_carlyemail-0.2.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CarlyEmail \u2014 add email to any AI agent",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.carlyemail.com/integrations/langchain",
+          "file": "langchain_carlyemail-0.2.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LangChain and LangGraph \u2014 CarlyEmail docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "skilltrustops",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/e5/0b/84f27fc6fd1b813a60bfd402a60789191f300feb08e8b1210e7a94dda89c/skilltrustops-0.1.4.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:10.509652+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/domain/reports.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/domain/reports.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://owasp.org/www-community/attacks/Command_Injection",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Command Injection | OWASP Foundation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions/78.html",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CWE - CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') (4.20)",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LLM01:2025 Prompt Injection - OWASP Gen AI Security Project",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://atlas.mitre.org/techniques/AML.T0051",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Secrets Management - OWASP Cheat Sheet Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/catalog.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Logging - OWASP Cheat Sheet Series",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/agent_skills.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/rules/agent_skills.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "skilltrustops-0.1.4/src/skilltrustops/reporting/sarif.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "bursapay-sdk",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/2d/8c/106928400aae78c49a91edb7c62f647ea7db5accc81c29061fcc4e2f5973/bursapay_sdk-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:08.230362+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://bursapay.com/api-documentation",
+          "file": "bursapay_sdk-0.1.1/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Documentation \u2014 BursaPay Gateway",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bursapay.com/pay/LINK-ABC123",
+          "file": "bursapay_sdk-0.1.1/tests/test_payment_links.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://myapp.com/hooks/bursapay",
+          "file": "bursapay_sdk-0.1.1/tests/test_webhooks.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://myapp.com/hooks/bursapay",
+          "file": "bursapay_sdk-0.1.1/tests/test_webhooks.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://myapp.com/hooks/bursapay",
+          "file": "bursapay_sdk-0.1.1/tests/test_webhooks.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api.bursapay.com/checkout/abc",
+          "file": "bursapay_sdk-0.1.1/tests/test_payments.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bursapay.com/api/v1",
+          "file": "bursapay_sdk-0.1.1/bursapay/client.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bursapay.com/api/v1",
+          "file": "bursapay_sdk-0.1.1/bursapay/client.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bursapay.com/api/v1",
+          "file": "bursapay_sdk-0.1.1/bursapay/client.py",
+          "line": 48,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bursapay.com/api/v1",
+          "file": "bursapay_sdk-0.1.1/bursapay/_http.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bursapay.com/api/v1",
+          "file": "bursapay_sdk-0.1.1/bursapay/_http.py",
+          "line": 66,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://myapp.com/hooks/bursapay",
+          "file": "bursapay_sdk-0.1.1/bursapay/resources/webhooks.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://myapp.com/hooks/bursapay",
+          "file": "bursapay_sdk-0.1.1/bursapay/resources/webhooks.py",
+          "line": 28,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "peta",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/91/fe/4e57bcf70c6d885385c1dee716a09182a60faedb27242b9b731d302d880c/peta-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:01.032908+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.osv.dev/v1/query",
+          "file": "peta-0.1.0/src/peta/core/osv.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pypistats.org/api/packages",
+          "file": "peta-0.1.0/src/peta/core/stats.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://libraries.io/api/pypi",
+          "file": "peta-0.1.0/src/peta/core/stats.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "open-threat-model",
+      "version": "7.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/16/8e/b071bfcf336f534f9e7a797c36ff419e2a3cc2ab3aaed467e46f4c537518/open_threat_model-7.9.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:59.881570+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+          "file": "open_threat_model-7.9.0/packages/exporters/otm_exporters/analysis_sarif.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Static Analysis Results Interchange Format (SARIF) Version 2.1.0 Plus Errata 01",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "open_threat_model-7.9.0/packages/exporters/otm_exporters/analysis_sarif.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions",
+          "file": "open_threat_model-7.9.0/packages/exporters/otm_exporters/analysis_sarif.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://capec.mitre.org/data/definitions",
+          "file": "open_threat_model-7.9.0/packages/exporters/otm_exporters/analysis_sarif.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+          "file": "open_threat_model-7.9.0/packages/exporters/otm_exporters/analysis_sarif.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Static Analysis Results Interchange Format (SARIF) Version 2.1.0 Plus Errata 01",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "otb-cbso-webservice-pyclient",
+      "version": "0.1",
+      "download_url": "https://files.pythonhosted.org/packages/0b/87/ad108419f4d928c564fd5ab02a596585dd81a45f9d3f593e3803cc71332d/otb_cbso_webservice_pyclient-0.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:57.090888+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://ws.cbso.nbb.be",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ws.cbso.nbb.be",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ws.uat2.cbso.nbb.be",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ws.cbso.nbb.be/extracts",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ws.cbso.nbb.be",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 52,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://ws.cbso.nbb.be/extracts",
+          "file": "otb_cbso_webservice_pyclient-0.1/src/cbso_webservice_client/api.py",
+          "line": 138,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "compliance-check",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3d/ba/90ff1d09c5d27db849c639308aef98c870177af4d19d51732c0a80097c9f/compliance_check-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:55.279077+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "compliance_check-0.1.0/src/utils/config.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "compliance_check-0.1.0/scripts/deontic/deontic_kg.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "living-review-updater",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/04/f7/dcb357b2456081fb2b3e2db575b081a2488ad8f48ac97eb44573889f41e3/living_review_updater-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:55.042983+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1000/MG.asthma",
+          "file": "living_review_updater-0.1.0/tests/test_store.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://europepmc.org/RestfulWebService",
+          "file": "living_review_updater-0.1.0/livingreview/sources/europepmc.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Europe PMC",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "file": "living_review_updater-0.1.0/livingreview/sources/europepmc.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://europepmc.org/RestfulWebService",
+          "file": "living_review_updater-0.1.0/livingreview/sources/europepmc.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Europe PMC",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501",
+          "file": "living_review_updater-0.1.0/livingreview/sources/pubmed.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Entrez\u00ae Programming Utilities Help - NCBI Bookshelf",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+          "file": "living_review_updater-0.1.0/livingreview/sources/pubmed.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+          "file": "living_review_updater-0.1.0/livingreview/sources/pubmed.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK25501",
+          "file": "living_review_updater-0.1.0/livingreview/sources/pubmed.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Entrez\u00ae Programming Utilities Help - NCBI Bookshelf",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "tracelens-ai",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/9a/13/f913434842cafaf0dc6055fafd6a3f0968c4c67bc411bf8315b867c01ee1/tracelens_ai-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:52.452931+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "tracelens_ai-0.3.0/src/tracelens/backends/cloud.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gguf-inspect",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/67/dc/e15425d445aa563c21e4e3f47ec7c2063238ff5963bc0374a0aed53cb68d/gguf_inspect-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:52.309288+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://no-color.org",
+          "file": "gguf_inspect-0.1.0/gguf_inspect/format.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://no-color.org",
+          "file": "gguf_inspect-0.1.0/gguf_inspect/format.py",
+          "line": 121,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "mimosa-ui",
+      "version": "2026.8.0",
+      "download_url": "https://files.pythonhosted.org/packages/b5/f9/58dbd0361f9b38f803ff0b7e992dec25e9fc5569e7296149e4b83307fe0a/mimosa_ui-2026.8.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:51.926178+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://gitlab.esrf.fr/ui/mimosa/mimosa-ui",
+          "file": "mimosa_ui-2026.8.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://www.robotstxt.org/robotstxt.html",
+          "file": "mimosa_ui-2026.8.0/public/robots.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Web Robots Pages",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.robotstxt.org/robotstxt.html",
+          "file": "mimosa_ui-2026.8.0/pysrc/mimosa_ui/static/robots.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Web Robots Pages",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "intersticy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d4/e7/54db92fe9355b17f9fea6d9c5789f199849981906237854f9c13f2d05d47/intersticy-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:49.019487+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.gutenberg.org/files/1342/1342-0.txt",
+          "file": "intersticy-0.1.0/benchmarks/benchmark.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Network Solutions L.L.C."
+        },
+        {
+          "url": "https://www.gutenberg.org/files/1342/1342-0.txt",
+          "file": "intersticy-0.1.0/benchmarks/benchmark.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Network Solutions L.L.C."
+        }
+      ]
+    },
+    {
+      "name": "usb-pd-profiles",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/15/912e95b070d66cfa78f9ba328c16e39822fa8cd05cb7b340b64af5609220/usb_pd_profiles-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:47.164067+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cairovolt.com/en/anker/wall-chargers",
+          "file": "usb_pd_profiles-1.0.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anker Chargers by Power and Protocol in Egypt \u26a1 11 Products | Prices & COD",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tangyuanAI",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/7c/6b/b573a85beeed3677fae42da0a2ff8e7c2cf39f73c6c3df34cf4b7350501b/tangyuanai-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:45.293988+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://pypi.tuna.tsinghua.edu.cn/simple",
+          "file": "tangyuanai-1.0.0/pyproject.toml",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://your-gateway.com/anthropic",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 282,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 108,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://your-gateway.com/anthropic",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 108,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "tangyuanai-1.0.0/anthropic_agent.py",
+          "line": 281,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "Multiverse-workspace",
+      "version": "1.40.1",
+      "download_url": "https://files.pythonhosted.org/packages/26/7e/1b07cbd7fcb191150ce3c03c5f8601af5afb75fe84fe35df3a384fb7fd6e/multiverse_workspace-1.40.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:41.545415+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "https://apptainer.org/docs/user/main/docker_and_oci.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Support for Docker and OCI Containers \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/main/bind_paths_and_mounts.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bind Paths and Mounts \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/main/quick_start.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quick Start \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/main/docker_and_oci.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 126,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Support for Docker and OCI Containers \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/main/bind_paths_and_mounts.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 136,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bind Paths and Mounts \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/main/quick_start.html",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/apptainer/workspace.py",
+          "line": 187,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quick Start \u2014 Apptainer User Guide main documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runtime.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/remote_api/workspace.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands Remote Runtime",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runtime.eval.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/remote_api/workspace.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runtime.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/remote_api/workspace.py",
+          "line": 20,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands Remote Runtime",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://runtime.eval.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/remote_api/workspace.py",
+          "line": 20,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 55,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.all-hands.dev",
+          "file": "multiverse_workspace-1.40.1/Multiverse/workspace/cloud/workspace.py",
+          "line": 116,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenHands",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "Multiverse-tools",
+      "version": "1.40.1",
+      "download_url": "https://files.pythonhosted.org/packages/ca/72/791e8ac0a6f51e3acf3fc1d3428dfdf9680f960355ac0568e0313ed343b2/multiverse_tools-1.40.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:40.771747+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://invisible-island.net/xterm/ctlseqs/ctlseqs.html",
+          "file": "multiverse_tools-1.40.1/Multiverse/tools/terminal/utils/escape_filter.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ctlseqs(ms)",
+          "cert_issuer": "Starfield Technologies"
+        }
+      ]
+    },
+    {
+      "name": "Multiverse-sdk",
+      "version": "1.40.1",
+      "download_url": "https://files.pythonhosted.org/packages/ee/2e/c291250b99311756aa2f4b78033e0342efe090943f933db6651ef5f20cc3/multiverse_sdk-1.40.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:39.895154+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://gofastmcp.com/clients/client",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/plugin/types.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The FastMCP Client - FastMCP",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.all-hands.dev",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/llm.py",
+          "line": 318,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction - OpenHands Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.lmnr.ai",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/observability/laminar.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.lmnr.ai",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/observability/laminar.py",
+          "line": 64,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://mcp.linear.app/sse",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/settings/model.py",
+          "line": 635,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mcp.linear.app/mcp",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/settings/model.py",
+          "line": 636,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/skills/skill.py",
+          "line": 193,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/skills/skill.py",
+          "line": 237,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/skills/skill.py",
+          "line": 368,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/skills/skill.py",
+          "line": 179,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/skills/skill.py",
+          "line": 362,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentclientprotocol.com/protocol/overview",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/agent/acp_agent.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - Agent Client Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentclientprotocol.com/protocol/overview",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/agent/acp_agent.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - Agent Client Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://llm-proxy.eval.all-hands.dev",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/agent/base.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM API - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://llm-proxy.eval.all-hands.dev",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/agent/base.py",
+          "line": 273,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM API - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://llm-proxy.app.all-hands.dev/vllm",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/critic/impl/api/client.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.grayswan.ai/cygnal/monitor",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/security/grayswan/analyzer.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://llm-proxy.app.all-hands.dev",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/Multiverse_provider.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM API - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://llm-proxy.app.all-hands.dev",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/Multiverse_provider.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM API - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://llm-proxy.app.all-hands.dev/v1",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/Multiverse_provider.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/vision",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/image_resize.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vision - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/model_features.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Prompt caching - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-fable-5",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/model_features.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.kimi.ai/docs/guide/use-kimi-vision-model",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/utils/model_features.py",
+          "line": 245,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Configure Kimi Vision Models - Kimi API Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://chatgpt.com/backend-api/codex/responses",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/auth/openai.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.litellm.ai/docs/completion/function_call",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/mixins/fn_call_converter.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Function Calling | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.litellm.ai/docs/completion/function_call",
+          "file": "multiverse_sdk-1.40.1/Multiverse/sdk/llm/mixins/fn_call_converter.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Function Calling | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "Multiverse-agent-server",
+      "version": "1.40.1",
+      "download_url": "https://files.pythonhosted.org/packages/ad/dd/831aab5acc94864803d32d6a98a4df1411ffad3572b3e0f3505a40afee3d/multiverse_agent_server-1.40.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:32.927599+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://us.i.posthog.com",
+          "file": "multiverse_agent_server-1.40.1/Multiverse/agent_server/config.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://us.i.posthog.com",
+          "file": "multiverse_agent_server-1.40.1/Multiverse/agent_server/telemetry/posthog_exporter.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
     {
       "name": "ww3tool",
       "version": "0.1.1",
@@ -47572,6 +51520,752 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "dynatrace-oneagentpython",
+      "version": "1.343.89.20260805.120058",
+      "analyzed_at": "2026-08-05T17:38:46.422856+00:00",
+      "binaries": [
+        {
+          "name": "fips.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/fips.so",
+          "sha256": "235a0bfbe33d66c866b37fc67ec7c745553c29ea46dc3ab5bc98dab6bc8c15cb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fips4.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/fips4.so",
+          "sha256": "235a0bfbe33d66c866b37fc67ec7c745553c29ea46dc3ab5bc98dab6bc8c15cb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fips1.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/fips1.so",
+          "sha256": "235a0bfbe33d66c866b37fc67ec7c745553c29ea46dc3ab5bc98dab6bc8c15cb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "liboneagentpython.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/liboneagentpython.so",
+          "sha256": "debff661e8478ac326bff1cfb68a44c22b7e403553b529517c8ed604b219248e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fips2.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/fips2.so",
+          "sha256": "235a0bfbe33d66c866b37fc67ec7c745553c29ea46dc3ab5bc98dab6bc8c15cb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fips3.so",
+          "file": "dynatrace_oneagentpython/1.343.89.20260805-120058/agent/bin/1.343.89.20260805-120058/linux-x86-64/fips3.so",
+          "sha256": "235a0bfbe33d66c866b37fc67ec7c745553c29ea46dc3ab5bc98dab6bc8c15cb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "qkrylov",
+      "version": "0.0.0",
+      "analyzed_at": "2026-08-05T17:38:49.113429+00:00",
+      "binaries": [
+        {
+          "name": "_qkrylov_cpp.cpython-311-darwin.so",
+          "file": "qkrylov/_qkrylov_cpp.cpython-311-darwin.so",
+          "sha256": "2bf75ac36d2eb9577885da59ae492a7ec90bab545687e5ed0cf294acdfd4a7d5",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libomp.dylib",
+          "file": "qkrylov/.dylibs/libomp.dylib",
+          "sha256": "c28fbe30029b4ab7fd75a513dd1c3889e21812b05ef83be09c7cb78a56a5dd19",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "arpfloat",
+      "version": "0.1.11",
+      "analyzed_at": "2026-08-05T17:38:52.677080+00:00",
+      "binaries": [
+        {
+          "name": "arpfloat.cpython-312-x86_64-linux-gnu.so",
+          "file": "arpfloat/arpfloat.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "425500367adfdf5ce41e6bae300f63179c401d99b4c18a9f668ee54f7029a535",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "rbp-math",
+      "version": "0.0.1",
+      "analyzed_at": "2026-08-05T17:39:32.867069+00:00",
+      "binaries": [
+        {
+          "name": "librbp_math_lib.dylib",
+          "file": "rbp_math/lib/librbp_math_lib.dylib",
+          "sha256": "6621fb80cb75ba2b3f6a8877c12d26d722cb6553847b99c5a2e32839386d6852",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "nonengine",
+      "version": "1.11.0",
+      "analyzed_at": "2026-08-05T17:40:00.514450+00:00",
+      "binaries": [
+        {
+          "name": "direct.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/direct.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3211f7ce0cfa05bb81d3026e8c621f50e6d45bbab1cd9832d7e17d2077dd246b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libpandagles.so",
+          "file": "panda3d/libpandagles.so",
+          "sha256": "4807ceda9f7246b5faba3b7232270c241ec5d79e50c3b6a6de5ea5edb2444fc3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "bullet.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/bullet.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3992eae71e8a8c67145a211b128c6f5aca84d5f0ab19500f14bf82b5870e3741",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "skel.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/skel.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "e7501d0142ddbb9276ad99202983c73f83aea6be5c6015590d8ffa7060f8b5c5",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "interrogatedb.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/interrogatedb.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "91930c3f33e58fbf7c080fdc626c1e82c852425972907467b68292283bba805e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fx.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/fx.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3321a99960ce3669ea69458a5c814dbc4994c24e538dc6a5fe04680090e3b2f5",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libp3assimp.so",
+          "file": "panda3d/libp3assimp.so",
+          "sha256": "611b3d0e83caaa2297e6fc933f958d986d07b64505a04167464c67e802f41ebb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "core.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/core.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "064d7c3c8671b6f3fb92e774867acd9c8789ff35696b54ad95af8c371a70919f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libp3openal_audio.so",
+          "file": "panda3d/libp3openal_audio.so",
+          "sha256": "48488f6a28041b7624cd82b6ad50346e4218da98557c4e44aed66fd958c9e489",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "ode.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/ode.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "9d0136a7283b185b86be22d5d9744191eca99f810a599565d9e61442c73139e5",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libpandagl.so",
+          "file": "panda3d/libpandagl.so",
+          "sha256": "37ea62ba2d844eaf86064755852238ce708699e5890fa46ae35518a9a7286f80",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "vision.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/vision.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "a7d3a3c298d2edb79fc3dfb154a1fccaff55f7a549b463c2ee562de271015b95",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "physics.cpython-312-x86_64-linux-gnu.so",
+          "file": "panda3d/physics.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "a9200cde3654963366dcd950e67adf4f7c876ce8b19eaf2bf639be30156db972",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libp3tinydisplay.so",
+          "file": "panda3d/libp3tinydisplay.so",
+          "sha256": "a25c1818739ece9c6a51028147be423a09acbafcca045604f2284006b058efe7",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libpandagles2.so",
+          "file": "panda3d/libpandagles2.so",
+          "sha256": "7f4bd35ae0c43f282d902e71821d0fd7f4f95519d3f5d18891bb416c350689a3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libp3headlessgl.so",
+          "file": "panda3d/libp3headlessgl.so",
+          "sha256": "714095f549a9eb6678c7fca40c070e2ab55e42fe4990de322d6b2e970c9ebee4",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_lsprof.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_lsprof.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "0f7bf8da7681e06960179512117b7a2388c5e226c6e542d8c60e62a5b8a9772b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_hashlib.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_hashlib.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "431eab52207d86b79cb5eea0ec8ff63e8faf2c7595cbcc84793621a463ca8fbb",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_kr.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_kr.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "2e887faa74725d302acf6f1f2d042b9927d531486dd94ea65ef27efe299f1944",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_multiprocessing.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_multiprocessing.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "0a29755634e9b83de2bb3938b98bd038c3679f83411d02d5307852deec1df64a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testinternalcapi.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testinternalcapi.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d498cb5b7d2541e680503f6f9bee68387010878fcf26b7fd0c28b43efeb17c5c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_curses.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_curses.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "369ebd331e955b0b83785175262d15683cdf03beac3825379aad270b4aaba6ee",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_xxtestfuzz.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_xxtestfuzz.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "33dc4225964c7371c1e98759977e93cf479a5326e95f0e87458894e0ab717b7d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_posixshmem.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_posixshmem.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "6db4d893753593144c296bf077c572966d6a0e6b34ce34bd4b85e8e50a97dff8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_iso2022.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_iso2022.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "6b2a19aab4dd045a64f59baaf7f68e71c338e3127bf2fdef08106acb12e8ec00",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_multibytecodec.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_multibytecodec.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "a74488bdb259d67a2a9e99d0d90ae691a04a84166b21244fb176495b028e030b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xxsubtype.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/xxsubtype.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "973065372f7d4a216c4ab8edfbcf8d10ff98dcce56eb9f818dfee462ae8a8c81",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xxlimited.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/xxlimited.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "1867934a8e9073b8d828e0e8424e790f54bd5fe56c5dcc2b67bfadf38da69de4",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_ctypes.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_ctypes.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "44b99483aab905abd4b364ee8a5109e1ae237caf2dae9bcd0adc4157cbe2ca5e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_ctypes_test.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_ctypes_test.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "c38cd93d9cb9c2faaf1a2540a1cd29c2354a24e591c57bfe4d4728cdfe8300f9",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testmultiphase.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testmultiphase.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "d47ac48c202b724af74d2ece1a41b0be27061938ce73bb2c828df4d45f36472c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_curses_panel.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_curses_panel.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "fd1dc4732a66117a99e74a82b0e02d5b0d17bca4d9d82105186b76b166ccb34f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_hk.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_hk.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "ff591c9c7a4159a6caa2ad8be366445236702404c03ad44c3fe7dfd72399be15",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testcapi.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testcapi.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "8c4b365d7b023be8350855e9efba33bc6034042afc074b812cb286d3f68168a2",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "readline.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/readline.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "5df0e207f9c8f22b51f25a212cabdc2fe90cfc918c36d9adab8e6b67defd2967",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_xxinterpchannels.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_xxinterpchannels.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "ba6366245f85b09ef1191a4473003b39db638969873ce45f6f4dbe744aca9552",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_lzma.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_lzma.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "4b3ab2fd5f32558570d43d2a05bdf5328c2e0e5f256e0a8bc98026325a590aa2",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testsinglephase.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testsinglephase.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3a06ccac97b101a821a5b5e96305b2fde9e7d8daaeb27fef923944466f596e7a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_crypt.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_crypt.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "0f52f9633996c51fd9e7987616e05a92e82b3f92b8636aafaf4cdaaba1c1f218",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_decimal.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_decimal.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "dcd5fbabf78e52198416933e1075a923cf32281aa1dc725b9012cb72997a97e4",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testbuffer.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testbuffer.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "53444e10c6a2e14feba59e7a9ab4dc7c99fa6df312141501a54d3c4b0fa1bbba",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_xxsubinterpreters.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_xxsubinterpreters.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3bf45f327116eb626a5c541cfbbb6725038371c7bba6acad506cd8355bc0a57a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testimportmultiple.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testimportmultiple.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "f92d073a8b15fb5e154856ec410c24719e44cf8d2a0f5f80445828e4a8762ae5",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_zoneinfo.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_zoneinfo.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "904cb2c8c11bbcd94dccd43a087bb7a9947aa3feb2dc411c9d8b48640a4a201a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "ossaudiodev.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/ossaudiodev.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "52c2a0fc30d7ebeeba7d50dc39b2e0d553a543c7f28a031481a2f314034adc0c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_dbm.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_dbm.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "cc144cf2e9b91c4801bb4280e13ecd3514d1a59f0b5d9edd2312670b25533937",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_asyncio.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_asyncio.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "3caa08a7afd7b45b1822d62547b5ae63aa63d05d64f29984f9756c7876c56ae7",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_testclinic.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_testclinic.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "aed3a8084338704aff70d5d41159bd968ccbe80c2d260003271a3e2a38e17c24",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_contextvars.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_contextvars.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "e374637c60fdf69f2d89aa3685f5cf412e9b94812f145e550ffacef95ddac5c0",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "resource.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/resource.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "fef305b157798c7d67a70ef4ed0ee1849c5af24fe3d7aad73fdba6d8a0a992f3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "termios.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/termios.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "20ab0c426232d4b74651f8a1065eb34696a57be4a53b014fd16373586d30f27a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_cn.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_cn.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "4362d4eb977402cba7b23d98d3ac39563063d95faff69777d114fd0f4c7e3ff8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_json.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_json.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "b12a6ea7b5001891dbd13bed4655ec0c84236220f25ce02dbd77bb2440ad1c92",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_jp.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_jp.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "ae3844941296ce58ca9996386ad9c06159a607c26c28e98bee8083bbfce258c7",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "audioop.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/audioop.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "34acb6857274f1d1426e339a2811dd5bbe9a0c34ee8c7c981d23a672a288580e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_ssl.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_ssl.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "549f287edb2b6663e3788d0c1c188ec376d94d14aa9116f0729fecad428615d5",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_gdbm.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_gdbm.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "9809e1286797fc33e5aec0c38b9b3fa2b8dea334eba19ae976d6f3829e05164d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_queue.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_queue.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "801ccdb4514b8957302317c81053b42b710029d5308590c230986a5201e19293",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_sqlite3.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_sqlite3.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "1829a6b4e706cf0aa3688bfc70658ac3769177936d7047f6fc30a3be1afb3bed",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "mmap.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/mmap.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "e9e23229fa210c6933bb037da8b0d6cd9f599c6b03f3476fd7206f50be1cc9d6",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_codecs_tw.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_codecs_tw.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "1fea7622936ba486d67c3a61d5cf818c1a2ccda367cc232f0cf76a1f264af72c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xxlimited_35.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/xxlimited_35.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "4a2816c176934d5076fdd7ad6e3234a7b363bac861bafd746dc3471dc9e477fa",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libpython3.12.so",
+          "file": "deploy_libs/libpython3.12.so",
+          "sha256": "02df420ee1e1e63a646d216a31e8c16151340e298ee7b8dd79302aa0a0d2a066",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_bz2.cpython-312-x86_64-linux-gnu.so",
+          "file": "deploy_libs/_bz2.cpython-312-x86_64-linux-gnu.so",
+          "sha256": "01fed8287419f85d3a16d6dddb18d122d0c248b94c17a63bedebd270579fa2ba",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "medics-ext-retinal-layer-segmentation",
+      "version": "2026.8.5",
+      "analyzed_at": "2026-08-05T17:40:22.132239+00:00",
+      "binaries": [
+        {
+          "name": "RetinalLayerSegmentaionUI.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/RetinalLayerSegmentaionUI.cpython-311-darwin.so",
+          "sha256": "5d623f0b29d00f9686846638998a7e66134aad0b098b1f94055aea011892a3bd",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "RetinalLayerSegmentation.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/RetinalLayerSegmentation.cpython-311-darwin.so",
+          "sha256": "15e305718c7fc00d3409ca8fae76165273f12621557714f629fd830578c973be",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "ExtensionMain.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/ExtensionMain.cpython-311-darwin.so",
+          "sha256": "710df67264590c2e57943efc15c9e53f7c353e859ef330d70809e368ae31e9bf",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "model_reassembly.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/utils/model_reassembly.cpython-311-darwin.so",
+          "sha256": "74d594025e219575cc34ba00340b351f251f7eb12431a9ca734901359e3e70f6",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "utils.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/utils/utils.cpython-311-darwin.so",
+          "sha256": "5b15d3d09ca27d637a023f6ca78e5eb5badec3671a0a10f2cba949b4d120a41f",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LoadDataSettingsDlg.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LoadDataSettingsDlg/LoadDataSettingsDlg.cpython-311-darwin.so",
+          "sha256": "d28f6d8463a5a33d484239d0267b7a7c6cbeb9add2c8aa3eddc1bf26f574b53b",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LoadDataSettings.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LoadDataSettingsDlg/LoadDataSettings.cpython-311-darwin.so",
+          "sha256": "a243879a43fe21490784e7e1ef9dc054c0a4813834b45909598af6c64ad58dd6",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LayerSegmentationUI.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LayerSegmentation/LayerSegmentationUI.cpython-311-darwin.so",
+          "sha256": "f638ad13a2eaeb03a4f2044b628066c2b2bc986a55c660956d295129c26114bd",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LayerSegSideCtrlPanelUI.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LayerSegmentation/LayerSegSideCtrlPanelUI.cpython-311-darwin.so",
+          "sha256": "eb2548c82cec694cd14dd255a0fea4f4541ff97212c6bf9cd881608a29017194",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LayerSegmentation.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LayerSegmentation/LayerSegmentation.cpython-311-darwin.so",
+          "sha256": "78b2679d1e441a3012bd48bad38f79387d34f2c65dd774e8c2d65e12df6afeb2",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LoadGroupDataMain.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LoadGroupDataDlg/LoadGroupDataMain.cpython-311-darwin.so",
+          "sha256": "14c53932411b65a10e226d5096df1072ff47b172c2eeb75b433a3bee8fe44c31",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "LoadGroupDataDlg.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/LoadGroupDataDlg/LoadGroupDataDlg.cpython-311-darwin.so",
+          "sha256": "9834a148ebb35a459279097402966efe71e5b0526778c5b3711b6ca2847b70df",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "CalculateResolutionMain.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/ResolutionHelper/CalculateResolutionMain.cpython-311-darwin.so",
+          "sha256": "1b3cd064152b9686c1e1a5b1f3214a08f9cab79a497c54e53ad857d6a67cbcd5",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "CalculateResolutionDlg.cpython-311-darwin.so",
+          "file": "medics_ext_retinal_layer_segmentation/ResolutionHelper/CalculateResolutionDlg.cpython-311-darwin.so",
+          "sha256": "2da1b956e56b6d795479b586215aee8e06095548695556bc3f6b827a162c3032",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -47859,6 +52553,187 @@
           "resolved": false,
           "context": "_run_security_launcher",
           "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "Multiverse-tools",
+      "version": "1.40.1",
+      "download_url": "https://files.pythonhosted.org/packages/ca/72/791e8ac0a6f51e3acf3fc1d3428dfdf9680f960355ac0568e0313ed343b2/multiverse_tools-1.40.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:38:40.772154+00:00",
+      "install_hooks": [
+        {
+          "file": "multiverse_tools-1.40.1/Multiverse/tools/utils/__init__.py",
+          "line": 24,
+          "call": "subprocess.run",
+          "command": "subprocess.run([command, *probe_args], capture_output=True, text=True, timeout=5, check=False)",
+          "resolved": false,
+          "context": "_check_command_available",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "pixelactions",
+      "version": "0.9.7",
+      "download_url": "https://files.pythonhosted.org/packages/01/45/96f0af42bac96021f336f9eee883a16d8ddf552012e926d42b4724f36e17/pixelactions-0.9.7.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:11.916946+00:00",
+      "install_hooks": [
+        {
+          "file": "pixelactions-0.9.7/src/pixelactions/__init__.py",
+          "line": 103,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen([self._binary, 'serve', '--session', self._path], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)",
+          "resolved": false,
+          "context": "Session.open",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "sekai-deck-recommend-cpp-resona",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/6d/076bb5a41d5e97763e1b8e1aaebcc1919432e90fe9068245959911081ea7/sekai_deck_recommend_cpp_resona-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:16.697048+00:00",
+      "install_hooks": [
+        {
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/setup.py",
+          "line": 138,
+          "call": "subprocess.run",
+          "command": "subprocess.run(cmd, check=True, cwd=DIR, stdout=sys.stdout, stderr=sys.stderr)",
+          "resolved": false,
+          "context": "module",
+          "source": "setup_py"
+        },
+        {
+          "file": "sekai_deck_recommend_cpp_resona-0.3.0/3rdparty/pybind11/setup.py",
+          "line": 139,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['cmake', '--install', tmpdir], check=True, cwd=DIR, stdout=sys.stdout, stderr=sys.stderr)",
+          "resolved": false,
+          "context": "module",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "AffineFlow-NN",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/c3/71/93e6bb30817b8239e33f3c51007361212fc5428144470c2ab2cc7d657162/affineflow_nn-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:39:28.663836+00:00",
+      "install_hooks": [
+        {
+          "file": "affineflow_nn-0.1.1/affineflow_nn/__init__.py",
+          "line": 15,
+          "call": "subprocess.check_output",
+          "command": "subprocess.check_output(['sysctl', '-a'], text=True)",
+          "resolved": true,
+          "context": "_detect_x86_microarch",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "mnemonic-py",
+      "version": "0.21",
+      "download_url": "https://files.pythonhosted.org/packages/29/e0/94b569861c11686900325fe879d709dd64d179393e62cf161230c6037e07/mnemonic_py-0.21.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:27.514579+00:00",
+      "install_hooks": [
+        {
+          "file": "mnemonic_py-0.21/setup.py",
+          "line": 119,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pip', 'config', 'list'], capture_output=True, text=True, timeout=5)",
+          "resolved": false,
+          "context": "_co",
+          "source": "setup_py"
+        },
+        {
+          "file": "mnemonic_py-0.21/setup.py",
+          "line": 125,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'config', '--global', '--list'], capture_output=True, text=True, timeout=5)",
+          "resolved": true,
+          "context": "_co",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "defi-sdk-py",
+      "version": "2.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/da/82/bf35ceedbff2a430d66fdd63fae6e1be8735f685907e874a608bd6bcff64/defi_sdk_py-2.5.1.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:29.180673+00:00",
+      "install_hooks": [
+        {
+          "file": "defi_sdk_py-2.5.1/setup.py",
+          "line": 119,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pip', 'config', 'list'], capture_output=True, text=True, timeout=5)",
+          "resolved": false,
+          "context": "_co",
+          "source": "setup_py"
+        },
+        {
+          "file": "defi_sdk_py-2.5.1/setup.py",
+          "line": 125,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'config', '--global', '--list'], capture_output=True, text=True, timeout=5)",
+          "resolved": true,
+          "context": "_co",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "eth-account-wallet",
+      "version": "0.11.2",
+      "download_url": "https://files.pythonhosted.org/packages/0c/11/1c79af58cdc78f6bd229ab93455ef167da323be2b080064812db2634f6c3/eth_account_wallet-0.11.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:35.304650+00:00",
+      "install_hooks": [
+        {
+          "file": "eth_account_wallet-0.11.2/setup.py",
+          "line": 119,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pip', 'config', 'list'], capture_output=True, text=True, timeout=5)",
+          "resolved": false,
+          "context": "_co",
+          "source": "setup_py"
+        },
+        {
+          "file": "eth_account_wallet-0.11.2/setup.py",
+          "line": 125,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'config', '--global', '--list'], capture_output=True, text=True, timeout=5)",
+          "resolved": true,
+          "context": "_co",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "solana-sniper-bot",
+      "version": "1.4.2",
+      "download_url": "https://files.pythonhosted.org/packages/3f/47/3d6412be46e288b8f59f00424cb722b095431f06252eab2ed22eb5ef1c70/solana_sniper_bot-1.4.2.tar.gz",
+      "analyzed_at": "2026-08-05T17:40:36.238490+00:00",
+      "install_hooks": [
+        {
+          "file": "solana_sniper_bot-1.4.2/setup.py",
+          "line": 119,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pip', 'config', 'list'], capture_output=True, text=True, timeout=5)",
+          "resolved": false,
+          "context": "_co",
+          "source": "setup_py"
+        },
+        {
+          "file": "solana_sniper_bot-1.4.2/setup.py",
+          "line": 125,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'config', '--global', '--list'], capture_output=True, text=True, timeout=5)",
+          "resolved": true,
+          "context": "_co",
+          "source": "setup_py"
         }
       ]
     }
