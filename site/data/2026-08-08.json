@@ -1,11 +1,765 @@
 {
-  "generated_at": "2026-08-08T01:42:34.912648+00:00",
+  "generated_at": "2026-08-08T03:28:06.972348+00:00",
   "stats": {
-    "total_packages": 22,
-    "malicious": 0,
-    "clean": 22
+    "total_packages": 30,
+    "malicious": 1,
+    "clean": 29
   },
   "packages": [
+    {
+      "name": "spatialengine",
+      "version": "0.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/91/87/93f742904f5d8390d2e2c9ed66452460c96e220ea05d0db81b35287af77e/spatialengine-0.0.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:28:04.117773+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://fslabs.ca",
+          "file": "spatialengine-0.0.0/pyproject.toml",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | Foresight Spatial Labs",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vidara-api",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/db/8f/ff8d2183fa2963a4570e099a848e423520a8bc07b0089405e57d743adaa7/vidara_api-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:28:02.754936+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://vidara.to/api",
+          "file": "vidara_api-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Document",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.vidara.so/v1",
+          "file": "vidara_api-0.1.0/src/vidara/async_client.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.vidara.so/v1",
+          "file": "vidara_api-0.1.0/src/vidara/client.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vidara.to/settings",
+          "file": "vidara_api-0.1.0/src/vidara/client.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vidara.to/settings",
+          "file": "vidara_api-0.1.0/src/vidara/client.py",
+          "line": 40,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "sentinel-prox",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/ee/e873c2077426d4127f6600185cb8a59923119215d29f804b1a685b9b76d4/sentinel_prox-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:28:00.481910+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "ftp://nope",
+          "file": "sentinel_prox-0.1.0/tests/test_downstream_discovery.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "pidgey-mcp",
+      "version": "2.1.6",
+      "download_url": "https://files.pythonhosted.org/packages/ca/1a/750e40720c6bd4fa68bcd6982e924cddd0569ccf1fd767a7a72ecbfe7270/pidgey_mcp-2.1.6.tar.gz",
+      "analyzed_at": "2026-08-08T03:27:54.216047+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://default.com",
+          "file": "pidgey_mcp-2.1.6/tests/test_sessions.py",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Default | AI infrastructure for revenue teams",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://default.com",
+          "file": "pidgey_mcp-2.1.6/tests/test_sessions.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Default | AI infrastructure for revenue teams",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://news.ycombinator.com",
+          "file": "pidgey_mcp-2.1.6/scripts/benchmark.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hacker News",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "pidgey_mcp-2.1.6/browser_optimizer/extractor/vision.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "aipost-crewai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/78/b5/bf4e73cfb6d2fba4074e31155c58fcb162fa9caca66c87afb1759165c3e6/aipost_crewai-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:27:51.309748+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://aipost.email",
+          "file": "aipost_crewai-0.1.0/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Post Office \u2014 AIPost",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://aipost.email",
+          "file": "aipost_crewai-0.1.0/aipost_crewai/client.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Post Office \u2014 AIPost",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "krokai",
+      "version": "0.7.7",
+      "download_url": "https://files.pythonhosted.org/packages/1d/6f/2f8ecaae788a61e4d4df0f0997232af1da92cda471b6ff6812e459509356/krokai-0.7.7.tar.gz",
+      "analyzed_at": "2026-08-08T03:27:50.757887+00:00",
+      "total_findings": 46,
+      "findings": [
+        {
+          "url": "https://secure.ssa.gov/poms.nsf/lnx/0110201035",
+          "file": "krokai-0.7.7/krokai/redact.py",
+          "line": 450,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SSA - POMS: RM 10201.035 - Invalid Social Security Numbers (SSNs) - 06/23/2011",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.govinfo.gov/link/uscode",
+          "file": "krokai-0.7.7/krokai/library.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.govinfo.gov/link/fr",
+          "file": "krokai-0.7.7/krokai/library.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.federalregister.gov/api/v1/documents",
+          "file": "krokai-0.7.7/krokai/library.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.ecfr.gov/api/versioner/v1/full",
+          "file": "krokai-0.7.7/krokai/library.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/USCOURTS-",
+          "file": "krokai-0.7.7/krokai/library.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ecfr.gov/current/title-8/section-274a.12",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 876,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Federal Register :: Request Access",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CFR-2019-title8-vol1/x.htm",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 881,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Page Not Found | GovInfo",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.jdsupra.com/legalnews/whatever-12345",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 884,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://uscisdhs-gov.us/policy-manual",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 901,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /policy-manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://uscis-gov.co/policy-manual",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 902,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.uscis.gov/policy-manual",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 907,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Policy Manual | USCIS",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://uscis.gov",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 907,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | USCIS",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://uscis.gov/mixed-case",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 908,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/x",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 909,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://legislation.gov.uk/ukpga/2020/1",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 910,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "European Union (Withdrawal Agreement) Act 2020",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 911,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.courtlistener.com/opinion/1",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 912,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.uscis.gov/pm",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 922,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.uscis.gov/pm",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 923,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://uscisdhs-gov.us/pm",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 936,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://uscisdhs-gov.us/policy-manual",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 940,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /policy-manual",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ecfr.gov/current/title-8",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 948,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Federal Register :: Request Access",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.jdsupra.com/x",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 954,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.ecfr.gov/current/title-8",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 959,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Federal Register :: Request Access",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ussciss.us/pm",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1031,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ussciss.us/x",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1031,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.uscis.com/i-485",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1382,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "USCIS Forms - Immigration Direct",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://irs.com/refund",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1384,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nonrefundable vs. Refundable Tax Credits | IRS.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.uscis.gov/i-485",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1388,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Application to Register Permanent Residence or Adjust Status | USCIS",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-8.xml?part=245",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1716,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uscisdhs-gov.us/policy.pdf",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1717,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.uscis.com/policy-manual",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1718,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "USCIS Forms - Immigration Direct",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pastebin.com/raw/aBcDeFgH",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1719,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.law.cornell.edu/cfr/text/8/245.1",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1721,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "8 CFR \u00a7 245.1 - Eligibility. | Electronic Code of Federal Regulations (e-CFR) | US Law | LII / Legal Information Institute",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/CFR-2019-title8/xml/x.xml",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1733,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Page Not Found | GovInfo",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ecfr.gov/annual/title-8",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1734,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Federal Register :: Request Access",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pastebin.com/raw/nothing",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1743,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://uscisdhs-gov.us/x.pdf",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1747,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-8.xml?part=245",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1755,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.ecfr.gov/x",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1943,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Federal Register :: Request Access",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pastebin.com/raw/x",
+          "file": "krokai-0.7.7/krokai/selftest.py",
+          "line": 1996,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://owasp.org/www-project-web-security-testing-guide/stable",
+          "file": "krokai-0.7.7/krokai/consult.py",
+          "line": 589,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WSTG - Stable | OWASP Foundation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://evil.com/historical/report.xml",
+          "file": "krokai-0.7.7/krokai/consult.py",
+          "line": 732,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://owasp.org/www-project-web-security-testing-guide/stable",
+          "file": "krokai-0.7.7/krokai/consult.py",
+          "line": 577,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WSTG - Stable | OWASP Foundation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://evil.com/historical/report.xml",
+          "file": "krokai-0.7.7/krokai/consult.py",
+          "line": 716,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "scanquorum",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/35/8f/b1b3e91cba92c2afe15eaeab63bbe3ce4c6a4216081e8dfaae47c7b47a7d/scanquorum-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:27:41.994889+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "scanquorum-0.2.0/scanquorum/verify_ai.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyskylight",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6a/f9/2a5bc2cdd56da8735b971041c42314820ac427367de95f6b9a1456dab62b/pyskylight-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-08T03:27:41.545052+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://app.ourskylight.com",
+          "file": "pyskylight-0.1.0/pyskylight/const.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Skylight",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ourskylight.com/welcome",
+          "file": "pyskylight-0.1.0/pyskylight/const.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Skylight",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "mszx",
       "version": "1.0.0",
@@ -12004,6 +12758,21 @@
           "name": "libctc_beam_decoder.dylib",
           "file": "ctc_beam_decoder/libctc_beam_decoder.dylib",
           "sha256": "d3c6e8f4e6b8e9a8488c5247f1e2ad26ec49108c3aa8382676f32b293cbb9bd1",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "rbp-engine",
+      "version": "1.2.4",
+      "analyzed_at": "2026-08-08T03:28:01.071126+00:00",
+      "binaries": [
+        {
+          "name": "librbp_math_lib.dylib",
+          "file": "rbp_engine/lib/librbp_math_lib.dylib",
+          "sha256": "bb96424534e8f5345695fbafe37ae43a375fbd92c03d5c23be31879441ae5ffe",
           "format": "macho",
           "signed": true,
           "signer": "ad-hoc"
