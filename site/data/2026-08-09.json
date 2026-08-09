@@ -1,11 +1,955 @@
 {
-  "generated_at": "2026-08-09T03:43:59.840581+00:00",
+  "generated_at": "2026-08-09T05:05:42.826727+00:00",
   "stats": {
-    "total_packages": 52,
+    "total_packages": 64,
     "malicious": 2,
-    "clean": 50
+    "clean": 62
   },
   "packages": [
+    {
+      "name": "openavaban",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f6/a8/54b9c7f3bb7acb9adcb51faf7e07bb447f12bc9f9e2b08afb32797c13a66/openavaban-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:41.001608+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://api.uploadthing.com/v6",
+          "file": "openavaban-0.1.0/openavaban/uploadthing.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.uploadthing.com/v6/uploadFiles",
+          "file": "openavaban-0.1.0/openavaban/uploadthing.py",
+          "line": 38,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.uploadthing.com/v6/deleteFiles",
+          "file": "openavaban-0.1.0/openavaban/uploadthing.py",
+          "line": 89,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.uploadthing.com/v6/listFiles",
+          "file": "openavaban-0.1.0/openavaban/uploadthing.py",
+          "line": 100,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "asta-evidence",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/5d/6d/201e130e3a1bdfbb635466fca5b8644b2cc7a64673eb6b431b46cef159b7/asta_evidence-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:40.398138+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1000/XYZ",
+          "file": "asta_evidence-0.1.1/tests/test_papers.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://dx.doi.org/10.1000/xyz",
+          "file": "asta_evidence-0.1.1/tests/test_papers.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.unpaywall.org/v2",
+          "file": "asta_evidence-0.1.1/asta/papers.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "asta_evidence-0.1.1/asta/papers.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "asta_evidence-0.1.1/asta/papers.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "asta_evidence-0.1.1/asta/papers.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "recsys-candidates",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f5/73/6eaf27b9f81f6049fb823f390b81d694652ede8c0afe97cc96b46a7a7ead/recsys_candidates-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:39.435525+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://vync.live",
+          "file": "recsys_candidates-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vync",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "anchorcite",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/5a/67c7db29fe3572257dcc32fe136dc020a72eb2ffddf75c9a0162079dca23/anchorcite-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:37.991681+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://bahith.dev",
+          "file": "anchorcite-0.1.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bahith | Deep Research API with Sentence-Level Citations",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "quartopydoc",
+      "version": "0.12.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/6a/dbc2098dcd21c5299fb56d99f03a709b40af487dac6c27fc2314aa1abcdb/quartopydoc-0.12.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:37.109976+00:00",
+      "total_findings": 20,
+      "findings": [
+        {
+          "url": "https://quarto.org/docs/websites/website-navigation.html",
+          "file": "quartopydoc-0.12.0/quartodoc/autosummary.py",
+          "line": 463,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Website Navigation \u2013 Quarto",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://quarto.org/docs/websites/website-navigation.html",
+          "file": "quartopydoc-0.12.0/quartodoc/autosummary.py",
+          "line": 438,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Website Navigation \u2013 Quarto",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/inlines.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/inlines.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/__init__.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/__init__.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/blocks.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/blocks.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/components.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pandoc.org/lua-filters.html",
+          "file": "quartopydoc-0.12.0/quartodoc/pandoc/components.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pandoc - Pandoc Lua Filters",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://quarto.org",
+          "file": "quartopydoc-0.12.0/quartodoc/qpyd/convert.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quarto",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://quarto.org",
+          "file": "quartopydoc-0.12.0/quartodoc/qpyd/execute.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quarto",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://quarto.org",
+          "file": "quartopydoc-0.12.0/quartodoc/qpyd/render.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quarto",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pandoc.org/try",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_inlines.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Try pandoc!",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://abc.com",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_inlines.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABC Network - ABC.com",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://abc.com",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_inlines.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABC Network - ABC.com",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://abc.com",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_inlines.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABC Network - ABC.com",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://abc.com",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_inlines.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABC Network - ABC.com",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pandoc.org/try",
+          "file": "quartopydoc-0.12.0/quartodoc/tests/pandoc/test_blocks.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Try pandoc!",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "axtbot-plugin-hotlist",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/1e/91/bec34f22fc1916dba230179692f21e7ee7d02a21c6a4be89f7917afaec19/axtbot_plugin_hotlist-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:36.078390+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://uapis.cn/api/v1/misc/hotboard?type=",
+          "file": "axtbot_plugin_hotlist-1.0.0/src/axtbot_plugin_hotlist/__init__.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://m.q.qq.com/a/5cf068a222ca245be83fc91a03de03be",
+          "file": "axtbot_plugin_hotlist-1.0.0/src/axtbot_plugin_hotlist/keyboard.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "QQ\u5c0f\u7a0b\u5e8f",
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "nextbrief",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/85/86/90b0d394c6de88f62e4d1b6982226858e9b1dcebcc4583a28b756767b470/nextbrief-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:32.678514+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://anthropic.com/claude-code",
+          "file": "nextbrief-0.2.0/tests/test_plugin.py",
+          "line": 375,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+          "file": "nextbrief-0.2.0/tests/test_plugin.py",
+          "line": 399,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://json.schemastore.org/claude-code-marketplace.json",
+          "file": "nextbrief-0.2.0/tests/test_plugin.py",
+          "line": 400,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://anthropic.com/claude-code",
+          "file": "nextbrief-0.2.0/tests/test_plugin.py",
+          "line": 373,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://img.shields.io/badge/release-v3.1.0rc1-blue",
+          "file": "nextbrief-0.2.0/tests/test_bump_version.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "release: v3.1.0rc1",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/release-v3.1.0rc1-blue",
+          "file": "nextbrief-0.2.0/tests/test_bump_version.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "release: v3.1.0rc1",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "robovai-rbac",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f2/36/e758158f1531ef015ec23826b49e2c0f3ae366aaec3a524e0baaea26f4a1/robovai_rbac-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:30.923869+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://msalatmani.org",
+          "file": "robovai_rbac-0.1.0/setup.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://msalatmani.org",
+          "file": "robovai_rbac-0.1.0/setup.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://robovai.tech",
+          "file": "robovai_rbac-0.1.0/setup.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RoboVAI Tech \u2014 Enterprise Software & Applied AI Agency",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "prompt-shield-guard",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7f/79/f7b6effa4bf386d8ab4a2ef88eba97ae2971d4cdec59a50cd36456357f7c/prompt_shield_guard-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:29.394856+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://msalatmani.org",
+          "file": "prompt_shield_guard-0.1.0/setup.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://msalatmani.org",
+          "file": "prompt_shield_guard-0.1.0/setup.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://robovai.tech",
+          "file": "prompt_shield_guard-0.1.0/setup.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RoboVAI Tech \u2014 Enterprise Software & Applied AI Agency",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "agentomy-sdk",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/06/b3/e0f64f8db3fc55a86c0cbf286009e19c3bf8ec24c28e29988f953e527d61/agentomy_sdk-0.4.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:27.787028+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://agentomy.com",
+          "file": "agentomy_sdk-0.4.0/setup.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agentomy Private Preview",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://agentomy.com",
+          "file": "agentomy_sdk-0.4.0/setup.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agentomy Private Preview",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://agentomy.com/docs",
+          "file": "agentomy_sdk-0.4.0/setup.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agentomy Private Preview",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "ai-resource-radar",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/60/ad/e6eb86c67aa5909e047a8cf44d6bb7f3b2b5cafb9560bdf5d33418f28b8c/ai_resource_radar-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:27.351648+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://openrouter.ai",
+          "file": "ai_resource_radar-0.2.0/tests/test_v02_core.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models",
+          "file": "ai_resource_radar-0.2.0/tests/test_v02_core.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "ai_resource_radar-0.2.0/tests/test_radar.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models?output_modalities=all",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com/docs/rate-limits",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rate Limits - GroqDocs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.bigmodel.cn/cn/guide/models/free/cogview-3-flash",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cogview-3-Flash - \u667a\u8c31AI\u5f00\u653e\u6587\u6863",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://modal.com/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 180,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Plan Pricing | Modal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.runpod.io/gpu-instance/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPU Cloud Pricing | Per-Second H100, A100, RTX | Runpod",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lambda.ai/service/gpu-cloud",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rent NVIDIA GPUs on demand: H100, H200, and B200 | Lambda",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vast.ai/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPU Pricing \u2014 Live Platform Rates | Vast.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lightning.ai/v1/billing/subscription/quote?orgId=&tier=Free",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 224,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/api/i/cms.LegacyCmsService/GetPage?slug=docs%2Fefficient-gpu-usage&isEditing=false",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 235,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/settings/keys",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 285,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com/keys",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 301,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Keys - GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://bigmodel.cn/usercenter/proj-mgmt/apikeys",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 349,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u667a\u8c31AI\u5f00\u653e\u5e73\u53f0",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://modal.com/docs/guide",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 381,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction | Modal Docs",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://modal.com/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 397,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Plan Pricing | Modal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://lightning.ai/studios",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lightning templates - Community-built, reproducible AI environments",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/code",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 428,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 564,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Author Not Found | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://open.bigmodel.cn/api/paas/v4/images/generations",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 718,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://lightning.ai/pricing",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 1066,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lightning AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/docs/efficient-gpu-usage",
+          "file": "ai_resource_radar-0.2.0/src/ai_resource_radar/sources.py",
+          "line": 1095,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "subnetaiq",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/54/34/0402ce406e4fe38ec991135994b75133f2a5179f8ebcc3fb335ce4bf70bb/subnetaiq-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:19.671871+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://subnetaiq.io/api/docs",
+          "file": "subnetaiq-1.0.0/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SubnetAIQ API \u2014 Bittensor Intelligence for Agents",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://subnetaiq.io",
+          "file": "subnetaiq-1.0.0/subnetaiq.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SubnetAIQ \u2014 Bittensor Analytics Terminal \u00b7 Live Signals & Charts",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://subnetaiq.io/api/register",
+          "file": "subnetaiq-1.0.0/subnetaiq.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "readlens",
       "version": "0.2.0",
@@ -10295,6 +11239,23 @@
           "command": "urllib.request.urlopen(req, timeout=30)",
           "resolved": false,
           "context": "_urllib_transport",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "nextbrief",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/85/86/90b0d394c6de88f62e4d1b6982226858e9b1dcebcc4583a28b756767b470/nextbrief-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-09T05:05:32.678858+00:00",
+      "install_hooks": [
+        {
+          "file": "nextbrief-0.2.0/src/nextbrief/providers/__init__.py",
+          "line": 279,
+          "call": "subprocess.run",
+          "command": "subprocess.run(list(argv), timeout=timeout, **kwargs)",
+          "resolved": false,
+          "context": "run_cli",
           "source": "package_init"
         }
       ]
