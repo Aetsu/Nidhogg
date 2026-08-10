@@ -1,11 +1,5028 @@
 {
-  "generated_at": "2026-08-10T13:10:28.625846+00:00",
+  "generated_at": "2026-08-10T15:00:25.246409+00:00",
   "stats": {
-    "total_packages": 178,
-    "malicious": 8,
-    "clean": 170
+    "total_packages": 216,
+    "malicious": 10,
+    "clean": 206
   },
   "packages": [
+    {
+      "name": "freehand-agent",
+      "version": "0.1.5",
+      "download_url": "https://files.pythonhosted.org/packages/db/db/39d1b65a030afd291058bd0fa568652f536b4ae997fca4e77f18e1902822/freehand_agent-0.1.5.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:23.014777+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "freehand_agent-0.1.5/core/gateway.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "freehand_agent-0.1.5/core/security.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.zoom.us/v2/users/me/meetings?page_size=",
+          "file": "freehand_agent-0.1.5/core/tools/integrations.py",
+          "line": 320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.zoom.us/v2/users/me/meetings",
+          "file": "freehand_agent-0.1.5/core/tools/integrations.py",
+          "line": 345,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.zoom.us/v2/users/me/meetings?page_size=10",
+          "file": "freehand_agent-0.1.5/core/tools/integrations.py",
+          "line": 433,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.zoom.us/v2/meetings",
+          "file": "freehand_agent-0.1.5/core/tools/integrations.py",
+          "line": 441,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://zoom.us/oauth/authorize",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/zoom.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://zoom.us/oauth/token",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/zoom.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://zoom.us/oauth/revoke",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/zoom.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.zoom.us/v2/users/me",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/zoom.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/microsoft.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com",
+          "file": "freehand_agent-0.1.5/core/oauth/providers/microsoft.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "inference-service-worker",
+      "version": "3.1.12",
+      "download_url": "https://files.pythonhosted.org/packages/f9/52/da5c8f583c0740207564640247f934878e4fe82795186b080e18e07aca13/inference_service_worker-3.1.12.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:21.065495+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://gitlab.opencode.de/dataport/inference-service/inference-documentation",
+          "file": "inference_service_worker-3.1.12/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "directsaz",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/1b/bc/35a5b4b1249bbf9a728a0a780152a375005089c97587b727f63b8de47595/directsaz-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:14.904583+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://developers.directsaz.com/api/v1",
+          "file": "directsaz-1.0.0/directsaz/client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "colav-automaton",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/88/72/1f41f84784ff866e345f7d5c1f4a259285cd65f5a597f5a9389886c18681/colav_automaton-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:13.718566+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://commonocean.cps.cit.tum.de",
+          "file": "colav_automaton-1.0.0/scripts/commonocean_scenario_tester.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CommonOcean",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://commonocean.cps.cit.tum.de",
+          "file": "colav_automaton-1.0.0/scripts/commonocean_scenario_deserialization.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CommonOcean",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "inferenceindexer-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/82/ba/611fbf5bd672cd6834bdeb9b3f0ed86c4e06bd7489f32634165b78521361/inferenceindexer_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:12.148496+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://www.inferenceindexer.ai/for-agents",
+          "file": "inferenceindexer_mcp-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "For AI Agents - Free Inference Pricing API | InferenceIndexer.ai",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.inferenceindexer.ai/api-docs",
+          "file": "inferenceindexer_mcp-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.inferenceindexer.ai",
+          "file": "inferenceindexer_mcp-0.1.0/inferenceindexer_mcp/server.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tokenmaxxr",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ea/1d/46b0ec0f980b5ad647df502ee5e5f30f39371eea72e8ef3e4c0096a334cf/tokenmaxxr-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:08.546775+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://opencode.ai/workspace/wrk_x/go",
+          "file": "tokenmaxxr-1.0.0/tests/test_providers.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenAuth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cline.bot/api/v1/users/me/plan/usage-limits",
+          "file": "tokenmaxxr-1.0.0/tests/test_providers.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/workspace/wrk_abc123/go",
+          "file": "tokenmaxxr-1.0.0/tests/test_providers.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenAuth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/auth",
+          "file": "tokenmaxxr-1.0.0/tests/test_providers.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenAuth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/anything/dashboard",
+          "file": "tokenmaxxr-1.0.0/tests/test_providers.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.cline.bot",
+          "file": "tokenmaxxr-1.0.0/tests/test_cli.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cline Dashboard",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://opencode.ai/workspace",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/opencode_go.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/workspace",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/opencode_go.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/auth",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/opencode_go.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenAuth",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/workspace",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/opencode_go.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.cline.bot/dashboard/subscription?personal=true",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/clinepass.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cline Dashboard",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cline.bot/api/v1/users/me/plan/usage-limits",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/clinepass.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cline.bot/api/v1/users/me",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/clinepass.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.cline.bot/dashboard/subscription",
+          "file": "tokenmaxxr-1.0.0/tokenmaxxr/providers/clinepass.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cline Dashboard",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ufirma",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/7b/cd/42ef92db9b200e08e8a15aa1b1c9064dc8a4d670e3953b5d061034e76c9a/ufirma-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:07.790778+00:00",
+      "total_findings": 30,
+      "findings": [
+        {
+          "url": "http://crd.gov.pl/wzor/2025/12/19/14090",
+          "file": "ufirma-0.1.1/tests/test_jpk.py",
+          "line": 307,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/12/19/14090",
+          "file": "ufirma-0.1.1/tests/test_cli.py",
+          "line": 247,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/06/25/13775/schemat.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/01/05/eD/DefinicjeTypy/StrukturyDanych_v10-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/01/05/eD/DefinicjeTypy/ElementarneTypyDanych_v10-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/01/05/eD/DefinicjeTypy/KodyKrajow_v10-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/12/19/14090/schemat.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/09/13/eD/DefinicjeTypy/StrukturyDanych_v12-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2023/09/06/eD/KodyKrajow/KodyKrajow_v13-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/01/05/eD/KodyUrzedowSkarbowych/KodyUrzedowSkarbowych_v8-0E.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.podatki.gov.pl/media/10553/sig-2008_v2-0.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api-test.ksef.mf.gov.pl/docs/v2/schemas/authv2.xsd",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.gov.pl/web/kas/struktury-jpk",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Struktury JPK - Ministerstwo Finans\u00f3w - Krajowa Administracja Skarbowa - Portal Gov.pl",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://www.podatki.gov.pl/e-deklaracje/dokumentacja-it/struktury-dokumentow-xml",
+          "file": "ufirma-0.1.1/scripts/check_schemas.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Struktury dokument\u00f3w XML",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/06/25/13775",
+          "file": "ufirma-0.1.1/src/ksef/testing.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/06/25/13775",
+          "file": "ufirma-0.1.1/src/ksef/testing.py",
+          "line": 114,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ksef.mf.gov.pl/auth/token/2.0",
+          "file": "ufirma-0.1.1/src/ksef/auth.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ksef.mf.gov.pl/auth/token/2.0",
+          "file": "ufirma-0.1.1/src/ksef/auth.py",
+          "line": 26,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api-test.ksef.mf.gov.pl/v2",
+          "file": "ufirma-0.1.1/src/ksef/client.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api-demo.ksef.mf.gov.pl/v2",
+          "file": "ufirma-0.1.1/src/ksef/client.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.ksef.mf.gov.pl/v2",
+          "file": "ufirma-0.1.1/src/ksef/client.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://e-dokumenty.mf.gov.pl",
+          "file": "ufirma-0.1.1/src/jpk/bramka.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JPK",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://test-e-dokumenty.mf.gov.pl",
+          "file": "ufirma-0.1.1/src/jpk/bramka.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Swagger UI",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://e-dokumenty.mf.gov.pl",
+          "file": "ufirma-0.1.1/src/jpk/bramka.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JPK",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://e-dokumenty.mf.gov.pl",
+          "file": "ufirma-0.1.1/src/jpk/bramka.py",
+          "line": 188,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JPK",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/12/19/14090",
+          "file": "ufirma-0.1.1/src/jpk/v7m.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2022/09/13/eD/DefinicjeTypy",
+          "file": "ufirma-0.1.1/src/jpk/v7m.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/12/19/14090",
+          "file": "ufirma-0.1.1/src/jpk/v7m.py",
+          "line": 369,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/06/25/13775",
+          "file": "ufirma-0.1.1/src/jpk/fa3.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://crd.gov.pl/wzor/2025/06/25/13775",
+          "file": "ufirma-0.1.1/src/jpk/fa3.py",
+          "line": 139,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": "Nieprawid\u0142owy adres",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "nph-client",
+      "version": "0.1.3",
+      "download_url": "https://files.pythonhosted.org/packages/a9/86/df890d66eb2422e772b3a42029c0bca25233337c3e4891c206cd6a910b88/nph_client-0.1.3.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:59.903357+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://nph.unisanta.br/ssbs/api",
+          "file": "nph_client-0.1.3/src/nph_client/client.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "oknoll-connectors",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/ca/2d/93e13c9f7d2efb83209fbcce9e67e1d1569fab90e5cc29dd24287b665f7b/oknoll_connectors-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:56.548674+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "ftp://example.test",
+          "file": "oknoll_connectors-0.3.0/tests/test_web_connector.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "loza",
+      "version": "0.2.6",
+      "download_url": "https://files.pythonhosted.org/packages/d2/25/b4f51567d92b419c30d359f820cd4beee25f34f1439235cd6431906c5b76/loza-0.2.6.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:55.918709+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://loza.dev",
+          "file": "loza-0.2.6/tests/test_typed_attribute_helpers.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "shai-harness",
+      "version": "0.7.1",
+      "download_url": "https://files.pythonhosted.org/packages/0b/8b/6ab155d1959621e0991afe5a3e870d61bc7f07d7b1c3968d08689a8715e1/shai_harness-0.7.1.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:54.213395+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://shai.aibestlabs.com",
+          "file": "shai_harness-0.7.1/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SHAI \u2014 Secure Harness AI for Production Agents",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://evil.com/steal",
+          "file": "shai_harness-0.7.1/tests/unit/test_shai_transport.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/steal",
+          "file": "shai_harness-0.7.1/tests/unit/test_shai_transport.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://anywhere.com/api",
+          "file": "shai_harness-0.7.1/tests/unit/test_shai_transport.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://evil.com/*",
+          "file": "shai_harness-0.7.1/tests/unit/test_shai_transport.py",
+          "line": 391,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/steal?c=",
+          "file": "shai_harness-0.7.1/tests/unit/test_mcp_metadata_scanner.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://attacker.com/collect",
+          "file": "shai_harness-0.7.1/tests/unit/test_mcp_metadata_scanner.py",
+          "line": 254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attacker - The Domain Name Attacker.com is Now For Sale.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evil.com/steal",
+          "file": "shai_harness-0.7.1/tests/unit/test_argument_policy.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/api/chat",
+          "file": "shai_harness-0.7.1/tests/unit/test_dispatch_token.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/path",
+          "file": "shai_harness-0.7.1/tests/unit/test_dispatch_token.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com/*",
+          "file": "shai_harness-0.7.1/tests/unit/test_dispatch_token.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://server.com/message?sessionId=xyz",
+          "file": "shai_harness-0.7.1/tests/unit/test_source_registry.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "lclang",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/80/9b/d35b9121c1eba16e6fcf32b3e570aa54a4a2d616faa0e11a4270200d411f/lclang-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:52.467012+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://jihulab.com/midnightprotocol/lclang/-/tree/main/docs",
+          "file": "lclang-0.3.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "docs \u00b7 main \u00b7 MidnightProtocol / LCLang \u00b7 \u6781\u72d0GitLab",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://jihulab.com/midnightprotocol/lclang/-/work_items",
+          "file": "lclang-0.3.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5de5\u4f5c\u9879 \u00b7 MidnightProtocol / LCLang \u00b7 \u6781\u72d0GitLab",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://jihulab.com/midnightprotocol/lclang",
+          "file": "lclang-0.3.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MidnightProtocol / LCLang \u00b7 \u6781\u72d0GitLab",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "claude-shield",
+      "version": "1.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/cc/ff/a7e1080bf82a21c58ede60e6262b96970f1f8fb34f1abd02a90d3119ae73/claude_shield-1.2.2.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:50.709608+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://1.1.1.1/cdn-cgi/trace",
+          "file": "claude_shield-1.2.2/claude_shield/probes/endpoints.py",
+          "line": 6,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "SSL Corp"
+        },
+        {
+          "url": "https://api.ipify.org",
+          "file": "claude_shield-1.2.2/claude_shield/probes/endpoints.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "fisis",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7a/61/d6d76926212a5c99698997b4b7d110479f108fdd73ce59148deb58f8777b/fisis-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:50.112619+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://fisis.fss.or.kr/openapi/x.json",
+          "file": "fisis-0.1.0/tests/test_client.py",
+          "line": 415,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fisis.fss.or.kr/openapi/companySearch.json",
+          "file": "fisis-0.1.0/src/fisis/client.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fisis.fss.or.kr/openapi/statisticsListSearch.json",
+          "file": "fisis-0.1.0/src/fisis/client.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fisis.fss.or.kr/openapi/accountListSearch.json",
+          "file": "fisis-0.1.0/src/fisis/client.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fisis.fss.or.kr/openapi/statisticsInfoSearch.json",
+          "file": "fisis-0.1.0/src/fisis/client.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "http://fisis.fss.or.kr/openapi",
+          "file": "fisis-0.1.0/src/fisis/_transport.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FISIS",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fisis.fss.or.kr/openapi",
+          "file": "fisis-0.1.0/src/fisis/_transport.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FISIS",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "clawock",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c4/3e/9d37272e32ddcf6fd494767d2443dc917cc561cdbcf05ff3d9840a98f6aa/clawock-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:47.734898+00:00",
+      "total_findings": 96,
+      "findings": [
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001045810.json",
+          "file": "clawock-0.1.0/tests/test_mover_news.py",
+          "line": 192,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "clawock-0.1.0/tests/test_pages_deployment_contract.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "clawock-0.1.0/tests/test_pages_deployment_contract.py",
+          "line": 160,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://wealthinsights.metrobank.com.ph",
+          "file": "clawock-0.1.0/tests/test_secret_leak_scan.py",
+          "line": 303,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metrobank Wealth Insights | Metrobank Wealth Insights",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://wealthinsights.metrobank.com.ph/news/update-5-sk-hynix-plunges-after-nasdaq-debut-as-memory-cools)",
+          "file": "clawock-0.1.0/tests/test_secret_leak_scan.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/abc.htm",
+          "file": "clawock-0.1.0/tests/test_news_evidence_graph.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/abc.htm",
+          "file": "clawock-0.1.0/tests/test_news_evidence_graph.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline?param=",
+          "file": "clawock-0.1.0/src/clawock/evaluation/combined_regime.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=",
+          "file": "clawock-0.1.0/src/clawock/evaluation/combined_regime.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=",
+          "file": "clawock-0.1.0/src/clawock/evaluation/us_leverage.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/evaluation/hstech_regime.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/evaluation/regime_validation.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/decision/signals.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "clawock-0.1.0/src/clawock/decision/signals.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/decision/regime.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "clawock-0.1.0/src/clawock/decision/regime.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/minute/query",
+          "file": "clawock-0.1.0/src/clawock/decision/setups.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/ticker",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_analysis.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.alphavantage.co/query",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_analysis.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finnhub.io/api/v1/company-news",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_analysis.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://search-api-web.eastmoney.com/search/jsonp?cb=x&param=",
+          "file": "clawock-0.1.0/src/clawock/market_data/eastmoney_news.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://finance.eastmoney.com/a",
+          "file": "clawock-0.1.0/src/clawock/market_data/eastmoney_news.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://newsapi.eastmoney.com/kuaixun/v1/getlist_102_ajaxResult_",
+          "file": "clawock-0.1.0/src/clawock/market_data/eastmoney_news.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/ticker",
+          "file": "clawock-0.1.0/src/clawock/market_data/benchmarks.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/market_data/benchmarks.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline?param=",
+          "file": "clawock-0.1.0/src/clawock/market_data/benchmarks.py",
+          "line": 93,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/news/info/search",
+          "file": "clawock-0.1.0/src/clawock/market_data/mover_evidence.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK",
+          "file": "clawock-0.1.0/src/clawock/market_data/mover_evidence.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.nasdaqtrader.com/rss.aspx?feed=tradehalts",
+          "file": "clawock-0.1.0/src/clawock/market_data/mover_evidence.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NASDAQTrader.com",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://gu.qq.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/mover_evidence.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u884c\u60c5\u4e2d\u5fc3_\u817e\u8baf\u8bc1\u5238",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/factors.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/factors.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov/submissions",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=",
+          "file": "clawock-0.1.0/src/clawock/market_data/filings.py",
+          "line": 175,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline",
+          "file": "clawock-0.1.0/src/clawock/market_data/bars.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://push2his.eastmoney.com/api/qt/stock/kline/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/bars.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/kline/kline?param=",
+          "file": "clawock-0.1.0/src/clawock/market_data/bars.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://finnhub.io/api/v1/stock/peers",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_discovery.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://push2.eastmoney.com/api/qt/stock/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_discovery.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://push2.eastmoney.com/api/qt/slist/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_discovery.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://push2.eastmoney.com/api/qt/clist/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_discovery.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://quote.eastmoney.com/bk/90",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_discovery.py",
+          "line": 198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_quotes.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_quotes.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.nasdaq.com/api/quote",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_quotes.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.nasdaq.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_quotes.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nasdaq: Stock Market, Data Updates, Reports & News",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=",
+          "file": "clawock-0.1.0/src/clawock/market_data/peer_quotes.py",
+          "line": 118,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://searchapi.eastmoney.com/api/suggest/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/eastmoney_symbols.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/eastmoney_http.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://datacenter-web.eastmoney.com/api/data/v1/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/fundamentals.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://push2.eastmoney.com/api/qt/ulist.np/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://stooq.com/q/l",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 143,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 277,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://finnhub.io/api/v1/company-news",
+          "file": "clawock-0.1.0/src/clawock/market_data/hk_analysis.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.nasdaq.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nasdaq: Stock Market, Data Updates, Reports & News",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.nasdaq.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 218,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nasdaq: Stock Market, Data Updates, Reports & News",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.nasdaq.com/api/quote",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://push2.eastmoney.com/api/qt/ulist.np/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 287,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://finnhub.io/api/v1/quote",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 372,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 397,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.alphavantage.co/query",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 462,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/ticker",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 511,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 546,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/ticker",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 621,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks",
+          "file": "clawock-0.1.0/src/clawock/market_data/us_quotes.py",
+          "line": 736,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://push2his.eastmoney.com/api/qt/stock/fflow/daykline/get",
+          "file": "clawock-0.1.0/src/clawock/market_data/fund_flows.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://stooq.com/q/l?s=",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://qt.gtimg.cn/q=",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://production.dataviz.cnn.io/index/fearandgreed/graphdata",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 418,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.cnn.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.cnn.com",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+          "file": "clawock-0.1.0/src/clawock/market_data/macro.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FRB: Press Release - All Releases",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ir.theice.com/press/news-details/2024/NYSE-Group-Announces-2025-2026-and-2027-Holiday-and-Early-Closings-Calendar/default.aspx",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental Exchange - NYSE Group Announces 2025, 2026 and 2027 Holiday and Early Closings Calendar",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.gov.hk/en/about/abouthk/holiday/2027.htm",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GovHK: General holidays for 2027",
+          "cert_issuer": "Hongkong Post"
+        },
+        {
+          "url": "https://www.hkex.com.hk/-/media/hkex-market/services/trading-hours-and-severe-weather-arrangements/severe-weather-arrangements/trading/chap-5_eng",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Circulars-and-Notices/Participant-and-Members-Circulars/SEHK/2026/MO_DT_133_26_e1.pdf",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://ir.theice.com/press/news-details/2024/NYSE-Group-Announces-2025-2026-and-2027-Holiday-and-Early-Closings-Calendar/default.aspx",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Intercontinental Exchange - NYSE Group Announces 2025, 2026 and 2027 Holiday and Early Closings Calendar",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.gov.hk/en/about/abouthk/holiday/2027.htm",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GovHK: General holidays for 2027",
+          "cert_issuer": "Hongkong Post"
+        },
+        {
+          "url": "https://www.hkex.com.hk/-/media/hkex-market/services/trading-hours-and-severe-weather-arrangements/severe-weather-arrangements/trading/chap-5_eng",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Circulars-and-Notices/Participant-and-Members-Circulars/SEHK/2026/MO_DT_133_26_e1.pdf",
+          "file": "clawock-0.1.0/src/clawock/market_data/sessions.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://finnhub.io/api/v1/calendar/earnings",
+          "file": "clawock-0.1.0/src/clawock/market_data/calendar.py",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.frankfurter.app/latest",
+          "file": "clawock-0.1.0/src/clawock/portfolio/fx.py",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.exchangerate.host/latest",
+          "file": "clawock-0.1.0/src/clawock/portfolio/fx.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/HKD=X",
+          "file": "clawock-0.1.0/src/clawock/portfolio/fx.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "file": "clawock-0.1.0/src/clawock/portfolio/risk.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart",
+          "file": "clawock-0.1.0/src/clawock/portfolio/risk.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.polygon.io/v2/aggs/ticker",
+          "file": "clawock-0.1.0/src/clawock/portfolio/risk.py",
+          "line": 200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.alphavantage.co/query",
+          "file": "clawock-0.1.0/src/clawock/portfolio/risk.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=",
+          "file": "clawock-0.1.0/src/clawock/portfolio/risk.py",
+          "line": 130,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "apimatic-gp-sdk",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/91/c7/943cccbd6b58bc6e4c3a6fb255ed362fd3eafdd4fec9a18edbae3fe262a5/apimatic_gp_sdk-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:36.700197+00:00",
+      "total_findings": 183,
+      "findings": [
+        {
+          "url": "https://apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/configuration.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://apis.sandbox.globalpay.com/ucp",
+          "file": "apimatic_gp_sdk-0.0.1/batches/configuration.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://apis.globalpay.com/ucp",
+          "file": "apimatic_gp_sdk-0.0.1/batches/configuration.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/configuration.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/batches_client.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/batches_client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/api_helper.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/api_helper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_batches_transactions_payment_method_card_funding.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_batches_transactions_payment_method_card_funding.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_batches_transactions_payment_method_card_brand.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_batches_transactions_payment_method_card_brand.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/refunds_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/refunds_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/currency_batches_transactions_currency.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/currency_batches_transactions_currency.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/close_response.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/close_response.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/sales_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/sales_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_4.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_4.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/server_error_500.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/server_error_500.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/get_response.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/get_response.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_6.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_6.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/status_batches_status.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/status_batches_status.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/refunds.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/refunds.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/unknown_server_error_501.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/unknown_server_error_501.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/not_authorized_403.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/not_authorized_403.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_method_2.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_method_2.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_breakdown_item.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_breakdown_item.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit_5.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_debit_5.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/type_batches_action_type.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/type_batches_action_type.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/type_batches_transactions_type.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/type_batches_transactions_type.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/status_batches_transactions_status.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/status_batches_transactions_status.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/unknown_platform_error_502.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/unknown_platform_error_502.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/obj_request_invalid_400.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/obj_request_invalid_400.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/entry_mode_batches_transactions_payment_method_entry_mode.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/entry_mode_batches_transactions_payment_method_entry_mode.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/sales.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/sales.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_2.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_2.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/filter.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/filter.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_3.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_3.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/transaction_batch_response.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/transaction_batch_response.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/transaction.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/transaction.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/channel_batches_channel.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/channel_batches_channel.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_5.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_5.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_2.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_2.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/server_timeout_504.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/server_timeout_504.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/authentication_invalid_401.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/authentication_invalid_401.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit_5.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/funding_credit_5.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/avs_address_result_batches_transactions_payment_method_card_avs_address_result.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/avs_address_result_batches_transactions_payment_method_card_avs_address_result.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/host_breakdown_item.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/host_breakdown_item.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_3.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_3.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_1.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_1.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/cvv_result_batches_transactions_payment_method_card_cvv_result.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/cvv_result_batches_transactions_payment_method_card_cvv_result.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_batches_brand_breakdown_brand.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/brand_batches_brand_breakdown_brand.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/batches_request.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/batches_request.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/card.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/card.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_method.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_method.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_methods_batches_payment_method.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/payment_methods_batches_payment_method.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/action.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/action.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_6.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/detailed_error_code_6.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_4.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_4.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/result_code_batches_action_result_code.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/result_code_batches_action_result_code.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_5.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/error_code_5.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/avs_postal_code_result_batches_transactions_payment_method_card_avs_postal_code_result.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/models/avs_postal_code_result_batches_transactions_payment_method_card_avs_postal_code_result.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/utilities/file_wrapper.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/utilities/file_wrapper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_401_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_401_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_504_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_504_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_401_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_401_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/api_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/api_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_501_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_501_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_400_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_400_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_403_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_403_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_400_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_400_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_501_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_501_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_502_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_502_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_504_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_504_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_403_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_403_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_502_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_502_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_500_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_transactions_500_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_500_error_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/exceptions/batches_500_error_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/get_transactions_within_a_batch_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/get_transactions_within_a_batch_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/close_a_batch_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/close_a_batch_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/get_a_batch_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/get_a_batch_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/base_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/apis/base_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/proxy_settings.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/proxy_settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/api_response.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/api_response.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_client_provider.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_client_provider.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_request.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_request.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_method_enum.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_method_enum.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_call_back.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_call_back.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_response.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/http/http_response.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/logging/sdk_logger.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/logging/sdk_logger.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/logging/configuration/api_logging_configuration.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "apimatic_gp_sdk-0.0.1/batches/logging/configuration/api_logging_configuration.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "nph-plots",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/2b/39/d8a2dd23119baeab09c8a0068fc324952dc58bc807920814c8f3d05278b4/nph_plots-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:35.253623+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://nph.unisanta.br/ssbs/api",
+          "file": "nph_plots-0.1.1/src/nph_plots/client.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "tai42-tools-whatsapp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/13/a7/0a72734071e7e963361808c23bcc6c6754d83a8bef05f1360e50c7feac7b/tai42_tools_whatsapp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:33.297657+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_tools_whatsapp-0.1.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-tools-github",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/a2/121de73f42cf319684d422cf04ae0be2478b13cc6677567ae3ec94b0ac9f/tai42_tools_github-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:33.066254+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_tools_github-0.1.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-tools-twilio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b9/da/38fd5212f5b45f49d587b9ff09fd03b0745b96d368b1a65ad30e387a3e6a/tai42_tools_twilio-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:32.939609+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_tools_twilio-0.1.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "dentrx",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/58/e873f6b2c4067d24e8efa8770f070735abb7e2d96df327ca17b4af2af50c/dentrx-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:32.314769+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://doi.org",
+          "file": "dentrx-0.1.0/dentrx/core.py",
+          "line": 121,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "prothon-ensembles",
+      "version": "2.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/32/50/ca0d30299703c47ee9db1c015f043c765bdae7028ca4276d94ab4ed119a7/prothon_ensembles-2.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:32.067556+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1021/acs.jcim.3c00145",
+          "file": "prothon_ensembles-2.1.0/pyproject.toml",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "replaysafe",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d3/c4/d2e6b190a3121ebd49d6c9c0be825680dcb33aa05a3ffc83fc64c48d2136/replaysafe-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:31.786390+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "replaysafe-0.1.0/replaysafe/output/sarif.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "skppy",
+      "version": "0.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/ac/47/b2b4b48010231ddbf0fa6f90ae526754341f18b6ae70389a70b57a6ec3ca/skppy-0.9.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:30.883312+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://sketchup.com/schemas/sketchup/1.0/environment",
+          "file": "skppy-0.9.0/skppy/writer/environments.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "celltypepilot",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/6b/2e/58d21a0d6023521c5579a00c587deb34e4b333bf255a0f14ff106e6fc0c2/celltypepilot-0.3.1.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:29.294265+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "http://purl.obolibrary.org/obo/cl.obo",
+          "file": "celltypepilot-0.3.1/src/celltypepilot/ontology.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+          "file": "celltypepilot-0.3.1/src/celltypepilot/literature.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.biorxiv.org/details/biorxiv",
+          "file": "celltypepilot-0.3.1/src/celltypepilot/literature.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+          "file": "celltypepilot-0.3.1/src/celltypepilot/literature.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC:PPR%20AND%20",
+          "file": "celltypepilot-0.3.1/src/celltypepilot/literature.py",
+          "line": 201,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ProtJEPA: A Multimodal Joint-Embedding Predictive Architecture for Protein Biological World Modeling with Multi-Teacher Modality-Attentive Fusion",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "archivalseal",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/c3/99/2d1e564a9d1c2f3bde8d7ec2376d14a1f74c6c1ba7167fb0e51f8806e020/archivalseal-1.0.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-10T14:59:26.733566+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://cr.yp.to/snuffle.html",
+          "file": "simple_encrypt_salsa20.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Snuffle 2005",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cr.yp.to/snuffle.html",
+          "file": "simple_encrypt_salsa20.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Snuffle 2005",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "onenote-tool",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4e/d1/5597ecbe3ef175af81e9acae7bdcbcc1107f2ac10c63a3ed0a7d91e96d5e/onenote_tool-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:25.837568+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://img.youtube.com/vi",
+          "file": "onenote_tool-0.1.0/src/onenote_tool/rendering.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.youtube.com/vi",
+          "file": "onenote_tool-0.1.0/src/onenote_tool/images.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "kostria",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3a/ae/4b9a66546f08fc0f0f69fbf656e1f0714d3822570a92321c37f32c0dd11e/kostria-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:25.479096+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://kostria.hypermind.space/sync",
+          "file": "kostria-0.1.0/tests/test_sync_cli.py",
+          "line": 321,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://kostria.hypermind.space/telemetry",
+          "file": "kostria-0.1.0/kostria/telemetry.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://kostria.hypermind.space/sync",
+          "file": "kostria-0.1.0/kostria/sync.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "vicary",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c8/e0/8c39e7d7e9a1740f2d227591f73e13e0c7cda916223361e2aac0cb869a64/vicary-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:24.028542+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://qlever.dev/api/wikidata",
+          "file": "vicary-0.1.0/tests/test_gazetteer.py",
+          "line": 875,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qlever.dev/api/wikidata",
+          "file": "vicary-0.1.0/tests/test_gazetteer.py",
+          "line": 917,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qlever.dev/api/wikidata",
+          "file": "vicary-0.1.0/src/vicary/build/gazetteer.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://wikiba.se/ontology",
+          "file": "vicary-0.1.0/src/vicary/build/gazetteer.py",
+          "line": 522,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www2.census.gov/topics/genealogy/2010surnames/names.zip",
+          "file": "vicary-0.1.0/src/vicary/build/gazetteer.py",
+          "line": 825,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Request Rejected",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.ssa.gov/oact/babynames/names.zip",
+          "file": "vicary-0.1.0/src/vicary/build/gazetteer.py",
+          "line": 892,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://wikiba.se/ontology",
+          "file": "vicary-0.1.0/src/vicary/build/gazetteer.py",
+          "line": 520,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "citadeldb-crewai",
+      "version": "1.15.0",
+      "download_url": "https://files.pythonhosted.org/packages/62/df/4579d716318564e409ae933455cf7401d1c7fb4690f63d6f8aa90305d49d/citadeldb_crewai-1.15.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:20.159926+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://citadeldb.dev",
+          "file": "citadeldb_crewai-1.15.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Citadel - Local-first encrypted memory engine for AI agents",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "citadeldb-langgraph",
+      "version": "1.15.0",
+      "download_url": "https://files.pythonhosted.org/packages/ec/04/90b9268c1650d0036b853d2a8213b692cde4f908dfd1f467dfb421b00a81/citadeldb_langgraph-1.15.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:19.991753+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://citadeldb.dev",
+          "file": "citadeldb_langgraph-1.15.0/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Citadel - Local-first encrypted memory engine for AI agents",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "harbor-hf",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c9/1e/fdbb0c9629ae92fdbf7d8fba6f3c88eff049fa31ce4127c87b7e77fc4da7/harbor_hf-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:19.641353+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.endpoints.huggingface.cloud/v2/provider",
+          "file": "harbor_hf-0.1.0/src/harbor_hf/profile_preflight.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "UniVector",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5a/60/9480ddd535c9e069125113cc9acb357a4db8e7553007c05ab198f17ada44/univector-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:18.260790+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://nim-lang.org/install.html",
+          "file": "univector-1.0.0/setup.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download - Nim Programming Language",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nim-lang.org/install.html",
+          "file": "univector-1.0.0/setup.py",
+          "line": 72,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download - Nim Programming Language",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "inference-model",
+      "version": "2.0.12",
+      "download_url": "https://files.pythonhosted.org/packages/a5/27/f52efcc114b9fe2ba3a6f76e2899ab1341ecc01489ede9fbcd2f4aa849fe/inference_model-2.0.12.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:17.923001+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://gitlab.opencode.de/dataport/inference-service/inference-documentation",
+          "file": "inference_model-2.0.12/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "escola",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ab/9f/057a3b965b44bb2d9f7516469c8df0b20333e4d6ac033c646b4001d26198/escola-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:15.306417+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inicia sessi\u00f3 a GICAR",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 315,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inicia sessi\u00f3 a GICAR",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/Shibboleth.sso/SAML2/POST",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 367,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 387,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inicia sessi\u00f3 a GICAR",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_configuracions/services/usuariLogin/usuari",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 389,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_integracio/services/awa/centres",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 393,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_configuracions/services/usuariLogin/usuari",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 437,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 438,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inicia sessi\u00f3 a GICAR",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_configuracions/services/usuariLogin/teAcces",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 461,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_ga_avaluacio/services/grupclassereadonlydto/items/professor",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 543,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/AppJava/bfgh_ga_avaluacio/services/grupclassereadonlydto/items/tutor",
+          "file": "escola-0.1.0/src/college/esfera/client.py",
+          "line": 557,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "llm-trees",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/1b/1d/553ca23b113a8766a1608e580c08290fd3eef8073934af3df7e4864436d5/llm_trees-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:13.068345+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://proceedings.neurips.cc/paper/2006/hash/d3157f2f0212a80a5d042c127522a2d5-Abstract.html",
+          "file": "llm_trees-0.2.0/llm_trees/embeddings.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fast Discriminative Visual Codebooks using Randomized Clustering Forests",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s41060-022-00350-z",
+          "file": "llm_trees-0.2.0/llm_trees/embeddings.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DeepTLF: robust deep neural networks for heterogeneous tabular data | International Journal of Data Science and Analytics | Springer Nature Link",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://proceedings.neurips.cc/paper/2006/hash/d3157f2f0212a80a5d042c127522a2d5-Abstract.html",
+          "file": "llm_trees-0.2.0/llm_trees/embeddings.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fast Discriminative Visual Codebooks using Randomized Clustering Forests",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s41060-022-00350-z",
+          "file": "llm_trees-0.2.0/llm_trees/embeddings.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DeepTLF: robust deep neural networks for heterogeneous tabular data | International Journal of Data Science and Analytics | Springer Nature Link",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "llm_trees-0.2.0/llm_trees/llms.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "PyMBCap",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/c3/89/34d135ffa3e1c1ddbd6d4d470d7617301146ded17cf9f56ba4983d96be6b/pymbcap-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:09.386786+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.rabbitmq.com/blog/2026/04/23/rabbitmq-4.3-release",
+          "file": "pymbcap-0.0.1/src/PyMBCap/MessagerService/RabbitMQService.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RabbitMQ 4.3 Highlights | RabbitMQ",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rabbitmq.com/blog/2026/04/23/rabbitmq-4.3-release",
+          "file": "pymbcap-0.0.1/src/PyMBCap/MessagerService/RabbitMQService.py",
+          "line": 7,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RabbitMQ 4.3 Highlights | RabbitMQ",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "dompruner",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/dc/a2/61a145d6675c6e60bf034d02a02f3cc050c17e9ecfe71b5c2a631086b673/dompruner-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:09.175529+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://react.dev/reference/react/useState",
+          "file": "dompruner-0.1.0/bench.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "useState \u2013 React",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/tutorial/body",
+          "file": "dompruner-0.1.0/bench.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Request Body - FastAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nextjs.org/docs/app/building-your-application/routing",
+          "file": "dompruner-0.1.0/bench.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Getting Started: Layouts and Pages | Next.js",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.typescriptlang.org/docs/handbook/2/types-from-types.html",
+          "file": "dompruner-0.1.0/bench.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vuejs.org/guide/essentials/reactivity-fundamentals.html",
+          "file": "dompruner-0.1.0/bench.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Reactivity Fundamentals | Vue.js",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "saive-client",
       "version": "0.1.0",
@@ -22805,6 +27822,58 @@
           "resolved": false,
           "context": "ensure_lib_built",
           "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "UniVector",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5a/60/9480ddd535c9e069125113cc9acb357a4db8e7553007c05ab198f17ada44/univector-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T14:59:18.261044+00:00",
+      "install_hooks": [
+        {
+          "file": "univector-1.0.0/setup.py",
+          "line": 68,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call(['nimble', 'install', '-y', '-d'], cwd=project)",
+          "resolved": true,
+          "context": "ensure_lib_built",
+          "source": "setup_py"
+        },
+        {
+          "file": "univector-1.0.0/setup.py",
+          "line": 69,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call(['nimble', NIMBLE_TASK], cwd=project)",
+          "resolved": false,
+          "context": "ensure_lib_built",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "aethershell",
+      "version": "1.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/d5/4d/af97c9424b8b9e9efd12ab260e144466912580d2c0c2ee77ce0bb01f5145/aethershell-1.5.0.tar.gz",
+      "analyzed_at": "2026-08-10T15:00:13.882026+00:00",
+      "install_hooks": [
+        {
+          "file": "aethershell-1.5.0/python/aethershell/__init__.py",
+          "line": 234,
+          "call": "subprocess.run",
+          "command": "subprocess.run([self._ae_path, '-e', code, '--json'], capture_output=True, text=True, timeout=60)",
+          "resolved": false,
+          "context": "AetherRuntime.eval",
+          "source": "package_init"
+        },
+        {
+          "file": "aethershell-1.5.0/python/aethershell/__init__.py",
+          "line": 259,
+          "call": "subprocess.run",
+          "command": "subprocess.run([self._ae_path, path, '--json'], capture_output=True, text=True, timeout=300)",
+          "resolved": false,
+          "context": "AetherRuntime.eval_file",
+          "source": "package_init"
         }
       ]
     }
