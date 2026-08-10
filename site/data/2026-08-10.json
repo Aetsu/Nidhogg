@@ -1,11 +1,1188 @@
 {
-  "generated_at": "2026-08-10T03:57:20.118471+00:00",
+  "generated_at": "2026-08-10T05:36:42.505105+00:00",
   "stats": {
-    "total_packages": 55,
-    "malicious": 3,
-    "clean": 52
+    "total_packages": 66,
+    "malicious": 5,
+    "clean": 61
   },
   "packages": [
+    {
+      "name": "mkdocs-webmention",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/fb/1e/c6c4ad0c5f336622de71099e4f46d05e555306a4bd01cb02fa437cfd607b/mkdocs_webmention-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:40.559073+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://webmention.io/example.com/webmention",
+          "file": "mkdocs_webmention-0.1.0/tests/test_serve_url.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Webmention Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io/example.com/webmention",
+          "file": "mkdocs_webmention-0.1.0/tests/test_build.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Webmention Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io/example.com/xmlrpc",
+          "file": "mkdocs_webmention-0.1.0/tests/test_build.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Pingback Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io/example.com/webmention",
+          "file": "mkdocs_webmention-0.1.0/tests/test_domain.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Webmention Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io/example.com/webmention",
+          "file": "mkdocs_webmention-0.1.0/tests/test_domain.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Webmention Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io/example.com/webmention",
+          "file": "mkdocs_webmention-0.1.0/tests/test_domain.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hosted Webmention Service",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://webmention.io",
+          "file": "mkdocs_webmention-0.1.0/mkdocs_webmention/plugin.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Webmention.io",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "vague-code",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cb/2d/6219ab1f532c27da68927ca0b717ad16df306f801a3c2aa532e74002c4f7/vague_code-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:39.711622+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://api.deepseek.com/v1/chat/completions",
+          "file": "vague_code-0.1.0/tests/test_retry.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/anthropic",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/anthropic",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 194,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/anthropic",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "vague_code-0.1.0/vague_code/cli/__init__.py",
+          "line": 256,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "vague_code-0.1.0/vague_code/agent/backend.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "vague_code-0.1.0/vague_code/agent/backend.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "hatch-maturin-build",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/07/96/9b7811152cfbaf6f987c181729b1b14d5ceba551bfc3f49593fb1e1bba32/hatch_maturin_build-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:38.246792+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cjameshawkins.com/hatch-maturin-build",
+          "file": "hatch_maturin_build-0.1.1/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hatch-maturin-build",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tai42-cli",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/3d/12/0c4b26648c145791c9aa7fe5d055e08870e1fcf4fc90e12816ef296bfcd8/tai42_cli-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:36.164122+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tai42.ai",
+          "file": "tai42_cli-1.0.0/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TAI42 - The Open Agent Platform Company",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tubekit-mcp",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/26/a9f6c58ac97c4c498d1491fee94e975ac9003e45a3298eebad726ef1dd1b/tubekit_mcp-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:35.323026+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://www.youtube.com/playlist?list=",
+          "file": "tubekit_mcp-0.3.0/src/tubekit/services/playlists.py",
+          "line": 233,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://studio.youtube.com/video",
+          "file": "tubekit_mcp-0.3.0/src/tubekit/services/upload.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://static.modelcontextprotocol.io/schemas",
+          "file": "tubekit_mcp-0.3.0/tests/unit/test_registry_metadata.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "phoson-engine-minimal",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/ee/06/c3e03d4a69d21677ef05eaed5e550ba9f31b9db956146ae6ba4c298d6d1c/phoson_engine_minimal-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:34.019499+00:00",
+      "total_findings": 31,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 240,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.together.xyz/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 267,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 298,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.perplexity.ai/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 323,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 353,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cohere.com/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 383,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.x.ai/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/model_selector.py",
+          "line": 435,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models",
+          "file": "phoson_engine_minimal-0.3.0/phoson_agent/plugins/context_window.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.perplexity.ai",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/perplexity.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/openrouter.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/grok.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/fireworks.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/groq.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/nvidia.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/together.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/deepseek.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.cohere.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/phoson_llm/chats/cohere.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://html.duckduckgo.com/html",
+          "file": "phoson_engine_minimal-0.3.0/phoson_cli/tools/search.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo HTML: Private Search Without JavaScript",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_deepseek_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_grok_unit.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_fireworks_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.perplexity.ai",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_perplexity_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_nvidia_unit.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_together_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_cohere_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cohere.com/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_cohere_unit.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "phoson_engine_minimal-0.3.0/tests/phoson_llm/test_groq_unit.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ipfs-pay-to-pin-client",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/97/59/955b6783deb07a852ef68ae74c1fe9a0aa3e730b7da2d5817ff3eff4fd3c/ipfs_pay_to_pin_client-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:32.699646+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://testnet-api.algonode.cloud",
+          "file": "ipfs_pay_to_pin_client-0.2.0/src/ipfs_pay_to_pin_client/client.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Swagger UI",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "agentgraph-server",
+      "version": "0.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/60/29/a7e3d4ddc2aa8c2e8c3c309cd3d76bc0a5be3fd501af7ffd8207dd37b087/agentgraph_server-0.5.1.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:25.280081+00:00",
+      "total_findings": 22,
+      "findings": [
+        {
+          "url": "http://stratechery.com/feed",
+          "file": "agentgraph_server-0.5.1/tests/test_rss_connector.py",
+          "line": 764,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Stratechery by Ben Thompson",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://stratechery.com/feed",
+          "file": "agentgraph_server-0.5.1/tests/test_rss_connector.py",
+          "line": 769,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Stratechery by Ben Thompson",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-36ETGXF6K5",
+          "file": "agentgraph_server-0.5.1/tests/test_docs_build.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/123/456/photo.jpg",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/123/456/photo.jpg",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/1.jpg",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/2.png",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/1.jpg",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/2.png",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/111/222/img.jpg?ex=old&hm=old",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/attachments/111/222/img.jpg?ex=new&hm=new",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/1.jpg?ex=old",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/2.jpg?ex=old",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/1.jpg?ex=new",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/2.jpg?ex=new",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/1.jpg?ex=new",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 185,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.discordapp.com/a/2.jpg?ex=new",
+          "file": "agentgraph_server-0.5.1/tests/test_discord_attachments.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://simonwillison.net/atom/everything",
+          "file": "agentgraph_server-0.5.1/tests/test_cli.py",
+          "line": 824,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simon Willison's Weblog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://simonwillison.net/atom/everything",
+          "file": "agentgraph_server-0.5.1/tests/test_cli.py",
+          "line": 828,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simon Willison's Weblog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://simonwillison.net/atom/everything",
+          "file": "agentgraph_server-0.5.1/agentgraph/mcp/server.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simon Willison's Weblog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://simonwillison.net/atom/everything",
+          "file": "agentgraph_server-0.5.1/agentgraph/mcp/server.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simon Willison's Weblog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://simonwillison.net/atom/everything",
+          "file": "agentgraph_server-0.5.1/agentgraph/mcp/server.py",
+          "line": 197,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simon Willison's Weblog",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hydra-ext",
+      "version": "0.17.4",
+      "download_url": "https://files.pythonhosted.org/packages/04/b4/8a15f74d6abd8295d5a3211e8e990bf31a908aa046f6f6ffc615bfa9146e/hydra_ext-0.17.4.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:24.212406+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://docs.delta.io/3.0.0/api/java/kernel/io/delta/kernel/types/DataType.html",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/delta/parquet.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://spec.graphql.org/draft",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/graphql/syntax.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GraphQL",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spec.graphql.org/draft",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/graphql/syntax.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GraphQL",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.iana.org/assignments/link-relations/link-relations.xhtml",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/iana/linkrelations.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Link Relations",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://solidproject.org/TR/wac",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/iana/linkrelations.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Web Access Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7946",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/geojson/model.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 7946: The GeoJSON Format | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://json-schema.org/2020-12/schema",
+          "file": "hydra_ext-0.17.4/src/main/python/hydra/json/schema/serde.py",
+          "line": 453,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "agentgraph-connector-discord",
+      "version": "0.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/1d/39/33d7b0e05fc2df9ce097109ae0a620bfd97fd95b44d2a88b6a9313bb2c16/agentgraph_connector_discord-0.5.1.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:20.641656+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://discord.com/api/v10/users/@me",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/auth.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/developers/applications",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/auth.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Discord Developer Portal",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/developers/applications",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/auth.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Discord Developer Portal",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/developers/applications",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/auth.py",
+          "line": 63,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Discord Developer Portal",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/developers/applications",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/auth.py",
+          "line": 78,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Discord Developer Portal",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/v10",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/*",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/v10/users/@me",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 219,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/channels",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 416,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/channels",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 526,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/channels",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 562,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/v10/attachments/refresh-urls",
+          "file": "agentgraph_connector_discord-0.5.1/agentgraph_connector_discord/__init__.py",
+          "line": 116,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hydroseason",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b6/d0/fd4979e1cad385f7e3433046d14b49d16efa841c5a070d2ae09167e43a76/hydroseason-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:20.229117+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://explorer.dea.ga.gov.au/stac",
+          "file": "hydroseason-0.1.0/hydroseason/_workflow_input.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://cdn.plot.ly/un",
+          "file": "hydroseason-0.1.0/hydroseason/_report_html.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://explorer.sandbox.dea.ga.gov.au/stac",
+          "file": "hydroseason-0.1.0/hydroseason/_io_dea_stats.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://cdn.plot.ly/plotly-basic-3.6.0.min.js",
+          "file": "hydroseason-0.1.0/hydroseason/_assets/PLOTLY-LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
     {
       "name": "brixta-cement-aas",
       "version": "0.1.0",
@@ -6353,6 +7530,50 @@
           "command": "urllib.request.urlopen(req, timeout=self.timeout)",
           "resolved": false,
           "context": "REB._request",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "bysulf-adapter-http",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/12/1d/b9239771ee4cd965d0337a7604d60eb0f1c733a804c436cbc075856e15d1/bysulf_adapter_http-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-10T05:36:16.520728+00:00",
+      "install_hooks": [
+        {
+          "file": "bysulf_adapter_http-1.0.1/src/bysulf/adapters/http/__init__.py",
+          "line": 119,
+          "call": "urllib.request.build_opener",
+          "command": "urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect(), urllib.request.HTTPSHandler(context=ssl.create_default_context()))",
+          "resolved": false,
+          "context": "HttpAdapter.request",
+          "source": "package_init"
+        },
+        {
+          "file": "bysulf_adapter_http-1.0.1/src/bysulf/adapters/http/__init__.py",
+          "line": 119,
+          "call": "urllib.request.ProxyHandler",
+          "command": "urllib.request.ProxyHandler({})",
+          "resolved": false,
+          "context": "HttpAdapter.request",
+          "source": "package_init"
+        },
+        {
+          "file": "bysulf_adapter_http-1.0.1/src/bysulf/adapters/http/__init__.py",
+          "line": 119,
+          "call": "urllib.request.HTTPSHandler",
+          "command": "urllib.request.HTTPSHandler(context=ssl.create_default_context())",
+          "resolved": true,
+          "context": "HttpAdapter.request",
+          "source": "package_init"
+        },
+        {
+          "file": "bysulf_adapter_http-1.0.1/src/bysulf/adapters/http/__init__.py",
+          "line": 121,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, method=method, headers=headers)",
+          "resolved": false,
+          "context": "HttpAdapter.request",
           "source": "package_init"
         }
       ]
