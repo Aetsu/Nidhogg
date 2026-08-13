@@ -1,11 +1,1098 @@
 {
-  "generated_at": "2026-08-13T11:02:55.395486+00:00",
+  "generated_at": "2026-08-13T13:12:40.048842+00:00",
   "stats": {
-    "total_packages": 132,
-    "malicious": 5,
-    "clean": 127
+    "total_packages": 155,
+    "malicious": 6,
+    "clean": 149
   },
   "packages": [
+    {
+      "name": "cykani-stealth",
+      "version": "1.3.4",
+      "download_url": "https://files.pythonhosted.org/packages/18/70/560f2446c5b103c08497fcf6e60f2d586e66dc8d9e699cc26f0a215dbb8d/cykani_stealth-1.3.4.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:37.972153+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://ipinfo.io",
+          "file": "cykani_stealth-1.3.4/src/cykani_sdk/utils/geoip.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": "IP Data Intelligence for Developers & Enterprises | IPinfo",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ytmp3-dl",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a2/39/a39f16c02011485d35161562845d6b6490529e9f62af1cb8f0a004e76014/ytmp3_dl-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:37.594552+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.deezer.com/search",
+          "file": "ytmp3_dl-1.0.0/src/ytmp3/covers.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Gandi"
+        },
+        {
+          "url": "https://musicbrainz.org/ws/2/recording",
+          "file": "ytmp3_dl-1.0.0/src/ytmp3/covers.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Gandi SAS"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "ytmp3_dl-1.0.0/src/ytmp3/downloader.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hydra-etl",
+      "version": "0.9.6",
+      "download_url": "https://files.pythonhosted.org/packages/9b/15/a90665b1109072a2457b7e2a4259ba9cb768032f99f587b2871ecfa8588b/hydra_etl-0.9.6.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:36.263939+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://hydraetl.com",
+          "file": "hydra_etl-0.9.6/pyproject.toml",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hydraetl.com",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://hydraetl.com",
+          "file": "hydra_etl-0.9.6/pyproject.toml",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hydraetl.com",
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "backbone-rigid-invariant",
+      "version": "1.3.2",
+      "download_url": "https://files.pythonhosted.org/packages/10/c3/7c65639041aab0b6bbe48f182d10447eb15b6c47065b87974c2eb0e64501/backbone_rigid_invariant-1.3.2.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:35.433142+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://alphafold.ebi.ac.uk/files",
+          "file": "backbone_rigid_invariant-1.3.2/src/bri/base/base_util.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AlphaFold Protein Structure Database",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://files.rcsb.org/view",
+          "file": "backbone_rigid_invariant-1.3.2/src/bri/base/base_util.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://www.wwpdb.org/data/ccd",
+          "file": "backbone_rigid_invariant-1.3.2/src/bri/base/base_util.py",
+          "line": 332,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "wwPDB: Chemical Component Dictionary",
+          "cert_issuer": "InCommon, LLC"
+        }
+      ]
+    },
+    {
+      "name": "sre-core",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/aa/e4/a3806c6d668befadd99ffd9525a6b7de43058ef3032b255b24f662635c95/sre_core-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:34.495376+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.opensre.com/docs",
+          "file": "sre_core-0.1.0/tests/test_opensre_public_api.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSRE - OpenSRE Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.opensre.com/docs",
+          "file": "sre_core-0.1.0/src/sre_core/opensre/_imports.py",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSRE - OpenSRE Documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "a4i",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a8/a9/ee5c82b355b670d66cce3506fdf35032ebd62ced1ec0735a123c9e7df36f/a4i-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:32.923315+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://pubhub.devnetcloud.com/media/model-doc-latest/docs/doc/jsonmeta",
+          "file": "a4i-0.0.1/tools/gen_metadata.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pubhub.devnetcloud.com/media/model-doc-latest/docs/doc/jsonmeta",
+          "file": "a4i-0.0.1/tools/gen_metadata.py",
+          "line": 479,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pubhub.devnetcloud.com/media/model-doc-latest/docs/doc/jsonmeta",
+          "file": "a4i-0.0.1/src/a4i/metadata/__init__.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pubhub.devnetcloud.com/media/model-doc-latest/docs/doc/jsonmeta",
+          "file": "a4i-0.0.1/src/a4i/metadata/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "dpm-tool",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/40/1c/182c79e08c03debd2121825925ec6da32f8d8c1143e9553ff58999c8e962/dpm_tool-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:31.841812+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "http://xbrl.org/ns",
+          "file": "dpm_tool-0.1.1/tests/test_parsing.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://dev.eiopa.europa.eu/Taxonomy/Full/2.10.0/S2",
+          "file": "dpm_tool-0.1.1/tests/test_eiopa_config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dev.eiopa.europa.eu/Taxonomy/Full/2.8.2_hotfix/S2",
+          "file": "dpm_tool-0.1.1/tests/test_eiopa_config.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dev.eiopa.europa.eu/Taxonomy/Full/2.10.0/S2/EIOPA_Solvency_II_DPM_Annotated_Templates_2.10.0_table_group_arrangement.xlsx",
+          "file": "dpm_tool-0.1.1/tests/test_eiopa_config.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dev.eiopa.europa.eu/Taxonomy/Full/2.8.2_hotfix/S2/EIOPA_Solvency_II_DPM_Annotated_Templates_2.8.2_Hotfix_table_group_arrangement.xlsx",
+          "file": "dpm_tool-0.1.1/tests/test_eiopa_config.py",
+          "line": 29,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://dev.eiopa.europa.eu/Taxonomy/Full",
+          "file": "dpm_tool-0.1.1/dpm/eiopa.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "kerneva-runtime-trust",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/d3/21/f128e9fbd3803f54d616d3de76a43a0b9fd51ae3ea5256cb8483122a2460/kerneva_runtime_trust-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:30.577809+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.kerneva.com",
+          "file": "kerneva_runtime_trust-0.3.0/kerneva_runtime_trust/client.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "cardiacprep",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/fc/ed/4ceb2497080025b6c0bb33ba6441add9f31289e7b0e25e3d68051610a09c/cardiacprep-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:29.893611+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://wearables-files.ndph.ox.ac.uk/files/models",
+          "file": "cardiacprep-1.0.0/tests/test_model_download.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://wearables-files.ndph.ox.ac.uk/files/models/cardiac-prep",
+          "file": "cardiacprep-1.0.0/src/cardiacprep/model_download.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "chorms",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/02/aa/dd5db830d5bae13111ba4abe2f8fe3b4fa6e98715c29d7bf0e1c53ea80da/chorms-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:28.560528+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "http://ab-initio.mit.edu/nlopt",
+          "file": "chorms-0.1.1/src/chorms/cppfuncs/nlopt-2.4.2-dll64/nlopt.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - NLopt Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ab-initio.mit.edu/nlopt",
+          "file": "chorms-0.1.1/src/chorms/cppfuncs/nlopt-2.4.2-dll64/nlopt.py",
+          "line": 10,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview - NLopt Documentation",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "kestrel-feature-talon",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/af/c4/0688037add2dfb06c1e272fb33b64096f7e8dae29c6559f47bf863ef911e/kestrel_feature_talon-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:23.088924+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://kestrelsovereign.com",
+          "file": "kestrel_feature_talon-0.2.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kestrel \u2014 Sovereign AI Agent Framework",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "infermion",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/09/d0/43cc7473eb98576909baa358a94ba4b73eaa09600948d11d6f3e67a0369b/infermion-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:22.540311+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.infermion.com",
+          "file": "infermion-0.1.0/src/infermion/client.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "lurescope",
+      "version": "0.7.1",
+      "download_url": "https://files.pythonhosted.org/packages/26/ca/2e0ef600122af4f974e2cacb64dddf85297fa8e99047cd2132245e7d9137/lurescope-0.7.1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:22.198642+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://in-toto.io/Statement/v1",
+          "file": "lurescope-0.7.1/lurescope/proof.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "attestation/spec/v1/statement.md at main \u00b7 in-toto/attestation \u00b7 GitHub",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "technocore-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ea/10/fa32ca5ac215caefb169677313b304883d78d39577ead1a669bf7930d5ee/technocore_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:21.076435+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://technocore.chat",
+          "file": "technocore_mcp-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://technocore.chat/llms.txt",
+          "file": "technocore_mcp-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://technocore.chat",
+          "file": "technocore_mcp-0.1.0/src/technocore_mcp/server.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "powercontext",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/2b/56/0ec8e5073c232178ea6811b5ff1ffffd8372ff9d139d3f3d841f6330203b/powercontext-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:20.061796+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://oceanbase.com",
+          "file": "powercontext-0.0.1/zensical.toml",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "typingnorm",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ff/2f/9ff10e3ada7f4fe05c3940eb72c2e3aef80041c527c705d5a9b1e582963e/typingnorm-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:16.866355+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://zenodo.org/records/7886743",
+          "file": "typingnorm-0.1.0/fit/build_profile.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "KeyRecs: Keystroke Dynamics Dataset | Zenodo",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://zenodo.org/records/7886743",
+          "file": "typingnorm-0.1.0/src/typingnorm/simulate.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "KeyRecs: Keystroke Dynamics Dataset | Zenodo",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://zenodo.org/records/7886743",
+          "file": "typingnorm-0.1.0/src/typingnorm/simulate.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "KeyRecs: Keystroke Dynamics Dataset | Zenodo",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "foamnordic",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/38/1d/a1b06af5de9446694207586e34d123f49c983d536a65d26fc3e1229b55d1/foamnordic-1.0.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-13T13:12:15.614459+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://www.craylabs.org",
+          "file": "foamnordic/_vendor/smartredis/setup.cfg",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.craylabs.org",
+          "file": "foamnordic/_vendor/smartsim/setup.cfg",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.craylabs.org/docs/smartredis.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/experiment.py",
+          "line": 959,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SmartRedis \u2014 SmartSim 0.8.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.craylabs.org/docs/smartredis.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/experiment.py",
+          "line": 942,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SmartRedis \u2014 SmartSim 0.8.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/1.0/index.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/settings/containers.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer User Guide \u2014 Apptainer User Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/admin/1.0/configfiles.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/settings/containers.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer Configuration Files \u2014 Apptainer Admin Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/1.0/index.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/settings/containers.py",
+          "line": 80,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer User Guide \u2014 Apptainer User Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/admin/1.0/configfiles.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/settings/containers.py",
+          "line": 80,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer Configuration Files \u2014 Apptainer Admin Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://slurm.schedmd.com/squeue.html",
+          "file": "foamnordic/_vendor/smartsim/smartsim/_core/launcher/stepInfo.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Slurm Workload Manager - squeue",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://nusc.nsu.ru/wiki/lib/exe/fetch.php/doc/pbs/PBSReferenceGuide19.2.1.pdf",
+          "file": "foamnordic/_vendor/smartsim/smartsim/_core/launcher/stepInfo.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.craylabs.org/docs/smartredis.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/experiment.py",
+          "line": 959,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SmartRedis \u2014 SmartSim 0.8.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.craylabs.org/docs/smartredis.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/experiment.py",
+          "line": 942,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SmartRedis \u2014 SmartSim 0.8.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/1.0/index.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/settings/containers.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer User Guide \u2014 Apptainer User Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/admin/1.0/configfiles.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/settings/containers.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer Configuration Files \u2014 Apptainer Admin Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/user/1.0/index.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/settings/containers.py",
+          "line": 80,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer User Guide \u2014 Apptainer User Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apptainer.org/docs/admin/1.0/configfiles.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/settings/containers.py",
+          "line": 80,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apptainer Configuration Files \u2014 Apptainer Admin Guide 1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://slurm.schedmd.com/squeue.html",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/_core/launcher/stepInfo.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Slurm Workload Manager - squeue",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://nusc.nsu.ru/wiki/lib/exe/fetch.php/doc/pbs/PBSReferenceGuide19.2.1.pdf",
+          "file": "foamnordic/_vendor/smartsim/build/lib/smartsim/_core/launcher/stepInfo.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "antioch-sim",
+      "version": "0.3.32",
+      "download_url": "https://files.pythonhosted.org/packages/2f/0c/06046309a6585dd987e78ecb83fcf02538fddb243abefec4b4dafee00f08/antioch_sim-0.3.32-py3-none-any.whl",
+      "analyzed_at": "2026-08-13T13:12:12.872031+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://antioch.com/org_id",
+          "file": "common/auth0.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://antioch.com/org_name",
+          "file": "common/auth0.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://antioch.com/organizations",
+          "file": "common/auth0.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://antioch.com/user_email",
+          "file": "common/auth0.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://us-central1-python.pkg.dev/antioch-poc-2607/python-49bd837c7fa6208fea46e947621ac4fd/simple",
+          "file": "antioch/cli/engine.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.antioch.com",
+          "file": "antioch/core/deployment.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://auth.antioch.com",
+          "file": "antioch/core/deployment.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rome.poc.antioch.com",
+          "file": "antioch/core/deployment.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://staging.auth.antioch.com",
+          "file": "antioch/core/deployment.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antioch",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "migec",
+      "version": "2.0.0a2",
+      "download_url": "https://files.pythonhosted.org/packages/39/e9/c89787421df020e42ce565155ca1bb71c36a6d3821c14c1cf4d69e02bc52/migec-2.0.0a2.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:10.197816+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1038/nmeth.2960",
+          "file": "migec-2.0.0a2/docs/index.rst",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Towards error-free profiling of immune repertoires | Nature Methods",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1371/journal.pcbi.1005480",
+          "file": "migec-2.0.0a2/docs/index.rst",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MAGERI: Computational pipeline for molecular-barcoded targeted resequencing | PLOS Computational Biology",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1186/s12864-024-10737-w",
+          "file": "migec-2.0.0a2/docs/suggest.rst",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Benchmarking UMI-aware and standard variant callers for low frequency ctDNA variant detection | BMC Genomics | Springer Nature Link",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://marimo.io",
+          "file": "migec-2.0.0a2/docs/examples.rst",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "marimo | a next-generation Python notebook",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nf-co.re/airrflow",
+          "file": "migec-2.0.0a2/docs/examples.rst",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "airrflow: Introduction",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_1k_v3/pbmc_1k_v3_possorted_genome_bam.bam",
+          "file": "migec-2.0.0a2/docs/fragmented.rst",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1128/JVI.00522-15",
+          "file": "migec-2.0.0a2/docs/quality_floor.rst",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "owlstack",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e1/2d/a8415e171483e4c24d6541fc8f6781d19cf3033d3e907767dc286afc853e/owlstack-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:08.052245+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://owlstack.app",
+          "file": "owlstack-0.1.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OwlStack | Post Everywhere Your Audience Is",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.owlstack.app",
+          "file": "owlstack-0.1.0/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OwlStack Documentation - OwlStack Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.owlstack.app/api/v1",
+          "file": "owlstack-0.1.0/tests/test_client.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.owlstack.app/api/v1",
+          "file": "owlstack-0.1.0/src/owlstack/_http.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "roxylib",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/d0/65/4fbe065d46f691dd55898ce0a246d4eb000d82e3af447d273ca67da44f22/roxylib-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:06.546711+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.schemastore.org/prek.json",
+          "file": "roxylib-0.2.0/prek.toml",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "eager-auth",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/43/ba/8d452cc15bf4b6ec413ef5c167e99c8a2c1ad4a95f1db830c6bd8d1f5a84/eager_auth-2.0.0.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:06.268319+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "ftp://x/cb",
+          "file": "eager_auth-2.0.0/tests/test_flow.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://maxiaxi.whatsnext.cc",
+          "file": "eager_auth-2.0.0/tests/test_fastapi.py",
+          "line": 409,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://maxiaxi.whatsnext.cc",
+          "file": "eager_auth-2.0.0/tests/test_fastapi.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "usmart-mcp",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/c2/d5/0f56bb58d02ed0db030a016d62c9e265d0bbdd4b4c1a1ee59c8e52a51960/usmart_mcp-1.0.2.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:05.386849+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://open-jy.yxzq.com",
+          "file": "usmart_mcp-1.0.2/scripts/gen_login_curl.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://open-jy.yxzq.com",
+          "file": "usmart_mcp-1.0.2/scripts/gen_login_curl.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
     {
       "name": "anywidget-bloodhound",
       "version": "0.0.1",
@@ -18758,6 +19845,140 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "foamnordic",
+      "version": "1.0.0",
+      "analyzed_at": "2026-08-13T13:12:15.615365+00:00",
+      "binaries": [
+        {
+          "name": "svdToFoam.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/applications/utilities/svdToFoam/Make/linux64GccDPInt32-spack/svdToFoam.o",
+          "sha256": "f3e488eb9465564b2f5b132786c3505236fa34791652f1e5abf31a14992a854b",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "foamSmartSimSvd.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/applications/utilities/foamSmartSimSvd/Make/linux64GccDPInt32-spack/foamSmartSimSvd.o",
+          "sha256": "cd103ac19e2d2f398571600b87f3aad504615debbbff19e0ba8dbeebb8e222e6",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "foamSmartSimSvdDBAPI.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/applications/utilities/foamSmartSimSvdDBAPI/Make/linux64GccDPInt32-spack/foamSmartSimSvdDBAPI.o",
+          "sha256": "3e8c44ff0bbd68163d038bd227869ce74dfb92b13f11fb0eb4870d65bfc3f293",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "makeSmartSimLESModels.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/momentumTransportModels/Make/linux64GccDPInt32-spack/makeSmartSimLESModels.o",
+          "sha256": "9e1bb0729bfda28323b4bcd2a462b5b19308e0d0faf08ee11f0870337ebdf1f3",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "smartRedisClient.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/smartRedis/Make/linux64GccDPInt32-spack/smartRedisClient/smartRedisClient.o",
+          "sha256": "4431f7ff9b994ba82de8a97a186ca3baf2e1076520100abbc4485a921e3717e8",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "smartRedisAdapter.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/smartRedis/Make/linux64GccDPInt32-spack/smartRedisAdapter/smartRedisAdapter.o",
+          "sha256": "3aee88107b9a833c6cc3d44f43d8e1aab71958d2d20ad487625790d9d5ea267c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "featureFieldEvaluator.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/smartRedis/Make/linux64GccDPInt32-spack/feature/featureFieldEvaluator.o",
+          "sha256": "dc6a201836de93b80b66fc3857cd5457a035ddb68a64f89bacf7a0ed85e4af6d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "featureExpression.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/smartRedis/Make/linux64GccDPInt32-spack/feature/featureExpression.o",
+          "sha256": "15288f573e3d1e2753293f81309b1a2c2f2e19491424bc713c19d1d3c4a4a72a",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "smartSimFeaturePublisher.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/smartRedis/Make/linux64GccDPInt32-spack/feature/smartSimFeaturePublisher.o",
+          "sha256": "73d48ff3824539ce2f0625367db84daf65d171ce545a442cbd30fe01a2fde7fc",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fieldsFromSmartRedisFunctionObject.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/functionObjects/Make/linux64GccDPInt32-spack/fieldsFromSmartRedisFunctionObject/fieldsFromSmartRedisFunctionObject.o",
+          "sha256": "873e8feb54372426a4b140adfef7ba6702e9ff25e91d9c366970f455425b428e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "smartSimClosureLifecycle.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/functionObjects/Make/linux64GccDPInt32-spack/smartSimClosureLifecycle/smartSimClosureLifecycle.o",
+          "sha256": "1556ca9529c6c3ed0356abbf6c1158e3f858b37a9f7505e00055684ffdb3e5e6",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fieldsToSmartRedisFunctionObject.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/functionObjects/Make/linux64GccDPInt32-spack/fieldsToSmartRedisFunctionObject/fieldsToSmartRedisFunctionObject.o",
+          "sha256": "26606c3149fae6f42627ac19ed95979bc0957b6d1cd1ead787d0c4e9da143d31",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "displacementSmartSimMotionSolver.o",
+          "file": "foamnordic/_vendor/openfoam-smartsim/src/displacementSmartSimMotionSolver/Make/linux64GccDPInt32-spack/displacementSmartSimMotionSolver.o",
+          "sha256": "9ddc2d4b0c9dd3de524b1a1699acd31020e1cfc7f1de98fba33081f5284e41d1",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "chorms",
+      "version": "0.1.1",
+      "analyzed_at": "2026-08-13T13:12:28.560818+00:00",
+      "binaries": [
+        {
+          "name": "model_cpp.dll",
+          "file": "chorms-0.1.1/src/chorms/model_cpp.dll",
+          "sha256": "c4b77c2e69ac77b4c88df7f443a9a66ed488660518d2143ee881c56e1d9e37c9",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libnlopt-0.dll",
+          "file": "chorms-0.1.1/src/chorms/cppfuncs/nlopt-2.4.2-dll64/libnlopt-0.dll",
+          "sha256": "90a53fe847e23739a0958b23a04337ed303de5a65b6ee45ab72edbc90d9366e6",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -18894,6 +20115,58 @@
           "command": "subprocess.check_call(['cmake', '--build', '.', '--target', 'install'] + build_args, cwd=build_dir)",
           "resolved": false,
           "context": "CMakeBuild.build_extension",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "ovos-media-plugin-cli",
+      "version": "0.0.3a1",
+      "download_url": "https://files.pythonhosted.org/packages/71/db/f166fc764c254cbe088e1c347793486c709f3f6766a98412547cb8c18cf7/ovos_media_plugin_cli-0.0.3a1.tar.gz",
+      "analyzed_at": "2026-08-13T13:12:06.884365+00:00",
+      "install_hooks": [
+        {
+          "file": "ovos_media_plugin_cli-0.0.3a1/ovos_media_plugin_cli/__init__.py",
+          "line": 41,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen(play_wav_cmd)",
+          "resolved": false,
+          "context": "play_audio",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "foamnordic",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/38/1d/a1b06af5de9446694207586e34d123f49c983d536a65d26fc3e1229b55d1/foamnordic-1.0.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-13T13:12:15.615544+00:00",
+      "install_hooks": [
+        {
+          "file": "foamnordic/_vendor/smartredis/setup.py",
+          "line": 117,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call([self.cmake] + config_args, cwd=source_directory, env=env)",
+          "resolved": false,
+          "context": "CMakeBuild.run",
+          "source": "setup_py"
+        },
+        {
+          "file": "foamnordic/_vendor/smartredis/setup.py",
+          "line": 131,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call([self.cmake] + build_args, cwd=build_directory, env=env)",
+          "resolved": false,
+          "context": "CMakeBuild.run",
+          "source": "setup_py"
+        },
+        {
+          "file": "foamnordic/_vendor/smartredis/setup.py",
+          "line": 167,
+          "call": "subprocess.check_output",
+          "command": "subprocess.check_output([command, '--version'])",
+          "resolved": false,
+          "context": "check_prereq",
           "source": "setup_py"
         }
       ]
