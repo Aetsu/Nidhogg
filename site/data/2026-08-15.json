@@ -1,11 +1,1229 @@
 {
-  "generated_at": "2026-08-15T08:30:27.138586+00:00",
+  "generated_at": "2026-08-15T10:24:07.012010+00:00",
   "stats": {
-    "total_packages": 75,
+    "total_packages": 93,
     "malicious": 4,
-    "clean": 71
+    "clean": 89
   },
   "packages": [
+    {
+      "name": "pennylane-zksf",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/de/be/d2fb6c2a128e575a5a1964e4d5e6a3648b8d42cfe95a86024798eee33712/pennylane_zksf-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:24:03.768420+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://zksf.org",
+          "file": "pennylane_zksf-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ZKSF: Certified Quantum Simulation",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://zksf.org/docs",
+          "file": "pennylane_zksf-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SDK Documentation: run quantum circuits in 3 lines of Python | ZKSF",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.zksf.org",
+          "file": "pennylane_zksf-0.1.0/pennylane_zksf/_client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "comettextel",
+      "version": "1.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/a5/bf/afb9b2c42bdcad41e58905b3b304c9aaf871f3395b11c460d1bd742d6218/comettextel-1.3.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:24:02.207000+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://inwazy.com",
+          "file": "comettextel-1.3.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "llm-scanner",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/47/0c/418c95fec24e9b8dffefdf18180f60596cf8a05c1aa4c41ac99eecece880/llm_scanner-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:24:01.856339+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://console.groq.com",
+          "file": "llm_scanner-0.2.0/config_cmd.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com",
+          "file": "llm_scanner-0.2.0/detectors/llm_judge.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "llm_scanner-0.2.0/detectors/llm_judge.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.groq.com",
+          "file": "llm_scanner-0.2.0/detectors/llm_judge.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GroqCloud",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mediaruntime",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/47/01/cb83fcf58ab6f53e2b5b862dab47cf9eee5a6145fe01727e922686dc12b9/mediaruntime-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-15T10:24:01.230716+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://mediaruntime.com",
+          "file": "mediaruntime-0.1.1/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MediaRuntime \u2014 Async Media API for Video, Audio & Images",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mediaruntime.com/docs",
+          "file": "mediaruntime-0.1.1/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MediaRuntime \u2014 Async Media API for Video, Audio & Images",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mediaruntime.com/v1/jobs",
+          "file": "mediaruntime-0.1.1/tests/test_client.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mediaruntime.com",
+          "file": "mediaruntime-0.1.1/src/mediaruntime/client.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MediaRuntime \u2014 Async Media API for Video, Audio & Images",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "runner-dbt-aws-airflow",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/28/7be8d26565ed29b619d18544c0864bd4433485a9a78b394a1851be75ca58/runner_dbt_aws_airflow-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-15T10:24:00.572235+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://no-color.org",
+          "file": "dbt_aws/common/runtime.py",
+          "line": 487,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://no-color.org",
+          "file": "dbt_aws/common/runtime.py",
+          "line": 477,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://schemas.getdbt.com/dbt/manifest/v12.json",
+          "file": "dbt_aws/common/graph/manifest_loader.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fatcheck",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/70/fc/fbec701cc3e77bb7e77cf50beb2c349002c96d881009fe83fb9185380559/fatcheck-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:59.740599+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://docs.astro.build/en/guides/routing",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Routing | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build/en/guides/content-collections",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Content collections | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build/en/guides/routing",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 25,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Routing | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build/en/guides/content-collections",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 25,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Content collections | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build",
+          "file": "fatcheck-0.2.1/tests/test_v02.py",
+          "line": 25,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build/en/guides/routing",
+          "file": "fatcheck-0.2.1/tests/test_segment.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Routing | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astro.build/en/guides/routing",
+          "file": "fatcheck-0.2.1/tests/test_segment.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Routing | Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "fatcheck-0.2.1/src/fatcheck/sarif.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "needlepath-strands",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/66/33/f40f7c41351ead07d53fd6dbd2f1c0525319fdac28df8b05c9cbbe295732/needlepath_strands-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:58.528332+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://nextmoca.com",
+          "file": "needlepath_strands-0.1.0/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Needlepath | The Context Relevance Engine | Next Moca",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "dp-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/07/78/e9fca6bcfe805affd8215de075af20438aeec29b02aeccf81d8b82fd81dc/dp_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:57.909270+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.baidu.com",
+          "file": "dp_mcp-0.1.0/tests/demo_headed.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767e\u5ea6\u4e00\u4e0b\uff0c\u4f60\u5c31\u77e5\u9053",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "benchlab-pytools",
+      "version": "3.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/b4/85/1420d68c0461f553cda0701eae463a1f4687c137fcffa6739d949e3277cb/benchlab_pytools-3.0.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:55.419560+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://benchlab.io",
+          "file": "benchlab_pytools-3.0.0/pyproject.toml",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BENCHLAB | Real-Time System Telemetry for PC Enthusiasts",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "simjecture",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/62/f3/d921e85253853ac263e70e2c8e8b55a52b00c8813de42d8481916d30bc6e/simjecture-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:54.116089+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://openalex.org/W1",
+          "file": "simjecture-0.1.0/tests/test_literature.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1234/example",
+          "file": "simjecture-0.1.0/tests/test_literature.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1234/example",
+          "file": "simjecture-0.1.0/tests/test_literature.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1234/example",
+          "file": "simjecture-0.1.0/tests/test_literature.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1029/1999JA900449",
+          "file": "simjecture-0.1.0/demos/collisionless_gem_reconnection/guided/gem_collisionless.py",
+          "line": 690,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1017/S0022377817000666",
+          "file": "simjecture-0.1.0/demos/collisionless_gem_reconnection/guided/gem_collisionless.py",
+          "line": 695,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "A review of the 0.1 reconnection rate problem | Journal of Plasma Physics | Cambridge Core",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1029/1999JA900449",
+          "file": "simjecture-0.1.0/demos/collisionless_gem_reconnection/record/workspace/guided/gem_collisionless.py",
+          "line": 690,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1017/S0022377817000666",
+          "file": "simjecture-0.1.0/demos/collisionless_gem_reconnection/record/workspace/guided/gem_collisionless.py",
+          "line": 695,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "A review of the 0.1 reconnection rate problem | Journal of Plasma Physics | Cambridge Core",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cp.compshare.cn/v1",
+          "file": "simjecture-0.1.0/src/conjecture_solver/llm.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "simjecture-0.1.0/src/conjecture_solver/llm.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://doi.org",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doi.org",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 243,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 417,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 431,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://html.duckduckgo.com/html",
+          "file": "simjecture-0.1.0/src/conjecture_solver/literature.py",
+          "line": 456,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo HTML: Private Search Without JavaScript",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "xiepy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/68/ce/fd50f678b8273b8c65ae3de409ea591bf274cdb675ebcaa288b9e2cdfb4b/xiepy-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:50.605101+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://mirrors.aliyun.com/pypi/simple",
+          "file": "xiepy-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "predax",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/06/29/5adcf61c212a34d5f9ce5f74569ce1af602d7407ad9239b8565f2a2cc309/predax-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:34.455717+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://predax.io",
+          "file": "predax-1.0.0/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Predax \u2013 IP Reputation API for Abuse, Fraud & Risk Scoring",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io/docs/sdk-reference",
+          "file": "predax-1.0.0/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SDK Reference \u2014 Python & Node.js | Predax",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io/docs/api-reference",
+          "file": "predax-1.0.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Reference \u2014 IP Check Endpoints | Predax",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io/support",
+          "file": "predax-1.0.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io",
+          "file": "predax-1.0.0/tests/test_client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Predax \u2013 IP Reputation API for Abuse, Fraud & Risk Scoring",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io",
+          "file": "predax-1.0.0/tests/test_client.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Predax \u2013 IP Reputation API for Abuse, Fraud & Risk Scoring",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io",
+          "file": "predax-1.0.0/tests/test_client.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Predax \u2013 IP Reputation API for Abuse, Fraud & Risk Scoring",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://predax.io",
+          "file": "predax-1.0.0/predax/client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Predax \u2013 IP Reputation API for Abuse, Fraud & Risk Scoring",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "spawnio",
+      "version": "1.0.5",
+      "download_url": "https://files.pythonhosted.org/packages/69/44/85cb835f4d17f0678f6e0cce18ab157e68f2d30a42f5cf0854406f5f730c/spawnio-1.0.5.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:33.692845+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 245,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 153,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 236,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/chatbot/content.py",
+          "line": 270,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/agent/content.py",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "spawnio-1.0.5/src/spawn/templates/agent/content.py",
+          "line": 263,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "olakit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0d/49/63aadbf0d65fa7bb6647883816abfd6541aac27e2f7120e2f197c79ad10e/olakit-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:32.284156+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://purl.org/dc/terms",
+          "file": "olakit-0.1.0/src/olakit/turtle.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "tickerlab",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4d/bc/fcc8c92229f0f2c51d0d0ff570891d028140d1526479ce9eb8ad43cdf327/tickerlab-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:28.097730+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://tickerlab.org",
+          "file": "tickerlab-0.1.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting...",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://tickerlab.org/en/docs",
+          "file": "tickerlab-0.1.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quick Start - TickerLab",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gitea.stonyground.com/ndiy/tickerlab/issues",
+          "file": "tickerlab-0.1.0/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "secureai-sdk",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/89/a3/0dea78729fda773e45a6393df6741c4c6b332c2852e61283cee705ea4913/secureai_sdk-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:24.592188+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://secure.acadmyai.com",
+          "file": "secureai_sdk-1.0.1/pyproject.toml",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SecureAI \u2014 Enterprise AI Security, Governance & Agent Authorization | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://secure.acadmyai.com/docs",
+          "file": "secureai_sdk-1.0.1/pyproject.toml",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API & Python SDK Documentation \u2014 SecureAI | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://secure.acadmyai.com",
+          "file": "secureai_sdk-1.0.1/secureai/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SecureAI \u2014 Enterprise AI Security, Governance & Agent Authorization | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://secure.acadmyai.com",
+          "file": "secureai_sdk-1.0.1/secureai/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SecureAI \u2014 Enterprise AI Security, Governance & Agent Authorization | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://secure.acadmyai.com",
+          "file": "secureai_sdk-1.0.1/secureai/cli.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SecureAI \u2014 Enterprise AI Security, Governance & Agent Authorization | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://secure.acadmyai.com/v1",
+          "file": "secureai_sdk-1.0.1/secureai/client.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SecureAI \u2014 Enterprise AI Security, Governance & Agent Authorization | Powered by AcadmyAI",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vsor",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/10/f0/17bf4a7b483a60cb00508c309b87197147c174b17215373c661c742e86eb/vsor-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:24.026798+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "vsor-0.1.2/tests/test_build_dev.py",
+          "line": 381,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sitemaps.org/schemas/sitemap/0.9",
+          "file": "vsor-0.1.2/tests/test_build_dev.py",
+          "line": 380,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "www.sitemaps.org - /schemas/sitemap/0.9/",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "storyloom-engine",
+      "version": "2.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/47/57/724fa76982223f5f42b3e69fe6d0ea413d4b4de415aad134f9e9ab92859c/storyloom_engine-2.3.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:23.053376+00:00",
+      "total_findings": 23,
+      "findings": [
+        {
+          "url": "https://api.apiyi.com/v1",
+          "file": "storyloom_engine-2.3.0/tests/test_img_api_client.py",
+          "line": 223,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "storyloom_engine-2.3.0/tests/test_user_config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "storyloom_engine-2.3.0/tests/test_user_config.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "storyloom_engine-2.3.0/tests/test_user_config.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "storyloom_engine-2.3.0/src/storyloom/user_config.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.apiyi.com/v1",
+          "file": "storyloom_engine-2.3.0/src/storyloom/config.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Thinking Mode | DeepSeek API Docs",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extended thinking - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://discuss.google.dev/t/how-can-i-set-0-thinkingbudget/189244",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How can I set 0 \"thinkingBudget\" with Vertex AI Gemini 2.5Flash\uff1f I wanna disable it - Custom ML & MLOps - Google Developer forums",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.alibabacloud.com/help/en/model-studio/deep-thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Use deep thinking models via API | Model Studio - Alibaba Cloud Model Studio - Alibaba Cloud Documentation Center",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.bigmodel.cn/cn/guide/capabilities/thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u6df1\u5ea6\u601d\u8003 - \u667a\u8c31AI\u5f00\u653e\u6587\u6863",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://platform.kimi.ai/docs/api/models-overview",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Model Parameter Reference - Kimi API Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://writingmate.ai/models/x-ai/grok-4.20",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Grok 4.20 2026: Pricing, Benchmarks & Context",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://help.now.cn/aimodel/interface/20260320174138",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Doubao\u8c46\u5305\u6a21\u578b\u601d\u8003\u529f\u80fd\u53c2\u6570\u8bf4\u660e",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/image-generation",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Thinking Mode | DeepSeek API Docs",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/build-with-claude/extended-thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extended thinking - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://discuss.google.dev/t/how-can-i-set-0-thinkingbudget/189244",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How can I set 0 \"thinkingBudget\" with Vertex AI Gemini 2.5Flash\uff1f I wanna disable it - Custom ML & MLOps - Google Developer forums",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.alibabacloud.com/help/en/model-studio/deep-thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Use deep thinking models via API | Model Studio - Alibaba Cloud Model Studio - Alibaba Cloud Documentation Center",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.bigmodel.cn/cn/guide/capabilities/thinking",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u6df1\u5ea6\u601d\u8003 - \u667a\u8c31AI\u5f00\u653e\u6587\u6863",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://platform.kimi.ai/docs/api/models-overview",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Model Parameter Reference - Kimi API Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://writingmate.ai/models/x-ai/grok-4.20",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Grok 4.20 2026: Pricing, Benchmarks & Context",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://help.now.cn/aimodel/interface/20260320174138",
+          "file": "storyloom_engine-2.3.0/src/storyloom/io/thinking.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Doubao\u8c46\u5305\u6a21\u578b\u601d\u8003\u529f\u80fd\u53c2\u6570\u8bf4\u660e",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
     {
       "name": "breki",
       "version": "0.1.0",
@@ -14052,6 +15270,36 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "steam-mongodb-client",
+      "version": "0.1.0",
+      "analyzed_at": "2026-08-15T10:23:58.748706+00:00",
+      "binaries": [
+        {
+          "name": "_core.cp311-win_amd64.pyd",
+          "file": "steam_mongodb/_core.cp311-win_amd64.pyd",
+          "sha256": "239fd6a6205496311f6b2fa4272a72ee74f46bb773cbc13d18f223bbc970cda4",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "jax-qnn",
+      "version": "0.1.0",
+      "analyzed_at": "2026-08-15T10:24:01.919661+00:00",
+      "binaries": [
+        {
+          "name": "pjrt_qnn.dll",
+          "file": "jax_qnn-0.1.0/jax_plugins/qnn/pjrt_qnn.dll",
+          "sha256": "cb33de18a82e522deb7be99c718446d53cb8013559ca9a509bb80fb143aff6a1",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -14243,6 +15491,23 @@
           "resolved": false,
           "context": "start",
           "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "storyloom-engine",
+      "version": "2.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/47/57/724fa76982223f5f42b3e69fe6d0ea413d4b4de415aad134f9e9ab92859c/storyloom_engine-2.3.0.tar.gz",
+      "analyzed_at": "2026-08-15T10:23:23.053842+00:00",
+      "install_hooks": [
+        {
+          "file": "storyloom_engine-2.3.0/setup.py",
+          "line": 87,
+          "call": "urllib.request.urlretrieve",
+          "command": "urllib.request.urlretrieve(url, target)",
+          "resolved": false,
+          "context": "_download_model",
+          "source": "setup_py"
         }
       ]
     }
