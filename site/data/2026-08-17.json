@@ -1,11 +1,2209 @@
 {
-  "generated_at": "2026-08-17T10:33:23.440433+00:00",
+  "generated_at": "2026-08-17T12:44:58.939735+00:00",
   "stats": {
-    "total_packages": 96,
-    "malicious": 12,
-    "clean": 84
+    "total_packages": 119,
+    "malicious": 14,
+    "clean": 105
   },
   "packages": [
+    {
+      "name": "halalquant",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7f/5b/0fa1abcec4b061e4249c73d7c2033fb2c8c38eccdefb325c4a3ad93b6bd4/halalquant-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:55.669585+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://financialmodelingprep.com/stable",
+          "file": "halalquant-0.1.0/halalquant/providers/_fmp.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "file": "halalquant-0.1.0/halalquant/providers/_sec_edgar.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK",
+          "file": "halalquant-0.1.0/halalquant/providers/_sec_edgar.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.sec.gov",
+          "file": "halalquant-0.1.0/halalquant/providers/_sec_edgar.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "data.sec.gov",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "horizon-zcs",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/36/7a/f799d317c6b9635ebdc2e86727c879dc6f8616abcce3c096556191245abb/horizon_zcs-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:55.042731+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://www.zerocarbonshipping.com",
+          "file": "horizon_zcs-1.0.0/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Decarbonizing the global maritime industry | M\u00e6rsk Mc-Kinney M\u00f8ller Center for Zero Carbon Shipping",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cdn.plot.ly/plotly-2.27.0.min.js",
+          "file": "horizon_zcs-1.0.0/horizon/calibration/analyze.py",
+          "line": 1165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cdn.plot.ly/plotly-2.27.0.min.js",
+          "file": "horizon_zcs-1.0.0/horizon/calibration/analyze.py",
+          "line": 1159,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "datus-gaussdb",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/25/b6/43a9c4f7fb73a87245cc8349ca4071828e52649845e2dfd64a6799ea869e/datus_gaussdb-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:54.663012+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://repo.openeuler.org/openEuler-22.03-LTS-SP4/update/x86_64/Packages",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://repo.openeuler.org/openEuler-22.03-LTS-SP4/update/aarch64/Packages",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://gitee.com/opengauss/openGauss-server",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "openGauss-server: openGauss kernel ~ openGauss is an open source relational database management system.",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://repo.openeuler.org/openEuler-22.03-LTS-SP4/update/x86_64/Packages/openssl-libs-1.1.1wa-17.oe2203sp4.x86_64.rpm",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 41,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://repo.openeuler.org/openEuler-22.03-LTS-SP4/update/aarch64/Packages/openssl-libs-1.1.1wa-17.oe2203sp4.aarch64.rpm",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 48,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://gitee.com/opengauss/openGauss-server",
+          "file": "datus_gaussdb-0.1.0/scripts/fetch_vendor_libpq.py",
+          "line": 55,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "openGauss-server: openGauss kernel ~ openGauss is an open source relational database management system.",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/opengauss/openGauss-server",
+          "file": "datus_gaussdb-0.1.0/datus_gaussdb/_vendor/x86_64/MulanPSL-2.0.txt",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "openGauss-server: openGauss kernel ~ openGauss is an open source relational database management system.",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/opengauss/openGauss-server",
+          "file": "datus_gaussdb-0.1.0/datus_gaussdb/_vendor/aarch64/MulanPSL-2.0.txt",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "openGauss-server: openGauss kernel ~ openGauss is an open source relational database management system.",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "eidetic-memory",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/3d/d2/58c6807abf82fcef7ff8403ba0c847f8bf3ec63026e5e753517416f73857/eidetic_memory-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:43.816260+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://modelscope.cn/models/gpustack/bge-m3-GGUF/resolve/master/bge-m3-Q8_0.gguf",
+          "file": "eidetic_memory-0.1.1/memory_server/installer.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.deepseek.com/chat/completions",
+          "file": "eidetic_memory-0.1.1/memory_server/pipeline.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/chat/completions",
+          "file": "eidetic_memory-0.1.1/memory_server/extract.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "libnvme3",
+      "version": "3.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/0c/c5/e2578499ffeb83a459bfc489b311a06184cb0a0b42a2172fb817374326d4/libnvme3-3.0rc1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:40.775817+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc4122",
+          "file": "libnvme3-3.0rc1/libnvme/doc/rst/util.rst",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 4122: A Universally Unique IDentifier (UUID) URN Namespace | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "growmos",
+      "version": "0.1.3",
+      "download_url": "https://files.pythonhosted.org/packages/29/94/a7cf3cbf3097efe7c2d579f39f1956ba715a12f6f06d3afd778d65211b37/growmos-0.1.3.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:39.385225+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://codician.com",
+          "file": "growmos-0.1.3/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Codician | Agile Software Development",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://codician.com",
+          "file": "growmos-0.1.3/src/growmos/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Codician | Agile Software Development",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://codician.com",
+          "file": "growmos-0.1.3/src/growmos/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Codician | Agile Software Development",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "growmos-0.1.3/src/growmos/providers.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "growmos-0.1.3/src/growmos/providers.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "bramble-graphql",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f2/ae/048f4cb550baed504764569fc020b060f4274a93c9afaab9dd42fc22a656/bramble_graphql-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:39.096542+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://specs.apollo.dev/federation/v",
+          "file": "bramble_graphql-0.1.0/bramble/federation/schema.py",
+          "line": 238,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specs.apollo.dev/federation/v2.6",
+          "file": "bramble_graphql-0.1.0/bramble/federation/directives.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apollo Federation Subgraph Specification - Apollo GraphQL Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specs.apollo.dev/federation/v2.6",
+          "file": "bramble_graphql-0.1.0/bramble/federation/directives.py",
+          "line": 20,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Apollo Federation Subgraph Specification - Apollo GraphQL Docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "parakeet-index-llms-litellm",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/82/00/21eb33a2cffff6869232b110e17f807fc8151ddf1d12e08ed3120d3073d5/parakeet_index_llms_litellm-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:38.078354+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://docs.litellm.ai",
+          "file": "parakeet_index_llms_litellm-0.1.0/parakeet_index/llms/litellm/base.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM - Getting Started | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.litellm.ai",
+          "file": "parakeet_index_llms_litellm-0.1.0/parakeet_index/llms/litellm/base.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiteLLM - Getting Started | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "llm-markdown-sanitizer",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/93/f1/a0afdb4d2a5180556f904061e984fa9f0755c42d4da8bb6451e7d3ec32aa/llm_markdown_sanitizer-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:37.927997+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://spec.commonmark.org/0.31.2",
+          "file": "llm_markdown_sanitizer-0.1.1/src/llm_markdown_sanitizer/_lists.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CommonMark Spec",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://spec.commonmark.org/0.31.2",
+          "file": "llm_markdown_sanitizer-0.1.1/src/llm_markdown_sanitizer/_lists.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CommonMark Spec",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "gatecore",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/04/8d/a53be31b6ef7a7ed8e763c12d4184cb657798f965b95c74fca0fc8ed901e/gatecore-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:37.644460+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://gatecoreai.com",
+          "file": "gatecore-0.0.1/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GateCore | Governed commerce for the agent economy",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gatecoreai.com",
+          "file": "gatecore-0.0.1/gatecore/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GateCore | Governed commerce for the agent economy",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://gatecoreai.com",
+          "file": "gatecore-0.0.1/gatecore/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GateCore | Governed commerce for the agent economy",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "triple-converter",
+      "version": "0.2.35",
+      "download_url": "https://files.pythonhosted.org/packages/0c/40/6965e9013e7dbfff918ec54b98debf868fc1dd0db3b9c681c15a10ad417d/triple_converter-0.2.35.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:37.495469+00:00",
+      "total_findings": 20,
+      "findings": [
+        {
+          "url": "https://ceur-ws.org/Vol-3743/paper2.pdf",
+          "file": "triple_converter-0.2.35/triple_converter/utils/sc_geo_converter.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ceur-ws.org/Vol-3743/paper2.pdf",
+          "file": "triple_converter-0.2.35/triple_converter/utils/sc_geo_converter.py",
+          "line": 93,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cube.link",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 146,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 226,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 267,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 267,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cube.link",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 136,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://schema.org",
+          "file": "triple_converter-0.2.35/triple_converter/utils/conversion_helper.py",
+          "line": 215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ld.schleswig-holstein.de",
+          "file": "triple_converter-0.2.35/triple_converter/utils/configuration.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "D-Trust GmbH"
+        },
+        {
+          "url": "https://cube.link",
+          "file": "triple_converter-0.2.35/triple_converter/utils/namespaces.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cube.link/meta",
+          "file": "triple_converter-0.2.35/triple_converter/utils/namespaces.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://qudt.org/schema/qudt",
+          "file": "triple_converter-0.2.35/triple_converter/utils/namespaces.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://qudt.org/vocab/unit",
+          "file": "triple_converter-0.2.35/triple_converter/utils/namespaces.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations",
+          "file": "triple_converter-0.2.35/triple_converter/utils/namespaces.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://cube.link",
+          "file": "triple_converter-0.2.35/triple_converter/model/triple_output_format.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cube.link",
+          "file": "triple_converter-0.2.35/triple_converter/model/triple_output_format.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Cube Schema",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qace",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/cb/71/86a6246cd1a11c17f19a997c2fb4739db78f1c0359f0156f2d8233adaf60/qace-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:35.623078+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "http://www.antlr.org",
+          "file": "qace-1.0.0/third_party_licenses/antlr4-python3-runtime-4.13.2.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ANTLR",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cwi.nl",
+          "file": "qace-1.0.0/third_party_licenses/distlib-0.4.3.LICENSE.txt",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cnri.reston.va.us",
+          "file": "qace-1.0.0/third_party_licenses/distlib-0.4.3.LICENSE.txt",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Corporation for National Research Initiatives (CNRI)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.pythonlabs.com/logos.html",
+          "file": "qace-1.0.0/third_party_licenses/distlib-0.4.3.LICENSE.txt",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hdl.handle.net/1895.22/1013",
+          "file": "qace-1.0.0/third_party_licenses/distlib-0.4.3.LICENSE.txt",
+          "line": 223,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License for PYTHON 1.6.1",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pygments.org",
+          "file": "qace-1.0.0/third_party_licenses/Pygments-2.20.0.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome! \u2014 Pygments",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.openstack.org/stevedore",
+          "file": "qace-1.0.0/third_party_licenses/stevedore-5.9.0.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pyyaml.org",
+          "file": "qace-1.0.0/third_party_licenses/PyYAML-6.0.3.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.travismclarke.com",
+          "file": "qace-1.0.0/third_party_licenses/mergedeep-1.3.4.LICENSE.txt",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "travismclarke.com",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "http://www.dwerg.net",
+          "file": "qace-1.0.0/third_party_licenses/pymdown-extensions-11.0.1.LICENSE.txt",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "L\u2019App\u00e8l du vide",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.freewisdom.org",
+          "file": "qace-1.0.0/third_party_licenses/pymdown-extensions-11.0.1.LICENSE.txt",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Free Wisdom Online: photos/2014",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.crummy.com/software/BeautifulSoup/bs4",
+          "file": "qace-1.0.0/third_party_licenses/beautifulsoup4-4.15.0.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Beautiful Soup: We called him Tortoise because he taught us.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.cwi.nl",
+          "file": "qace-1.0.0/third_party_licenses/typing_extensions-4.16.0.LICENSE.txt",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://www.cnri.reston.va.us",
+          "file": "qace-1.0.0/third_party_licenses/typing_extensions-4.16.0.LICENSE.txt",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Corporation for National Research Initiatives (CNRI)",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.pythonlabs.com/logos.html",
+          "file": "qace-1.0.0/third_party_licenses/typing_extensions-4.16.0.LICENSE.txt",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hdl.handle.net/1895.22/1013",
+          "file": "qace-1.0.0/third_party_licenses/typing_extensions-4.16.0.LICENSE.txt",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License for PYTHON 1.6.1",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://beautifier.io",
+          "file": "qace-1.0.0/third_party_licenses/jsbeautifier-2.0.3.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Online JavaScript beautifier",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://editorconfig.org",
+          "file": "qace-1.0.0/third_party_licenses/EditorConfig-0.17.1.LICENSE.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EditorConfig",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "acuity-framework",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/f0/42371029c57a6596fac21ddbd96b906695104c68316f56180f12134cfc80/acuity_framework-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:24.977894+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://fb.com",
+          "file": "acuity_framework-1.0.0/tests/test_extraction.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fb.com",
+          "file": "acuity_framework-1.0.0/tests/test_extraction.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "sceneify",
+      "version": "0.0.5",
+      "download_url": "https://files.pythonhosted.org/packages/7c/0d/2140d28670c79cef9bf97d596bcfd72ee51a122ba55d67e197772247499f/sceneify-0.0.5.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:23.554612+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://api.polyhaven.com/assets",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/assets",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/info/marble_bust_01",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/files/marble_bust_01",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/files/marble_bust_01",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/files/safe_model",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 239,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/files/kloppenheim_06",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 277,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/info/kloppenheim_06",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 310,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/files/kloppenheim_06",
+          "file": "sceneify-0.0.5/tests/test_remote_assets.py",
+          "line": 317,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "sceneify-0.0.5/src/sceneify/agent_tools.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://threejs.org/examples/models/ply/ascii/dolphins.ply",
+          "file": "sceneify-0.0.5/src/sceneify/demo_assets.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.polyhaven.com",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://polyhaven.com/a",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://polyhaven.com/a",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 237,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://polyhaven.com/a",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 405,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://polyhaven.com/a",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 481,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.polyhaven.com/assets",
+          "file": "sceneify-0.0.5/src/sceneify/remote_assets.py",
+          "line": 302,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "rewardharness",
+      "version": "0.2.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/ee/be/30d093918ef574980e80038cbb91d64ea40f3501172429c401244b1fddc4/rewardharness-0.2.0rc1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:21.729490+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://rewardharness.com",
+          "file": "rewardharness-0.2.0rc1/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RewardHarness: Learning Human Preferences for Image Editing with Only 100 Demonstrations",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://arxiv.org/abs/2605.08703",
+          "file": "rewardharness-0.2.0rc1/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2605.08703] RewardHarness: Self-Evolving Agentic Post-Training",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "fherma",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d8/e9/03c1b2399ca35ccc960302faa3bc3c1e2e4338c63f7c9b8ac458015fd9ff/fherma-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:21.288211+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://fherma.io",
+          "file": "fherma-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FHERMA | Fully Homomorphic Encryption (FHE) Challenges Platform",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nowledge-mem-langgraph",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0b/40/fbb3eb68be6ca6c4c4e6ca25c2cbe68898d2b219458d28dcba8daf4ba822/nowledge_mem_langgraph-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:13.015175+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://mem.nowledge.co/docs/integrations/langgraph",
+          "file": "nowledge_mem_langgraph-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LangGraph x Nowledge Mem | Nowledge Mem",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "flashsms",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/46/4659679c5ce4e578df7ed892b1390cf380c66ea3708dd6fb59c1ffcf24dc/flashsms-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:12.381751+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://flashsms.africa",
+          "file": "flashsms-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FlashSMS Africa \u2014 Bulk SMS & SMS API for Ghanaian Businesses and Developers",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://flashsms.africa/docs?section=sdks-python",
+          "file": "flashsms-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Documentation | FlashSMS Africa | FlashSMS Africa",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://flashsms.africa",
+          "file": "flashsms-0.1.0/flashsms/client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FlashSMS Africa \u2014 Bulk SMS & SMS API for Ghanaian Businesses and Developers",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fherma-lang",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/bd/82/19c5fe848cfd29f2997eedc37a79264ddca738c3376e7dd10ab2f7563833/fherma_lang-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:10.282071+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://fherma.io",
+          "file": "fherma_lang-0.1.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FHERMA | Fully Homomorphic Encryption (FHE) Challenges Platform",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "agentfactory-studio",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/12/47/ad8df93646129a316edcf9d52ddd40cd3591b7a011fce9fa6fcc955cf5ab/agentfactory_studio-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:09.067204+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "agentfactory_studio-1.1.0/agentfactory/config.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "agentfactory_studio-1.1.0/agentfactory/cli.py",
+          "line": 349,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token",
+          "file": "agentfactory_studio-1.1.0/agentfactory/cli.py",
+          "line": 359,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "agentfactory_studio-1.1.0/agentfactory/cli.py",
+          "line": 327,
+          "layer": "ast",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token",
+          "file": "agentfactory_studio-1.1.0/agentfactory/cli.py",
+          "line": 327,
+          "layer": "ast",
+          "method": "via_fstring",
+          "domain_threat": "exfiltration",
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/webhooks",
+          "file": "agentfactory_studio-1.1.0/agentfactory/app/notify.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/webhooks",
+          "file": "agentfactory_studio-1.1.0/agentfactory/app/notify.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "module-revolucy-seo",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/f0/d5/1d6422f58c7715421ba2ecb0ffe5410048932d1504372662ccad04d34b25/module_revolucy_seo-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:08.023548+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://revolucy.fr",
+          "file": "module_revolucy_seo-0.1.2/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CRM, ERP et sites web sur mesure \u00e0 Lyon | Revolucy",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "module_revolucy_seo-0.1.2/revolucy_seo/templatetags/seo_tags.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mwdb-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b7/c7/cb483fabc40cbdb943b9ec29d9030567318f5f521197d39cff2dc5e05328/mwdb_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:06.867739+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://mwdb.cert.pl",
+          "file": "mwdb_cli-0.1.0/src/mwdb_cli/config.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CERT.PL>_ Malware Database",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0",
+          "file": "mwdb_cli-0.1.0/src/mwdb_cli/sarif.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /sarif/sarif/v2.1.0/",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "mwdb_cli-0.1.0/src/mwdb_cli/sarif.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.oasis-open.org/sarif/sarif/v2.1.0",
+          "file": "mwdb_cli-0.1.0/src/mwdb_cli/sarif.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /sarif/sarif/v2.1.0/",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mwdb.cert.pl",
+          "file": "mwdb_cli-0.1.0/src/mwdb_cli/cli/__init__.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CERT.PL>_ Malware Database",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "ytui-media",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/0a/9a/cf1ca2dad3d6c129cc46c029b9a26e9e0f3f768cdbd93b03a3698ded0d22/ytui_media-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:05.678450+00:00",
+      "total_findings": 68,
+      "findings": [
+        {
+          "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",
+          "file": "ytui_media-0.1.1/ffmpeg_utils.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evermeet.cx/ffmpeg/getrelease/zip",
+          "file": "ytui_media-0.1.1/ffmpeg_utils.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "ytui_media-0.1.1/ytdlp_engine.py",
+          "line": 272,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "ytui_media-0.1.1/ytdlp_engine.py",
+          "line": 509,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sponsor.ajay.app",
+          "file": "ytui_media-0.1.1/ytdlp_engine.py",
+          "line": 1037,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=xyz",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=1",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=2",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=q1",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=a1",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=p1",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=1",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=test",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=atom",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=clog",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=throttle",
+          "file": "ytui_media-0.1.1/tests/test_manager.py",
+          "line": 290,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=mock_video",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=hist1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 256,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=python1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 298,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=rust2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 308,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=mock_presets",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 350,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 521,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 522,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/3",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 523,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PL_TEST",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 539,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 627,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 628,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/3",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 629,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/4",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 630,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PL_TEST_SEQ",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 634,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 666,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 668,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/3",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 670,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/4",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 672,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=edit_me",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 685,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=edit_me",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 698,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=upper",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 768,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=lower",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 780,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 840,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 841,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=mem1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 886,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_tui.py",
+          "line": 916,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://youtu.be/dQw4w9WgXcQ",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.youtube.com/shorts/dQw4w9WgXcQ",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/shorts/3xyz987",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 217,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://youtu.be/shorts/abc-123_45",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 218,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/dQw4w9WgXcQ",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123456",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 223,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "London Tornado - The aftermath",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=1",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 226,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=1",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/1",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=1",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 228,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/1",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 303,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/2",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 304,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/3",
+          "file": "ytui_media-0.1.1/tests/test_engine.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=12345",
+          "file": "ytui_media-0.1.1/tests/test_rtl.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=ar1",
+          "file": "ytui_media-0.1.1/tests/test_rtl.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=ar2",
+          "file": "ytui_media-0.1.1/tests/test_rtl.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=ar1",
+          "file": "ytui_media-0.1.1/tests/test_rtl.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=ar1",
+          "file": "ytui_media-0.1.1/tests/test_rtl.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=12345",
+          "file": "ytui_media-0.1.1/tests/test_history.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=lofi123",
+          "file": "ytui_media-0.1.1/tests/test_history.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=taylor123",
+          "file": "ytui_media-0.1.1/tests/test_history.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "papersearch-nwu",
       "version": "0.1.0",
@@ -21463,6 +23661,23 @@
           "command": "subprocess.run(['/bin/sh', '-c', rewritten], cwd=str(exec_root), capture_output=True, text=True, timeout=30)",
           "resolved": false,
           "context": "start_fake_daytona._Handler.do_POST",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "prismpath",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/51/f7/d90aa603f41634f7356a5c66e985db97287af9a419fc4573f132c1f8d525/prismpath-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-17T12:44:56.248989+00:00",
+      "install_hooks": [
+        {
+          "file": "prismpath-0.1.0/prismpath/plugins/pysprint/__init__.py",
+          "line": 82,
+          "call": "subprocess.run",
+          "command": "subprocess.run([sys.executable, '-m', 'pytest', '-q', '--no-header', '-p', 'no:cacheprovider', *tests], cwd=proj, env=env, capture_output=True, text=True, timeout=_PYTEST_TIMEOUT)",
+          "resolved": false,
+          "context": "validate",
           "source": "package_init"
         }
       ]
