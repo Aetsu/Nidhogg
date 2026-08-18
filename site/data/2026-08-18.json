@@ -1,11 +1,1457 @@
 {
-  "generated_at": "2026-08-18T02:57:11.920205+00:00",
+  "generated_at": "2026-08-18T04:36:53.862399+00:00",
   "stats": {
-    "total_packages": 43,
+    "total_packages": 57,
     "malicious": 3,
-    "clean": 40
+    "clean": 54
   },
   "packages": [
+    {
+      "name": "omnigauge",
+      "version": "1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c3/b7/db4b957c520e57752e6adfe2946848374199c64b690273f8e1294af19bef/omnigauge-1.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:51.753465+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://omnigauge.dev",
+          "file": "omnigauge-1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OmniGauge \u2014 every AI plan and API account you pay for, on one screen",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/auth/key",
+          "file": "omnigauge-1.0/providers/openrouter.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/user/balance",
+          "file": "omnigauge-1.0/providers/deepseek.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.ai",
+          "file": "omnigauge-1.0/providers/moonshot.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://omnigauge.dev",
+          "file": "omnigauge-1.0/tests/test_announce.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OmniGauge \u2014 every AI plan and API account you pay for, on one screen",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "parqdb",
+      "version": "0.2.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/65/ed/01b40010dc72f15e63ba639f4161763164c88913f0d5d07a09f611c25afd/parqdb-0.2.0rc1-cp310-abi3-macosx_11_0_arm64.whl",
+      "analyzed_at": "2026-08-18T04:36:51.038427+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://docs.rs/datafusion-sql/latest/datafusion_sql/unparser/index.html",
+          "file": "parqdb/datafusion/unparser.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "datafusion_sql::unparser - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion-sql/latest/datafusion_sql/unparser/index.html",
+          "file": "parqdb/datafusion/unparser.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "datafusion_sql::unparser - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://graphviz.org",
+          "file": "parqdb/datafusion/plan.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Graphviz",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://graphviz.org",
+          "file": "parqdb/datafusion/plan.py",
+          "line": 83,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Graphviz",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://substrait.io",
+          "file": "parqdb/datafusion/substrait.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - Substrait: Cross-Language Serialization for Relational Algebra",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://substrait.io",
+          "file": "parqdb/datafusion/substrait.py",
+          "line": 18,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - Substrait: Cross-Language Serialization for Relational Algebra",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.TableProviderFactory.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 249,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TableProviderFactory in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.CatalogProviderList.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 283,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CatalogProviderList in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.CatalogProvider.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CatalogProvider in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.SchemaProvider.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 377,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SchemaProvider in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.TableProviderFactory.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 247,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TableProviderFactory in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.CatalogProviderList.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 281,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CatalogProviderList in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.CatalogProvider.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 324,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CatalogProvider in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/datafusion/latest/datafusion/catalog/trait.SchemaProvider.html",
+          "file": "parqdb/datafusion/catalog.py",
+          "line": 375,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SchemaProvider in datafusion::catalog - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/regex/latest/regex",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 1831,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "regex - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/regex/latest/regex",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 1834,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "regex - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2374,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2415,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2452,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2478,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://arxiv.org/abs/1902.04023",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 5009,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1902.04023] Computing Extremely Accurate Quantiles Using t-Digests",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://docs.rs/regex/latest/regex",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 1828,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "regex - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2370,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2406,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2445,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/chrono/latest/chrono/format/strftime/index.html",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 2474,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "chrono::format::strftime - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://arxiv.org/abs/1902.04023",
+          "file": "parqdb/datafusion/functions/__init__.py",
+          "line": 5001,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1902.04023] Computing Extremely Accurate Quantiles Using t-Digests",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "voiceprint",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e5/24/8f720344b2f9338355d8c833e6c999489f5a821fd1cacdb243c7e491db87/voiceprint-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:48.669955+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://text.api.pangramlabs.com",
+          "file": "voiceprint-0.1.0/voiceprint/scorers.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "PHENOMS",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/15/93/5cfbbe43fe7639bda86d0db012ede0cfc80a781228747d52358269970ac6/phenoms-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:47.161014+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://rustup.rs",
+          "file": "phenoms-0.2.0/docs/installation.rst",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "rustup.rs - The Rust toolchain installer",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.maturin.rs",
+          "file": "phenoms-0.2.0/docs/installation.rst",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction - Maturin User Guide",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "citations",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2a/14/dfb2432636cee335aaefb36402e1f8c55d75799e6b37f566be0e8b024b40/citations-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:45.917030+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://export.arxiv.org/api/query",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://api.openalex.org/works",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 182,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 289,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://arxiv.org/abs",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 290,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://openalex.org",
+          "file": "citations-0.1.0/src/citations/resolve.py",
+          "line": 291,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "prereg",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/98/28/e1202f142ebe6369643bb1eeedd08c628eeb3fc5866f1ba9aeddd59ee5c2/prereg-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:44.264879+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://osf.io/prereg",
+          "file": "prereg-0.1.0/src/prereg/template.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OSF",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://osf.io/prereg",
+          "file": "prereg-0.1.0/src/prereg/template.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OSF",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "scib-validity",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/e5/04/c3fffeb2ba4979e79afcc93121e72ac5f60fa06790ebf18db2196673721d/scib_validity-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:42.604449+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5281/zenodo.21351298",
+          "file": "scib_validity-0.3.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Construct Validity Failure in Single-Cell Embedding Evaluation: Null Saturation Bounds and Source Classifier Confidence | Zenodo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_count_matrix.mtx.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_scp_log.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_count_matrix.mtx.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc_log.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_cell.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc_log.txt",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_gene.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc_log.txt",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ndownloader.figshare.com/files/46763269",
+          "file": "scib_validity-0.3.0/results/external_validation/run_log.txt",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_count_matrix.mtx.gz",
+          "file": "scib_validity-0.3.0/results/external_validation/run_log.txt",
+          "line": 223,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_cell.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation/run_log.txt",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_gene.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation/run_log.txt",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_count_matrix.mtx.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc/run_log.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_cell.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc/run_log.txt",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE132nnn/GSE132044/suppl/GSE132044_pbmc_hg38_gene.tsv.gz",
+          "file": "scib_validity-0.3.0/results/external_validation_pbmc/run_log.txt",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "yt-collate",
+      "version": "0.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/d3/df/93dda2696931ca53bd5ddb33894acf6b815ddda6faa263b3440278bc9398/yt_collate-0.0.2.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:39.687969+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://music.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=abc123",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=xyz",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 192,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=2",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 226,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 246,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 257,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 267,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 280,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 290,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_player.py",
+          "line": 302,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://music.youtube.com/watch?v=abc",
+          "file": "yt_collate-0.0.2/tests/test_music.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=1",
+          "file": "yt_collate-0.0.2/tests/test_state.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "yt_collate-0.0.2/tests/test_utils.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://music.youtube.com/watch?v=",
+          "file": "yt_collate-0.0.2/tests/test_utils.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be",
+          "file": "yt_collate-0.0.2/tests/test_utils.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts",
+          "file": "yt_collate-0.0.2/tests/test_utils.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PLmix",
+          "file": "yt_collate-0.0.2/tests/test_utils.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://music.youtube.com/watch?v=",
+          "file": "yt_collate-0.0.2/src/models/track.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "allnewsapi",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/91/f8/127e611198a449d8b6757815e0d7e1859a1af22d8dfc82b6fbc011822509/allnewsapi-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:38.103553+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.allnewsapi.com/v1/search",
+          "file": "allnewsapi-0.1.2/tests/test_client.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.allnewsapi.com/v1/search",
+          "file": "allnewsapi-0.1.2/tests/test_client.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.allnewsapi.com/v1/search",
+          "file": "allnewsapi-0.1.2/tests/test_client.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "threadlang",
+      "version": "0.13.2",
+      "download_url": "https://files.pythonhosted.org/packages/87/67/19b0df66f8c24a6e332a213e61acee3fb1fd192b117a7d74f542f40f0047/threadlang-0.13.2.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:32.406881+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "threadlang-0.13.2/src/threadlang/llm.py",
+          "line": 253,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "cred-protocol",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a9/dc/98991b54e19becbb219e4c1771f55f4d0840f3ef8442ebb6ab9b252ba30b/cred_protocol-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:31.614203+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://validator.credprotocol.com",
+          "file": "cred_protocol-0.1.0/cred_protocol/client.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://validator.credprotocol.com",
+          "file": "cred_protocol-0.1.0/cred_protocol/fastapi/middleware.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://validator.credprotocol.com",
+          "file": "cred_protocol-0.1.0/cred_protocol/fastapi/middleware.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyFBDS",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/b1/93/10408888a60372b951cb0d04417c99e503347cf3c2ebbb32a49e41bcccba/pyfbds-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:29.310770+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://geo.fbds.org.br",
+          "file": "pyfbds-0.1.1/pyproject.toml",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FBDS - Reposit\u00f3rio de mapas",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.fbds.org.br",
+          "file": "pyfbds-0.1.1/pyproject.toml",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FBDS - Somos a Funda\u00e7\u00e3o Brasileira para o Desenvolvimento Sustent\u00e1vel",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://geo.fbds.org.br",
+          "file": "pyfbds-0.1.1/pyFDBS/requests/web.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FBDS - Reposit\u00f3rio de mapas",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://geo.fbds.org.br",
+          "file": "pyfbds-0.1.1/pyFDBS/requests/download.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FBDS - Reposit\u00f3rio de mapas",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://filesamples.com/formats/csv",
+          "file": "pyfbds-0.1.1/pyFDBS/scraper/webdriver/chrome.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 520,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://superuser.com/questions/1410598/disable-firefox-must-send-information-that-will-repeat-any-action-dialog-box",
+          "file": "pyfbds-0.1.1/pyFDBS/scraper/webdriver/firefox.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.uol.com.br",
+          "file": "pyfbds-0.1.1/pyFDBS/scraper/webdriver/firefox.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UOL - Seu universo online",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.uol.com.br",
+          "file": "pyfbds-0.1.1/pyFDBS/scraper/webdriver/gecko.py",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "UOL - Seu universo online",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "nodeprobe",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/08/f8/7dd74775349c711c528367b44727c84b263b328ab27d2ab6ac282898e8f0/nodeprobe-0.1.4.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:25.071187+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triton One RPC",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://rpc.polkadot.io",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 155,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triton One RPC",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://api.mainnet-beta.solana.com",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Triton One RPC",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://fullnode.mainnet.aptoslabs.com/v1",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 310,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fullnode.mainnet.aptoslabs.com/v1",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 322,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://graphql.mainnet.sui.io/graphql",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 380,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GraphiQL",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://graphql.mainnet.sui.io/graphql",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 394,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GraphiQL",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://graphql.mainnet.sui.io/graphql",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 404,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GraphiQL",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rpc.mainnet.near.org",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 548,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rpc.mainnet.near.org",
+          "file": "nodeprobe-0.1.4/tests/test_multichain.py",
+          "line": 564,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eth-mainnet.g.alchemy.com/v2/demo",
+          "file": "nodeprobe-0.1.4/tests/test_scanner.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eth-mainnet.g.alchemy.com/v2/demo",
+          "file": "nodeprobe-0.1.4/tests/test_scanner.py",
+          "line": 200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eth-mainnet.g.alchemy.com/v2/demo",
+          "file": "nodeprobe-0.1.4/tests/test_scanner.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eth-mainnet.g.alchemy.com/v2/demo",
+          "file": "nodeprobe-0.1.4/tests/test_scanner.py",
+          "line": 474,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sourcify.dev/server/v2/contract",
+          "file": "nodeprobe-0.1.4/src/nodeprobe/contract/sourcify.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://geth.ethereum.org/docs/interacting-with-geth/rpc",
+          "file": "nodeprobe-0.1.4/src/nodeprobe/rules/namespaces.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JSON-RPC Server | go-ethereum",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9116",
+          "file": "nodeprobe-0.1.4/src/nodeprobe/rules/web/well_known.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 9116: A File Format to Aid in Security Vulnerability Disclosure | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "caudex",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ee/58/f19c4545aa441470560ef83ae01de74c8118ab4ad1e29f1640b9a6b5991e/caudex-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:23.469793+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://www.kaggle.com/settings",
+          "file": "caudex-0.2.0/caudex/api.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/settings",
+          "file": "caudex-0.2.0/caudex/api.py",
+          "line": 177,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/settings",
+          "file": "caudex-0.2.0/caudex/cli.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/code",
+          "file": "caudex-0.2.0/caudex/cli.py",
+          "line": 1953,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/code/alice/my-notebook",
+          "file": "caudex-0.2.0/tests/test_timeout.py",
+          "line": 395,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "signwell-sdk-python",
       "version": "0.1.0",
@@ -15549,6 +16995,21 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "parqdb",
+      "version": "0.2.0rc1",
+      "analyzed_at": "2026-08-18T04:36:51.038743+00:00",
+      "binaries": [
+        {
+          "name": "_native.abi3.so",
+          "file": "parqdb/_native.abi3.so",
+          "sha256": "f4af2b2c9b540bbb79e60a8a6ab762d01df20bf21afd453bba604e945cd6457b",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -15582,6 +17043,32 @@
           "command": "requests.Session()",
           "resolved": true,
           "context": "RequestHandler.__init__",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "rei-automator-mcp",
+      "version": "0.2.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/0c/00/38c0394a990ae21ae6159135490efb7e20da2698e0539237e8d96aff6b88/rei_automator_mcp-0.2.0a1.tar.gz",
+      "analyzed_at": "2026-08-18T04:36:30.819036+00:00",
+      "install_hooks": [
+        {
+          "file": "rei_automator_mcp-0.2.0a1/src/rei_automator_mcp/__init__.py",
+          "line": 212,
+          "call": "subprocess.run",
+          "command": "subprocess.run(cmd, shell=True, capture_output=True, timeout=30)",
+          "resolved": false,
+          "context": "Automator._dispatch",
+          "source": "package_init"
+        },
+        {
+          "file": "rei_automator_mcp-0.2.0a1/src/rei_automator_mcp/__init__.py",
+          "line": 461,
+          "call": "subprocess.run",
+          "command": "subprocess.run([ps_exe, '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', str(PS1_PATH), '-Base64', b64], capture_output=True, timeout=30)",
+          "resolved": false,
+          "context": "Automator._type_via_ps1",
           "source": "package_init"
         }
       ]
