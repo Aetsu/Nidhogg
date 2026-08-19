@@ -1,11 +1,2589 @@
 {
-  "generated_at": "2026-08-19T04:38:15.104327+00:00",
+  "generated_at": "2026-08-19T06:44:11.262121+00:00",
   "stats": {
-    "total_packages": 44,
-    "malicious": 3,
-    "clean": 41
+    "total_packages": 64,
+    "malicious": 5,
+    "clean": 59
   },
   "packages": [
+    {
+      "name": "cfe-chat",
+      "version": "5.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/04/6c/32537813823e707d69e901c560af6c94004fe40c5f3253398edc5afdaf9b/cfe_chat-5.0.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:44:08.741560+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://t.me/CFE_Chat",
+          "file": "cfe_chat-5.0.0/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Telegram: View @CFE_Chat",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://t.me/CFE_Chat",
+          "file": "cfe_chat-5.0.0/cfe_chat_v5/cfe_chat_v5.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Telegram: View @CFE_Chat",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "nonebot-plugin-douyin-notify",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3c/ff/8b95d74ca84dc263bee0768bf300958c996a8e5b368c9d43eacaa95fd78a/nonebot_plugin_douyin_notify-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:44:06.909805+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://www.douyin.com/video",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/models.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://live.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/models.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://live.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/models.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com/user",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/models.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://live.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/jobs.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://p.qlogo.cn/gh",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/web.py",
+          "line": 324,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://p.qlogo.cn/gh",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/web.py",
+          "line": 350,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://www.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/web.py",
+          "line": 482,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com/user",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/web.py",
+          "line": 490,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://live.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/web.py",
+          "line": 492,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/providers/browser.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/providers/browser.py",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com/user",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/providers/browser.py",
+          "line": 466,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.douyin.com/user",
+          "file": "nonebot_plugin_douyin_notify-0.1.0/nonebot_plugin_douyin_notify/providers/browser.py",
+          "line": 680,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "termpaws-backend",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cd/bf/362d9686602f2f58a25b4a10d7cb8c8900d69e77f282031373b8978d3aed/termpaws_backend-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-19T06:44:04.158242+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "ws://host:28888/robot-bridge/onebot/v11/ws",
+          "file": "app/cli.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://1.2.3.4:39999",
+          "file": "app/cli.py",
+          "line": 28,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://hf-mirror.com",
+          "file": "app/cli.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HF-Mirror",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "ws://host:28888/robot-bridge/onebot/v11/ws",
+          "file": "app/cli.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host:28888/robot-bridge/onebot/v11/ws",
+          "file": "app/cli.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://1.2.3.4:39999",
+          "file": "app/cli.py",
+          "line": 12,
+          "layer": "ast",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://hf-mirror.com",
+          "file": "app/cli.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HF-Mirror",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "ws://%s:%s",
+          "file": "app/plugins/terminal_ws/server.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "pixeloffice-firewall",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/99/81/c06a3e61c2e8ccbba9b09cdd97858eebc08e2a15a4dd1529d3da46e480c2/pixeloffice_firewall-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:59.910978+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://pixeloffice.eu/showcase/brand-hallucination-firewall.html",
+          "file": "pixeloffice-firewall-1.0.0/setup.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Brand Hallucination Firewall & AI Citation Oracle | Pixel Office",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.pixeloffice.eu/api/aeo/ping",
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/__init__.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/__init__.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/__init__.py",
+          "line": 51,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org",
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/cli.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pixeloffice.eu/showcase/brand-hallucination-firewall.html",
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/cli.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Brand Hallucination Firewall & AI Citation Oracle | Pixel Office",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "aibeta",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/32/47/fa78d6a2b6951fd87fbb74135bd4220ab543ba03d410fedc5e8d55aa00b8/aibeta-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:58.590276+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://research.citics.com",
+          "file": "aibeta-0.3.0/src/aibeta/_client.py",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e2d\u4fe1\u8bc1\u5238",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "grid-node",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/16/c8/8d3f79359287f3020e4052e015f04b0b51c6a6894b8111a3a1c565522baa/grid_node-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:57.493492+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "ws://hub-host:8000",
+          "file": "grid_node-0.1.0/grid_node/config.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org/account",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "http://www.geo600.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | GEO600 Gravitational-wave Detector",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://boinc.bakerlab.org/rosetta",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rosetta@home",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://boinc.bakerlab.org/rosetta",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rosetta@home",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://boinc.bakerlab.org/rosetta",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rosetta@home",
+          "cert_issuer": "InCommon, LLC"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.worldcommunitygrid.org/account",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "World Community Grid",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "http://www.geo600.org",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | GEO600 Gravitational-wave Detector",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://boinc.bakerlab.org/rosetta",
+          "file": "grid_node-0.1.0/tests/test_boinc.py",
+          "line": 5,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rosetta@home",
+          "cert_issuer": "InCommon, LLC"
+        }
+      ]
+    },
+    {
+      "name": "memcode-sdk",
+      "version": "2.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/95/a7/2c62564915581c8a76b18a0cc6caed865a2a452e41871595b815e7e81ee8/memcode_sdk-2.3.1.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:54.339159+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://memcode.in",
+          "file": "memcode_sdk-2.3.1/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MemCode \u2014 Memory for Every AI Product",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "opa-sh",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4d/27/7158d7551a752fe3790a31f19541d83dcfbc9f15b7042a2392c92a143cf1/opa_sh-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:53.399115+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://opa.sh",
+          "file": "opa_sh-0.1.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Opa | Encurtador de links com analytics, dom\u00ednios pr\u00f3prios e teste A/B | Opa",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/docs/api",
+          "file": "opa_sh-0.1.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API \u00b7 Vis\u00e3o geral | Opa",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/conftest.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_retry.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_client.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/tests/test_client.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc123",
+          "file": "opa_sh-0.1.0/tests/test_links.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc123",
+          "file": "opa_sh-0.1.0/tests/test_links.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc123",
+          "file": "opa_sh-0.1.0/tests/test_links.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1/links",
+          "file": "opa_sh-0.1.0/tests/test_errors.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1/links",
+          "file": "opa_sh-0.1.0/tests/test_errors.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc",
+          "file": "opa_sh-0.1.0/tests/test_contract.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc",
+          "file": "opa_sh-0.1.0/tests/test_contract.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opa.sh/abc",
+          "file": "opa_sh-0.1.0/tests/test_contract.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/src/opa_sh/__init__.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.opa.sh/v1",
+          "file": "opa_sh-0.1.0/src/opa_sh/client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.opa.sh/settings/api-keys",
+          "file": "opa_sh-0.1.0/src/opa_sh/client.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.opa.sh/settings/api-keys",
+          "file": "opa_sh-0.1.0/src/opa_sh/client.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "keyrx",
+      "version": "0.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/0b/c4/2982ac43e5c2e7b56b051558005e95739c736fa0786021a36aef079564e7/keyrx-0.0.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:51.371717+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://keyrx.tech",
+          "file": "keyrx-0.0.0/pyproject.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "keyRX \u2014 Solana vanity addresses, keys for every wallet",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://keyrx.tech",
+          "file": "keyrx-0.0.0/pyproject.toml",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "keyRX \u2014 Solana vanity addresses, keys for every wallet",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://keyrx.tech",
+          "file": "keyrx-0.0.0/keyrx/__init__.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "keyRX \u2014 Solana vanity addresses, keys for every wallet",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "GalvCalc",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/d1/20/468a9630eb67a41b0f053978ca0521502e3810b46a101b6ee28163aec1c2/galvcalc-1.0.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-19T06:43:51.001041+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://calculla.com/electron_affinity",
+          "file": "GalvCalc/predictor/Eads/utils/ActiveLearningPred.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CALCULLA - Table of electron affinity of elements",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cli-testing-sdk",
+      "version": "1.0.5",
+      "download_url": "https://files.pythonhosted.org/packages/1d/66/b6101a625b35a318db3f733546e461e0b5bb02063edeb657144530701b91/cli_testing_sdk-1.0.5.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:47.964234+00:00",
+      "total_findings": 69,
+      "findings": [
+        {
+          "url": "https://abc.com",
+          "file": "cli_testing_sdk-1.0.5/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABC Network - ABC.com",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/swaggerpetstore_client.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/swaggerpetstore_client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/configuration.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://petstore3.swagger.io/api/v3",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/configuration.py",
+          "line": 199,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://petstore3.swagger.io/oauth",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/configuration.py",
+          "line": 200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/configuration.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/api_helper.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/api_helper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/exceptions/oauth_provider_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/exceptions/oauth_provider_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/exceptions/api_exception.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/exceptions/api_exception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_scope_petstore_auth.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_scope_petstore_auth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/tag.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/tag.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/order.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/order.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/pet_status.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/pet_status.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/pet.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/pet.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/user.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/user.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_token.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_token.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/api_response.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/api_response.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/order_status.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/order_status.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_provider_error.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/oauth_provider_error.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/category.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/models/category.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/proxy_settings.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/proxy_settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_call_back.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_call_back.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_client_provider.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_client_provider.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_method_enum.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_method_enum.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/api_response.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/api_response.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_response.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_response.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_request.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/http_request.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/utilities/xml_utilities.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/utilities/xml_utilities.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/utilities/file_wrapper.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/utilities/file_wrapper.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/logging/sdk_logger.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/logging/sdk_logger.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/pet_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/pet_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/user_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/user_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/store_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/store_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/base_api.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/apis/base_api.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/logging/configuration/api_logging_configuration.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/logging/configuration/api_logging_configuration.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/auth/api_key.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/auth/api_key.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/auth/petstore_auth.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.apimatic.io",
+          "file": "cli_testing_sdk-1.0.5/swaggerpetstore/http/auth/petstore_auth.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "APIMatic - Complete OpenAPI SDK Generation Platform",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "caid-forma-core",
+      "version": "0.3.3",
+      "download_url": "https://files.pythonhosted.org/packages/cb/79/c269edf5f0efedd75336a25d27e640e2c4bd3c39b4b47cc3600c68aab7b1/caid_forma_core-0.3.3.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:47.012683+00:00",
+      "total_findings": 42,
+      "findings": [
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/video_review.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 259,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 314,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 316,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.gmi-serving.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 334,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.gmicloud.ai",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 335,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Inference Engine | GMI Cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.gmicloud.ai/api/v1/ie/requestqueue/apikey/requests/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 341,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 441,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.ai/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 443,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 490,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/user_integrations.py",
+          "line": 501,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "caid_forma_core-0.3.3/forma_core/observability.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.gmi-serving.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 385,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1951,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1977,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.gmi-serving.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1981,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1985,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1987,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1989,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 2410,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 382,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.ai/v2",
+          "file": "caid_forma_core-0.3.3/forma_core/llm_providers.py",
+          "line": 1950,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/openai_streams.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.gmi-serving.com/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/openai_streams.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.gmicloud.ai/api/v1/ie/requestqueue/apikey/requests/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/image_providers.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.together.ai/v1",
+          "file": "caid_forma_core-0.3.3/forma_core/image_providers.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://3dgo.app/models/printables/94864",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 1517,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://learn.adafruit.com/walkmp3rson-personal-mp3-tape-player/cad-files",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2415,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CAD Files | Walkmp3rson: Personal MP3 'Tape' Player | Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://3dgo.app/models/printables/94864",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.digikey.ca/en/products/detail/hammond-manufacturing/1554BGY/1090730",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2680,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://3dgo.app/models/printables/94864",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2689,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.stlfinder.com/3dmodels/thermostat-trim-plate",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2939,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cults3d.com/es/etiquetas/termostato%2Bnest%2Be%2Buk",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 2948,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.thingiverse.com/thing:2350856/files",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 3189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Arduino-based Electronic Lock by ridercz - Thingiverse",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://cults3d.com/en/3d-model/gadget/motorized-door-lock-for-sg90-servo/similar-designs",
+          "file": "caid_forma_core-0.3.3/forma_core/agents/orchestrator.py",
+          "line": 3198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "py20305",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/64/82cba434fb34504a6dd573e25dc1a090ae027f2332e84c426a143a51581c/py20305-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:45.386650+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_serialization.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_serialization.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_discovery.py",
+          "line": 879,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_client.py",
+          "line": 155,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_capability.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_capability.py",
+          "line": 261,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_capability.py",
+          "line": 263,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_settings.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_settings.py",
+          "line": 275,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/tests/test_telemetry_der_settings.py",
+          "line": 277,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/xml/serialization.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/xml/serialization.py",
+          "line": 82,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://csipaus.org/ns",
+          "file": "py20305-0.1.0/src/py20305/models/csipaus/csipaus_ext.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ns \u2014 CSIP-AUS",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.unece.org/cefact/recommendations/rec09/rec09_ecetrd203.pdf",
+          "file": "py20305-0.1.0/src/py20305/models/sep/sep.py",
+          "line": 12771,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unece.org/cefact/recommendations/rec09/rec09_ecetrd203.pdf",
+          "file": "py20305-0.1.0/src/py20305/models/sep/sep.py",
+          "line": 12760,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "gluex-rs",
+      "version": "0.1.7",
+      "download_url": "https://files.pythonhosted.org/packages/f6/60/d82897ff0dd2a34df5ac35bf31f89e0a15f6fdbce4a46ed8809ab186b2cb/gluex_rs-0.1.7.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:43.185516+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.rs/gluex-rs",
+          "file": "gluex_rs-0.1.7/Cargo.toml",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "gluex_rs - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "hippocampy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/9c/4232b1e27d4721e53d0629c1ec43c959842210a0b96c69d17e34de2b0f67/hippocampy-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:42.716896+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "hippocampy-0.1.0/campy/cli/install.py",
+          "line": 369,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "hippocampy-0.1.0/campy/brain/llm/provider.py",
+          "line": 214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "agent-surface",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/22/e8/8b67d6b17eaf278e2cd3892c090c8deed3b7e2ceaba035057ca5a9368bd6/agent_surface-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:41.669653+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://code.claude.com/docs/en/mcp",
+          "file": "agent_surface-0.1.0/tests/test_repository_metadata.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Connect Claude Code to tools via MCP - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "kaggle-prep",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8c/fa/9799d5e08c9fec15b14c03036dd4dfd0d8a8366e5447f72d4d2d81867e3d/kaggle_prep-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:41.367030+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.kaggle.com/settings/api",
+          "file": "kaggle_prep-0.1.0/kaggle_prep/cli.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.kaggle.com/datasets",
+          "file": "kaggle_prep-0.1.0/kaggle_prep/cli.py",
+          "line": 269,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ssh-client-plus",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b8/80/dc32981f4dad1228bc49fca18b35bb797ba76930714251d16c41066ebddf/ssh_client_plus-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:40.909201+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://gitee.com/haitaoboy/ssh-client",
+          "file": "ssh_client_plus-0.1.0/setup.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5b87\u5bb8\u79d1\u6280/ssh-client",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "scnet-document-convert",
+      "version": "1.0.5",
+      "download_url": "https://files.pythonhosted.org/packages/df/88/be6663bd957cbb06f6f5bdfbbae30589508084f4e8c15099900ea3880b4d/scnet_document_convert-1.0.5.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:35.767442+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.scnet.cn/api/llm/v1",
+          "file": "scnet_document_convert-1.0.5/server.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "lumberjack-py",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/4b/1ee7de6ed59a36309479b3fe89fd793fcc7b672b72d3d11e25baf29e6602/lumberjack_py-0.4.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:33.023120+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.astral.sh/ty/reference/configuration",
+          "file": "lumberjack_py-0.4.0/ty.toml",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Configuration | ty",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "engineering-process",
       "version": "0.1.0",
@@ -22880,6 +25458,111 @@
           "command": "os.execv(binary, [binary, *args])",
           "resolved": false,
           "context": "run",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hippocampy",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/9c/4232b1e27d4721e53d0629c1ec43c959842210a0b96c69d17e34de2b0f67/hippocampy-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:42.717422+00:00",
+      "install_hooks": [
+        {
+          "file": "hippocampy-0.1.0/adapters/claude_code/setup.py",
+          "line": 82,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', '-C', str(project_root), 'config', 'core.hooksPath', '.githooks'], check=True, capture_output=True, timeout=5)",
+          "resolved": false,
+          "context": "_configure_git_hooks",
+          "source": "setup_py"
+        },
+        {
+          "file": "hippocampy-0.1.0/campy/cli/setup.py",
+          "line": 205,
+          "call": "subprocess.run",
+          "command": "subprocess.run(install_cmd, capture_output=True, text=True)",
+          "resolved": false,
+          "context": "_register_openclaw",
+          "source": "setup_py"
+        },
+        {
+          "file": "hippocampy-0.1.0/campy/cli/setup.py",
+          "line": 214,
+          "call": "subprocess.run",
+          "command": "subprocess.run(restart_cmd, capture_output=True, text=True)",
+          "resolved": false,
+          "context": "_register_openclaw",
+          "source": "setup_py"
+        },
+        {
+          "file": "hippocampy-0.1.0/campy/cli/setup.py",
+          "line": 223,
+          "call": "subprocess.run",
+          "command": "subprocess.run(explain_cmd, capture_output=True, text=True)",
+          "resolved": false,
+          "context": "_register_openclaw",
+          "source": "setup_py"
+        },
+        {
+          "file": "hippocampy-0.1.0/campy/cli/setup.py",
+          "line": 377,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['systemctl', '--user', 'daemon-reload'], capture_output=True)",
+          "resolved": true,
+          "context": "_setup_systemd",
+          "source": "setup_py"
+        },
+        {
+          "file": "hippocampy-0.1.0/campy/cli/setup.py",
+          "line": 378,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['systemctl', '--user', 'enable', '--now', 'hippocampy.service'], capture_output=True, text=True)",
+          "resolved": true,
+          "context": "_setup_systemd",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "pixeloffice-firewall",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/99/81/c06a3e61c2e8ccbba9b09cdd97858eebc08e2a15a4dd1529d3da46e480c2/pixeloffice_firewall-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:43:59.911196+00:00",
+      "install_hooks": [
+        {
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/__init__.py",
+          "line": 23,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json', 'User-Agent': f'PixelOffice-Firewall-Python/{__version__}'})",
+          "resolved": false,
+          "context": "send_telemetry_ping",
+          "source": "package_init"
+        },
+        {
+          "file": "pixeloffice-firewall-1.0.0/pixeloffice_firewall/__init__.py",
+          "line": 28,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req, timeout=2.5)",
+          "resolved": false,
+          "context": "send_telemetry_ping",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "reqcrypt_dev",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7f/9c/acbd015711d25fe4fbfbb10f06de429a2d7887663c02796df0aabd7caae1/reqcrypt_dev-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-19T06:44:07.404455+00:00",
+      "install_hooks": [
+        {
+          "file": "reqcrypt_dev-0.1.0/reqcrypt/__init__.py",
+          "line": 307,
+          "call": "requests.Session",
+          "command": "requests.Session()",
+          "resolved": true,
+          "context": "RequestHandler.__init__",
           "source": "package_init"
         }
       ]
