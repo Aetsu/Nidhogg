@@ -1,11 +1,797 @@
 {
-  "generated_at": "2026-08-20T04:37:58.554592+00:00",
+  "generated_at": "2026-08-20T06:46:49.627491+00:00",
   "stats": {
-    "total_packages": 52,
+    "total_packages": 66,
     "malicious": 5,
-    "clean": 47
+    "clean": 61
   },
   "packages": [
+    {
+      "name": "graphcheck",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/0e/8e/d37a75f61d986e0f38fa965694700a8999a65c967635746ecd5b5a9de2f8/graphcheck-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:47.009534+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "graphcheck-0.1.0/tests/test_packs.py",
+          "line": 381,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "graphcheck-0.1.0/tests/contracts/test_check_validation.py",
+          "line": 335,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "graphcheck-0.1.0/src/graphcheck/contracts/schemas.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.i.posthog.com",
+          "file": "graphcheck-0.1.0/src/graphcheck/telemetry/release.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "agent-deadstop",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/7e/5e/099f756d34b644ad10c1a142ebf405cec5cc9369809df476d4df92d28740/agent_deadstop-0.4.1.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:45.814121+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://evil.com/leak",
+          "file": "agent_deadstop-0.4.1/tests/test_code_review_regressions.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "spectackl",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/fe/44/eee55db49789c462c8834b4ecd5b476647280bb5d23cd9afd30bac4b09f2/spectackl-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:45.248132+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://spectackl.ai",
+          "file": "spectackl-0.0.1/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Spectackl \u2014 your whole SDLC as one living knowledge graph",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.spectackl.ai/api/v1",
+          "file": "spectackl-0.0.1/tests/test_config.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.spectackl.ai/api/v1",
+          "file": "spectackl-0.0.1/tests/test_config.py",
+          "line": 180,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.spectackl.ai",
+          "file": "spectackl-0.0.1/src/spectackl/commands/init.py",
+          "line": 164,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.spectackl.ai",
+          "file": "spectackl-0.0.1/src/spectackl/commands/init.py",
+          "line": 160,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "Tavotto",
+      "version": "0.8.0",
+      "download_url": "https://files.pythonhosted.org/packages/fb/be/a39a745eca87560e843bc07237e3e97bc80d2cd8db5168483f5523c30ce2/tavotto-0.8.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:44.240006+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://api.moonshot.cn/anthropic",
+          "file": "tavotto-0.8.0/tests/test_ai_history.py",
+          "line": 159,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.moonshot.cn/anthropic",
+          "file": "tavotto-0.8.0/tests/test_ai_history.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "tavotto-0.8.0/tests/test_ai_history.py",
+          "line": 168,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "tavotto-0.8.0/tests/test_ai_history.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.cn/anthropic",
+          "file": "tavotto-0.8.0/tests/test_windows_regressions.py",
+          "line": 548,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.deepseek.com/anthropic",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_providers.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.moonshot.cn/anthropic",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_providers.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://open.bigmodel.cn/api/anthropic",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_providers.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_providers.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_providers.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://nodejs.org",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_bridge.py",
+          "line": 427,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Node.js \u2014 Run JavaScript Everywhere",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://nodejs.org",
+          "file": "tavotto-0.8.0/src/tavotto/engine/ai_bridge.py",
+          "line": 426,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Node.js \u2014 Run JavaScript Everywhere",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "langchain-wavespeed",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/59/29/d34d15c51fbd0bb9c68880dcad2af617e084a262a9605c9eb5b08d0a58e2/langchain_wavespeed-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:40.346456+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://wavespeed.ai",
+          "file": "langchain_wavespeed-0.1.1/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DNSPod, Inc."
+        },
+        {
+          "url": "https://wavespeed.ai",
+          "file": "langchain_wavespeed-0.1.1/langchain_wavespeed/tools.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DNSPod, Inc."
+        },
+        {
+          "url": "https://wavespeed.ai/models",
+          "file": "langchain_wavespeed-0.1.1/langchain_wavespeed/tools.py",
+          "line": 254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DNSPod, Inc."
+        },
+        {
+          "url": "https://wavespeed.ai",
+          "file": "langchain_wavespeed-0.1.1/langchain_wavespeed/tools.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DNSPod, Inc."
+        },
+        {
+          "url": "https://wavespeed.ai/models",
+          "file": "langchain_wavespeed-0.1.1/langchain_wavespeed/tools.py",
+          "line": 253,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DNSPod, Inc."
+        }
+      ]
+    },
+    {
+      "name": "crucible-leakage",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7a/a5/472294c444a6f1440c1d66530cab6010f5962a8a30277391a899e6382583/crucible_leakage-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:39.201293+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "crucible_leakage-0.1.0/src/crucible/providers/anthropic.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.featherless.ai/v1",
+          "file": "crucible_leakage-0.1.0/src/crucible/providers/featherless.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "context-pager",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/08/f7/cc276cb2710175a8fab22609724273121e13f4631e6e5aa67426fc59c366/context_pager-0.3.1.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:38.801884+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "wss://pager.duckdns.org/bridge",
+          "file": "context_pager-0.3.1/src/context_pager/config.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "reputation-visibility-matrix",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/cf/36/4ea0673423093a7c953aedb405219456791c8d2e6781060ac44f3470f104/reputation_visibility_matrix-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:30.479585+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://buildyourreputation.online",
+          "file": "reputation_visibility_matrix-1.0.0/setup.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Build Your Reputation \u2013 Your Reputation, Our Priority",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://buildyourreputation.online",
+          "file": "reputation_visibility_matrix-1.0.0/setup.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Build Your Reputation \u2013 Your Reputation, Our Priority",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://buildyourreputation.online",
+          "file": "reputation_visibility_matrix-1.0.0/reputation_matrix.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Build Your Reputation \u2013 Your Reputation, Our Priority",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://buildyourreputation.online",
+          "file": "reputation_visibility_matrix-1.0.0/reputation_matrix.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Build Your Reputation \u2013 Your Reputation, Our Priority",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://buildyourreputation.online",
+          "file": "reputation_visibility_matrix-1.0.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Build Your Reputation \u2013 Your Reputation, Our Priority",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "wsad-dt",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/49/c2/518a7cc9dd0fb134beffd3b7c0f7b033baebf1ad29f9bb63461d82f7d468/wsad_dt-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:29.635483+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://proceedings.mlr.press/v267/durani25a.html",
+          "file": "wsad_dt-1.0.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Weakly Supervised Anomaly Detection via Dual-Tailed Kernel",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://proceedings.mlr.press/v267/durani25a.html",
+          "file": "wsad_dt-1.0.0/wsad_dt/_model.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Weakly Supervised Anomaly Detection via Dual-Tailed Kernel",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://proceedings.mlr.press/v267/durani25a.html",
+          "file": "wsad_dt-1.0.0/wsad_dt/_model.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Weakly Supervised Anomaly Detection via Dual-Tailed Kernel",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "chb-clustering",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/03/6b/1dcd76fb7307036d0cd9e483d27d55e8ab602870a90e02594638e36c01d6/chb_clustering-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:29.459625+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://openreview.net/pdf?id=9zXUOLxbcL",
+          "file": "chb_clustering-1.0.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "aderh",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/18/85/606163d07955454fe60e5d7a401fa7ef33ddf53811033896714d3106c47c/aderh-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:29.203957+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://neurips.cc/virtual/2025/poster/115418",
+          "file": "aderh-1.0.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NeurIPS Poster Anomaly Detection by an Ensemble of Random Pairs of Hyperspheres",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://neurips.cc/virtual/2025/poster/115418",
+          "file": "aderh-1.0.0/aderh/_aderh.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NeurIPS Poster Anomaly Detection by an Ensemble of Random Pairs of Hyperspheres",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://neurips.cc/virtual/2025/poster/115418",
+          "file": "aderh-1.0.0/aderh/_aderh.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NeurIPS Poster Anomaly Detection by an Ensemble of Random Pairs of Hyperspheres",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "takler",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b3/ac/19e8b38da7f7964c46f40f4054aef4156a1bdbee856e1a35fc2c8d6a9bab/takler-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:27.376639+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://jinja.palletsprojects.com",
+          "file": "takler-0.1.0/doc/source/tutorial/getting-started/understanding-includes.rst",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Jinja \u2014 Jinja Documentation (3.1.x)",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://go.dev/doc/install",
+          "file": "takler-0.1.0/doc/source/tutorial/getting-started/index.rst",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download and install - The Go Programming Language",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tfprivesc",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/7c/71/2988c9f2142942d817c971d0cfc10bb9c839f930e3b95a918c9951b81f51/tfprivesc-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:26.724061+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "tfprivesc-0.1.1/src/tfprivesc/report/sarif.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "is-it-ai-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8d/18/abef5ddb7be8f1e836273802822ea45c3af38079e06ddf9539e20126bfd7/is_it_ai_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-20T06:46:25.421169+00:00",
+      "total_findings": 15,
+      "findings": [
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_verdict.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_verdict.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_verdict.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/someOtherThing",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_verdict.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_reader.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_tools.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/tests/test_tools.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/positiveFilm",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/print",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://cv.iptc.org/newscodes/digitalsourcetype/minorHumanEdits",
+          "file": "is_it_ai_mcp-0.1.0/src/is_it_ai_mcp/verdict.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
     {
       "name": "relayfabric-sdk",
       "version": "0.4.0",
