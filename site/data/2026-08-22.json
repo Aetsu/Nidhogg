@@ -1,11 +1,2639 @@
 {
-  "generated_at": "2026-08-22T20:23:39.074788+00:00",
+  "generated_at": "2026-08-22T22:23:23.027151+00:00",
   "stats": {
-    "total_packages": 225,
-    "malicious": 17,
-    "clean": 208
+    "total_packages": 242,
+    "malicious": 18,
+    "clean": 224
   },
   "packages": [
+    {
+      "name": "stapel-runner-protocol",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/5a/0a/4b914e97f828487b85439cfe1a3ee6180cce6de17cfa7ea65dd75b4969fc/stapel_runner_protocol-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:19.959872+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "ws://hub/runner",
+          "file": "stapel_runner_protocol-0.1.1/tests/test_transport.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "neuforge-phidata",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/c4/98/fd250536c21d9533584ad53d5188ebe651b5669b07138ff2e637ecb99f52/neuforge_phidata-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:19.866358+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.neuforge.app",
+          "file": "neuforge_phidata-1.0.1/src/neuforge_phidata/meter.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "neuforge-autogen",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/bb/e7/8b9814dad065cc5480846705db0957dd914570a2d009c2050a9b53d69796/neuforge_autogen-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:19.657367+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.neuforge.app",
+          "file": "neuforge_autogen-1.0.1/src/neuforge_autogen/meter.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "video-to-llm",
+      "version": "1.0.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/14/a5/5127b60bca1ef945ddb32d87db3efba57b418f76454b93fce564e8b29073/video_to_llm-1.0.0rc1.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:19.196763+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://astral.sh/uv/install.sh",
+          "file": "video_to_llm-1.0.0rc1/scripts/verify_install.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "video_to_llm-1.0.0rc1/app/providers/cloud.py",
+          "line": 256,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "spt-models",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/72/cf/7ae2759e2fd305029d5983480885ddc9e930e694fa483a68a5128ab41b9c/spt_models-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:18.652573+00:00",
+      "total_findings": 87,
+      "findings": [
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 32,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 46,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 66,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases/7",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 80,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases/7",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 96,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 108,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 119,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases/7",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 129,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/aliases/7",
+          "file": "spt_models-0.2.0/tests/test_admin_aliases.py",
+          "line": 139,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_base.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_gpu.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/gpu-status",
+          "file": "spt_models-0.2.0/tests/test_admin_gpu.py",
+          "line": 40,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/gpu-status",
+          "file": "spt_models-0.2.0/tests/test_admin_gpu.py",
+          "line": 53,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/nodes",
+          "file": "spt_models-0.2.0/tests/test_admin_gpu.py",
+          "line": 64,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/nodes/1",
+          "file": "spt_models-0.2.0/tests/test_admin_gpu.py",
+          "line": 77,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 31,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage/stats",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 53,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage/stats",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 72,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage/records",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 92,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage/records",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 121,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/usage/records",
+          "file": "spt_models-0.2.0/tests/test_admin_usage.py",
+          "line": 133,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_chat.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/chat/completions",
+          "file": "spt_models-0.2.0/tests/test_chat.py",
+          "line": 23,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/chat/completions",
+          "file": "spt_models-0.2.0/tests/test_chat.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/chat/completions",
+          "file": "spt_models-0.2.0/tests/test_chat.py",
+          "line": 59,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/chat/completions",
+          "file": "spt_models-0.2.0/tests/test_chat.py",
+          "line": 81,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/conversion/start",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 21,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/conversion/start",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/conversion/jobs",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 52,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/conversion/jobs",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 62,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/conversion/jobs/1",
+          "file": "spt_models-0.2.0/tests/test_admin_conversion.py",
+          "line": 73,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/completions",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/completions",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 34,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/completions",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 47,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/embeddings",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 62,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/images/generations",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 77,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/images/generations",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 88,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/videos/generations",
+          "file": "spt_models-0.2.0/tests/test_inference_resources.py",
+          "line": 101,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/keys",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/keys",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 42,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/keys",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/keys/1",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 65,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/keys/1/revoke",
+          "file": "spt_models-0.2.0/tests/test_admin_keys.py",
+          "line": 76,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/audio/speech",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 16,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/audio/speech",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 29,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/audio/transcriptions",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 42,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/audio/transcriptions",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/audio/transcriptions",
+          "file": "spt_models-0.2.0/tests/test_audio.py",
+          "line": 72,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models/llama",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models/granite/parameters",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 39,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 57,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models/llama",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 71,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/v1/models/granite/parameters",
+          "file": "spt_models-0.2.0/tests/test_models_resource.py",
+          "line": 83,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_dashboard.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/dashboard/stats",
+          "file": "spt_models-0.2.0/tests/test_admin_dashboard.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/dashboard/health",
+          "file": "spt_models-0.2.0/tests/test_admin_dashboard.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/auth/login",
+          "file": "spt_models-0.2.0/tests/test_admin_dashboard.py",
+          "line": 43,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/health",
+          "file": "spt_models-0.2.0/tests/test_admin_dashboard.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 30,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/1",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 43,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 55,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 72,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/1",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 93,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/1",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 104,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/load",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 115,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/unload",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 127,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/loading",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 140,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/test",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 151,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/test",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 166,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/auto-import",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 186,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/enrich",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 208,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/enrich-all",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 221,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/cache-status",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 235,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev/admin/api/models/llama-3-8b/parameters",
+          "file": "spt_models-0.2.0/tests/test_admin_models.py",
+          "line": 246,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/tests/test_client_init.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://models.sponge-theory.dev",
+          "file": "spt_models-0.2.0/src/spt_models/_base.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPT Models \u2014 One API. Every modality. Your GPU fleet.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "bristlecone-mcp",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/93/de/56bf43eb4bafd5a05a3f3d05a53aa02ebd2d3ed52725c38bb03e868faf4a/bristlecone_mcp-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-22T22:23:14.522957+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_mcp-0.1.2/mcp_server.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic, LLC | Enterprise M2M Gateway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "bristlecone_mcp-0.1.2/sweeper_daemon.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://base.llamarpc.com",
+          "file": "bristlecone_mcp-0.1.2/sweeper_daemon.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 521,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://1rpc.io/base",
+          "file": "bristlecone_mcp-0.1.2/sweeper_daemon.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "bristlecone_mcp-0.1.2/deposit_daemon.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/docs",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Gateway - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/redoc",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Gateway - ReDoc",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic, LLC | Enterprise M2M Gateway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/openapi.json",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/docs",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Gateway - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/docs",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 23,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Gateway - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/redoc",
+          "file": "bristlecone_mcp-0.1.2/app/main.py",
+          "line": 23,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Gateway - ReDoc",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "bristlecone_mcp-0.1.2/src/layer0/payment.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_mcp-0.1.2/src/bristlecone_mcp/__init__.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic, LLC | Enterprise M2M Gateway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_mcp-0.1.2/src/bristlecone_mcp/frameworks.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic, LLC | Enterprise M2M Gateway",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "wss://s.altnet.rippletest.net:51233",
+          "file": "bristlecone_mcp-0.1.2/app/services/xrpl_listener.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://s.altnet.rippletest.net:51234",
+          "file": "bristlecone_mcp-0.1.2/app/services/xrpl_listener.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://bristleconelogic.com",
+          "file": "bristlecone_mcp-0.1.2/app/api/v1/endpoints/tools.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic \u2014 Autonomous Utility Layer for AI Agents",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "dfine-seg",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/b9/d0/99a3aa4a123e24a72dc392e40873b98ae6f9c0cf8177bf1acfceec7b814b/dfine_seg-0.3.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:59.759914+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://giou.stanford.edu",
+          "file": "dfine_seg-0.3.0/dfine_seg/model/arch/utils.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Generalized Intersection over Union",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://giou.stanford.edu",
+          "file": "dfine_seg-0.3.0/dfine_seg/model/arch/utils.py",
+          "line": 29,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Generalized Intersection over Union",
+          "cert_issuer": "Internet2"
+        }
+      ]
+    },
+    {
+      "name": "iitkgp-erp-autologin",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/a4/01/e4cd577f7368fc3890781e0c8b46984c71183b64ae3f9ba2b77548d19f0c/iitkgp_erp_autologin-1.0.2.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:58.143573+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://erp.iitkgp.ac.in/IIT_ERP3",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to ERP",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in/IIT_ERP3/welcome.jsp",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to ERP",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in/SSOAdministration/auth.htm",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in/SSOAdministration/login.htm",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to ERP",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in/SSOAdministration/getSecurityQues.htm",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in/SSOAdministration/getEmilOTP.htm",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/endpoints.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://erp.iitkgp.ac.in",
+          "file": "iitkgp_erp_autologin-1.0.2/erplogin/core.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ERP System-IIT,Kharagpur",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "python-passenv",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/a5/80/09cc0807ac22a468a8e18b3c55df8c9b856c992ab56be484b18b1d200caa/python_passenv-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:51.097320+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.schemastore.org/prek.json",
+          "file": "python_passenv-0.1.1/prek.toml",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://prek.j178.dev",
+          "file": "python_passenv-0.1.1/prek.toml",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "prek - prek",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "distributed-llm",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/d7/44/4cec00c321973c6109f64e11a7c1234f6319fe4da271e93e00688c50c4cd/distributed_llm-0.4.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:50.721577+00:00",
+      "total_findings": 28,
+      "findings": [
+        {
+          "url": "http://evil.com/callback",
+          "file": "distributed_llm-0.4.1/tests/test_routing_security.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://discord.com/api/webhooks",
+          "file": "distributed_llm-0.4.1/src/distllm/core/notification_manager.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/webhooks",
+          "file": "distributed_llm-0.4.1/src/distllm/core/notification_manager.py",
+          "line": 69,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.electricitymap.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 208,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Electricity Maps: The world's most comprehensive electricity data platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.watttime.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WattTime Data API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.electricitymap.org/v3/carbon-intensity/latest",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 310,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.watttime.org/v2/login",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 346,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.watttime.org/v2/index",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 359,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WattTime Data API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.electricitymap.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 205,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Electricity Maps: The world's most comprehensive electricity data platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.watttime.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/cross_cloud_router.py",
+          "line": 205,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WattTime Data API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.electricitymap.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/carbon_migration.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Electricity Maps: The world's most comprehensive electricity data platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.electricitymap.org/v3",
+          "file": "distributed_llm-0.4.1/src/distllm/core/carbon_migration.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.electricitymap.org",
+          "file": "distributed_llm-0.4.1/src/distllm/core/carbon_migration.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Electricity Maps: The world's most comprehensive electricity data platform",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://prometheus.io/docs/instrumenting/exposition-formats",
+          "file": "distributed_llm-0.4.1/src/distllm/dist/metrics.py",
+          "line": 230,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://prometheus.io/docs/instrumenting/exposition-formats",
+          "file": "distributed_llm-0.4.1/src/distllm/dist/metrics.py",
+          "line": 228,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.io/v2/gpu/prices",
+          "file": "distributed_llm-0.4.1/src/distllm/cloud/spot_orchestrator.py",
+          "line": 577,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.io/v2/instances",
+          "file": "distributed_llm-0.4.1/src/distllm/cloud/spot_orchestrator.py",
+          "line": 676,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.io/v2/instances",
+          "file": "distributed_llm-0.4.1/src/distllm/cloud/spot_orchestrator.py",
+          "line": 721,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.vast.ai/api/v0",
+          "file": "distributed_llm-0.4.1/src/distllm/cloud/spot_orchestrator.py",
+          "line": 746,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.salad.com/api/public",
+          "file": "distributed_llm-0.4.1/src/distllm/cloud/spot_orchestrator.py",
+          "line": 903,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://milvus.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/milvus.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://milvus.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/milvus.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 302,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.pinecone.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/pinecone.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The vector database to build knowledgeable AI | Pinecone",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.pinecone.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/pinecone.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The vector database to build knowledgeable AI | Pinecone",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://weaviate.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/weaviate.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The AI database developers love | Weaviate",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://weaviate.io",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/weaviate.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The AI database developers love | Weaviate",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qdrant.tech",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/qdrant.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qdrant - Vector Search Engine",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qdrant.tech",
+          "file": "distributed_llm-0.4.1/src/distllm/core/vectorstore/providers/qdrant.py",
+          "line": 17,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qdrant - Vector Search Engine",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "crewai-memorysync",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a3/19/1ea8c918143430a1247308990e836a842c2895baacad941dad6986aa9b9d/crewai_memorysync-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:43.133333+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://memorysync.io",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MemorySync \u2013 AI Memory Infrastructure",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/guides/crewai",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CrewAI Memory | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/api/overview",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Overview | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/release-notes",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Notes | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/debugging/support",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Support & Escalation | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://status.memorysync.io",
+          "file": "crewai_memorysync-1.0.0/pyproject.toml",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MemorySync status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.memorysync.io",
+          "file": "crewai_memorysync-1.0.0/src/crewai_memorysync/_api.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "dyceum",
+      "version": "0.5.0rc5",
+      "download_url": "https://files.pythonhosted.org/packages/ba/68/78a377e0d3dd4a2f84b4c8b527db3993ba62509ef82397e687946d2cb23d/dyceum-0.5.0rc5.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:40.698377+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "http://packages.pypy.org",
+          "file": "dyceum-0.5.0rc5/conftest.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PyPy - packages",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://dyceum.org",
+          "file": "dyceum-0.5.0rc5/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dyceum.org/latest",
+          "file": "dyceum-0.5.0rc5/_mkdocs_hooks.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "dyceum",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dyceum.org",
+          "file": "dyceum-0.5.0rc5/_mkdocs_hooks.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/dyceum/magic.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/dyceum/magic.py",
+          "line": 154,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/dyceum/viz.py",
+          "line": 1320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/dyceum/viz.py",
+          "line": 1313,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 253,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 278,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 287,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 298,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 299,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 325,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 333,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program/4d2",
+          "file": "dyceum-0.5.0rc5/tests/test_magic.py",
+          "line": 337,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dyceum.org/)&rsquo;s",
+          "file": "dyceum-0.5.0rc5/docs/assets/nb_dyceum_intro.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://apocalypse-world.com/)&rsquo;s*",
+          "file": "dyceum-0.5.0rc5/docs/assets/nb_dyceum_intro.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://anydice.com/program/130e6",
+          "file": "dyceum-0.5.0rc5/docs/assets/nb_dyceum_intro.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AnyDice",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/)-compatible",
+          "file": "dyceum-0.5.0rc5/dyceum/anydice/__init__.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/)-compatible",
+          "file": "dyceum-0.5.0rc5/dyceum/anydice/__init__.py",
+          "line": 16,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://anydice.com/program",
+          "file": "dyceum-0.5.0rc5/dyceum/anydice/fetch.py",
+          "line": 53,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /program",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "farewell-rss",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/a2/b1/21c39e9b4e4214b2c1bdb131267af9658191a0463c1f64cfefcc5a5b2e4b/farewell_rss-0.1.4.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:39.184613+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/node_modules/punycode/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/emoji-regex@9.2.2/node_modules/emoji-regex/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/cssesc@3.0.0/node_modules/cssesc/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@babel+generator@7.29.7/node_modules/jsesc/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@asamuzakjp+dom-selector@7.1.1/node_modules/is-potential-custom-element-name/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.unicode.org/Public",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /Public",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/reports",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Technical Reports",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/cldr/data",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - unicode-org/cldr: The home of the Unicode Common Locale Data Repository \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://source.icu-project.org/repos/icu",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Projects \u2013 Unicode",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/utility/trac/browser",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/Public",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /Public",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/Public",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /Public",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/reports",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Technical Reports",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/cldr/data",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - unicode-org/cldr: The home of the Unicode Common Locale Data Repository \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://source.icu-project.org/repos/icu",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Projects \u2013 Unicode",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/utility/trac/browser",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.unicode.org/copyright.html",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/@typescript-eslint+eslint-plugin@8.65.0_@typescript-eslint+parser@8.65.0_eslint@10.8.0__2ffff5df38a072033d538a6847cca6fd/node_modules/typescript/ThirdPartyNoticeText.txt",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Unicode Terms of Use",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://mathiasbynens.be",
+          "file": "farewell_rss-0.1.4/frontend/node_modules/.pnpm/emoji-regex@8.0.0/node_modules/emoji-regex/LICENSE-MIT.txt",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Mathias Bynens",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ikebana-py",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/aa/9f/71797d9e78ff04f007074bb6c01e883b245cb85d711243423cc2b77940e6/ikebana_py-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:33.349964+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://id.vk.ru/not_robot_captcha",
+          "file": "ikebana_py-0.1.0/examples/solve.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "VK ID",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "emotionweb",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/53/c5/db7cd0e2d5813893ef926e84d449b3618b02da731317ce1214e0a14a33f1/emotionweb-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:32.114242+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/deployment/asgi",
+          "file": "emotionweb-0.2.0/webengine/core/asgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/deployment/asgi",
+          "file": "emotionweb-0.2.0/webengine/core/asgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/topics/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/ref/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/deployment/checklist",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Deployment checklist | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/ref/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/ref/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/topics/i18n",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/static-files",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/ref/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/topics/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/ref/settings",
+          "file": "emotionweb-0.2.0/webengine/core/settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi",
+          "file": "emotionweb-0.2.0/webengine/core/wsgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi",
+          "file": "emotionweb-0.2.0/webengine/core/wsgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "veripoint",
+      "version": "0.8.1",
+      "download_url": "https://files.pythonhosted.org/packages/58/4f/333ff76d6fa83684fb48e59630e77de70fa4879030c02ccff1218201dea2/veripoint-0.8.1-py3-none-any.whl",
+      "analyzed_at": "2026-08-22T22:22:30.691976+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com",
+          "file": "keel/cli.py",
+          "line": 402,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "veripoint/cli.py",
+          "line": 405,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "t4l-agent",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/d5/3e/d07377f28dd6daa8b0f83db3c5ea6f485f71ed200ebd2c6069c08e6719c4/t4l_agent-0.3.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:30.368475+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://www.youtube.com/shorts/t7VDDNKBNx8",
+          "file": "t4l_agent-0.3.1/tests/test_video_verification.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/oembed",
+          "file": "t4l_agent-0.3.1/tests/test_video_verification.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/t7VDDNKBNx8",
+          "file": "t4l_agent-0.3.1/tests/test_video_verification.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=qFFtrj0mdBQ",
+          "file": "t4l_agent-0.3.1/tests/test_video_verification.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/qFFtrj0mdBQ",
+          "file": "t4l_agent-0.3.1/tests/test_chat_loop.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/t7VDDNKBNx8",
+          "file": "t4l_agent-0.3.1/tests/test_chat_loop.py",
+          "line": 138,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/qFFtrj0mdBQ",
+          "file": "t4l_agent-0.3.1/tests/test_chat_loop.py",
+          "line": 256,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/shorts/t7VDDNKBNx8",
+          "file": "t4l_agent-0.3.1/tests/test_chat_loop.py",
+          "line": 261,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/oembed",
+          "file": "t4l_agent-0.3.1/src/t4l_agent/video_verification.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "clique-panel",
       "version": "0.50.54",
@@ -33691,6 +36319,130 @@
           "command": "subprocess.run(['git', '-C', str(Path(__file__).resolve().parents[1]), 'rev-parse', '--short', 'HEAD'], capture_output=True, text=True, timeout=5)",
           "resolved": false,
           "context": "build_id",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "octroi-ingest",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d7/45/79e191550f896b80129da6ddd65e1cf80435b0dd47c75da7844a834ff9fb/octroi_ingest-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:31.273467+00:00",
+      "install_hooks": [
+        {
+          "file": "octroi_ingest-0.1.0/src/octroi_ingest/__init__.py",
+          "line": 51,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data=body, headers=headers, method='POST')",
+          "resolved": false,
+          "context": "_default_transport.send",
+          "source": "package_init"
+        },
+        {
+          "file": "octroi_ingest-0.1.0/src/octroi_ingest/__init__.py",
+          "line": 53,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(request, timeout=timeout_s)",
+          "resolved": false,
+          "context": "_default_transport.send",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "distributed-llm",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/d7/44/4cec00c321973c6109f64e11a7c1234f6319fe4da271e93e00688c50c4cd/distributed_llm-0.4.1.tar.gz",
+      "analyzed_at": "2026-08-22T22:22:50.722614+00:00",
+      "install_hooks": [
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 86,
+          "call": "requests.post",
+          "command": "requests.post(f'{self.coordinator_endpoint}/api/v1/clusters', json=payload, timeout=60)",
+          "resolved": false,
+          "context": "ClusterResource.create",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 98,
+          "call": "requests.get",
+          "command": "requests.get(f'{self.coordinator_endpoint}/api/v1/clusters/{self.name}', timeout=30)",
+          "resolved": false,
+          "context": "ClusterResource.read",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 110,
+          "call": "requests.patch",
+          "command": "requests.patch(f'{self.coordinator_endpoint}/api/v1/clusters/{self.name}', json=changes, timeout=60)",
+          "resolved": false,
+          "context": "ClusterResource.update",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 122,
+          "call": "requests.delete",
+          "command": "requests.delete(f'{self.coordinator_endpoint}/api/v1/clusters/{self.name}', timeout=60)",
+          "resolved": false,
+          "context": "ClusterResource.delete",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 156,
+          "call": "requests.post",
+          "command": "requests.post(f'{self.coordinator_endpoint}/api/v1/federation', json=payload, timeout=30)",
+          "resolved": false,
+          "context": "FederationLinkResource.create",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 167,
+          "call": "requests.delete",
+          "command": "requests.delete(f'{self.coordinator_endpoint}/api/v1/federation/{self.name}', timeout=30)",
+          "resolved": false,
+          "context": "FederationLinkResource.delete",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 198,
+          "call": "requests.post",
+          "command": "requests.post(f'{self.coordinator_endpoint}/api/v1/tenants', json=payload, timeout=30)",
+          "resolved": false,
+          "context": "TenantResource.create",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 209,
+          "call": "requests.delete",
+          "command": "requests.delete(f'{self.coordinator_endpoint}/api/v1/tenants/{self.tenant_id}', timeout=30)",
+          "resolved": false,
+          "context": "TenantResource.delete",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 243,
+          "call": "requests.post",
+          "command": "requests.post(f'{self.coordinator_endpoint}/api/v1/models', json=payload, timeout=300)",
+          "resolved": false,
+          "context": "ModelDeploymentResource.create",
+          "source": "package_init"
+        },
+        {
+          "file": "distributed_llm-0.4.1/src/distllm/terraform/__init__.py",
+          "line": 254,
+          "call": "requests.delete",
+          "command": "requests.delete(f'{self.coordinator_endpoint}/api/v1/models/{self.model_name}', timeout=300)",
+          "resolved": false,
+          "context": "ModelDeploymentResource.delete",
           "source": "package_init"
         }
       ]
