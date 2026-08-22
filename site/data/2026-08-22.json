@@ -1,11 +1,4456 @@
 {
-  "generated_at": "2026-08-22T16:26:34.867943+00:00",
+  "generated_at": "2026-08-22T18:32:34.017678+00:00",
   "stats": {
-    "total_packages": 178,
-    "malicious": 14,
-    "clean": 164
+    "total_packages": 205,
+    "malicious": 17,
+    "clean": 188
   },
   "packages": [
+    {
+      "name": "amazon-india-seller-mcp",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/97/c0/fb93c2118522d1e8ba85749dd9eb51c4ee27bff772c9db8c5140dfc24e07/amazon_india_seller_mcp-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:31.225336+00:00",
+      "total_findings": 22,
+      "findings": [
+        {
+          "url": "https://www.amazon.in/s?k=test",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_security.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in : test",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s?k=test",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in : test",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s?k=test",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in : test",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/dp/B0TEST1234",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/s?k=sink+strainer",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/dp/B0TEST1234",
+          "file": "amazon_india_seller_mcp-0.2.0/tests/test_scraping_guardrails.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/scraper_service.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.amazon.in/gp/bestsellers",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/scraper_service.py",
+          "line": 261,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amazon.in Bestsellers: The most popular items on Amazon",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.indiamart.com",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/supplier_service.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.tradeindia.com",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/supplier_service.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TradeIndia - B2B Marketplace for Top Manufacturers, Exporters, Suppliers",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://udaan.com",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/supplier_service.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Udaan - B2B Buying for Retailers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://msme.gov.in",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/supplier_service.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.search.brave.com/app/keys",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 181,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 183,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://serper.dev",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Serper - The World's Fastest and Cheapest Google Search API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://google.serper.dev/search",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://tavily.com",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tavily",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.tavily.com/search",
+          "file": "amazon_india_seller_mcp-0.2.0/amazon_india_seller_mcp/services/search_service.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "markovo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/e9/d5f0b1e98e895b488e64c1389f6649a358382f5ebfec43a1bfca9d8771b4/markovo-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-08-22T18:32:28.171054+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://markovo.net",
+          "file": "pdf2md_core/remote_client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "File to Markdown Converter for AI, API & MCP | Markovo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markovo.net",
+          "file": "pdf2md_core/remote_client.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "File to Markdown Converter for AI, API & MCP | Markovo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markovo.net",
+          "file": "pdf2md_core/remote_client.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "File to Markdown Converter for AI, API & MCP | Markovo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markovo.net",
+          "file": "pdf2md_core/remote_client.py",
+          "line": 721,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "File to Markdown Converter for AI, API & MCP | Markovo",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://markovo.net/app",
+          "file": "pdf2md_core/remote_client.py",
+          "line": 105,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Workbench \u2014 Markovo",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "v-InfoTrace",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/75/a2/4016220de6102e9ad3e442d2167af195493dd0dd26b8a933f6b41eb4fd48/v_infotrace-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:27.593110+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "http://vision.middlebury.edu/flow/flowEval-iccv07.pdf",
+          "file": "v_infotrace-0.2.0/InfoFlow/flow_vis.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://vision.middlebury.edu/flow/flowEval-iccv07.pdf",
+          "file": "v_infotrace-0.2.0/InfoFlow/flow_vis.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://docs.opencv.org/2.4/modules/video/doc/motion_analysis_and_object_tracking.html",
+          "file": "v_infotrace-0.2.0/InfoFlow/optical_flow.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Motion Analysis and Object Tracking \u2014 OpenCV 2.4.13.7 documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://scikit-image.org/docs/stable/api/skimage.registration.html",
+          "file": "v_infotrace-0.2.0/InfoFlow/optical_flow.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "skimage.registration \u2014 skimage 0.26.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.opencv.org/2.4/modules/video/doc/motion_analysis_and_object_tracking.html",
+          "file": "v_infotrace-0.2.0/InfoFlow/optical_flow.py",
+          "line": 10,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Motion Analysis and Object Tracking \u2014 OpenCV 2.4.13.7 documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://scikit-image.org/docs/stable/api/skimage.registration.html",
+          "file": "v_infotrace-0.2.0/InfoFlow/optical_flow.py",
+          "line": 89,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "skimage.registration \u2014 skimage 0.26.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.ncoads.org/upload/202009/24/202009241429568694.pdf",
+          "file": "v_infotrace-0.2.0/InfoFlow/LK_flow.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.ncoads.org/upload/202009/24/202009241429568694.pdf",
+          "file": "v_infotrace-0.2.0/InfoFlow/LK_flow.py",
+          "line": 11,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "mintmark",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/d8/3b/92e85f13b9e950d8e0439217f463ef7c974cdc02d683879a90532e26d5cd/mintmark-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:22.024380+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.tcmb.gov.tr/wps/wcm/connect/9fa62a85-5b6d-46c5-9b01-eb461d43723d",
+          "file": "mintmark-0.1.2/assets/denylist/institutions-tr.txt",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://json-schema.org",
+          "file": "mintmark-0.1.2/tests/unit/test_cli.py",
+          "line": 255,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JSON Schema",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tokentriage",
+      "version": "1.0.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/8b/52/6826b5879d7654b3575a18b1eadea0b5aad07f6d62d7624053018ce789af/tokentriage-1.0.0rc1.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:20.404941+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "http://elsewhere.host",
+          "file": "tokentriage-1.0.0rc1/tests/test_ledger.py",
+          "line": 390,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://nope",
+          "file": "tokentriage-1.0.0rc1/tests/test_config.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://xn--bcher-kva.de/v1",
+          "file": "tokentriage-1.0.0rc1/tests/test_display_origin.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "punycode",
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "dicolytics",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/45/44/20396cbb5834ebaf9853bc4f85397e1c819736c1beddf1907369d6d09c9c/dicolytics-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:08.435425+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://dicolytics.com",
+          "file": "dicolytics-0.1.0/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.dicolytics.com",
+          "file": "dicolytics-0.1.0/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.dicolytics.com",
+          "file": "dicolytics-0.1.0/src/dicolytics/constants.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "lotuswatch-security",
+      "version": "0.1.0b1",
+      "download_url": "https://files.pythonhosted.org/packages/a4/c3/bbe575bc48d19a91c7b95c26d30ccf767b34059e72c18442b466a1c41997/lotuswatch_security-0.1.0b1.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:07.587514+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc8659.html",
+          "file": "lotuswatch_security-0.1.0b1/src/lotuswatch/checks/caa.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 8659: DNS Certification Authority Authorization (CAA) Resource Record",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7208.html",
+          "file": "lotuswatch_security-0.1.0b1/src/lotuswatch/checks/email_dns.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc7489.html",
+          "file": "lotuswatch_security-0.1.0b1/src/lotuswatch/checks/email_dns.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.telegram.org",
+          "file": "lotuswatch_security-0.1.0b1/src/lotuswatch/notifications/telegram.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "histdata-fetcher",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/59/e8/52aad5de52b5be26da5f8d7e265e25bf3d7ca8e76cf521caa0f8ac4ac0af/histdata_fetcher-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:05.945007+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://www.histdata.com",
+          "file": "histdata_fetcher-0.1.0/tests/test_client.py",
+          "line": 377,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HistData.com \u2013 Free Forex Historical Data",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-historical-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Historical Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/get.php",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HistData.com \u2013 Free Forex Historical Data",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-historical-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Historical Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/get.php",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 75,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/download-free-forex-historical-data?/ascii/",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 76,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Free Forex Historical Data \u2013 HistData.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.histdata.com/get.php",
+          "file": "histdata_fetcher-0.1.0/src/histdata_fetcher/client.py",
+          "line": 77,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "kainext-binance-mcp",
+      "version": "1.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/2a/44/3a6ff074951f3ff1f1e0747aa6995ea30379ede584ee3736a447c9b83748/kainext_binance_mcp-1.2.1.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:03.872808+00:00",
+      "total_findings": 23,
+      "findings": [
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_testnet_flow.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_testnet_flow.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa4_backtest.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa4_backtest.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa2_marketdata.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa2_marketdata.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa4_signals.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet.binance.vision",
+          "file": "kainext_binance_mcp-1.2.1/tests/integration/test_capa4_signals.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.binance.com/api/v3/ticker/price",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/watch.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.binance.com/api/v3/klines",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/watch.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fapi.binance.com/fapi/v1/premiumIndex",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/watch.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.alternative.me/fng",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3/global",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3/coins/bitcoin",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mempool.space/api/v1/fees/recommended",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://mempool.space/api/v1/mining/hashrate/3d",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.alternative.me/fng?limit=7",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/marketwide.py",
+          "line": 91,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.coindesk.com/arc/outboundfeeds/rss",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/news/sources.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.theblock.co/rss.xml",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/news/sources.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Block",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://decrypt.co/feed",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/news/sources.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Decrypt",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/news/sources.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FRB: Press Release - All Releases",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://crypto.news/feed",
+          "file": "kainext_binance_mcp-1.2.1/src/kainext_binance_mcp/news/sources.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "crypto.news",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "btcvm",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7b/5d/88454be4dffb0d9074cfb115b67a3d826799fae20e5ea6357662ba23c8f2/btcvm-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:02.349447+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://blockstream.info/testnet/tx",
+          "file": "btcvm-0.1.0/main.py",
+          "line": 377,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Testnet Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/tx",
+          "file": "btcvm-0.1.0/main.py",
+          "line": 379,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/api",
+          "file": "btcvm-0.1.0/verify.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/api",
+          "file": "btcvm-0.1.0/verify.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 894,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 894,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Testnet Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 910,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 911,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Testnet Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 1518,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 1518,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Testnet Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 1564,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/tx",
+          "file": "btcvm-0.1.0/ott.py",
+          "line": 1564,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bitcoin Testnet Explorer - Blockstream.info",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/api",
+          "file": "btcvm-0.1.0/clock.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://blockstream.info/testnet/api",
+          "file": "btcvm-0.1.0/clock.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 301,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hiringcafe-cli",
+      "version": "0.1.5",
+      "download_url": "https://files.pythonhosted.org/packages/76/ad/2588ae1e4433e2baba468e8aa832fa062d2a724f2dd3b62d77a125907c56/hiringcafe_cli-0.1.5.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:01.558040+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://hiringcafe.com",
+          "file": "hiringcafe_cli-0.1.5/src/hiringcafe_cli/http_client.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HiringCafe - AI Job Search",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "marketapp-api",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5c/7e/32bcd27008ea013266ecd1b3bf85218eff9e2b0172e04475ee3e0b20e963/marketapp_api-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:32:00.674853+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://marketapp.ws",
+          "file": "marketapp_api-1.0.0/MarketappAPI/types/constants.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Marketapp",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "rh-cve-checker",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/9f/f7/e16c9f878ec138862254836b26a956f48a4a392cc57fd2bb290f566b6fbc/rh_cve_checker-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:59.555992+00:00",
+      "total_findings": 19,
+      "findings": [
+        {
+          "url": "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/cli.py",
+          "line": 1572,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/research/fetch.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Security Updates",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/lifecycle/ai_detector.py",
+          "line": 342,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://access.redhat.com/product-life-cycles/api/v1/products",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/lifecycle/client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.redhat.com/en/documentation/openshift_container_platform",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/core/models.py",
+          "line": 1405,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/core/models.py",
+          "line": 1411,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://access.redhat.com/security/cve",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/core/analyzer.py",
+          "line": 985,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Security Updates",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/core/analyzer.py",
+          "line": 1459,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Red Hat Security Api | Red Hat Customer Portal Labs",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/core/analyzer.py",
+          "line": 1484,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Red Hat Security Api | Red Hat Customer Portal Labs",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/nvd/client.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/hydra/client.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://amd64.ocp.releases.ci.openshift.org",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/ocp/models.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.redhat.com/en/documentation/openshift_container_platform",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/ocp/models.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://amd64.ocp.releases.ci.openshift.org",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/ocp/client.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://amd64.ocp.releases.ci.openshift.org",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/ocp/client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://amd64.ocp.releases.ci.openshift.org",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/ocp/client.py",
+          "line": 14,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://security.access.redhat.com/data/csaf/v2/vex",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/vex/client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Security Data - /csaf/v2/vex/",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve.json?advisory=",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/vex/client.py",
+          "line": 889,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve.json?advisory=",
+          "file": "rh_cve_checker-0.2.1/rh_cve_checker/vex/client.py",
+          "line": 964,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "htpy-htmx",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cc/af/bf87a9f448569e83c419e78ee844b55593123198effddf87cf0daae6e7cb/htpy_htmx-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:58.085095+00:00",
+      "total_findings": 70,
+      "findings": [
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-put",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-put ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-patch",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-patch ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-trigger",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-trigger ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-target",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-target ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-on",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-on ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-vals",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 228,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-vals ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-include",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 241,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-include ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-swap-oob",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-swap-oob ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-select-oob",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 265,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-select-oob ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-headers",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 289,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-headers ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-encoding",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 303,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-encoding ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-indicator",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-indicator ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-boost",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 346,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-boost ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-sync",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 368,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-sync ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-confirm",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 376,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-confirm ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-validate",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 384,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-validate ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-disable",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 392,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-disable ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-ignore",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 404,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ignore ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-preserve",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 412,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-preserve ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-status",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 430,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-status ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-action",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 451,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-action ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-method",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 461,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-method ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-history-elt",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 507,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-history-elt ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-put",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 27,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-put ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-patch",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-patch ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-trigger",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 102,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-trigger ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-target",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 169,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-target ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-on",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 187,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-on ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-vals",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 226,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-vals ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-include",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 239,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-include ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-swap-oob",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 249,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-swap-oob ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-select-oob",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 263,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-select-oob ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-headers",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 287,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-headers ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-encoding",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-encoding ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-indicator",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 311,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-indicator ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-boost",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 344,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-boost ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-sync",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 366,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-sync ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-confirm",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 374,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-confirm ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-validate",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 382,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-validate ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-disable",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 390,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-disable ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-ignore",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 402,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ignore ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-preserve",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 410,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-preserve ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-status",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 428,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-status ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-action",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 449,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-action ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-method",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 459,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-method ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-history-elt",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/hx.py",
+          "line": 505,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-history-elt ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-sse",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-sse ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-ws",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ws ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-live",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-live ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-optimistic",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-optimistic ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-browser-indicator",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-browser-indicator ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-prompt",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-prompt ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-preload",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-preload ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-ptag",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ptag ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-history-cache",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-history-cache ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-head",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-head ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-targets",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-targets ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-csp",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-csp ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-sse",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 20,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-sse ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-ws",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ws ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-live",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-live ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-optimistic",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 54,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-optimistic ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-browser-indicator",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 63,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-browser-indicator ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-prompt",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 71,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-prompt ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/reference/attributes/hx-preload",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 81,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-preload ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-ptag",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 90,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-ptag ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-history-cache",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 98,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-history-cache ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-head",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 108,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-head ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-targets",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 116,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-targets ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://four.htmx.org/extensions/hx-csp",
+          "file": "htpy_htmx-0.1.0/htpy_htmx/ext.py",
+          "line": 125,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hx-csp ~ htmx",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "lydia-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a7/5e/bc2834388124f46d585d51bedd602201117bc2a6edbf30fe1cd37be0c427/lydia_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:51.029676+00:00",
+      "total_findings": 19,
+      "findings": [
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_connectors_canvas.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_connectors_canvas.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_connectors_canvas.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_agent_tools_assistant.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_cli_auth.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_cli_auth.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_cli_auth.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/tests/test_cli_auth.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ntfy.sh/lydia-abc123",
+          "file": "lydia_cli-0.1.0/tests/test_ntfy.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy web",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://geocoding-api.open-meteo.com/v1/search",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/weather.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.open-meteo.com/v1/forecast",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/weather.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ipapi.co/json",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/weather.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ntfy.sh",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/ntfy.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ntfy.sh | Send push notifications to your phone via PUT/POST",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://techcrunch.com/tag/artificial-intelligence/feed",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/news.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Artificial Intelligence (AI) | TechCrunch",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/news.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Artificial intelligence \u2013 MIT Technology Review",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/src/lydia/config/settings.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/src/lydia/cli/main.py",
+          "line": 395,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://school.instructure.com",
+          "file": "lydia_cli-0.1.0/src/lydia/cli/main.py",
+          "line": 426,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://login.microsoftonline.com/common",
+          "file": "lydia_cli-0.1.0/src/lydia/connectors/auth/outlook_oauth.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "Hack4u-v2",
+      "version": "0.6.0",
+      "download_url": "https://files.pythonhosted.org/packages/0f/8a/7e722358edfcf782d00047e6478a0d0933336c08084afdf3dcefb1ae48ca/hack4u_v2-0.6.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:42.656968+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://hack4u.io",
+          "file": "hack4u_v2-0.6.0/setup.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hack4u - Academia de Ciberseguridad y Hacking \u00c9tico",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pypic-plasma",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/96/2b/01f502e064bd394f4294437affd7b87517cc4a3de6b11c08d2e149f895da/pypic_plasma-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:41.903968+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://www.nrl.navy.mil/ssd/branches/7680/arms",
+          "file": "pypic_plasma-0.1.2/pypic.simulation.toml",
+          "line": 641,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.tu-braunschweig.de/iqst/aikef",
+          "file": "pypic_plasma-0.1.2/pypic.simulation.toml",
+          "line": 991,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://clasp.engin.umich.edu/batsrus",
+          "file": "pypic_plasma-0.1.2/tests/test_schema.py",
+          "line": 595,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://clasp.engin.umich.edu/batsrus",
+          "file": "pypic_plasma-0.1.2/tests/test_schema.py",
+          "line": 584,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "pypic_plasma-0.1.2/tests/test_bibliography.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "pypic_plasma-0.1.2/tests/test_bibliography.py",
+          "line": 98,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "pypic_plasma-0.1.2/src/pypic/schema/_export.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-data-automation-runtime",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/61/b5/3e5c05ee2cb3fbfef71c9d254f68fa9723aa97ecb92baa067a80e1f8cdc1/capo_bedrock_data_automation_runtime-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:39.243406+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation_runtime-0.1.0/src/capo_bedrock_data_automation_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-data-automation",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/51/9d/ab0c160661701ee963baed3a87e97e1983eeb00aa88c1e8309bd0a9c690a/capo_bedrock_data_automation-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:38.884379+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_data_automation-0.1.0/src/capo_bedrock_data_automation/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-agentcore-control",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/fa/7b/247befc8afceaeca1c34f10a4fdce143000fc6163d2edbe7481c452cb65e/capo_bedrock_agentcore_control-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:38.340227+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore_control-0.1.0/src/capo_bedrock_agentcore_control/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "openlegal-chile",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/b1/27/3e1b811e7fdc7b769012d5b2ff035c82f4ad2a6ffb6eff2176527e190153/openlegal_chile-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:37.070514+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://snifa.sma.gob.cl",
+          "file": "openlegal_chile-1.0.0/ambiental_connector.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SNIFA - Sistema Nacional de Informaci\u00f3n de Fiscalizaci\u00f3n Ambiental",
+          "cert_issuer": "eMudhra Technologies Limited"
+        },
+        {
+          "url": "https://snifa.sma.gob.cl/Sancionatorio/ObtenerResultadosGrid",
+          "file": "openlegal_chile-1.0.0/ambiental_connector.py",
+          "line": 41,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "eMudhra Technologies Limited"
+        },
+        {
+          "url": "https://www.tribunalconstitucional.cl",
+          "file": "openlegal_chile-1.0.0/pjud_connector.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.cmfchile.cl/portal/normativa/624",
+          "file": "openlegal_chile-1.0.0/cmf_connector.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.cmfchile.cl/portal/normativa/624/w4-propertyvalue-49322.html",
+          "file": "openlegal_chile-1.0.0/cmf_connector.py",
+          "line": 37,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Preguntas frecuentes sobre algunas normas - CMF Chile - Legislaci\u00f3n y normativa",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.dt.gob.cl/legislacion/1624",
+          "file": "openlegal_chile-1.0.0/dt_connector.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.dt.gob.cl/legislacion/1624/w3-propertyvalue-147182.html",
+          "file": "openlegal_chile-1.0.0/dt_connector.py",
+          "line": 37,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ordinarios - DT - Normativa 3.0",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.contraloria.cl/apibusca",
+          "file": "openlegal_chile-1.0.0/cgr_connector.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.contraloria.cl",
+          "file": "openlegal_chile-1.0.0/cgr_connector.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login cgr2",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.bcn.cl/leychile/api/v1",
+          "file": "openlegal_chile-1.0.0/bcn_connector.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ley Chile - Biblioteca del Congreso Nacional",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.leychile.cl/Consulta/obtxml",
+          "file": "openlegal_chile-1.0.0/bcn_connector.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.sii.cl/normativa_legislacion",
+          "file": "openlegal_chile-1.0.0/sii_connector.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecciona",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.tdlc.cl/wp-json/wp/v2",
+          "file": "openlegal_chile-1.0.0/tdlc_connector.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/chat/completions",
+          "file": "openlegal_chile-1.0.0/chat_engine.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "openlegal_chile-1.0.0/chat_engine.py",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discrepancias.panelexpertos.cl/api/v1",
+          "file": "openlegal_chile-1.0.0/panel_expertos_connector.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Discrepancias - Panel de Expertos",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cne.cl",
+          "file": "openlegal_chile-1.0.0/cne_connector.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Api Combustibles - Comisi\u00f3n Nacional de Energ\u00eda",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.cne.cl/api/login",
+          "file": "openlegal_chile-1.0.0/cne_connector.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-agentcore",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/89/43/dca8ba2501e8db162c19f67620c2bac25fe74af6c74aeba8411891baa3a3/capo_bedrock_agentcore-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:22.621441+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agentcore-0.1.0/src/capo_bedrock_agentcore/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-agent-runtime",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/31/ed/f50cf47eb855215264271552b04f58d8f3c8b62087fdb9ab74a8ffd09bef/capo_bedrock_agent_runtime-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:21.806790+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags",
+          "file": "capo_bedrock_agent_runtime-0.1.0/src/capo_bedrock_agent_runtime/types/prompt_template.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Prompting best practices - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "capo-bedrock-agent",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f3/61/78bacd1a54e485638a1842a6d27814333f30eec9317a7c5fcf217f8ed01b/capo_bedrock_agent-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:20.585940+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 313,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 19,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/specification.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine specification \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 94,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 171,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 189,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/additional-specs/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 211,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Rules engine standard library \u2014 Smithy 2.0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 268,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://smithy.io/2.0/aws/rules-engine/standard-library.html",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/_rule_engine/_endpoint_runtime.py",
+          "line": 303,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.iana.org/assignments/media-types/media-types.xhtml",
+          "file": "capo_bedrock_agent-0.1.0/src/capo_bedrock_agent/types/byte_content_doc.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Media Types",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "diffly-cli",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/fd/a2/4c3c374b44f94e6a5aee180e2d9a2cd11e4d35f16c776b483ab2f0d7fab6/diffly_cli-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:19.526609+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://graphite.com/guides/code-review-github",
+          "file": "diffly_cli-1.0.0/scripts/write_benchmarks_doc.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to do GitHub code reviews that don't take all week",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "awewarm-hub",
+      "version": "0.5.5",
+      "download_url": "https://files.pythonhosted.org/packages/04/29/2e4df1a93d1f6d81cdcdc4336a1b0df068a0b2938fba2bbc37901bc2b15d/awewarm_hub-0.5.5.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:15.545944+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://open.bigmodel.cn/api/anthropic",
+          "file": "awewarm_hub-0.5.5/tests/test_hub.py",
+          "line": 476,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "kabutam",
+      "version": "0.1.6",
+      "download_url": "https://files.pythonhosted.org/packages/ab/dc/4045f6aa5424e582b288903897b54f31ffdc11e619727a15d0eff28f659e/kabutam-0.1.6.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:15.029800+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://edinetdb.jp/v1/companies",
+          "file": "kabutam-0.1.6/kabutam/edinet/client.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.jquants.com/v2/equities/master",
+          "file": "kabutam-0.1.6/kabutam/setup/fetch_jquants.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://edinetdb.jp/v1/search",
+          "file": "kabutam-0.1.6/kabutam/setup/fetch_edinet.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "onedl-mmdeploy",
       "version": "1.5.1",
@@ -27305,6 +31750,44 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "onedl-mmdeploy-runtime-gpu",
+      "version": "1.5.1",
+      "analyzed_at": "2026-08-22T18:31:16.911223+00:00",
+      "binaries": [
+        {
+          "name": "mmdeploy_runtime.cp310-win_amd64.pyd",
+          "file": "mmdeploy_runtime_gpu/mmdeploy_runtime.cp310-win_amd64.pyd",
+          "sha256": "e920b6163e1cabeeef564d1c0c9960f28b4a758adac23cf774bd379f5b97b6f6",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "mmdeploy.dll",
+          "file": "mmdeploy_runtime_gpu/mmdeploy.dll",
+          "sha256": "94a6c94e781c22bf915be5843b8496c814c8e10b5f10095fcf45f4544ec58216",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "pytray32",
+      "version": "0.1.0",
+      "analyzed_at": "2026-08-22T18:32:08.061862+00:00",
+      "binaries": [
+        {
+          "name": "_native.cp310-win32.pyd",
+          "file": "pytray32/_native.cp310-win32.pyd",
+          "sha256": "73bbca9376244f1fd0d801ef38b95a58511d5c2ce6cc1ce77d9f6cbc6487904c",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -27576,6 +32059,23 @@
           "command": "subprocess.run([str(python_exe), '-m', 'patchright', 'install', 'chromium'], check=True, capture_output=True)",
           "resolved": false,
           "context": "ensure_venv_and_run",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "awewarm-hub",
+      "version": "0.5.5",
+      "download_url": "https://files.pythonhosted.org/packages/04/29/2e4df1a93d1f6d81cdcdc4336a1b0df068a0b2938fba2bbc37901bc2b15d/awewarm_hub-0.5.5.tar.gz",
+      "analyzed_at": "2026-08-22T18:31:15.546190+00:00",
+      "install_hooks": [
+        {
+          "file": "awewarm_hub-0.5.5/src/awewarm_hub/__init__.py",
+          "line": 34,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', '-C', str(_checkout_root()), 'describe', '--always', '--dirty'], capture_output=True, text=True, timeout=5, check=True)",
+          "resolved": false,
+          "context": "display_version",
           "source": "package_init"
         }
       ]
