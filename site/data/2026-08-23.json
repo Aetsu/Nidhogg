@@ -1,11 +1,1788 @@
 {
-  "generated_at": "2026-08-23T08:31:02.743232+00:00",
+  "generated_at": "2026-08-23T10:25:36.142345+00:00",
   "stats": {
-    "total_packages": 72,
-    "malicious": 8,
-    "clean": 64
+    "total_packages": 91,
+    "malicious": 10,
+    "clean": 81
   },
   "packages": [
+    {
+      "name": "bucket-scanner",
+      "version": "0.12.0",
+      "download_url": "https://files.pythonhosted.org/packages/80/53/1219eae3f543fd609ce6fe1c47b9bb3cb5c2fb05250f71b850313761539f/bucket_scanner-0.12.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:33.162421+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://iam.api.cloud.yandex.net/iam/v1/tokens",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/auth.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/notify.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://storage.yandexcloud.net",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/s3.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://storage.api.cloud.yandex.net/storage/v1",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.api.cloud.yandex.net/iam/v1",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://storage.api.cloud.yandex.net/storage/v1/buckets",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.api.cloud.yandex.net/iam/v1/serviceAccounts",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 29,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.api.cloud.yandex.net/iam/v1/keys",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 39,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.api.cloud.yandex.net/iam/v1/serviceAccounts",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/yc/management.py",
+          "line": 58,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "bucket_scanner-0.12.0/src/bucket_scanner/report/sarif.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "kbforge-okfquery",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/90/a6/21c3908466cf812a700857e2a8a3d1f841f538dee2f26b70d21568714d34/kbforge_okfquery-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:31.478251+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://duckdb.org/docs/installation",
+          "file": "kbforge_okfquery-0.1.0/src/okfquery/cli.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting\u2026",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://duckdb.org/docs/installation",
+          "file": "kbforge_okfquery-0.1.0/src/okfquery/cli.py",
+          "line": 76,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting\u2026",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "license-trace",
+      "version": "0.1.3",
+      "download_url": "https://files.pythonhosted.org/packages/6a/0e/7c29c13843e94275a062a7289fba41c76bd42ffbe5f4f09ded84c61b1a30/license_trace-0.1.3.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:30.986088+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://docs.rs/license-trace",
+          "file": "license_trace-0.1.3/Cargo.toml",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "license_trace - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://docs.rs/license-trace",
+          "file": "license_trace-0.1.3/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "license_trace - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "agentrisk-base-v1",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/7e/cc/f9d8abf40d977cd08d210fce42e31fd4e244d1986a7c9c3bfb0de4a0a4cb/agentrisk_base_v1-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:30.340279+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.agentrisk.dev",
+          "file": "agentrisk_base_v1-1.0.0/agentrisk/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "openai-agents-memorysync",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/12/80/56c20079a20520b650c6d8567e57791fb43193d74e6696f8768749ce2c8c/openai_agents_memorysync-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:29.700873+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://memorysync.io",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MemorySync \u2013 AI Memory Infrastructure",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/guides/openai-agents",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenAI Agents SDK Memory | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/api/overview",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Overview | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/release-notes",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release Notes | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.memorysync.io/debugging/support",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Support & Escalation | MemorySync Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://status.memorysync.io",
+          "file": "openai_agents_memorysync-1.0.0/pyproject.toml",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MemorySync status",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.memorysync.io",
+          "file": "openai_agents_memorysync-1.0.0/src/openai_agents_memorysync/_api.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ghemud-agentkit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e1/4f/8276aecf6ac4b8276509f173ae1a38991d478e5f97e2fa46c6081c5be108/ghemud_agentkit-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:26.410885+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "ghemud_agentkit-0.1.0/src/ghemud_agentkit/schema/generation.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "wlpworld",
+      "version": "0.8.5",
+      "download_url": "https://files.pythonhosted.org/packages/fd/6a/456a8e4aebd8fe961514e3bcd50170a14423ad737cf5976ee1ae8a912149/wlpworld-0.8.5.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:25.882469+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://47.94.246.86:8088",
+          "file": "wlpworld-0.8.5/three_layer_memory/auto_sync.py",
+          "line": 115,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "wlpworld \u2014 AI \u8bb0\u5fc6\u8303\u5f0f",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "gpx-to-map",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6f/9f/a137e9a3becf0468edc8bca33b27d258a70a5dc0cf66aa7a5070996fced4/gpx_to_map-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:24.883854+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 109,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 125,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "gpx_to_map-0.1.0/tests/test_core.py",
+          "line": 146,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+          "file": "gpx_to_map-0.1.0/gpx_to_map/styles.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json",
+          "file": "gpx_to_map-0.1.0/gpx_to_map/styles.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
+          "file": "gpx_to_map-0.1.0/gpx_to_map/styles.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fxnewsbias",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/d6/b35b5872b226e16006e05b2c0a39a4c49082bbc686621cc4cf19ce456129/fxnewsbias-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:24.275778+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://fxnewsbias.com",
+          "file": "fxnewsbias-1.0.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FXNewsBias - Real-Time Forex News Sentiment & Bias Dashboard",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/pricing",
+          "file": "fxnewsbias-1.0.0/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing | FXNewsBias Pro from $20/month",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com",
+          "file": "fxnewsbias-1.0.0/tests/test_client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FXNewsBias - Real-Time Forex News Sentiment & Bias Dashboard",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com",
+          "file": "fxnewsbias-1.0.0/tests/test_client.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FXNewsBias - Real-Time Forex News Sentiment & Bias Dashboard",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/__init__.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FXNewsBias - Real-Time Forex News Sentiment & Bias Dashboard",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/pricing",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing | FXNewsBias Pro from $20/month",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 58,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/developers",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 160,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forex Sentiment API | Real-Time FX News Sentiment Data as JSON",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fxnewsbias.com/pricing",
+          "file": "fxnewsbias-1.0.0/src/fxnewsbias/client.py",
+          "line": 168,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing | FXNewsBias Pro from $20/month",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "compas_sandbox",
+      "version": "0.6.2",
+      "download_url": "https://files.pythonhosted.org/packages/f5/ab/82122bf460790e471ad80d46cbaba8995ea445bda8160759bbe132248a05/compas_sandbox-0.6.2.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:22.813698+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_pyomo.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_pyomo.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_pyomo.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_pyomo.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_penalty_pyomo.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_penalty_pyomo.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_penalty_pyomo.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/cra_penalty_pyomo.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/rbe_pyomo.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/rbe_pyomo.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0010448522000161?via%3Dihub",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/rbe_pyomo.py",
+          "line": 28,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cad.2022.103216",
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/equilibrium/rbe_pyomo.py",
+          "line": 28,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "intraday-vigil",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b8/10/ee7b101bb333561f797a0049b44c514f7691809e0ba7c7163a403210a2cf/intraday_vigil-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:20.859446+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://developers.kite.trade",
+          "file": "intraday_vigil-0.1.0/src/vigil/auth.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login / Kite Connect developer",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://developers.kite.trade",
+          "file": "intraday_vigil-0.1.0/src/vigil/auth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login / Kite Connect developer",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "nonebot-plugin-metals",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/34/67/b036c23d3d83d2c24a0abf89a0958aa0a34216da5be435705574693fddda/nonebot_plugin_metals-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:19.981078+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://m.cmbchina.com/api/rate/gold?no=AU9999",
+          "file": "nonebot_plugin_metals-0.2.0/nonebot_plugin_metals/__init__.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "xmode-ai",
+      "version": "1.0.4",
+      "download_url": "https://files.pythonhosted.org/packages/e1/08/5b65cb84060bf33686866bdc9a33b27fa350832426fd5882b0b85c4b4558/xmode_ai-1.0.4.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:18.545563+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://xmode.space",
+          "file": "xmode_ai-1.0.4/pyproject.toml",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "XMode \u00b7 AI Library",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://t.me/xmode_deepseek",
+          "file": "xmode_ai-1.0.4/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Telegram: View @xmode_deepseek",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://xmode.space/xmode-api.php",
+          "file": "xmode_ai-1.0.4/xmode/core.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "ice-faithfulness",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/e6/e7/fb5b529e7cc2b28983637cc562ac5cdee085e50d11a9ee663c0198afa307/ice_faithfulness-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:17.155420+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2603.18579",
+          "file": "ice_faithfulness-1.0.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2603.18579] ICE: Intervention-Consistent Explanation Evaluation with Statistical Grounding for LLMs",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "slim-backtrader",
+      "version": "2.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/7a/71/6759b822b2ff8614840f9236566795bf45322f24f7bb1d8bbcfdf91290b2/slim_backtrader-2.0.1.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:15.996081+00:00",
+      "total_findings": 50,
+      "findings": [
+        {
+          "url": "https://community.backtrader.com/topic/2661/frompackages-directive-functionality-seems-to-be-broken-when-using-inheritance",
+          "file": "slim_backtrader-2.0.1/tests/test_metaclass.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 522,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://community.backtrader.com/topic/2661/frompackages-directive-functionality-seems-to-be-broken-when-using-inheritance",
+          "file": "slim_backtrader-2.0.1/tests/test_metaclass.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 522,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.crystalbull.com/sharpe-ratio-better-with-log-returns",
+          "file": "slim_backtrader-2.0.1/backtrader/analyzers/returns.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Improved Sharpe Ratio, using log returns",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.crystalbull.com/sharpe-ratio-better-with-log-returns",
+          "file": "slim_backtrader-2.0.1/backtrader/analyzers/returns.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Improved Sharpe Ratio, using log returns",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.crystalbull.com/sharpe-ratio-better-with-log-returns",
+          "file": "slim_backtrader-2.0.1/backtrader/analyzers/vwr.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Improved Sharpe Ratio, using log returns",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.crystalbull.com/sharpe-ratio-better-with-log-returns",
+          "file": "slim_backtrader-2.0.1/backtrader/analyzers/vwr.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Improved Sharpe Ratio, using log returns",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.sierrachart.com",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/sierrachart.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sierra Chart",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.sierrachart.com",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/sierrachart.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sierra Chart",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://finance.yahoo.com/quote",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/yahoo.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v7/finance/download",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/yahoo.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.metaquotes.net/en/metatrader4",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/mt4csv.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.metaquotes.net/en/metatrader4",
+          "file": "slim_backtrader-2.0.1/backtrader/feeds/mt4csv.py",
+          "line": 32,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.metatrader5.com/en/terminal/help/indicators/bw_indicators/awesome",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/awesomeoscillator.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ifcmarkets.com/en/ntx-indicators/awesome-oscillator",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/awesomeoscillator.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.metatrader5.com/en/terminal/help/indicators/bw_indicators/awesome",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/awesomeoscillator.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ifcmarkets.com/en/ntx-indicators/awesome-oscillator",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/awesomeoscillator.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.metatrader5.com/en/terminal/help/indicators/bw_indicators/ao",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/accdecoscillator.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ifcmarkets.com/en/ntx-indicators/ntx-indicators-accelerator-decelerator-oscillator",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/accdecoscillator.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.metatrader5.com/en/terminal/help/indicators/bw_indicators/ao",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/accdecoscillator.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.ifcmarkets.com/en/ntx-indicators/ntx-indicators-accelerator-decelerator-oscillator",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/accdecoscillator.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?p=125",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/williams.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?p=125",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/williams.py",
+          "line": 69,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://user42.tuxfamily.org/chart/manual/Zero_002dLag-Exponential-Moving-Average.html",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/zlema.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zero-Lag Exponential Moving Average (Chart Manual)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://user42.tuxfamily.org/chart/manual/Zero_002dLag-Exponential-Moving-Average.html",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/zlema.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zero-Lag Exponential Moving Average (Chart Manual)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fxcodebase.com/wiki/index.php/Kaufman",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metatrader5.com/en/terminal/help/analytics/indicators/trend_indicators/ama",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://help.cqg.com/cqgic/default.htm",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://fxcodebase.com/wiki/index.php/Kaufman",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metatrader5.com/en/terminal/help/analytics/indicators/trend_indicators/ama",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://help.cqg.com/cqgic/default.htm",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/kama.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://alanhull.com/hull-moving-average",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/hma.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Hull Moving Average - Alan Hull",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://alanhull.com/hull-moving-average",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/hma.py",
+          "line": 32,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Hull Moving Average - Alan Hull",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://user42.tuxfamily.org/chart/manual/Pretty-Good-Oscillator.html",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/prettygoodoscillator.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pretty Good Oscillator (Chart Manual)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://user42.tuxfamily.org/chart/manual/Pretty-Good-Oscillator.html",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/prettygoodoscillator.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pretty Good Oscillator (Chart Manual)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?c=3&p=94",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/priceoscillator.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?c=3&p=94",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/priceoscillator.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?c=3&p=94",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/priceoscillator.py",
+          "line": 47,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.metastock.com/Customer/Resources/TAAZ?c=3&p=94",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/priceoscillator.py",
+          "line": 107,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.vortexindicator.com/VFX_VORTEX.PDF",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/vortex.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.vortexindicator.com/VFX_VORTEX.PDF",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/vortex.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.marketvolume.com/technicalanalysis/relativemomentumindex.asp",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.tradingview.com/script/UCm7fIvk-FREE-INDICATOR-Relative-Momentum-Index-RMI",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FREE INDICATOR: Relative Momentum Index (RMI) by TheLark \u2014 TradingView",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.prorealcode.com/prorealtime-indicators/relative-momentum-index-rmi",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Relative Momentum Index (RMI) for ProRealTime - Code & Download",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.marketvolume.com/technicalanalysis/relativemomentumindex.asp",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.tradingview.com/script/UCm7fIvk-FREE-INDICATOR-Relative-Momentum-Index-RMI",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "FREE INDICATOR: Relative Momentum Index (RMI) by TheLark \u2014 TradingView",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.prorealcode.com/prorealtime-indicators/relative-momentum-index-rmi",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/rmi.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Relative Momentum Index (RMI) for ProRealTime - Code & Download",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.investopedia.com/articles/trading/06/fractals.asp",
+          "file": "slim_backtrader-2.0.1/backtrader/studies/contrib/fractal.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.investopedia.com/articles/trading/06/fractals.asp",
+          "file": "slim_backtrader-2.0.1/backtrader/studies/contrib/fractal.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.vortexindicator.com/VFX_VORTEX.PDF",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/contrib/vortex.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.vortexindicator.com/VFX_VORTEX.PDF",
+          "file": "slim_backtrader-2.0.1/backtrader/indicators/contrib/vortex.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "nexa-v6-sdk",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/40/24/a1aa70174147b197b40bc01933869f8a9ce5cdf13bb0aebdc3c1a01f5d4d/nexa_v6_sdk-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:03.675548+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://solver.vsnexa.com",
+          "file": "nexa_v6_sdk-1.0.0/src/nexa_v6_sdk/client.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://solver.vsnexa.com/.well-known/nexa-solver.json",
+          "file": "nexa_v6_sdk-1.0.0/src/nexa_v6_sdk/client.py",
+          "line": 14,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "zens-ink",
+      "version": "1.4.6",
+      "download_url": "https://files.pythonhosted.org/packages/55/67/bb6a3b6eb2e678ae70ce0351dddbee6399308f321fad17056d5cbbce721c/zens_ink-1.4.6.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:02.752371+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "https://api.ahrefs.com/v3/public/domain-rating-free",
+          "file": "zens_ink-1.4.6/zens_ink/domain_rating.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ahrefs.com",
+          "file": "zens_ink-1.4.6/zens_ink/domain_rating.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ahrefs\u2014AI Marketing Platform Powered by Big Data",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ahrefs.com",
+          "file": "zens_ink-1.4.6/zens_ink/domain_rating.py",
+          "line": 168,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ahrefs\u2014AI Marketing Platform Powered by Big Data",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://google.serper.dev/search",
+          "file": "zens_ink-1.4.6/zens_ink/kd.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ssl.bing.com/webmaster/api.svc/json/GetKeywordStats",
+          "file": "zens_ink-1.4.6/zens_ink/kd.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Microsoft Corporation"
+        },
+        {
+          "url": "https://rdap.org/domain",
+          "file": "zens_ink-1.4.6/zens_ink/kd.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://serper.dev",
+          "file": "zens_ink-1.4.6/zens_ink/kd.py",
+          "line": 837,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Serper - The World's Fastest and Cheapest Google Search API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://google.serper.dev/search",
+          "file": "zens_ink-1.4.6/zens_ink/serp_intent.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://serper.dev",
+          "file": "zens_ink-1.4.6/zens_ink/serp_intent.py",
+          "line": 619,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Serper - The World's Fastest and Cheapest Google Search API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "zens_ink-1.4.6/zens_ink/brave_volume.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tarotap.com/sitemap.xml",
+          "file": "zens_ink-1.4.6/zens_ink/competitor_gap.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://site-b.com/sitemap.xml",
+          "file": "zens_ink-1.4.6/zens_ink/competitor_gap.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 440,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://tarotap.com/sitemap.xml",
+          "file": "zens_ink-1.4.6/zens_ink/competitor_gap.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://site-b.com/sitemap.xml",
+          "file": "zens_ink-1.4.6/zens_ink/competitor_gap.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 440,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://ssl.bing.com/webmaster/api.svc/json",
+          "file": "zens_ink-1.4.6/zens_ink/keyword_volume.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Microsoft Corporation"
+        },
+        {
+          "url": "https://google.serper.dev/search",
+          "file": "zens_ink-1.4.6/zens_ink/rank_tracker.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ozon-delivery-business",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/02/c7/dd2f78c1d7f49478c8fc6c6b14629a48c7598b68bd153a6a1c5a36e952a0/ozon_delivery_business-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:01.285695+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://xapi.ozon.ru/oauth/token",
+          "file": "ozon_delivery_business-0.1.0/src/ozon_delivery_business/client.py",
+          "line": 556,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api-delivery.ozon.ru",
+          "file": "ozon_delivery_business-0.1.0/src/ozon_delivery_business/client.py",
+          "line": 557,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 307,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "xwllz",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/bc/0c/fa22a9176b1c5e430c9b31e8a12fe42fea793f37f5907bebdf0cc16ff428/xwllz-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-23T10:24:39.027479+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://xwllz.pages.dev",
+          "file": "xwllz-0.1.1/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "xwllz \u2014 Attack Surface Intelligence",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.shodan.io/shodan/host",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.shodan.io/dns/domain",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.securitytrails.com/v1/domain",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://search.censys.io/api/v2/certificates/search",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://urlhaus-api.abuse.ch/v1/host",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "SwissSign AG"
+        },
+        {
+          "url": "https://urlscan.io/api/v1/scan",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 159,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/domains",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/ip_addresses",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/urls",
+          "file": "xwllz-0.1.1/src/xwllz/sources/keyed.py",
+          "line": 180,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://crt.sh?q=%25",
+          "file": "xwllz-0.1.1/src/xwllz/sources/crt_sh.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
     {
       "name": "teenageworks",
       "version": "0.0.1a0",
@@ -9730,7 +11507,38 @@
       ]
     }
   ],
-  "binaries": [],
+  "binaries": [
+    {
+      "package": "tjsisistemapy",
+      "version": "0.1.0",
+      "analyzed_at": "2026-08-23T10:25:06.012483+00:00",
+      "binaries": [
+        {
+          "name": "__init__.cp314-win_amd64.pyd",
+          "file": "tjsisistemapy/__init__.cp314-win_amd64.pyd",
+          "sha256": "82895d54a8bdbbec69b18489733528034c3e7006e4900e25699c7dff52029c1b",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "expanse-trie",
+      "version": "0.3.0",
+      "analyzed_at": "2026-08-23T10:25:27.386806+00:00",
+      "binaries": [
+        {
+          "name": "_expanse.abi3.so",
+          "file": "expanse_trie/_expanse.abi3.so",
+          "sha256": "8e749d83efff23e5ceca8e33ce067566c8802c9e44c688fad7eefdbd62f338ae",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    }
+  ],
   "install_hooks": [
     {
       "package": "alcyoneus",
@@ -9833,6 +11641,40 @@
           "resolved": true,
           "context": "CustomInstall.run",
           "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "winxp-activation",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/1e/41/23db2a27977793ad537b74f35932d8dedf47e47f56b888cdca852538ff9f/winxp_activation-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:05.124960+00:00",
+      "install_hooks": [
+        {
+          "file": "winxp_activation-1.0.0/setup.py",
+          "line": 29,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['aarch64-linux-gnu-gcc', '--version'], capture_output=True, text=True)",
+          "resolved": true,
+          "context": "check_cross_compiler",
+          "source": "setup_py"
+        }
+      ]
+    },
+    {
+      "package": "compas_sandbox",
+      "version": "0.6.2",
+      "download_url": "https://files.pythonhosted.org/packages/f5/ab/82122bf460790e471ad80d46cbaba8995ea445bda8160759bbe132248a05/compas_sandbox-0.6.2.tar.gz",
+      "analyzed_at": "2026-08-23T10:25:22.814062+00:00",
+      "install_hooks": [
+        {
+          "file": "compas_sandbox-0.6.2/src/compas_sandbox/_ipopt/__init__.py",
+          "line": 110,
+          "call": "subprocess.run",
+          "command": "subprocess.run([str(exe), '--version'], capture_output=True, text=True, timeout=30)",
+          "resolved": false,
+          "context": "ipopt_version",
+          "source": "package_init"
         }
       ]
     }
