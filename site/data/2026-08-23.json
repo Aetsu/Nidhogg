@@ -1,11 +1,2400 @@
 {
-  "generated_at": "2026-08-23T20:24:14.015625+00:00",
+  "generated_at": "2026-08-23T22:22:53.571819+00:00",
   "stats": {
-    "total_packages": 207,
-    "malicious": 18,
-    "clean": 189
+    "total_packages": 228,
+    "malicious": 19,
+    "clean": 209
   },
   "packages": [
+    {
+      "name": "xero-trial-balance-export",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/96/a6/6d3b9107ec5e0dee88967cefbd950ab71932d3cc1768247d1ce7b58b5e8d/xero_trial_balance_export-0.1.4.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:50.948809+00:00",
+      "total_findings": 53,
+      "findings": [
+        {
+          "url": "https://api.xero.com/api.xro/2.0/Reports/TrialBalance",
+          "file": "xero_trial_balance_export-0.1.4/export_tb.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://identity.xero.com/connect/token",
+          "file": "xero_trial_balance_export-0.1.4/xero_client.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.xero.com/connections",
+          "file": "xero_trial_balance_export-0.1.4/xero_client.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.xero.com/identity/connect/authorize",
+          "file": "xero_trial_balance_export-0.1.4/auth.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xero | Error 500",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://identity.xero.com/connect/token",
+          "file": "xero_trial_balance_export-0.1.4/auth.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/auth.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/auth.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/auth.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 289,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 290,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 294,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 295,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 40,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 331,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 331,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 331,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 339,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 339,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 339,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 340,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 340,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 340,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 349,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 357,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 358,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 373,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 373,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 373,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 378,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 389,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 389,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 389,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 398,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 407,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 407,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 407,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 415,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 415,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 415,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/documentation/guides/oauth2/scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 417,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/granular-scopes",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 417,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Granular Scopes FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/changelog",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 417,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 427,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xero.com/faq/oauth2",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_xero_auth_provenance.py",
+          "line": 429,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OAuth 2.0 FAQs \u2014 Xero Developer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://spdx.dev/Document/v2.3",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_release_workflow.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xero.com/api.xro/2.0/Reports/TrialBalance",
+          "file": "xero_trial_balance_export-0.1.4/tests/test_export_tb.py",
+          "line": 1424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "quality-graph-core",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/24/7e/33820f9610de625396e8fb00475f3d752722767b76a74e31ae5627d5ea76/quality_graph_core-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:50.097504+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "quality_graph_core-0.1.0/src/quality_graph_core/schema.py",
+          "line": 159,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "quality_graph_core-0.1.0/src/quality_graph_core/schema.py",
+          "line": 349,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hubble-sdk-python",
+      "version": "0.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/65/66/da77a1d7208c069cf46077fa80603059b9994008fa5ddd116888ca8cf262/hubble_sdk_python-0.0.2.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:47.552745+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://hubble.ai/link",
+          "file": "hubble_sdk_python-0.0.2/tests/test_hubble.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hubble.ai/link?code=WXYZ",
+          "file": "hubble_sdk_python-0.0.2/tests/test_hubble.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://staging.hubble.ai",
+          "file": "hubble_sdk_python-0.0.2/tests/test_hubble.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hubble | Retrieve Records Other APIs Can't",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://staging.hubble.ai",
+          "file": "hubble_sdk_python-0.0.2/tests/test_hubble.py",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hubble | Retrieve Records Other APIs Can't",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "novence",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/c6/23f27a4a4598921e3d2b44ded27d52207fb4500a9db53ade828e823933f3/novence-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:43.856844+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://novence.ai",
+          "file": "novence-0.2.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Novence \u2014 Static Site Hosting for AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://novence.ai/docs",
+          "file": "novence-0.2.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Docs \u2014 Bootstrap, Deploy & Domains \u00b7 Novence",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://novence.ai/support",
+          "file": "novence-0.2.0/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Support \u2014 Novence help \u00b7 Novence",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.novence.ai",
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.novence.ai",
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.novence.ai",
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 90,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pycoolbot",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/72/9c/72c5f7bf3ee9c4a080421f24911ca86de96991327ea29f823bd7f68e6ae8/pycoolbot-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:43.527087+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "wss://cbws.storeitcold.com/websocket",
+          "file": "pycoolbot-0.1.0/src/pycoolbot/const.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "sisrun-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4c/47/e068ded6d967f54d49840a42a65c550549f6df04deb55d9f5286bc6dbc3b/sisrun_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:43.195263+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://appsisrun.com.br",
+          "file": "sisrun_mcp-0.1.0/src/sisrun_mcp/client.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://appsisrun.com.br/sisrun/login.xhtml",
+          "file": "sisrun_mcp-0.1.0/src/sisrun_mcp/client.py",
+          "line": 35,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SisRUN",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://appsisrun.com.br/sisrun/pages/planilha/formPlanilhaAluno.xhtml",
+          "file": "sisrun_mcp-0.1.0/src/sisrun_mcp/client.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SisRUN",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "taylorswift-spectra",
+      "version": "0.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/b1/5b/d26d2d27cd338eec7af810cf6e0eb4cbbdc90e4f6863abc3c2059a676cdb/taylorswift_spectra-0.2.2.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:42.699501+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5194/amt-5-1699-2012",
+          "file": "taylorswift_spectra-0.2.2/src/TaylorSwift/despike.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AMT - Eddy-covariance flux measurements with a weight-shift microlight aircraft",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5194/amt-5-1699-2012",
+          "file": "taylorswift_spectra-0.2.2/src/TaylorSwift/despike.py",
+          "line": 274,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AMT - Eddy-covariance flux measurements with a weight-shift microlight aircraft",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5194/amt-5-1699-2012",
+          "file": "taylorswift_spectra-0.2.2/src/TaylorSwift/despike.py",
+          "line": 97,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AMT - Eddy-covariance flux measurements with a weight-shift microlight aircraft",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5194/amt-5-1699-2012",
+          "file": "taylorswift_spectra-0.2.2/src/TaylorSwift/despike.py",
+          "line": 222,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AMT - Eddy-covariance flux measurements with a weight-shift microlight aircraft",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mechbench",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/23/f4/22b484aae7d1a8991b95081c990a1ad950e3f1a6a3e68ab597b5fb81073f/mechbench-0.5.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:41.370804+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://mechbench.ai",
+          "file": "mechbench-0.5.0/pyproject.toml",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "wss://api./runners/channel",
+          "file": "mechbench-0.5.0/mechbench_runner/channel.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://mechbench.ai",
+          "file": "mechbench-0.5.0/mechbench_runner/service.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mechbench.ai",
+          "file": "mechbench-0.5.0/mechbench_runner/service.py",
+          "line": 129,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/mechbench_runner/config.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mechbench.ai",
+          "file": "mechbench-0.5.0/mechbench_runner/login.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_channel.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "wss://api.mechbench.ai/runners/channel",
+          "file": "mechbench-0.5.0/tests/test_channel.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_control.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mechbench.ai/settings/runners",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 137,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mechbench.ai",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mechbench.ai/settings/runners",
+          "file": "mechbench-0.5.0/tests/test_credentials.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mechbench",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "gypsy-funfact-tool",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/14/c1/a49cd6ae5cb6eb7906847ad6881b1ae0e2e550d4dbb1eb8c2f4cea14b947/gypsy_funfact_tool-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:40.936812+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://uselessfacts.jsph.pl/api/v2/facts/random",
+          "file": "gypsy_funfact_tool-1.0.0/my_package/main.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "polypress",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/c9/98/47d8b63d7e531e6db8f0848741b9c03affe476130709d8e83e380167b7a7/polypress-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:39.999171+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.polypressapp.com",
+          "file": "polypress-0.2.1/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PolyPress \u2014 Back to critical thinking",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "scelo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/26/95/bf8835874faf3569ca038fba8382ae2e222b3b54084735ba7560f1007a33/scelo-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:39.679212+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.intelligentactuaries.com/scelo",
+          "file": "scelo-0.1.0/pyproject.toml",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scelo IDE",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "shizukudns",
+      "version": "2.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/72/b0/43f771989c2544dd9e263e8c1d17f49b9e7e7df56a6349d443d66a12a546/shizukudns-2.0.2.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:38.636635+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html",
+          "file": "shizukudns-2.0.2/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNSHE Free Domain API User Guide (V2.0) - Help Article - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub",
+          "file": "shizukudns-2.0.2/src/shizukudns/config.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub",
+          "file": "shizukudns-2.0.2/src/shizukudns/config.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=test.example.com",
+          "file": "shizukudns-2.0.2/src/shizukudns/cli.py",
+          "line": 672,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub",
+          "file": "shizukudns-2.0.2/src/shizukudns/client.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub",
+          "file": "shizukudns-2.0.2/src/shizukudns/client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api005.dnshe.com/index.php?m=domain_hub",
+          "file": "shizukudns-2.0.2/src/shizukudns/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In - DNSHE",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "animica-serve",
+      "version": "0.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/16/24/03e2e3abaa8c09cd2ab9cc8ba991f66aaf878c98720c39242e569159f182/animica_serve-0.1.2.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:34.586666+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://pool.animica.org/serve",
+          "file": "animica_serve-0.1.2/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Serve & Earn \u2014 run AI inference from your phone's browser \u00b7 Animica Pool",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pool.animica.org/serve",
+          "file": "animica_serve-0.1.2/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Serve & Earn \u2014 run AI inference from your phone's browser \u00b7 Animica Pool",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rpc.animica.org/rpc",
+          "file": "animica_serve-0.1.2/animica_serve/main.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rpc.animica.org/rpc",
+          "file": "animica_serve-0.1.2/animica_serve/main.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rpc.animica.org/rpc",
+          "file": "animica_serve-0.1.2/animica_serve/main.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rpc.animica.org/rpc",
+          "file": "animica_serve-0.1.2/animica_serve/main.py",
+          "line": 555,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "aeso-mcp",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/07/b9/2399f0d052f4e859d96c317b3928381d538bb1e92ea04f4337ff37a04b86/aeso_mcp-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:32.199597+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://developer-apim.aeso.ca",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/config.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - Microsoft Azure API Management - developer portal",
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "https://apimgw.aeso.ca/public",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/config.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "https://developer-apim.aeso.ca",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/config.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - Microsoft Azure API Management - developer portal",
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "https://developer-apim.aeso.ca",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/config.py",
+          "line": 325,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home - Microsoft Azure API Management - developer portal",
+          "cert_issuer": "Entrust Limited"
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports/csvData",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports_http.py",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports_http.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports_http.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports/qryOpPlanTransmissionTable_1.html",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpPlan Transmission Table_1",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports/Longterm_Critical_Outages.html",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Longterm_Critical_outages",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/ets_web/ip/Market/Reports/MCSINRReportServlet?contentType=csv",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/ets_web/ip/Market/Reports/CurrentSOCReportServlet?contentType=csv",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports/archives",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://ets.aeso.ca/outage_reports/archives/_2025-01-17_14-10-25_qryOpPlanTransmissionTable_1.html",
+          "file": "aeso_mcp-0.2.0/src/aeso_mcp/providers/public_reports.py",
+          "line": 41,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpPlan Transmission Table_1",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "modelroster",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/fc/94/dd8c26ce123e6d3fc20b0f0f3b35c37ff9cf5a237909e60ebdc05d9215b5/modelroster-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:30.892240+00:00",
+      "total_findings": 26,
+      "findings": [
+        {
+          "url": "https://api.x.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/xai.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1/language-models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/xai.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "modelroster-0.1.0/src/modelroster/providers/xai.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/xai.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.inceptionlabs.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/inception.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.inceptionlabs.ai/v1",
+          "file": "modelroster-0.1.0/src/modelroster/providers/inception.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.inceptionlabs.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/inception.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/mistral.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1",
+          "file": "modelroster-0.1.0/src/modelroster/providers/mistral.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/mistral.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/anthropic.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/anthropic.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview",
+          "file": "modelroster-0.1.0/src/modelroster/providers/anthropic.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tool use with Claude - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/streaming",
+          "file": "modelroster-0.1.0/src/modelroster/providers/anthropic.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Streaming messages - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/anthropic.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/cohere.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cohere.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/cohere.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cohere.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/cohere.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cohere.com/v1/models?page_size=1000",
+          "file": "modelroster-0.1.0/src/modelroster/providers/cohere.py",
+          "line": 40,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/nvidia.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "modelroster-0.1.0/src/modelroster/providers/nvidia.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/models",
+          "file": "modelroster-0.1.0/src/modelroster/providers/nvidia.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ngc.nvidia.com/v2/search/catalog/resources/CONTAINER",
+          "file": "modelroster-0.1.0/src/modelroster/discover/nvidia_nim.py",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ngc.nvidia.com/v2/search/catalog/resources/CONTAINER",
+          "file": "modelroster-0.1.0/src/modelroster/discover/nvidia_nim.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://catalog.ngc.nvidia.com/orgs/nim/containers",
+          "file": "modelroster-0.1.0/src/modelroster/discover/nvidia_nim.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ngc.nvidia.com/v2/search/catalog/resources/CONTAINER",
+          "file": "modelroster-0.1.0/src/modelroster/discover/nvidia_nim.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "aau-harness",
+      "version": "1.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/b8/b7/442899381891cea542ed17244f9197a0669d56a506c3cb126ae8151575c4/aau_harness-1.1.1.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:29.909436+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "https://img.shields.io/badge/Forge-contract--aware-7c3aed",
+          "file": "aau_harness-1.1.1/src/aau_harness/forge_contracts.py",
+          "line": 559,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forge: contract-aware",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/status-adaptation%20required-f59e0b",
+          "file": "aau_harness-1.1.1/src/aau_harness/forge_contracts.py",
+          "line": 560,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "status: adaptation required",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/Forge-contract--aware-7c3aed",
+          "file": "aau_harness-1.1.1/src/aau_harness/forge_contracts.py",
+          "line": 558,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Forge: contract-aware",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/status-adaptation%20required-f59e0b",
+          "file": "aau_harness-1.1.1/src/aau_harness/forge_contracts.py",
+          "line": 558,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "status: adaptation required",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cerebras.ai/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aau_harness-1.1.1/src/aau_harness/llm_providers.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/industry-__INDUSTRY__-4a3aa7",
+          "file": "aau_harness-1.1.1/src/aau_harness/scaffold.py",
+          "line": 647,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "industry: _INDUSTRY_",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/reproduce-%240%20free%20tier-4a3aa7",
+          "file": "aau_harness-1.1.1/src/aau_harness/scaffold.py",
+          "line": 648,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "reproduce: $0 free tier",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/industry-__INDUSTRY__-4a3aa7",
+          "file": "aau_harness-1.1.1/src/aau_harness/scaffold.py",
+          "line": 645,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "industry: _INDUSTRY_",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/reproduce-%240%20free%20tier-4a3aa7",
+          "file": "aau_harness-1.1.1/src/aau_harness/scaffold.py",
+          "line": 645,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "reproduce: $0 free tier",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models",
+          "file": "aau_harness-1.1.1/src/aau_harness/cost.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "llmsafe",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/c0/42/2a2815369ecd57ce393a3e69761df6bd6eb41556ac75a48ea1859aece476/llmsafe-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:29.214935+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "llmsafe-0.2.1/llmsafe/sarif.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "optbinning-slim",
+      "version": "0.22.0",
+      "download_url": "https://files.pythonhosted.org/packages/62/6c/85d9fd4b17211c842c1c451712b2bdbe41020d6e210a477bc0f7065d2794/optbinning_slim-0.22.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:28.466545+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://gnpalencia.org/optbinning",
+          "file": "optbinning_slim-0.22.0/pyproject.toml",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OptBinning: The Python Optimal Binning library \u2014 optbinning 0.21.0 documentation",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "mtdata-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ed/2b/662b6354791b24330fa5e888ef2883c67b6d9998a5105af52828058ffe39/mtdata_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:24.532065+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "https://api.tradier.com/v1",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/bootstrap/settings.py",
+          "line": 543,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.tradier.com/v1",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/bootstrap/settings.py",
+          "line": 544,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query2.finance.yahoo.com/v7/finance/options",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/options_service.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fc.yahoo.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/options_service.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v1/test/getcrumb",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/options_service.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.tradier.com/v1",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/options_service.py",
+          "line": 995,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.cnbc.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/unified_news.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://finviz.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/unified_news.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finviz - Stock Screener",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.marketwatch.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/unified_news.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://finance.yahoo.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/unified_news.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Yahoo Finance - Stock Market Live, Quotes, Business & Finance News",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.zacks.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/unified_news.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zacks Investment Research: Stock Research, Analysis, & Recommendations",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 636,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 679,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 735,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 958,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 672,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 728,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://documentation.tradier.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/options.py",
+          "line": 951,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tradier API",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://finviz.com",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/core/finviz/news.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finviz - Stock Screener",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/futures.ashx",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 376,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Futures Prices",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/futures_performance.ashx",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 379,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Futures Performance",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/api/calendar/economic",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 1558,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/calendar.ashx",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 1562,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Economic Calendar",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/api/calendar",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 1592,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://finviz.com/calendar.ashx",
+          "file": "mtdata_mcp-0.1.0/src/mtdata/services/finviz/api.py",
+          "line": 1596,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Economic Calendar",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "iris-prism",
+      "version": "0.2.2b9",
+      "download_url": "https://files.pythonhosted.org/packages/55/68/6e54b2632abc149f76611ada2b67298959a287757829d3f58488662a62e6/iris_prism-0.2.2b9-py3-none-any.whl",
+      "analyzed_at": "2026-08-23T22:22:21.372875+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://xdebug.org/docs/dbgp",
+          "file": "prism/iris/sdk/dbgp.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xdebug: Documentation \u00bb DBGP - A common debugger protocol specification",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://xdebug.org/docs/dbgp",
+          "file": "prism/iris/sdk/dbgp.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xdebug: Documentation \u00bb DBGP - A common debugger protocol specification",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GCM_rest",
+          "file": "prism/iris/api/monitor.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Monitoring InterSystems IRIS via REST | Monitoring Guide | InterSystems IRIS Data Platform 2026.2",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GCM_rest",
+          "file": "prism/iris/api/monitor.py",
+          "line": 21,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Monitoring InterSystems IRIS via REST | Monitoring Guide | InterSystems IRIS Data Platform 2026.2",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://prometheus.io/docs/instrumenting/exposition_formats",
+          "file": "prism/iris/monitor/parser.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Exposition formats | Prometheus",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://prometheus.io/docs/instrumenting/exposition_formats",
+          "file": "prism/iris/monitor/parser.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Exposition formats | Prometheus",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "subfleet",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/66/cb/ef0aeeba8bb9ae32b205046213cf284352622269ad9ee6e188c196e8ff81/subfleet-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:20.265308+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://maxghenis.com/subfleet",
+          "file": "subfleet-0.0.1/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "subfleet | Max Ghenis",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://chatgpt.com/codex/settings/usage",
+          "file": "subfleet-0.0.1/tests/test_codex.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/api/oauth/usage",
+          "file": "subfleet-0.0.1/subfleet/claude.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://chatgpt.com/backend-api/wham/usage",
+          "file": "subfleet-0.0.1/subfleet/codex.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://chatgpt.com/backend-api/wham/usage",
+          "file": "subfleet-0.0.1/subfleet/codex.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://chatgpt.com/backend-api/wham/usage",
+          "file": "subfleet-0.0.1/subfleet/codex.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "yukisdb",
       "version": "1.0.1",
@@ -24221,6 +26610,86 @@
           "command": "urllib.request.urlopen(req)",
           "resolved": false,
           "context": "MathSolver.query",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "novence",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/c6/23f27a4a4598921e3d2b44ded27d52207fb4500a9db53ade828e823933f3/novence-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-23T22:22:43.857211+00:00",
+      "install_hooks": [
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 67,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data=json.dumps(body).encode('utf-8'), method='POST', headers={'Content-Type': 'application/json'})",
+          "resolved": false,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 74,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req)",
+          "resolved": false,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 107,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data=data, method=method, headers={'Authorization': f'Bearer {self.api_key}', 'Content-Type': 'application/json'})",
+          "resolved": false,
+          "context": "Novence._request",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 117,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req)",
+          "resolved": false,
+          "context": "Novence._request",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 204,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(upload['uploadUrl'], data=content, method='PUT', headers={'Content-Type': resolved})",
+          "resolved": false,
+          "context": "Novence.upload_bytes",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 211,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req)",
+          "resolved": false,
+          "context": "Novence.upload_bytes",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 426,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(self.base_url + '/v1/billing/mpp', data=json.dumps({'plan': plan}).encode('utf-8'), method='POST', headers={'Authorization': f'Bearer {self.api_key}', 'Content-Type': 'application/json', 'Accept': 'application/json'})",
+          "resolved": false,
+          "context": "Novence.mpp_upgrade",
+          "source": "package_init"
+        },
+        {
+          "file": "novence-0.2.0/novence/__init__.py",
+          "line": 437,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req)",
+          "resolved": false,
+          "context": "Novence.mpp_upgrade",
           "source": "package_init"
         }
       ]
