@@ -1,11 +1,2173 @@
 {
-  "generated_at": "2026-08-24T07:00:20.548676+00:00",
+  "generated_at": "2026-08-24T08:50:29.751868+00:00",
   "stats": {
-    "total_packages": 72,
-    "malicious": 2,
-    "clean": 70
+    "total_packages": 91,
+    "malicious": 3,
+    "clean": 88
   },
   "packages": [
+    {
+      "name": "platzky-telegram-notifier",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/60/7f/41cd4e05a96e1c140b7172bffe00ed4f3c6b71d55b77ba239df714bdfa4e/platzky_telegram_notifier-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:26.703056+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.telegram.org",
+          "file": "platzky_telegram_notifier-0.2.0/platzky_telegram_notifier/plugin.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Bots: An introduction for developers",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://core.telegram.org/bots/api",
+          "file": "platzky_telegram_notifier-0.2.0/platzky_telegram_notifier/plugin.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Telegram Bot API",
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "sovos-router",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d1/01/01e4e1c815ed4a4f41c4ea6f7e4e9dfc1a292f503128296590fa03679ada/sovos_router-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:25.764941+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://api.runpod.io/graphql",
+          "file": "sovos_router-0.1.0/src/sovos_router/fleet_monitor.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1/chat/completions",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov_orchestrator.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.runpod.io/v2",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RunPod REST API",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 518,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/v1/chat/completions",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 519,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 520,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 726,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "sovos_router-0.1.0/src/sovos_router/sov4_router.py",
+          "line": 757,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.runpod.io/graphql",
+          "file": "sovos_router-0.1.0/src/sovos_router/fleet_dashboard.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "csiphon",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/fd/88/df01606423aa2af57605404caf917c4aa9032b1ea8a504b67e08bbccfe42/csiphon-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:24.010992+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://sronpersonalpages.nl/~pault",
+          "file": "csiphon-0.1.0/src/csiphon/graphics/style.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Paul Tol's Notes",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://sronpersonalpages.nl/~pault",
+          "file": "csiphon-0.1.0/src/csiphon/graphics/style.py",
+          "line": 90,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Paul Tol's Notes",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "lupaxa-qrcode-generator",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/27/dd/9b41d8e95a01f7380e7462221cd48d1d1119962f9d356598788e37c06860/lupaxa_qrcode_generator-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:22.686041+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://qrcode-generator.thelupaxaproject.org",
+          "file": "lupaxa_qrcode_generator-0.2.0/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "qrcode-generator",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://qrcode-generator.thelupaxaproject.org",
+          "file": "lupaxa_qrcode_generator-0.2.0/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "qrcode-generator",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "ninjachat",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5e/6c/d293869f5d2712c0fd289ca7ba420e62be052b8dba228b973df7fc7d3af2/ninjachat-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:20.465004+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://docs.ninjachat.ai",
+          "file": "ninjachat-0.1.0/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NinjaChat Developers - NinjaChat Developers",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/api/v1/openapi",
+          "file": "ninjachat-0.1.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/api/v1/models",
+          "file": "ninjachat-0.1.0/tests/test_smoke.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.ninjachat.ai",
+          "file": "ninjachat-0.1.0/ninjachat/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NinjaChat Developers - NinjaChat Developers",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/api/v1/openapi",
+          "file": "ninjachat-0.1.0/ninjachat/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.ninjachat.ai",
+          "file": "ninjachat-0.1.0/ninjachat/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NinjaChat Developers - NinjaChat Developers",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/api/v1/openapi",
+          "file": "ninjachat-0.1.0/ninjachat/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/api/v1",
+          "file": "ninjachat-0.1.0/ninjachat/client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ninjachat.ai/developers/keys",
+          "file": "ninjachat-0.1.0/ninjachat/client.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Developers \u2014 NinjaChat",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hr-observer",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/38/8c7269ae0ab0872fd9d5cb85b76b3fd512796137f7dc9109c357ca6d0f42/hr_observer-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:20.218814+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://docs.djangoproject.com/en/5.2/howto/deployment/asgi",
+          "file": "hr_observer-0.1.0/hr_observer/asgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to deploy with ASGI | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.2/howto/deployment/asgi",
+          "file": "hr_observer-0.1.0/hr_observer/asgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to deploy with ASGI | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi",
+          "file": "hr_observer-0.1.0/hr_observer/wsgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to deploy with WSGI | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi",
+          "file": "hr_observer-0.1.0/hr_observer/wsgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to deploy with WSGI | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "opentradeintel",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/88/b0/d8ead624b8a82879e3d781bc9517a0d7544d5885ad621bc26d67860f3d0f/opentradeintel-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:19.781279+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://ted.europa.eu/en/notice/-/detail/176184-2026",
+          "file": "opentradeintel-0.2.0/tests/unit/test_models.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "176184-2026 - Result - TED",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/-/detail/176184-2026",
+          "file": "opentradeintel-0.2.0/tests/unit/test_ted_mapper.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "176184-2026 - Result - TED",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/-/detail/42-2026",
+          "file": "opentradeintel-0.2.0/tests/unit/test_ted_mapper.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "42-2026 - Result - TED",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/-/detail/176184-2026",
+          "file": "opentradeintel-0.2.0/tests/integration/test_cli.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "176184-2026 - Result - TED",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.ted.europa.eu",
+          "file": "opentradeintel-0.2.0/src/opentradeintel/collectors/ted.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Swagger UI",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://ted.europa.eu/en/notice/-/detail",
+          "file": "opentradeintel-0.2.0/src/opentradeintel/collectors/ted.py",
+          "line": 411,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Page not found - TED",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "MDescriptor",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/27/19/ed3a00c561155eccfdcbd3f789c127adc6d5e86a47edfcf38efc3be0be2e/mdescriptor-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:18.518586+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://forum.hdfgroup.org/t/11975",
+          "file": "mdescriptor-0.1.0/mdescriptor/dpa4/_official_core/dpmodel/common.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HDF5 RFC: Adding support for 16-bit floating point and Complex number datatypes to HDF5 - News and Announcements - HDF Forum",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://people.sc.fsu.edu/~jburkardt/datasets/sphere_lebedev_rule/sphere_lebedev_rule.html",
+          "file": "mdescriptor-0.1.0/mdescriptor/dpa4/_official_core/dpmodel/utils/lebedev.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SPHERE_LEBEDEV_RULE - Quadrature Rules for the Sphere",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://dlmf.nist.gov/14.10",
+          "file": "mdescriptor-0.1.0/mdescriptor/dpa4/_official_core/dpmodel/utils/spherical_harmonics.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DLMF: \u00a714.10 Recurrence Relations and Derivatives \u2023 Real Arguments \u2023 Chapter 14 Legendre and Related Functions",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "wedata-dq-expectations",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/41/6e/aa3a592c023a2847a987f10876a657127f3f030b2ce90463427b96ed4556/wedata_dq_expectations-2.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:15.114212+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://wedata.tencent.com",
+          "file": "wedata_dq_expectations-2.0.0/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u817e\u8baf\u4e91WeData",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://wedata.tencent.com/docs",
+          "file": "wedata_dq_expectations-2.0.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u817e\u8baf\u4e91WeData",
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "mzapi-multicloud-sdk",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/54/c6/5fa505a581106e6bc30205bb9283af0b3875bcc56751ada77bd2a9abb5d8/mzapi_multicloud_sdk-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-24T08:50:09.427655+00:00",
+      "total_findings": 69,
+      "findings": [
+        {
+          "url": "https://ep.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/tests/test_huaweicloud_region.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Industry Leading Digital Production Tools and Solutions - Entertainment Partners",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://new-endpoint.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/tests/test_huaweicloud_region.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://new-endpoint.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/tests/test_huaweicloud_region.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/ocr/developer-reference/api-ocr-api-2021-07-07-recognizealltext",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/aliyun/ocr/__init__.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4f7f\u7528RecognizeAllText\u63a5\u53e3\u7edf\u4e00\u8bc6\u522b\u591a\u79cd\u7c7b\u578b\u56fe\u7247-\u6587\u5b57\u8bc6\u522b-\u963f\u91cc\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/ocr/developer-reference/api-ocr-api-2021-07-07-recognizealltext",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/aliyun/ocr/__init__.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4f7f\u7528RecognizeAllText\u63a5\u53e3\u7edf\u4e00\u8bc6\u522b\u591a\u79cd\u7c7b\u578b\u56fe\u7247-\u6587\u5b57\u8bc6\u522b-\u963f\u91cc\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/ocr/developer-reference/api-ocr-api-2021-07-07-recognizealltext",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/aliyun/ocr/recognize_all_text.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4f7f\u7528RecognizeAllText\u63a5\u53e3\u7edf\u4e00\u8bc6\u522b\u591a\u79cd\u7c7b\u578b\u56fe\u7247-\u6587\u5b57\u8bc6\u522b-\u963f\u91cc\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/ocr/developer-reference/api-ocr-api-2021-07-07-recognizealltext",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/aliyun/ocr/recognize_all_text.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4f7f\u7528RecognizeAllText\u63a5\u53e3\u7edf\u4e00\u8bc6\u522b\u591a\u79cd\u7c7b\u578b\u56fe\u7247-\u6587\u5b57\u8bc6\u522b-\u963f\u91cc\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/34228",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/13896",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/34228",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/13896",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://console.cloud.tencent.com/cam/capi",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/credential.py",
+          "line": 90,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u767b\u5f55 - \u817e\u8baf\u4e91",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/12555",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/sign.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://cloud.tencent.com/document/product/598/12555",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/tencentauth/sign.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 244,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 455,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 670,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 870,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 1086,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 1286,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 1518,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/client.py",
+          "line": 1744,
+          "layer": "regex",
+          "method": "via_fstring",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bbe\u7f6e\u963f\u91cc\u4e91AccessKey\u73af\u5883\u53d8\u91cf, \u963f\u91cc\u4e91\u793a\u4f8b\u4ee3\u7801\u8fd0\u884c\u73af\u5883\u8bbe\u7f6e\u73af\u5883\u53d8\u91cf-\u963f\u91cc\u4e91SDK(Alibaba Cloud SDK)-\u963f\u91cc\u4e91\u5e2e\u52a9\u4e2d\u5fc3",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://oauth.aliyun.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/credentials/provider/cli_profile.py",
+          "line": 321,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://oauth.alibabacloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/aliyunauth/credentials/provider/cli_profile.py",
+          "line": 322,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/internal.py",
+          "line": 248,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-north-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-north-4.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-north-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-east-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-east-3.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-south-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-south-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-southwest-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.ap-southeast-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.ap-southeast-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.ap-southeast-3.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.af-south-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.sa-brazil-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.la-south-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.na-mexico-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.la-north-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-north-9.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.eu-west-0.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.my-kualalumpur-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.ru-moscow-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.me-east-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.ap-southeast-4.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://iam.ae-ad-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-east-4.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-east-5.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.tr-west-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iam.cn-north-12.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 300,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.cn-north-4.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.cn-south-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.cn-east-3.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.cn-southwest-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.ap-southeast-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.ap-southeast-3.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.ap-southeast-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.sa-brazil-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.la-south-2.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.af-south-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://sts.ap-southeast-4.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://sts.tr-west-1.myhuaweicloud.com",
+          "file": "mzapi_multicloud_sdk-0.0.1/mzapi/core/huaweicloudauth/auth/endpoint.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "openuhp",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/70/03/046a18cb99f65fcecdc611a5d3b0883daee1ebb42fb75b1098e4cd338ff6/openuhp-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:58.904466+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://gitee.com/ip2a/openuhp",
+          "file": "openuhp-0.1.1/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/ip2a/openuhp/issues",
+          "file": "openuhp-0.1.1/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/ip2a/openuhp/wikis",
+          "file": "openuhp-0.1.1/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/ip2a/openuhp.git",
+          "file": "openuhp-0.1.1/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://gitee.com/ip2a/openuhp",
+          "file": "openuhp-0.1.1/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "hasdata-instagram-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/52/5b274c4a87235240e667f72e48eb9750201da3337612eef4605e274aec48/hasdata_instagram_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:51.304202+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://hasdata.com/apis/instagram-profile-api",
+          "file": "hasdata_instagram_mcp-1.0.0/pyproject.toml",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Instagram Profile Scraper API - Bio & Followers | HasData",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mcp.hasdata.com/api/mcp?apis=instagram",
+          "file": "hasdata_instagram_mcp-1.0.0/hasdata_instagram_mcp/__init__.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.hasdata.com",
+          "file": "hasdata_instagram_mcp-1.0.0/hasdata_instagram_mcp/__init__.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HasData",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hpyzs-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d6/65/feb0eab6d8708f0f57a49285fb531c410f3f231ccb3f90219c2637715b96/hpyzs_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:51.022256+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://mcp.eiacloud.com",
+          "file": "hpyzs_mcp-0.1.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5c1a\u4e91 AI",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://www.eiacloud.com",
+          "file": "hpyzs_mcp-0.1.0/src/config.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5c1a\u4e91\u73af\u5883-\u9996\u9875",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://www.eiacloud.com/hpyzs/lawsRegulations/searchDetail?id=",
+          "file": "hpyzs_mcp-0.1.0/src/config.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://www.eiacloud.com/hpyzs/answer/detail?id=",
+          "file": "hpyzs_mcp-0.1.0/src/config.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u73af\u8bc4\u4e91\u52a9\u624b",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        }
+      ]
+    },
+    {
+      "name": "hasdata-google-maps-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/52/bb9754412a82c4333afc28a088a9e3f3701ab2d9c74f4846c2cc061ca49a/hasdata_google_maps_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:46.842958+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://hasdata.com/apis/google-maps-search-api",
+          "file": "hasdata_google_maps_mcp-1.0.0/pyproject.toml",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google Maps Search API - Places & Ratings | HasData",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mcp.hasdata.com/api/mcp?apis=google_maps",
+          "file": "hasdata_google_maps_mcp-1.0.0/hasdata_google_maps_mcp/__init__.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.hasdata.com",
+          "file": "hasdata_google_maps_mcp-1.0.0/hasdata_google_maps_mcp/__init__.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HasData",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "portalkit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/83/33/d28c93519b38f5de77f849609942f9fcea98225062b7c972b23405309ee5/portalkit-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:45.885300+00:00",
+      "total_findings": 22,
+      "findings": [
+        {
+          "url": "https://data.cityofnewyork.us",
+          "file": "portalkit-0.1.0/tests/test_catalog.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NYC Open Data -",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/tests/test_live.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer",
+          "file": "portalkit-0.1.0/tests/test_live.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TIGERweb/State_County (MapServer)",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://data.boston.gov",
+          "file": "portalkit-0.1.0/tests/test_live.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome - Analyze Boston",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://data.rennesmetropole.fr",
+          "file": "portalkit-0.1.0/tests/test_live.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Explore \u2014 Open Data Rennes",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/cli.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.sfgov.org/resource/vw6y-z8j6",
+          "file": "portalkit-0.1.0/src/portalkit/cli.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/cli.py",
+          "line": 13,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.sfgov.org/resource/vw6y-z8j6",
+          "file": "portalkit-0.1.0/src/portalkit/cli.py",
+          "line": 13,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofnewyork.us",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NYC Open Data -",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofnewyork.us",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NYC Open Data -",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofnewyork.us",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NYC Open Data -",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.cityofchicago.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.sfgov.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.sfgov.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.seattle.gov",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.lacity.org",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://data.austintexas.gov",
+          "file": "portalkit-0.1.0/src/portalkit/catalog.toml",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "hasdata-google-search-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/8d/af34fab5d1a7ec619dc98d1bc4986ddffdb5224b9fe8e0bb523c438c7652/hasdata_google_search_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:42.550082+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://hasdata.com/apis/google-serp-api",
+          "file": "hasdata_google_search_mcp-1.0.0/pyproject.toml",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Google SERP API - 100 Free SERPs to Start | HasData",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mcp.hasdata.com/api/mcp?apis=google_serp",
+          "file": "hasdata_google_search_mcp-1.0.0/hasdata_google_search_mcp/__init__.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.hasdata.com",
+          "file": "hasdata_google_search_mcp-1.0.0/hasdata_google_search_mcp/__init__.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HasData",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "nfdi4earth-kh-schema",
+      "version": "0.4.12b11",
+      "download_url": "https://files.pythonhosted.org/packages/81/02/72ccb9241ea02826b15fc89719d51ff6df58d03011cbf055c97852b2c2bf/nfdi4earth_kh_schema-0.4.12b11.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:40.933713+00:00",
+      "total_findings": 23,
+      "findings": [
+        {
+          "url": "https://git.rwth-aachen.de/jgrieb/nfdi4earth-kh-schema",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/pyproject.toml",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NFDI4Earth Knowledge Hub Schema Documentation",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://git.rwth-aachen.de/jgrieb/nfdi4earth-kh-schema",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/pyproject.toml",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://git.rwth-aachen.de/jgrieb/nfdi4earth-kh-schema/issues",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/pyproject.toml",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "http://nfdi4earth.de/ontology",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NFDI4Earth Knowledge Hub Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/ontology.owl.xml",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/ontology.owl.ttl",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/ontology.owl.jsonld",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/ontology.owl.nt",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "http://nfdi4earth.de/ontology/base",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://dcat-ap.de/def/dcatde",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/terms",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengis.net/ont/geosparql",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://w3id.org/linkml",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://w3id.org/nfdi4ing/metadata4ing",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://nfdi4earth.de/ontology",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NFDI4Earth Knowledge Hub Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Knowledge-Hub-Vocabularies - NFDI4Earth Knowledge Hub Schema Documentation",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://nfdi.fiz-karlsruhe.de/ontology",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NFDIcore Ontology",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "http://purl.obolibrary.org/obo",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - OBOFoundry/purl.obolibrary.org: A system for managing OBO PURLs \u00b7 GitHub",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengis.net/def/serviceType/ogc",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.re3data.org/schema/4-0",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema | re3data.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schema.org",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Schema.org - Schema.org",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.opengis.net/ont/sf",
+          "file": "nfdi4earth_kh_schema-0.4.12b11/n4e_kh_schema_py/n4eschema.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "mi-home-cli",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/97/40/76b743f83eb8298b9cf1c1879ab80f7dd584256c78efb11bb5ed872c32c2/mi_home_cli-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:19.271065+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://de.ha.api.io.mi.com",
+          "file": "mi_home_cli-0.1.0/tests/test_oauth.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 204,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://miot-spec.org/miot-spec-v2/instances",
+          "file": "mi_home_cli-0.1.0/tools/scan_stream_models.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://miot-spec.org/miot-spec-v2/instance",
+          "file": "mi_home_cli-0.1.0/tools/scan_stream_models.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://miot-spec.org/miot-spec-v2/instance",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/core/spec.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://miot-spec.org/instance/v2/multiLanguage",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/core/spec.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://account.xiaomi.com/oauth2/authorize",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/core/const.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://open.account.xiaomi.com/user/profile",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/core/const.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://account.xiaomi.com",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/cli/doctor.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://account.xiaomi.com",
+          "file": "mi_home_cli-0.1.0/src/mi_home_cli/cli/doctor.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "hensmith",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/b7/f5/613f79383ac805f0a1f00e5b295776df40bef7cca179fa36d5d02977db01/hensmith-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:14.893667+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://illinois.edu",
+          "file": "hensmith-0.1.1/LICENSE.txt",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Illinois",
+          "cert_issuer": "Internet2"
+        }
+      ]
+    },
     {
       "name": "MDescriptor",
       "version": "1.0.6",
@@ -22032,6 +24194,84 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "swiftvec",
+      "version": "0.3.0",
+      "analyzed_at": "2026-08-24T08:49:46.528273+00:00",
+      "binaries": [
+        {
+          "name": "_native.abi3.so",
+          "file": "swiftvec/_native.abi3.so",
+          "sha256": "07986d39d19f54daa65626551511f702e653ebad7511ed39b7cad329b08e79bd",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libonnxruntime.dylib",
+          "file": "swiftvec/libs/libonnxruntime.dylib",
+          "sha256": "091d265e49da84ac8eafd6ff76b67688555192a272d784a252d550a858797d6f",
+          "format": "macho",
+          "signed": true,
+          "signer": "<Name(C=US,O=Apple Inc.,OU=Apple Certification Authority,CN=Developer ID Certification Authority)>"
+        }
+      ]
+    },
+    {
+      "package": "torch-supa-ext",
+      "version": "2.12.0a1",
+      "analyzed_at": "2026-08-24T08:50:15.435169+00:00",
+      "binaries": [
+        {
+          "name": "sutlass.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/sutlass.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "482696b86e0fc8754670981f26d26c47455275cb2306c8560aaf3b2e0b49b860",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "fused_wgrad_mlp.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/fused_wgrad_mlp.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "7a92380ca3b76ebe153429f43aa7218fde5c875e5ddf53f254828ed3d1ef0952",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "supa.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/supa.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "0d6ed199f0940085cd592ccd63f92e3bcc63f484baa809747c4bb9c647c63657",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "sudnn.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/sudnn.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "4d8cc2464902f755afd430e681f7a178ef9044310930ed4ef42d08c762e25353",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "deepspeed.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/deepspeed.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "07e5c5c5617edafe5e6f5d16696b6ebc2650219542b7003ed9a416fb6c55701c",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "sublas.cpython-310-x86_64-linux-gnu.so",
+          "file": "torch_supa_ext/sublas.cpython-310-x86_64-linux-gnu.so",
+          "sha256": "597e5d057acab1b248238b727c4a399afe7adb5c1a48449e9570819db88989dd",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -22130,6 +24370,57 @@
       "install_hooks": [
         {
           "file": "hasdata_youtube_mcp-1.0.0/hasdata_youtube_mcp/__init__.py",
+          "line": 26,
+          "call": "subprocess.call",
+          "command": "subprocess.call(args)",
+          "resolved": false,
+          "context": "main",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hasdata-google-search-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/c2/8d/af34fab5d1a7ec619dc98d1bc4986ddffdb5224b9fe8e0bb523c438c7652/hasdata_google_search_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:42.550276+00:00",
+      "install_hooks": [
+        {
+          "file": "hasdata_google_search_mcp-1.0.0/hasdata_google_search_mcp/__init__.py",
+          "line": 26,
+          "call": "subprocess.call",
+          "command": "subprocess.call(args)",
+          "resolved": false,
+          "context": "main",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hasdata-google-maps-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/52/bb9754412a82c4333afc28a088a9e3f3701ab2d9c74f4846c2cc061ca49a/hasdata_google_maps_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:46.843163+00:00",
+      "install_hooks": [
+        {
+          "file": "hasdata_google_maps_mcp-1.0.0/hasdata_google_maps_mcp/__init__.py",
+          "line": 26,
+          "call": "subprocess.call",
+          "command": "subprocess.call(args)",
+          "resolved": false,
+          "context": "main",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hasdata-instagram-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/52/5b274c4a87235240e667f72e48eb9750201da3337612eef4605e274aec48/hasdata_instagram_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-24T08:49:51.304400+00:00",
+      "install_hooks": [
+        {
+          "file": "hasdata_instagram_mcp-1.0.0/hasdata_instagram_mcp/__init__.py",
           "line": 26,
           "call": "subprocess.call",
           "command": "subprocess.call(args)",
