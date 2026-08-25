@@ -1,11 +1,2244 @@
 {
-  "generated_at": "2026-08-25T18:41:44.529125+00:00",
+  "generated_at": "2026-08-25T20:30:32.403262+00:00",
   "stats": {
-    "total_packages": 248,
-    "malicious": 11,
-    "clean": 237
+    "total_packages": 270,
+    "malicious": 12,
+    "clean": 258
   },
   "packages": [
+    {
+      "name": "genorbex-connectors",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e1/74/d49d84be148f74a9d42941b9fe643fc6842b591b569f09bc254851231269/genorbex_connectors-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:29.369008+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.calendly.com",
+          "file": "genorbex_connectors-0.1.0/src/genorbex_connectors/calendly.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "Django-Chassis",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a1/89/25a03b6f498c748117467e2ec1a331dbb7bed7bc2f43e958a37eb9036776/django_chassis-1.0.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:28.315891+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://django-chassis.rdd-lab.com",
+          "file": "django_chassis-1.0.1/pyproject.toml",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Django-Chassis",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://django-chassis.rdd-lab.com",
+          "file": "django_chassis-1.0.1/pyproject.toml",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Django-Chassis",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "zero2route3d-sdk",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/d4/29/33aa3ef1defe07053a06131d8b5273bbab2c390c947b2c1e58115bde88b7/zero2route3d_sdk-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:26.272722+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://open-elevation.com",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/dem_fetcher.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-Elevation API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://open-elevation.com",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/dem_fetcher.py",
+          "line": 24,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-Elevation API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/routing_engine.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/routing_engine.py",
+          "line": 117,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://open-elevation.com",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/copernicus_eo_suite.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-Elevation API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://open-elevation.com",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/copernicus_eo_suite.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Open-Elevation API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://tile.openstreetmap.org",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/basemap.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/basemap.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/basemap.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://mrcc.com/qgis.dtd",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/qml_generator.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/map_matching_3d.py",
+          "line": 87,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.topografix.com/GPX/1/1",
+          "file": "zero2route3d_sdk-0.2.0/src/zero2route3d/map_matching_3d.py",
+          "line": 86,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPX 1.1 Schema Documentation",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "lingolix",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a5/01/72ccbdf6c7c676bc274a99ae056ea9669f688f0d2ee6ba999664b8242dff/lingolix-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:24.296540+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://lingolix.com",
+          "file": "lingolix-0.1.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lingolix | Language Processing APIs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lingolix.com/api-portal/docs",
+          "file": "lingolix-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lingolix.com/api-portal/pricing",
+          "file": "lingolix-0.1.0/tests/test_client.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pronunciation API Pricing | Lingolix",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.lingolix.com/api/pronunciation/v3/check",
+          "file": "lingolix-0.1.0/tests/test_client.py",
+          "line": 92,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lingolix.com/api-portal/pricing",
+          "file": "lingolix-0.1.0/tests/test_client.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pronunciation API Pricing | Lingolix",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.lingolix.com",
+          "file": "lingolix-0.1.0/src/lingolix/__init__.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lingolix.com/api-portal",
+          "file": "lingolix-0.1.0/src/lingolix/__init__.py",
+          "line": 198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lingolix | Language Processing APIs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lingolix.com/api-portal",
+          "file": "lingolix-0.1.0/src/lingolix/__init__.py",
+          "line": 197,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lingolix | Language Processing APIs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "aipatrol",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/c6/1b/03c6f25ce6f2c517fdebd604689ff9f8a7c26e2ee0ece1383d2b17c2a281/aipatrol-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:21.480179+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "aipatrol-0.2.0/aipatrol/config.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "aipatrol-0.2.0/aipatrol/report/sarif.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "datagouv-toolkit",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/aa/15/56872a063a5749148c07d23003b13241c879ed3a39d3f27c3fc535b3f494/datagouv_toolkit-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:20.227304+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.data.gouv.fr/api/1",
+          "file": "datagouv_toolkit-0.1.1/datagouv.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "R\u00e9f\u00e9rence | Guides de data.gouv.fr",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.data.gouv.fr/api/1/datasets",
+          "file": "datagouv_toolkit-0.1.1/datagouv.py",
+          "line": 87,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "torn-sdk",
+      "version": "0.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/1c/3e/bbedac1f1840c17580bcef3ca3dbb8047c877e2d7ade186f0d8b72709e9f/torn_sdk-0.0.2.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:17.553639+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.torn.com/swagger/openapi.json",
+          "file": "torn_sdk-0.0.2/src/torn_sdk/codegen/common.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "skycast",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/a0/fd/6ba197fd2e7bf33dabb2570da9a119f6ba038ecea6a24ffe666d338c03a1/skycast-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:16.499246+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://geocoding-api.open-meteo.com/v1/search",
+          "file": "skycast-0.1.1/src/skycast/api.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.open-meteo.com/v1/forecast",
+          "file": "skycast-0.1.1/src/skycast/api.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ipapi.co/json",
+          "file": "skycast-0.1.1/src/skycast/api.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "dpct-run",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/e4/7fe39d86719db6511084b45c5b890acd9508d10076834aa78441d7b059f5/dpct_run-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:14.170313+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.comet.com",
+          "file": "dpct_run-0.1.0/dpct_run/applications/run_individual_support/config_loader.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "ztop",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8b/04/fb4485de9b63fb3b2ffeb30deab5c192279512bb231cf0be70804aa1a0ae/ztop-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:12.542419+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://www.virustotal.com/api/v3/files",
+          "file": "ztop-1.1.0/ztop/engines/execution_analyzer.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/files",
+          "file": "ztop-1.1.0/ztop/engines/execution_analyzer.py",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/files",
+          "file": "ztop-1.1.0/ztop/engines/execution_analyzer.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.6028/NIST.FIPS.204",
+          "file": "ztop-1.1.0/ztop/engines/pqc_engine.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openquantumsafe.org",
+          "file": "ztop-1.1.0/ztop/engines/pqc_engine.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | Open Quantum Safe",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.6028/NIST.FIPS.204",
+          "file": "ztop-1.1.0/ztop/engines/pqc_engine.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openquantumsafe.org",
+          "file": "ztop-1.1.0/ztop/engines/pqc_engine.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | Open Quantum Safe",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pydoll-kraken",
+      "version": "2.25.5",
+      "download_url": "https://files.pythonhosted.org/packages/58/7e/27d31b5b6d195051dec9f39d7f8406e9ae0a7bfe22fc9e65858743572ac5/pydoll_kraken-2.25.5.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:11.113878+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://httpbin.org/ip",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/utils/socks5_proxy_forwarder.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://httpbin.org/ip",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/utils/socks5_proxy_forwarder.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://crbug.com/991325",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/commands/target_commands.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://crbug.com/991325",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/commands/target_commands.py",
+          "line": 72,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.softwareishard.com/blog/har-12-spec",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/protocol/network/har_types.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HAR 1.2 Spec | Software is hard",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.softwareishard.com/blog/har-12-spec",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/protocol/network/har_types.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HAR 1.2 Spec | Software is hard",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://cs.chromium.org/chromium/src/net/base/net_error_list.h",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/protocol/network/events.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cs.chromium.org/chromium/src/net/base/net_error_list.h",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/protocol/network/events.py",
+          "line": 77,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "ws://host/devtools/cdp",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host/devtools/browser/abc/page",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host/devtools/browser/abc?token=XYZ",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 1118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host/devtools/cdp",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 154,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host/devtools/browser/abc/page",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 154,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://host/devtools/browser/abc?token=XYZ",
+          "file": "pydoll_kraken-2.25.5/pydoll/pydoll_kraken/browser/chromium/base.py",
+          "line": 1110,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "yeaboi-web-assets",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/dc/4f/717b1e0a00f05deb597f7c25093f85c2d34045259356a0ec727fb25d7f0f/yeaboi_web_assets-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:08.668976+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://yeaboi.ai",
+          "file": "yeaboi_web_assets-1.0.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "yeaboi \u2014 an AI Scrum Master for your terminal",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "spielos",
+      "version": "6.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/73/47/a31963aa87d994531a0c8bda398cee3adba5bc636f3e1a87ea47b41dee93/spielos-6.2.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:08.181348+00:00",
+      "total_findings": 91,
+      "findings": [
+        {
+          "url": "https://spielos.xyz",
+          "file": "spielos-6.2.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Workflow Automation That Runs Without You | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.buffer.com",
+          "file": "spielos-6.2.0/company/connections/buffer.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/connections/registry.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mcp.attio.com/mcp",
+          "file": "spielos-6.2.0/company/connections/registry.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MCP Server | Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/connections/registry.py",
+          "line": 36,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services",
+          "file": "spielos-6.2.0/company/departments/campaign_contract.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Agent Implementation Services | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/config.json",
+          "file": "spielos-6.2.0/company/runtime/bootstrap.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/install",
+          "file": "spielos-6.2.0/company/runtime/onboard.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/docs/api-reference/v2/introduction",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction to API v2 - Cal.com Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/shayanspiel/15min",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "15 min meeting | Shayan T. | Cal.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/docs/api-reference/v2/introduction",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction to API v2 - Cal.com Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/shayanspiel/15min",
+          "file": "spielos-6.2.0/company/departments/outbound/calcom_sync.py",
+          "line": 316,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "15 min meeting | Shayan T. | Cal.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PostHog",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/departments/analytics/posthog.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/assets/avatars/avatar.jpg",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/config.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz?utm_source=outbound-email&utm_medium=email&utm_campaign=outbound-sig",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/config.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Workflow Automation That Runs Without You | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://t.me/Shntwb",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/config.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Telegram: Contact @Shntwb",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.resend.com/emails",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+          "line": 438,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+          "line": 679,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails?limit=100",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+          "line": 773,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails/receiving",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+          "line": 789,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/domains",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/providers.py",
+          "line": 803,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 174,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 211,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 157,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 165,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 186,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/templates.py",
+          "line": 207,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails?limit=100",
+          "file": "spielos-6.2.0/company/departments/outbound/workflows/email/actor.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/campaign-assets/batch",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_buffer_connection.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/campaign-assets/batch",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_buffer_connection.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/apply",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_compose.py",
+          "line": 191,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Apply \u2014 Free Review | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://accountingtoronto.ca/teams/sami-ghaith",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_proven_pattern.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sami Ghaith, CPA, CGA, MBA, Enrolled Agent | SDG Accountant",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.gca.gov.uk/agreements/RM6281%3A2/lot-suppliers/csv",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_proven_pattern.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.gca.gov.uk/agreements/RM6281%3A2/lot-suppliers/csv",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_proven_pattern.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.gca.gov.uk/agreements/RM6376%3A1/lot-suppliers/3",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_proven_pattern.py",
+          "line": 230,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Suppliers on Lot 1: Teachers and Education Recruitment - GCA",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://spielos.xyz/apply",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_outbound_email.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Apply \u2014 Free Review | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects/92369/query",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_growth_departments.py",
+          "line": 267,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects/92369/query",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_growth_departments.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects/4242/query",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_growth_departments.py",
+          "line": 315,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects/92369/query",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_growth_departments.py",
+          "line": 344,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects/92369/query",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_growth_departments.py",
+          "line": 425,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://spielos.xyz/services?utm_source=",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_campaign_handoff_contract.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Agent Implementation Services | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_campaign_handoff_contract.py",
+          "line": 479,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Workflow Automation That Runs Without You | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services?utm_source=youtube",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/tests/test_campaign_handoff_contract.py",
+          "line": 592,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Agent Implementation Services | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.buffer.com",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/connections/buffer.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/connections/registry.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://mcp.attio.com/mcp",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/connections/registry.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MCP Server | Attio",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/connections/registry.py",
+          "line": 36,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/campaign_contract.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Agent Implementation Services | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/config.json",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/runtime/bootstrap.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://opencode.ai/install",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/runtime/onboard.py",
+          "line": 202,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/docs/api-reference/v2/introduction",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction to API v2 - Cal.com Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/shayanspiel/15min",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "15 min meeting | Shayan T. | Cal.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cal.com/v2/bookings",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/docs/api-reference/v2/introduction",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction to API v2 - Cal.com Docs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cal.com/shayanspiel/15min",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/calcom_sync.py",
+          "line": 316,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "15 min meeting | Shayan T. | Cal.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PostHog",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eu.posthog.com/api/projects",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcp.posthog.com/mcp",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/analytics/posthog.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/assets/avatars/avatar.jpg",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/config.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz?utm_source=outbound-email&utm_medium=email&utm_campaign=outbound-sig",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/config.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "AI Workflow Automation That Runs Without You | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://t.me/Shntwb",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/config.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 200,
+          "http_title": "Telegram: Contact @Shntwb",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://api.resend.com/emails",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+          "line": 438,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+          "line": 679,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails?limit=100",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+          "line": 773,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails/receiving",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+          "line": 789,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/domains",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/providers.py",
+          "line": 803,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 174,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 211,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 157,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 165,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 186,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://spielos.xyz/services/agent-brief",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/templates.py",
+          "line": 207,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Free AI Workflow Assessment and Agent Brief | SpielOS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.resend.com/emails?limit=100",
+          "file": "spielos-6.2.0/company/init_templates/agents/company/departments/outbound/workflows/email/actor.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "sweetrpg-game-room-objects",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/79/21/aef2c879974d6e45419e2f5fe6d8de15c33cc86722cec817080ca1ae309c/sweetrpg_game_room_objects-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:00.630338+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://sweetrpg.com",
+          "file": "sweetrpg_game_room_objects-0.1.0/setup.cfg",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "sweetRPG by Pilgrimage Software",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "py-mre",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/35/e7/6b7a1c4164db9ee89d83be7f72467c15277ed6c04198fd4ddb067a3ae606/py_mre-1.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:30:00.220224+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pgc0419.tistory.com/entry/Python--hwp-txt-",
+          "file": "py_mre-1.1.0/mre/hwp_adapter.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pgc0419.tistory.com/entry/Python--hwp-txt-",
+          "file": "py_mre-1.1.0/mre/hwp_adapter.py",
+          "line": 3,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "ocmo-api",
+      "version": "0.8.19",
+      "download_url": "https://files.pythonhosted.org/packages/20/33/bbac5a2e0f0e8fb054a3d834b5a0c4a765bf61389eb8f4e214f02d2b5ca9/ocmo_api-0.8.19-py3-none-any.whl",
+      "analyzed_at": "2026-08-25T20:29:57.867421+00:00",
+      "total_findings": 15,
+      "findings": [
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/deployment/asgi",
+          "file": "ocmoapi/asgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/deployment/asgi",
+          "file": "ocmoapi/asgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/topics/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/ref/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/deployment/checklist",
+          "file": "ocmoapi/settings.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Deployment checklist | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/ref/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/ref/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/topics/i18n",
+          "file": "ocmoapi/settings.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/static-files",
+          "file": "ocmoapi/settings.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/ref/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 122,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/topics/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/ref/settings",
+          "file": "ocmoapi/settings.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Django documentation | Django",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi",
+          "file": "ocmoapi/wsgi.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi",
+          "file": "ocmoapi/wsgi.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://schema.org/extensions",
+          "file": "core/managers/webhook/main.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "quantlint",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/00/47/a1beccffe27639d4e4423a541a18eae6f238546001e74063b75125e354fe/quantlint-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:56.818844+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://tickbloom.com",
+          "file": "quantlint-0.1.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tickbloom \u2014 Backtests you can actually trust",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tickbloom",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/9b/09/331de907384969b3f5c5c023930fd21bf22b327386b180bfde921c452b2a/tickbloom-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:56.544078+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://tickbloom.com",
+          "file": "tickbloom-0.1.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tickbloom \u2014 Backtests you can actually trust",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://tickbloom.com",
+          "file": "tickbloom-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tickbloom \u2014 Backtests you can actually trust",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "agno-deepkeep",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/df/2c/ca92bc744bb022b713a407a2131e2e99970e391ebfccb4d942c9c36720b1/agno_deepkeep-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:55.536035+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://deepkeep.ai",
+          "file": "agno_deepkeep-0.1.1/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DeepKeep AI Security Platform for Applications, Agents and Models",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "capybucks",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/39/f7/bdc3220b48ea042598d8aa23488bdbaf83b3d68d5c8971b132b5d8e62584/capybucks-0.0.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:54.756515+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://api.twelvedata.com",
+          "file": "capybucks-0.0.1/src/capybucks/providers/twelvedata.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://ws.twelvedata.com/v1/quotes/price",
+          "file": "capybucks-0.0.1/src/capybucks/providers/twelvedata.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.twelvedata.com/time_series",
+          "file": "capybucks-0.0.1/src/capybucks/providers/twelvedata.py",
+          "line": 88,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.twelvedata.com/quote",
+          "file": "capybucks-0.0.1/src/capybucks/providers/twelvedata.py",
+          "line": 94,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v10/finance/quoteSummary",
+          "file": "capybucks-0.0.1/src/capybucks/providers/yahoo_fundamentals.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v7/finance/options",
+          "file": "capybucks-0.0.1/src/capybucks/providers/yahoo_fundamentals.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v1/finance/search",
+          "file": "capybucks-0.0.1/src/capybucks/providers/yahoo_fundamentals.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart",
+          "file": "capybucks-0.0.1/src/capybucks/providers/yahoo_fundamentals.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart",
+          "file": "capybucks-0.0.1/src/capybucks/providers/yahoo.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.coingecko.com/api/v3/coins",
+          "file": "capybucks-0.0.1/src/capybucks/providers/coingecko.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://stooq.com/q/d/l",
+          "file": "capybucks-0.0.1/src/capybucks/providers/stooq.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "shortsmith",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/18/7a/f4838a2009635e45de843c804020429ac4a6928f38a79da61ce7625c671e/shortsmith-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:52.604756+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "shortsmith-0.1.0/shortsmith/llm.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://johnvansickle.com/ffmpeg",
+          "file": "shortsmith-0.1.0/shortsmith/media.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "John Van Sickle - FFmpeg Static Builds",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://johnvansickle.com/ffmpeg",
+          "file": "shortsmith-0.1.0/shortsmith/media.py",
+          "line": 106,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "John Van Sickle - FFmpeg Static Builds",
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "execweave",
+      "version": "0.6.1",
+      "download_url": "https://files.pythonhosted.org/packages/bd/32/01d97c53d290dfa0f1f0f5d4f8503aeda977baf9cc8d503cad0f76f84f32/execweave-0.6.1.tar.gz",
+      "analyzed_at": "2026-08-25T20:29:50.223564+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "execweave-0.6.1/tests/test_inference_gateway.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "execweave-0.6.1/src/execweave/inference_gateway_cli.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "execweave-0.6.1/src/execweave/inference_gateway.py",
+          "line": 272,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "execweave-0.6.1/src/execweave/inference_gateway.py",
+          "line": 316,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "acmadDL",
       "version": "0.2.0",
