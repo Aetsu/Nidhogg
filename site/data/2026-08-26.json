@@ -1,0 +1,1508 @@
+{
+  "generated_at": "2026-08-26T01:20:33.238499+00:00",
+  "stats": {
+    "total_packages": 22,
+    "malicious": 1,
+    "clean": 21
+  },
+  "packages": [
+    {
+      "name": "graver-genealogy",
+      "version": "1.0.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/88/e0/6dc232e8cdb5d5dae76c0d666cefc464ae7eedf3aa7ac691490536ec71bb/graver_genealogy-1.0.0rc1.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:30.220079+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://www.findagrave.com/memorial/1075/george-washington",
+          "file": "graver_genealogy-1.0.0rc1/src/graver/_live_contract.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "George Washington (1732-1799) - Find a Grave Memorial",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.findagrave.com/cemetery/([0-9]+)/.*",
+          "file": "graver_genealogy-1.0.0rc1/src/graver/api.py",
+          "line": 226,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org/Map",
+          "file": "graver_genealogy-1.0.0rc1/src/graver/api.py",
+          "line": 1833,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://schema.org/Cemetery",
+          "file": "graver_genealogy-1.0.0rc1/src/graver/api.py",
+          "line": 1850,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.findagrave.com",
+          "file": "graver_genealogy-1.0.0rc1/src/graver/constants.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Find a Grave - Millions of Cemetery Records",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "wiki2dataset",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5a/ed/eb563c3439da02b558254dad25fa3e296e0212b435d587a4c592c9357bd4/wiki2dataset-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:27.962635+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "http://www.mediawiki.org/xml/export-0.11",
+          "file": "wiki2dataset-0.1.0/tests/test_wiki2dataset.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.enterprise.wikimedia.com/download",
+          "file": "wiki2dataset-0.1.0/tests/test_template_roles.py",
+          "line": 187,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://auth.enterprise.wikimedia.com/v1",
+          "file": "wiki2dataset-0.1.0/python/wiki2dataset/metadata.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.enterprise.wikimedia.com/v2",
+          "file": "wiki2dataset-0.1.0/python/wiki2dataset/metadata.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "icd-cli",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/7c/7183eb6e99f1cfab1d23da21d7a1ad4f83ad8ae920798ab91e4d4ce8c389/icd_cli-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:26.692900+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "icd_cli-1.0.0/icd/core/ai_client.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/keys",
+          "file": "icd_cli-1.0.0/icd/core/ai_client.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/keys",
+          "file": "icd_cli-1.0.0/icd/core/ai_client.py",
+          "line": 41,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gosce-llm-orchestration-agent-2-df5979",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/15/e3/9abe753446af7765ea2d634fa5c1cd07224a65e327e0e85b569f6dc5716d/gosce_llm_orchestration_agent_2_df5979-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:24.322809+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://llm-orchestration-agent-2-df5979.getvda.ai",
+          "file": "gosce_llm_orchestration_agent_2_df5979-0.1.0/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://agents.getvda.ai/agents",
+          "file": "gosce_llm_orchestration_agent_2_df5979-0.1.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GOSCE Agent Portfolio \u2014 93 live A2A + MCP agents | getvda.ai",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://llm-orchestration-agent-2-df5979.getvda.ai/mcp",
+          "file": "gosce_llm_orchestration_agent_2_df5979-0.1.0/gosce_llm_orchestration_agent_2_df5979/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://llm-orchestration-agent-2-df5979.getvda.ai/a2a",
+          "file": "gosce_llm_orchestration_agent_2_df5979-0.1.0/gosce_llm_orchestration_agent_2_df5979/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://llm-orchestration-agent-2-df5979.getvda.ai",
+          "file": "gosce_llm_orchestration_agent_2_df5979-0.1.0/gosce_llm_orchestration_agent_2_df5979/__init__.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vocalize-cli",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/21/75/61585df31f50b9a9a9e80e4ed2bf14ae120f7bcd3c2cc443c8cf95a2b964/vocalize_cli-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:23.796271+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://elevenlabs.io/app/settings/api-keys",
+          "file": "vocalize_cli-0.2.0/vocalize/exceptions.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Voice Generator & Text to Speech | ElevenLabs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://elevenlabs.io/app/settings/api-keys",
+          "file": "vocalize_cli-0.2.0/vocalize/exceptions.py",
+          "line": 13,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Voice Generator & Text to Speech | ElevenLabs",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "odr-bootstrap",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/07/c6c2b599a44df6fbd518cf4408842fc94ed136c675dfc76c7ecd498057d5/odr_bootstrap-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:23.177802+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://img.shields.io/pypi/v/odr-bootstrap.svg",
+          "file": "odr_bootstrap-0.1.0/docs/source/index.rst",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pypi: v0.1.0",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/License-MIT-yellow.svg",
+          "file": "odr_bootstrap-0.1.0/docs/source/index.rst",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License: MIT",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.astral.sh/uv",
+          "file": "odr_bootstrap-0.1.0/docs/source/installation.rst",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "uv",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "spatial-rx",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/77/66/d88250c4772ce861d848373b1a33c8041a21563f2458ce5528951abcd2a9/spatial_rx-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:22.794855+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://www.10xgenomics.com/datasets/xenium-prime-ffpe-human-cervical-cancer",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.chom.2026.01.018",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cell.2023.11.003",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.10xgenomics.com/datasets/xenium-prime-ffpe-human-cervical-cancer",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 51,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.chom.2026.01.018",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 58,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.cell.2023.11.003",
+          "file": "spatial_rx-0.1.0/demos/landmarks.py",
+          "line": 66,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "smartdevhub-core",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d0/2d/6d494c55d5138b5402cadd8c4be6b19ce87be5ee64f2e40e5d0e75fc5d4f/smartdevhub_core-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:21.900586+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://core.smartdevafrica.com/docs",
+          "file": "smartdevhub_core-0.1.0/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Smartdev Core \u2014 Documentation API & SDK",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sandbox.core.smartdevafrica.com",
+          "file": "smartdevhub_core-0.1.0/src/smartdev_core/environment.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.core.smartdevafrica.com",
+          "file": "smartdevhub_core-0.1.0/src/smartdev_core/environment.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+          "file": "smartdevhub_core-0.1.0/src/smartdev_core/core/http_sse/_decoders.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "HTML Standard",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "quest1",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/ab/e938973677ec7a7ee26b864480f67a00607b9b5823f9de90cdfc372d3094/quest1-0.2.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:20.670346+00:00",
+      "total_findings": 29,
+      "findings": [
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/config.toml",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "http://ok.ru/video/abc123",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0435\u0442\u044c \u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438. \u041e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0432 \u041e\u041a. \u0412\u0430\u0448\u0435 \u043c\u0435\u0441\u0442\u043e \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u043e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0430\u043c\u0438",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/aqz-KE-bpKQ",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?feature=share&v=aqz-KE-bpKQ",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123456789",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://m.ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0412\u0438\u0434\u0435\u043e The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett] | OK.RU",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "http://www.ok.ru/video/abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0435\u0442\u044c \u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438. \u041e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0432 \u041e\u041a. \u0412\u0430\u0448\u0435 \u043c\u0435\u0441\u0442\u043e \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u043e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0430\u043c\u0438",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://m.ok.ru/video/abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0412\u0438\u0434\u0435\u043e",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://m.ok.ru/video/abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0412\u0438\u0434\u0435\u043e",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://m.ok.ru/video/abc",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0412\u0438\u0434\u0435\u043e",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/tests/test_downloader.py",
+          "line": 128,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+          "file": "quest1-0.2.0/api/worker.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tasks \u2014 Celery 5.6.3 documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html",
+          "file": "quest1-0.2.0/api/worker.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Tasks \u2014 Celery 5.6.3 documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ok.ru/video/248244667877",
+          "file": "quest1-0.2.0/src/q1/config.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Adventures of Sherlock Holmes: A Scandal in Bohemia [Jeremy Brett]",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://pyav.basswood.io/docs/stable",
+          "file": "quest1-0.2.0/src/q1/frame.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PyAV Documentation \u2014 PyAV 18.1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pyav.basswood.io/docs/stable",
+          "file": "quest1-0.2.0/src/q1/frame.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PyAV Documentation \u2014 PyAV 18.1.0 documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ok.ru/video",
+          "file": "quest1-0.2.0/src/q1/downloader.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0421\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0435\u0442\u044c \u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438. \u041e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441 \u0434\u0440\u0443\u0437\u044c\u044f\u043c\u0438 \u0432 \u041e\u041a. \u0412\u0430\u0448\u0435 \u043c\u0435\u0441\u0442\u043e \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0441 \u043e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0430\u043c\u0438",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "quest1-0.2.0/src/q1/downloader.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be",
+          "file": "quest1-0.2.0/src/q1/downloader.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com",
+          "file": "quest1-0.2.0/src/q1/downloader.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vimeo - All-in-One Video Platform",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "veridu-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/33/cb/2f865808e19a39ef51009c9ab7efbbbfe406c2641183c9ba7767f2a5a3d9/veridu_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:15.167607+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://veridu.io",
+          "file": "veridu_sdk-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Veridu \u00b7 Veridu",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://veridu.io/docs",
+          "file": "veridu_sdk-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Veridu \u00b7 Veridu",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.veridu.io/openapi.json",
+          "file": "veridu_sdk-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.veridu.io",
+          "file": "veridu_sdk-0.1.0/veridu/client.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "meridian-storage-query",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/53/23/58305b661eeb30628f6afcd4a040d686ec32a60fbd15b1972cacec92be3f/meridian_storage_query-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:13.851896+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "meridian_storage_query-1.0.0/tests/contract/test_contracts.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyatlasctl",
+      "version": "0.1.3",
+      "download_url": "https://files.pythonhosted.org/packages/67/ff/80eb87f7a81a514414b03cc03f7b449bf08b30086473b4860c93ea8535e0/pyatlasctl-0.1.3.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:13.221086+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://atlasinference.io",
+          "file": "pyatlasctl-0.1.3/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Atlas, pure Rust inference for DGX Spark",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "meridian-storage-object-common",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/1e/c3/b574cdceeab1b8adfe104051528c7aa7b8ba2da6d5fa8129b0ce15ca95b8/meridian_storage_object_common-1.0.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:12.617079+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "meridian_storage_object_common-1.0.0/tests/test_wire_contracts.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "gentrail",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/95/25/9537a92afea470f00bca8c5117fbf7beb4a23ff0f24decb545c85755f252/gentrail-0.5.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:12.284897+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://gentrail.ai",
+          "file": "gentrail-0.5.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Gentrail. AI Agent Governance at Runtime.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://otel.gentrail.ai",
+          "file": "gentrail-0.5.0/gentrail/otel_exporter.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://otel.gentrail.ai",
+          "file": "gentrail-0.5.0/gentrail/otel_exporter.py",
+          "line": 261,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://otel.gentrail.ai",
+          "file": "gentrail-0.5.0/gentrail/otel_exporter.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "quillstack-dotenv",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/58/af/4aa461cca25c1e998c453d2691d3015a8378bf6f493b4c021d517df62581/quillstack_dotenv-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:11.251938+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://quillstack.org/python/packages/dotenv",
+          "file": "quillstack_dotenv-0.1.1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Dotenv | Quillstack",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "multilayer-sdk",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/35/41/a63a1dc1440bb24f64a0c09a0c251afcb3e01232ebdaad4a92772f9c0926/multilayer_sdk-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:10.913123+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://carto.com/attributions",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attribution | CARTO",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://carto.com/attributions",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attribution | CARTO",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://carto.com/attributions",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attribution | CARTO",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://opentopomap.org",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenTopoMap - Topographische Karten aus OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.cyclosm.org",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CyclOSM: OpenStreetMap-based bicycle map",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.openstreetmap.org/copyright",
+          "file": "multilayer_sdk-0.1.1/src/multilayer/layers.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Copyright and License | OpenStreetMap",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "livekit-plugins-floe-v1",
+      "version": "1.6.10",
+      "download_url": "https://files.pythonhosted.org/packages/16/13/9f5943cab2dd3e3508beb5e4b3a069985b9a54ea75257184cc44f17aa894/livekit_plugins_floe_v1-1.6.10.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:09.827675+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://floelabs.xyz",
+          "file": "livekit_plugins_floe_v1-1.6.10/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 200,
+          "http_title": "Floe \u2014 Bill for every dollar your voice agents spend",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.livekit.io",
+          "file": "livekit_plugins_floe_v1-1.6.10/livekit/plugins/floe/__init__.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiveKit Documentation | LiveKit Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.livekit.io",
+          "file": "livekit_plugins_floe_v1-1.6.10/livekit/plugins/floe/__init__.py",
+          "line": 15,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LiveKit Documentation | LiveKit Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://credit-api.floelabs.xyz/v1",
+          "file": "livekit_plugins_floe_v1-1.6.10/livekit/plugins/floe/services.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://credit-api.floelabs.xyz/v1/llm",
+          "file": "livekit_plugins_floe_v1-1.6.10/livekit/plugins/floe/services.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "myface2city",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/6f/22/fe97a4642a43b61f05ba2939a153616366483a070f993bb923d6bf824d14/myface2city-0.1.1.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:09.368482+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "file": "myface2city-0.1.1/src/myface2city/osm.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 406,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "file": "myface2city-0.1.1/src/myface2city/osm.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "circuitpython-ts20",
+      "version": "0.5",
+      "download_url": "https://files.pythonhosted.org/packages/5d/df/5979c4790e0ba5517b44983369f0a38f3a38cb3422cac181485b0e6efd54/circuitpython_ts20-0.5.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:07.351841+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://circuitpython.org/downloads",
+          "file": "circuitpython_ts20-0.5/ts20.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Downloads",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://circuitpython.org/downloads",
+          "file": "circuitpython_ts20-0.5/ts20.py",
+          "line": 4,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Downloads",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://unlicense.org",
+          "file": "circuitpython_ts20-0.5/LICENSES/Unlicense.txt",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Unlicense Yourself: Set Your Code Free",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://circuitpython.org/libraries",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Libraries",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.circuitpython.org",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://forums.adafruit.com/viewforum.php?f=60",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://adafru.it/discord",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "adafruit",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://learn.adafruit.com",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Adafruit Learning System",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://blog.adafruit.com",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Adafruit Industries \u2013 Makers, hackers, artists, designers and engineers!",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://www.adafruit.com",
+          "file": "circuitpython_ts20-0.5/docs/index.rst",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Adafruit Industries, Unique & fun DIY electronics and kits",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.circuitpython.org/projects/busdevice/en/latest",
+          "file": "circuitpython_ts20-0.5/docs/conf.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Adafruit CircuitPython BusDevice \u2014 Adafruit CircuitPython Bus Device 1.0 documentation",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.circuitpython.org/en/latest",
+          "file": "circuitpython_ts20-0.5/docs/conf.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "santismm-knowledge-mcp",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/59/cb/1d9bea14dd08548f637b7db03d0cd2f8c11badc1b84da71436caefa25be0/santismm_knowledge_mcp-0.2.1.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:06.230889+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://santismm.com/en/mcp",
+          "file": "santismm_knowledge_mcp-0.2.1/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MCP endpoint \u2014 Santismm Knowledge Platform \u00b7 SANTISMM",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://santismm.com/mcp?via=pypi",
+          "file": "santismm_knowledge_mcp-0.2.1/src/santismm_knowledge_mcp/proxy.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "kourio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b3/ec/26170e3d0491451d657a5b025f6182f200dbc92dd2dd949df1ce837c9ca1/kourio-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:05.393123+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://kourio.app",
+          "file": "kourio-0.1.0/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kourio \u2014 Transactional email for teams who need it to arrive",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://kourio.app",
+          "file": "kourio-0.1.0/src/kourio/client.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kourio \u2014 Transactional email for teams who need it to arrive",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://kourio.app",
+          "file": "kourio-0.1.0/src/kourio/client.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kourio \u2014 Transactional email for teams who need it to arrive",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "langchain-quanticdata",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/50/a4/0d4bcacf1af744676984afcfa31e29d2cc47297f287f0695cb14702f4354/langchain_quanticdata-0.1.0.tar.gz",
+      "analyzed_at": "2026-08-26T01:20:04.227543+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://quanticdata.io",
+          "file": "langchain_quanticdata-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Proxy Networks & Web Data APIs for AI | QuanticData",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://quanticdata.io/docs",
+          "file": "langchain_quanticdata-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Documentation \u2014 API Quickstart | QuanticData",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    }
+  ],
+  "binaries": [
+    {
+      "package": "m0serve",
+      "version": "0.10.0",
+      "analyzed_at": "2026-08-26T01:20:11.381309+00:00",
+      "binaries": [
+        {
+          "name": "libAsyncRTRuntimeGlobals.dylib",
+          "file": "m0serve/_lib/libAsyncRTRuntimeGlobals.dylib",
+          "sha256": "799da4fdc9e49698b8865ed24e6481f9d7ee6bcf6d8470365494cafc51b78776",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libKGENCompilerRTShared.dylib",
+          "file": "m0serve/_lib/libKGENCompilerRTShared.dylib",
+          "sha256": "2477830e1527e14e4f5b45d1a6aa55101283edef66a524851b35e1dc6ea2261d",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libm0core.dylib",
+          "file": "m0serve/_lib/libm0core.dylib",
+          "sha256": "3af6f28a84246b649d3724e10e12108705b056e1b7bf94623849c7cce0030a8b",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libMSupportGlobals.dylib",
+          "file": "m0serve/_lib/libMSupportGlobals.dylib",
+          "sha256": "de4d96c0e4c65bb25c4d5cc1d75ab265f977f018db0eeaac74545b699969ce03",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "libdictenstein",
+      "version": "4.0.0rc4",
+      "analyzed_at": "2026-08-26T01:20:27.219435+00:00",
+      "binaries": [
+        {
+          "name": "liblibdictenstein.dylib",
+          "file": "libdictenstein/native/liblibdictenstein.dylib",
+          "sha256": "416202a0e019174fcdef9b67d4fd4bb266d1b067bd9dcd4d4856ee9bb86d50c6",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    }
+  ],
+  "install_hooks": []
+}
