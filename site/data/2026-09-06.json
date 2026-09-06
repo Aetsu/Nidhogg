@@ -1,11 +1,4904 @@
 {
-  "generated_at": "2026-09-06T16:46:30.569344+00:00",
+  "generated_at": "2026-09-06T20:07:35.712607+00:00",
   "stats": {
-    "total_packages": 183,
-    "malicious": 14,
-    "clean": 169
+    "total_packages": 239,
+    "malicious": 16,
+    "clean": 223
   },
   "packages": [
+    {
+      "name": "nimoo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a1/e6/9694c792d7aacbb7ead83b57de55c2524269d3ec1d577737b41b025d6b67/nimoo-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:30.725943+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://nimo.renult.xyz",
+          "file": "nimoo-0.1.0/tests/test_client.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nimo.renult.xyz/api/v1/phone-msisdn/verify",
+          "file": "nimoo-0.1.0/tests/test_client.py",
+          "line": 21,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "suspicious_tld",
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nimo.renult.xyz",
+          "file": "nimoo-0.1.0/src/nimoo/client.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "promptdiff-eval",
+      "version": "3.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/b7/f7/b7643610e264cd0a4abf8831b3a50c8af0b84b01fb5cf14fa702504183af/promptdiff_eval-3.5.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:29.840059+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptdiff_eval-3.5.0/promptdiff/providers/anthropic_provider.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/Quality_Gate-PASSED-brightgreen.svg",
+          "file": "promptdiff_eval-3.5.0/promptdiff/reporters/pr_bot.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quality Gate: PASSED",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://img.shields.io/badge/Quality_Gate-REGRESSION_DETECTED-red.svg",
+          "file": "promptdiff_eval-3.5.0/promptdiff/reporters/pr_bot.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Quality Gate: REGRESSION DETECTED",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "promptdiff_eval-3.5.0/promptdiff/reporters/otel_reporter.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "promptdiff_eval-3.5.0/promptdiff/reporters/html.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "promptdiff_eval-3.5.0/promptdiff/reporters/html.py",
+          "line": 131,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "promptdiff_eval-3.5.0/promptdiff/cli/studio.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cdn.tailwindcss.com",
+          "file": "promptdiff_eval-3.5.0/promptdiff/cli/studio.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "qanary",
+      "version": "0.10.0",
+      "download_url": "https://files.pythonhosted.org/packages/f2/e3/6264f762d8e42f2ad1c6857cd895724f4002c96ca5e48281613c53cf85bb/qanary-0.10.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:28.708838+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://squad-lab.gitlab.io/qanary",
+          "file": "qanary-0.10.0/pyproject.toml",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Qanary",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://squad-lab.org",
+          "file": "qanary-0.10.0/pyproject.toml",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home | SQUAD",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.xarray.dev/en/stable",
+          "file": "qanary-0.10.0/docs/source/conf.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xarray documentation",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "combining-machine",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/42/1e/e7e2ea04f15fdb2e6ff22f2d3245bb0c831e1daa35745eecaeaa4535b58b/combining_machine-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:27.473123+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://url.com",
+          "file": "combining_machine-0.0.1/tests/test_llm_soup.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "URL.com - MediaOptions",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/strangelove.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/basta.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/metai.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/depsek.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/tinker.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/electroid.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/qrog.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "combining_machine-0.0.1/src/combining_machine/providers/illuminati.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "separating-machine",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/81/fc/fae96cf781a148303529d0bdd1b75152f7a24a6bf2dc8675ac0f00673c4f/separating_machine-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:26.907123+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://url.com",
+          "file": "separating_machine-0.0.1/tests/test_llm_soup.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "URL.com - MediaOptions",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.x.ai/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/strangelove.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference.baseten.co/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/basta.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/metai.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.deepseek.com",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/depsek.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/tinker.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/electroid.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/qrog.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "separating_machine-0.0.1/src/separating_machine/providers/illuminati.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "PyFlumeNG",
+      "version": "0.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/ae/13/16759086b3202609503fac681ecf6c7e2e922d28a15aa7459b93a53bd9c5/pyflumeng-0.9.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:26.147465+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "https://api.flumewater.com/account/login",
+          "file": "pyflumeng-0.9.0/tests/test_pyflumeng.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flume - Login",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://portal.flumewater.com?code=one-time-code&state=",
+          "file": "pyflumeng-0.9.0/tests/test_pyflumeng.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flume Portal",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users/12345/usage-alerts",
+          "file": "pyflumeng-0.9.0/tests/test_pyflumeng.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users/12345/devices/device/rules/usage-alerts",
+          "file": "pyflumeng-0.9.0/tests/test_pyflumeng.py",
+          "line": 125,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users/12345/usage-alerts?offset=1",
+          "file": "pyflumeng-0.9.0/tests/test_pyflumeng.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumewater.com",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://portal.flumewater.com",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flume Portal",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/oauth/token",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 15,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 16,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 17,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 18,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 20,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 22,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumetech.com/users",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 24,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumewater.com/oauth/authorize",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Flume - Login",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.flumewater.com/oauth/token",
+          "file": "pyflumeng-0.9.0/pyflume/constants.py",
+          "line": 29,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "lexichunk",
+      "version": "0.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/b3/9f/c8fa180245fa7f4316d3b062adc08918f72e99cf3fbb4cc95200dda60338/lexichunk-0.9.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:25.414854+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cloudvault.io/security",
+          "file": "lexichunk-0.9.0/tests/fixtures/uk_terms_conditions.txt",
+          "line": 145,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "ai-parrot-client-meta",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/33/8d/74694f2f20f9fca2d4455cf5b9c89614bbf51662049498fc2edd65c97d47/ai_parrot_client_meta-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:23.733866+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/models.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/models.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/client.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/client.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/client.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.meta.ai/v1",
+          "file": "ai_parrot_client_meta-0.2.0/src/parrot/clients/meta/client.py",
+          "line": 104,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "makervox-publish",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8e/81/9a0ffd6baa7c651f2bf4ea667e1b5924ef1a4dd80f6321c625378701b628/makervox_publish-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:23.223514+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://open.tiktokapis.com/v2",
+          "file": "makervox_publish-0.1.0/src/makervox_publish/config/schema.py",
+          "line": 695,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://open.tiktokapis.com/v2",
+          "file": "makervox_publish-0.1.0/src/makervox_publish/config/schema.py",
+          "line": 725,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "msgq-ipc",
+      "version": "1.0",
+      "download_url": "https://files.pythonhosted.org/packages/35/12/058fbf562eefdcb53a38420748bbeadbc321e4c33975f1ce882598f1d930/msgq_ipc-1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:21.910247+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://beta.ruff.rs/docs/configuration",
+          "file": "msgq_ipc-1.0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Configuring Ruff | Ruff",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "shar-production-manifest-gate",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/d2/27/7ae1fb0ae97b7a1fc29af8b3c78e34fb9e27d56e8f1973083cfe29c6176c/shar_production_manifest_gate-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:21.042175+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://sharprod.com",
+          "file": "shar_production_manifest_gate-1.0.0/pyproject.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0412\u0438\u0434\u0435\u043e\u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d \u0434\u043b\u044f \u0431\u0440\u0435\u043d\u0434\u043e\u0432: AI, CGI \u0438 \u0441\u044a\u0451\u043c\u043a\u0430 | SHAR",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "envmcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/5c/fe/b58edb72eee360f3e96b1c9ac3af5e1a170ee39584f14bf9a25b2e0beaf1/envmcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:17.292911+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.astral.sh/uv",
+          "file": "envmcp-0.1.0/src/envmcp/executor.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "uv",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "stunt",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/61/f6/b2fedd5295ab13b8418c8385182b1835c3cc5a63d17b9e1879d5f3d6e120/stunt-1.0.2.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:16.827299+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "http://mitm.it",
+          "file": "stunt-1.0.2/src/stunt/cli.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "foldyard",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/1e/bb/4b096302de29b1aac91b3c2eaa7f1934a80eebb6b28c5164eaf3eda3c913/foldyard-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:16.433599+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://get.pulumi.com",
+          "file": "foldyard-0.0.1/src/foldyard/init.py",
+          "line": 276,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.anthropic.com/settings/keys",
+          "file": "foldyard-0.0.1/src/foldyard/keyless.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API keys | Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://chatgpt.com/codex/install.sh",
+          "file": "foldyard-0.0.1/src/foldyard/plugins/codex.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://chatgpt.com/codex/install.sh",
+          "file": "foldyard-0.0.1/src/foldyard/plugins/codex.py",
+          "line": 59,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://claude.ai/install.sh",
+          "file": "foldyard-0.0.1/src/foldyard/plugins/claude.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://claude.ai/install.sh",
+          "file": "foldyard-0.0.1/src/foldyard/plugins/claude.py",
+          "line": 48,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-radio",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/74/58/ae1b44e0cfcfe6fb236c207a266ab99e085fff5163db6a685ccad90d5bbc/pamoja_radio-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:14.910135+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_radio-0.1.17/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-profiles",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/29/dd/34c5dcdf61db8bda2d864d5f1df44be69a48ff82b815e0b03e4871e0bcd9/pamoja_profiles-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:14.723289+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_profiles-0.1.17/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-field-io",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/09/3e/f45952a5ba0a85f102f3f45dc4ce433dcbfaa5c659a89e57620483dc4206/pamoja_field_io-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:14.191081+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_field_io-0.1.17/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "wqo",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/5f/0c/55163be6079591b2a0ef89a9f523e725cc9c3b5162637b371b6fbc36285f/wqo-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:13.881752+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://api.worldquantbrain.com",
+          "file": "wqo-0.1.1/wqo/config.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.worldquantbrain.com",
+          "file": "wqo-0.1.1/wqo/endpoints.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://platform.worldquantbrain.com",
+          "file": "wqo-0.1.1/wqo/endpoints.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "index",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.worldquantbrain.com/alphas/DEMO/%73ubmit?x=1",
+          "file": "wqo-0.1.1/tests/test_safety.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "http://api.worldquantbrain.com",
+          "file": "wqo-0.1.1/tests/test_safety.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.worldquantbrain.com/simulations/abc",
+          "file": "wqo-0.1.1/tests/test_offline.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "whyskill",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/e3/d8/3bf7c90c6ef2f668fbdf99dfaf6163c641b33efc26c297697cc1b7e7f3cb/whyskill-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:12.452950+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://code.claude.com/docs/en/skills",
+          "file": "whyskill-0.1.1/whyskill/report.py",
+          "line": 192,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extend Claude with skills - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "whyskill-0.1.1/whyskill/report.py",
+          "line": 219,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/skills",
+          "file": "whyskill-0.1.1/whyskill/spec.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extend Claude with skills - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/skills",
+          "file": "whyskill-0.1.1/whyskill/spec.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extend Claude with skills - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/skills",
+          "file": "whyskill-0.1.1/whyskill/rules/listing.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extend Claude with skills - Claude Code Docs",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "paperengine",
+      "version": "1.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/35/f8f3257ae9c035b5a61e94e70d5947f28132d59610c106570863b437950b/paperengine-1.2.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:11.591277+00:00",
+      "total_findings": 33,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1000/sys.001",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/comp.002",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.003",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/net.004",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sto.005",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/ene.006",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.001",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/comp.002",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.003",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/net.004",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 82,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sto.005",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/ene.006",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.001",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/comp.002",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.003",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/net.004",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sto.005",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/ene.006",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 12,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.001",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/comp.002",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sys.003",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/net.004",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/sto.005",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1000/ene.006",
+          "file": "paperengine-1.2.0/tests/test_compare.py",
+          "line": 46,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://retractionwatch.com/the-retraction-watch-database",
+          "file": "paperengine-1.2.0/papercheck/rwdb.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Retraction Watch Database becomes completely open \u2013 and RW becomes far more sustainable \u2013 Retraction Watch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://retractionwatch.com/wp-content/uploads/rwdb.csv",
+          "file": "paperengine-1.2.0/papercheck/rwdb.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://retractionwatch.com/the-retraction-watch-database",
+          "file": "paperengine-1.2.0/papercheck/rwdb.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The Retraction Watch Database becomes completely open \u2013 and RW becomes far more sustainable \u2013 Retraction Watch",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "paperengine-1.2.0/papercheck/checks/crossref_verify.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.crossref.org/works?query.bibliographic=",
+          "file": "paperengine-1.2.0/papercheck/checks/crossref_verify.py",
+          "line": 73,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.crossref.org/works?query.title=",
+          "file": "paperengine-1.2.0/papercheck/checks/integrity.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.crossref.org/works",
+          "file": "paperengine-1.2.0/papercheck/checks/integrity.py",
+          "line": 254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.openalex.org/works?search=",
+          "file": "paperengine-1.2.0/papercheck/checks/literature_search.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openalex.org/works?search=",
+          "file": "paperengine-1.2.0/papercheck/checks/retracted_refs.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "chess-game-analyzer",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d4/4c/2cdac8de4199bfa2cb0628a753d272590c02c0179cf78750422645cbc53d/chess_game_analyzer-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:10.126121+00:00",
+      "total_findings": 20,
+      "findings": [
+        {
+          "url": "https://lichess.org/abcd1234",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 301,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABCD1234 : Activity \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/abcd1234",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 308,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ABCD1234 : Activity \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/Wi8IPxc3",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 317,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MooseFromRF vs shubhro2004 - Sicilian Defense: Alapin Variation \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/Wi8IPxc3/black",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 318,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MooseFromRF vs shubhro2004 - Sicilian Defense: Alapin Variation \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.chess.com/game/live/1234567",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chess: aqie vs jpdg23 - Chess.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/analysis/game/live/1234567?tab=review",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 322,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "aqie vs. jpdg23 | Analysis - Chess.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/game/daily/99",
+          "file": "chess_game_analyzer-0.1.0/tests/test_analyzer.py",
+          "line": 324,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chess: Scott vs terminator6 - Chess.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/game/live/123456789",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/server.py",
+          "line": 666,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chess: Computer2-MEDIUM vs muralee23 - Chess.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/game/live/123456789",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/server.py",
+          "line": 665,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chess: Computer2-MEDIUM vs muralee23 - Chess.com",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://storage.lczero.org/files/networks-contrib",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/engines.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /files/networks-contrib/",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://storage.lczero.org/files/networks-contrib",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/engines.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /files/networks-contrib/",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://storage.lczero.org/files/networks-contrib/t1-256x10-distilled-swa-2432500.pb.gz",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/engines.py",
+          "line": 77,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://storage.lczero.org/files/networks-contrib/t1-512x15x8h-distilled-swa-3395000.pb.gz",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/engines.py",
+          "line": 84,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lichess.org",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/lichess.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/lichess.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/lichess.py",
+          "line": 159,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/tv/channels",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/lichess.py",
+          "line": 242,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.chess.com/pub",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/chesscom.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/callback",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/chesscom.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.chess.com/game",
+          "file": "chess_game_analyzer-0.1.0/chess_analyzer/sources/chesscom.py",
+          "line": 237,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "player-prepper",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2f/1b/7c346a4974f19047e3f64d99970e1ff52ee3fe1f62326dc8842af2797bdc/player_prepper-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:08.129145+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://api.chess.com/pub/player/x/games",
+          "file": "player_prepper-0.1.0/tests/test_prepper.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lichess.org/api/cloud-eval",
+          "file": "player_prepper-0.1.0/player_prepper/engine.py",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/games/user",
+          "file": "player_prepper-0.1.0/player_prepper/fetch.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org",
+          "file": "player_prepper-0.1.0/player_prepper/fetch.py",
+          "line": 215,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.chess.com/pub/player",
+          "file": "player_prepper-0.1.0/player_prepper/fetch.py",
+          "line": 240,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lichess.org/api/study",
+          "file": "player_prepper-0.1.0/player_prepper/book.py",
+          "line": 282,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study",
+          "file": "player_prepper-0.1.0/player_prepper/book.py",
+          "line": 348,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All studies \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study",
+          "file": "player_prepper-0.1.0/player_prepper/book.py",
+          "line": 343,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All studies \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "repertoire-creator",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2c/ba/3b3b044919099bfe817aa2979ec417a200fe30999e926bfd1f7d0e221c0c/repertoire_creator-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:07.143966+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://lichess.org",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://explorer.lichess.org",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Analysis board \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read&scopes[]=study:write&description=Repertoire%20Creator",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 54,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read&scopes[]=study:write&description=Repertoire%20Creator",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 119,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/token/test",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 169,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/study",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 226,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://explorer.lichess.org/lichess",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/lichess.py",
+          "line": 376,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/model.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All studies \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/server.py",
+          "line": 927,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/server.py",
+          "line": 1288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All studies \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/server.py",
+          "line": 926,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/cloud-eval",
+          "file": "repertoire_creator-0.1.0/repertoire_creator/engine.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/study00/chapter1",
+          "file": "repertoire_creator-0.1.0/tests/test_repertoire.py",
+          "line": 434,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/study00/chapter2",
+          "file": "repertoire_creator-0.1.0/tests/test_repertoire.py",
+          "line": 440,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/study00/chapter1",
+          "file": "repertoire_creator-0.1.0/tests/test_repertoire.py",
+          "line": 433,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/study00/chapter2",
+          "file": "repertoire_creator-0.1.0/tests/test_repertoire.py",
+          "line": 433,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "lichess-study-to-pdf",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e6/a2/72c61f141a4231bf727487dab929d4e2499c8e61c5869c06f65a0f54bec1/lichess_study_to_pdf-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:05.641364+00:00",
+      "total_findings": 32,
+      "findings": [
+        {
+          "url": "https://lichess.org/study/ByhlXnmM",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "(BETA) Lichess Practice: Checkmating with a Knight and Bishop \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h/9rd7XwOw",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h.pgn",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h/0KOpBPyc",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 543,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/efgh5678",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 545,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234/ch000001",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 547,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 562,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/zzzz9999",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 565,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/zzzz9999",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 571,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234/ch000001",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 582,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 594,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/zzzz9999",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 603,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 540,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/efgh5678",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 540,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/abcd1234/ch000001",
+          "file": "lichess_study_to_pdf-0.1.0/tests/test_study.py",
+          "line": 540,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h/T5rBUcOn",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/studies.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/EY8AUyPd",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/studies.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Italian Game (50 Lessons) : Two Gambits and a Meeting with Bobby Fischer! \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h/T5rBUcOn",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/studies.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/EY8AUyPd",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/studies.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Italian Game (50 Lessons) : Two Gambits and a Meeting with Bobby Fischer! \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/api/cloud-eval",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/evals.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "lichess.org \u2022 Free Online Chess",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 239,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 270,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 336,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/study/i7hMEq7h",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 77,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fried Liver Attack Full Guide \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 236,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 267,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://lichess.org/account/oauth/token/create?scopes[]=study:read",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/fetch.py",
+          "line": 335,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2022 lichess.org",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://stockfishchess.org/download",
+          "file": "lichess_study_to_pdf-0.1.0/lichess_study_pdf/cli.py",
+          "line": 312,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Download Stockfish 19 - Stockfish - Strong open-source chess engine",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "bzync-nextsql",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/90/e3/15f9fc08b96c757b3565e7998bfbe475177cdf427904d7fccbc6044a39f1/bzync_nextsql-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:02.593577+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://nextsql.bzync.com/docs/drivers",
+          "file": "bzync_nextsql-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Overview \u00b7 NextSQL",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "watchdog-agent-sdk",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/96/9b/cc13018f1e11d91a00b398c62fccd2836773867a909f53cb944806bd0544/watchdog_agent_sdk-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:00.675611+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://withwatchdog.com",
+          "file": "watchdog_agent_sdk-0.2.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Agent Monitoring for Unattended Jobs | Watchdog",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://withwatchdog.com/docs/quickstart",
+          "file": "watchdog_agent_sdk-0.2.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python Agent Monitoring Quickstart | Watchdog",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "greek-citybus",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8e/7d/81326ee6ccb05f32e4977bc36abaf6345b62e54e7a1d6d5f2f215d67b81e/greek_citybus-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:59.809846+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://patra.citybus.gr/el/stops",
+          "file": "greek_citybus-0.1.0/tests/test_client.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u03a3\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2 | \u0391\u03c3\u03c4\u03b9\u03ba\u03cc \u03a0\u03b1\u03c4\u03c1\u03ce\u03bd",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://ioannina.citybus.gr/el/stops",
+          "file": "greek_citybus-0.1.0/tests/test_client.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u03a3\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2 | \u0391\u03c3\u03c4\u03b9\u03ba\u03cc \u0399\u03c9\u03b1\u03bd\u03bd\u03af\u03bd\u03c9\u03bd",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://rest.citybus.gr/api/v1/el",
+          "file": "greek_citybus-0.1.0/src/greek_citybus/client.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://citybus.gr",
+          "file": "greek_citybus-0.1.0/src/greek_citybus/cities.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0391\u03c3\u03c4\u03b9\u03ba\u03ac \u039a\u03a4\u0395\u039b - e-analysis",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "panda-simple-releases",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/a3/d9287d8df5d84bb58d6578c08bfd512e76da21fc659e8f534300a13cca59/panda_simple_releases-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:57.142512+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/src/panda_simple_releases/_changelog_modifier.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/src/panda_simple_releases/_changelog_modifier.py",
+          "line": 59,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 476,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 603,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 651,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 471,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 598,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "panda_simple_releases-1.0.0/tests/panda_simple_releases/test_changelog_modifier.py",
+          "line": 646,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "trackpkgs-carrier-sdk-1788719967",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/63/96/10b9e9b3cc0b7ebba770e5d76c72a691bd66a4a274fe888e7e0c581389c5/trackpkgs_carrier_sdk_1788719967-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:56.557299+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://trackpkgs.com",
+          "file": "trackpkgs_carrier_sdk_1788719967-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Track Any Package Globally | TrackPkgs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trackpkgs.com",
+          "file": "trackpkgs_carrier_sdk_1788719967-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Track Any Package Globally | TrackPkgs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trackpkgs.com",
+          "file": "trackpkgs_carrier_sdk_1788719967-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Track Any Package Globally | TrackPkgs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://trackpkgs.com/api/v1/track?q=",
+          "file": "trackpkgs_carrier_sdk_1788719967-0.1.0/trackpkgs_sdk/__init__.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-native",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/45/aa/2b5ccc104206b0bde35b252d21b8d6d521253cbe5abb2ed914a3372357ae/pamoja_native-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:55.974645+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud",
+          "file": "pamoja_native-0.1.17/Cargo.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pamoja",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pamoja.molex.cloud/docs",
+          "file": "pamoja_native-0.1.17/Cargo.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "pamoja documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "goar",
+      "version": "1.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/fc/44/6d8321b2ed22c7e16b982da54c535df3caac76b032e2ee5fbff6dc8be628/goar-1.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:54.880970+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://agentclientprotocol.com/rfds/session-usage",
+          "file": "goar-1.1.1/goar/core/types.py",
+          "line": 424,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Session Context Size and Cost - Agent Client Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentclientprotocol.com/rfds/session-usage",
+          "file": "goar-1.1.1/goar/core/types.py",
+          "line": 435,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Session Context Size and Cost - Agent Client Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/v1",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/inference/v1",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 85,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://integrate.api.nvidia.com/v1",
+          "file": "goar-1.1.1/goar/core/providers/catalog.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developer.1password.com/docs/environments/local-env-file",
+          "file": "goar-1.1.1/goar/core/config/_settings.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Access secrets from 1Password through local .env files - 1Password Developer",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "cpdrift",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/c7/f3ca90628672371669f5f480699f23ddbe96d3900b4f9df8f2186fc7d7cd/cpdrift-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:53.464246+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5281/zenodo.22548754",
+          "file": "cpdrift-1.0.0/pyproject.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "cpdrift: inductive evaluation and representation drift for batch correction in image-based profiling | Zenodo",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "klarpdf",
+      "version": "0.19.0",
+      "download_url": "https://files.pythonhosted.org/packages/2c/9c/e61a96f5e47900e75503e2f2728a71907da7ea532e9649a165cc8541da8a/klarpdf-0.19.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:51.673727+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "klarpdf-0.19.0/klarpdf/model/metadata.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://purl.org/dc/elements/1.1",
+          "file": "klarpdf-0.19.0/klarpdf/model/metadata.py",
+          "line": 60,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DCMI: DCMI Metadata Terms",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "randkv",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/41/b5/406cfd639cfb1f953f18e73d60339cc79e90feddbf1296d36a5d57438cd8/randkv-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:46.124358+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2609.03430",
+          "file": "randkv-0.1.0/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2609.03430] Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "agentship-observability",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a6/90/16d329c3250ad2eb5313e864fd9eb8bff54d847fb2938d36fb6f5365c5ae/agentship_observability-0.0.1-py3-none-any.whl",
+      "analyzed_at": "2026-09-06T20:06:44.946367+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "agentship_observability/exporters/langfuse.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.smith.langchain.com/otel/v1/traces",
+          "file": "agentship_observability/exporters/langsmith.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "agentship-core",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/90/c3/e83630a22f7cd81c29e4fc87a27e8f786e43075fb2d36b2754ce20a53708/agentship_core-0.0.1-py3-none-any.whl",
+      "analyzed_at": "2026-09-06T20:06:43.855919+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://brave.com/search/api",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Brave Search API | Brave",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://brave.com/search/api",
+          "file": "agentship/tools/builtins/web_search.py",
+          "line": 101,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Brave Search API | Brave",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/scrape_url.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/scrape_url.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/scrape_url.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/_firecrawl.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://firecrawl.dev",
+          "file": "agentship/tools/builtins/_firecrawl.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Firecrawl - The context API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "samyak",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6a/a0/187537f78726fb2bd33942994b750f837bdd077dd7bf236a8525e28a679b/samyak-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:42.049299+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.dataaihub.co",
+          "file": "samyak-0.1.0/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Data AI Hub",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pagebound",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ed/f2/c29c39b752c7ba53e8ede2d7610d57ee366d03a66eb70962473e716bb467/pagebound-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:41.284921+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://doi.org/10.5555/3295222",
+          "file": "pagebound-0.1.0/tests/test_cli.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/3295222",
+          "file": "pagebound-0.1.0/tests/test_cli.py",
+          "line": 243,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5555/3295222",
+          "file": "pagebound-0.1.0/tests/test_api.py",
+          "line": 444,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1234/abc.5",
+          "file": "pagebound-0.1.0/tests/test_index.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://dx.doi.org/10.1234/abc.5",
+          "file": "pagebound-0.1.0/tests/test_index.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doi.org/10.5555/3295222",
+          "file": "pagebound-0.1.0/tests/test_index.py",
+          "line": 127,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1234/ABC.5",
+          "file": "pagebound-0.1.0/tests/test_index.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org",
+          "file": "pagebound-0.1.0/src/pagebound/index.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home Page",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://doi.org",
+          "file": "pagebound-0.1.0/src/pagebound/index.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home Page",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://dx.doi.org",
+          "file": "pagebound-0.1.0/src/pagebound/index.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Resolve a DOI Name",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://dx.doi.org",
+          "file": "pagebound-0.1.0/src/pagebound/index.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Resolve a DOI Name",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "curlcommander",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/ff/99/d868af6a1605f33d08efdbed9fa2331407572d29e9d0491836d242ee712b/curlcommander-0.3.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:40.510834+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://target.com/login",
+          "file": "curlcommander-0.3.1/tests/test_curl_parser.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login: Target",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 157,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/x",
+          "file": "curlcommander-0.3.1/tests/test_opsec.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/users",
+          "file": "curlcommander-0.3.1/tests/test_curl_builder.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.target.com/users",
+          "file": "curlcommander-0.3.1/tests/test_curl_builder.py",
+          "line": 185,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://first.com",
+          "file": "curlcommander-0.3.1/tests/test_history_repo.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Betting and Casino UK Best Sites Online | FIRST.com | September 2026",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://first.com",
+          "file": "curlcommander-0.3.1/tests/test_history_repo.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Betting and Casino UK Best Sites Online | FIRST.com | September 2026",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://evil.com/x",
+          "file": "curlcommander-0.3.1/tests/test_proxy.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "curlcommander-0.3.1/curlcommander/core/api_styles.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "curlcommander-0.3.1/curlcommander/core/api_styles.py",
+          "line": 59,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "curlcommander-0.3.1/curlcommander/core/passive.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "inspect_steward",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/65/86/881509cc8cb0436fab7380f3c75b5497a7b3992fca71d0b839344727a975/inspect_steward-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:31.730228+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://straz.to/2021-09-08-docker-address-pools",
+          "file": "inspect_steward-0.2.0/src/inspect_steward/_launch/pools.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The definitive guide to docker's default-address-pools option",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://straz.to/2021-09-08-docker-address-pools",
+          "file": "inspect_steward-0.2.0/src/inspect_steward/_launch/pools.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The definitive guide to docker's default-address-pools option",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://straz.to/2021-09-08-docker-address-pools",
+          "file": "inspect_steward-0.2.0/src/inspect_steward/_cli/launch.py",
+          "line": 686,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The definitive guide to docker's default-address-pools option",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://straz.to/2021-09-08-docker-address-pools",
+          "file": "inspect_steward-0.2.0/src/inspect_steward/_cli/launch.py",
+          "line": 685,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The definitive guide to docker's default-address-pools option",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "langchain-dnsdoctor",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b1/88/b014a10a9c038b8576f4b27b862aa0895243f7626642794120794bd5f52c/langchain_dnsdoctor-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:30.409866+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://dnsdoctor.dev",
+          "file": "langchain_dnsdoctor-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNS Doctor \u2014 scan, fix & verify your domain's DNS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dnsdoctor.dev/api/v1/docs",
+          "file": "langchain_dnsdoctor-0.1.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNS Doctor API v1",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dnsdoctor.dev",
+          "file": "langchain_dnsdoctor-0.1.0/langchain_dnsdoctor/__init__.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNS Doctor \u2014 scan, fix & verify your domain's DNS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dnsdoctor.dev",
+          "file": "langchain_dnsdoctor-0.1.0/langchain_dnsdoctor/api.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNS Doctor \u2014 scan, fix & verify your domain's DNS",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://dnsdoctor.dev",
+          "file": "langchain_dnsdoctor-0.1.0/langchain_dnsdoctor/api.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DNS Doctor \u2014 scan, fix & verify your domain's DNS",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mcpulse-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/14/e8/dece0cb220d79724baf79c4f2c579fe41add5a2e4cc22f746e46b2414694/mcpulse_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:28.998650+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.getmcpulse.com",
+          "file": "mcpulse_sdk-0.1.0/src/mcpulse/options.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SwaggerUI",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "atar-trust",
+      "version": "1.0.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/31/d5/ffb5e9f68a721bf38fd3c7fed2b8d3f5ec919015b55b2574d0b24fc15243/atar_trust-1.0.0a1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:27.902578+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://modelcontextprotocol.io",
+          "file": "atar_trust-1.0.0a1/draft-dbrueck-atar-00.txt",
+          "line": 613,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://a2aprotocol.ai",
+          "file": "atar_trust-1.0.0a1/draft-dbrueck-atar-00.txt",
+          "line": 616,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "A2A Protocol - Agent2Agent Communication",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://eips.ethereum.org/EIPS/eip-8004",
+          "file": "atar_trust-1.0.0a1/draft-dbrueck-atar-00.txt",
+          "line": 619,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ERC-8004: Trustless Agents",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pytrain-ogr-deck",
+      "version": "2.9.10",
+      "download_url": "https://files.pythonhosted.org/packages/29/d3/a78f3222ea292e828ab4fbcc851ed6d0d1b9d91d019a1fc390cf25895366/pytrain_ogr_deck-2.9.10.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:25.842869+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://arjancodes.com/blog/publish-subscribe-pattern-in-python",
+          "file": "pytrain_ogr_deck-2.9.10/src/pytrain/comm/command_listener.py",
+          "line": 346,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to Use Publish-Subscribe Pattern in Python | ArjanCodes",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://arjancodes.com/blog/publish-subscribe-pattern-in-python",
+          "file": "pytrain_ogr_deck-2.9.10/src/pytrain/comm/command_listener.py",
+          "line": 344,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "How to Use Publish-Subscribe Pattern in Python | ArjanCodes",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.displayfuture.com/Display/datasheet/controller/SH1122.pdf",
+          "file": "pytrain_ogr_deck-2.9.10/src/pytrain/gpio/utils/sh1122.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Actalis S.p.A."
+        }
+      ]
+    },
+    {
+      "name": "opensmartroute",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/ad/80/e96a0c868ed1d4ab83341881a9326939e7ba4073b6a8a17aa63160b7a018/opensmartroute-0.5.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:21.861348+00:00",
+      "total_findings": 18,
+      "findings": [
+        {
+          "url": "ftp://nope",
+          "file": "opensmartroute-0.5.0/tests/test_execution.py",
+          "line": 331,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://nope",
+          "file": "opensmartroute-0.5.0/tests/test_estimate_mcp.py",
+          "line": 320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://hf.co/m/1",
+          "file": "opensmartroute-0.5.0/tests/test_slm.py",
+          "line": 242,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co/m/1",
+          "file": "opensmartroute-0.5.0/tests/test_slm.py",
+          "line": 247,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co/org/model",
+          "file": "opensmartroute-0.5.0/tests/test_slm.py",
+          "line": 492,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co/datasets/org/routing-bench",
+          "file": "opensmartroute-0.5.0/tests/test_slm.py",
+          "line": 493,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.duckduckgo.com?q=x",
+          "file": "opensmartroute-0.5.0/tests/test_slm.py",
+          "line": 1072,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://opensmartroute.ai",
+          "file": "opensmartroute-0.5.0/tests/test_cli_auth.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSmartRoute - open-source LLM router and AI decision layer",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "ftp://x",
+          "file": "opensmartroute-0.5.0/tests/test_cli_auth.py",
+          "line": 271,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://nope",
+          "file": "opensmartroute-0.5.0/tests/test_stack.py",
+          "line": 173,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://opensmartroute.ai",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/branding.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSmartRoute - open-source LLM router and AI decision layer",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://opensmartroute.ai",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/branding.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSmartRoute - open-source LLM router and AI decision layer",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://opensmartroute.ai",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/branding.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenSmartRoute - open-source LLM router and AI decision layer",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://opensmartroute.ai/install.sh",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/branding.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://opensmartroute.ai/install.ps1",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/branding.py",
+          "line": 55,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.duckduckgo.com",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/adapters/websearch.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/adapters/websearch.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models",
+          "file": "opensmartroute-0.5.0/src/opensmartroute/adapters/catalogue.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "cyberatlas-finder",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/24/ff/82d51dcae3c18f360a5f772573dce327e01b5e2ecf31b5de02f82ba34953/cyberatlas_finder-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:18.865679+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder/about",
+          "file": "cyberatlas_finder-0.1.1/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "About CyberAtlas Finder \u2014 Subdomain Finder & Wildcard Search | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/client.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CyberAtlas \u2014 Data Rivers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/client.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/client.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CyberAtlas \u2014 Data Rivers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/client.py",
+          "line": 54,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/client.py",
+          "line": 54,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CyberAtlas \u2014 Data Rivers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/errors.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/errors.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/cli.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CyberAtlas \u2014 Data Rivers",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/cli.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cyberatlas.ai/finder",
+          "file": "cyberatlas_finder-0.1.1/cyberatlas_finder/cli.py",
+          "line": 75,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Finder \u2014 Subdomain Finder & Wildcard Search across Billions of Subdomains | CyberAtlas",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "xberg-io-sdk",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/11/d3/bc756c1974e45f89d45e9d22b72fa08c23e6d9ee29db3f9bf4636b4da0fa/xberg_io_sdk-0.4.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:17.452922+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.xberg.io",
+          "file": "xberg_io_sdk-0.4.0/src/xberg_io_sdk/client.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xberg \u2014 document intelligence & RAG",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.xberg.io",
+          "file": "xberg_io_sdk-0.4.0/src/xberg_io_sdk/client.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xberg \u2014 document intelligence & RAG",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.xberg.io",
+          "file": "xberg_io_sdk-0.4.0/src/xberg_io_sdk/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Xberg \u2014 document intelligence & RAG",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "rcc-refcert",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c8/8a/e0d0ef54a62266bf06418e774736ba19c507803b101203d4e7c6453fc47a/rcc_refcert-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:14.872336+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2509.18205",
+          "file": "rcc_refcert-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2509.18205] Structure-Fair Quantum Circuit Complexity: An Auditable Information-Theoretic Lower Bound",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/2509.18205v3",
+          "file": "rcc_refcert-0.1.0/tests/test_documentation.py",
+          "line": 252,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2509.18205v3] Structure-Fair Quantum Circuit Complexity: An Auditable Information-Theoretic Lower Bound",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "bugledger-mcp",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/29/6f/d6609543e3eb6197023a02a4a2b064047980c44d34647dd30b1426c9c36b/bugledger_mcp-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:13.768551+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://myapp.com",
+          "file": "bugledger_mcp-0.1.1/src/bugledger_mcp/shared/rules/cors-allow-all.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://myapp.com",
+          "file": "bugledger_mcp-0.1.1/src/bugledger_mcp/shared/rules/cors-allow-all.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5e94\u7528\u5b9d\u5b98\u7f51-\u5168\u7f51\u6700\u65b0\u6700\u70ed\u624b\u673a\u5e94\u7528\u6e38\u620f\u4e0b\u8f7d",
+          "cert_issuer": "DigiCert, Inc."
+        }
+      ]
+    },
+    {
+      "name": "clipto",
+      "version": "0.1.3",
+      "download_url": "https://files.pythonhosted.org/packages/f7/3f/5629861c30e92b72a88713dec29080fb292b88347770ddb8c7aa280cf442/clipto-0.1.3.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:08.280958+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.nayuki.io/page/qr-code-generator-library",
+          "file": "clipto-0.1.3/src/clipto/qrcodegen.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "QR Code generator library",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "PySPlusthon",
+      "version": "0.5.1",
+      "download_url": "https://files.pythonhosted.org/packages/2e/fc/da9fda4284c9ff9df05e88df5d293318d03a9a8007ead062649ae94d50b0/pysplusthon-0.5.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:07.735631+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://splus.ir/PySPlusthon",
+          "file": "pysplusthon-0.5.1/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0648\u06cc\u062a\u0631\u06cc\u0646 \u0633\u0631\u0648\u0634 \u067e\u0644\u0627\u0633",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://splus.ir/PySPlusthonDevelopers",
+          "file": "pysplusthon-0.5.1/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0648\u06cc\u062a\u0631\u06cc\u0646 \u0633\u0631\u0648\u0634 \u067e\u0644\u0627\u0633",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://api.splus.ir",
+          "file": "pysplusthon-0.5.1/PySPlusthon/network/httpconnection.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://splus.ir",
+          "file": "pysplusthon-0.5.1/PySPlusthon/network/httpconnection.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0633\u0631\u0648\u0634\u067e\u0644\u0627\u0633",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ble.ir/join/ABCDEEFGHI",
+          "file": "pysplusthon-0.5.1/PySPlusthon/client/chats/join_chat.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ble.ir/join/ABCDEEFGHI",
+          "file": "pysplusthon-0.5.1/PySPlusthon/client/chats/get_chat.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ble.ir/username",
+          "file": "pysplusthon-0.5.1/PySPlusthon/client/chats/get_chat.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u0628\u0644\u0647 | \u06a9\u0627\u0646\u0627\u0644 \u06cc\u0648\u0632\u0631\u0646\u06cc\u0645",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ble.ir",
+          "file": "pysplusthon-0.5.1/PySPlusthon/client/chats/get_chat.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u067e\u06cc\u0627\u0645\u0631\u0633\u0627\u0646 \u0628\u0644\u0647",
+          "cert_issuer": "Asseco Data Systems S.A."
+        }
+      ]
+    },
+    {
+      "name": "agience-crystal",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/ea/a4/8e539291e9078b68373b458c72b4f6455ab04e1368b40b5f74915636bca4/agience_crystal-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-06T20:06:04.355315+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://agience.ai",
+          "file": "agience_crystal-0.1.1/pyproject.toml",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agience | The operating system that AI workflows trust",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "agience_crystal-0.1.1/tests/test_gateway_middleware.py",
+          "line": 271,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "cosmos-agent-sdk",
+      "version": "0.0.1a0",
+      "download_url": "https://files.pythonhosted.org/packages/48/46/23ebe87ef8f3c9974ebcf94d41fbacabeb50bdc8324791f7a36cd2ca0586/cosmos_agent_sdk-0.0.1a0.tar.gz",
+      "analyzed_at": "2026-09-06T20:05:56.923629+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://augmentcode.com",
+          "file": "cosmos_agent_sdk-0.0.1a0/pyproject.toml",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Augment Code: Agentic software development at organizational scale",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "ws://bridge/agent",
+          "file": "cosmos_agent_sdk-0.0.1a0/tests/test_websocket_transport.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://bridge/agent",
+          "file": "cosmos_agent_sdk-0.0.1a0/tests/test_websocket_transport.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ws://bridge/agent",
+          "file": "cosmos_agent_sdk-0.0.1a0/tests/test_websocket_transport.py",
+          "line": 229,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "antybrowser",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/f6/92/2d3001b8715d70a53007c3f12c933a2f8f57a39c8d5e348e3011925a1674/antybrowser-1.0.2.tar.gz",
+      "analyzed_at": "2026-09-06T20:05:56.099185+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://antybrowser.com",
+          "file": "antybrowser-1.0.2/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Antybrowser - #1 Antidetect Browser for Multi-Accounting & Fingerprint Protection",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "quant-agent",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/60/2c/b6315eda3b450d053f9acf6506063e0116a45ef2382943e0a2acfdf5a56b/quant_agent-0.3.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:05:55.681358+00:00",
+      "total_findings": 59,
+      "findings": [
+        {
+          "url": "https://trading.vietcap.com.vn/api/chart/OHLCChart/gap-chart",
+          "file": "quant_agent-0.3.0/quant_agent/technical.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/chart-api/v2/ohlcs",
+          "file": "quant_agent-0.3.0/quant_agent/technical.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://wifeed.vn/api/thong-tin-co-phieu/danh-sach-ma-chung-khoan",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fiin-core.ssi.com.vn/Master/GetListOrganization?language=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fiin-core.ssi.com.vn/Master/GetAllCompanyGroup?language=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/details?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 105,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/details?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company/details?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 261,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 337,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/news",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 360,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 391,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 403,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/company",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 467,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 537,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 261,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 337,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/news?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 360,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iq.vietcap.com.vn/api/iq-insight-service/v1/events?ticker=",
+          "file": "quant_agent-0.3.0/quant_agent/fundamental.py",
+          "line": 537,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fmarket.vn/res/products/filter",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fmarket.vn/res/products/filter",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fmarket.vn/res/products",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fmarket.vn/res/product/get-nav-history",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/funds.py",
+          "line": 20,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://bgapidatafeed.vps.com.vn/getliststockdata",
+          "file": "quant_agent-0.3.0/quant_agent/trading.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://trading.vietcap.com.vn/api/price/symbols/getList",
+          "file": "quant_agent-0.3.0/quant_agent/trading.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://trading.vietcap.com.vn/api/market-watch/LEData/getAll",
+          "file": "quant_agent-0.3.0/quant_agent/trading.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-user-service/api/auth",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-user-service/api/me",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/accounts",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/account-balances",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-auth-service/api/email-otp",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/trading-token",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-auth-service/api/email-otp",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/accounts",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/accounts",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/accounts",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 160,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/v2/orders",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 183,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service/derivative/orders",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 205,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-order-service",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 236,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-deal-service/deals?accountNo=",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://services.entrade.com.vn/dnse-derivative-core/deals?accountNo=",
+          "file": "quant_agent-0.3.0/quant_agent/broker/dnse.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/fmarket.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://fmarket.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/fmarket.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Fmarket - \u1ee8ng D\u1ee5ng \u0110\u1ea7u T\u01b0 Qu\u1ef9 M\u1edf H\u00e0ng \u0110\u1ea7u Vi\u1ec7t Nam",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://banggia.dnse.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/dnse.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "B\u1ea3ng gi\u00e1 ch\u1ee9ng kho\u00e1n DNSE",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://banggia.dnse.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/dnse.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "B\u1ea3ng gi\u00e1 ch\u1ee9ng kho\u00e1n DNSE",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iboard.ssi.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/ssi.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CTCP ch\u1ee9ng kho\u00e1n SSI",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://iboard.ssi.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/ssi.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CTCP ch\u1ee9ng kho\u00e1n SSI",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://trading.vietcap.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/vci.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vietcap - B\u1ea3ng gi\u00e1 ch\u1ee9ng kho\u00e1n tr\u1ef1c tuy\u1ebfn",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://trading.vietcap.com.vn",
+          "file": "quant_agent-0.3.0/quant_agent/sources/vci.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vietcap - B\u1ea3ng gi\u00e1 ch\u1ee9ng kho\u00e1n tr\u1ef1c tuy\u1ebfn",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://trading.vietcap.com.vn/priceboard",
+          "file": "quant_agent-0.3.0/quant_agent/sources/vci.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vietcap - B\u1ea3ng gi\u00e1 ch\u1ee9ng kho\u00e1n tr\u1ef1c tuy\u1ebfn",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "rnamotifs2",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/80/5b/0fc75d584f9a8e450869f2a7bbbfe27279cf93aee6317fab137d3e130b52/rnamotifs2-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:05:42.796915+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://expressrna.org/rnamotifs2/%s/%s/%s",
+          "file": "rnamotifs2-0.1.0/rnamotifs2/report/__init__.py",
+          "line": 376,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "rdpepper",
       "version": "7.1.0",
@@ -24461,6 +29354,51 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "brawlgym",
+      "version": "0.1.0a1",
+      "analyzed_at": "2026-09-06T20:06:30.747380+00:00",
+      "binaries": [
+        {
+          "name": "air_mutex_hook.dll",
+          "file": "brawlgym-0.1.0a1/brawlgym/plugin/air_mutex_hook.dll",
+          "sha256": "5d14867445c9b6843bcfcfe8ee083a5ef55cbc05741cc6cd96365ba714ee8c22",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "edith-test-xyz-9988c",
+      "version": "0.1.1",
+      "analyzed_at": "2026-09-06T20:07:24.015352+00:00",
+      "binaries": [
+        {
+          "name": "edith.pyd",
+          "file": "edith_test_xyz_9988c-0.1.1/edith/edith.pyd",
+          "sha256": "f870438c3c360855aacda3a0c41b23f00c4e05c74f252322ce105bada14e0d5a",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "nd-edith",
+      "version": "0.1.1",
+      "analyzed_at": "2026-09-06T20:07:24.158389+00:00",
+      "binaries": [
+        {
+          "name": "edith.pyd",
+          "file": "nd_edith-0.1.1/edith/edith.pyd",
+          "sha256": "f870438c3c360855aacda3a0c41b23f00c4e05c74f252322ce105bada14e0d5a",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -24772,6 +29710,23 @@
           "resolved": false,
           "context": "MusicFlow._get",
           "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "msgq-ipc",
+      "version": "1.0",
+      "download_url": "https://files.pythonhosted.org/packages/35/12/058fbf562eefdcb53a38420748bbeadbc321e4c33975f1ce882598f1d930/msgq_ipc-1.0.tar.gz",
+      "analyzed_at": "2026-09-06T20:07:21.910491+00:00",
+      "install_hooks": [
+        {
+          "file": "msgq_ipc-1.0/setup.py",
+          "line": 12,
+          "call": "subprocess.check_call",
+          "command": "subprocess.check_call([sys.executable, '-m', 'SCons', '--minimal', '-j', str(self.parallel or os.cpu_count() or 1)])",
+          "resolved": false,
+          "context": "SConsBuildExt.build_extensions",
+          "source": "setup_py"
         }
       ]
     }
