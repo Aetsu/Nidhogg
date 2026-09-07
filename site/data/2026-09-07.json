@@ -1,11 +1,4858 @@
 {
-  "generated_at": "2026-09-07T19:41:16.102531+00:00",
+  "generated_at": "2026-09-07T22:38:17.251257+00:00",
   "stats": {
-    "total_packages": 237,
-    "malicious": 11,
-    "clean": 226
+    "total_packages": 272,
+    "malicious": 14,
+    "clean": 258
   },
   "packages": [
+    {
+      "name": "celldn",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/ab/8d/6cada07e3a181a5bfd5acd899e66b0b4d05164bc4347c95fe1513377f796/celldn-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:12.849731+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pubmed.cgi",
+          "file": "celldn-1.0.0/src/celldn/retrieval.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi",
+          "file": "celldn-1.0.0/src/celldn/retrieval.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest",
+          "file": "celldn-1.0.0/src/celldn/retrieval.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "dynamo-diff",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/b3/fb/c731ffd8bddae18bb759934cec1b068db1d2987618b633336c515e335696/dynamo_diff-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:08.689096+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/candidate/sources/transformers/generation/utils.py",
+          "line": 2129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/candidate/sources/transformers/generation/utils.py",
+          "line": 2136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/candidate/sources/transformers/generation/utils.py",
+          "line": 2135,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/baseline/sources/transformers/generation/utils.py",
+          "line": 2129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/baseline/sources/transformers/generation/utils.py",
+          "line": 2136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hf.co",
+          "file": "dynamo_diff-0.1.1/case_studies/transformers_cache/captures/baseline/sources/transformers/generation/utils.py",
+          "line": 2135,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Hugging Face \u2013 The AI community building the future.",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "dockpilot",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/8f/06/b2977ec3d03cd102f807a7deefc4efbeae65642d173e3b8ef85be6f0f780/dockpilot-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:06.725686+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.ipify.org",
+          "file": "dockpilot-0.1.0/dockpilot_pkg/app.py",
+          "line": 528,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "webanalytics",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/de/9b/40fd8d78cc2265a0d8108d25c5c9d7ad6d8c32e253e7dc6009f23e66090a/webanalytics-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:06.504594+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.jetbrains.com/help/pycharm",
+          "file": "webanalytics-0.2.0/main.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Getting started | PyCharm Documentation",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "memoryos-governance",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/5b/a6/10697190bdef502f778a46474195999be8c2479d221c72d449b00282967b/memoryos_governance-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:05.431126+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "memoryos_governance-1.0.0/tests/contracts/test_workflow_adapter_result_schema.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pyspark-client-rust",
+      "version": "4.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/68/ee/2b55d25fde1e14220725d335fdf142a623e69db844af3de0939cdb928447/pyspark_client_rust-4.2.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:04.043925+00:00",
+      "total_findings": 25,
+      "findings": [
+        {
+          "url": "http://search.maven.org",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/util.py",
+          "line": 286,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Maven Central Repository Search",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://search.maven.org",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/util.py",
+          "line": 276,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Maven Central Repository Search",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://stevenloria.com/lazy-properties",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/utils.py",
+          "line": 600,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lazily-evaluated Property Pattern in Python | stevenloria.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://stevenloria.com/lazy-properties",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/pandas/utils.py",
+          "line": 597,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lazily-evaluated Property Pattern in Python | stevenloria.com",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://doi.org/10.1109/ICDE.2001.914830",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/fpm.py",
+          "line": 152,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1109/ICDE.2001.914830",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/fpm.py",
+          "line": 142,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://glaros.dtc.umn.edu/gkhome/fetch/papers/docclusterKDDTMW00.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cs.cmu.edu/~frank/papers/icml2010-pic-final.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 814,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.jmlr.org/papers/v3/blei03a",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 1119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "http://glaros.dtc.umn.edu/gkhome/fetch/papers/docclusterKDDTMW00.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 151,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cs.cmu.edu/~frank/papers/icml2010-pic-final.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 801,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.jmlr.org/papers/v3/blei03a",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/clustering.py",
+          "line": 1102,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "http://www.stat.cmu.edu/~ryantibs/papers/neariso.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/regression.py",
+          "line": 875,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://softlib.rice.edu/pub/CRPC-TRs/reports/CRPC-TR96640.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/regression.py",
+          "line": 879,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.stat.cmu.edu/~ryantibs/papers/neariso.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/regression.py",
+          "line": 855,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://softlib.rice.edu/pub/CRPC-TRs/reports/CRPC-TR96640.pdf",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/regression.py",
+          "line": 855,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tinyurl.com/lsdw6p",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/classification.py",
+          "line": 852,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "shortener",
+          "http_status": 200,
+          "http_title": "Naive Bayes text classification",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tinyurl.com/p7c96j6",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/classification.py",
+          "line": 856,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "shortener",
+          "http_status": 200,
+          "http_title": "The Bernoulli model",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tinyurl.com/lsdw6p",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/classification.py",
+          "line": 848,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "shortener",
+          "http_status": 200,
+          "http_title": "Naive Bayes text classification",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tinyurl.com/p7c96j6",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/classification.py",
+          "line": 848,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": "shortener",
+          "http_status": 200,
+          "http_title": "The Bernoulli model",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.picloud.com",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/cloudpickle/cloudpickle.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "picloud.com",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.picloud.com",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/cloudpickle/cloudpickle.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "picloud.com",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.picloud.com",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/cloudpickle/cloudpickle.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "picloud.com",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://doi.org/10.1145/1996092.1996103",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/linalg/distributed.py",
+          "line": 335,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1145/1996092.1996103",
+          "file": "pyspark_client_rust-4.2.0/python/pyspark/mllib/linalg/distributed.py",
+          "line": 327,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mcp-einvoicing-in",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/81/e9/0004fbd50bbbafc598c23c047adb53c3c7289ff93f1d4a89c858a87d8873/mcp_einvoicing_in-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:38:01.050793+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://registry.modelcontextprotocol.io/v0/servers?search=",
+          "file": "mcp_einvoicing_in-0.1.0/docs/scripts/gen_llms_txt.py",
+          "line": 91,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cmendezs/mcp-einvoicing-in",
+          "file": "mcp_einvoicing_in-0.1.0/docs/public/llms.txt",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-can",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/ab/37/f33e03b43f801d27e1b00716de551fb6d3cfc5d922bfd2b8fda15bab04a9/pamoja_can-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:55.205465+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/guides/can.html",
+          "file": "pamoja_can-0.1.17/pyproject.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CAN and J1939 - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-trust",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/f7/d3/13e8e98e043f69955fe2e2c8361ad4a651592390831592ebf86a37791a38/pamoja_trust-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:54.997441+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_trust-0.1.17/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-transports",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/0b/44/3b321c3a5fdea196e296a13b414ae4a4d47d6b842cd9defbbcf7fe7f1aee/pamoja_transports-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:54.950013+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_transports-0.1.17/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pamoja-sensing",
+      "version": "0.1.17",
+      "download_url": "https://files.pythonhosted.org/packages/ca/ad/e56f58e695d98aa08e1c9b3425784bcb11af04f93f7313fcfb9b8485f014/pamoja_sensing-0.1.17.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:54.711922+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://pamoja.molex.cloud/docs/install.html",
+          "file": "pamoja_sensing-0.1.17/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Install - pamoja",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "tls-forge",
+      "version": "0.1.0rc5",
+      "download_url": "https://files.pythonhosted.org/packages/c3/1c/1b3873fa62c2a06d2b7c91d322443dda9f3edea16922b436bb45579b2ead/tls_forge-0.1.0rc5.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:53.770849+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://tls.browserleaks.com/json",
+          "file": "tls_forge-0.1.0rc5/src/tlsforge/__init__.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://tls.browserleaks.com/json",
+          "file": "tls_forge-0.1.0rc5/src/tlsforge/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "eurekiusz",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/93/9c/7eb5e96a6d97f2b84319ce1c08f23acccd65edd4d368eb005a604f0bf18a/eurekiusz-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:52.274765+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://qa10.io",
+          "file": "eurekiusz-0.2.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "QA10 \u2014 We build AI systems that run businesses",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eureka.mf.gov.pl/api/public/v1/wyszukiwarka/informacje",
+          "file": "eurekiusz-0.2.0/src/eurekiusz/eureka.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://qa10.io",
+          "file": "eurekiusz-0.2.0/src/eurekiusz/eureka.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "QA10 \u2014 We build AI systems that run businesses",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://eureka.mf.gov.pl/informacje/podglad",
+          "file": "eurekiusz-0.2.0/src/eurekiusz/eureka.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Strona g\u0142\u00f3wna | Eureka",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://eureka.mf.gov.pl/api/public/v1/wyszukiwarka/informacje?size=12&page=0&sort=parametryPozycjonowania%2Casc",
+          "file": "eurekiusz-0.2.0/src/eurekiusz/eureka.py",
+          "line": 11,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "trackaudit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c0/38/04b5587a546f5ca5ef332dcd703536056176bd6a9dda1b84a270acc94086/trackaudit-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:50.580081+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.deezer.com",
+          "file": "trackaudit-0.1.0/src/trackaudit/catalogue.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Gandi"
+        }
+      ]
+    },
+    {
+      "name": "hopscotch-python-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/49/4e/8fb0815ccf2cca859903e52778582e27cd9edf0902156689c7ba573050c0/hopscotch_python_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:50.067955+00:00",
+      "total_findings": 14,
+      "findings": [
+        {
+          "url": "https://hopscotch.trade",
+          "file": "hopscotch_python_sdk-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/sdk.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/sdk.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/hopscotch.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/hopscotch.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/pydantic.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/pydantic.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/client/client.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/client/client.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/docs/api",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/client/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://hopscotch.trade/legal/tos",
+          "file": "hopscotch_python_sdk-0.1.0/src/hopscotch_python_sdk/client/__init__.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Terms of Service",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "brandly-cli",
+      "version": "0.3.2",
+      "download_url": "https://files.pythonhosted.org/packages/e4/e7/afb1ba1c6e7fb13b6fced21ede5d59dd0fb4886edea12a2bfedf87ccccb7/brandly_cli-0.3.2.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:48.368779+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "https://img1.com/a.png",
+          "file": "brandly_cli-0.3.2/tests/test_video_prompts.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://img2.com/b.png",
+          "file": "brandly_cli-0.3.2/tests/test_video_prompts.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://platform.minimaxi.com",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/audio_client.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u6982\u89c8 - MiniMax \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://platform.minimaxi.com",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/audio_client.py",
+          "line": 37,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u6982\u89c8 - MiniMax \u5f00\u653e\u5e73\u53f0\u6587\u6863\u4e2d\u5fc3",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://api.minimax.io/v1/tts",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/dubbing.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/sync.py",
+          "line": 100,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/sync.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/sync.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/sync.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/agnes_client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/agnes_client.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agnes",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/agnes_client.py",
+          "line": 32,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agnes",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.minimax.io",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/minimax_client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.minimax.io",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/minimax_client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Models - MiniMax API Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.minimax.io",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/minimax_client.py",
+          "line": 24,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Models - MiniMax API Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://apihub.agnes-ai.com/v1",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/cli.py",
+          "line": 1884,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ark.cn-beijing.volces.com/api/v3",
+          "file": "brandly_cli-0.3.2/src/brandly_cli/ark_client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "gazeforge",
+      "version": "0.1.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/a7/f7/19db387e84eb3a0338f735a773892948767a2295f0133203782e77e303a9/gazeforge-0.1.0a1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:41.029222+00:00",
+      "total_findings": 56,
+      "findings": [
+        {
+          "url": "http://vision.imar.ro/eyetracking/getdata.php",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_original_subject_metadata_evidence.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.rit.edu/science/perception-movement-lab",
+          "file": "gazeforge-0.1.0a1/tests/test_gaze_in_wild_current_listing_evidence.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Perception for Movement Lab | College of Science | RIT",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/tests/test_gaze_in_wild_current_listing_evidence.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/tests/test_gaze_in_wild_current_listing_evidence.py",
+          "line": 122,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.rit.edu/example/gaze-in-wild.zip",
+          "file": "gazeforge-0.1.0a1/tests/test_gaze_in_wild_current_listing_evidence.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "http://go.visus.uni-stuttgart.de/eyetrackingBenchmark",
+          "file": "gazeforge-0.1.0a1/tests/test_visus_source_resolution_record.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.visus.uni-stuttgart.de/publikationen/benchmark-eyetracking",
+          "file": "gazeforge-0.1.0a1/tests/test_visus_source_resolution_record.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://orcid.org/0000-0003-2444-9796",
+          "file": "gazeforge-0.1.0a1/tests/test_release_packaging.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2_em",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=ioannis.agtzidis",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=exact_repository_fragment",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 161,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_host_metadata.py",
+          "line": 179,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2_em",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=ioannis.agtzidis",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=gin.g-node.org",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2_em",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=ioannis.agtzidis",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=gin.g-node.org",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=zero",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2_em",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 157,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=ioannis.agtzidis",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=gin.g-node.org",
+          "file": "gazeforge-0.1.0a1/tests/test_hollywood2_gin_accessible_host_evidence.py",
+          "line": 159,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.figshare.com/v2",
+          "file": "gazeforge-0.1.0a1/scripts/gaze_in_wild_figshare_live_probe.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.rit.edu/science/perception-movement-lab",
+          "file": "gazeforge-0.1.0a1/scripts/probe_gaze_in_wild_current_listing.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Perception for Movement Lab | College of Science | RIT",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/scripts/probe_gaze_in_wild_current_listing.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/description.php",
+          "file": "gazeforge-0.1.0a1/scripts/hollywood2_underlying_source_probe.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Actions in the Eye: Human Eye Movement Datasets",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/license.php",
+          "file": "gazeforge-0.1.0a1/scripts/hollywood2_underlying_source_probe.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License agreement",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://vision.imar.ro/eyetracking/getdata.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_original_subject_metadata_evidence.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/main_login.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_original_subject_metadata_evidence.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://vision.imar.ro/eyetracking/getdata.php?filepath=data&filename=gaze_hollywood2.zip",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_original_subject_metadata_evidence.py",
+          "line": 31,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.rit.edu/science/perception-movement-lab",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_current_listing_evidence.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Perception for Movement Lab | College of Science | RIT",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_current_listing_evidence.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/description.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_original_subject_metadata.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Actions in the Eye: Human Eye Movement Datasets",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/license.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_original_subject_metadata.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License agreement",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.rit.edu/science/perception-movement-lab",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_first_party_resolution.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Perception for Movement Lab | College of Science | RIT",
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_first_party_resolution.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.rit.edu/science/directory/gjdgis-gabriel-diaz",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_first_party_resolution.py",
+          "line": 238,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Internet2"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32054884",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/gaze_in_wild_first_party_resolution.py",
+          "line": 247,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://doi.org/10.1038/s41598-020-59251-5",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/benchmark_catalog.py",
+          "line": 84,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Gaze-in-wild: A dataset for studying eye and head coordination in everyday activities | Scientific Reports",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/description.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 124,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Actions in the Eye: Human Eye Movement Datasets",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://vision.imar.ro/eyetracking/description.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Actions in the Eye: Human Eye Movement Datasets",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/license.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 143,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License agreement",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/license.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License agreement",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://vision.imar.ro/eyetracking/getdata.php?filepath=data&filename=gaze_hollywood2.zip",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://vision.imar.ro/eyetracking/main_login.php",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_rights_evidence.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Login",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2&page%5Bsize%5D=100",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_gin_host_metadata.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=hollywood2_em&page%5Bsize%5D=100",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_gin_host_metadata.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=ioannis.agtzidis&page%5Bsize%5D=100",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_gin_host_metadata.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_gin_host_metadata.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.datacite.org/dois?query=gin.g-node.org%2Fioannis.agtzidis%2Fhollywood2_em&page%5Bsize%5D=100",
+          "file": "gazeforge-0.1.0a1/src/gazeforge/hollywood2_gin_host_metadata.py",
+          "line": 28,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "eco-suite",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d8/8c/7907ca4ed13ac2d86a2eb10c28d533919a35d85ae825a0de29e4b6657c3e/eco_suite-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:23.296859+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://gitea.psi.ch/Bernina/eco",
+          "file": "eco_suite-0.1.0/pyproject.toml",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bernina/eco: Experimental control package - eco - PSI GIT Service",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://scilog.psi.ch/api/v1",
+          "file": "eco_suite-0.1.0/eco/logs.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scilog.psi.ch/api/v1",
+          "file": "eco_suite-0.1.0/eco/logs.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://gitea.psi.ch/sf-daq/sf_daq_broker",
+          "file": "eco_suite-0.1.0/eco/acquisition/daq_client.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "sf-daq/sf_daq_broker - sf_daq_broker - PSI GIT Service",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://gitea.psi.ch/sf-daq/sf_daq_broker",
+          "file": "eco_suite-0.1.0/eco/acquisition/daq_client.py",
+          "line": 34,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "sf-daq/sf_daq_broker - sf_daq_broker - PSI GIT Service",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://scilog.psi.ch/api/v1",
+          "file": "eco_suite-0.1.0/eco/utilities/elog_scilog.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://scilog.psi.ch/api/v1",
+          "file": "eco_suite-0.1.0/eco/utilities/elog_scilog.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://www.psi.ch",
+          "file": "eco_suite-0.1.0/eco/devices_general/PBComm.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Paul Scherrer Institute PSI",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "ai-parrot-client-moonshot",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/9d/e5/ff14862bfdb7a45c3748b166786332844c79c4737415953c5ff3b0f3ecd5/ai_parrot_client_moonshot-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:19.265444+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/models.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/models.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/client.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/client.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/client.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.moonshot.ai/v1",
+          "file": "ai_parrot_client_moonshot-0.2.0/src/parrot/clients/moonshot/client.py",
+          "line": 81,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "slowfw",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/57/29/6a604d23029ca8f7b3fea3e02572a4091381af11d07e5531af4e4bc02dea/slowfw-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:18.389670+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://evil.com",
+          "file": "slowfw-0.1.0/tests/integration/test_security_middleware.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "pdfmath",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/74/0a/1cf46edadfef612bcc3b480d62bf2e75f498296c2614fd54d363b880dc1a/pdfmath-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:17.283354+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://math.nist.gov/~BMiller/LaTeXML",
+          "file": "pdfmath-0.1.0/pdfmath/eval/latexml.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LaTeXML A LaTeX to XML/HTML/MathML Converter",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://math.nist.gov/~BMiller/LaTeXML",
+          "file": "pdfmath-0.1.0/pdfmath/eval/latexml.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LaTeXML A LaTeX to XML/HTML/MathML Converter",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://arxiv.org/e-print",
+          "file": "pdfmath-0.1.0/pdfmath/corpus/arxiv.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/help/api",
+          "file": "pdfmath-0.1.0/pdfmath/corpus/arxiv.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "arXiv API Access - arXiv info",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "kunene",
+      "version": "1.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/33/368fb5f85b9c9a6ecc4faa829698379b09917bfa0e46b5fc68f8a8eb512a/kunene-1.3.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:16.180899+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://www.vortex-cae.com/vortex-radioss",
+          "file": "kunene-1.3.0/kunene/radioss_actions.py",
+          "line": 176,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Vortex-Radioss Python Library \u2014 Vortex CAE",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "dreamlake-autodoc-py",
+      "version": "0.2.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/9d/e3/5a8a3aa965041ebc10020605a65774cbf3e2712d21f05297ac0cfec55528/dreamlake_autodoc_py-0.2.0a1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:15.274089+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://dockit.dreamlake.ai/python-autodoc",
+          "file": "dreamlake_autodoc_py-0.2.0a1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python Autodoc \u2014 DreamLake",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dockit.dreamlake.ai/python-autodoc/usage",
+          "file": "dreamlake_autodoc_py-0.2.0a1/pyproject.toml",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Generate API docs \u2014 DreamLake",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://dockit.dreamlake.ai/python-autodoc/release-notes",
+          "file": "dreamlake_autodoc_py-0.2.0a1/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Release notes \u2014 DreamLake",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "vosk-termux",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/fe/2b/ef691427f8148b78f861dcdadd4efe4418f0b41f51463c4c45d740098f2a/vosk_termux-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:14.161724+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://alphacephei.com/vosk/models",
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "VOSK Models",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://alphacephei.com/vosk/models/model-list.json",
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 21,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "bristlecone-guard",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/1d/c3/c27e7849f3809a45824ae61550fb0cbac21c130d0513ebddfd51038e3b17/bristlecone_guard-0.4.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:12.489620+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://bristleconelogic.com",
+          "file": "bristlecone_guard-0.4.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Guard | Runtime Security for Autonomous Agents",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com/docs",
+          "file": "bristlecone_guard-0.4.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Bristlecone Logic M2M Microservices - Swagger UI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "bristlecone_guard-0.4.0/src/layer0/payment.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_guard-0.4.0/src/bristlecone_logic/client.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_guard-0.4.0/src/bristlecone_mcp/__init__.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.bristleconelogic.com",
+          "file": "bristlecone_guard-0.4.0/src/bristlecone_mcp/frameworks.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "structifact",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/42/50/f6928b1744a1f876f5fe11f5220a5758bed3e0a2f206f76c77f2aef451bf/structifact-0.5.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:11.276207+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "structifact-0.5.0/tests/test_json_schema_generator.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pptr.dev/troubleshooting",
+          "file": "structifact-0.5.0/tests/test_mermaid_erd_generator.py",
+          "line": 338,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Troubleshooting | Puppeteer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "structifact-0.5.0/structifact/llm.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "structifact-0.5.0/structifact/llm.py",
+          "line": 142,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "structifact-0.5.0/structifact/generators/json_schema.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "linden-ai",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/c5/65/e04413920be0e54fcdfd69746770388dd5af771e84e407baa74c2d98c909/linden_ai-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:10.550725+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://ai-reliability-engine-i4q4.onrender.com",
+          "file": "linden_ai-0.2.1/linden/client.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ply-visualizer",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/b3/b3/174051abe91427c8bb497d9bad5f18f83a03a3746a0d1dd6aa335fa13ecb/ply_visualizer-0.3.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:10.305309+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://3d.f-kleinicke.de",
+          "file": "ply_visualizer-0.3.0/pyproject.toml",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "3D Point Cloud Visualizer",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://analytics.re4vive.com/js/test.js",
+          "file": "ply_visualizer-0.3.0/tests/test_session.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "moss-agent-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6f/03/d137f3b62399e8a7222f7dc60cbbc14985d0ab338d6922e70a7e639ce0ac/moss_agent_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:08.656148+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://mosscomputing.com",
+          "file": "moss_agent_sdk-0.1.0/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "MOSS: Control Infrastructure for Enterprise AI",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "extuno",
+      "version": "0.1.4",
+      "download_url": "https://files.pythonhosted.org/packages/c6/44/f0213a31cee5ae7a4944d91c8e67dcb391154267587c536047d0881e2784/extuno-0.1.4.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:08.287711+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://extuno.com/pip-scanner",
+          "file": "extuno-0.1.4/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scan a PyPI Package for Malware Before pip Install",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://extuno.com/pip-scanner",
+          "file": "extuno-0.1.4/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Scan a PyPI Package for Malware Before pip Install",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://extuno.com",
+          "file": "extuno-0.1.4/extuno/config.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Extuno - Supply Chain Security for Extensions and Packages",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "extuno-0.1.4/extuno/cli.py",
+          "line": 149,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://extuno.com/app",
+          "file": "extuno-0.1.4/extuno/cli.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in - Extuno",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "anlyon-langchain",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/45/ad/d4886d25a5db47562aacac63d16a4e73d7a8255657ee42167f3cf1eeaf08/anlyon_langchain-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:06.052161+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://anlyon.com",
+          "file": "anlyon_langchain-0.1.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon: Human approvals & a kill switch for AI agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.anlyon.com",
+          "file": "anlyon_langchain-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon - Anlyon",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon_langchain-0.1.0/tests/test_chat_history.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages",
+          "file": "anlyon_langchain-0.1.0/tests/test_chat_history.py",
+          "line": 16,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "anlyon-llamaindex",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/82/ec/50fb266be559b9e4f9b4048bea87713b42038a5e42ac34eb51f0e06607c2/anlyon_llamaindex-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:05.646251+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://anlyon.com",
+          "file": "anlyon_llamaindex-0.1.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon: Human approvals & a kill switch for AI agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.anlyon.com",
+          "file": "anlyon_llamaindex-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon - Anlyon",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "anlyon",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c0/a0/c3858851ef1a6bdb55b1a7337396a12fceda4cb2d88865b207925ad93438/anlyon-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:05.494878+00:00",
+      "total_findings": 169,
+      "findings": [
+        {
+          "url": "https://anlyon.com",
+          "file": "anlyon-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon: Human approvals & a kill switch for AI agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.anlyon.com",
+          "file": "anlyon-0.1.0/pyproject.toml",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anlyon - Anlyon",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://docs.anlyon.com/changelog",
+          "file": "anlyon-0.1.0/pyproject.toml",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Changelog - Anlyon",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 22,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 32,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 40,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 49,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1/export",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 59,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/import",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 68,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 79,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1/spans",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 90,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1/feedback",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 104,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1/feedback",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 114,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 123,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/runs/run_1",
+          "file": "anlyon-0.1.0/tests/test_runs.py",
+          "line": 124,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_messages.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages/publish",
+          "file": "anlyon-0.1.0/tests/test_messages.py",
+          "line": 17,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages/batch",
+          "file": "anlyon-0.1.0/tests/test_messages.py",
+          "line": 39,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages",
+          "file": "anlyon-0.1.0/tests/test_messages.py",
+          "line": 54,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages/msg_1",
+          "file": "anlyon-0.1.0/tests/test_messages.py",
+          "line": 59,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_idempotency.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/lookup",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 31,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 65,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/stats",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 81,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/cache_1",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 90,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/cache_1",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 96,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/flush",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 99,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/lookup",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 119,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 122,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/cache/flush",
+          "file": "anlyon-0.1.0/tests/test_cache.py",
+          "line": 138,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 44,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/messages/publish",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 91,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/queues",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 112,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/schedules",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 113,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/url-groups/grp_1/publish",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 114,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/dlq/msg_1/retry",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 115,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/analytics/time-series",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 116,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/billing/quota",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 119,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/integrations/int_1/toggle",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 120,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/analytics/overview",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 157,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/analytics/agents",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 158,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/analytics/trust-control",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 159,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/analytics/delivery",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 160,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/flow-control/fck_1",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 181,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/notifications/preferences",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 182,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/notifications/preferences/test-webhook",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 185,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/logs/export",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 210,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/logs/export",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 213,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/files",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 224,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/actions/refund-customer/invocations",
+          "file": "anlyon-0.1.0/tests/test_contract_parity.py",
+          "line": 228,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_stream.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/stream",
+          "file": "anlyon-0.1.0/tests/test_stream.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/stream",
+          "file": "anlyon-0.1.0/tests/test_stream.py",
+          "line": 44,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/stream",
+          "file": "anlyon-0.1.0/tests/test_stream.py",
+          "line": 59,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/wf_1/trigger",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 35,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 81,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/wf_1",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 97,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/wf_1",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 106,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/wf_1",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 115,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 145,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs/wfr_1",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 167,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs/wfr_1/steps",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 181,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs/wfr_1/cancel",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 193,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/events/notify",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 230,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 249,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/wf_async/trigger",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 255,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 279,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/runs/wfr_1/steps",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 285,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/workflows/events/notify",
+          "file": "anlyon-0.1.0/tests/test_workflows.py",
+          "line": 291,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 25,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/context",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 31,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/context",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 89,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/secrets/STRIPE_KEY",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 126,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/secrets",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 132,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/actions/refund/invoke",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 151,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 176,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1/approve",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 182,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/actions/import",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 213,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages/last",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 249,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 255,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 273,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 291,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 304,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 326,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 337,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 343,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 371,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 376,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 404,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 409,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 431,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/approvals/apr_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 436,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/budgets/key_1",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 453,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/context",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 484,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/actions/ping/invoke",
+          "file": "anlyon-0.1.0/tests/test_agent.py",
+          "line": 493,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_openai_agents_session.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages",
+          "file": "anlyon-0.1.0/tests/test_openai_agents_session.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1",
+          "file": "anlyon-0.1.0/tests/test_openai_agents_session.py",
+          "line": 128,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages/last",
+          "file": "anlyon-0.1.0/tests/test_openai_agents_session.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/sessions/ses_1/messages/last",
+          "file": "anlyon-0.1.0/tests/test_openai_agents_session.py",
+          "line": 165,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/peers",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 36,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/messages",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 56,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/messages",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 84,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/messages",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 105,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/tasks",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 175,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/tasks/ctask_1/claim",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 180,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/tasks/ctask_1/complete",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 185,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/connect/messages",
+          "file": "anlyon-0.1.0/tests/test_connect.py",
+          "line": 210,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 20,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 56,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/presign",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 70,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/file_3/confirm",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 83,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/file_3/download",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 89,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 115,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/file_1",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 131,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/file_1",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 137,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 152,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/files/file_async/download",
+          "file": "anlyon-0.1.0/tests/test_files.py",
+          "line": 158,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 18,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 39,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 59,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/jobs/mjob_1",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 99,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/jobs/mjob_2",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 121,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/jobs/mjob_3",
+          "file": "anlyon-0.1.0/tests/test_retry_and_jobs.py",
+          "line": 138,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 48,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/evt_1",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 64,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 86,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 92,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/orders",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 98,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/top_1",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 104,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/top_1",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 110,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/orders/subscriptions",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 129,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/orders/subscriptions",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 142,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/subscriptions/sub_1",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 148,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/subscriptions/sub_1/rotate-secret",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 154,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/subscriptions/sub_1",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 160,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 187,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 201,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/events/topics/orders/subscriptions",
+          "file": "anlyon-0.1.0/tests/test_events.py",
+          "line": 204,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 31,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/batch",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 51,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/recall",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 71,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/mem_test123",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 102,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/ingest",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 112,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/consolidate",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 115,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/collections/col_1/migrate",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 118,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/collections",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 147,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/collections",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 152,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/collections/col_1",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 157,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/mem_missing",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 171,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 185,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 197,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com/api/v2/memory/recall",
+          "file": "anlyon-0.1.0/tests/test_memory.py",
+          "line": 210,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anlyon.com",
+          "file": "anlyon-0.1.0/src/anlyon/config.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "batchlane",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f7/0d/c428b49e4fa39db4fc1ebba55ac6d3d14f0679ba740c2cca9d110ec9957a/batchlane-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:01.677004+00:00",
+      "total_findings": 16,
+      "findings": [
+        {
+          "url": "https://api.groq.com/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 150,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.ai/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.xyz/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 152,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "suspicious_tld",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepinfra.com/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 153,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.fireworks.ai/*",
+          "file": "batchlane-0.1.0/pyproject.toml",
+          "line": 157,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages/batches",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/anthropic.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/mistral.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/files",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/mistral.py",
+          "line": 150,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/batch/jobs",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/mistral.py",
+          "line": 173,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.mistral.ai/v1/batch/jobs",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/mistral.py",
+          "line": 287,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/openai_shaped.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.together.ai/v1",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/openai_shaped.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepinfra.com/v1/openai",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/openai_shaped.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.fireworks.ai/v1",
+          "file": "batchlane-0.1.0/src/batchlane/adapters/fireworks.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "promptev-context-engine",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/b4/36/aeb2c27ef3882a8436fcdcf00d6860deea05a5f1702c96857b155e18db84/promptev_context_engine-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:00.820006+00:00",
+      "total_findings": 37,
+      "findings": [
+        {
+          "url": "https://promptev.ai/documentation/context-engine",
+          "file": "promptev_context_engine-0.0.1/pyproject.toml",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Context Engine \u2014 Full Guide | Promptev",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://promptev.ai/documentation/context-engine",
+          "file": "promptev_context_engine-0.0.1/pyproject.toml",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Context Engine \u2014 Full Guide | Promptev",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/embeddings",
+          "file": "promptev_context_engine-0.0.1/tests/test_embeddings_provider.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v2/embed",
+          "file": "promptev_context_engine-0.0.1/tests/test_embeddings_provider.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptev_context_engine-0.0.1/tests/test_llm_provider.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "ftp://x/y",
+          "file": "promptev_context_engine-0.0.1/tests/test_tool_egress.py",
+          "line": 130,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.cohere.com/v2/rerank",
+          "file": "promptev_context_engine-0.0.1/tests/test_reranker.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/tests/test_reranker.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.jina.ai/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/tests/test_reranker.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 142,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 187,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 242,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 267,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 294,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 317,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 349,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.promptev.ai/callback",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_oauth.py",
+          "line": 366,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Promptev | Context Engineering Platform for Production-Ready AI Agents",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://93.184.216.34/mcp",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_egress.py",
+          "line": 308,
+          "layer": "ast",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://93.184.216.34/mcp",
+          "file": "promptev_context_engine-0.0.1/tests/test_mcp_egress.py",
+          "line": 425,
+          "layer": "ast",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.voyageai.com/v1/embeddings",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/embeddings.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v2/embed",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/embeddings.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/llm.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/llm.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/llm.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v2/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.jina.ai/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v2/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.jina.ai/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cohere.com/v2/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.jina.ai/v1/rerank",
+          "file": "promptev_context_engine-0.0.1/src/context_engine/providers/reranker.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "hermes-mailcloud",
       "version": "0.1.0a0",
@@ -126730,6 +131577,66 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "vosk-termux",
+      "version": "0.0.1",
+      "analyzed_at": "2026-09-07T22:36:14.161981+00:00",
+      "binaries": [
+        {
+          "name": "libvosk.so",
+          "file": "vosk_termux-0.0.1/src/vosk_termux/lib/libvosk.so",
+          "sha256": "06965ebb4e5eb3a9e4a815755e178d9553392e3fe8d3d368ac46952ad3694173",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "hyperfold",
+      "version": "0.1.0",
+      "analyzed_at": "2026-09-07T22:36:18.694409+00:00",
+      "binaries": [
+        {
+          "name": "_native.cpython-311-x86_64-linux-gnu.so",
+          "file": "hyperfold/_native.cpython-311-x86_64-linux-gnu.so",
+          "sha256": "572f264a0d2f2167521903936fe41d86ef14353de750f9b4f2a78bb60d275251",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "hyperfold-cuda",
+      "version": "0.1.0",
+      "analyzed_at": "2026-09-07T22:36:52.402263+00:00",
+      "binaries": [
+        {
+          "name": "_native.cpython-311-x86_64-linux-gnu.so",
+          "file": "hyperfold/_native.cpython-311-x86_64-linux-gnu.so",
+          "sha256": "d5954f873157443e2f02962f24ba62bb2601ead8ed99e9839e32fdd1c35fa96f",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "ferrisboost-v3",
+      "version": "0.0.1",
+      "analyzed_at": "2026-09-07T22:38:04.244778+00:00",
+      "binaries": [
+        {
+          "name": "_core.abi3.so",
+          "file": "ferrisboost/_core.abi3.so",
+          "sha256": "28f4ff1e35c38919af6987626be59e4ecf35e9550f3fef6f66f5a2c01a0ac72d",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -127136,6 +132043,67 @@
           "command": "urllib.request.Request(url, data=data, headers=headers, method=method)",
           "resolved": false,
           "context": "AMGMail._request",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "vosk-termux",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/fe/2b/ef691427f8148b78f861dcdadd4efe4418f0b41f51463c4c45d740098f2a/vosk_termux-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:14.162222+00:00",
+      "install_hooks": [
+        {
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 40,
+          "call": "requests.get",
+          "command": "requests.get('https://alphacephei.com/vosk/models/model-list.json', timeout=10)",
+          "resolved": true,
+          "context": "list_models",
+          "source": "package_init"
+        },
+        {
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 45,
+          "call": "requests.get",
+          "command": "requests.get('https://alphacephei.com/vosk/models/model-list.json', timeout=10)",
+          "resolved": true,
+          "context": "list_languages",
+          "source": "package_init"
+        },
+        {
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 82,
+          "call": "requests.get",
+          "command": "requests.get('https://alphacephei.com/vosk/models/model-list.json', timeout=10)",
+          "resolved": true,
+          "context": "Model.get_model_by_name",
+          "source": "package_init"
+        },
+        {
+          "file": "vosk_termux-0.0.1/src/vosk_termux/__init__.py",
+          "line": 100,
+          "call": "requests.get",
+          "command": "requests.get('https://alphacephei.com/vosk/models/model-list.json', timeout=10)",
+          "resolved": true,
+          "context": "Model.get_model_by_lang",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "openrazer-win",
+      "version": "1.1.2",
+      "download_url": "https://files.pythonhosted.org/packages/51/c3/19c219ce93c84b0aebde0fbe2467eedcf0da2b1b94ccd8ba4a7580abc44d/openrazer_win-1.1.2.tar.gz",
+      "analyzed_at": "2026-09-07T22:36:24.624399+00:00",
+      "install_hooks": [
+        {
+          "file": "openrazer_win-1.1.2/openrazer_win/cli/__init__.py",
+          "line": 419,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen(command, creationflags=creationflags, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL, close_fds=True, env=child_environment())",
+          "resolved": false,
+          "context": "start_daemon_detached",
           "source": "package_init"
         }
       ]
