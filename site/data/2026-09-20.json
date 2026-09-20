@@ -1,11 +1,4149 @@
 {
-  "generated_at": "2026-09-20T20:27:55.168642+00:00",
+  "generated_at": "2026-09-20T23:55:33.957606+00:00",
   "stats": {
-    "total_packages": 241,
-    "malicious": 13,
-    "clean": 228
+    "total_packages": 273,
+    "malicious": 14,
+    "clean": 259
   },
   "packages": [
+    {
+      "name": "promptcachelint",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cc/0d/0a445dee1e614a6bd0743adbf58a5216f25b754c24071e248a623dbc4965/promptcachelint-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:28.311004+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptcachelint-0.1.0/tests/test_transport.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptcachelint-0.1.0/tests/test_review_round5.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptcachelint-0.1.0/tests/test_review_fixes.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "promptcachelint-0.1.0/tests/test_providers.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages?beta=true",
+          "file": "promptcachelint-0.1.0/tests/test_providers.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/models",
+          "file": "promptcachelint-0.1.0/tests/test_providers.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "skeyd",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c6/d8/1cba1a73f0c974c7debf1fed3c934d791c3a3ec92e7875602471b4094d9b/skeyd-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:27.902959+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://openrouter.ai",
+          "file": "skeyd-0.1.0/tests/test_cli.py",
+          "line": 507,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai",
+          "file": "skeyd-0.1.0/tests/test_cli.py",
+          "line": 510,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/settings/keys",
+          "file": "skeyd-0.1.0/tests/test_naming.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.anthropic.com/settings/keys",
+          "file": "skeyd-0.1.0/tests/test_naming.py",
+          "line": 108,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API keys | Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/keys",
+          "file": "skeyd-0.1.0/tests/test_naming.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/keys",
+          "file": "skeyd-0.1.0/tests/test_naming.py",
+          "line": 142,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai",
+          "file": "skeyd-0.1.0/tests/test_naming.py",
+          "line": 152,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/keys",
+          "file": "skeyd-0.1.0/tests/test_agent.py",
+          "line": 269,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai",
+          "file": "skeyd-0.1.0/tests/test_agent.py",
+          "line": 305,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/settings/keys",
+          "file": "skeyd-0.1.0/src/skeyd/naming.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/settings/keys",
+          "file": "skeyd-0.1.0/src/skeyd/naming.py",
+          "line": 303,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign In | OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "OpenBundle",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/9f/f4/93eef5a36563fb3862098367b48a8896163c5e201c10aee2197aa27bf266/openbundle-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:27.103335+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1/messages",
+          "file": "openbundle-0.1.0/tests/test_openrouter.py",
+          "line": 57,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "openbundle-0.1.0/tests/test_openrouter.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "openbundle-0.1.0/tests/test_openrouter.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api",
+          "file": "openbundle-0.1.0/src/openbundle/config.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "openbundle-0.1.0/src/openbundle/config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "openbundle-0.1.0/src/openbundle/config.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.anthropic.com",
+          "file": "openbundle-0.1.0/src/openbundle/cli.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://cloud.langfuse.com",
+          "file": "openbundle-0.1.0/src/openbundle/adapters/named.py",
+          "line": 416,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Langfuse",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.openobserve.ai",
+          "file": "openbundle-0.1.0/src/openbundle/adapters/named.py",
+          "line": 417,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenObserve",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openmeter.cloud",
+          "file": "openbundle-0.1.0/src/openbundle/adapters/named.py",
+          "line": 418,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenMeter Cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.agentops.ai",
+          "file": "openbundle-0.1.0/src/openbundle/adapters/named.py",
+          "line": 419,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://cloud.agenta.ai",
+          "file": "openbundle-0.1.0/src/openbundle/adapters/named.py",
+          "line": 420,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Agenta",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "zavora",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3e/20/1fedc225e0fee84a5cb9bb819a0b3dbebb196f9f8dc9d509706fb48d1112/zavora-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:24.491454+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://zavora.ai",
+          "file": "zavora-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zavora.ai - Build, Deploy and Monetise AI Startups with AI Teams and Professional AI Agents",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://zavora.ai/developers",
+          "file": "zavora-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zavora.ai - Build, Deploy and Monetise AI Startups with AI Teams and Professional AI Agents",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.zavorai.com",
+          "file": "zavora-0.1.0/zavora/_nucleo.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "escrix",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/33/6a/f5f1deaf07d114ed29e497ffe9170426f5792ac7a5cdbacf1fc9f35d1a73/escrix-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:24.001739+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://escrix.dev",
+          "file": "escrix-0.2.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Escrix \u2014 AI Agent Escrow Protocol",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://escrix.dev/docs",
+          "file": "escrix-0.2.0/pyproject.toml",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GitHub - haodongtuo/escrix: AI Agent-to-Agent programmable escrow & task verification protocol \u00b7 GitHub",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://mainnet.base.org",
+          "file": "escrix-0.2.0/escrix/chain.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sepolia.base.org",
+          "file": "escrix-0.2.0/escrix/chain.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "vera-audit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/30/e9/972a9b291d636ce86a8259faf3873659f25993ab389557cc4ceed59c7eb9/vera_audit-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:22.988445+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://98.80.215.12.sslip.io",
+          "file": "vera_audit-0.1.0/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://98.80.215.12.sslip.io",
+          "file": "vera_audit-0.1.0/src/vera_cli/config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "nexfin_invoice",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4d/89/f657e3bc15fdef03da573f3137dfa517137b5e9d0dc260f814223ea28a1b/nexfin_invoice-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:22.127202+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "nexfin_invoice-0.1.0/src/nexfin_invoice/ai/openrouter.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "zambo-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/dd/42/5039a6d2a0c01b8a4d8a535fd68a02deb239abcc526027092a6e79988aa7/zambo_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:20.404964+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://zambo.dev",
+          "file": "zambo_sdk-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zambo \u2014 The Trust Layer for AI Work",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/docs",
+          "file": "zambo_sdk-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zambo MCP documentation \u2014 connect one server and verify work",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/mcp",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/receipt",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/run",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/mcp",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/receipt",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/run",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/mcp",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/receipt",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/run",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/client.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/__init__.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zambo \u2014 The Trust Layer for AI Work",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev",
+          "file": "zambo_sdk-0.1.0/src/zambo_sdk/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zambo \u2014 The Trust Layer for AI Work",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "grounded-lint",
+      "version": "0.9.0",
+      "download_url": "https://files.pythonhosted.org/packages/c7/ef/43dab73dcabbef660d1ad1a22efaa8068a9db0496d9e9f055ff6018d44eb/grounded_lint-0.9.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:19.659672+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "grounded_lint-0.9.0/src/grounded/reporters.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "cooksafe",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/b8/3c/da48e80a00d4448b4e25bc5b089926e632368a0beda6af9042772e40730f/cooksafe-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:18.895256+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://console.typesafe.ai",
+          "file": "cooksafe-0.1.0/src/cooksafe/deeplinks.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TypeSafe",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "bazi",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/50/31/5706bb422aa56b6cfe6d3e991390910d365ebc5d552e8653f7178ca344e5/bazi-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:18.069942+00:00",
+      "total_findings": 101,
+      "findings": [
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 181,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2742.html",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 189,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u56db\uff1a\u8bba\u5929\u4e59\u8d35\u795e(\u4e8c)-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2728.html",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e00\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 194,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 197,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 212,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me//,",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 215,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2728.html",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 220,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e00\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://book.taiyi.me//,",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2731.html",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 227,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e8c\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 318,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/school.py",
+          "line": 295,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://services.shen88.cn/bazisuanming/pc-74297.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 263,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5730\u652f\u62f1\u5408\u662f\u4ec0\u4e48\u610f\u601d\uff1f\u529b\u91cf\u591a\u5927\uff1f_\u795e\u5df4\u5df4\u6d4b\u8bd5\u7f51",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://www.sohu.com/a/471337600_310486",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 264,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u865a\u795e\u4ea7\u751f\u7684\u65b9\u5f0f\u53ca\u865a\u795e\u5728\u547d\u5c40\u4e2d\u7684\u4f5c\u7528_\u539f\u5c40",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://www.sohu.com/a/471337600_310486",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 291,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u865a\u795e\u4ea7\u751f\u7684\u65b9\u5f0f\u53ca\u865a\u795e\u5728\u547d\u5c40\u4e2d\u7684\u4f5c\u7528_\u539f\u5c40",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://www.suanzhun.net/article/2395.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 292,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u516b\u5b57\u4e2d\u7684\u62f1\u5c40-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://services.shen88.cn/bazisuanming/pc-74297.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 293,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5730\u652f\u62f1\u5408\u662f\u4ec0\u4e48\u610f\u601d\uff1f\u529b\u91cf\u591a\u5927\uff1f_\u795e\u5df4\u5df4\u6d4b\u8bd5\u7f51",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://www.sohu.com/a/805277582_120167645",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 294,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u516b\u5b57\u547d\u7406\uff1a\u62f1\u4e0e\u5939_\u5730\u652f_\u5b9e\u9645_\u4e03\u6740",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 614,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/w/index.php?oldid=761691",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 628,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e09\u547d\u901a\u6703 (\u56db\u5eab\u5168\u66f8\u672c)/\u537702 - \u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zh.wikisource.org/w/index.php?oldid=626726",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 668,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u661f\u5b78\u5927\u6210 (\u56db\u5eab\u5168\u66f8\u672c)/\u537701 - \u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2184219",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 711,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e09\u547d\u901a\u6703/\u5377\u4e09 - \u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 726,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 742,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 743,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 745,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 759,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 777,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 779,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 793,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 795,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 809,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 810,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 837,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 843,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 844,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 862,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 863,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 875,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 877,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 878,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://m.guwendao.net/guwen/bookv_d6957d252951.aspx",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 920,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e09\u547d\u901a\u4f1a\u00b7\u5377\u4e09\u00b7\u8bba\u7f8a\u5203\u7b2c\u4e94\u5341\u4e8c_\u53e4\u6587\u5c9b_\u539f\u53e4\u8bd7\u6587\u7f51",
+          "cert_issuer": "iTrusChina Co., Ltd."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 921,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 926,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 928,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.click2macao.com/2024/04/10/tygrkjdz",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1042,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5929\u4e59\u8cb4\u4eba\u53e3\u8a23\u7684\u771f\u507d \u2013 \u6fb3\u9580\u6377\u5831\u4e00\u5c08\u6ce8\u5927\u7063\u5340\u300c\u4e09\u5275\u300d\u8cc7\u8a0a",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.usece.com/3858",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1044,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u201c\u5929\u4e59\u8d35\u4eba\u201d\u7684\u591a\u79cd\u67e5\u6cd5\uff0c\u4f60\u8ba4\u53ef\u54ea\u79cd\uff1f\u3010\u8be6\u89e3\u3011-\u516b\u5b57\u9884\u6d4b_\u516b\u5b57\u57f9\u8bad\u73ed_\u56db\u67f1\u7b97\u547d\u57f9\u8bad_\u4e8e\u4e2d\u915d_\u4e2d\u915d\u6613\u5b66_\u54c1\u6613\u8f69\u5b98\u7f51",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1045,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/_()",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1143,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2728.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1197,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e00\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1200,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1249,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2728.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1252,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e00\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1253,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/wiki",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1357,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2731.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1359,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e8c\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://www.suanzhun.net/book/1003.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1361,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bba\u91ca\u5409\u8d35\u795e\u4f8b-\u7b2c\u5341\u4e09\u5377-\u4e94\u884c\u7cbe\u7eaa-\u5ed6\u4e2d(\u5b8b)-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://zh.wikisource.org/wiki",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1362,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1364,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/_()",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1367,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me//(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1369,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1370,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://services.shen88.cn/bazisuanming/pc-74297.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 258,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5730\u652f\u62f1\u5408\u662f\u4ec0\u4e48\u610f\u601d\uff1f\u529b\u91cf\u591a\u5927\uff1f_\u795e\u5df4\u5df4\u6d4b\u8bd5\u7f51",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://www.sohu.com/a/471337600_310486",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 258,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u865a\u795e\u4ea7\u751f\u7684\u65b9\u5f0f\u53ca\u865a\u795e\u5728\u547d\u5c40\u4e2d\u7684\u4f5c\u7528_\u539f\u5c40",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://www.sohu.com/a/471337600_310486",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 270,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u865a\u795e\u4ea7\u751f\u7684\u65b9\u5f0f\u53ca\u865a\u795e\u5728\u547d\u5c40\u4e2d\u7684\u4f5c\u7528_\u539f\u5c40",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://www.suanzhun.net/article/2395.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 270,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u516b\u5b57\u4e2d\u7684\u62f1\u5c40-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://services.shen88.cn/bazisuanming/pc-74297.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 270,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5730\u652f\u62f1\u5408\u662f\u4ec0\u4e48\u610f\u601d\uff1f\u529b\u91cf\u591a\u5927\uff1f_\u795e\u5df4\u5df4\u6d4b\u8bd5\u7f51",
+          "cert_issuer": "WoTrus CA Limited"
+        },
+        {
+          "url": "https://www.sohu.com/a/805277582_120167645",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 270,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u516b\u5b57\u547d\u7406\uff1a\u62f1\u4e0e\u5939_\u5730\u652f_\u5b9e\u9645_\u4e03\u6740",
+          "cert_issuer": "DigiCert, Inc."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 577,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://m.guwendao.net/guwen/bookv_d6957d252951.aspx",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 890,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u4e09\u547d\u901a\u4f1a\u00b7\u5377\u4e09\u00b7\u8bba\u7f8a\u5203\u7b2c\u4e94\u5341\u4e8c_\u53e4\u6587\u5c9b_\u539f\u53e4\u8bd7\u6587\u7f51",
+          "cert_issuer": "iTrusChina Co., Ltd."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 890,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 890,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.click2macao.com/2024/04/10/tygrkjdz",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1017,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u5929\u4e59\u8cb4\u4eba\u53e3\u8a23\u7684\u771f\u507d \u2013 \u6fb3\u9580\u6377\u5831\u4e00\u5c08\u6ce8\u5927\u7063\u5340\u300c\u4e09\u5275\u300d\u8cc7\u8a0a",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.usece.com/3858",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1017,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u201c\u5929\u4e59\u8d35\u4eba\u201d\u7684\u591a\u79cd\u67e5\u6cd5\uff0c\u4f60\u8ba4\u53ef\u54ea\u79cd\uff1f\u3010\u8be6\u89e3\u3011-\u516b\u5b57\u9884\u6d4b_\u516b\u5b57\u57f9\u8bad\u73ed_\u56db\u67f1\u7b97\u547d\u57f9\u8bad_\u4e8e\u4e2d\u915d_\u4e2d\u915d\u6613\u5b66_\u54c1\u6613\u8f69\u5b98\u7f51",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1017,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ctext.org/wiki.pl?if=gb&chapter=827425&remap=gb",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1106,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Chinese Text Project",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1106,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/_()",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1106,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me///(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2728.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e00\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1215,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/wiki",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u7ef4\u57fa\u6587\u5e93\uff0c\u81ea\u7531\u7684\u56fe\u4e66\u9986",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.suanzhun.net/book/2731.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u300a\u4e94\u884c\u7cbe\u7eaa\u6ce8\u91ca\u300b\u5377\u5341\u4e09\uff1a\u8bba\u91ca\u5409\u8d35\u795e\u4f8b\uff08\u4e8c\uff09-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://www.suanzhun.net/book/1003.html",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8bba\u91ca\u5409\u8d35\u795e\u4f8b-\u7b2c\u5341\u4e09\u5377-\u4e94\u884c\u7cbe\u7eaa-\u5ed6\u4e2d(\u5b8b)-\u7b97\u51c6\u7f51",
+          "cert_issuer": "Asseco Data Systems S.A."
+        },
+        {
+          "url": "https://book.taiyi.me",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u592a\u4e59\u6570\u884d | \u4e2d\u534e\u4f20\u7edf\u4e94\u672f\u4e66\u7c4d\u4f20\u4e16\u7ecf\u5178\u8457\u4f5c",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://zh.wikisource.org/zh-hans/_()",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://book.taiyi.me//(",
+          "file": "bazi-1.0.0/bazi/rules.py",
+          "line": 1301,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://p.china95.net/paipan/bazi",
+          "file": "bazi-1.0.0/tests/test_bazi_chart.py",
+          "line": 524,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-\ufffd\ufffd\ufffd\u07f0\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u03f5\u0373-\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-\ufffd\ufffd\u0470\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-\u052a\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://pcbz.iwzwh.com",
+          "file": "bazi-1.0.0/tests/integration/test_ganzhi_relations.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u95ee\u771f\u516b\u5b57\u5728\u7ebf\u6392\u76d8",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://pcbz.iwzwh.com",
+          "file": "bazi-1.0.0/tests/integration/test_relationship_analysis.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u95ee\u771f\u516b\u5b57\u5728\u7ebf\u6392\u76d8",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://pcbz.iwzwh.com",
+          "file": "bazi-1.0.0/tests/integration/test_relationship_analysis.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u95ee\u771f\u516b\u5b57\u5728\u7ebf\u6392\u76d8",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://pcbz.iwzwh.com",
+          "file": "bazi-1.0.0/tests/integration/test_relationship_analysis.py",
+          "line": 391,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u95ee\u771f\u516b\u5b57\u5728\u7ebf\u6392\u76d8",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://pcbz.iwzwh.com",
+          "file": "bazi-1.0.0/tests/integration/test_relationship_analysis.py",
+          "line": 110,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u95ee\u771f\u516b\u5b57\u5728\u7ebf\u6392\u76d8",
+          "cert_issuer": "Beijing Xinchacha Credit Management Co., Ltd."
+        },
+        {
+          "url": "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T",
+          "file": "bazi-1.0.0/bazi/calendar/hko_data/encoder.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Hongkong Post"
+        }
+      ]
+    },
+    {
+      "name": "hdd-analyzer",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/01/6f/10d352fe18fc4802f0d84e67d5186d690d59ce82833946a2177c164b6ab4/hdd_analyzer-1.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:11.880471+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://ai-gateway.vercel.sh/typesafe/v1/systemone",
+          "file": "hdd_analyzer-1.1.0/src/hdd_analyzer/jev_provider.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai",
+          "file": "hdd_analyzer-1.1.0/src/hdd_analyzer/jev_provider.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenRouter",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://ai-gateway.vercel.sh/typesafe",
+          "file": "hdd_analyzer-1.1.0/src/hdd_analyzer/jev_provider.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ai-gateway.vercel.sh/typesafe/v1/systemone",
+          "file": "hdd_analyzer-1.1.0/src/hdd_analyzer/jev_provider.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fastapi-effects",
+      "version": "0.11.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/b5/e6/91a330ae60fca5fd1d3712c124d6bd32b3552ae3d63dac2c0384f6cdc9f4/fastapi_effects-0.11.0a1.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:11.385880+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "fastapi_effects-0.11.0a1/src/fastapi_effects/conformance/reporters.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "pykeepassgate",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/03/df/22008579aa86d178490036c95bdeeda0e2398bb5e22abb36f42aa820e3e9/pykeepassgate-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:09.823278+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc4648",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/token.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 4648: The Base16, Base32, and Base64 Data Encodings | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc4648",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/token.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 4648: The Base16, Base32, and Base64 Data Encodings | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc5929",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/proofs.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 5929: Channel Bindings for TLS | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc5929",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/proofs.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 5929: Channel Bindings for TLS | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc1035",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/sni.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 1035: Domain names - implementation and specification | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc1035",
+          "file": "pykeepassgate-0.0.1/src/pykeepassgate/sni.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RFC 1035: Domain names - implementation and specification | RFC Editor",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "overdraft",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/1b/ed/3d04a78faa6227850534f91fd92b7e883b730653503279a24f61ea5f4dab/overdraft-0.4.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:08.871850+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.groq.com/openai/v1/chat/completions",
+          "file": "overdraft-0.4.0/src/localbot/providers.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "overdraft-0.4.0/src/localbot/providers.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.deepseek.com/chat/completions",
+          "file": "overdraft-0.4.0/src/localbot/providers.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "haashi",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a0/90/40c34c9fd42ad0e099a9a2a8cb3df28ec8040d2ef5771ee34d48370e68f1/haashi-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:08.090308+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://no-color.org",
+          "file": "haashi-1.0.0/src/haashi/utility/logger.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://no-color.org",
+          "file": "haashi-1.0.0/src/haashi/utility/logger.py",
+          "line": 30,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "NO_COLOR: disabling ANSI color output by default",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "wolf-alexandria-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/e2/7c/f86c5c4a742d110ca4d32714efd673f0c1b0ded3ffdbc5bf012c9d03eaa1/wolf_alexandria_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:07.558735+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://api.wolflogic-ai.com",
+          "file": "wolf_alexandria_mcp-1.0.0/wolf_alexandria_mcp.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.wolflogic-ai.com",
+          "file": "wolf_alexandria_mcp-1.0.0/server.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "xyp",
+      "version": "0.1.0a2",
+      "download_url": "https://files.pythonhosted.org/packages/bf/66/f0a51baecd5803ada15cee7dc4f445d7cb18cbb355406df0e6b22d551b5d/xyp-0.1.0a2.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:05.527187+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/tests/test_client.py",
+          "line": 196,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/tests/test_soap.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/tests/test_soap.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/tests/test_soap.py",
+          "line": 20,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/tests/conftest.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/scripts/release_check.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://developer.xyp.gov.mn/docs/result-code",
+          "file": "xyp-0.1.0a2/src/xyp/errors.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ResultCode \u0442\u0430\u0439\u043b\u0431\u0430\u0440",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://developer.xyp.gov.mn/docs/result-code",
+          "file": "xyp-0.1.0a2/src/xyp/errors.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ResultCode \u0442\u0430\u0439\u043b\u0431\u0430\u0440",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://schemas.xmlsoap.org/soap/envelope",
+          "file": "xyp-0.1.0a2/src/xyp/_soap.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "synorb",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/eb/fe/b2f520ede3b4a8167636ee8c5abc8dc72987c1d65d374393d493c3bd164d/synorb-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:02.395108+00:00",
+      "total_findings": 24,
+      "findings": [
+        {
+          "url": "https://synorb.com",
+          "file": "synorb-0.1.1/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb | Temporal Context Graph For AI Agents",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/docs",
+          "file": "synorb-0.1.1/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Agent and API Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/sdk",
+          "file": "synorb-0.1.1/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb SDK Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/auth",
+          "file": "synorb-0.1.1/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Authentication Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/openapi.json",
+          "file": "synorb-0.1.1/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com/.well-known/oauth-protected-resource",
+          "file": "synorb-0.1.1/tests/test_client.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com/oauth/authorize",
+          "file": "synorb-0.1.1/tests/test_client.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com",
+          "file": "synorb-0.1.1/tests/test_client.py",
+          "line": 254,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com/.well-known/oauth-authorization-server",
+          "file": "synorb-0.1.1/tests/test_client.py",
+          "line": 255,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com",
+          "file": "synorb-0.1.1/src/synorb/client.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com",
+          "file": "synorb-0.1.1/src/synorb/client.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb | Temporal Context Graph For AI Agents",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com",
+          "file": "synorb-0.1.1/src/synorb/client.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com",
+          "file": "synorb-0.1.1/src/synorb/client.py",
+          "line": 42,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com/.well-known/oauth-authorization-server",
+          "file": "synorb-0.1.1/src/synorb/oauth.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com",
+          "file": "synorb-0.1.1/src/synorb/oauth.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.synorb.com/.well-known/oauth-authorization-server",
+          "file": "synorb-0.1.1/src/synorb/oauth.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/connect",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/docs",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Agent and API Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/auth",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Authentication Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/connect",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/docs",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Agent and API Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/auth",
+          "file": "synorb-0.1.1/src/synorb/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Authentication Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/auth",
+          "file": "synorb-0.1.1/src/synorb/errors.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Authentication Documentation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://synorb.com/auth",
+          "file": "synorb-0.1.1/src/synorb/errors.py",
+          "line": 33,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Synorb Authentication Documentation",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "DevConfig-Gen_SingBox",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/49/08/84b947187244fcca9468d610591e0a4fca5d678b256747e4138f4a9040a0/devconfig_gen_singbox-2.0.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:00.659966+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+          "file": "devconfig_gen_singbox-2.0.0/src/devconfig_gen/providers/singbox/route.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+          "file": "devconfig_gen_singbox-2.0.0/src/devconfig_gen/providers/singbox/route.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+          "file": "devconfig_gen_singbox-2.0.0/src/devconfig_gen/providers/singbox/route.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "vigil-redteam",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ea/f3/ca4f6f623a1bfb37c3dfce01cd039adb4f1cbc5a14130b78d16137f287e2/vigil_redteam-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:59.725335+00:00",
+      "total_findings": 48,
+      "findings": [
+        {
+          "url": "http://target.com/endpoint",
+          "file": "vigil_redteam-0.1.0/redteam/tui/app.py",
+          "line": 496,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://target.com/cmd",
+          "file": "vigil_redteam-0.1.0/redteam/core/interactive.py",
+          "line": 119,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://attacker.com",
+          "file": "vigil_redteam-0.1.0/redteam/modules/exploitation/tools/auth_exploit.py",
+          "line": 668,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attacker - The Domain Name Attacker.com is Now For Sale.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://attacker.com/fake-login",
+          "file": "vigil_redteam-0.1.0/redteam/modules/exploitation/tools/auth_exploit.py",
+          "line": 803,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Attacker - The Domain Name Attacker.com is Now For Sale.",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://1.1.1.1",
+          "file": "vigil_redteam-0.1.0/redteam/modules/exfil/tools/exfil_detection.py",
+          "line": 69,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1.1.1.1 \u2014 The free app that makes your Internet faster.",
+          "cert_issuer": "SSL Corp"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "vigil_redteam-0.1.0/redteam/modules/validation/tools/auth_verify.py",
+          "line": 448,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://1.1.1.1",
+          "file": "vigil_redteam-0.1.0/redteam/modules/c2/tools/c2_channel_assessment.py",
+          "line": 70,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1.1.1.1 \u2014 The free app that makes your Internet faster.",
+          "cert_issuer": "SSL Corp"
+        },
+        {
+          "url": "http://1.1.1.1:8080",
+          "file": "vigil_redteam-0.1.0/redteam/modules/c2/tools/c2_channel_assessment.py",
+          "line": 77,
+          "layer": "regex",
+          "method": "raw_ip",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1.1.1.1 \u2014 The free app that makes your Internet faster.",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation",
+          "file": "vigil_redteam-0.1.0/redteam/modules/priv_escalation/tools/cloud_iam_escalation.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AWS IAM Privilege Escalation \u2013 Methods and Mitigation",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.exploit-db.com/search?cve=",
+          "file": "vigil_redteam-0.1.0/redteam/modules/priv_escalation/tools/kernel_container_escape.py",
+          "line": 139,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Exploit Database Search",
+          "cert_issuer": "Starfield Technologies"
+        },
+        {
+          "url": "https://www.bing.com/search?q=",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/browser.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Search - Microsoft Bing",
+          "cert_issuer": "Microsoft Corporation"
+        },
+        {
+          "url": "https://api.shodan.io/shodan/host",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/domains",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.virustotal.com/api/v3/domains",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.securitytrails.com/v1/domain",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 164,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.hunter.io/v2/domain-search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.shodan.io/shodan/host/search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 320,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://search.censys.io/register",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 368,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://search.censys.io/register",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 382,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://search.censys.io/api/v2/hosts/search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 387,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://search.censys.io/register",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 381,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://search.censys.io/register",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/keyed_apis.py",
+          "line": 361,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://go.dev/dl",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/external_tools.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All releases - The Go Programming Language",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://registry.npmjs.org/-/v1/search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/packages.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/packages.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://haveibeenpwned.com/API/v3",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/exposure.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Have I Been Pwned: API Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://haveibeenpwned.com/api/v3/breacheddomain",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/exposure.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://haveibeenpwned.com/api/v3/breach",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/exposure.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://leakix.net/api/search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/exposure.py",
+          "line": 133,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://haveibeenpwned.com/API/v3",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/exposure.py",
+          "line": 22,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Have I Been Pwned: API Documentation",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.hackertarget.com/hostsearch",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://otx.alienvault.com/api/v1/indicators/domain",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://internetdb.shodan.io",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 183,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://urlscan.io/api/v1/search",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 221,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://ipinfo.io",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 277,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": "IP Data Intelligence for Developers & Enterprises | IPinfo",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pastebin.com",
+          "file": "vigil_redteam-0.1.0/redteam/modules/enumeration/tools/passive_apis.py",
+          "line": 435,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 503,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "vigil_redteam-0.1.0/redteam/modules/active_recon/tools/http_probe.py",
+          "line": 326,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://testssl.sh",
+          "file": "vigil_redteam-0.1.0/redteam/modules/active_recon/tools/tls_enum.py",
+          "line": 142,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "/bin/bash based TLS/SSL tester: testssl.sh",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://testssl.sh",
+          "file": "vigil_redteam-0.1.0/redteam/modules/active_recon/tools/tls_enum.py",
+          "line": 137,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "/bin/bash based TLS/SSL tester: testssl.sh",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.first.org/cvss/specification-document",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/validation.py",
+          "line": 140,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CVSS v4.0 Specification Document",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.first.org/cvss/specification-document",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/validation.py",
+          "line": 139,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CVSS v4.0 Specification Document",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/web_scanner.py",
+          "line": 643,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://wpscan.com/api",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/cms_scanner.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WordPress Vulnerability Database API | WPScan",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://wpscan.com/api",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/cms_scanner.py",
+          "line": 35,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WordPress Vulnerability Database API | WPScan",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/cve_scanner.py",
+          "line": 122,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://owasp.org/www-project-dependency-check",
+          "file": "vigil_redteam-0.1.0/redteam/modules/vuln_assessment/tools/dependency.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OWASP Dependency-Check",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://go.dev/dl",
+          "file": "vigil_redteam-0.1.0/redteam/core/tools/tool_install.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "All releases - The Go Programming Language",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rustup.rs",
+          "file": "vigil_redteam-0.1.0/redteam/core/tools/tool_install.py",
+          "line": 279,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "rustup.rs - The Rust toolchain installer",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "mini-runbot",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/fc/45/447953cbfa32d062cd25d08d943b18cd44f29de5c7516c664f543dcab852/mini_runbot-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:51.840763+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://deepwiki.com/rafnixg/odoo-platform-ephemeral-environment",
+          "file": "mini_runbot-0.2.1/pyproject.toml",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "rafnixg/odoo-platform-ephemeral-environment | DeepWiki",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "provmcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ac/eb/897da3e08fdd27bcbca4d7e0b6d8f51f56ef0c8b7deceb12ed423ef58032/provmcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:50.609688+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://clinicaltrials.gov/api/v2/version",
+          "file": "provmcp-0.1.0/tests/test_sources.py",
+          "line": 52,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://rest.uniprot.org/uniprotkb/search?query=P69905&size=1",
+          "file": "provmcp-0.1.0/tests/test_sources.py",
+          "line": 74,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://api.platform.opentargets.org/api/v4/graphql",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://rest.uniprot.org/uniprotkb/search",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://rest.ensembl.org/info/data",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 185,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "EnsEMBL::REST",
+          "cert_issuer": "GoDaddy.com, Inc."
+        },
+        {
+          "url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://string-db.org/api/json/version",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://reactome.org/ContentService/data/database/version",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://rest.genenames.org/info",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 223,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.ebi.ac.uk/ols4/api/ontologies",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 237,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://clinicaltrials.gov/api/v2/version",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 246,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://rest.kegg.jp/info",
+          "file": "provmcp-0.1.0/src/provmcp/sources.py",
+          "line": 258,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "scadustats",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/1c/df/6f5bd20b1554cfb5be6a0c66332f39bd0ca4619fb29253e0d5c82db4ffed/scadustats-1.0.1.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:45.792712+00:00",
+      "total_findings": 45,
+      "findings": [
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/storage/test_json_export.py",
+          "line": 47,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/storage/test_json_export.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/storage/test_json_export.py",
+          "line": 394,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/storage/test_db.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/storage/test_db.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/pipeline/test_extract_integration.py",
+          "line": 131,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/pipeline/test_extract_integration.py",
+          "line": 155,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=tPEE9ZwTmy0",
+          "file": "scadustats-1.0.1/tests/video/test_download.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_display.py",
+          "line": 59,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 86,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/xyz789",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/xyz789",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 109,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/x",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 169,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/x",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 181,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/x",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 181,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/x",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtube.com/watch?v=abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 195,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 196,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://m.youtube.com/watch?v=abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 197,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 198,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://vimeo.com/123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 209,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://notyoutube.com/watch?v=abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 210,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Loading...",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evil.com?u=youtube.com",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 211,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://vimeo.com/123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 270,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 440,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 466,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 501,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 550,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 575,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 607,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 615,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 631,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 657,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 668,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 697,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 730,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 767,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 782,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 784,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/other",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 802,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://youtu.be/abc123",
+          "file": "scadustats-1.0.1/tests/cli/test_app.py",
+          "line": 807,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hunch-jev",
+      "version": "0.6.0",
+      "download_url": "https://files.pythonhosted.org/packages/39/e0/b3c0b761385de075792b4a71dceb7a721b6150ba28f82fb7fce006cae19f/hunch_jev-0.6.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:42.266945+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "hunch_jev-0.6.0/src/hunch/llm.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cerebras.ai/v1",
+          "file": "hunch_jev-0.6.0/src/hunch/llm.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "bible-translations",
+      "version": "1.0.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/e5/d8/3057f7b12208de82d8203d109bfc64c9e847abcca414bb652c2446ff5e98/bible_translations-1.0.0rc1.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:41.577941+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/tests/test_translations_registry.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com/passage?search=John%203%3A16&version=ASV",
+          "file": "bible_translations-1.0.0rc1/tests/test_asv.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com/passage?search=John%203%3A16&version=KJV",
+          "file": "bible_translations-1.0.0rc1/tests/test_kjv.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "John 3:16 KJV - For God so loved the world, that he - Bible Gateway",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com/passage?search=Amos%209%3A8&version=KJV",
+          "file": "bible_translations-1.0.0rc1/tests/test_kjv.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Amos 9:8 KJV - Behold, the eyes of the Lord GOD are - Bible Gateway",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com/passage",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/constants.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: Search for a Bible passage in 75 languages and 233 versions.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/kjv.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/asv.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/dra.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/web.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/darby.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.biblegateway.com",
+          "file": "bible_translations-1.0.0rc1/src/bible_translations/translations/ylt.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "BibleGateway.com: A searchable online Bible in over 150 versions and 50 languages.",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "youtube-mcp-dj",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/6d/28/a7de0916d7f69650062ca4e02cd1e74c504b19a1a10b67b2ad2bedf65060/youtube_mcp_dj-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:40.545005+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "youtube_mcp_dj-0.1.1/tests/test_integration.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=vid1",
+          "file": "youtube_mcp_dj-0.1.1/tests/test_tools.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/channel/ch1",
+          "file": "youtube_mcp_dj-0.1.1/tests/test_tools.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PL1",
+          "file": "youtube_mcp_dj-0.1.1/tests/test_tools.py",
+          "line": 277,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PL9",
+          "file": "youtube_mcp_dj-0.1.1/tests/test_tools.py",
+          "line": 416,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=",
+          "file": "youtube_mcp_dj-0.1.1/src/youtube_mcp/tools.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "YouTube",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=",
+          "file": "youtube_mcp_dj-0.1.1/src/youtube_mcp/tools.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/channel",
+          "file": "youtube_mcp_dj-0.1.1/src/youtube_mcp/tools.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "creance",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/40/48/ba2f6be1813da12ff865bccb243d6d63cc66e300b9e8c67242e3fba6292f/creance-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:40.066813+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://hfmodem.ssj.lol",
+          "file": "creance-0.1.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hfmodem \u00b7 HF data modem",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://db1.wspr.live",
+          "file": "creance-0.1.0/creance/propagation.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://db1.wspr.live",
+          "file": "creance-0.1.0/creance/propagation.py",
+          "line": 99,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hfmodem",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/81/03/d8e58452ff031823e85e327c49ecdf94f993d1720fd0a35775d288158227/hfmodem-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:38.743482+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://hfmodem.ssj.lol",
+          "file": "hfmodem-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hfmodem \u00b7 HF data modem",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ir3ip.net/iw3fqg/doc/wa8ded.htm",
+          "file": "hfmodem-0.1.0/hfmodem/tests/shrike/test_hostmode_manual_0916.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WA8DED HOST MODE USER'S GUIDE",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.ir3ip.net/iw3fqg/doc/wa8ded.htm",
+          "file": "hfmodem-0.1.0/hfmodem/tests/shrike/test_hostmode_manual_0916.py",
+          "line": 4,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WA8DED HOST MODE USER'S GUIDE",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "hfhost",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cd/d6/a9e3510cc26d0ee72be729a5b08b475e91b58f66c8b8b18593cd0895051f/hfhost-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:33.050114+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://hfmodem.ssj.lol",
+          "file": "hfhost-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "hfmodem \u00b7 HF data modem",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "richer-tui",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/42/f2/efab988bbf4a931e2cec641c10f5ab100b3bc70a1a26d55864caac3ce85b/richer_tui-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:32.453297+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://regret.world",
+          "file": "richer_tui-0.1.0/richer/loadscreen.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 530,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "lampion-mcp",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a7/03/428a31b2d024caa0524b42fb9f04bccfcf2921bd1414629296e414983492/lampion_mcp-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:54:30.909039+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://lampion.cloud",
+          "file": "lampion_mcp-0.1.0/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lampion \u2014 PostgreSQL manag\u00e9",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://lampion.cloud/agents",
+          "file": "lampion_mcp-0.1.0/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lampion \u2014 Agents & MCP",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.lampion.cloud",
+          "file": "lampion_mcp-0.1.0/lampion_mcp/cli.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.lampion.cloud",
+          "file": "lampion_mcp-0.1.0/lampion_mcp/cli.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.lampion.cloud/settings",
+          "file": "lampion_mcp-0.1.0/lampion_mcp/cli.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lampion Console",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
     {
       "name": "pinta-ai-sdk",
       "version": "0.2.2",
@@ -87593,6 +91731,32 @@
           "command": "subprocess.Popen(cmd, stdout=stdout_f, stderr=stderr_f)",
           "resolved": false,
           "context": "serve",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "escrix",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/33/6a/f5f1deaf07d114ed29e497ffe9170426f5792ac7a5cdbacf1fc9f35d1a73/escrix-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-20T23:55:24.001993+00:00",
+      "install_hooks": [
+        {
+          "file": "escrix-0.2.0/escrix/__init__.py",
+          "line": 161,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'}, method='POST')",
+          "resolved": false,
+          "context": "EscrixClient._post",
+          "source": "package_init"
+        },
+        {
+          "file": "escrix-0.2.0/escrix/__init__.py",
+          "line": 168,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req, timeout=30)",
+          "resolved": false,
+          "context": "EscrixClient._post",
           "source": "package_init"
         }
       ]
