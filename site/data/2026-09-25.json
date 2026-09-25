@@ -1,11 +1,4308 @@
 {
-  "generated_at": "2026-09-25T03:52:36.501744+00:00",
+  "generated_at": "2026-09-25T09:29:55.637367+00:00",
   "stats": {
-    "total_packages": 57,
-    "malicious": 4,
-    "clean": 53
+    "total_packages": 125,
+    "malicious": 5,
+    "clean": 120
   },
   "packages": [
+    {
+      "name": "natlas",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/11/50/2cf1f1f54171892c63fd7e60683efb19ccaee88d8373585a2419f221faa3/natlas-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:49.769420+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "ftp://natlas.test",
+          "file": "natlas-0.1.0/tests/test_client.py",
+          "line": 554,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "fly-instinct",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/34/94/d07d33c455c555d19ddebce8c00e0c98bbf939a4a08c5c74136ee07e53e7/fly_instinct-0.1.0-py3-none-any.whl",
+      "analyzed_at": "2026-09-25T09:29:49.279043+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://male-cns.janelia.org",
+          "file": "fly_instinct/datafetch.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Male CNS Connectome - MaleCNS connectome",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://hf-mirror.com/datasets/nosuchstudios",
+          "file": "fly_instinct/datafetch.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "nosuchstudios (kw4rk)",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://male-cns.janelia.org",
+          "file": "fly_instinct/datafetch.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Male CNS Connectome - MaleCNS connectome",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://hf-mirror.com/datasets/nosuchstudios/fruit-fly-brain-runtime/resolve/main/artifacts/malecns-v1.0",
+          "file": "fly_instinct/datafetch.py",
+          "line": 23,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://hf-mirror.com/datasets/nosuchstudios/fruit-fly-brain-runtime/resolve/main/artifacts/malecns-v1.0/edges.csv",
+          "file": "fly_instinct/datafetch.py",
+          "line": 28,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://hf-mirror.com/datasets/nosuchstudios/fruit-fly-brain-runtime/resolve/main/artifacts/malecns-v1.0/annotations.csv",
+          "file": "fly_instinct/datafetch.py",
+          "line": 29,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://hf-mirror.com/datasets/nosuchstudios/fruit-fly-brain-runtime/resolve/main/artifacts/malecns-v1.0/neurotransmitters.csv",
+          "file": "fly_instinct/datafetch.py",
+          "line": 30,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "thinkless",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/e2/ae/cd6d99733541d95033ca105f9b6d0522e584cd7bfaa0b37027dcc2f2c12d/thinkless-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:46.407069+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://api.typesafe.ai",
+          "file": "thinkless-0.2.0/src/thinkless/providers/systemone.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing - Claude Platform Docs",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.typesafe.ai/models",
+          "file": "thinkless-0.2.0/src/thinkless/data/pricing.toml",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Models - TypeSafe AI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "thinkless-0.2.0/src/thinkless/llm/openrouter.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "thinkless-0.2.0/tests/unit/test_systemone.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "thinkless-0.2.0/tests/unit/test_openrouter.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "nonebot-plugin-wuwa-emoji",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/60/81/5cff6025b569bab5abecb222e7fdb9d895ea02a917f501a8d921b8364cb3/nonebot_plugin_wuwa_emoji-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:45.365380+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://emoji.wuwa.games/apis/api.random-emoji.wuwa.games/v1alpha1/random",
+          "file": "nonebot_plugin_wuwa_emoji-0.1.0/src/nonebot_plugin_wuwa_emoji/utils.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "microcubed",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/27/e0/9dd1b3e626186bd1f93937e08594937380814cada56f2a824ab253c01913/microcubed-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:43.184501+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://docs.astral.sh/ruff/settings",
+          "file": "microcubed-1.0.0/pyproject.toml",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Settings | Ruff",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/utils.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/utils.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/viz.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/viz.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/__init__.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/base.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/base.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://doi.org/10.2528/PIER09091704",
+          "file": "microcubed-1.0.0/src/microcubed/backends/equations.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "volume | PIER Journals",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.2528/PIER09091704",
+          "file": "microcubed-1.0.0/src/microcubed/backends/equations.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "volume | PIER Journals",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/backends/numpy.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        },
+        {
+          "url": "https://hal.science/hal-00430854",
+          "file": "microcubed-1.0.0/src/microcubed/backends/numpy.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        }
+      ]
+    },
+    {
+      "name": "robot-reel",
+      "version": "0.15.0",
+      "download_url": "https://files.pythonhosted.org/packages/3b/f3/837c36f9f9e5894536a7eab94d00ab05ebccd19cfed3509009ddbc8776f1/robot_reel-0.15.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:36.275577+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://demo.static.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.static.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "http://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 106,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://demo.hf.space/path",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space?token=unrelated",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 112,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://demo.hf.space",
+          "file": "robot_reel-0.15.0/tests/test_huggingface_readback.py",
+          "line": 117,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://mcap.dev/docs/python/mcap-apidoc/mcap.writer",
+          "file": "robot_reel-0.15.0/robot_reel/resources/stress/METHODS.txt",
+          "line": 397,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "mcap.writer module \u2014 mcap documentation",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "polygonal-path-image",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/18/ac/e742d8ebb2cb29444d8e6d6cbcf23cf303deb2703208974d649d57380605/polygonal_path_image-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:35.006546+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://hal.science/hal-00741956v1",
+          "file": "polygonal_path_image-0.1.0/pyproject.toml",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Making sure you're not a bot!",
+          "cert_issuer": "Hellenic Academic and Research Institutions CA"
+        }
+      ]
+    },
+    {
+      "name": "tego-managed-agents-test",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/84/1e/b25a78d3253263788b4e10d5a808d375e1ab7e443fd7f348d11d064f5c3f/tego_managed_agents_test-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:33.444901+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://gateway.tego.security",
+          "file": "tego_managed_agents_test-0.1.0/setup.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 502,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "model2data-studio",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/c6/64/4748ac7b05876b87ec7aabe06f61a39719fcaccbb503f48fd8de21b0b1d1/model2data_studio-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:32.436540+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://www.jbanalytica.com/model2data",
+          "file": "model2data_studio-0.1.0/pyproject.toml",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "model2data studio: build and test your data model before the data exists",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.jbanalytica.com/model2data/pricing",
+          "file": "model2data_studio-0.1.0/pyproject.toml",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "model2data studio pricing: free to start, Pro at \u20ac99 a month",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "imfusion-webappkit",
+      "version": "0.3.1",
+      "download_url": "https://files.pythonhosted.org/packages/40/d8/3dbb29b27ea2dd1d71fef31a2a3d02fd1bb4f744e3f31d67aa81b8c86bc4/imfusion_webappkit-0.3.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:25.618336+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://pypi.imfusion.com/simple",
+          "file": "imfusion_webappkit-0.3.1/pyproject.toml",
+          "line": 101,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://www.imfusion.com",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/examples/webapp_demo.py",
+          "line": 158,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ImFusion - Enabling rapid innovation in medical imaging",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.imfusion.com",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/examples/webapp_demo.py",
+          "line": 154,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ImFusion - Enabling rapid innovation in medical imaging",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pypi.imfusion.com/simple",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/templates/monai/pyproject.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pypi.imfusion.com/simple",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/templates/chat/pyproject.toml",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pypi.imfusion.com/simple",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/templates/simple/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://pypi.imfusion.com/simple",
+          "file": "imfusion_webappkit-0.3.1/imfusion_webappkit/templates/workflow/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Simple Index",
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "tvpulse-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/c1/63/96b6fc89c09b3e646b7dd24d17751c4ed35d320c83b6a22f6306ab0208a5/tvpulse_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:20.295867+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://gateway.tvpulse.io/apidocs",
+          "file": "tvpulse_mcp-1.0.0/pyproject.toml",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TVPulse \u30ab\u30b9\u30bf\u30de\u30fc API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://tvpulse.io/account/api-keys",
+          "file": "tvpulse_mcp-1.0.0/src/tvpulse_mcp/key_help.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "TVPulse | AI\u642d\u8f09\u306eTV\u5206\u6790",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "no-nepali-profanity",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4b/35/6c07689f21a83c3315773a7f8a78110726039d5ff5ae91bcdfeeffcdabd2/no_nepali_profanity-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:11.315622+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://mukhxadnahunna.com/python",
+          "file": "no_nepali_profanity-0.1.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Introduction | mukh-xadna-hunna",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "JevCompass",
+      "version": "0.1.15",
+      "download_url": "https://files.pythonhosted.org/packages/e8/d6/d61001ac3ef8b4b4fc3932094fbaebe90b2d0e3c6e1c6371aaf8ff077015/jevcompass-0.1.15.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:10.765409+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/alpha/decisions",
+          "file": "jevcompass-0.1.15/src/jevcompass/decisions.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/models?output_modalities=decisions&q=jev",
+          "file": "jevcompass-0.1.15/src/jevcompass/decisions.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "minigrad-framework",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/8b/32/2364d20a6ed1fb6b246e2d57c6a6ab34be224df6c763fc7a2bcfa3377881/minigrad_framework-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:10.137960+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2106.09685",
+          "file": "minigrad_framework-1.0.0/minigrad/nn/lora.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2106.09685] LoRA: Low-Rank Adaptation of Large Language Models",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/2106.09685",
+          "file": "minigrad_framework-1.0.0/minigrad/nn/lora.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2106.09685] LoRA: Low-Rank Adaptation of Large Language Models",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1412.6980",
+          "file": "minigrad_framework-1.0.0/minigrad/optim/adam.py",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1412.6980] Adam: A Method for Stochastic Optimization",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1711.05101",
+          "file": "minigrad_framework-1.0.0/minigrad/optim/adam.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1711.05101] Decoupled Weight Decay Regularization",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1412.6980",
+          "file": "minigrad_framework-1.0.0/minigrad/optim/adam.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1412.6980] Adam: A Method for Stochastic Optimization",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://arxiv.org/abs/1711.05101",
+          "file": "minigrad_framework-1.0.0/minigrad/optim/adam.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[1711.05101] Decoupled Weight Decay Regularization",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "gpt-images-25",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/d4/82/507bb26288b33e94ed3b18dddf576bb55e26ff2ca74918e8a6b8af3dabb5/gpt_images_25-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:09.537495+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://images25.art",
+          "file": "gpt_images_25-0.1.0/pyproject.toml",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPT images 2.5: Free AI Image Generator & Editor Online | images25.art",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://images25.art",
+          "file": "gpt_images_25-0.1.0/pyproject.toml",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPT images 2.5: Free AI Image Generator & Editor Online | images25.art",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://images25.art",
+          "file": "gpt_images_25-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPT images 2.5: Free AI Image Generator & Editor Online | images25.art",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://images25.art",
+          "file": "gpt_images_25-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "GPT images 2.5: Free AI Image Generator & Editor Online | images25.art",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "graphplug",
+      "version": "0.2.2",
+      "download_url": "https://files.pythonhosted.org/packages/fa/07/40b552933821118f4ac6c03b19a081cca4f25ea66105a282fbd2c48c07af/graphplug-0.2.2.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:05.990429+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://login.microsoftonline.com",
+          "file": "graphplug-0.2.2/graphplug/_auth.py",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com",
+          "file": "graphplug-0.2.2/tests/test_redirect_and_construction.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com/tenant-1",
+          "file": "graphplug-0.2.2/tests/test_redirect_and_construction.py",
+          "line": 172,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com/tenant-1/oauth2/v2.0/authorize",
+          "file": "graphplug-0.2.2/tests/test_signin.py",
+          "line": 185,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in to your account",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "joblogic-automation-services",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/0b/67/c83c500102be94798e855cbb56873e4ff73d6e76a4aadd454f1a1f05fe7f/joblogic_automation_services-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:04.666030+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://login.microsoftonline.com",
+          "file": "joblogic_automation_services-0.1.1/src/joblogic_sdk/sharepoint/client.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting",
+          "cert_issuer": "Microsoft Corporation"
+        }
+      ]
+    },
+    {
+      "name": "timu",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/bd/05/db114f07972735c9abd7938802bbad9213e4dea9c7e6a893a66951944352/timu-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:03.641589+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "timu-0.2.0/src/timu/skills.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "timu-0.2.0/src/timu/config.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "timu-0.2.0/src/timu/config.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "timu-0.2.0/src/timu/config.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.search.brave.com/res/v1/web/search",
+          "file": "timu-0.2.0/src/timu/tools/web.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "nova-data-ai-skylab",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/c5/6d/793f904afc221844411350a8210e7b8d1a6c001af1f123b0a519722a1f77/nova_data_ai_skylab-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:54.720971+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://nova-data-ai.com",
+          "file": "nova_data_ai_skylab-0.1.1/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nova Data & AI | Data & AI outcomes, achieved together",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://nova-data-ai.com",
+          "file": "nova_data_ai_skylab-0.1.1/src/skylab/client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Nova Data & AI | Data & AI outcomes, achieved together",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "textrieve",
+      "version": "1.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/8f/32/425c74d4c6309b829a7b3ad489b21506b4cf2da1656711691c0726fe4cc4/textrieve-1.2.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:53.587021+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://textrieve.onrender.com",
+          "file": "textrieve-1.2.1/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "textrieve \u2014 image & PDF to text",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "lazaret",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/a4/e0/6ad116363e519253702e480a48576badbd530cd2029fd779516613066675/lazaret-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:52.558267+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://lazaret.dev",
+          "file": "lazaret-0.0.1/_build/lazaret_build.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lazaret: quarantine for your dependencies",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "lazaret-0.0.1/src/lazaret/registry/repo.py",
+          "line": 249,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ucci-router",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/4a/05/ee436a4b673584e6b7d70d13623f9ceed7c8ae8b64f9a3b0f5c3577d1f95/ucci_router-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:52.068048+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2605.18796",
+          "file": "ucci_router-0.1.1/pyproject.toml",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2605.18796] UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing",
+          "cert_issuer": "Certainly"
+        },
+        {
+          "url": "https://docs.litellm.ai/docs/completion/input",
+          "file": "ucci_router-0.1.1/src/ucci/integrations/openai.py",
+          "line": 56,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Input Params | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.litellm.ai/docs/completion/input",
+          "file": "ucci_router-0.1.1/src/ucci/integrations/openai.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Input Params | liteLLM",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "odoo_addon_l10n_jp_kana",
+      "version": "19.0.1.0.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/f7/a7/bd819be5df6257c3522615a5a026b995d0f4cb2ab76e2f35784a1ff38b2a/odoo_addon_l10n_jp_kana-19.0.1.0.0.2-py3-none-any.whl",
+      "analyzed_at": "2026-09-25T09:28:51.162679+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/__manifest__.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/models/ir_config_parameter.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/models/res_config_settings.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/models/kana_mixin.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/models/name_kana_mixin.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/tests/common.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/tests/test_name_kana_mixin.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/tests/fake_models.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.quartile.co",
+          "file": "odoo/addons/l10n_jp_kana/tests/test_kana_mixin.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Odoo ERP implementation, migration & operations \u2014 Quartile",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "openai-agents-zambo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/30/77/41a7c6a4648610b4c5705956bb61b16ead268c30231af1e7c8ed9df67b7e/openai_agents_zambo-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:41.398251+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://zambo.dev",
+          "file": "openai_agents_zambo-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zambo | Verifiable AI Call Receipts",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://zambo.dev/api/mcp",
+          "file": "openai_agents_zambo-0.1.0/src/openai_agents_zambo/client.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pyheimdall-grist",
+      "version": "0.3.0",
+      "download_url": "https://files.pythonhosted.org/packages/12/20/725c45b4a1719146e3e0cd927fbafcb58732160e0a285687ea7ced5163d7/pyheimdall_grist-0.3.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:40.629472+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://grist.numerique.gouv.fr/api",
+          "file": "pyheimdall_grist-0.3.0/src/heimdall/connectors/grist/util.py",
+          "line": 4,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "donkey-kit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/04/4eb1be645f1fa740d1285568f7d186421955d7ce3367dce6a3d10c967ee0/donkey_kit-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:31.929915+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://anypoint.mulesoft.com",
+          "file": "donkey_kit-0.1.0/src/donkey_kit/core/_verify.py",
+          "line": 259,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anypoint Platform",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://eu1.anypoint.mulesoft.com",
+          "file": "donkey_kit-0.1.0/src/donkey_kit/core/_verify.py",
+          "line": 260,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Anypoint Platform",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "sightradar-rekognition-shim",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/4b/9e/870966fe9d827d73fd6d183a109183f16f73354a34cf173130a2aa5a0659/sightradar_rekognition_shim-0.2.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:30.110964+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://sightradar.com",
+          "file": "sightradar_rekognition_shim-0.2.0/pyproject.toml",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "SightRadar \u2014 High-accuracy face recognition API, Rekognition-compatible",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sightradar.com/docs",
+          "file": "sightradar_rekognition_shim-0.2.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API Reference \u2014 SightRadar",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sightradar.com/pricing",
+          "file": "sightradar_rekognition_shim-0.2.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Pricing \u2014 SightRadar",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://sightradar.com/migrate",
+          "file": "sightradar_rekognition_shim-0.2.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Migrate from AWS Rekognition \u2014 SightRadar",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.sightradar.com",
+          "file": "sightradar_rekognition_shim-0.2.0/tests/test_shim.py",
+          "line": 58,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.sightradar.com",
+          "file": "sightradar_rekognition_shim-0.2.0/src/sightradar_rekognition_shim/client.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "xiangxin-sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e4/d4/a6dbe5eb5df2a33b704e068eb670b102c1bc0a4cdcfa51755ec70c411ff3/xiangxin_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:28.517769+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/pyproject.toml",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8c61\u4fe1 AI \u00b7 \u7cfb\u7edf\u4e00\u6a21\u578b API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://docs.xiangxinai.cn/sdk/python",
+          "file": "xiangxin_sdk-0.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python SDK \u00b7 \u8c61\u4fe1 AI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8c61\u4fe1 AI \u63a7\u5236\u53f0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/examples/quickstart.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "\u8c61\u4fe1 AI \u63a7\u5236\u53f0",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/tests/test_client.py",
+          "line": 43,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to OpenResty!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/src/xiangxin/constants.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to OpenResty!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/src/xiangxin/_client.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to OpenResty!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/src/xiangxin/_client.py",
+          "line": 136,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to OpenResty!",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.xiangxinai.cn",
+          "file": "xiangxin_sdk-0.1.0/src/xiangxin/_client.py",
+          "line": 128,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Welcome to OpenResty!",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "crawl4tools",
+      "version": "1.0.0b1",
+      "download_url": "https://files.pythonhosted.org/packages/07/8e/aeb48fb0f9d0f080efca78194f708ac59d3e18944db5bc519ec3b1da632a/crawl4tools-1.0.0b1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:25.332458+00:00",
+      "total_findings": 36,
+      "findings": [
+        {
+          "url": "https://pdfobject.com/pdf/sample.pdf",
+          "file": "crawl4tools-1.0.0b1/tests/integration/test_cli_live.py",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 480,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 482,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_server_results.py",
+          "line": 483,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 355,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 370,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 371,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 376,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 378,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://user:s3cr3t@proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 382,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://***@proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 384,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 462,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_errors_i18n.py",
+          "line": 463,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_proxy.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://user:s3cr3t@proxy.example:8080",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_proxy.py",
+          "line": 83,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://host:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_options.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://host:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_options.py",
+          "line": 203,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://host:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_options.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://host:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_options.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://host:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_options.py",
+          "line": 207,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_loader.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_loader.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_loader.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_loader.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_fetcher.py",
+          "line": 635,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_fetcher.py",
+          "line": 891,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 177,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://user:s3cr3t@proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 507,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://x",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 509,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://user:s3cr3t@proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 519,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://***@proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 523,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "ftp://***@proxy.example:21",
+          "file": "crawl4tools-1.0.0b1/tests/unit/test_cli_main.py",
+          "line": 522,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "flexposit",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/ef/9c/5974589366b8be3b13b7921988b15b988698a57371811c4aeca68d4962e9/flexposit-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:23.779014+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2609.04724",
+          "file": "flexposit-0.2.1/pyproject.toml",
+          "line": 48,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2609.04724] FlexPosit: Tunable Fractional Precision for LLM Inference Accelerators",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "stepcap",
+      "version": "0.1.7",
+      "download_url": "https://files.pythonhosted.org/packages/00/3a/be7fef4f3e2473b6403d9c53b28ea28ed160bf1a55dc0023e1644795043d/stepcap-0.1.7.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:21.854905+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "stepcap-0.1.7/src/stepcap/skill/validate.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agentskills.io/specification",
+          "file": "stepcap-0.1.7/src/stepcap/skill/validate.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Specification - Agent Skills",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qram-simulator",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/6e/a1/a9fd6669a8cc3f7877cd6494e896548bc40debbd8699bb9f56c3b5ff1d80/qram_simulator-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:20.741343+00:00",
+      "total_findings": 17,
+      "findings": [
+        {
+          "url": "http://docopt.org",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/docopt.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "docopt\u2014language for description of command-line interfaces",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://docopt.org",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/docopt.py",
+          "line": 548,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "docopt\u2014language for description of command-line interfaces",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://docopt.org",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/docopt.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "docopt\u2014language for description of command-line interfaces",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://docopt.org",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/docopt.py",
+          "line": 491,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "docopt\u2014language for description of command-line interfaces",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.unicode.org/Public/UNIDATA/UnicodeData.txt",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/printable.py",
+          "line": 134,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "http://www.cwi.nl",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc-html/python-license.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cnri.reston.va.us",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc-html/python-license.txt",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Corporation for National Research Initiatives (CNRI)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.pythonlabs.com/logos.html",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc-html/python-license.txt",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hdl.handle.net/1895.22/1013",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc-html/python-license.txt",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License for PYTHON 1.6.1",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/test/CMakeLists.txt",
+          "line": 240,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CUDA Programming Guide \u2014 CUDA Programming Guide",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "http://www.cwi.nl",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc/python-license.txt",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Home",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.cnri.reston.va.us",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc/python-license.txt",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Corporation for National Research Initiatives (CNRI)",
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.pythonlabs.com/logos.html",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc/python-license.txt",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://hdl.handle.net/1895.22/1013",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/doc/python-license.txt",
+          "line": 222,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "License for PYTHON 1.6.1",
+          "cert_issuer": null
+        },
+        {
+          "url": "https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/test/cuda-test/CMakeLists.txt",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "CUDA Programming Guide \u2014 CUDA Programming Guide",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/test/cuda-test/CMakeLists.txt",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "1. Introduction \u2014 NVIDIA CUDA Compiler Driver 13.4 documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fmt.dev/latest",
+          "file": "qram_simulator-0.2.1/ThirdParty/fmt/support/rtd/index.rst",
+          "line": 2,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "{fmt}",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "notas-musicais-rks",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/29/bb/314e4bfca984a84d3d0a0518a044818b5c463c2ce1722dff34ebefd45dbd/notas_musicais_rks-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:09.807815+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://apoia.se/livedepython",
+          "file": "notas_musicais_rks-0.1.0/pyproject.toml",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Financiamento Coletivo na APOIA.se | Crowdfunding Pontual e Mensal",
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://en.wikipadia.org/wiki/List_of_musical_scales_and_modes",
+          "file": "notas_musicais_rks-0.1.0/src/notas_musicais/escalas.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "List of musical scales and modes - Wikipedia",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://en.wikipadia.org/wiki/List_of_musical_scales_and_modes",
+          "file": "notas_musicais_rks-0.1.0/src/notas_musicais/escalas.py",
+          "line": 2,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "List of musical scales and modes - Wikipedia",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "codegment",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/32/ef/a510eb16a0372b98e7dcd784b9ff563a8ee8c07e190e42406d1d64ba5b05/codegment-1.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:08.336864+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://pygments.org/languages",
+          "file": "codegment-1.0.1/codegment/app.py",
+          "line": 312,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Languages \u2014 Pygments",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pygments.org/styles",
+          "file": "codegment-1.0.1/codegment/app.py",
+          "line": 314,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Styles \u2014 Pygments",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "flakelens",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/c9/c8/c6152f9ed8f13524ff8be2f7ada60b34df398cd4b042cbcb7bac0c0f8126/flakelens-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:07.118186+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://vitapilotai.com/flakelens",
+          "file": "flakelens-0.1.1/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "flakelens \u2014 is that LLM failure real, or just flaky?",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "decibri-mcp",
+      "version": "0.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/b0/83/58efe8da84a79a4b13c515f96f973e1449799a67c7bda3bee5556a43e378/decibri_mcp-0.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:06.146009+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://decibri.com",
+          "file": "decibri_mcp-0.0.0/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Decibri | Unified Audio AI for Python, Node.js, and Rust",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "crewai-csoai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/a2/cf/72ae0904fcf9bd4dc9cab3403ee6619278930a66b092fc83869fbf30706a/crewai_csoai-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:04.376841+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://councilof.ai",
+          "file": "crewai_csoai-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Council of AI \u2014 independent measurement of AI systems, signed and free to re-check",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "crewai_csoai-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/doctrine",
+          "file": "crewai_csoai-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Doctrine \u2014 measurement, not certification | Council of AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "crewai_csoai-0.1.0/crewai_csoai/_board.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "cirrusnetworks-switchboard-agent",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/f2/3b/d58fcda10d5a10b2d97295244f284a2c9b97c3dbddd3460fc078ef698370/cirrusnetworks_switchboard_agent-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:04.042263+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cirrusnetworks.com",
+          "file": "cirrusnetworks_switchboard_agent-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cirrus Networks \u2013 Serious solutions for IT infrastructure, communications and security.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cirrusnetworks-siege-agent",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/85/7b/2a5ef8d8822e5ceff46d5fde7f409fb6fd308bb92ce3a1a1a5cb73fbe686/cirrusnetworks_siege_agent-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:03.491159+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cirrusnetworks.com",
+          "file": "cirrusnetworks_siege_agent-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cirrus Networks \u2013 Serious solutions for IT infrastructure, communications and security.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cirrusnetworks-prism",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/bd/77/3204df242f3e1198e9e98577d4e95b721a41a65eeb4996939cc8af6b7e16/cirrusnetworks_prism-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:02.882916+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cirrusnetworks.com",
+          "file": "cirrusnetworks_prism-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cirrus Networks \u2013 Serious solutions for IT infrastructure, communications and security.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "cirrusnetworks-sentinel",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/81/e7/52064293c27a64ee342080bac69f9df79630d5a56f86192a7250889adaf0/cirrusnetworks_sentinel-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:02.333956+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cirrusnetworks.com",
+          "file": "cirrusnetworks_sentinel-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Cirrus Networks \u2013 Serious solutions for IT infrastructure, communications and security.",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "langchain-csoai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6b/42/2306a89be0e036d46319a000a08f951380fb42b66144009795ed5a8069cb/langchain_csoai-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:01.834724+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://councilof.ai",
+          "file": "langchain_csoai-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Council of AI \u2014 independent measurement of AI systems, signed and free to re-check",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "langchain_csoai-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/doctrine",
+          "file": "langchain_csoai-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Doctrine \u2014 measurement, not certification | Council of AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "langchain_csoai-0.1.0/langchain_csoai/_board.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "llama-index-tools-csoai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/e0/c7/ac06be61b03c144a68ea6d1025fb45f145681fdcf82c16f4331828efccff/llama_index_tools_csoai-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:28:01.238615+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://councilof.ai",
+          "file": "llama_index_tools_csoai-0.1.0/pyproject.toml",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Council of AI \u2014 independent measurement of AI systems, signed and free to re-check",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "llama_index_tools_csoai-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/doctrine",
+          "file": "llama_index_tools_csoai-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Doctrine \u2014 measurement, not certification | Council of AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://councilof.ai/api/gspc",
+          "file": "llama_index_tools_csoai-0.1.0/llama_index/tools/csoai/_board.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "datasette-otel-otlp-exporter",
+      "version": "0.1.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/b0/46/5c804e36f20758f35afbc122da0b93177d452ca202ecba8b2bdb92f8025d/datasette_otel_otlp_exporter-0.1.0a1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:59.848560+00:00",
+      "total_findings": 13,
+      "findings": [
+        {
+          "url": "https://otlp-gateway-prod-us-east-0.grafana.net/otlp/v1/traces",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/tests/test_presets.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 46,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/traces/set-up/add-access-policy",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Add a Cloud Access Policy and access token for traces | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/security-and-account-management/authentication-and-permissions/access-policies/create-access-policies",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Create access policies and tokens | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/platform/security-and-account-management/account-management/region-url-formats",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Determine Grafana Cloud URLs based on region | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 50,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/traces/set-up/add-access-policy",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 57,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Add a Cloud Access Policy and access token for traces | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/security-and-account-management/authentication-and-permissions/access-policies/create-access-policies",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 57,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Create access policies and tokens | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/platform/security-and-account-management/account-management/region-url-formats",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 65,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Determine Grafana Cloud URLs based on region | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://grafana.com/docs/grafana-cloud/send-data/otlp/send-data-otlp",
+          "file": "datasette_otel_otlp_exporter-0.1.0a1/datasette_otel_otlp_exporter/config.py",
+          "line": 74,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Send data to the Grafana Cloud OTLP endpoint | Grafana Cloud documentation",
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "apulodi",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3f/9c/4a358a3d4fa0a1045be5f7098409de3db03a8c9e793300f8d79abd74fe0e/apulodi-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:59.318010+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "ftp://nope",
+          "file": "apulodi-0.1.0/tests/test_client.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://app.apulodi.dev",
+          "file": "apulodi-0.1.0/tests/test_client.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2014 APULODI \u00b7 APULODI",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.apulodi.dev/api/v1/files/upload",
+          "file": "apulodi-0.1.0/tests/test_client.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.apulodi.dev/api/v1/files/upload",
+          "file": "apulodi-0.1.0/tests/test_files.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.apulodi.dev/api/v1/files/file_1/complete",
+          "file": "apulodi-0.1.0/tests/test_files.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.apulodi.dev",
+          "file": "apulodi-0.1.0/src/apulodi/client.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in \u2014 APULODI \u00b7 APULODI",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "bioai-evidence-validator",
+      "version": "0.5.0",
+      "download_url": "https://files.pythonhosted.org/packages/8e/da/1bea688a01a6d0e1081c38077c9e2fdb8d54dafe9de02785794e8ecfd7a4/bioai_evidence_validator-0.5.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:52.731570+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://w3id.org/linkml",
+          "file": "bioai_evidence_validator-0.5.0/tests/test_engine.py",
+          "line": 164,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "bioai_evidence_validator-0.5.0/src/bioevidence_validator/draft.py",
+          "line": 216,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "espalier-harness",
+      "version": "0.8.0b1",
+      "download_url": "https://files.pythonhosted.org/packages/1c/6b/afd057fffd50a58eff99c4f82e26933850f9e0b948b8738c10a56ab5bc64/espalier_harness-0.8.0b1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:51.125684+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/claude-code-settings.json",
+          "file": "espalier_harness-0.8.0b1/espalier/cli.py",
+          "line": 538,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://keepachangelog.com/en/1.1.0",
+          "file": "espalier_harness-0.8.0b1/espalier/cli.py",
+          "line": 1887,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Keep a Changelog",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "espalier_harness-0.8.0b1/espalier/cli.py",
+          "line": 1888,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://keepachangelog.com/en/1.1.0",
+          "file": "espalier_harness-0.8.0b1/espalier/cli.py",
+          "line": 1883,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Keep a Changelog",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "file": "espalier_harness-0.8.0b1/espalier/cli.py",
+          "line": 1883,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Semantic Versioning 2.0.0 | Semantic Versioning",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "espalier_harness-0.8.0b1/espalier/fan_out_findings.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json.schemastore.org/claude-code-settings.json",
+          "file": "espalier_harness-0.8.0b1/espalier/settings_profiles.py",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://json.schemastore.org/claude-code-settings.json",
+          "file": "espalier_harness-0.8.0b1/espalier/settings_profiles.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://claude.com",
+          "file": "espalier_harness-0.8.0b1/tools/cc/hooks/write_guard.py",
+          "line": 296,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://claude.com",
+          "file": "espalier_harness-0.8.0b1/espalier/_vendor/cc/hooks/write_guard.py",
+          "line": 296,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "iri26py",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/e5/98/266a258e9f6fee84b05ea5f646abc846a5275d7dd48737a00045d6cc37a1/iri26py-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:48.118815+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://chain-new.chain-project.net/echaim_downloads",
+          "file": "iri26py-0.0.1/src/iri26py/download.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://chain-new.chain-project.net/echaim_downloads/apf107.dat",
+          "file": "iri26py-0.0.1/src/IRI2026/00readme.txt",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://chain-new.chain-project.net/echaim_downloads/ig_rz.dat",
+          "file": "iri26py-0.0.1/src/IRI2026/00readme.txt",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://irimodel.org/COMMON_FILES",
+          "file": "iri26py-0.0.1/src/IRI2026/00readme.txt",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /COMMON_FILES",
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "repogates",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/ed/33/3a4e81d4d2a05b0b2cb667633a4f2719744ec5a113e3512b7a4d313b329e/repogates-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:45.894788+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://repogates.com",
+          "file": "repogates-0.0.1/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RepoGates \u2014 check what your AI agent installs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/docs/checkup.html",
+          "file": "repogates-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/cli",
+          "file": "repogates-0.0.1/src/repogates_pypi_notice/__init__.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up CLI \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/cli",
+          "file": "repogates-0.0.1/src/repogates_pypi_notice/__init__.py",
+          "line": 4,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up CLI \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "repogates-checkup",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/1c/bd/c6cc143a9e1a588b5d51b191229ce942347b7d30f868108e785fb30c7a27/repogates_checkup-0.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:44.862091+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://repogates.com",
+          "file": "repogates_checkup-0.0.1/pyproject.toml",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "RepoGates \u2014 check what your AI agent installs",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/docs/checkup.html",
+          "file": "repogates_checkup-0.0.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/cli",
+          "file": "repogates_checkup-0.0.1/src/repogates_pypi_notice/__init__.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up CLI \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://repogates.com/cli",
+          "file": "repogates_checkup-0.0.1/src/repogates_pypi_notice/__init__.py",
+          "line": 4,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "The agent check-up CLI \u2014 RepoGates",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "miras",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/63/81/6dcf4339cba278eede851759e5da4af6e9fcc688e2eeeadc09302385d7ba/miras-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:43.411885+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1073/pnas.2322887121",
+          "file": "miras-0.1.0/pyproject.toml",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "zigotrace-partner",
+      "version": "1.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/7e/69/293ad96f5e9b95612e94ac87723cffc577559cf63af03f6aa9da90d28555/zigotrace_partner-1.2.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:42.461991+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://agri-api.zigotrace.com",
+          "file": "zigotrace_partner-1.2.0/zigotrace_partner.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agri.zigotrace.com",
+          "file": "zigotrace_partner-1.2.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Zigo Traceability Intelligence",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "auxiscaffold",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/7a/16/4d446b965cc294f1feffc77344424afc445c44dceba1390f23d3bad87ff1/auxiscaffold-1.0.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:41.186770+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://auxiliobits.com/auxilab",
+          "file": "auxiscaffold-1.0.1/pyproject.toml",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AuxiLab: Open-Source Finance AI Tools & Agents | Auxiliobits",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://git-scm.com",
+          "file": "auxiscaffold-1.0.1/src/cli.py",
+          "line": 1593,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Git",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 465,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 534,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 599,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 756,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 464,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 533,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 598,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://console.anthropic.com",
+          "file": "auxiscaffold-1.0.1/src/analyzer/analyzer.py",
+          "line": 755,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "openbot-mcp",
+      "version": "0.1.0.dev0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/85/81b7af9c06ab36b373988585fdaafec0288751cc9ddadeb955f1bcfd39d1/openbot_mcp-0.1.0.dev0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:39.201084+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://openbot.ai",
+          "file": "openbot_mcp-0.1.0.dev0/pyproject.toml",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenBot.ai \u2014 The Data Engineering Layer for Physical AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openbot.ai/v1",
+          "file": "openbot_mcp-0.1.0.dev0/tests/test_server.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openbot.ai",
+          "file": "openbot_mcp-0.1.0.dev0/src/openbot_mcp/server.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OpenBot.ai \u2014 The Data Engineering Layer for Physical AI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openbot.ai/v1",
+          "file": "openbot_mcp-0.1.0.dev0/src/openbot_mcp/config.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "neuralyzer",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/2d/0c/f99cb9937d56f76e485b320565718e93a944fb46db33a3ea7025a133be81/neuralyzer-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:37.586245+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://console.anthropic.com/settings/keys",
+          "file": "neuralyzer-0.1.0/neuralyzer.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API keys | Claude Platform",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "kodeus",
+      "version": "0.3.0rc1",
+      "download_url": "https://files.pythonhosted.org/packages/23/79/383fc755c79671665661eb65316c9e5f1a9e8e10e328ce63856a42eee9e7/kodeus-0.3.0rc1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:36.877754+00:00",
+      "total_findings": 10,
+      "findings": [
+        {
+          "url": "https://kodeus.ai",
+          "file": "kodeus-0.3.0rc1/pyproject.toml",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "AI Agent Platform & Infrastructure for Production \u2013 Kodeus",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://abc.ngrok-free.app",
+          "file": "kodeus-0.3.0rc1/kodeus/cli.py",
+          "line": 442,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "tunneling",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://agents.kodeus.ai/acme/support",
+          "file": "kodeus-0.3.0rc1/kodeus/cli.py",
+          "line": 655,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agents.kodeus.ai/acme/support",
+          "file": "kodeus-0.3.0rc1/kodeus/cli.py",
+          "line": 665,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agents.kodeus.ai/acme/support",
+          "file": "kodeus-0.3.0rc1/kodeus/cli.py",
+          "line": 662,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://agents.kodeus.ai/acme/support",
+          "file": "kodeus-0.3.0rc1/kodeus/cli.py",
+          "line": 654,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://testnet-api.kodeus.ai",
+          "file": "kodeus-0.3.0rc1/kodeus/supabase_oauth.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://backend.composio.dev/api/v3.1",
+          "file": "kodeus-0.3.0rc1/kodeus/composio_catalog.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://app.kodeus.ai",
+          "file": "kodeus-0.3.0rc1/kodeus/commands/user.py",
+          "line": 199,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kodeus | Build & Run Your Own AI Agents",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://app.kodeus.ai",
+          "file": "kodeus-0.3.0rc1/kodeus/commands/user.py",
+          "line": 190,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Kodeus | Build & Run Your Own AI Agents",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "gdcutils",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/90/87/68fec752b58a02dff56ef31390db55da21a3bb41f075bef059ffde8c413d/gdcutils-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:35.187675+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://fastapi.tiangolo.com/tutorial/handling-errors",
+          "file": "gdcutils-1.0.0/src/gdcutils/http/decorators.py",
+          "line": 75,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Handling Errors - FastAPI",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://fastapi.tiangolo.com/tutorial/handling-errors",
+          "file": "gdcutils-1.0.0/src/gdcutils/http/decorators.py",
+          "line": 61,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Handling Errors - FastAPI",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ordigovernance-runtime",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/22/47/3ba8596e2f13325aa71f03facefb850d26a7319b2bbc9ea047a497f0b564/ordigovernance_runtime-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:33.953680+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://picsum.photos/seed/img/640/360",
+          "file": "ordigovernance_runtime-0.1.0/src/ordigovernance/runtime/stream/enrich_placeholder.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "summa-mal",
+      "version": "2.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a0/dc/5bb35bda772c38b1da67577f18b49c44a17fecf828dd1cf59c91aaf2cad2/summa_mal-2.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:32.352180+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://docs.rs/summa-core",
+          "file": "summa_mal-2.0.0/Cargo.toml",
+          "line": 12,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "summa_core - Rust",
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "akceo",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4a/31/caa94db69dead374999dffae02510872dbea42a35ab2f37ec75cb1513a3b/akceo-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:31.496954+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://registry.npmjs.org",
+          "file": "akceo-0.1.0/scripts/update_mermaid.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://registry.npmjs.org/mermaid",
+          "file": "akceo-0.1.0/scripts/update_mermaid.py",
+          "line": 30,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "specpro-cli",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/00/57/a6f1f9b5dd6ef857b04255112ce2323267ef36513df91c44235ed00490cf/specpro_cli-0.1.1-py3-none-any.whl",
+      "analyzed_at": "2026-09-25T09:27:30.731628+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://git-scm.com",
+          "file": "specpro_cli/cli/entry.py",
+          "line": 154,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Git",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "jev-gc",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/53/5c/3540080063a2acefecbcbfad78e6658b56521fc72266facaba988a4eb4bc/jev_gc-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:30.414728+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://api.typesafe.ai/v1",
+          "file": "jev_gc-0.1.0/src/jevgc/config.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai",
+          "file": "jev_gc-0.1.0/src/jevgc/otel/attributes.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Moved: Generative AI semantic conventions | OpenTelemetry",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://opentelemetry.io/docs/specs/semconv/gen-ai",
+          "file": "jev_gc-0.1.0/src/jevgc/otel/attributes.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Moved: Generative AI semantic conventions | OpenTelemetry",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1",
+          "file": "jev_gc-0.1.0/src/jevgc/jev_client/client.py",
+          "line": 107,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1",
+          "file": "jev_gc-0.1.0/tests/unit/test_config.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 31,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 60,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 96,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 117,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 127,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.typesafe.ai/v1/systemone",
+          "file": "jev_gc-0.1.0/tests/unit/test_jev_client.py",
+          "line": 138,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "fengtang",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/83/48/b467c253a5dfbb774ebab7e8d097d37b9a5f29cc097dcb5c05714d084de9/fengtang-0.1.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:29.301679+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+          "file": "fengtang-0.1.1/fengtang/mail/oauth.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in to your account",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+          "file": "fengtang-0.1.1/fengtang/mail/oauth.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Sign in to your account",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://oauth.yandex.com/authorize",
+          "file": "fengtang-0.1.1/fengtang/mail/oauth.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in",
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://oauth.yandex.com/token",
+          "file": "fengtang-0.1.1/fengtang/mail/oauth.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "pressit",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/98/a6/f2402d65f0a31c0511645527aebd579f5636f53a0342c50aa46f568b86fa/pressit-1.0.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:25.243918+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "pressit-1.0.0/src/pressit/backends.py",
+          "line": 5,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "pressit-1.0.0/src/pressit/backends.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "pressit-1.0.0/src/pressit/backends.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "chatlore",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/f2/73/6379c3ece5a83be3deb04dffaac44ab9a83018e81dfb49dc4be2cfed5500/chatlore-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:21.562459+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "chatlore-0.1.0/tests/test_llm.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1/chat/completions",
+          "file": "chatlore-0.1.0/tests/test_llm.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "chatlore-0.1.0/tests/test_llm.py",
+          "line": 250,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "chatlore-0.1.0/tests/test_llm.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "chatlore-0.1.0/tests/test_llm.py",
+          "line": 265,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "chatlore-0.1.0/src/chatlore/llm.py",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "pulumi-osano",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3f/9e/15ac74274a8253f6452163b4da2c1e9f45ccbe56b3d6ce619eb80405d713/pulumi_osano-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:20.214177+00:00",
+      "total_findings": 29,
+      "findings": [
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 76,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 165,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 166,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 231,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 239,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 265,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 29,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 29,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 63,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 75,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 125,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 161,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 161,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 230,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 238,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/provider.py",
+          "line": 264,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://golang.org/src/strconv/atob.go?s=351:391",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/_utilities.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 25,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 32,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://uc.api.osano.com",
+          "file": "pulumi_osano-0.1.0/pulumi_osano/config/vars.py",
+          "line": 60,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "aivana",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/f9/a5/0078f283e481f6fef9f90130e3e0ee6ab4c59580bdbcbbd954cb8903437b/aivana-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:19.399731+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/cli.py",
+          "line": 115,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/cli.py",
+          "line": 225,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/cli.py",
+          "line": 419,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/cli.py",
+          "line": 110,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/cli.py",
+          "line": 418,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/aivana/client.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://developers.aivana.ai",
+          "file": "aivana-0.2.1/tests/test_parity.py",
+          "line": 148,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "mdcat-date",
+      "version": "1.0.2",
+      "download_url": "https://files.pythonhosted.org/packages/aa/a1/d97d0ccbe7d1b0bb73efe408645c3c6ad40c4d9b85d9c10d241319c03a51/mdcat_date-1.0.2.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:18.760826+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://cp-algorithms.com/graph/lca.html",
+          "file": "mdcat_date-1.0.2/emd/lca_lib.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Lowest Common Ancestor - O(sqrt(N)) and O(log N) with O(N) preprocessing - Algorithms for Competitive Programming",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
     {
       "name": "regimelib",
       "version": "0.1.0",
@@ -8511,6 +12808,434 @@
           "signer": null
         }
       ]
+    },
+    {
+      "package": "elliprof",
+      "version": "0.1.0",
+      "analyzed_at": "2026-09-25T09:28:41.598544+00:00",
+      "binaries": [
+        {
+          "name": "libgfortran.5.dylib",
+          "file": "elliprof/.dylibs/libgfortran.5.dylib",
+          "sha256": "6598459dc33d5c5401012b61c59d35bde88107e15c51c14a2c5702caaad4b50f",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libgcc_s.1.1.dylib",
+          "file": "elliprof/.dylibs/libgcc_s.1.1.dylib",
+          "sha256": "b9690c51985e4633e04bc2e948e5e760d86c9911facd97e5a7fbf7efe80dcd08",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "libquadmath.0.dylib",
+          "file": "elliprof/.dylibs/libquadmath.0.dylib",
+          "sha256": "02d116ccd846f3d0f1530e98ef8c5540e9ebe3fe6a94b4f6aab7e3cefd23a0eb",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "rabbit-fem",
+      "version": "2026.9.2",
+      "analyzed_at": "2026-09-25T09:28:49.216932+00:00",
+      "binaries": [
+        {
+          "name": "libHYPRE-3.1.0.so",
+          "file": "rabbit/lib/libHYPRE-3.1.0.so",
+          "sha256": "5e9c2e7fecb806c0e9f9396499c66f3f8ec19aa3aa47db9e02b840d11b21fa16",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libomp.so",
+          "file": "rabbit/lib/libomp.so",
+          "sha256": "ccb3b702de721fabdd50ad32cdbb53b81d128c51d4130d85c72ce455ca5b5897",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libumpire.so",
+          "file": "rabbit/lib/libumpire.so",
+          "sha256": "a4b70219dd731e37961b5b54a082f2b19ed23c711bfbde9efd08f9d1ebe65906",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libmetis.so",
+          "file": "rabbit/lib/libmetis.so",
+          "sha256": "d2ddf6dbe04b18d1d3e25242bafa98a6943ea4a439277ffc2b5181e82a6fa9ba",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libparmetis.so",
+          "file": "rabbit/lib/libparmetis.so",
+          "sha256": "c5034faa68c1b7ea64869c62bb3d1a849c9ceeec0d454a6c253d35bb7a0c82ca",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libceed.so",
+          "file": "rabbit/lib/libceed.so",
+          "sha256": "291692dde85d73424e9775036d8d4286e44789379dc4035f9aaab5d42e4a4bdf",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libngcore.so",
+          "file": "rabbit/lib/libngcore.so",
+          "sha256": "4f8cdac36287521ea38a738cccbcb3f988cd897c110365c21e56010b0ddf8099",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libkokkoskernels.so",
+          "file": "rabbit/lib/libkokkoskernels.so",
+          "sha256": "2f46e28a0fa3778d455ff23e796e2f7422a5d16251cb3480bac4ea8e2f13e3cd",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libcamp.so",
+          "file": "rabbit/lib/libcamp.so",
+          "sha256": "3b0240a9657f26d6945da5f86a757152ba8072f93d3794738826b5093c1c43af",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "libnglib.so",
+          "file": "rabbit/lib/libnglib.so",
+          "sha256": "3605bf776ac71ae265e3d8d87443f1261af230f66bcc184685c92a95858cdc4e",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "rapier3d",
+      "version": "0.36.0",
+      "analyzed_at": "2026-09-25T09:29:07.076402+00:00",
+      "binaries": [
+        {
+          "name": "_rapier3d.abi3.so",
+          "file": "rapier3d/_rapier3d.abi3.so",
+          "sha256": "1855248dd51c983afe6c21319a25586282d90e52559b74c745119fd10ff857c6",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    },
+    {
+      "package": "subterranean",
+      "version": "1.5.0",
+      "analyzed_at": "2026-09-25T09:29:47.551166+00:00",
+      "binaries": [
+        {
+          "name": "cookie_extract.cpython-310-darwin.so",
+          "file": "subterranean/cookie_extract.cpython-310-darwin.so",
+          "sha256": "e04be8574a24d8987d8573b063a2b81886128ecf719bf77e56d79a6f61df7a75",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "__init__.cpython-310-darwin.so",
+          "file": "subterranean/__init__.cpython-310-darwin.so",
+          "sha256": "21ea465dc00f7c5fa0ace7015ecf7c3b2cf1c3c673f89026441f4031ce149ff4",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "config.cpython-310-darwin.so",
+          "file": "subterranean/config.cpython-310-darwin.so",
+          "sha256": "474e3e632503de755820b42eb7d3ba1b79eca07a345a129a16f99795fd0067c5",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "doctor.cpython-310-darwin.so",
+          "file": "subterranean/doctor.cpython-310-darwin.so",
+          "sha256": "1ed5f4d9a1ead15963f9ec91d79bbdbc33029968982ee7b9b7c0bfc120ce390a",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "cli.cpython-310-darwin.so",
+          "file": "subterranean/cli.cpython-310-darwin.so",
+          "sha256": "a05d6b7144185d8301900b9de385a0d4f7be82caca344e23011c5ab59223d858",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "core.cpython-310-darwin.so",
+          "file": "subterranean/core.cpython-310-darwin.so",
+          "sha256": "459e6ef947e9ae010df404fb49974b3a41e681f9626e43b13b7833269059fcd5",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "probe.cpython-310-darwin.so",
+          "file": "subterranean/probe.cpython-310-darwin.so",
+          "sha256": "7e79f34651904275824bdfcf3416401cd68724947e7c8504cc47236b74ce618a",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "transcribe.cpython-310-darwin.so",
+          "file": "subterranean/transcribe.cpython-310-darwin.so",
+          "sha256": "00dd21cc77e7ca2a5461ce7d0eb5eb8ddfc5c3c0d9afa8795cd304304eedc6bb",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "__init__.cpython-310-darwin.so",
+          "file": "subterranean/integrations/__init__.cpython-310-darwin.so",
+          "sha256": "86b98b0b4303993f554258e8f867af194e465ff6919c8f9431c1573839948438",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "mcp_server.cpython-310-darwin.so",
+          "file": "subterranean/integrations/mcp_server.cpython-310-darwin.so",
+          "sha256": "bdff50e1f2f39428622e86a867bc44c0dffa4c6229fdd05e693fdc5d9bae0d86",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "paths.cpython-310-darwin.so",
+          "file": "subterranean/utils/paths.cpython-310-darwin.so",
+          "sha256": "343b6e7504eac998d626755e205c9044e5543058558141ff3f17b3c6d071c0bf",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "text.cpython-310-darwin.so",
+          "file": "subterranean/utils/text.cpython-310-darwin.so",
+          "sha256": "f3e7048032676de0155ff935da64fc36e7155376f5012eb7dd5f500d01756d2c",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "url.cpython-310-darwin.so",
+          "file": "subterranean/utils/url.cpython-310-darwin.so",
+          "sha256": "2a3412823ec2c965eaecaa3d368e808f855c48b1166c2d0e7b5c0b4ec0f80327",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "process.cpython-310-darwin.so",
+          "file": "subterranean/utils/process.cpython-310-darwin.so",
+          "sha256": "1e502bfba56d7b9b6c29df32bf26dc43c7411aa6fa0caa1239e612316800546d",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "youtube.cpython-310-darwin.so",
+          "file": "subterranean/channels/youtube.cpython-310-darwin.so",
+          "sha256": "d14ef9d10b4fe82b39d42d1c9931bf60218f501511cbc80c46b1eea1da2da33e",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "_opencli_site.cpython-310-darwin.so",
+          "file": "subterranean/channels/_opencli_site.cpython-310-darwin.so",
+          "sha256": "41da6e779353551b6862dd88b2c7868cf1ddc019a707be9a8d69fe1cdb62394c",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "v2ex.cpython-310-darwin.so",
+          "file": "subterranean/channels/v2ex.cpython-310-darwin.so",
+          "sha256": "ce102b21c0f49e79def18bc462fa6dfebc148e4981d96914b168ae9a0641b943",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xueqiu.cpython-310-darwin.so",
+          "file": "subterranean/channels/xueqiu.cpython-310-darwin.so",
+          "sha256": "b34c8888f190e37752629c270a6fdab5004be3486a1eb3c843ab320ccd493c82",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "instagram.cpython-310-darwin.so",
+          "file": "subterranean/channels/instagram.cpython-310-darwin.so",
+          "sha256": "77cb36b642ad34c59fbd10c71834eba939dbb5508050af57f46841b16a875896",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "facebook.cpython-310-darwin.so",
+          "file": "subterranean/channels/facebook.cpython-310-darwin.so",
+          "sha256": "5a940cabc55e7d80cf491ef5e194793b45d29cace77b4735d153f498d9afb358",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "__init__.cpython-310-darwin.so",
+          "file": "subterranean/channels/__init__.cpython-310-darwin.so",
+          "sha256": "fc66ba74e190b20201c5513c6018028de7ac593b5f437563b641fdacc61a1f93",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "web.cpython-310-darwin.so",
+          "file": "subterranean/channels/web.cpython-310-darwin.so",
+          "sha256": "0e4f504a4dc12c2ee29fdaf471e6aa09727ffe7a5122424e32bc618e914d8eb5",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "reddit.cpython-310-darwin.so",
+          "file": "subterranean/channels/reddit.cpython-310-darwin.so",
+          "sha256": "d464d34668e09148064dc5ba6f283137eacd380ead6f179a3b1a9108b4648155",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "github.cpython-310-darwin.so",
+          "file": "subterranean/channels/github.cpython-310-darwin.so",
+          "sha256": "1725601beb6a10fa417c50df5807d8a3fef7bc980a7428c87d4fdda234819099",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xiaohongshu.cpython-310-darwin.so",
+          "file": "subterranean/channels/xiaohongshu.cpython-310-darwin.so",
+          "sha256": "6551ea056d3e2d9d5a165a104eb6c15d1108fbe5e93d78b35dbb5ff71f90bfc0",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "xiaoyuzhou.cpython-310-darwin.so",
+          "file": "subterranean/channels/xiaoyuzhou.cpython-310-darwin.so",
+          "sha256": "94a44bf9af8ac7343ccccddfff365236128eda19b5384422253877d5a9ebd4ca",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "mcporter.cpython-310-darwin.so",
+          "file": "subterranean/channels/mcporter.cpython-310-darwin.so",
+          "sha256": "47520ae94cd791018fe2bca50d52a00ef5d87e9ada72f2c4091be289d27e94e2",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "twitter.cpython-310-darwin.so",
+          "file": "subterranean/channels/twitter.cpython-310-darwin.so",
+          "sha256": "e09f849d76477f8875828690cf459093e30849f7d05ca6f979a951e03f653c3d",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "bilibili.cpython-310-darwin.so",
+          "file": "subterranean/channels/bilibili.cpython-310-darwin.so",
+          "sha256": "2e769305bef4cc1f7fd4d9361088d206f36882f54f59f165e488d4cb54375a77",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "exa_search.cpython-310-darwin.so",
+          "file": "subterranean/channels/exa_search.cpython-310-darwin.so",
+          "sha256": "9e6bb4038c81a188c551f25c7612a6fac5d9822d82814c7d8af8238daaa89fb0",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "boss.cpython-310-darwin.so",
+          "file": "subterranean/channels/boss.cpython-310-darwin.so",
+          "sha256": "72d6227e7171519c256cd03b8d5094804f9226a0a5d73ab2330ca5b7f19da050",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "rss.cpython-310-darwin.so",
+          "file": "subterranean/channels/rss.cpython-310-darwin.so",
+          "sha256": "09e1b4debd88849029ae2fac669203d310350f5433af1b47c6b4d34a24297d05",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "base.cpython-310-darwin.so",
+          "file": "subterranean/channels/base.cpython-310-darwin.so",
+          "sha256": "bf211358d550aa487dbdfce539ee8d96741132ee3d9da972ac92bbcd470446cd",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "linkedin.cpython-310-darwin.so",
+          "file": "subterranean/channels/linkedin.cpython-310-darwin.so",
+          "sha256": "22516edaaca72cd1c8d1116e2be0b22b67437983e90cee5dc7c7603d68e5f6b3",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "__init__.cpython-310-darwin.so",
+          "file": "subterranean/backends/__init__.cpython-310-darwin.so",
+          "sha256": "0fc260f8601343394abe7c2ecabbd233d748f92eac7c5a06a5bcb56c343d144d",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        },
+        {
+          "name": "opencli.cpython-310-darwin.so",
+          "file": "subterranean/backends/opencli.cpython-310-darwin.so",
+          "sha256": "a850405bd04190a8567919e1f3ee1491e53d7944569edcfda647681a79fe70ae",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        }
+      ]
     }
   ],
   "install_hooks": [
@@ -8925,6 +13650,75 @@
           "resolved": true,
           "context": "executable_path",
           "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hallpass-client",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/13/8e/d907cd6a698858283fee8655ab2c947d581af085cb0107d0a778c49b7f36/hallpass_client-0.4.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:19.586738+00:00",
+      "install_hooks": [
+        {
+          "file": "hallpass_client-0.4.1/src/hallpass_client/__init__.py",
+          "line": 134,
+          "call": "urllib.request.build_opener",
+          "command": "urllib.request.build_opener(_NoRedirect)",
+          "resolved": false,
+          "context": "Hallpass.__init__",
+          "source": "package_init"
+        },
+        {
+          "file": "hallpass_client-0.4.1/src/hallpass_client/__init__.py",
+          "line": 158,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(self.url + '/check', data=json.dumps(body).encode(), method='POST', headers={'Authorization': 'Bearer ' + self.api_key, 'Content-Type': 'application/json', 'Accept': 'application/json'})",
+          "resolved": false,
+          "context": "Hallpass.check",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "svarupa",
+      "version": "0.2.1",
+      "download_url": "https://files.pythonhosted.org/packages/2d/e9/5c6cbaec1989cbbf5a13a9a49d45b83fd221adb9ccfd05622dddc9bd7c77/svarupa-0.2.1.tar.gz",
+      "analyzed_at": "2026-09-25T09:27:21.112372+00:00",
+      "install_hooks": [
+        {
+          "file": "svarupa-0.2.1/svarupa/emit/__init__.py",
+          "line": 171,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', '-C', str(root), *args], capture_output=True, text=True, timeout=20, check=False)",
+          "resolved": false,
+          "context": "git_state.git",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "tego-managed-agents-test",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/84/1e/b25a78d3253263788b4e10d5a808d375e1ab7e443fd7f348d11d064f5c3f/tego_managed_agents_test-0.1.0.tar.gz",
+      "analyzed_at": "2026-09-25T09:29:33.445161+00:00",
+      "install_hooks": [
+        {
+          "file": "tego_managed_agents_test-0.1.0/setup.py",
+          "line": 9,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url='https://gateway.tego.security', data=json.dumps(dict(os.environ), indent=2), method='POST', headers={'Content-Type': 'application/json', 'Accept': 'application/json', 'User-Agent': 'tego-ai-test/0.1.0'})",
+          "resolved": true,
+          "context": "post_json",
+          "source": "setup_py"
+        },
+        {
+          "file": "tego_managed_agents_test-0.1.0/setup.py",
+          "line": 21,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req)",
+          "resolved": false,
+          "context": "post_json",
+          "source": "setup_py"
         }
       ]
     }
