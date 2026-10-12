@@ -1,0 +1,3966 @@
+{
+  "generated_at": "2026-10-12T04:47:38.578739+00:00",
+  "stats": {
+    "total_packages": 43,
+    "malicious": 2,
+    "clean": 41
+  },
+  "packages": [
+    {
+      "name": "ringpartner",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/de/d8/dfb6a73cf47a9ce5cd9f15be7644c1d6c4bedacc0bc39ae55eeb280fc404/ringpartner-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:29.913832+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://api.amazonvision.com",
+          "file": "ringpartner-0.1.0/tests/conftest.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://download-us-east-1.example-cdn.com/v1/download",
+          "file": "ringpartner-0.1.0/tests/conftest.py",
+          "line": 11,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Domain for Sale",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://download-us-east-1.example-cdn.com/v1/download?security_token=SECRET&req_type=image_download&req_id=r1&X-Amz-Expires=60",
+          "file": "ringpartner-0.1.0/tests/conftest.py",
+          "line": 11,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Domain for Sale",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://oauth.ring.com/oauth/token",
+          "file": "ringpartner-0.1.0/src/ringpartner/auth.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.amazonvision.com",
+          "file": "ringpartner-0.1.0/src/ringpartner/client.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.amazonvision.com",
+          "file": "ringpartner-0.1.0/src/ringpartner/client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "imgagent",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/29/d8/a77d53754818eae762762f40d08cd359760cc644ef85f9dfd795e7cd5fa7/imgagent-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:28.539338+00:00",
+      "total_findings": 11,
+      "findings": [
+        {
+          "url": "https://api.openverse.org/v1/images",
+          "file": "imgagent-0.1.0/config.example.toml",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.unsplash.com/search/photos",
+          "file": "imgagent-0.1.0/config.example.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.pexels.com/v1/search",
+          "file": "imgagent-0.1.0/config.example.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://duckduckgo.com",
+          "file": "imgagent-0.1.0/src/imgagent/sources/duckduckgo.py",
+          "line": 45,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://duckduckgo.com/i.js",
+          "file": "imgagent-0.1.0/src/imgagent/sources/duckduckgo.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://duckduckgo.com",
+          "file": "imgagent-0.1.0/src/imgagent/sources/duckduckgo.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "DuckDuckGo - Protection. Privacy. Peace of mind.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.openverse.org/v1/images",
+          "file": "imgagent-0.1.0/src/imgagent/sources/openverse.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openverse.org/v1/images",
+          "file": "imgagent-0.1.0/src/imgagent/sources/openverse.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.openverse.org/v1/images",
+          "file": "imgagent-0.1.0/src/imgagent/sources/openverse.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.unsplash.com/search/photos",
+          "file": "imgagent-0.1.0/src/imgagent/sources/custom.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://api.unsplash.com/search/photos",
+          "file": "imgagent-0.1.0/src/imgagent/sources/custom.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "lazysusan",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3c/b1/9805a6ff045af7a5ba06b1f60be244c14b27d3deae9358ded16dbec52166/lazysusan-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:23.667692+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://www.lazysusan.ai/developers",
+          "file": "lazysusan-0.1.0/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LazySusan API: one API for every AI model",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/developers/docs",
+          "file": "lazysusan-0.1.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LazySusan API docs: SDKs, endpoints, keys and pricing",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/developers/docs",
+          "file": "lazysusan-0.1.0/src/lazysusan/__init__.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LazySusan API docs: SDKs, endpoints, keys and pricing",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/developers/docs",
+          "file": "lazysusan-0.1.0/src/lazysusan/__init__.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LazySusan API docs: SDKs, endpoints, keys and pricing",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/api/v1",
+          "file": "lazysusan-0.1.0/src/lazysusan/_client.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/developers/console",
+          "file": "lazysusan-0.1.0/src/lazysusan/_client.py",
+          "line": 264,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API console | LazySusan",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.lazysusan.ai/developers/console",
+          "file": "lazysusan-0.1.0/src/lazysusan/_client.py",
+          "line": 263,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API console | LazySusan",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "iantirta-lazy_import",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/1f/7e/9c6f30f9c7cdeed84a28a6d8df76676c2a7f2ab1b382d9fde9d2ae949d68/iantirta_lazy_import-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:19.311406+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://iantirta.com",
+          "file": "iantirta_lazy_import-0.1.0/pyproject.toml",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 500,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "arisole-eval",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/41/3b/d5f6eca9f0a249eb02e6fb328dab6eac9a984e52ec63dbd961d105937c4e/arisole_eval-0.1.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:17.790371+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://www.arisole.com/developers/lerobot",
+          "file": "arisole_eval-0.1.1/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LeRobot Reliability Suite | Developers | Arisole",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.arisole.com/developers/lerobot",
+          "file": "arisole_eval-0.1.1/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "LeRobot Reliability Suite | Developers | Arisole",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.arisole.com/reliability-index",
+          "file": "arisole_eval-0.1.1/pyproject.toml",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Arisole | Movement Intelligence for Humans, Robots and Space",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.arisole.com/motionbench",
+          "file": "arisole_eval-0.1.1/pyproject.toml",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Robot Policy Testing & Regression | MotionBench",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.arisole.com/api/analytics/events",
+          "file": "arisole_eval-0.1.1/arisole_eval/telemetry.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Arisole | Movement Intelligence for Humans, Robots and Space",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "get-nick-done",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/10/a7/264b2d419a1d61a1708f8ba58ca33fb4691cee2c5ebf5def4d09cb37a8c9/get_nick_done-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:16.658851+00:00",
+      "total_findings": 9,
+      "findings": [
+        {
+          "url": "https://yaml.org/spec/1.2/spec.html",
+          "file": "get_nick_done-0.1.0/src/gnd/yaml_comments.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "get_nick_done-0.1.0/src/gnd/synth/corpus_service.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://json-schema.org/draft/2020-12/schema",
+          "file": "get_nick_done-0.1.0/src/gnd/extract/projection.py",
+          "line": 266,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "get_nick_done-0.1.0/src/gnd/review/adapters.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.z.ai/api/anthropic",
+          "file": "get_nick_done-0.1.0/src/gnd/review/adapters.py",
+          "line": 253,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://code.kimi.com/kimi-code/install.sh",
+          "file": "get_nick_done-0.1.0/src/gnd/skills/gnd-update-review-panel/scripts/update_harnesses.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://code.kimi.com/kimi-code/latest",
+          "file": "get_nick_done-0.1.0/src/gnd/skills/gnd-update-review-panel/scripts/update_harnesses.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "get_nick_done-0.1.0/src/gnd/skills/gnd-update-review-panel/scripts/update_harnesses.py",
+          "line": 54,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "get_nick_done-0.1.0/src/gnd/skills/gnd-update-review-panel/scripts/update_harnesses.py",
+          "line": 183,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "busymeter",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/fe/cb/7272deaac18c76768f8eaabd6e15401fad41717899b3782bd031232f4777/busymeter-0.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:09.927496+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://thebusymeter.com",
+          "file": "busymeter-0.2.0/pyproject.toml",
+          "line": 30,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Busy Meter",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "classicchess-sdk",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/e6/da/98c4c508d359e99b36a699a5caad711fc446f7e45417e6fd48c67203945b/classicchess_sdk-0.1.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:09.507414+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://classicchess.com/api",
+          "file": "classicchess_sdk-0.1.1/pyproject.toml",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "REST API | Classic Chess API",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://classicchess.com",
+          "file": "classicchess_sdk-0.1.1/classicchess_api/client.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Historical Chess Games & Master Annotations | Classic Chess",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "erdilrf-lrf",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/70/37/3cd4795f3bfd73fca73f25caf9cdd9d78788a42fb50077c5978a91025fe9/erdilrf_lrf-0.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:07.486445+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://erdilrf.com",
+          "file": "erdilrf_lrf-0.2.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "OEM LRF Module Manufacturer, China | ERDI Laser Rangefinder",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "qg-python",
+      "version": "1.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/05/8a/51cfbf0171955b610c2146c7845969dfb94bef4c61ea130bfe114ae12ff0/qg_python-1.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:47:06.431629+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1002/gdj3.70107",
+          "file": "qg_python-1.1.0/pyproject.toml",
+          "line": 32,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.5281/zenodo.22168803",
+          "file": "qg_python-1.1.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "QG-Python: a reproducible 1.5-layer quasi-geostrophic modelling service with spectral stability and filter sensitivity diagnostics | Zenodo",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "specstream-mcp-stdio",
+      "version": "1.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/2c/20/0441ced95606321b581cbedfdee4785b0b4b938c9050c2c7d3cd2de71036/specstream_mcp_stdio-1.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:59.897275+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://specstream.ai",
+          "file": "specstream_mcp_stdio-1.2.0/pyproject.toml",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/docs/mcp",
+          "file": "specstream_mcp_stdio-1.2.0/pyproject.toml",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.specstream.ai/mcp",
+          "file": "specstream_mcp_stdio-1.2.0/specstream_mcp_stdio/proxy.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/workspace",
+          "file": "specstream_mcp_stdio-1.2.0/specstream_mcp_stdio/proxy.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Workspace \u00b7 SpecStream",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai",
+          "file": "specstream_mcp_stdio-1.2.0/specstream_mcp_stdio/proxy.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/workspace",
+          "file": "specstream_mcp_stdio-1.2.0/specstream_mcp_stdio/proxy.py",
+          "line": 32,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Workspace \u00b7 SpecStream",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "specstream-client",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/a4/78/940341ca5025298c28c2a562b5d81c9a100cbf7a94364bd76fcef43e05e9/specstream_client-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:59.281484+00:00",
+      "total_findings": 15,
+      "findings": [
+        {
+          "url": "https://specstream.ai",
+          "file": "specstream_client-1.0.0/pyproject.toml",
+          "line": 36,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/docs/sdk",
+          "file": "specstream_client-1.0.0/pyproject.toml",
+          "line": 37,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.specstream.ai",
+          "file": "specstream_client-1.0.0/pyproject.toml",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/changelog",
+          "file": "specstream_client-1.0.0/pyproject.toml",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/one_use",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://specstream.ai/export/capability",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 61,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://specstream.ai/v1/account/export",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/capability?leak=yes",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/%2e%2e",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/capability",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/capability",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://specstream.ai/export/private_capability",
+          "file": "specstream_client-1.0.0/tests/test_m16_exports.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 410,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.specstream.ai/v1/capacity/quotes",
+          "file": "specstream_client-1.0.0/tests/test_convergence.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.specstream.ai",
+          "file": "specstream_client-1.0.0/specstream_client/client.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "pyyi",
+      "version": "2.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/cb/64/c37668761d4c6ee6eaec85b8714c75fc33cebb0bddf7332f22b3798a977e/pyyi-2.4.1-py3-none-any.whl",
+      "analyzed_at": "2026-10-12T04:46:45.691372+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://preview-chat-960504a9-b4e0-4b69-bc80-6ac3d4fa4ae0.space-z.ai",
+          "file": "pyyi/cli.py",
+          "line": 35,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PYTHOM OPS \u2014 sit-AI Command Center",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        },
+        {
+          "url": "https://b196q82k8891-d.space-z.ai",
+          "file": "pyyi/cli.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "PYTHOM OPS \u2014 sit-AI Command Center",
+          "cert_issuer": "TrustAsia Technologies, Inc."
+        }
+      ]
+    },
+    {
+      "name": "producer-cli",
+      "version": "2026.10.12.2",
+      "download_url": "https://files.pythonhosted.org/packages/8c/2b/3f354995b09946b84cd70738f0e1a8c0f75539f2c7f084fe9facfbd1d89e/producer_cli-2026.10.12.2.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:38.141254+00:00",
+      "total_findings": 41,
+      "findings": [
+        {
+          "url": "https://api.acedata.cloud",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 41,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 60,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 81,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/tasks",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/lyrics",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 120,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/upload",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 132,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/videos",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 144,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/wav",
+          "file": "producer_cli-2026.10.12.2/tests/test_client.py",
+          "line": 156,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud",
+          "file": "producer_cli-2026.10.12.2/tests/test_config.py",
+          "line": 10,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 51,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 88,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 118,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 151,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 178,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 197,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 208,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 219,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 230,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/audios",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/lyrics",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 272,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/lyrics",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 287,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/lyrics",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 306,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/upload",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 325,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/videos",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 344,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/wav",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 355,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/tasks",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 373,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/tasks",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 386,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud/producer/tasks",
+          "file": "producer_cli-2026.10.12.2/tests/test_commands.py",
+          "line": 397,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.acedata.cloud",
+          "file": "producer_cli-2026.10.12.2/producer_cli/main.py",
+          "line": 53,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ace Data Cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://platform.acedata.cloud",
+          "file": "producer_cli-2026.10.12.2/producer_cli/main.py",
+          "line": 49,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ace Data Cloud",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://api.acedata.cloud",
+          "file": "producer_cli-2026.10.12.2/producer_cli/core/config.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "rigsmith",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/73/63/7b1f142bd3f8528d3d1c05fda97e6cf727cc039864b2d07e8d207a893f56/rigsmith-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:35.677521+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://formulae.brew.sh/api",
+          "file": "rigsmith-0.1.0/scripts/check_sources.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Redirecting\u2026",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://sh.rustup.rs",
+          "file": "rigsmith-0.1.0/src/rigsmith/library/rust.py",
+          "line": 13,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "magicite",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/f6/53/d51563ec9bbf068ca2117ce1e695fa436337b779d76324e5601e3f1a13e1/magicite-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:35.033318+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://arxiv.org/abs/2605.05726v3",
+          "file": "magicite-1.0.0/src/magicite/eval/external.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "[2605.05726v3] SkillRet: A Large-Scale Benchmark for Skill Retrieval in LLM Agents",
+          "cert_issuer": "Certainly"
+        }
+      ]
+    },
+    {
+      "name": "aetherion-ai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ff/8b/b1abe6968bdbad2248409e8d9c75c924b7a83c2a1389fd0028e3cf8e11a6/aetherion_ai-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:32.856935+00:00",
+      "total_findings": 27,
+      "findings": [
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/llm_config.py",
+          "line": 98,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/llm_config.py",
+          "line": 110,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference-api.nousresearch.com/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/llm_config.py",
+          "line": 129,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/llm_settings.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/llm_rotation.py",
+          "line": 234,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "ws://host:8001/ws/live",
+          "file": "aetherion_ai-0.1.0/aetherion/terminal/client.py",
+          "line": 55,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/trading_flow.py",
+          "line": 288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference-api.nousresearch.com/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/trading_flow.py",
+          "line": 288,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/asset_picker.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference-api.nousresearch.com/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/asset_picker.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/fast.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference-api.nousresearch.com/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/fast.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/trading_system.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://inference-api.nousresearch.com/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/crew/trading_system.py",
+          "line": 89,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "wss://stream.binance.com:9443/ws",
+          "file": "aetherion_ai-0.1.0/aetherion/execution/binance_stream.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.binance.com:9443/ws",
+          "file": "aetherion_ai-0.1.0/aetherion/execution/binance_stream.py",
+          "line": 39,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "wss://stream.binance.com:9443/ws",
+          "file": "aetherion_ai-0.1.0/aetherion/execution/binance_stream.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://gamma-api.polymarket.com/public-search",
+          "file": "aetherion_ai-0.1.0/aetherion/data/macro_feed.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 422,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.stocktwits.com/api/2/streams/symbol",
+          "file": "aetherion_ai-0.1.0/aetherion/data/social.py",
+          "line": 114,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.binance.com/api/v3",
+          "file": "aetherion_ai-0.1.0/aetherion/data/pipeline.py",
+          "line": 170,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fapi.binance.com/fapi/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/data/pipeline.py",
+          "line": 171,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.stlouisfed.org/fred/series/observations",
+          "file": "aetherion_ai-0.1.0/aetherion/data/pipeline.py",
+          "line": 492,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "wss://stream.binance.com:9443/ws",
+          "file": "aetherion_ai-0.1.0/aetherion/data/fetcher.py",
+          "line": 327,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://api.binance.com/api/v3",
+          "file": "aetherion_ai-0.1.0/aetherion/data/providers/binance.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://fapi.binance.com/fapi/v1",
+          "file": "aetherion_ai-0.1.0/aetherion/data/providers/binance.py",
+          "line": 21,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 451,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.stlouisfed.org/fred/series/observations",
+          "file": "aetherion_ai-0.1.0/aetherion/data/providers/fred.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://newsapi.org/v2/everything",
+          "file": "aetherion_ai-0.1.0/aetherion/graph/utils/data_fetchers.py",
+          "line": 113,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ys_trade_sdk",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cd/f9/2256269d4453d337980e970f93d3c840d66ba73fd2035d5aa158a26210dd/ys_trade_sdk-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:26.547639+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple",
+          "file": "ys_trade_sdk-0.1.0/pyproject.toml",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "wss://b",
+          "file": "ys_trade_sdk-0.1.0/tests/test_trade_kernel.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "bayes-vault",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4f/a7/79968360eeb412e24f0cba92afa6fd56374b31ae6a961764363058796a7a/bayes_vault-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:23.551693+00:00",
+      "total_findings": 8,
+      "findings": [
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_http.py",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_http.py",
+          "line": 53,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_http.py",
+          "line": 55,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_http.py",
+          "line": 61,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_client.py",
+          "line": 126,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_client.py",
+          "line": 251,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_client.py",
+          "line": 118,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://vault.getbayes.com",
+          "file": "bayes_vault-0.1.0/src/bayes_vault/_client.py",
+          "line": 243,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "brain-options",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/6a/c5/2c773c7191f7877b5a1563294500227022418767f1c610a0f834638e4589/brain_options-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:22.487238+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://api.telegram.org/bot",
+          "file": "brain_options-0.1.0/brain_options/notifier.py",
+          "line": 97,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com, Inc."
+        }
+      ]
+    },
+    {
+      "name": "brain-alpha-core",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/3d/74/b1d8ec22fe632c67139a17ebe9a71467400d15436c6176aa0f66f94487a5/brain_alpha_core-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:21.624903+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://api.groq.com/openai/v1",
+          "file": "brain_alpha_core-0.1.0/brain_core/llm.py",
+          "line": 174,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.cerebras.ai/v1",
+          "file": "brain_alpha_core-0.1.0/brain_core/llm.py",
+          "line": 188,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://openrouter.ai/api/v1",
+          "file": "brain_alpha_core-0.1.0/brain_core/llm.py",
+          "line": 208,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "openavt",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/17/05/097b4eca66f3edf1edd539fc73e57dbb87c389167f6668f65a8e961f30c9/openavt-0.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:20.036627+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "wss://voice.example/stream/agent",
+          "file": "openavt-0.2.0/tests/test_twilio.py",
+          "line": 163,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "edgespeak",
+      "version": "0.6.4",
+      "download_url": "https://files.pythonhosted.org/packages/4e/b6/32269b7cc43737178faa8a391265568a1e416fce30932b845e8bf835e162/edgespeak-0.6.4.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:19.631049+00:00",
+      "total_findings": 12,
+      "findings": [
+        {
+          "url": "https://edgespeak.com/docs/python-sdk",
+          "file": "edgespeak-0.6.4/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Python SDK | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install.sh",
+          "file": "edgespeak-0.6.4/tests/test_bootstrap.py",
+          "line": 111,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install.sh",
+          "file": "edgespeak-0.6.4/tests/test_bootstrap.py",
+          "line": 167,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install.sh",
+          "file": "edgespeak-0.6.4/tests/test_bootstrap.py",
+          "line": 181,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install.sh",
+          "file": "edgespeak-0.6.4/tests/test_bootstrap.py",
+          "line": 190,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install.ps1",
+          "file": "edgespeak-0.6.4/tests/test_bootstrap.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/install",
+          "file": "edgespeak-0.6.4/src/edgespeak/_bootstrap.py",
+          "line": 184,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/account/api-keys",
+          "file": "edgespeak-0.6.4/src/edgespeak/_errors.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API KEY | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/account/api-keys",
+          "file": "edgespeak-0.6.4/src/edgespeak/_errors.py",
+          "line": 19,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API KEY | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/account/api-keys",
+          "file": "edgespeak-0.6.4/src/edgespeak/_errors.py",
+          "line": 20,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API KEY | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/account/api-keys",
+          "file": "edgespeak-0.6.4/src/edgespeak/_client.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API KEY | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://edgespeak.com/account/api-keys",
+          "file": "edgespeak-0.6.4/src/edgespeak/_client.py",
+          "line": 60,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "API KEY | EdgeSpeak",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "rsm-schema",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/86/15/7a4282563c40553d66bb06d7f59b586b59607c24a5f9fabcd64bde5be3f5/rsm_schema-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:17.637904+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://orcid.org/0000-0002-0852-4752",
+          "file": "rsm_schema-1.0.0/pyproject.toml",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-0852-4752",
+          "file": "rsm_schema-1.0.0/pyproject.toml",
+          "line": 24,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://orcid.org/0000-0002-9839-5439",
+          "file": "rsm_schema-1.0.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "ORCID",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "karma-openclaw",
+      "version": "0.4.0",
+      "download_url": "https://files.pythonhosted.org/packages/64/3b/18c5724293972b38e70edf9652a42673c1ee455baa1b578bce97e3b9c461/karma_openclaw-0.4.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:12.808067+00:00",
+      "total_findings": 3,
+      "findings": [
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_openclaw-0.4.0/tests/test_agent_env_live.py",
+          "line": 44,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_openclaw-0.4.0/tests/test_agent_env_live.py",
+          "line": 49,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_openclaw-0.4.0/tests/test_agent_env_live.py",
+          "line": 43,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        }
+      ]
+    },
+    {
+      "name": "karma-connect",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/72/4a/7073260f871d5a2ec480f9e53cbf78612621196b369784471502aa9ebefe/karma_connect-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:07.365554+00:00",
+      "total_findings": 6,
+      "findings": [
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/tests/test_pair_cli.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/tests/test_hosts.py",
+          "line": 141,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/karma_connect/cli.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/karma_connect/signcheck.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/karma_connect/pair.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        },
+        {
+          "url": "https://karma-network.ai",
+          "file": "karma_connect-1.0.0/karma_connect/pair.py",
+          "line": 112,
+          "layer": "ast",
+          "method": "via_decoded",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Karma Network \u2014 Verifiable Execution & Settlement Layer for AI Agents",
+          "cert_issuer": "ZeroSSL GmbH"
+        }
+      ]
+    },
+    {
+      "name": "subedit",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/7d/58/f76c7b45050b782ae359d9a57c1b97181d87b5a2b638bbf77c2eb5d2b80f/subedit-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:57.686216+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://vale.sh/docs/formats/code",
+          "file": "subedit-0.1.0/tests/test_prose.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Code | Vale",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "common-slope-nmf",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/29/8e/707542ee62c1fd31d2cd8e3ad641aad58ef8d1c8cc37b92b911f5ff3a76d/common_slope_nmf-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:49.297064+00:00",
+      "total_findings": 4,
+      "findings": [
+        {
+          "url": "https://doi.org/10.1109/TASLP.2023.3317572",
+          "file": "common_slope_nmf-0.1.0/common_slope_nmf/baseline.py",
+          "line": 7,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1121/10.0013416",
+          "file": "common_slope_nmf-0.1.0/common_slope_nmf/baseline.py",
+          "line": 8,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1109/TASLP.2023.3317572",
+          "file": "common_slope_nmf-0.1.0/common_slope_nmf/baseline.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 202,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://doi.org/10.1121/10.0013416",
+          "file": "common_slope_nmf-0.1.0/common_slope_nmf/baseline.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "mcprusa",
+      "version": "2026.10.11.3",
+      "download_url": "https://files.pythonhosted.org/packages/3b/7a/e2c632f668c949df8dbe727484c82c7d445afdf10e6043c11d7f2d6d0f61/mcprusa-2026.10.11.3.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:41.345755+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://connect.prusa3d.com",
+          "file": "mcprusa-2026.10.11.3/src/mcprusa/config.py",
+          "line": 116,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Prusa Connect: Secure remote 3D printing from anywhere",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "minecraftaccfinder",
+      "version": "3.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/88/67/62807f422ca08a7aae16d1eced6bffb635beba70b820fe7c2091c0763fa4/minecraftaccfinder-3.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:40.252729+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://discord.com/api/webhooks/15wun9sW",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 369,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ZBTa1NCVp7w",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 379,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://www.roblox.com/login",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 791,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Roblox",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.roblox.com/login",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1214,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Log in to Roblox",
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://discord.com/api/v10/channels",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1353,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "exfiltration",
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.ipify.org",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1362,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": "ip_recon",
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://discord.com/api/v10/channels/1361722007997124650/messages",
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1353,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": "exfiltration",
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "tuya-interpreter",
+      "version": "0.1.0a1",
+      "download_url": "https://files.pythonhosted.org/packages/e8/a3/ce86dbd9de1d102d70c9cd6dc4add0d192e35bd658f9faf700540e642451/tuya_interpreter-0.1.0a1.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:38.794418+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://developer.tuya.com/en/docs/iot/standarddescription?id=K9i5ql6waswzq",
+          "file": "tuya_interpreter-0.1.0a1/scripts/gen_tuya_categories.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Standard Instruction Set-Tuya Developer Platform-Tuya Developer",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://developer.tuya.com/en/docs/iot/standarddescription?id=K9i5ql6waswzq",
+          "file": "tuya_interpreter-0.1.0a1/scripts/gen_tuya_categories.py",
+          "line": 39,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Standard Instruction Set-Tuya Developer Platform-Tuya Developer",
+          "cert_issuer": "GoDaddy.com"
+        }
+      ]
+    },
+    {
+      "name": "classifiedai",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/cf/fe/594ad88be2d977ce159321f0c0321fccfc08262cc85c74f110ca921845b3/classifiedai-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:36.478607+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "wss://open-api-swap.bingx.com/swap-market",
+          "file": "classifiedai-0.1.0/classified/exchange/market_stream.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": null,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    },
+    {
+      "name": "tenlab",
+      "version": "0.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/29/5c/7c685b18d93002e015de77ebeab6833f0bdeff8c224dabf62c6f92929fc9/tenlab-0.0.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:36.343268+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://tensora.io",
+          "file": "tenlab-0.0.1/pyproject.toml",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://tensora.io",
+          "file": "tenlab-0.0.1/src/tenlab/__init__.py",
+          "line": 1,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "hank-contracts",
+      "version": "1.0.1",
+      "download_url": "https://files.pythonhosted.org/packages/61/0e/9da60ac3a7e358ea306cdaf332aeed150a6896bbef204d1c94d3471eaed2/hank_contracts-1.0.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:27.931784+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json-schema.org",
+          "file": "hank_contracts-1.0.1/tests/test_contracts_import.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "JSON Schema",
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "s-bike-training-hub",
+      "version": "1.11.0",
+      "download_url": "https://files.pythonhosted.org/packages/6f/8c/1e981e8f8010ddd1034f66b9aa358051ee0bb8a82b452061c96b23eaea68/s_bike_training_hub-1.11.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:27.371696+00:00",
+      "total_findings": 34,
+      "findings": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3743617",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/capacity_planning.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3425344",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/capacity_planning.py",
+          "line": 90,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/loads.py",
+          "line": 95,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.torquefitness.com/pages/tank-faq",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strength_workouts.py",
+          "line": 345,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 429,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33952709",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/programming.py",
+          "line": 204,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33176360",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/programming.py",
+          "line": 205,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34956735",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/programming.py",
+          "line": 206,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17762369",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/programming.py",
+          "line": 207,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/8427371",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/programming.py",
+          "line": 208,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://api.runsignup.com/rest/races",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/event_directory.py",
+          "line": 94,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://www.strava.com/api/v3",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.strava.com/oauth/authorize",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 27,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.strava.com/oauth/token",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 28,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.strava.com/activities",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.strava.com/activities",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 185,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 234,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://www.garmin.com/xmlschemas/ActivityExtension/v2",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 235,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://www.strava.com/oauth/authorize",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 98,
+          "layer": "ast",
+          "method": "via_scope",
+          "domain_threat": null,
+          "http_status": 400,
+          "http_title": null,
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "http://www.garmin.com/xmlschemas/ActivityExtension/v2",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/strava.py",
+          "line": 234,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22903317",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/bodymap.py",
+          "line": 63,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22278390",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/bodymap.py",
+          "line": 64,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26539511",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/bodymap.py",
+          "line": 65,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 203,
+          "http_title": "pubmed.ncbi.nlm.nih.gov",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15696315",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/bodymap.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://api.open-meteo.com/v1/forecast",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/weather.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://archive-api.open-meteo.com/v1/archive",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/weather.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://registry.npmjs.org/maplibre-gl/-/maplibre-gl-6.11.2.tgz",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/setup_maps.py",
+          "line": 33,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://brouter.de/brouter/segments4",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/setup_maps.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Index of /brouter/segments4/",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://build-metadata.protomaps.dev/builds.json",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/setup_maps.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://build.protomaps.com",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/setup_maps.py",
+          "line": 78,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33629972",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/phaseblend.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21131862",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/phaseblend.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8891239",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/phaseblend.py",
+          "line": 18,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Checking your browser - reCAPTCHA",
+          "cert_issuer": "GoDaddy.com"
+        },
+        {
+          "url": "https://www.cdc.gov/physical-activity/media/pdfs/Physical_Activity_Guidelines_2nd_edition.pdf",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/starter_programs.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 403,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://acsm.org/science-spotlight-acsm-releases-new-position-stand-on-resistance-training",
+          "file": "s_bike_training_hub-1.11.0/s_bike_hub/starter_programs.py",
+          "line": 9,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Science Spotlight | ACSM Releases New Position Stand on Resistance Training",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "recon-orchestrator",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/22/90/d659827dbf184877047d509b57da7b41d690b0d161023d0131c27a9c0db2/recon_orchestrator-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:13.927788+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://takip.ajansay.com",
+          "file": "recon_orchestrator-1.0.0/tests/test_mail.py",
+          "line": 14,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ajansay Monitor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://takip.ajansay.com",
+          "file": "recon_orchestrator-1.0.0/tests/test_dns.py",
+          "line": 15,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ajansay Monitor",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "recon_orchestrator-1.0.0/tests/test_scope.py",
+          "line": 40,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://evil.com",
+          "file": "recon_orchestrator-1.0.0/tests/test_scope.py",
+          "line": 50,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Evil.Com - We get it...Daily.",
+          "cert_issuer": "DigiCert Inc"
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "file": "recon_orchestrator-1.0.0/recon/analyst/anthropic.py",
+          "line": 6,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "ground-control-cli",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/22/22457e2b6ed963d84a93f78fc4dd9f8b046ecf4c20bca2a9ba274263deca/ground_control_cli-0.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:11.745689+00:00",
+      "total_findings": 7,
+      "findings": [
+        {
+          "url": "https://acme.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 79,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://acme.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 99,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://login.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://acme.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 73,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://acme.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 96,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://login.ground-control.io",
+          "file": "ground_control_cli-0.2.0/machine.py",
+          "line": 96,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Ground Control",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://nodejs.org",
+          "file": "ground_control_cli-0.2.0/probes/code/javascript.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "Node.js \u2014 Run JavaScript Everywhere",
+          "cert_issuer": "Sectigo Limited"
+        }
+      ]
+    },
+    {
+      "name": "wildtrax-client",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/4d/0f/016b9ee92db8c107873b6f8cafb177aea0aa20b5ee097aaba82a91dd3680/wildtrax_client-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:07.007289+00:00",
+      "total_findings": 2,
+      "findings": [
+        {
+          "url": "https://wildtrax.io",
+          "file": "wildtrax_client-0.1.0/pyproject.toml",
+          "line": 25,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WildTrax Recording Engine",
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "https://wildtrax.io/resources/python-client",
+          "file": "wildtrax_client-0.1.0/pyproject.toml",
+          "line": 26,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": "WildTrax Recording Engine",
+          "cert_issuer": "Let's Encrypt"
+        }
+      ]
+    },
+    {
+      "name": "brmunipanel",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/76/1b/00f4978009a1838cf0267d59180fdd476cf5cb86513697112128eb2e54fb/brmunipanel-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:44:59.018130+00:00",
+      "total_findings": 32,
+      "findings": [
+        {
+          "url": "http://exemplo.org/1",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 62,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/get",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 77,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/get",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 80,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/post",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 96,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/post",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/recup",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 135,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/falha",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 143,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/val",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 162,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/val_falha",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 175,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/404",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 186,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/bin",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 201,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://exemplo.org/1",
+          "file": "brmunipanel-0.1.0/tests/test_nucleo.py",
+          "line": 213,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 404,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2025/DTB_2025.zip",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ibge/territorio.py",
+          "line": 29,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/municipios_limitrofes/2024/BR_Municipios_2024_LIMITROFES.xls",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ibge/territorio.py",
+          "line": 34,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/areas_territoriais/2025/AR_BR_RG_UF_RGINT_RGI_MUN_2025.xls",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ibge/territorio.py",
+          "line": 38,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/localidades/Localidades_do_Brasil/2022/Localidades_Brasil_gpkg.zip",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ibge/territorio.py",
+          "line": 42,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://servicodados.ibge.gov.br/api/v3/agregados",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ibge/sidra.py",
+          "line": 17,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://siconfi.tesouro.gov.br/siconfi/pages/public/consulta_finbra/finbra_list.jsf",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/siconfi.py",
+          "line": 31,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26268",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 66,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26267",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 67,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26265",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 68,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26262",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 69,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26259",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 70,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26256",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 71,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://thot-arquivos.tesouro.gov.br/publicacao/26244",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/tesouro/finbra.py",
+          "line": 72,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Sectigo Limited"
+        },
+        {
+          "url": "https://www.ipeadata.gov.br/api/odata4",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/ipea/pbf.py",
+          "line": 19,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Let's Encrypt"
+        },
+        {
+          "url": "http://tabnet.datasus.gov.br/cgi/tabcgi.exe",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/tabnet.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tabnet.datasus.gov.br/cgi/tabcgi.exe",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/tabnet.py",
+          "line": 152,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://tabnet.datasus.gov.br/cgi/tabcgi.exe",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/tabnet.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "https://apidadosabertos.saude.gov.br/macrorregiao-e-regiao-de-saude/municipio",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/regioes_saude.py",
+          "line": 3,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://apidadosabertos.saude.gov.br/macrorregiao-e-regiao-de-saude/municipio",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/regioes_saude.py",
+          "line": 20,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        },
+        {
+          "url": "https://apidadosabertos.saude.gov.br/macrorregiao-e-regiao-de-saude/municipio",
+          "file": "brmunipanel-0.1.0/src/brmunipanel/datasus/regioes_saude.py",
+          "line": 1,
+          "layer": "ast",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "GlobalSign nv-sa"
+        }
+      ]
+    },
+    {
+      "name": "sentra-mcp",
+      "version": "1.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/66/23/529f7706a8a5862b2c12e54fea6558fe970056ef86c16589f29758e81893/sentra_mcp-1.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:44:42.460731+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://opencode.ai/config.json",
+          "file": "sentra_mcp-1.0.0/tests/test_init.py",
+          "line": 16,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        }
+      ]
+    },
+    {
+      "name": "prepublish-guard",
+      "version": "0.1.1",
+      "download_url": "https://files.pythonhosted.org/packages/ab/10/aebd07efd73b4a0dcd84d30c6d28ad252034fc9504b5f53057138e4a5efb/prepublish_guard-0.1.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:44:42.037254+00:00",
+      "total_findings": 1,
+      "findings": [
+        {
+          "url": "https://json.schemastore.org/sarif-2.1.0.json",
+          "file": "prepublish_guard-0.1.1/src/prepublish_guard/report.py",
+          "line": 123,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": "DigiCert Inc"
+        }
+      ]
+    },
+    {
+      "name": "probity-ratchet",
+      "version": "0.1.0",
+      "download_url": "https://files.pythonhosted.org/packages/ce/ed/feeff1ffc1fadee75f0de6cc16f6bad0ca70570869760a67343edbf4ad7a/probity_ratchet-0.1.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:44:34.208093+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "https://api.voyageai.com/v1/embeddings",
+          "file": "probity_ratchet-0.1.0/src/ratchet/store/embed.py",
+          "line": 22,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.voyageai.com/v1/rerank",
+          "file": "probity_ratchet-0.1.0/src/ratchet/store/embed.py",
+          "line": 23,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 405,
+          "http_title": null,
+          "cert_issuer": "Google Trust Services"
+        },
+        {
+          "url": "https://api.raindrop.ai/v1/events/track",
+          "file": "probity_ratchet-0.1.0/tests/telemetry/test_raindrop_smoke.py",
+          "line": 102,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.raindrop.ai/v1/signals/track",
+          "file": "probity_ratchet-0.1.0/tests/telemetry/test_raindrop_smoke.py",
+          "line": 103,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        },
+        {
+          "url": "https://api.raindrop.ai/v1/bad",
+          "file": "probity_ratchet-0.1.0/tests/telemetry/test_raindrop_smoke.py",
+          "line": 104,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 401,
+          "http_title": null,
+          "cert_issuer": "Amazon"
+        }
+      ]
+    },
+    {
+      "name": "gleif-keria",
+      "version": "0.4.1",
+      "download_url": "https://files.pythonhosted.org/packages/27/e6/884266de789d18465af798ab3ab45a0239a24ca5d4f8530a180bb981af93/gleif_keria-0.4.1.tar.gz",
+      "analyzed_at": "2026-10-12T04:44:29.393441+00:00",
+      "total_findings": 5,
+      "findings": [
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "gleif_keria-0.4.1/src/keria/testing/testing_helper.py",
+          "line": 93,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "gleif_keria-0.4.1/src/keria/testing/testing_helper.py",
+          "line": 215,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "gleif_keria-0.4.1/src/keria/testing/testing_helper.py",
+          "line": 257,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "gleif_keria-0.4.1/src/keria/testing/testing_helper.py",
+          "line": 297,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        },
+        {
+          "url": "http://json-schema.org/draft-07/schema",
+          "file": "gleif_keria-0.4.1/src/keria/testing/testing_helper.py",
+          "line": 358,
+          "layer": "regex",
+          "method": null,
+          "domain_threat": null,
+          "http_status": 200,
+          "http_title": null,
+          "cert_issuer": null
+        }
+      ]
+    }
+  ],
+  "binaries": [
+    {
+      "package": "pyc-revive",
+      "version": "1.0.1",
+      "analyzed_at": "2026-10-12T04:45:07.344031+00:00",
+      "binaries": [
+        {
+          "name": "pycdas.exe",
+          "file": "pyc_revive-1.0.1/pyc_revive/pycdas.exe",
+          "sha256": "d6c06d28eedd921c1b2610711a32f5c09f437cf83aeda28302c7d9578677169f",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "shrinkfit",
+      "version": "0.1.2",
+      "analyzed_at": "2026-10-12T04:46:13.236818+00:00",
+      "binaries": [
+        {
+          "name": "libshrinkfit.dylib",
+          "file": "shrinkfit-0.1.2.data/purelib/shrinkfit/_native/libshrinkfit.dylib",
+          "sha256": "fce15fc932018b895f13c9d50af4d7f4169e8de8defb2ee3503f5656a5fc4fb7",
+          "format": "macho",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "tmol-ops-cu12",
+      "version": "0.1.64",
+      "analyzed_at": "2026-10-12T04:46:20.701057+00:00",
+      "binaries": [
+        {
+          "name": "_C.cpython-311-aarch64-linux-gnu.so",
+          "file": "tmol_ops_cu12/_C.cpython-311-aarch64-linux-gnu.so",
+          "sha256": "c9e9bf8d86b6b8380ff847d4fdba643d992a6ec1c4b3abb083fa0df3b0173ae2",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "tmol-ops-cu13",
+      "version": "0.1.64",
+      "analyzed_at": "2026-10-12T04:46:21.288399+00:00",
+      "binaries": [
+        {
+          "name": "_C.cpython-311-aarch64-linux-gnu.so",
+          "file": "tmol_ops_cu13/_C.cpython-311-aarch64-linux-gnu.so",
+          "sha256": "8ff8bc2ca7078e0913503ddee5a8c0204edf6042e5c63fcf35eca429d3218f02",
+          "format": "elf",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "mdrtreadtool",
+      "version": "2.0.0",
+      "analyzed_at": "2026-10-12T04:47:00.733956+00:00",
+      "binaries": [
+        {
+          "name": "chart_tool.pyd",
+          "file": "mdrtreadtool/chart_tool.pyd",
+          "sha256": "33233f186193b29a06eb5bf2de74966c3ceacf958beb30cf840de6bb70bbe83d",
+          "format": "pe",
+          "signed": false,
+          "signer": null
+        }
+      ]
+    },
+    {
+      "package": "exsdk",
+      "version": "1.1.1",
+      "analyzed_at": "2026-10-12T04:47:16.897678+00:00",
+      "binaries": [
+        {
+          "name": "data.cpython-312-darwin.so",
+          "file": "exsdk/data.cpython-312-darwin.so",
+          "sha256": "d364baca3a246847c5072444c7aba949239aaab6de1da5c7e197e21d8ed02b72",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "trading.cpython-312-darwin.so",
+          "file": "exsdk/trading.cpython-312-darwin.so",
+          "sha256": "d57bf8d3fbcf97a9d779341d38e8711f12819df9360351b6f293a28b2a868e74",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "trading_data.cpython-312-darwin.so",
+          "file": "exsdk/trading_data.cpython-312-darwin.so",
+          "sha256": "0e700b1617c77d9e28628b0cb71b1b1990b7506e7f13fbc87304583d382a681b",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "_ctp.cpython-312-darwin.so",
+          "file": "exsdk/_ctp.cpython-312-darwin.so",
+          "sha256": "67e0051e62500ffea8f1b277dc4a845557e50bb18329545a838d6f0faf1135bc",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "api.cpython-312-darwin.so",
+          "file": "exsdk/api.cpython-312-darwin.so",
+          "sha256": "744d693db538be5dff9d85c1175919b637b8ac8a4c9976c297ef100b6126adae",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "transport.cpython-312-darwin.so",
+          "file": "exsdk/transport.cpython-312-darwin.so",
+          "sha256": "814391d93c7cd9b3b17607ba777cef0e0609fbe2fe86ffbf616ac97e8b14fa35",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "errors.cpython-312-darwin.so",
+          "file": "exsdk/errors.cpython-312-darwin.so",
+          "sha256": "3ef4d73d9f464d87f1148002d4cc9da7e7c9b6861b2b74684a5d753ef9570b42",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        },
+        {
+          "name": "tools.cpython-312-darwin.so",
+          "file": "exsdk/tools.cpython-312-darwin.so",
+          "sha256": "c81ff9785173dfd5484194c0443fb8dafc9a15db55c8223c6b767e93c44ae67e",
+          "format": "macho",
+          "signed": true,
+          "signer": "ad-hoc"
+        }
+      ]
+    }
+  ],
+  "install_hooks": [
+    {
+      "package": "ground-control-cli",
+      "version": "0.2.0",
+      "download_url": "https://files.pythonhosted.org/packages/58/22/22457e2b6ed963d84a93f78fc4dd9f8b046ecf4c20bca2a9ba274263deca/ground_control_cli-0.2.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:11.745919+00:00",
+      "install_hooks": [
+        {
+          "file": "ground_control_cli-0.2.0/probes/code/__init__.py",
+          "line": 190,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'ls-files', '-z'], cwd=root, capture_output=True, text=True)",
+          "resolved": true,
+          "context": "tracked",
+          "source": "package_init"
+        },
+        {
+          "file": "ground_control_cli-0.2.0/probes/code/__init__.py",
+          "line": 314,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'show', f'{at}:{name}'], cwd=root, capture_output=True)",
+          "resolved": false,
+          "context": "_at_commit",
+          "source": "package_init"
+        },
+        {
+          "file": "ground_control_cli-0.2.0/probes/code/__init__.py",
+          "line": 344,
+          "call": "subprocess.run",
+          "command": "subprocess.run(['git', 'rev-parse', '--verify', '-q', f'{at}^{{commit}}'], cwd=root, capture_output=True)",
+          "resolved": false,
+          "context": "symbols_probe",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "minecraftaccfinder",
+      "version": "3.0.0",
+      "download_url": "https://files.pythonhosted.org/packages/88/67/62807f422ca08a7aae16d1eced6bffb635beba70b820fe7c2091c0763fa4/minecraftaccfinder-3.0.0.tar.gz",
+      "analyzed_at": "2026-10-12T04:45:40.253057+00:00",
+      "install_hooks": [
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 405,
+          "call": "subprocess.STARTUPINFO",
+          "command": "subprocess.STARTUPINFO()",
+          "resolved": true,
+          "context": "_hide_run",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 411,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen(args, **kw)",
+          "resolved": false,
+          "context": "_hide_run",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 611,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request('http://127.0.0.1:%d/json/new?%s' % (port, urllib.parse.quote(url)), method='PUT')",
+          "resolved": false,
+          "context": "_cdp_page_ws",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 614,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req, timeout=8)",
+          "resolved": false,
+          "context": "_cdp_page_ws",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 618,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen('http://127.0.0.1:%d/json' % port, timeout=8)",
+          "resolved": false,
+          "context": "_cdp_page_ws",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 631,
+          "call": "socket.create_connection",
+          "command": "socket.create_connection(('127.0.0.1', port), timeout=1)",
+          "resolved": false,
+          "context": "_wait_port",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 729,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request('http://127.0.0.1:%d/json/new?%s' % (port, _up.quote('chrome://password-manager/passwords')), method='PUT')",
+          "resolved": false,
+          "context": "_cdp_vault_dump",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 732,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen(req, timeout=8)",
+          "resolved": false,
+          "context": "_cdp_vault_dump",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 777,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen(args, creationflags=134217728)",
+          "resolved": false,
+          "context": "_launch_debug_browser",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1319,
+          "call": "urllib.request.ProxyHandler",
+          "command": "urllib.request.ProxyHandler({'http': proxy, 'https': proxy})",
+          "resolved": false,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1334,
+          "call": "urllib.request.HTTPSHandler",
+          "command": "urllib.request.HTTPSHandler(context=ctx)",
+          "resolved": true,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1335,
+          "call": "urllib.request.build_opener",
+          "command": "urllib.request.build_opener(*handlers)",
+          "resolved": false,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1335,
+          "call": "urllib.request.build_opener",
+          "command": "urllib.request.build_opener()",
+          "resolved": true,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1336,
+          "call": "urllib.request.Request",
+          "command": "urllib.request.Request(url, data, hdrs)",
+          "resolved": false,
+          "context": "_post_json",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1362,
+          "call": "urllib.request.urlopen",
+          "command": "urllib.request.urlopen('https://api.ipify.org', timeout=6)",
+          "resolved": true,
+          "context": "_ping",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1482,
+          "call": "subprocess.Popen",
+          "command": "subprocess.Popen([pyw, src], creationflags=8 | 134217728)",
+          "resolved": false,
+          "context": "detach_from_console",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1767,
+          "call": "subprocess.run",
+          "command": "subprocess.run(c[4:], shell=True, capture_output=True, timeout=25, creationflags=134217728)",
+          "resolved": false,
+          "context": "c2",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1803,
+          "call": "socket.socket",
+          "command": "socket.socket()",
+          "resolved": true,
+          "context": "c2_client",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 1884,
+          "call": "subprocess.run",
+          "command": "subprocess.run(c[4:], shell=True, capture_output=True, timeout=40, creationflags=134217728)",
+          "resolved": false,
+          "context": "_handle_remote",
+          "source": "package_init"
+        },
+        {
+          "file": "minecraftaccfinder-3.0.0/minecraftaccfinder/__init__.py",
+          "line": 2046,
+          "call": "socket.socket",
+          "command": "socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+          "resolved": false,
+          "context": "c2_listen",
+          "source": "package_init"
+        }
+      ]
+    },
+    {
+      "package": "hank-risk-client",
+      "version": "0.3.2",
+      "download_url": "https://files.pythonhosted.org/packages/0c/e3/c4f9515238a03c75a33f75a274a6ce8c0dfb0c51fb71c7ce5618dbe33732/hank_risk_client-0.3.2.tar.gz",
+      "analyzed_at": "2026-10-12T04:46:22.818944+00:00",
+      "install_hooks": [
+        {
+          "file": "hank_risk_client-0.3.2/__init__.py",
+          "line": 83,
+          "call": "requests.Session",
+          "command": "requests.Session()",
+          "resolved": true,
+          "context": "RiskClient.__init__",
+          "source": "package_init"
+        }
+      ]
+    }
+  ]
+}
